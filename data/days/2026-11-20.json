@@ -257,32 +257,32 @@
   "important": [
    {
     "id": "31efb0aa7fbd",
-    "why_zh": "Anthropic 上市是今日最大科技新闻,附带怀疑观点。",
-    "why_en": "Anthropic's record IPO is the day's biggest tech story, with a skeptical take on moats and the bubble."
+    "why_zh": "Anthropic上市是AI行业的重大事件。",
+    "why_en": "Anthropic's record IPO is major AI industry news, and Gruber offers a skeptical take on it."
    },
    {
     "id": "f32d5bea8abf",
-    "why_zh": "AI 服务遭令牌欺诈,免费试用模式受冲击。",
-    "why_en": "Token fraud against an AI product is forcing an end to free trials, a notable sign of how AI services get abused."
+    "why_zh": "令牌欺诈揭示了AI服务面临的滥用风险。",
+    "why_en": "Token fraud against an AI product exposes a real abuse problem for AI services and free trials."
    },
    {
     "id": "7598bcd4bdf1",
-    "why_zh": "谷歌把 AI 代理做成免费产品并可代打电话购物。",
-    "why_en": "Google makes its AI agent free, and it can call businesses and buy items, a major consumer agent move."
+    "why_zh": "谷歌把AI代理免费开放，值得关注。",
+    "why_en": "Google makes its AI agent free and lets it call businesses and buy items, a notable step for consumer agents."
    }
   ],
   "liked": [
    {
     "id": "7339d690dfb6",
-    "why_zh": "读己所写的复制机制,属数据基础设施。",
-    "why_en": "Read-your-writes replication in PostgreSQL 19 is a data infrastructure topic."
+    "why_zh": "读己之写的复制机制与数据基础设施相关。",
+    "why_en": "Read-your-writes replication in PostgreSQL 19 is relevant to data infrastructure."
    },
    {
     "id": "4c424bb2bc1f",
-    "why_zh": "关于属性测试的好例子,利于工程实践。",
-    "why_en": "A thoughtful take on property-based testing that suits an engineering-minded ML researcher."
+    "why_zh": "属性测试的教学思考，适合工程实践。",
+    "why_en": "It rethinks how property-based testing is taught, which is useful for ML and software engineering practice."
    }
   ]
  },
- "generated_at": "2026-11-20T14:16:45.429347+00:00"
+ "generated_at": "2026-11-20T14:22:17.338976+00:00"
 }
