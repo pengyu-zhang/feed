@@ -163,21 +163,47 @@ def archive_body(days):
             f'<ul class="days">{rows}</ul></section>')
 
 
-def sources_body(sources, status):
+def source_rows(sources, status, connected=True):
     rows = []
     for s in sources:
         st = status.get(s["name"], {})
         last = st.get("last_post", "")[:10]
-        ok = bi("抓取失败", "failed") if "error" in st else bi("正常", "ok") if st.get("ok") else bi("还没抓过", "not yet")
-        cls = ' class="bad"' if "error" in st else ""
-        rows.append(f'<tr><td><a href="{escape(s.get("site", s["feed"]))}" target="_blank" rel="noopener">'
+        if not connected:
+            ok, cls = bi("还没接入", "not connected yet"), ' class="muted"'
+        elif "error" in st:
+            ok, cls = bi("抓取失败", "failed"), ' class="bad"'
+        elif st.get("ok"):
+            ok, cls = bi("正常", "ok"), ""
+        else:
+            ok, cls = bi("还没抓过", "not yet"), ' class="muted"'
+        href = s.get("site") or s.get("feed")
+        rows.append(f'<tr><td><a href="{escape(href)}" target="_blank" rel="noopener">'
                     f'{escape(s["name"])}</a></td><td class="muted">{escape(last)}</td><td{cls}>{ok}</td></tr>')
-    return (f'<section class="card"><h1 class="section-title">{bi("来源", "Sources")}'
-            f' <span class="muted" style="font-weight:400">{len(sources)}</span></h1>'
-            f'<p class="muted small">{bi("博客：Lil’Log，加上 Karpathy 推荐的 92 个 Hacker News 热门博客。", "Blogs: Lil’Log plus the 92 popular Hacker News blogs Karpathy recommended.")}</p>'
+    return "".join(rows)
+
+
+def source_table(title, note, rows, count):
+    return (f'<h2 class="col-title" style="margin-top:1.4em">{bi(*title)}'
+            f' <span class="muted" style="font-weight:400">{count}</span></h2>'
+            f'<p class="muted small">{bi(*note)}</p>'
             f'<div class="table-scroll"><table class="sources"><thead><tr><th>{bi("名字", "Name")}</th>'
             f'<th>{bi("最近一篇", "Latest post")}</th><th>{bi("状态", "Status")}</th></tr></thead>'
-            f'<tbody>{"".join(rows)}</tbody></table></div></section>')
+            f'<tbody>{rows}</tbody></table></div>')
+
+
+def sources_body(groups, status):
+    blogs, videos = groups.get("blogs", []), groups.get("youtube", [])
+    total = len(blogs) + len(videos)
+    return (f'<section class="card"><h1 class="section-title">{bi("来源", "Sources")}'
+            f' <span class="muted" style="font-weight:400">{total}</span></h1>'
+            + source_table(("博客", "Blogs"),
+                           ("Lil’Log，加上 Karpathy 推荐的 Hacker News 热门博客。",
+                            "Lil’Log plus the popular Hacker News blogs Karpathy recommended."),
+                           source_rows(blogs, status), len(blogs))
+            + (source_table(("YouTube", "YouTube"),
+                            ("已经列进来源，还没开始抓取。", "Listed, not fetched yet."),
+                            source_rows(videos, status, connected=False), len(videos)) if videos else "")
+            + "</section>")
 
 
 def main():
@@ -201,9 +227,9 @@ def main():
                      f'<section class="card"><p>{bi("第一次运行之后这里就有内容了。", "Content appears after the first run.")}</p></section>')
     (SITE / "index.html").write_text(index, encoding="utf-8")
     (SITE / "archive.html").write_text(page("往期", "Archive", "archive.html", archive_body(days)), encoding="utf-8")
-    sources = load_yaml("sources.yml")["blogs"]
+    groups = load_yaml("sources.yml")
     (SITE / "sources.html").write_text(
-        page("来源", "Sources", "sources.html", sources_body(sources, load_json(STATUS_FILE, {}))), encoding="utf-8")
+        page("来源", "Sources", "sources.html", sources_body(groups, load_json(STATUS_FILE, {}))), encoding="utf-8")
     (SITE / ".nojekyll").write_text("")
     print(f"built {len(days)} day pages into {SITE}")
     return 0
