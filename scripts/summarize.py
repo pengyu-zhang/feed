@@ -21,7 +21,7 @@ SUMMARY_PROMPT = """You write a daily reading digest for one reader: a machine l
 who reads Chinese and English. Below are {n} new blog posts. For each post write:
 
 - "summary_zh": 2-3 sentences in natural, plain spoken Chinese (not translated-sounding, no hype, \
-no filler like "本文介绍了"). Say what the post actually argues or shows, with the concrete point.
+no filler like "本文介绍了", Chinese full-width punctuation). Say what the post actually argues or shows, with the concrete point.
 - "summary_en": 2-3 short plain English sentences with the same content. No em dashes.
 - "topics": 1-3 short English topic tags.
 
@@ -48,7 +48,8 @@ whether or not they fit the reader's interests (big news, widely discussed ideas
 2. "liked": up to {k} posts this reader is most likely to enjoy, based on these interests:
 {interests}
 
-For every pick give "why_zh" (one short natural Chinese sentence, max 30 characters) and \
+For every pick give "why_zh" (one short natural Chinese sentence, max 30 characters, with Chinese \
+full-width punctuation such as ，and 。) and \
 "why_en" (one short English sentence) saying why it was picked.
 
 Reply with ONLY JSON: {{"important": [{{"id": ..., "why_zh": ..., "why_en": ...}}], \

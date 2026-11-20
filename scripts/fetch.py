@@ -7,6 +7,7 @@ import hashlib
 import html
 import re
 import sys
+import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
@@ -55,8 +56,13 @@ def page_text(url):
 def fetch_source(src, since, seen, cap):
     status = {"feed": src["feed"]}
     try:
-        r = requests.get(src["feed"], headers={"User-Agent": UA}, timeout=TIMEOUT)
-        r.raise_for_status()
+        try:
+            r = requests.get(src["feed"], headers={"User-Agent": UA}, timeout=TIMEOUT)
+            r.raise_for_status()
+        except requests.RequestException:  # one retry for flaky hosts
+            time.sleep(5)
+            r = requests.get(src["feed"], headers={"User-Agent": UA}, timeout=TIMEOUT)
+            r.raise_for_status()
         parsed = feedparser.parse(r.content)
         if parsed.bozo and not parsed.entries:
             raise ValueError(f"unparseable feed: {parsed.bozo_exception}")
