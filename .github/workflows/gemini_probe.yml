@@ -14,6 +14,10 @@ on:
         description: "LOW, MEDIUM or HIGH"
         required: false
         default: "LOW"
+      fps:
+        description: "Frames per second to sample (empty = Gemini default 1)"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -35,4 +39,5 @@ jobs:
           VIDEO_IDS: ${{ inputs.video_ids }}
           GEMINI_MODEL: ${{ inputs.model }}
           MEDIA_RES: ${{ inputs.media_res }}
+          FPS: ${{ inputs.fps }}
         run: python gemini_probe.py

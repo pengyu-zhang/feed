@@ -16,6 +16,7 @@ BASE = "https://generativelanguage.googleapis.com/v1beta"
 H = {"x-goog-api-key": KEY, "Content-Type": "application/json"}
 MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.1-flash-lite")
 RES = os.environ.get("MEDIA_RES", "LOW")
+FPS = os.environ.get("FPS", "").strip()
 
 PROMPT = ("请看完这个视频，用自然的中文写：第一行一句话概括视频讲什么；然后 2 到 5 段，"
           "转述视频里的主要内容、论点、例子和结论。跳过赞助广告。只转述，不加自己的评价。")
@@ -25,10 +26,19 @@ names = [m["name"].split("/")[-1] for m in models.get("models", [])
          if "generateContent" in m.get("supportedGenerationMethods", [])]
 print("MODELS:", ", ".join(n for n in names if "flash" in n or "lite" in n))
 
-for vid in os.environ.get("VIDEO_IDS", "").split():
+def video_part(vid):
+    part = {"file_data": {"file_uri": f"https://www.youtube.com/watch?v={vid}"}}
+    if FPS:
+        part["video_metadata"] = {"fps": float(FPS)}
+    return part
+
+
+for i, vid in enumerate(os.environ.get("VIDEO_IDS", "").split()):
+    if i:
+        time.sleep(65)  # free tier: 250K input tokens per minute
     body = {
         "contents": [{"parts": [
-            {"file_data": {"file_uri": f"https://www.youtube.com/watch?v={vid}"}},
+            video_part(vid),
             {"text": PROMPT}]}],
         "generationConfig": {"mediaResolution": f"MEDIA_RESOLUTION_{RES}"},
     }
@@ -42,7 +52,7 @@ for vid in os.environ.get("VIDEO_IDS", "").split():
     u = j.get("usageMetadata", {})
     detail = {d.get("modality"): d.get("tokenCount") for d in u.get("promptTokensDetails", [])}
     text = "".join(p.get("text", "") for p in j["candidates"][0]["content"]["parts"])
-    print(f"VIDEO {vid}: model={MODEL} res={RES} seconds={dt:.0f} prompt={u.get('promptTokenCount')} "
+    print(f"VIDEO {vid}: model={MODEL} res={RES} fps={FPS or 1} seconds={dt:.0f} prompt={u.get('promptTokenCount')} "
           f"output={u.get('candidatesTokenCount')} thoughts={u.get('thoughtsTokenCount', 0)} "
           f"total={u.get('totalTokenCount')} by_modality={json.dumps(detail)}")
     print("SUMMARY:", text[:1500].replace("\n", " / "))
