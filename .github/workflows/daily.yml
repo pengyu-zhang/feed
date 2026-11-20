@@ -1,0 +1,68 @@
+name: daily
+
+on:
+  schedule:
+    # 05:23 UTC = 06:23 in Amsterdam in winter, 07:23 in summer (GitHub cron is always UTC)
+    - cron: "23 5 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - run: npm install -g @anthropic-ai/claude-code
+
+      - name: Fetch new posts
+        working-directory: scripts
+        run: python fetch.py
+
+      - name: Summarise with Claude
+        working-directory: scripts
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: python summarize.py
+
+      - name: Build site
+        working-directory: scripts
+        run: python build.py
+
+      - name: Save data
+        run: |
+          git config user.name "feed-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "digest $(TZ=Europe/Amsterdam date +%F)"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

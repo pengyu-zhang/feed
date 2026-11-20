@@ -1,0 +1,30 @@
+# 每天跑的参数。改这里就行，不用动脚本。
+
+timezone: "Europe/Amsterdam"
+
+# 第一次运行、或者上次运行太久以前时，往回看多少小时
+first_run_hours: 26
+# 最多往回补几天（比如 Actions 停了几天）
+max_catchup_hours: 72
+# 同一个来源一天最多收几篇（simonwillison.net 一天能发十几条短链接）
+max_per_source: 5
+
+# 用 Claude 会员令牌跑，模型名可以随时换
+models:
+  summary: "claude-haiku-5-5"   # 每篇写中英摘要
+  picks: "claude-sonnet-5-5"    # 每天挑"该知道的"和"可能喜欢"
+summary_batch_size: 8
+# 每篇喂给模型的正文最多多少字符
+max_chars_per_item: 8000
+
+# "可能喜欢"按这些兴趣挑。打分攒够以后改按历史。
+interests:
+  - knowledge graphs, entity linking
+  - recommender systems
+  - temporal / time-aware machine learning
+  - multimodal learning
+  - LLM research and evaluation
+  - AI agents and AI coding tools
+  - machine learning engineering and data infrastructure
+
+picks_per_column: 3
