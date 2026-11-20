@@ -27,7 +27,8 @@ question or situation, the main arguments or findings, the key examples, numbers
 author's conclusion. Scale the length to the post: a short link post gets one paragraph, a long \
 essay gets four or five. Do not translate sentence by sentence and do not quote long passages; \
 explain it the way a well-read friend would. Keep names, product names and technical terms in \
-their original form where that is clearer.
+their original form where that is clearer. Only report what the post says: do not add your own \
+judgement or commentary about the post (no "the author gives no evidence", no "this matters because").
 - "brief_en" and "detail_en": the same in plain, short English sentences. No em dashes.
 - "topics": 1-3 short English topic tags.
 
