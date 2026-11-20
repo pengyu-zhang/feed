@@ -1,0 +1,399 @@
+{
+ "date": "2026-11-20",
+ "items": [
+  {
+   "id": "cce703fcad81",
+   "kind": "blog",
+   "source": "shkspr.mobi",
+   "source_url": "https://shkspr.mobi",
+   "title": "Connect a USB Zigbee Device to HAOS",
+   "url": "https://shkspr.mobi/blog/2026/11/connect-a-usb-zigbee-device-to-haos/",
+   "published": "2026-11-20T12:34:19+00:00",
+   "basis": "short",
+   "brief_zh": "作者记录了怎样把 USB Zigbee 适配器挂进运行 Home Assistant OS 的虚拟机里，用 virsh 完成设备直通，并让这个设置在重启后依然有效。",
+   "brief_en": "The author shows how to pass a USB Zigbee dongle into a Home Assistant OS virtual machine with virsh, then make that setting permanent.",
+   "detail_zh": [
+    "作者买了一个 USB Zigbee 适配器，插到跑 Home Assistant OS（HAOS）的电脑上，却在 Home Assistant 界面里找不到它。解决办法是先用 lsusb 查出设备的厂商 ID 和产品 ID，比如 10c4:ea60（Silicon Labs CP210x）。然后新建一个 zigbee.xml 文件，写入 hostdev 配置，把这两个 ID 填进去。",
+    "接下来用 virsh list 找到 HAOS 虚拟机的名字，用 virsh attach-device 把设备挂载进去，再用 virsh reboot 重启虚拟机。等几分钟后，在“设置 → 设备”里的“已发现”下面就能看到这个 Zigbee 设备，按提示添加即可。之后重启 Home Assistant，再从“设置 → 连接 → Zigbee”开始添加其他设备。",
+    "最后一步是让挂载设置永久生效。先用 virsh detach-device 把设备拆下来，再加上 --persistent 参数重新挂载，这样虚拟机以后启动时设备都还在。"
+   ],
+   "detail_en": [
+    "The author plugged a Zigbee dongle into the computer running Home Assistant OS, but the dongle did not appear in the Home Assistant interface. The fix starts with lsusb, which shows the vendor and product IDs, for example 10c4:ea60 for a Silicon Labs CP210x. The author then writes a small zigbee.xml file with a hostdev entry that uses those IDs.",
+    "Next, the author finds the VM name with virsh list, attaches the device with virsh attach-device, and reboots the VM. After a few minutes the Zigbee device shows under Discovered in Settings, Devices. The author adds it, restarts Home Assistant, and starts adding Zigbee devices from the Zigbee page.",
+    "The last step makes the change permanent. The author detaches the device, then attaches it again with the --persistent flag so it stays attached after the VM restarts."
+   ],
+   "topics": [
+    "home-automation",
+    "zigbee",
+    "virtualization"
+   ]
+  },
+  {
+   "id": "871ebf0e05e9",
+   "kind": "blog",
+   "source": "dfarq.homeip.net",
+   "source_url": "https://dfarq.homeip.net",
+   "title": "Max Headroom incident of Nov 22, 1987",
+   "url": "https://dfarq.homeip.net/max-headroom-incident-of-nov-22-1987-3/?utm_source=rss&utm_medium=rss&utm_campaign=max-headroom-incident-of-nov-22-1987-3",
+   "published": "2026-11-20T12:00:10+00:00",
+   "basis": "full",
+   "brief_zh": "作者回顾了 1987 年 11 月 22 日芝加哥两次电视信号被劫持、有人戴着 Max Headroom 面具恶搞播出的事件，分析案子为什么没破，并讨论了几种流传的嫌疑人理论。",
+   "brief_en": "The author retells the 1987 Max Headroom signal hijackings in Chicago, explains why the case was never solved, and weighs the theories about who did it.",
+   "detail_zh": [
+    "事情发生在 1987 年 11 月 22 日晚上 9 点 14 分左右。芝加哥 WGN 电视台的新闻节目突然黑屏十五秒，随后出现一个戴着 Max Headroom 橡胶面具的人，背后是一块晃动的波纹金属板，声音只有刺耳的啸叫。WGN 工程师花了大约三十秒才切换频率恢复播出。主播 Dan Roan 只说了一句“如果你想知道发生了什么，我也想知道”，节目就接着播了下去。",
+    "两个小时后，PBS 电视台 WTTW 播放《神秘博士》时又被入侵，这次声音是清楚的。假 Max Headroom 拿 WGN 和新可乐开玩笑，还做了一些低俗表演。作者认为这些梗都很有时代感。Max Headroom 是 80 年代末的短命反乌托邦科幻剧，也是可口可乐广告的代言形象。两次入侵里出现的新可乐、可乐大战、迈克尔·杰克逊和“nerd”这个词，几乎把 80 年代打包在一起。",
+    "作者以前做过记者，后来又参与过政府背景调查，因此对办案很有想法。他认为，联邦调查局和 FCC 没有人在芝加哥挨家挨户去问，也没有认真去查电视台内部的不满员工、工会和设备来源。FCC 的人一开始就说要严惩，但没有人去做最基础的走访。作者还认为，嫌疑人可能是懂电视设备、无线电和电话 phreaking 的人，要查清楚就得深入当地圈子，这需要有人能和他们打交道。",
+    "近年的几个理论也都没有证实。一个说法是芝加哥的朋克乐手，2010 年去世，但他的乐队说他当年不具备做这件事的技术。另一个说法是当地两兄弟，他们也玩电话 phreaking，但兄弟俩不愿谈，线索就断了。还有人说某所技校收到过电视设备捐赠，学生可能动了手，但作者找不到原帖。作者最后指出，社交媒体上总有人说自己认识当事人、见过证据，却拿不出细节。诉讼时效在 1992 年就过了，所以嫌疑人没有法律风险，但这件事可能影响他们的工作，这也许就是他们一直不愿露面的原因。"
+   ],
+   "detail_en": [
+    "On the night of November 22, 1987, the regular newscast on WGN TV in Chicago went black for 15 seconds. Then a person in a rubber Max Headroom mask appeared on screen, in front of a shaking sheet of metal, with only screeching feedback for sound. The engineers needed about 30 seconds to restore the broadcast. The anchor, Dan Roan, said he did not know what had happened either, and the newscast went on.",
+    "Two hours later, PBS station WTTW was hijacked during a Doctor Who episode, and this time the audio worked. The fake Max Headroom joked about WGN, New Coke, Pepsi, Michael Jackson, and the word nerd. The author sees these jokes as very much a product of the 1980s. Max Headroom was a short-lived sci-fi show and also a Coca-Cola spokesman, so the references fit the era.",
+    "The author spent time as a journalist and later in government contracting, so they have ideas about how this should have been investigated. In their view, the FCC and FBI never had someone on the ground in Chicago to knock on doors. Nobody seems to have checked station employees with grudges, talked to unions, or traced the equipment. The author thinks the pranksters may have been insiders, or outsiders who knew the ham radio and phone phreaking scenes.",
+    "Several theories have come up since then, and none has been confirmed. One points to a Chicago punk musician who died in 2010, but his bandmates say he lacked the skills. Another points to two brothers in the phreaking scene, but they never agreed to talk. A third says a technical school received TV equipment, but the author could not find the original thread. Online, people often claim they know who did it but give no details.",
+    "The author notes that the statute of limitations ran out in 1992, so the pranksters face no legal risk. Still, a public link to the stunt could hurt their careers, which may explain why they have stayed hidden for more than 35 years. The author clues about age, such as the Temptations line and the Clutch Cargo theme, suggest the person may have been older than the jokes make them seem, but no one has an answer."
+   ],
+   "topics": [
+    "tv-history",
+    "unsolved-mystery",
+    "80s-culture"
+   ]
+  },
+  {
+   "id": "5ef91e2f738b",
+   "kind": "blog",
+   "source": "pluralistic.net",
+   "source_url": "https://pluralistic.net",
+   "title": "Pluralistic: Lisa Hanawalt's \"I Can't Stop Thinking About Horses and Sex\" (20 Nov 2026)",
+   "url": "https://pluralistic.net/2026/11/20/intrusive-horse-thoughts/",
+   "published": "2026-11-20T10:44:20+00:00",
+   "basis": "full",
+   "brief_zh": "Cory Doctorow 推荐动画师 Lisa Hanawalt 的图文回忆录《I Can't Stop Thinking About Horses and Sex》，说这本书用幽默和坦诚写分手、养马、身体问题和人际关系，是一本很值得读的书。",
+   "brief_en": "Cory Doctorow praises Lisa Hanawalt's graphic memoir about a breakup, a pony, and body troubles, calling it funny, tender, and well made.",
+   "detail_zh": [
+    "这本书的书名就概括了内容。Hanawalt 是《Bojack Horseman》的角色设计师，也是《Tuca & Bertie》的主要创作者之一。回忆录讲了她的感情、性别、消化道的毛病、对马的热爱，还有她身边的人。Doctorow 说，书里的每个人都有缺点和优点，而且常常是同一件事的两面。",
+    "故事主线是 Hanawalt 与喜剧演员、播客主持人 Adam Conover 同居十四年后分手，她的小马 Juni 也穿插其中。马是她情绪的支点，但马随时可能出意外，所以它既是救赎，也是心碎的来源。书里还写到童年的性创伤、冻卵、肠胃问题，以及医疗系统对女性的对待。Doctorow 认为，这些沉重的内容被处理得又好笑又有温度。",
+    "Doctorow 欣赏 Hanawalt 的人物速写，说她的画风把人和动物都画得滑稽、怪异又性感。Conover 也用喜剧专场《Big Divorce Energy》讲了同一段分手，两人还一起录过播客，聊分手后仍能保持的温和关系。Doctorow 认为这两部作品正好互相呼应。",
+    "最后，Doctorow 称赞这本书由蒙特利尔的 Drawn and Quarterly 出版，装帧精美，很适合送给刚分手的朋友，或者正在考虑养马的人。文章后半部分是一大串活动预告、链接和作者自己的书目，这一部分与这本书本身关系不大。"
+   ],
+   "detail_en": [
+    "The title of Lisa Hanawalt's new graphic memoir sums up the book. It covers her love life, her gender, her digestive problems, and her passion for horses. Hanawalt is known as a character designer for Bojack Horseman and as a creator of Tuca and Bertie. Doctorow says the people in the book are a mix of good and bad traits, often two sides of the same coin.",
+    "The main story follows the breakup after fourteen years with comedian Adam Conover. Hanawalt's pony, Juni, runs alongside it. The horse is a steady point in her life, but horses can get hurt or die without warning, so the bond brings both comfort and heartbreak. The book also covers childhood sexual trauma, egg freezing, bowel problems, and how the medical system treats women.",
+    "Doctorow praises Hanawalt's character sketches. The drawings make people and animals look funny, strange, and sexy at once. Conover also turned the breakup into a comedy special called Big Divorce Energy. The two later recorded a podcast conversation about how a mature couple can keep warmth after a split.",
+    "Doctorow praises the book's production by Drawn and Quarterly, a Montreal publisher. It is a good gift for a friend going through a breakup, or for anyone thinking about buying a horse. The rest of the post is a long list of events, links, and the author's own book announcements."
+   ],
+   "topics": [
+    "graphic-memoir",
+    "book-review",
+    "animation"
+   ]
+  },
+  {
+   "id": "f32d5bea8abf",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "Token fraud is here and it’s BAD (YouTube)",
+   "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+   "published": "2026-11-20T02:49:57+00:00",
+   "basis": "short",
+   "brief_zh": "Simon Willison 转述 Claire Vo 讲述 ChatPRD 免费试用被大量滥用的视频，说有人用它转卖 AI 额度或搭建商业项目，Claire Vo 因此决定停止免费试用。",
+   "brief_en": "Simon Willison shares Claire Vo's video on abuse of ChatPRD's free trial, where people resold tokens or built side businesses, and Vo's decision to end the trials.",
+   "detail_zh": [
+    "ChatPRD 是一个帮产品经理把想法变成需求文档的 AI 平台，从 GPT-4 时代就已经上线。创始人 Claire Vo 在 YouTube 视频里说，她看到大量团体滥用免费试用和促销码。有的人只是想白用 AI，有的人则把 token 转卖，或者借助这个 agent 经营其他生意。",
+    "Willison 开玩笑说，他等于在资助一家 Roblox 和 Fortnite 地图工作室。这些人循环领取试用和促销码，然后通过接口调用 agent，帮自己制作游戏地图。这段话带点讽刺，意思是滥用者实际上在用免费额度做别的生意。",
+    "Claire Vo 发现，很多请求里反复出现“骑自行车的鹈鹕 SVG”这类提示词。Willison 认为，滥用者可能借此来辨认背后的模型，因为不同模型家族的输出有明显特征。他自己以前也用同样的办法猜过 OpenRouter 上隐身预览模型的身份。",
+    "Claire Vo 因此决定彻底关闭免费试用。Willison 认为，在这种滥用面前，这是一个无奈却合理的选择。"
+   ],
+   "detail_en": [
+    "ChatPRD is an AI platform that helps product managers turn an idea into a spec. It has been live since the GPT-4 era. In a YouTube video, Claire Vo describes a wave of abuse of the free trial and promo codes. Some people only wanted free AI usage. Others resold tokens or ran other businesses on top of the agent.",
+    "Willison jokes that they are effectively funding a Roblox and Fortnite map studio. The studio cycles through free trials and promo codes, then uses the agent to build game maps. The remark is sarcastic, but it points to the real problem: free credits were being used for commercial work.",
+    "Vo noticed that prompts asking for SVG pictures of pelicans riding bicycles kept showing up. Willison notes that such prompts can help identify which model family is behind a service, since each family has a recognizable style. He has used the same trick to guess stealth preview models on OpenRouter.",
+    "Vo is ending free trials entirely. Willison says this looks like the right decision, even though it is a sad one, given how much abuse there has been."
+   ],
+   "topics": [
+    "ai-misuse",
+    "llm-economics",
+    "free-trials"
+   ]
+  },
+  {
+   "id": "d9186e011e29",
+   "kind": "blog",
+   "source": "idiallo.com",
+   "source_url": "https://idiallo.com",
+   "title": "Another company I've never heard of lost my Data",
+   "url": "https://idiallo.com/byte-size/another-company-lost-my-data-and-free-credit-monitoring",
+   "published": "2026-11-19T23:27:30+00:00",
+   "basis": "short",
+   "brief_zh": "作者收到一家他从没听说过的公司来信，称他的社会安全号码等个人资料因员工失误外泄。他批评企业只提供一年免费信用监控，缺乏真正的惩罚，所以类似事件会一再发生。",
+   "brief_en": "A reader gets a letter from a company he never heard of, saying his Social Security number and other data leaked. He argues that free credit monitoring is no real penalty, so the same thing will keep happening.",
+   "detail_zh": [
+    "作者收到 Premise Health Holding 的来信，他从来没和这家公司打过交道。信上说，2026 年 3 月一名员工不当处理客户数据，到 9 月才被发现。外泄的资料包括姓名、住址和社会安全号码，足以冒充他本人。作者感谢对方通知他，但也很困惑：对方为什么会有他的社会安全号码？",
+    "对方给的补偿是一年免费信用监控。作者说，今年早些时候另一家同样陌生的公司也泄露过他的资料，他已经拿到过一年免费监控，现在只剩大约六个月。他的担心是，社会安全号码无法更换，坏人就算等上一年再用，监控也早就到期了。",
+    "作者的结论是，如果泄露数据没有真正、长期的惩罚，这种事就会成为常态。企业只要提供一年大多数人不会用的监控，就算交代过了。文章最后提到，他的一个孩子出生后不久就收到一封写着孩子名字的信，通知个人资料遭到泄露。文字到这里就中断了，没有更多细节。"
+   ],
+   "detail_en": [
+    "The author received a letter from Premise Health Holding, a company he had never dealt with. It said an employee mishandled customer data in March 2026, and the problem was not found until September. The leaked data included his name, address and Social Security number, enough to impersonate him. He is glad to be told, but he asks why the company had his number at all.",
+    "The company offered one year of free credit monitoring. The author says another unknown company also lost his data earlier this year, and he already got a year of monitoring from it, with about six months left. His worry is that a Social Security number cannot be changed. A thief could wait longer than a year, and the monitoring would be gone by then.",
+    "His conclusion is that unless data loss carries a real and lasting penalty, this will remain routine. Offering a year of monitoring that most people never use lets companies look like they did enough. He ends by mentioning that one of his children got a letter addressed to him by name saying his personal information had been breached. The text stops there, with no more detail."
+   ],
+   "topics": [
+    "data breaches",
+    "privacy",
+    "credit monitoring"
+   ]
+  },
+  {
+   "id": "11f617db89cc",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "★ Jon McCormack Retires From Apple",
+   "url": "https://daringfireball.net/2026/11/mccormack_retires_from_apple",
+   "published": "2026-11-19T22:25:12+00:00",
+   "basis": "full",
+   "brief_zh": "苹果相机和照片团队负责人 Jon McCormack 在 10 月底退休。Gruber 借此回顾他的技术功底和工作风格，并称赞他守住了相机应用的专注。",
+   "brief_en": "Apple camera and Photos chief Jon McCormack retired in late October after more than eight years. John Gruber praises his technical depth and his skill at keeping weak ideas out of the Camera app.",
+   "detail_zh": [
+    "据 Bloomberg 的 Mark Gurman 报道，Jon McCormack 在 10 月底退休，在苹果工作了八年多。他负责相机和照片应用，以及决定用户怎样拍照、看照片和编辑照片的底层技术。苹果没有任命新的副总裁接替他，而是由他原来的副手在另一位高管之下分担职责。去年 iPhone 17 系列重新设计的自拍相机也是他推动的功能。",
+    "作者 Gruber 曾多次在 iPhone 相机新功能的发布会上见过 McCormack。他常拿 iPhone 和高端安卓手机拍的照片做对比，照片都很好，他不会刻意贬低对手，还会解释两者的差异，甚至说明为什么有人会偏好安卓的成像，同时讲清楚苹果为什么选择另一条路。Gruber 认为他技术上非常扎实，本人也是认真的摄影师，还出过一本自然与旅行摄影的书。",
+    "Gruber 认为，McCormack 最大的贡献是替相机应用挡住了很多糟糕的点子。好功能会得到更多掌声，但拒绝不该做的功能更难，也更重要。文章也谈到生成式 AI：苹果在这方面一向保守，但 Clean Up、extend、reframe 等功能都用了生成式 AI，“拍下的照片”和“生成的照片”之间的界线越来越模糊。作者的结论很简单：和他共事过的人都喜欢他，他留下的位子不好填。"
+   ],
+   "detail_en": [
+    "Mark Gurman reported for Bloomberg that McCormack retired at the end of October. He ran the Camera and Photos apps and the technology behind how people capture, view and edit photos. Apple has not named a replacement. His former deputies now handle his work under another executive. He also led the redesigned selfie camera that came with the iPhone 17 lineup.",
+    "Gruber met McCormack several times at iPhone camera briefings. McCormack often compared iPhone photos with top Android photos. He was fair to rivals. He could explain the differences and even why someone might prefer the Android look, and he could also say why Apple chose its own approach. Gruber calls him technically deep and a serious photographer who has published a nature and travel photo book.",
+    "Gruber's main point is that McCormack protected the Camera app from bad ideas. Good features get the credit, but turning down weak ideas is harder and matters more. Gruber also notes that Apple is conservative about generative AI, yet Clean Up, extend and reframe all use it, which blurs the line between a captured photo and a made one. His conclusion is simple: everyone who worked with McCormack liked him, and his job will be hard to fill."
+   ],
+   "topics": [
+    "Apple",
+    "photography",
+    "iPhone cameras"
+   ]
+  },
+  {
+   "id": "7598bcd4bdf1",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Google’s Spark AI Agent Becomes ‘Tasks’",
+   "url": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IksyWGFvWkdyWVIiLCJwIjoiL3RlY2gvMTAzNTc1Ni9nb29nbGUtc3BhcmstYWktdGFza3MtZnJlZSIsImV4cCI6MTc5NTU1MzQxMiwiaWF0IjoxNzk1MTIxNDEyfQ.GdsUKdRXeGBskw7-FDgCXEmIYhdLPPexImzdWhJqA-c&utm_medium=gift-link",
+   "published": "2026-11-19T20:54:10+00:00",
+   "basis": "short",
+   "brief_zh": "Google 把 AI 代理 Spark 改名为“Tasks”并免费开放。Gruber 借此嘲讽 Google 的命名，因为这个名字像待办事项应用，而 Google 本来就有一个叫 Google Tasks 的产品。",
+   "brief_en": "Google renamed its Spark AI agent to Tasks and made it free. Gruber mocks the name, since Tasks sounds like a to-do app and Google already has one called Google Tasks.",
+   "detail_zh": [
+    "这是一篇转引 The Verge 短消息的链接帖，再加上 Gruber 的几句评论。Google 把 AI 代理 Spark 改名为 Tasks，并且免费提供。这个功能由新的 Gemini 4 Hydrogen 模型驱动，能做餐单、管理日历，还能在邮件里找出可能不需要的定期扣款。美国用户还能让它打电话比价、查库存、用 Google Pay 下单，也可以通过邮件或短信派发任务。Gruber 关注的主要是名字：Google 的 AI 产品几乎每个都换过好几次名，而“Tasks”听起来像待办事项应用，Google 已经有一个叫 Google Tasks 的产品，两者很容易混淆。"
+   ],
+   "detail_en": [
+    "This is a short link post. It quotes a Verge report that Google is renaming its Spark AI agent to Tasks and making it free. The agent runs on a new model called Gemini 4 Hydrogen. It can build meal plans, manage a calendar and search email for recurring charges. US users get more: it can call businesses to compare prices and check stock, buy items with Google Pay, and take tasks by email or text. Gruber's comment is about the name. He says Google has renamed almost every AI product at least twice, and that Tasks sounds like a to-do app, which is confusing since Google already has one called Google Tasks."
+   ],
+   "topics": [
+    "AI agents",
+    "Google",
+    "product naming"
+   ]
+  },
+  {
+   "id": "7339d690dfb6",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "PostgreSQL 19 Released",
+   "url": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+   "published": "2026-11-19T20:43:57+00:00",
+   "basis": "full",
+   "brief_zh": "PostgreSQL 19 发布，新增的 WAIT FOR LSN 让备库先等到指定的写入位置再查询，应用就能读到自己刚写入的数据。Simon Willison 认为这正是 Wikipedia 早年手工实现过的做法。",
+   "brief_en": "PostgreSQL 19 adds WAIT FOR LSN, so an app can make a standby wait for a given write position before it reads. Simon Willison calls it his favorite feature and compares it to a pattern Wikipedia built by hand on MySQL.",
+   "detail_zh": [
+    "作者说 PostgreSQL 19 值得等，他最喜欢的新功能是 WAIT FOR LSN。问题是，应用把读请求发给备库时，备库可能比主库落后一点，用户刚更新的数据有可能读不到。",
+    "做法是：写入主库后，用 pg_current_wal_insert_lsn() 取得一个位置，例如 0/0306EE20，把它存到 signed cookie 之类的地方。下一次请求时，先在备库执行 WAIT FOR LSN 等待这个位置，备库追上后再查询。还可以加超时，比如 0.1 秒，如果备库没能及时追上，就会报错。",
+    "作者说，他早先是在 Wikipedia 的 MediaWiki 里看到这种模式的。当时基于 MySQL 复制，MediaWiki 把主库的 binlog 位置存在会话里，每次请求开始时等备库追上。现在它改用 MySQL 的 WAIT_FOR_EXECUTED_GTID_SET()，不支持时回退到 SOURCE_POS_WAIT()。这篇短文的重点是：过去要自己手写的做法，现在 PostgreSQL 终于原生支持了。"
+   ],
+   "detail_en": [
+    "Simon Willison says PostgreSQL 19 was worth the wait, and his favorite addition is WAIT FOR LSN. When an app sends reads to a standby, the standby can lag a little behind the primary, so a user may not see a change they just made.",
+    "The pattern works like this. After a write, the app calls pg_current_wal_insert_lsn() to get a position such as 0/0306EE20 and stores it, for example in a signed cookie. On the next request, it runs WAIT FOR LSN with that position on the standby, and the query runs once the standby has caught up. A timeout such as 0.1 seconds is optional. If the standby does not catch up in time, the call returns an error.",
+    "Willison first saw this pattern in MediaWiki, the software behind Wikipedia. It saved the primary's binlog position in the session and waited for the replica to catch up at the start of each request. Newer MediaWiki uses MySQL's WAIT_FOR_EXECUTED_GTID_SET() and falls back to SOURCE_POS_WAIT(). The point of the post is that a pattern teams used to build by hand now has native support in PostgreSQL."
+   ],
+   "topics": [
+    "PostgreSQL",
+    "replication",
+    "databases"
+   ]
+  },
+  {
+   "id": "d48fa07d482b",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Grand Theft Auto 6",
+   "url": "https://www.theverge.com/games/1035801/grand-theft-auto-6-review?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjJ2dm1YT25YaEwiLCJwIjoiL2dhbWVzLzEwMzU4MDEvZ3JhbmQtdGhlZnQtYXV0by02LXJldmlldyIsImV4cCI6MTc5NTU1MTkzNiwiaWF0IjoxNzk1MTE5OTM2fQ.XQt8Qcs5vUE3Paa_aDtLGeZOo2ZDaOU7mB0dTBzXrrQ&utm_medium=gift-link",
+   "published": "2026-11-19T20:30:10+00:00",
+   "basis": "short",
+   "brief_zh": "《GTA 6》已经发售，评论认为它等了这么久，确实值得。",
+   "brief_en": "Andrew Webster at The Verge says GTA 6 was worth the long wait after years of hype, leaks and delays. John Gruber, who shares the link, says the game looks great and is a lot of fun.",
+   "detail_zh": [
+    "The Verge 的 Andrew Webster 先回顾了前作《GTA V》：十几年前推出，销量超过 2.3 亿套，至今仍靠线上模式保持热度，是史上最畅销的游戏之一。Rockstar 因为前作成绩太好，有条件慢慢做续作，但这也让外界期待越来越高，中间又经历了几次大泄露和延期。",
+    "作者的结论很直接：在整个游戏行业都不景气的时候，GTA 6 几乎成了一个谁都得让路的文化事件。等待的过程虽然很夸张，但游戏本身值得这份等待。",
+    "Gruber 在引用这篇文章时补充，同一天科技圈还在讨论 Anthropic 上市。他说自己午夜发售后看了一会儿儿子玩，画面很漂亮，玩起来也很好玩。"
+   ],
+   "detail_en": [
+    "Webster looks back at GTA V, which came out thirteen years ago and has sold more than 230 million copies. Its online mode still keeps it popular. Rockstar could take its time on a sequel, but that also pushed expectations very high, and leaks and delays made the hype bigger.",
+    "The author's conclusion is simple. While much of the game industry is struggling, GTA 6 is a cultural event that almost everyone has to make room for. The wait was huge, but the game is worth it.",
+    "Gruber adds that on the same day the tech world was also talking about the Anthropic IPO. He watched his son play the game after it launched at midnight and says it looks incredible and is a lot of fun."
+   ],
+   "topics": [
+    "video games",
+    "GTA VI"
+   ]
+  },
+  {
+   "id": "db0bb2652d4e",
+   "kind": "blog",
+   "source": "joanwestenberg.com",
+   "source_url": "https://joanwestenberg.com",
+   "title": "The New Era Of Dark Social Is Here",
+   "url": "https://www.joanwestenberg.com/p/the-new-era-of-dark-social-is-here",
+   "published": "2026-11-19T19:19:16+00:00",
+   "basis": "short",
+   "brief_zh": "这篇文章只截取了开头，讲的是“暗社交”这个概念，以及人们正在大量转向群聊和私信。",
+   "brief_en": "Joan Westenberg says a new wave of dark social is here, with people moving to group chats. The excerpt cuts off at a subscription wall.",
+   "detail_zh": [
+    "Alexis Madrigal 在 2012 年于《大西洋月刊》上提出“暗社交”一词，指通过邮件、即时聊天和私信分享的链接。这些流量分析工具测不到，营销人员很头疼。从标题和副标题看，作者认为现在又出现了一波类似的变化，大家越来越多地转向群聊。",
+    "可惜正文在订阅提示处就断了，后面的论证和例子都看不到，所以这里只能说到这里，不能替作者补充结论。"
+   ],
+   "detail_en": [
+    "In 2012 Alexis Madrigal of The Atlantic coined the term dark social for links shared through email, chat and DMs. Analytics could not track these links, so marketers disliked them. The headline and subtitle suggest the author sees a new exodus to group chats.",
+    "The excerpt stops at a subscription wall, so the arguments and examples are not visible here."
+   ],
+   "topics": [
+    "social media",
+    "dark social"
+   ]
+  },
+  {
+   "id": "abdb3a80d654",
+   "kind": "blog",
+   "source": "tedium.co",
+   "source_url": "https://tedium.co",
+   "title": "Closing The Sandwich Shop",
+   "url": "https://feed.tedium.co/link/15204/17535724/salon-media-ownership-tech-destiny",
+   "published": "2026-11-19T18:38:35+00:00",
+   "basis": "full",
+   "brief_zh": "Salon 宣布停止运营，作者借这件事感慨独立媒体的困境，以及把基础设施交给别人的风险。",
+   "brief_en": "Tedium looks at the closure of Salon, a long-running outlet later sold to an iGaming and crypto marketing firm. It argues that media built on other companies' platforms are always exposed.",
+   "detail_zh": [
+    "作者先说，Salon 停刊的理由是“出版模式已经不可持续”。他认为这大体没错，但 Salon 比很多媒体经历过更多波折。它早年以新闻和活跃的评论区起家，2011 年却主动关掉了评论系统。作者回头看，觉得这可能是个错误，因为它把社区的基础设施交给了别人。",
+    "Salon 已经存在 31 年，早期拿到过 Apple 和 Adobe 的资金支持。作者说，它一直在靠搜索、社交和视频这些平台的浪潮勉强生存，而这些平台本来就不是为新闻业设计的。前编辑 Matt Wolfbridge 写过一篇怀念文章，说他在 Salon 任内大大提高了它的社交媒体影响力，那是他职业生涯中最顺利的一段经历。",
+    "后来 Salon 被卖给了总部在马耳他、业务涉及在线赌博和加密货币营销的 Find.co。作者觉得，买家可能只是看中它多年积累的 SEO 排名，而不是这份媒体本身。这和 Deadspin 的遭遇很像。作者还提到，据报道 Google 的 AI Mode 利润不如旧版搜索，Google 因此在测试减少它的展示。他把这比作当年 Facebook 基于不准确数据推动转向视频的故事：整个行业被迫跟着大公司的押注调整。",
+    "作者最后举了 The Virginian-Pilot 报纸的例子。当地社区在抗议 Wawa 改造一家门店，因为公司想要更多带加油站的门店，这是高层拍脑袋决策的典型。这家报纸的页脚还写明，禁止用其内容训练 AI。作者的结论是，媒体已经被伤得太多，不会再客气，自上而下的 AI 决策可能会让它们失去最在乎的东西。文末还有几条短讯，包括一个孤独感主题的纸牌网站、一位律师的执照被暂停，以及一个不断切换关卡的 8 位游戏合集。"
+   ],
+   "detail_en": [
+    "Salon said its publishing model is no longer sustainable. The author thinks that is probably true but notes that Salon faced more setbacks than most. It began with news and a busy comment section, then closed its comments in 2011, a move the author now thinks may have been a mistake.",
+    "Salon has existed for 31 years and got early funding from Apple and Adobe. The author says it survived by riding waves of search, social and video, none of which were built for journalism. Former editor Matt Wolfbridge wrote a fond tribute saying he grew its social presence a lot during his time there.",
+    "Salon was later sold to Find.co, a Malta-based company with interests in online gambling and crypto marketing. The author suspects the buyer wanted Salon's SEO ranking more than the outlet itself, much like what happened to Deadspin. He also points to reports that Google's AI Mode is less profitable than old search, so Google is testing showing it less. He compares this to Facebook's pivot to video, which was based on inflated data. The whole industry had to react to big companies' bets.",
+    "The author ends with a local example. A community protested a Wawa plan to add gas stations, a sign of top-down decisions made without looking at the ground. The Virginian-Pilot's footer also bans using its content to train AI. The author thinks media have been burned too often to be polite about AI, and that top-down AI decisions could cost them what they care about most. The post also has short items about a loneliness-themed solitaire site, a lawyer whose license was suspended, and an 8-bit game collection that keeps changing."
+   ],
+   "topics": [
+    "digital media",
+    "platform dependence"
+   ]
+  },
+  {
+   "id": "31efb0aa7fbd",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Anthropic IPOs, Topping SpaceX for the Largest Ever",
+   "url": "https://www.techmeme.com/261118/p34#a261118p34",
+   "published": "2026-11-19T16:33:16+00:00",
+   "basis": "short",
+   "brief_zh": "Gruber 简短表达了对 Anthropic 上市的怀疑：他认为大模型的优势并不持久，而且公司领导层不适合管理上市公司。",
+   "brief_en": "John Gruber doubts Anthropic's IPO, saying LLM advantages are temporary and the leadership is not fit to run a public company.",
+   "detail_zh": [
+    "这只是一段简短的评论，回应的是 Anthropic 上市规模超过 SpaceX、史上最大这一新闻。Gruber 提出两点怀疑。第一，大模型没有长久的护城河，前沿的领先只是暂时的，而且这种优势建立在 Nvidia 的黄仁勋等人推高的巨大泡沫之上。第二，即使他在第一点上判断错了，他也认为 Anthropic 的领导层不适合带领一家上市公司，他用的措辞相当尖锐。",
+    "这段话没有给出数据或更多论证，主要是作者的个人看法。"
+   ],
+   "detail_en": [
+    "This is a short reaction to the news that Anthropic's IPO is the largest ever, above SpaceX. Gruber gives two doubts. First, LLMs have no lasting moat, only a temporary lead at the frontier, and that lead rests on a huge bubble that Nvidia's Jensen Huang has helped inflate. Second, even if he is wrong about the first point, he thinks the leadership is not fit to run a public company, and he uses harsh language.",
+    "The excerpt gives no data or further argument, so it is mainly the author's personal opinion."
+   ],
+   "topics": [
+    "AI industry",
+    "Anthropic IPO"
+   ]
+  },
+  {
+   "id": "4c424bb2bc1f",
+   "kind": "blog",
+   "source": "buttondown.com/hillelwayne",
+   "source_url": "https://buttondown.com/hillelwayne",
+   "title": "My Least Favorite Example in Software Engineering",
+   "url": "https://buttondown.com/hillelwayne/archive/my-least-favorite-example-in-software-engineering/",
+   "published": "2026-11-19T15:40:32+00:00",
+   "basis": "full",
+   "brief_zh": "作者吐槽基于属性测试（PBT）入门文章里几乎必用的例子：两次反转列表还等于原列表。他认为这个例子能说明PBT是什么，却看不出它有什么实际用处，并追溯了这个例子的来历。",
+   "brief_en": "The author dislikes the double-reverse example that nearly every property-based testing intro uses. He says it shows what PBT is but not why it matters, and he traces where the example came from.",
+   "detail_zh": [
+    "作者先说了他对好例子的标准：要同时让学生明白这个主题是什么，也明白它为什么重要。比如用Option类型保证处理空值，就很直观，也能看出实际用途。",
+    "他最讨厌的例子是PBT入门里常见的reverse(reverse(l)) == l，也就是生成随机列表，验证反转两次后还是原列表。作者觉得这个例子完全脱离实际，没有人会在工作里写列表反转。他也承认add(1, 2) == 3这类普通测试例子同样没用，但普通测试本身比较平常，读者能自己想到更好的例子；PBT比较陌生，读者更需要好例子来上手，而双重反转这个例子给不了他们这种帮助。",
+    "作者认为这个例子之所以流行，有两个原因。第一，John Hughes发明QuickCheck时，论文开头就用了两次反转列表，后来的人就一直照抄。第二，Hughes论文里其他例子很快陷进生成器和领域属性的细节里，读者自然只记住了最简单的那个。",
+    "作者还查到，这个例子其实不是Hughes首创。Zohar Manna的书、Boyer和Moore关于LISP定理证明的论文，以及Bird和Wadler的函数式编程教材里都用过它，不过用途不同：前几位是拿它来证明程序性质，Hughes则把它当作要测试的属性。作者认为这个例子在Hughes的语境里有价值，因为他研究的是高效的函数式列表，验证反转很合适。问题在于后来的PBT教学把它照搬到了不同的场景里，所以他并不觉得这是Hughes的错。"
+   ],
+   "detail_en": [
+    "The author says a good teaching example should show both what a topic is and why it matters. Option types for null safety are a good example because they are clear and useful.",
+    "His least favorite example is the PBT staple reverse(reverse(l)) == l, where you generate random lists and check that reversing twice gives back the original. He says nobody writes list reversal for their job, so the example teaches the idea but not how to test real software. Ordinary unit tests like add(1, 2) == 3 are also useless, but readers can easily think of better ones. PBT is new to most people, so they need better examples.",
+    "He gives two reasons the example spread. First, John Hughes opened his QuickCheck paper with reversing a list twice, and everyone copied it. Second, the rest of the paper quickly got lost in generator and domain-specific details, so readers remembered only the simple case.",
+    "The example was not Hughes's invention. Zohar Manna, Boyer and Moore, and Bird and Wadler all used it earlier, but for proofs rather than testing. The author thinks it fit Hughes's work on efficient functional lists, so the problem is not his fault. It became a problem when later PBT teaching kept using it in contexts where it does not help."
+   ],
+   "topics": [
+    "property-based testing",
+    "software testing",
+    "teaching examples"
+   ]
+  },
+  {
+   "id": "707245e1b2bf",
+   "kind": "blog",
+   "source": "pluralistic.net",
+   "source_url": "https://pluralistic.net",
+   "title": "Pluralistic: How to forfeit one of copyright's best labor policies (19 Nov 2026)",
+   "url": "https://pluralistic.net/2026/11/19/loan-out-companies/",
+   "published": "2026-11-19T14:10:14+00:00",
+   "basis": "full",
+   "brief_zh": "Doctorow认为版权不断扩张并没有让创作者变富，真正有效的是1976年版权法里的终止权，它允许创作者在35年后收回版权，但这项权利现在正被媒体公司用法律手段削弱。",
+   "brief_en": "Doctorow argues that copyright expansion has not made artists richer. The termination right, which lets creators reclaim rights after 35 years, is the one rule that clearly helps them, and studios are now weakening it in court.",
+   "detail_zh": [
+    "作者说，美国过去五十年不断延长版权期限、扩大保护范围，但艺术家的平均收入反而比1976年还低，而唱片公司、出版商和影视公司却越来越大、越来越赚钱。原因是创作者面对的是少数几家大买家，议价能力很弱。给他们更多版权，只会让他们更容易把版权交出去。作者用“给被欺负的孩子更多午餐钱”打比方，钱最后还是被欺负他的人拿走了。",
+    "作者认为真正能改变局面的，是结构性的办法。1976年版权法里的终止权规定，创作者可以在签约35年后单方面收回版权，而且不能通过合同预先放弃。作者指出，35年前的作品大多是创作者刚入行时签下的不利合同，但到了今天，这些作品很可能已经是稳定赚钱的老作品。Rebecca Giblin的研究发现，终止权确实让创作者拿回了收益，对一些黑人音乐人尤其有帮助。Stephen King、Stan Lee等人也都通过类似方式拿回过权利或谈到更好的条件。",
+    "可是国会一直没有加强终止权。最初草案里，终止是自动的，20年后生效，后来改成35年，还要办一堆手续。1999年，国会助理Mitch Glazier把一条条款塞进无关法案，几乎让唱片艺人无法行使终止权，后来国会紧急撤销了这条规定，他也离开了国会。之后他被唱片业游说组织RIAA聘为CEO，作者讽刺他仍在谈论“保护艺术家”。",
+    "作者说，终止权现在又遇到新麻烦。很多自由职业者会通过有限责任公司或好莱坞的“loan-out”公司签约和收款，媒体公司就主张这些作品是公司的“职务作品”，因此不适用终止权。Aaron Moss记录了多起这样的案件，多数是公司胜出，例如John Waite起诉UMG的案子里，法官认为不能在享受税收好处时又否认公司的存在。作者提到，最近Wachowski兄弟也宣布要行使终止权，收回《黑客帝国》，但他承认自己不是律师，不确定这类问题有没有办法解决，建议创作者找律师和会计师商量。",
+    "作者最后认为，终止权是版权制度里少数真正对创作者有利的规定，不应该被削弱。他推荐Authors Alliance提供的免费工具，帮作家办理35年后的版权终止手续。文末还有大量活动、新书和链接，与这篇主题关系不大。"
+   ],
+   "detail_en": [
+    "The author says US copyright has grown longer and broader for 50 years, yet artists are poorer than in 1976, while media companies are bigger and more profitable. Creators sell to a few large buyers and have little bargaining power, so more copyright mostly becomes something they hand over. He compares it to giving a bullied kid more lunch money, which the bullies simply take.",
+    "He says the fix has to change the structure. The 1976 Copyright Act's termination right lets creators cancel a copyright contract 35 years after signing, and no contract can waive it. Early works are often the ones signed on bad terms at the start of a career, yet they may now be steady earners. Rebecca Giblin's study found that termination has actually raised creators' income, especially for some Black musicians. Stephen King and Stan Lee are among the examples he gives.",
+    "Congress has not strengthened termination. The first draft made it automatic after 20 years, but the final law set 35 years and added paperwork. In 1999, a congressional staffer, Mitch Glazier, slipped a clause into an unrelated bill that made it nearly impossible for recording artists to use termination. Congress reversed it under pressure, and Glazier later became CEO of the RIAA, the record industry's lobbying group.",
+    "Termination now faces a new threat. Many freelancers earn through LLCs or Hollywood loan-out companies, and studios argue that the work is therefore a work made for hire that cannot be terminated. Aaron Moss has tracked these cases, and studios have mostly won, such as John Waite's case against UMG, where the judge said you cannot use a corporate structure for tax benefits and then deny it. The author says the Wachowskis have announced they will use termination to reclaim The Matrix. He is not a lawyer and advises creators to get legal and accounting advice.",
+    "The author concludes that termination is one of the few copyright rules that clearly helps creators, and it should be strengthened, not weakened. He recommends a free tool from the Authors Alliance for authors who want to terminate 35-year-old transfers. The rest of the post is a list of events, books and links."
+   ],
+   "topics": [
+    "copyright",
+    "creator rights",
+    "termination of transfer"
+   ]
+  }
+ ],
+ "picks": {
+  "important": [
+   "31efb0aa7fbd",
+   "f32d5bea8abf",
+   "7339d690dfb6"
+  ],
+  "liked": [
+   "4c424bb2bc1f",
+   "7598bcd4bdf1",
+   "d9186e011e29"
+  ]
+ },
+ "generated_at": "2026-11-20T15:30:18.257571+00:00"
+}
