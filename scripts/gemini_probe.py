@@ -55,12 +55,26 @@ for i, vid in enumerate(os.environ.get("VIDEO_IDS", "").split()):
         "generationConfig": {"mediaResolution": f"MEDIA_RESOLUTION_{RES}",
                              "responseMimeType": "application/json"},
     }
-    t0 = time.time()
-    r = requests.post(f"{BASE}/models/{MODEL}:generateContent", headers=H, json=body, timeout=900)
-    dt = time.time() - t0
-    if r.status_code != 200:
-        print(f"VIDEO {vid}: HTTP {r.status_code} {r.text[:600]}")
-        print("RESULT_JSON " + json.dumps({"model": MODEL, "id": vid, "error": f"HTTP {r.status_code}"}))
+    r, err = None, ""
+    for attempt in range(3):
+        if attempt:
+            time.sleep(60)
+        t0 = time.time()
+        try:
+            r = requests.post(f"{BASE}/models/{MODEL}:generateContent", headers=H, json=body, timeout=300)
+        except requests.RequestException as e:
+            r, err = None, f"timeout after {time.time() - t0:.0f}s" if "timed out" in str(e) else str(e)[:200]
+            print(f"VIDEO {vid}: attempt {attempt + 1} {err}")
+            continue
+        dt = time.time() - t0
+        if r.status_code == 200:
+            break
+        err = f"HTTP {r.status_code}"
+        print(f"VIDEO {vid}: attempt {attempt + 1} {err} {r.text[:300]}")
+        if r.status_code not in (429, 500, 503):
+            break
+    if r is None or r.status_code != 200:
+        print("RESULT_JSON " + json.dumps({"model": MODEL, "id": vid, "error": err}))
         continue
     j = r.json()
     u = j.get("usageMetadata", {})
