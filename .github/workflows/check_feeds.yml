@@ -1,7 +1,12 @@
 name: check-feeds
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Only check these URLs (space separated). Empty = every feed in sources.yml"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -19,4 +24,6 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Check every feed
         working-directory: scripts
+        env:
+          EXTRA_FEEDS: ${{ inputs.urls }}
         run: python check_feeds.py

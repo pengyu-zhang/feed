@@ -4,6 +4,7 @@ Prints one line per feed: status with our bot user agent, status with a browser 
 number of entries, newest entry date, and how many entries carry no date. Writes nothing.
 """
 
+import os
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 
@@ -50,6 +51,9 @@ def check(src):
 
 def main():
     sources = load_yaml("sources.yml")["blogs"]
+    extra = os.environ.get("EXTRA_FEEDS", "").split()
+    if extra:  # check only these URLs (for trying alternatives)
+        sources = [{"name": u, "feed": u} for u in extra]
     with ThreadPoolExecutor(max_workers=8) as pool:
         for line in pool.map(check, sources):
             print(line)
