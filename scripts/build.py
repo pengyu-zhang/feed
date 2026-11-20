@@ -46,12 +46,6 @@ def date_label(iso):
     return zh, en
 
 
-def minutes_label(m):
-    if not m:
-        return "", ""
-    return f"约 {m} 分钟读完", f"{m} min read"
-
-
 def page(title_zh, title_en, active, body):
     tabs = [("index.html", "今天", "Today"), ("archive.html", "往期", "Archive"),
             ("sources.html", "来源", "Sources")]
@@ -90,24 +84,34 @@ def page(title_zh, title_en, active, body):
 """
 
 
-def item_html(it, why=None, compact=False):
+def paragraphs(items):
+    return "".join(f"<p>{escape(x)}</p>" for x in items)
+
+
+def item_html(it, compact=False):
     kind = bi("博客", "Blog") if it.get("kind") == "blog" else bi("视频", "Video")
-    m_zh, m_en = minutes_label(it.get("read_minutes"))
-    meta = [f'<span class="kind">{kind}</span>' if not compact else "",
-            f'<span class="src">{escape(it["source"])}</span>',
-            f"<span>{bi(m_zh, m_en)}</span>" if m_zh else ""]
-    if compact:
-        basis = bi("按全文", "from full text") if it.get("basis") == "full" else bi("原文较短", "short source text")
-        meta.append(f"<span>{basis}</span>")
-    if it.get("summary_zh") or it.get("summary_en"):
-        summary = bi(it.get("summary_zh") or it.get("summary_en"), it.get("summary_en") or it.get("summary_zh"))
+    src = escape(it["source"])
+    if it.get("source_url"):
+        src = f'<a class="src" href="{escape(it["source_url"])}" target="_blank" rel="noopener">{src}</a>'
     else:
-        summary = bi("这条没有生成摘要，点标题看原文。", "No summary for this one. Open the title to read the original.")
+        src = f'<span class="src">{src}</span>'
+    meta = [f'<span class="kind">{kind}</span>', src]
+    if compact and it.get("basis") == "short":
+        meta.append(f"<span>{bi('原文较短', 'short source text')}</span>")
+    brief_zh = it.get("brief_zh") or it.get("summary_zh") or ""
+    brief_en = it.get("brief_en") or it.get("summary_en") or ""
+    if brief_zh or brief_en:
+        brief = bi(brief_zh or brief_en, brief_en or brief_zh)
+    else:
+        brief = bi("这条没有生成摘要，点标题看原文。", "No summary for this one. Open the title to read the original.")
     out = [f'<article class="item"><div class="meta">{"".join(meta)}</div>',
            f'<a class="title" href="{escape(it["url"])}" target="_blank" rel="noopener">{escape(it["title"])}</a>',
-           f'<p class="summary">{summary}</p>']
-    if why:
-        out.append(f'<p class="why">{bi(why.get("why_zh", ""), why.get("why_en", ""))}</p>')
+           f'<p class="brief">{brief}</p>']
+    dz, de = it.get("detail_zh") or [], it.get("detail_en") or []
+    if dz or de:
+        out.append(f'<details class="detail"><summary><span class="when-closed">{bi("展开详细内容", "Read the full summary")}</span><span class="when-open">{bi("收起", "Collapse")}</span></summary>'
+                   f'<div data-l="zh">{paragraphs(dz or de)}</div>'
+                   f'<div data-l="en" lang="en">{paragraphs(de or dz)}</div></details>')
     out.append("</article>")
     return "".join(out)
 
@@ -128,8 +132,8 @@ def day_body(day):
             f"</p></header>")
 
     def column(key, label, title, sub):
-        picks = [(items[p["id"]], p) for p in day.get("picks", {}).get(key, []) if p["id"] in items]
-        inner = "".join(item_html(it, why) for it, why in picks) or \
+        ids = [p["id"] if isinstance(p, dict) else p for p in day.get("picks", {}).get(key, [])]
+        inner = "".join(item_html(items[i]) for i in ids if i in items) or \
             f'<p class="empty">{bi("今天没有挑出来的。", "Nothing picked today.")}</p>'
         return (f'<section class="card" aria-label="{escape(title[1])}"><div class="label">{bi(*label)}</div>'
                 f'<h2 class="col-title">{bi(*title)}</h2><p class="muted small">{bi(*sub)}</p>{inner}</section>')

@@ -4,8 +4,8 @@ timezone: "Europe/Amsterdam"
 
 # 第一次运行、或者上次运行太久以前时，往回看多少小时
 first_run_hours: 26
-# 最多往回补几天（比如 Actions 停了几天）
-max_catchup_hours: 72
+# 某个来源连续几天抓不到时，恢复后最多往回补多少小时
+max_catchup_hours: 168
 # 同一个来源一天最多收几篇（simonwillison.net 一天能发十几条短链接）
 max_per_source: 5
 
@@ -13,9 +13,9 @@ max_per_source: 5
 models:
   summary: "claude-haiku-5-5"   # 每篇写中英摘要
   picks: "claude-sonnet-5-5"    # 每天挑"该知道的"和"可能喜欢"
-summary_batch_size: 8
+summary_batch_size: 4
 # 每篇喂给模型的正文最多多少字符
-max_chars_per_item: 8000
+max_chars_per_item: 20000
 
 # "可能喜欢"按这些兴趣挑。打分攒够以后改按历史。
 interests:

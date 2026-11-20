@@ -163,10 +163,27 @@ html[data-lang="en"] [data-l="zh"] { display: none; }
 .meta .kind { color: var(--accent); }
 .title { font-size: 1.06em; font-weight: 600; line-height: 1.45; color: var(--text); text-decoration: none; }
 .title:hover { color: var(--accent); text-decoration: underline; text-decoration-color: currentColor; }
-.summary { font-size: 0.95em; line-height: 1.7; }
-.why { font-size: 0.85em; color: var(--muted); }
+.meta a.src { color: var(--text); text-decoration: none; }
+.meta a.src:hover { color: var(--accent); text-decoration: underline; }
+.brief { font-size: 0.97em; line-height: 1.7; }
+.detail summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75em;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--accent);
+  cursor: pointer;
+  list-style: none;
+}
+.detail summary::-webkit-details-marker { display: none; }
+.detail summary::before { content: "+"; font-family: var(--font-label); margin-right: 0.45em; }
+.detail[open] summary::before { content: "−"; }
+.detail .when-open, .detail[open] .when-closed { display: none; }
+.detail[open] .when-open { display: inline; }
+.detail p { margin: 0 0 0.75em; font-size: 0.97em; line-height: 1.8; }
+.detail p:last-child { margin-bottom: 0.25em; }
 .list .title { font-weight: 500; }
-.list .summary { color: var(--muted); }
 
 .section-title { margin: 0; font-size: 1.25em; font-weight: 600; letter-spacing: -0.01em; }
 .empty { padding: 1em 0 0; color: var(--muted); }

@@ -53,7 +53,8 @@ def page_text(url):
         return ""
 
 
-def fetch_source(src, since, seen, cap):
+def fetch_source(src, since, seen, cap, baselined):
+    """Return (new items, status, undated urls to remember without publishing)."""
     status = {"feed": src["feed"]}
     try:
         try:
@@ -68,20 +69,30 @@ def fetch_source(src, since, seen, cap):
             raise ValueError(f"unparseable feed: {parsed.bozo_exception}")
     except Exception as e:  # one broken feed must not stop the others
         status["error"] = str(e)[:200]
-        return [], status
+        return [], status, []
 
-    status["ok"] = now_utc().isoformat()
+    now = now_utc()
+    status["ok"] = now.isoformat()
     latest = None
-    items = []
+    items, quiet = [], []
     for entry in parsed.entries:
         url = entry.get("link")
+        if not url or url in seen:
+            continue
         when = entry_time(entry)
-        if not url or not when:
-            continue
-        if latest is None or when > latest:
-            latest = when
-        if when <= since or url in seen:
-            continue
+        undated = when is None
+        if undated:
+            # feeds without dates (e.g. paulgraham.com): the first time we see a feed,
+            # remember everything in it; after that, any unseen link is new
+            if src["name"] not in baselined:
+                quiet.append(url)
+                continue
+            when = now
+        else:
+            if latest is None or when > latest:
+                latest = when
+            if when <= since:
+                continue
         content = ""
         if entry.get("content"):
             content = entry.content[0].get("value", "")
@@ -100,6 +111,7 @@ def fetch_source(src, since, seen, cap):
             "published": when.isoformat(),
             "basis": "full" if len(text) >= 1500 else "short",
             "text": text,
+            "undated": undated,
         })
     if latest:
         status["last_post"] = latest.isoformat()
@@ -107,35 +119,41 @@ def fetch_source(src, since, seen, cap):
     if len(items) > cap:
         status["capped"] = len(items) - cap
         items = items[:cap]
-    return items, status
+    return items, status, quiet
 
 
 def main():
     cfg = load_yaml("config.yml")
     sources = load_yaml("sources.yml")["blogs"]
     state = load_json(STATE_FILE, {})
-    seen = set(state.get("seen", {}))
+    seen = set(state.get("seen", {})) | set(state.get("seen_undated", []))
+    baselined = set(state.get("baselined", []))
+    old_status = load_json(STATUS_FILE, {})
 
     now = now_utc()
-    oldest = now - timedelta(hours=cfg.get("max_catchup_hours", 72))
-    if state.get("last_run"):
-        since = datetime.fromisoformat(state["last_run"]) - timedelta(hours=1)
-    else:
-        since = now - timedelta(hours=cfg.get("first_run_hours", 26))
-    since = max(since, oldest)
+    oldest = now - timedelta(hours=cfg.get("max_catchup_hours", 168))
+    first = now - timedelta(hours=cfg.get("first_run_hours", 26))
+
+    def since_for(src):
+        # each feed resumes from its own last good fetch, so a feed that was
+        # blocked for a few days catches up instead of losing those posts
+        ok = old_status.get(src["name"], {}).get("ok")
+        if not ok:
+            return first
+        return max(datetime.fromisoformat(ok) - timedelta(hours=1), oldest)
 
     cap = cfg.get("max_per_source", 5)
     with ThreadPoolExecutor(max_workers=12) as pool:
-        results = list(pool.map(lambda s: fetch_source(s, since, seen, cap), sources))
+        results = list(pool.map(lambda s: fetch_source(s, since_for(s), seen, cap, baselined), sources))
 
-    old_status = load_json(STATUS_FILE, {})
-    status, items = {}, []
-    for src, (got, st) in zip(sources, results):
+    status, items, quiet = {}, [], []
+    for src, (got, st, q) in zip(sources, results):
         prev = old_status.get(src["name"], {})
         if "error" in st:  # keep the last good facts next to the new error
             st = {**{k: v for k, v in prev.items() if k in ("ok", "last_post")}, **st}
         status[src["name"]] = st
         items.extend(got)
+        quiet.extend(q)
 
     # same post reachable from two feeds: keep one
     unique = {}
@@ -144,9 +162,11 @@ def main():
     items = sorted(unique.values(), key=lambda x: x["published"], reverse=True)
 
     save_json(STATUS_FILE, status)
-    save_json(ITEMS_FILE, {"since": since.isoformat(), "run_at": now.isoformat(), "items": items})
-    errors = sum(1 for s in status.values() if "error" in s)
-    print(f"since {since.isoformat()}: {len(items)} new posts, {errors}/{len(sources)} feeds failed")
+    ok_sources = [s["name"] for s in sources if "error" not in status[s["name"]]]
+    save_json(ITEMS_FILE, {"run_at": now.isoformat(), "items": items,
+                           "quiet_urls": quiet, "baselined": ok_sources})
+    errors = len(sources) - len(ok_sources)
+    print(f"{len(items)} new posts, {errors}/{len(sources)} feeds failed")
     return 0
 
 
