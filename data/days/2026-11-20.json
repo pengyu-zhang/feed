@@ -2,6 +2,37 @@
  "date": "2026-11-20",
  "items": [
   {
+   "id": "ea33c2b18b2d",
+   "kind": "blog",
+   "source": "filfre.net",
+   "source_url": "https://filfre.net",
+   "title": "Diablo II",
+   "url": "https://www.filfre.net/2026/11/diablo-ii/",
+   "published": "2026-11-20T17:03:57+00:00",
+   "basis": "full",
+   "brief_zh": "这是 filfre.net 上一篇关于《暗黑破坏神 II》开发与成功历程的长文，讲暴雪北方工作室如何在保留第一代简单刷怪节奏的同时扩大内容，并介绍续作的销售成绩和当时暴雪的公司背景。",
+   "brief_en": "A long essay on how Blizzard North made Diablo II, the record-breaking sequel to Diablo. It also covers the crunch behind it and the corporate turmoil that Blizzard faced at the time.",
+   "detail_zh": [
+    "续作的开发背景是：第一代《暗黑破坏神》大获成功，暴雪很快决定做续作。开发团队想补上第一代因时间和资源不足而没做的内容，也想修正玩家在实际游玩中发现的问题。但他们很担心加入太多复杂的系统会失去原作的味道，因此团队给自己定下一条原则：「我们做的是暗黑破坏神，不是 CRPG。」续作花了大约三年，人手从原来的二十人左右增加到约四十人，但工期仍然比预计长很多。这段时间游戏业的整合很快，即时战略和动作 RPG 两类主流玩法都以暴雪的作品为模板。",
+    "文章接着讲了暴雪的公司归属。1994 年到 1996 年，暴雪隶属于教育软件公司 Davidson and Associates，1996 年又被 CUC 收购。1997 年 CUC 与 HFS 合并成 Cendant。1998 年 4 月，Cendant 爆出大规模财务造假丑闻，旗下游戏部门也受到牵连，暴雪有很多员工把工资投进了 Cendant 股票，最后股票变得一文不值。同年 11 月，法国的 Vivendi 收下了 Cendant 的游戏部门。因为暴雪的产品卖得很好，Vivendi 保留了它，而 Sierra 则被关掉。作者认为，暴雪成功的原因是非常了解年轻男性玩家的喜好，并且在制作上坚持精益求精。",
+    "续作开发的后半段，团队经历了约十八个月几乎没有休息的赶工期，每周工作常常超过八十小时。程序员 Jonathan Stone 说这是他经历过最糟的一次赶工，Peter Kemmer 说这让他离开了公司。不少员工因此离婚或分手，Brevik 自己的婚姻也没能维持下去。Max Schaefer 承认，管理层在赶工期间并没有很好地照顾员工的身心健康。当时，同事几乎就是每个人全部的社交圈。",
+    "销售方面，第一代在续作发布前已卖出约 250 万套。暴雪为续作准备了 200 万套的首批生产量，这些在六周内就卖完了，首日卖出 18.4 万套，因此被金氏世界纪录认定为史上销售最快的电脑游戏。续作的硬件要求刻意压得很低：画面固定为 640x480，233 MHz 的 Pentium 处理器加 32 MB 内存就能运行，3D 显卡只是可选的画质增强。这让很多买不起高配电脑的玩家也能上 Battle.net 玩。文章提到，它在某段时间的销量甚至超过了《哈利波特与火焰杯》。",
+    "在设计上，续作的最大变化是规模和开放度。游戏分为四个章节，前三章的面积和第一代差不多，每一章都有一个像 Tristram 那样的据点，玩家可以在那里买卖物品、补血。地图是可以自由探索的大地图，地形包括沼泽、沙漠、森林和山脉，大部分由程序随机生成，任务和传送点负责引导方向。通关时长从第一代的约十二小时增加到约四十小时。职业也从三个增加到五个，分别是 Necromancer、Amazon、Paladin、Sorceress 和 Barbarian。为了让职业选择一直影响到结局，Brevik 从 4X 策略游戏《Master of Orion》的科技发展机制中找到了灵感。原文在这里中断。"
+   ],
+   "detail_en": [
+    "The essay starts with the sequel's background. Diablo was a hit, so Blizzard quickly approved a sequel. The team wanted to add features it had no time for in the first game and fix problems players found. They worried that too much complexity would lose the original feel, so their rule was: we are making a Diablo, not a CRPG. The sequel took about three years, and the team grew from about 20 original members to about 40, but it still took far longer than planned. The industry was consolidating fast, and two dominant genres, real-time strategy and action RPGs, were both modeled on Blizzard's games.",
+    "The article then covers Blizzard's ownership. From 1994 to 1996 Blizzard belonged to Davidson and Associates, an educational software company. CUC bought it in 1996, and CUC merged with HFS in 1997 to form Cendant. In April 1998 Cendant was exposed in a large accounting fraud, and its games division was dragged into the scandal. Many Blizzard employees had put part of their pay into Cendant stock, which became worthless. In November 1998 the French company Vivendi bought Cendant's games division. Vivendi kept Blizzard because it sold well, but closed Sierra. The author argues that Blizzard succeeded by understanding young male gamers closely and by insisting on polish.",
+    "In the second half of development, the team went through about eighteen months of near-constant crunch, often more than eighty hours a week. Programmer Jonathan Stone called it the worst crunch of his career, and Peter Kemmer said it drove him out of the company. Many employees divorced or broke up with partners, and David Brevik's marriage ended. Max Schaefer admits that management did not look after staff health and well-being well during the crunch. Coworkers became most people's entire social life.",
+    "On sales, the first game had sold about 2.5 million copies before the sequel came out. Blizzard made an initial run of 2 million copies for the sequel. They sold out in six weeks, and 184,000 sold in the first 24 hours, which made it the fastest-selling computer game on record according to Guinness. The sequel kept its hardware requirements low. It ran at a fixed 640x480 resolution on a 233 MHz Pentium with 32 MB of memory, and a 3D card was optional. This let players with modest machines join Battle.net. The article says that for a time it outsold Harry Potter and the Goblet of Fire.",
+    "In design, the biggest change was scale and openness. The game has four acts. The first three are about as large as the original game, and each has a home town for trading and healing. The player explores an open countryside with swamps, deserts, forests and mountains. Most terrain is randomly generated, and quests and waypoints guide the way. Playtime grew from about twelve hours in the first game to about forty. The number of classes rose from three to five: Necromancer, Amazon, Paladin, Sorceress and Barbarian. To make the class choice matter until the ending, Brevik drew inspiration from the tech system in the 4X strategy game Master of Orion. The text is cut off at that point."
+   ],
+   "topics": [
+    "video games",
+    "game history",
+    "Blizzard"
+   ]
+  },
+  {
    "id": "f0794dfa65bf",
    "kind": "blog",
    "source": "wheresyoured.at",
@@ -439,13 +470,13 @@
   "important": [
    "9e188d65b5ac",
    "31efb0aa7fbd",
-   "d48fa07d482b"
+   "f0794dfa65bf"
   ],
   "liked": [
    "f32d5bea8abf",
-   "7339d690dfb6",
-   "7598bcd4bdf1"
+   "7598bcd4bdf1",
+   "7339d690dfb6"
   ]
  },
- "generated_at": "2026-11-20T16:45:33.364048+00:00"
+ "generated_at": "2026-11-20T18:58:17.014391+00:00"
 }
