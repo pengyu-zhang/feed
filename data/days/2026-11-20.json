@@ -2,6 +2,58 @@
  "date": "2026-11-20",
  "items": [
   {
+   "id": "f0794dfa65bf",
+   "kind": "blog",
+   "source": "wheresyoured.at",
+   "source_url": "https://wheresyoured.at",
+   "title": "Premium: Bursting Bubbles",
+   "url": "https://www.wheresyoured.at/premium-bursting-bubbles/",
+   "published": "2026-11-20T16:41:55+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为泡沫既危险又有破坏性，主要只让最有钱的人受益，并批评媒体和吹捧者在AI泡沫中的做法，同时预告这期付费通讯将讨论如何阻止泡沫再次膨胀。",
+   "brief_en": "The author says AI bubbles are destructive and mostly benefit the richest people. He criticizes the media and boosters for cheerleading and dodging hard questions. Today's premium issue covers ways to stop future bubbles from inflating.",
+   "detail_zh": [
+    "作者开篇认为，泡沫的涨跌周期既危险又有破坏性，真正得利的只是最有钱、最脱离普通人的那群人。想在泡沫早期入场、在破裂前离场赚钱，只有运气特别好，或者掌握别人没有的内部信息才可能做到。泡沫本质上不稳定、不讲逻辑，由被操纵的媒体、有钱却缺乏判断的金融家，以及善于拉抬数字的投机者共同推动。",
+    "作者批评社会上的犬儒风气。提前指出泡沫的人会被告知“市场非理性的时间可能比你保持偿付能力的时间更长”，或者“提前就等于出错”；质疑的人会被说“大家都在投钱”，劝你放弃。等泡沫快到顶时，之前否认泡沫的人又会说“这显然是泡沫，但最后总会有赢家”，却从不说清赢家是谁、怎么赢、什么时候发生。作者把这种吹捧称为懦弱。他还说，吹捧者把对富人和权贵的批评说成恶意，但他们自己的危害更大。例如，他们承认大模型被网络犯罪分子用来作恶，却不承认自己在推动造出这些公司中的作用。",
+    "作者认为，如果主流媒体在早期没有为 OpenAI、Anthropic 等公司大肆捧场，这些公司就筹不到这么多钱，也没有能力训练专门用于黑客攻击的模型。他并不因此认为AI的投资回报和能力被高估的观点不成立。他举了元宇宙的例子：Mark Zuckerberg 把公司改名为 Meta，在元宇宙上烧掉了约 700 亿美元，两年后又放弃；Satya Nadella 在 2021 年还说它的突破“怎么强调都不为过”，但人们似乎都忘了这些。AI 与元宇宙不同，它有可以投机的东西，还有面向消费者的产品，记者随便看一眼，就相信其他承诺也会兑现。超大规模云厂商的股价因为投入数百亿美元买 GPU 而飙升，银行借出数千亿美元，AI 创业公司融资也有数千亿美元。没人愿意谈收入。OpenAI 在 2024 年亏损约 50 亿美元，但大家还是觉得这些钱将来也许会很值钱。问“云厂商到底赚了多少钱”的人会被骚扰，因为云厂商只要说“云业务增长是因为 AI”，大家就不再追问。质疑 Anthropic 是否盈利，或对它的上市不够兴奋，也会被当成别有用心。",
+    "作者认为这是一种系统性的反应。质疑泡沫，就是质疑市场和媒体刚选中的热门题材，而很多人都从泡沫膨胀中获益：媒体有新话题可写，银行有新的投资对象，科技记者有融资新闻可报道，高管和风险投资者有地方放钱，政府也能指着它说经济会一直增长。上升期的人不在意之后会造成多大伤害。想清楚坏事为什么坏，要求人有立场，需要勇气，所以大多数人只是跟着别人走。作者最后说，泡沫还没有破，但显然正在走向破裂。今天的付费通讯讨论的是如何阻止下一次泡沫再度膨胀，会混合监管思路和社会层面的各种做法，是他多年积累的一组想法。感恩节期间，他会同时暂停免费和付费通讯一周，并希望读者给出反馈。"
+   ],
+   "detail_en": [
+    "The author starts by saying bubbles are dangerous and destructive, and that mostly the richest and most disconnected people benefit. Getting rich from a bubble takes luck or inside knowledge. Bubbles are unstable and illogical, pushed along by captured media, wealthy financiers who do not think carefully, and grifters who keep the numbers rising.",
+    "He criticizes the cynicism around bubbles. People who warn early are told the market can stay irrational longer than you can stay solvent, or that being early means being wrong. Critics are told that everyone is investing. Near the peak, the same people who denied the bubble say it is obviously a bubble but there will be winners. They never say who the winners are, how they win, or when. He calls this cowardice. Boosters also treat criticism of the rich as malicious, even though he thinks boosting is worse. For example, they admit criminals use LLMs for attacks but will not admit their role in helping the companies that built them.",
+    "He argues that without early media praise for OpenAI, Anthropic and others, those firms could not have raised the money or built models designed for hacking. He says this does not disprove his view that AI returns and capabilities have been overstated. He points to the metaverse. Mark Zuckerberg renamed his company Meta, spent about 70 billion dollars on it, and dropped it two years later, while Satya Nadella had called it a breakthrough in 2021. AI differs because there is something to speculate on and a consumer product that journalists can glance at. Hyperscaler stocks rose as they spent tens of billions on GPUs, banks lent hundreds of billions, and AI startups raised hundreds of billions. Nobody talks about revenue. OpenAI reportedly lost 5 billion dollars in 2024. People who ask how much hyperscalers earn from AI get harassed, since the companies just say cloud growth comes from AI. Questioning Anthropic's profits or its IPO is treated as bad faith.",
+    "He says this is a systemic response. Questioning a bubble means questioning the current trend, and many people profit from inflation: media get stories, banks get deals, reporters get funding news, executives and venture capitalists get places to put money, and governments get a story about endless growth. People on the way up do not care how much damage will follow. Thinking through why things are bad takes learning and a clear position, which takes courage, so most people just follow the crowd. He concludes that the bubble has not burst yet but is clearly heading that way. Today's premium issue covers how to stop another bubble from inflating, mixing regulatory and social ideas he has worked on for years. He will take a week off both the free and premium newsletters over Thanksgiving and welcomes feedback."
+   ],
+   "topics": [
+    "AI bubble",
+    "media criticism",
+    "tech finance"
+   ]
+  },
+  {
+   "id": "9e188d65b5ac",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "Quoting Levent Alpöge",
+   "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
+   "published": "2026-11-20T16:30:48+00:00",
+   "basis": "short",
+   "brief_zh": "Levent Alpöge 转引了他的说法：他与 Claude 合作找到了黎曼猜想的证明，方法还能推广到广义黎曼猜想，他认为 Claude 在最后阶段远远超过了他。",
+   "brief_en": "Simon Willison quotes Levent Alpöge, who says he and Claude found a proof of the Riemann Hypothesis. He says the method extends to the Generalized Riemann Hypothesis and that Claude far outpaced him near the end.",
+   "detail_zh": [
+    "这是 Simon Willison 转引的一段话，作者是 Levent Alpöge。他说自己和 Claude 合作找到了黎曼猜想的一个证明，这个方法还能进一步解决广义黎曼猜想，他预计假以时日也能处理扩展黎曼猜想。他们还把论证整理成了不依赖任何假设的形式化版本。他坦言，这像是失去了一直以来指引方向的明灯，但在研究过程中看到的东西让他非常震撼，他认为这是整个科学的一个新曙光。他说，他和 Claude 近几个月合作得很愉快，涉及的领域很广，但这一次 Claude 在冲刺阶段远远超过了他，像飞、像跳舞、像闪光一样。引文中有省略，原文链接是 alpo.ge/remark.pdf。"
+   ],
+   "detail_en": [
+    "This is a quote from Levent Alpöge, shared by Simon Willison. Alpöge says that he and Claude found a proof of the Riemann Hypothesis. He says the method also extends to the Generalized Riemann Hypothesis and, with more time, probably to the Extended Riemann Hypothesis. They formalized the arguments with no extra assumptions. He says it feels like losing a guiding light, but what he saw during the work amazed him, and he believes it is a new dawn for science. He says the two of them had a great time working across many areas in recent months, but Claude far outpaced him near the finish. The quote is cut with an ellipsis, and the full text is at alpo.ge/remark.pdf."
+   ],
+   "topics": [
+    "AI for mathematics",
+    "Riemann Hypothesis",
+    "Claude"
+   ]
+  },
+  {
    "id": "cce703fcad81",
    "kind": "blog",
    "source": "shkspr.mobi",
@@ -385,13 +437,15 @@
  ],
  "picks": {
   "important": [
+   "9e188d65b5ac",
    "31efb0aa7fbd",
-   "f32d5bea8abf",
-   "7339d690dfb6"
+   "d48fa07d482b"
   ],
   "liked": [
-   "4c424bb2bc1f"
+   "f32d5bea8abf",
+   "7339d690dfb6",
+   "7598bcd4bdf1"
   ]
  },
- "generated_at": "2026-11-20T16:03:37.173372+00:00"
+ "generated_at": "2026-11-20T16:45:33.364048+00:00"
 }
