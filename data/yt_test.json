@@ -1,10 +1,11 @@
 {
  "date": "2026-11-20",
- "note_zh": "2026-11-20 的测试：三个视频分别交给三个模型看，清晰度最低，每 20 秒取一帧。下面每条的样子就是以后日报里视频条目的样子。这个页面不在标签栏里，测试完就删。",
- "note_en": "Test run on 2026-11-20: three videos, each watched by three models at the lowest resolution, one frame every 20 seconds. Each entry below looks the way video items will look in the daily page. This page is not in the tab bar and will be removed after testing.",
+ "note_zh": "2026-11-20 的测试：三个视频分别交给三个模型看，清晰度最低，每 20 秒取一帧。3.8 Flash 两轮都只返回“服务繁忙”（HTTP 503），没有结果，参照组换成 3.6 Flash。下面每条的样子就是以后日报里视频条目的样子。这个页面不在标签栏里，测试完就删。",
+ "note_en": "Test run on 2026-11-20: three videos, each watched by three models at the lowest resolution, one frame every 20 seconds. Gemini 3.8 Flash only returned \"busy\" (HTTP 503) in two rounds, so Gemini 3.6 Flash is the reference instead. Each entry below looks the way video items will look in the daily page. This page is not in the tab bar and will be removed after testing.",
  "models": [
   "gemini-3.1-flash-lite",
   "gemini-3.5-flash-lite",
+  "gemini-3.6-flash",
   "gemini-3.8-flash"
  ],
  "videos": [
@@ -259,8 +260,112 @@
   },
   {
    "model": "gemini-3.8-flash",
+   "id": "eqe3ainzPtM",
+   "error": "timeout after 300s"
+  },
+  {
+   "model": "gemini-3.8-flash",
    "id": "Hy7iE1iLmxw",
    "error": "HTTP 503"
+  },
+  {
+   "model": "gemini-3.8-flash",
+   "id": "gXoqed9VdL8",
+   "error": "HTTP 503"
+  },
+  {
+   "model": "gemini-3.6-flash",
+   "id": "eqe3ainzPtM",
+   "seconds": 96,
+   "fps": "0.05",
+   "res": "LOW",
+   "usage": {
+    "prompt": 21875,
+    "output": 534,
+    "thoughts": 1031,
+    "total": 23440,
+    "by_modality": {
+     "TEXT": 328,
+     "VIDEO": 21547
+    }
+   },
+   "summary": {
+    "brief_zh": "讲者探讨了在AI时代（展望2027年）如何成为软件开发者，指出单纯的编写代码正在被AI替代，但掌握编程基础、系统设计与AI工具整合能力依然是核心竞争力。",
+    "detail_zh": "讲者认为“如何在2027年学习编程”是个伪命题，因为单纯的手写代码正在被AI逐步取代。然而，这并不意味着软件开发行业的消亡。编写代码只是工具，软件开发的本质在于通过技术解决问题、构建产品与服务。\n\n在AI时代，开发者仍需掌握编程基础。讲者建议初学者学习JavaScript和Python这两种主流语言。掌握一门语言后再学第二门只需付出很小的努力，但通过对比不同语言实现相同概念的方式，能大幅加深对面向对象编程（OOP）、架构设计和设计模式等底层原理的理解。\n\n懂技术的开发者能将AI作为杠杆，成倍提高交付速度与代码质量；而缺乏开发基础的非专业人士利用AI生成的代码往往存在严重的技术债务与安全隐患。因此，未来的软件工程师应专注于掌握高阶系统设计、软件工程最佳实践以及AI技术栈（如Agent代理协作、模型选择与上下文管理等），填补AI自动生成与高质量工业级应用交付之间的关键差距。",
+    "brief_en": "The speaker discusses how to become a software developer in the AI era, arguing that while manual coding is disappearing, strong foundational knowledge and AI integration skills remain essential.",
+    "detail_en": "The video addresses how aspiring developers should prepare for 2027 and beyond. The speaker emphasizes that coding itself is merely a tool, whereas software development is about solving problems and building products. Although AI is taking over raw code generation, software development as a profession is not disappearing.\n\nBeginners should still learn foundational programming concepts by studying languages like JavaScript and Python. Learning a second language takes significantly less effort and helps developers understand core principles such as object-oriented programming and design patterns from different perspectives.\n\nDevelopers who understand system architecture and software engineering best practices can leverage AI tools to work up to ten times faster. Conversely, non-developers relying solely on AI often produce buggy code filled with technical debt. Future developer success depends on mastering system-level design, software fundamentals, and the modern AI tech stack.",
+    "topics": [
+     "Software Development",
+     "Artificial Intelligence",
+     "Career Advice"
+    ]
+   }
+  },
+  {
+   "model": "gemini-3.6-flash",
+   "id": "Hy7iE1iLmxw",
+   "seconds": 35,
+   "fps": "0.05",
+   "res": "LOW",
+   "usage": {
+    "prompt": 60441,
+    "output": 1148,
+    "thoughts": 2053,
+    "total": 63642,
+    "by_modality": {
+     "VIDEO": 60113,
+     "TEXT": 328
+    }
+   },
+   "summary": {
+    "brief_zh": "视频探讨了在闭源大模型额度缩减、价格昂贵的背景下，如何通过 Ollama Cloud、MiniMax 和 Kimi 等低成本开源/第三方 API 模型配合 Claude Code、Hermes Agent 及 OpenCode 等 AI Coding Agent，以十分之一的价格实现媲美 Claude Sonnet/Opus 的开发效果。",
+    "detail_zh": "随着 Claude 与 GitHub Copilot 等平台缩减额度并提高付费门槛，开发者面临高昂的 Token 成本。视频引用 Artificial Analysis 的能力与性价比指标，指出虽然 GPT-5.5、Opus 4.7 占据第一梯队，但第二梯队的开源及开放模型（如 Kimi K2.6、MiniMax M2.7、DeepSeek V4 Pro、Qwen 3.6 等）在性价比上具备巨大优势。此外，这些模型普遍已支持 1M Token 的上下文窗口，上下文长度不再是瓶颈。\n\n针对 Coding Agent 的使用场景，视频对比了 Ollama Cloud、MiniMax 官方 Token Plan 以及小米的订阅方案。其中 Ollama Cloud 与 MiniMax 的 20 美元月费方案提供了极高的调用额度，足以支持多 Agent 高强度连续运行；结合 OpenAI 或 Anthropic 的基础订阅作为后备方案，可大幅降低日常使用成本。\n\n视频演示了如何利用 OpenAI Codex 或 OpenCode Desktop 快速搭建运行环境，将 Claude Code、Hermes Agent 和 Pi-agent 接入 Ollama Cloud 代理服务。通过简单的 CLI 命令（如 ollama launch claude）或修改配置文件，即可让 Claude Code 等工具直接调用 MiniMax M2.7 或 Kimi K2.6 等模型执行复杂编程任务。\n\n视频以构建“太空旅行网站”为测试任务，对比了不同模型在 Claude Code / OpenCode 下的表现与额度消耗。Claude Sonnet 4.6/Claude Design 完成任务需消耗 12%~18% 的周额度，而 Opus 4.7 在几分钟内即消耗 50% 以上会话额度；相比之下，Kimi K2.6 与 MiniMax M2.7 生成的页面结构完整、包含动态粒子与完整预订流程，性能逼近 Sonnet，但周额度消耗仅为 1% 左右。\n\n视频认为未来日常生活与开发将全面转向低成本模型加开源 Agent 的组合。开发者无需为昂贵的闭源顶尖模型买单，通过合理配置 API 代理与模型组合，即可在大幅降低开销的同时保持高水平的 Agent 自动化能力。",
+    "brief_en": "This video demonstrates how to use low-cost open and third-party AI models (e.g., MiniMax M2.7, Kimi K2.6) with coding agents like Claude Code and OpenCode to achieve top-tier performance at 1/10th the cost of proprietary models like Claude Opus or Sonnet.",
+    "detail_en": "As top-tier proprietary AI providers reduce context limits and raise pricing tiers, developers face steep API costs. Analyzing model benchmarks from Artificial Analysis, the speaker divides LLMs into tiers: while top-tier models like GPT-5.5 and Opus 4.7 lead in raw performance, second-tier open and commercial models (such as Kimi K2.6, MiniMax M2.7, DeepSeek V4 Pro, and Qwen 3.6) offer near-equivalent performance at 10% to 20% of the cost. Context window limits are also no longer a constraint, as many of these models natively support up to 1 million tokens.\n\nThe speaker evaluates cost-effective subscription plans, highlighting Ollama Cloud ($20/month) and MiniMax's Token Plan. These plans provide high request limits capable of supporting multiple AI agents running 24/7. Pairing these affordable backends with a baseline OpenAI subscription for fallback tasks provides a balanced, budget-friendly setup for software engineering workflows.\n\nThe video provides a step-by-step guide to configuring AI coding agents (Claude Code, Hermes Agent, Pi-agent) to run on alternative model backends. Using OpenCode Desktop or Codex CLI tools, developers can route Claude Code directly to Ollama Cloud or MiniMax endpoints via commands such as ollama launch claude --model minimax-m2.7.\n\nA complex frontend development prompt (a futuristic space travel website with dynamic particle backgrounds and multi-step booking flows) was tested across different model-agent combinations. While Claude Sonnet 4.6 and Claude Design consumed 12% to 18% of a user's weekly quota for a single prototype (and Opus 4.7 exhausted 50%+ of session quota almost instantly), models like Kimi K2.6 and MiniMax M2.7 generated comparable, fully functional interactive web prototypes while consuming only around 1% of weekly quota limits.\n\nThe speaker argues that open and affordable models will become the primary choice for daily development workflows, reserving expensive proprietary models for edge-case validation. Embracing open-source coding agents and third-party API providers allows developers to maximize productivity without paying inflated subscription fees.",
+    "topics": [
+     "AI Coding Agents",
+     "LLM Cost Optimization",
+     "Open Source AI Models"
+    ]
+   }
+  },
+  {
+   "model": "gemini-3.6-flash",
+   "id": "gXoqed9VdL8",
+   "seconds": 25,
+   "fps": "0.05",
+   "res": "LOW",
+   "usage": {
+    "prompt": 99839,
+    "output": 988,
+    "thoughts": 1658,
+    "total": 102485,
+    "by_modality": {
+     "TEXT": 328,
+     "VIDEO": 99511
+    }
+   },
+   "summary": {
+    "brief_zh": "Tilores 联合创始人兼 CEO Stephen Renick 深入探讨了 LLM 在实体解析（Entity Resolution）中的真实应用与局限，指出 LLM 虽无法在生产环境中直接取代核心大规模匹配引擎，但在实体抽取、人机协同复核及规则配置等环节能发挥重要作用。",
+    "detail_zh": [
+     "实体解析（Entity Resolution, 简称 ER，常被称为身份解析、记录链接或数据去重）旨在识别并合并分散在不同数据源中指向同一现实世界实体（如个人、企业或产品）的数据记录。尽管实体解析在金融合规（KYC/反洗钱）、风控控规、公共部门以及知识图谱建设中至关重要，但由于领域术语繁杂，且传统图数据库在大规模场景下易遇到多跳查询慢、难以扩展的瓶颈，许多数据团队在实践中面临诸多挑战。",
+     "针对‘LLM 是否会取代实体解析引擎’这一问题，Stephen Renick 认为 LLM 难以直接承担大规模生产环境中的核心匹配工作。这主要是由于实体解析存在二次方扩展难题（$O(N^2)$ 组合爆炸），直接用 LLM 比对数百万级数据会导致极高昂的 Token 成本与不可接受的延迟。此外，LLM 还存在结果不可靠、缺乏强可解释性（无法满足金融监管合规要求）以及无法原生保持和维护图节点拆分与合并的状态性等致命缺点。",
+     "尽管无法直接替代匹配引擎，LLM 在实体解析的上游和辅助环节中展示出极大价值。在数据准备阶段，LLM 能够高效进行非结构化文档的命名实体识别（NER）与提取，并协助分析师探索数据、自动推导并微调匹配规则；在决策阶段，LLM 可以作为‘人机协同’（Agent-in-the-loop）中的智能代理，对边界置信度的匹配对进行复核并给出可读性原因；在评估阶段，LLM 还能辅助生成标注数据以测算精准率与召回率。",
+     "Tilores 采用基于 AWS 无服务器（Serverless）与图结构的实体解析架构，通过预索引与分块（Blocking）技术规避二次方计算爆炸，实现毫秒级响应与动态图更新。Renick 总结指出，将高效强一致的图解析引擎与 LLM 的灵活抽取配置能力相结合，是构建下一代实体数据基础设施的最优路径。"
+    ],
+    "brief_en": "Tilores CEO Stephen Renick explores the capabilities and limits of LLMs in Entity Resolution, arguing that while LLMs cannot replace high-scale matching engines due to cost, latency, and explainability issues, they serve as powerful tools for entity extraction, rule configuration, and human-in-the-loop validation.",
+    "detail_en": [
+     "Stephen Renick, CEO and co-founder of Tilores, joins the podcast to discuss Entity Resolution (ER)--also referred to as identity resolution, record linkage, or deduplication--and how Large Language Models (LLMs) intersect with this domain. ER is critical across industries such as banking, KYC/AML compliance, fraud prevention, and public records, yet data teams often struggle with fragmented terminology and scaling bottlenecks when dealing with real-world dataset sizes.",
+     "Addressing whether LLMs can replace dedicated entity resolution systems, Renick points out that LLMs fail as primary matching engines at scale due to the quadratic ($O(N^2)$) candidate pair comparison space. Passing millions of records through an LLM introduces unsustainable costs and latency. Furthermore, LLMs lack the strict explainability demanded by regulated industries and cannot natively manage persistent, stateful graph updates like node splits and merges.",
+     "However, LLMs provide tremendous utility across adjacent stages of the ER pipeline. They excel at named entity recognition (NER) and structured data extraction from unstructured text. They also help data analysts discover relationships and configure matching rules during onboarding, act as agent-in-the-loop reviewers for low-confidence candidate matches, and assist in generating labeled datasets for precision and recall evaluations.",
+     "Renick highlights Tilores's approach, which uses a serverless, graph-based engine on AWS that leverages blocking techniques to achieve millisecond query latencies at scale. He concludes that combining stateful, scalable graph resolution engines with LLM-driven extraction and rule tuning offers the most effective architecture for enterprise data environments."
+    ],
+    "topics": [
+     "Entity Resolution",
+     "Large Language Models",
+     "Data Engineering"
+    ]
+   }
   }
  ]
 }

@@ -4,6 +4,7 @@ Pages: index.html (latest day), <date>.html (every day), archive.html, sources.h
 Every visible string is written in both Chinese and English; the page shows one at a time.
 """
 
+import re
 import shutil
 import sys
 from datetime import date as Date
@@ -85,6 +86,8 @@ def page(title_zh, title_en, active, body):
 
 
 def paragraphs(items):
+    if isinstance(items, str):  # models sometimes return one string instead of a list
+        items = [x.strip() for x in re.split(r"\n\s*\n", items) if x.strip()]
     return "".join(f"<p>{escape(x)}</p>" for x in items)
 
 
@@ -206,7 +209,7 @@ def sources_body(groups, status):
             + "</section>")
 
 
-MODEL_NAMES = {"gemini-3.1-flash-lite": "Gemini 3.1 Flash Lite",
+MODEL_NAMES = {"gemini-3.1-flash-lite": "Gemini 3.1 Flash Lite", "gemini-3.6-flash": "Gemini 3.6 Flash",
                "gemini-3.5-flash-lite": "Gemini 3.5 Flash Lite",
                "gemini-3.8-flash": "Gemini 3.8 Flash"}
 
@@ -238,6 +241,10 @@ def yt_test_body(test):
         items = []
         for m in models:
             r = res.get((m, v["id"]), {})
+            if "error" in r or not r:
+                items.append(f'<div class="label" style="margin-top:1.4em">{escape(MODEL_NAMES.get(m, m))}</div>'
+                             f'<p class="muted">{bi("没有结果：", "No result: ")}{escape(r.get("error", "—"))}</p>')
+                continue
             sm = r.get("summary") or {}
             it = {"kind": "video", "source": v["channel"], "source_url": v["channel_url"],
                   "url": f'https://www.youtube.com/watch?v={v["id"]}', "title": v["title"],
