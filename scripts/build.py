@@ -88,7 +88,7 @@ def paragraphs(items):
     return "".join(f"<p>{escape(x)}</p>" for x in items)
 
 
-def item_html(it, compact=False):
+def item_html(it, compact=False, detail=True):
     kind = bi("博客", "Blog") if it.get("kind") == "blog" else bi("视频", "Video")
     src = escape(it["source"])
     if it.get("source_url"):
@@ -108,10 +108,9 @@ def item_html(it, compact=False):
            f'<a class="title" href="{escape(it["url"])}" target="_blank" rel="noopener">{escape(it["title"])}</a>',
            f'<p class="brief">{brief}</p>']
     dz, de = it.get("detail_zh") or [], it.get("detail_en") or []
-    if dz or de:
-        out.append(f'<details class="detail"><summary><span class="when-closed">{bi("展开详细内容", "Read the full summary")}</span><span class="when-open">{bi("收起", "Collapse")}</span></summary>'
-                   f'<div data-l="zh">{paragraphs(dz or de)}</div>'
-                   f'<div data-l="en" lang="en">{paragraphs(de or dz)}</div></details>')
+    if detail and (dz or de):
+        out.append(f'<div class="detail"><div data-l="zh">{paragraphs(dz or de)}</div>'
+                   f'<div data-l="en" lang="en">{paragraphs(de or dz)}</div></div>')
     out.append("</article>")
     return "".join(out)
 
@@ -144,7 +143,11 @@ def day_body(day):
             + column("liked", ("为你挑选", "For you"), ("可能喜欢", "You might like"),
                      ("按你的兴趣挑的。打分功能上线后改按你的历史", "Picked by your interests; by your ratings once rating is added"))
             + "</div>")
-    listing = "".join(item_html(it, compact=True) for it in day["items"]) or \
+    picked = {p["id"] if isinstance(p, dict) else p
+              for col in day.get("picks", {}).values() for p in col}
+    # posts already shown in full in the two columns above: title and one line only here
+    listing = "".join(item_html(it, compact=True, detail=it["id"] not in picked)
+                      for it in day["items"]) or \
         f'<p class="empty">{bi("这段时间没有新文章。", "No new posts in this period.")}</p>'
     all_sec = (f'<section class="card list"><h2 class="section-title">{bi("全部更新", "All updates")}'
                f' <span class="muted" style="font-weight:400">{n}</span></h2>{listing}</section>')
