@@ -206,6 +206,50 @@ def sources_body(groups, status):
             + "</section>")
 
 
+MODEL_NAMES = {"gemini-3.1-flash-lite": "Gemini 3.1 Flash Lite",
+               "gemini-3.5-flash-lite": "Gemini 3.5 Flash Lite",
+               "gemini-3.8-flash": "Gemini 3.8 Flash"}
+
+
+def yt_test_body(test):
+    """Test page: each video summarised by several Gemini models, in the normal item style."""
+    models = test["models"]
+    res = {(r["model"], r["id"]): r for r in test["results"]}
+    head = (f'<header class="card page-head"><div class="label label--accent">{bi("测试", "Test")}</div>'
+            f'<h1>{bi("YouTube 视频摘要测试", "YouTube summary test")}</h1>'
+            f'<p class="muted">{bi(test["note_zh"], test["note_en"])}</p></header>')
+    rows = []
+    for v in test["videos"]:
+        cells = []
+        for m in models:
+            r = res.get((m, v["id"]), {})
+            u = r.get("usage") or {}
+            cells.append(f'<td>{u.get("prompt", 0) / 1000:.0f}K · {r.get("seconds", "?")}s</td>'
+                         if u else f'<td class="bad">{escape(r.get("error", "—"))}</td>')
+        rows.append(f'<tr><td>{bi(v["type_zh"], v["type_en"])}<br><span class="muted">'
+                    f'{v["minutes"]:.0f} min</span></td>{"".join(cells)}</tr>')
+    table = (f'<section class="card"><h2 class="col-title">{bi("用量", "Usage")}</h2>'
+             f'<p class="muted small">{bi("输入 token · 出结果用的秒数", "input tokens · seconds to answer")}</p>'
+             f'<div class="table-scroll"><table class="sources"><thead><tr><th>{bi("视频", "Video")}</th>'
+             + "".join(f"<th>{escape(MODEL_NAMES.get(m, m))}</th>" for m in models)
+             + f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>')
+    cards = []
+    for v in test["videos"]:
+        items = []
+        for m in models:
+            r = res.get((m, v["id"]), {})
+            sm = r.get("summary") or {}
+            it = {"kind": "video", "source": v["channel"], "source_url": v["channel_url"],
+                  "url": f'https://www.youtube.com/watch?v={v["id"]}', "title": v["title"],
+                  "brief_zh": sm.get("brief_zh", ""), "brief_en": sm.get("brief_en", ""),
+                  "detail_zh": sm.get("detail_zh") or [], "detail_en": sm.get("detail_en") or []}
+            items.append(f'<div class="label" style="margin-top:1.4em">{escape(MODEL_NAMES.get(m, m))}</div>'
+                         + item_html(it))
+        cards.append(f'<section class="card"><div class="label label--accent">{bi(v["type_zh"], v["type_en"])}'
+                     f' · {v["minutes"]:.0f} min</div>{"".join(items)}</section>')
+    return head + table + "".join(cards)
+
+
 def main():
     if SITE.exists():
         shutil.rmtree(SITE)
@@ -230,6 +274,10 @@ def main():
     groups = load_yaml("sources.yml")
     (SITE / "sources.html").write_text(
         page("来源", "Sources", "sources.html", sources_body(groups, load_json(STATUS_FILE, {}))), encoding="utf-8")
+    yt_test = load_json(ROOT / "data" / "yt_test.json", None)
+    if yt_test:  # not linked from the tab bar; open /feed/yt-test.html directly
+        (SITE / "yt-test.html").write_text(
+            page("YouTube 测试", "YouTube test", "", yt_test_body(yt_test)), encoding="utf-8")
     (SITE / ".nojekyll").write_text("")
     print(f"built {len(days)} day pages into {SITE}")
     return 0

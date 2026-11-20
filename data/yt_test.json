@@ -1,0 +1,266 @@
+{
+ "date": "2026-11-20",
+ "note_zh": "2026-11-20 的测试：三个视频分别交给三个模型看，清晰度最低，每 20 秒取一帧。下面每条的样子就是以后日报里视频条目的样子。这个页面不在标签栏里，测试完就删。",
+ "note_en": "Test run on 2026-11-20: three videos, each watched by three models at the lowest resolution, one frame every 20 seconds. Each entry below looks the way video items will look in the daily page. This page is not in the tab bar and will be removed after testing.",
+ "models": [
+  "gemini-3.1-flash-lite",
+  "gemini-3.5-flash-lite",
+  "gemini-3.8-flash"
+ ],
+ "videos": [
+  {
+   "id": "eqe3ainzPtM",
+   "title": "Why Would Anyone Learn to Code in 2027?",
+   "channel": "Stefan Mischook",
+   "channel_url": "https://www.youtube.com/@StefanMischook",
+   "minutes": 12.7,
+   "type_zh": "英文，对镜头说话",
+   "type_en": "English, talking to camera"
+  },
+  {
+   "id": "Hy7iE1iLmxw",
+   "title": "別再省著用了！退訂 Claude 後，我開始了 Token 揮霍無度的人生",
+   "channel": "HC AI說人話",
+   "channel_url": "https://www.youtube.com/@HC-AIChannel",
+   "minutes": 35.4,
+   "type_zh": "中文，对镜头说话加录屏",
+   "type_en": "Chinese, talking to camera with screen recording"
+  },
+  {
+   "id": "gXoqed9VdL8",
+   "title": "Entity Resolution at Scale: Graphs, LLMs, and Real-World Data Messiness",
+   "channel": "Data Engineering Podcast",
+   "channel_url": "https://www.youtube.com/@tobiasmacey3574",
+   "minutes": 58.8,
+   "type_zh": "英文访谈播客，画面只有台标",
+   "type_en": "English interview podcast, static logo"
+  }
+ ],
+ "results": [
+  {
+   "model": "gemini-3.5-flash-lite",
+   "id": "Hy7iE1iLmxw",
+   "seconds": 10,
+   "fps": "0.05",
+   "res": "LOW",
+   "usage": {
+    "prompt": 60441,
+    "output": 532,
+    "thoughts": 0,
+    "total": 60973,
+    "by_modality": {
+     "TEXT": 328,
+     "VIDEO": 60113
+    }
+   },
+   "summary": {
+    "brief_zh": "本视频探讨了在 GitHub Copilot 暂停部分订阅及调整 Token 计价方式的情况下，如何利用额度较低的开源模型以及主流 AI 工具来替代昂贵的闭源模型。",
+    "detail_zh": [
+     "近期 GitHub Copilot 暂停了部分新用户的订阅，并调整了 Token 计价方式，使得用户可用额度缩减。面对这种限制，用户需要寻找替代方案，而开源模型成为了一个值得关注的选择。",
+     "视频通过 Artificial Analysis Intelligence Index 的数据，将主流模型分为不同梯队。第一梯队如 GPT-5.5、OpenAI Opus 4.7 等，额度受限且价格昂贵；第二梯队则包括 Kimi K2.6、Xiaomi MiMO-V2.5 Pro、Opus 4.6 等，额度和性价比表现较好。",
+     "在实际应用中，开源模型如 Kimi、MiniMax 等在成本上具有显著优势，且在许多日常任务中不输闭源模型。作者分享了如何通过 Ollama、Codex、Hermes Agent 等工具配置和使用这些开源模型，从而在控制成本的同时满足开发需求。"
+    ],
+    "brief_en": "This video discusses how to replace expensive proprietary models with open-source models and mainstream AI tools in response to GitHub Copilot's subscription pauses and token usage adjustments.",
+    "detail_en": [
+     "Recently, GitHub Copilot paused new subscriptions for some users and adjusted its token pricing, reducing available usage limits. Faced with these constraints, users need alternatives, and open-source models have become a viable choice.",
+     "Using data from the Artificial Analysis Intelligence Index, the video categorizes mainstream models into tiers. The first tier includes expensive and restricted models like GPT-5.5 and Opus 4.7, while the second tier features better cost-performance options like Kimi K2.6, Xiaomi MiMO-V2.5 Pro, and Opus 4.6.",
+     "In practice, open-source models like Kimi and MiniMax offer significant cost advantages and perform well in daily tasks compared to proprietary models. The author shares how to configure and use these open-source models with tools like Ollama, Codex, and Hermes Agent to manage costs while meeting development needs."
+    ],
+    "topics": [
+     "AI Models",
+     "Open Source",
+     "GitHub Copilot"
+    ]
+   }
+  },
+  {
+   "model": "gemini-3.5-flash-lite",
+   "id": "eqe3ainzPtM",
+   "seconds": 11,
+   "fps": "0.05",
+   "res": "LOW",
+   "usage": {
+    "prompt": 21875,
+    "output": 491,
+    "thoughts": 0,
+    "total": 22366,
+    "by_modality": {
+     "TEXT": 328,
+     "VIDEO": 21547
+    }
+   },
+   "summary": {
+    "brief_zh": "视频探讨了 AI 时代程序员是否还需要学习编程，并指出虽然 AI 可以写代码，但学习编程和掌握软件开发概念依然不可或缺。",
+    "detail_zh": [
+     "有人担心 AI 会取代程序员，甚至认为编程会消失。这种担忧源于把编程和软件开发混为一谈。编程只是软件开发的一个工具，而软件开发的核心在于创造解决方案、产品和服务的全过程。虽然 AI 在写代码上很高效，但程序员的本质工作是利用技术解决实际问题。",
+     "学习编程不仅是为了写代码，更是为了更好地理解现代软件开发的工具链。JavaScript 和 Python 是两个最重要的语言，前者是 Web 应用的标准，后者则是 AI 领域的首选。掌握这些语言不仅能让你更懂现代软件，还能帮助你更深入地理解不同语言背后的概念和设计模式。",
+     "在 AI 时代，非程序员和程序员使用 AI 的效率有很大差距。懂软件工程的专业开发者知道如何运用系统级设计、架构原则以及最佳实践来避免劣质代码。虽然 AI 可以大幅加速开发流程，但只有具备专业背景的人才能产出高质量、可扩展的软件产品。"
+    ],
+    "brief_en": "The video discusses whether programmers still need to code in the AI era, arguing that while AI can write code, learning programming and understanding software development concepts remain essential.",
+    "detail_en": [
+     "Some worry that AI will replace programmers and make coding obsolete. This confusion stems from mixing up programming with software development. Coding is just a tool to build solutions, and the true goal of software development is creating products and services that solve problems.",
+     "Learning a few languages like JavaScript and Python is still necessary because it helps you understand modern software toolchains and AI systems. These languages share common programming concepts, and learning the second language becomes much easier once you master the first.",
+     "In the AI era, professional developers leverage their understanding of system design, architecture patterns, and software engineering principles to build robust applications. While amateurs can use AI to generate basic code, professionals produce secure, scalable, and high-quality software."
+    ],
+    "topics": [
+     "AI",
+     "programming",
+     "software development"
+    ]
+   }
+  },
+  {
+   "model": "gemini-3.5-flash-lite",
+   "id": "gXoqed9VdL8",
+   "seconds": 13,
+   "fps": "0.05",
+   "res": "LOW",
+   "usage": {
+    "prompt": 99839,
+    "output": 433,
+    "thoughts": 0,
+    "total": 100272,
+    "by_modality": {
+     "TEXT": 328,
+     "VIDEO": 99511
+    }
+   },
+   "summary": {
+    "brief_zh": "本期播客采访了 Tilo Res 公司的联合创始人兼首席执行官 Stephen Rennick，探讨了在大语言模型和企业数据处理中如何以及何时使用实体消歧（entity resolution）。",
+    "detail_zh": [
+     "Stephen Rennick 介绍了 Tilo Res 公司的背景，该公司致力于实体消歧（entity resolution），帮助企业解决数据中由于拼写、格式和命名不一致带来的数据孤岛问题。实体消歧在信用局和客户数据整合中至关重要。",
+     "大语言模型（LLM）虽然功能强大，但在处理大规模实体消歧时面临二次方的计算复杂度。Tilo Res 使用基于图的特定算法来处理实体消歧，而不是盲目依赖大模型，从而在大规模数据集上保持高效。",
+     "对话还讨论了实体消歧在各行各业的应用，如银行、客户关系管理（CRM）和人道主义救援中的失踪人口搜寻。Stephen 指出，数据清洗和规范化与算法本身同样重要。"
+    ],
+    "brief_en": "This podcast episode features an interview with Stephen Rennick, CEO and co-founder of Tilo Res, discussing how and when to use entity resolution and LLMs in enterprise data processing.",
+    "detail_en": [
+     "Stephen Rennick introduces Tilo Res, a company focused on entity resolution to help businesses merge disparate data from various sources. Entity resolution is crucial in credit bureaus and customer data management.",
+     "While LLMs are powerful, they face quadratic computational complexity when scaling entity resolution. Tilo Res uses graph-based algorithms to handle entity resolution efficiently at scale rather than relying solely on LLMs.",
+     "The conversation covers applications in banking, CRM, and humanitarian efforts like tracing missing persons. Stephen emphasizes that data cleaning and normalization are as important as the matching algorithms."
+    ],
+    "topics": [
+     "entity resolution",
+     "LLM",
+     "data engineering"
+    ]
+   }
+  },
+  {
+   "model": "gemini-3.1-flash-lite",
+   "id": "Hy7iE1iLmxw",
+   "seconds": 11,
+   "fps": "0.05",
+   "res": "LOW",
+   "usage": {
+    "prompt": 60441,
+    "output": 532,
+    "thoughts": 0,
+    "total": 60973,
+    "by_modality": {
+     "VIDEO": 60113,
+     "TEXT": 328
+    }
+   },
+   "summary": {
+    "brief_zh": "该视频探讨了如何在预算受限的情况下，通过开源模型结合工具高效地运用AI代理。",
+    "detail_zh": [
+     "视频指出，像GitHub Copilot和Claude这类主流AI订阅服务，由于用户量激增，目前限制了新用户订阅并采取了额度缩减措施，这给需要使用AI Agent进行开发的用户带来了困扰。",
+     "演讲者建议用户应转向开源模型。开源模型在日常使用中表现出色，且通过Ollama.com、OpenCode等平台可以获得具有成本效益的服务。他以Minimax模型为例，认为其成本低廉且性能强劲，足以满足大多数开发需求。",
+     "为了让用户能够轻松安装和管理这些模型，演讲者演示了使用Codex及Hermes Agent进行自动配置的步骤。他特别提到了OpenCode和开源Agent（如Pi Agent）的安装，并说明了如何利用MCP（Model Context Protocol）接入Web搜索和图像处理能力，从而在无需承担昂贵订阅费用的前提下，搭建强大的AI工作流。",
+     "最后，演讲者通过对比Claude Sonnet和开源模型在特定项目构建任务中的表现，指出在经过合理配置后，开源模型完全能达到商业模型的生产力水平，且在成本控制方面具有显著优势。"
+    ],
+    "brief_en": "The video discusses how to use AI agents efficiently on a budget by leveraging open-source models.",
+    "detail_en": [
+     "The video highlights that popular AI services like GitHub Copilot and Claude are imposing stricter subscription and usage limits due to increased demand, posing challenges for developers relying on AI agents.",
+     "The speaker advocates switching to open-source models, which perform well for daily tasks. Platforms like Ollama.com and OpenCode offer cost-effective access to these models. He emphasizes that models like Minimax are both affordable and powerful enough for most development work.",
+     "To facilitate deployment, the speaker demonstrates how to use tools like Codex and Hermes Agent for automatic configuration. He explains how to integrate web search and image capabilities via MCP, allowing users to build robust AI workflows without the need for expensive commercial subscriptions.",
+     "The video concludes by demonstrating that with proper configuration, open-source models can match the productivity of commercial alternatives while offering significant cost advantages."
+    ],
+    "topics": [
+     "AI Agents",
+     "Open Source Models",
+     "Model Deployment"
+    ]
+   }
+  },
+  {
+   "model": "gemini-3.1-flash-lite",
+   "id": "eqe3ainzPtM",
+   "seconds": 8,
+   "fps": "0.05",
+   "res": "LOW",
+   "usage": {
+    "prompt": 21875,
+    "output": 598,
+    "thoughts": 0,
+    "total": 22473,
+    "by_modality": {
+     "VIDEO": 21547,
+     "TEXT": 328
+    }
+   },
+   "summary": {
+    "brief_zh": "该视频探讨了在人工智能时代，软件开发领域中编程技能的地位及其必要性。",
+    "detail_zh": [
+     "视频指出，虽然 AI 正在改变软件开发过程，但编程技能依然是现代软件开发工具包的重要组成部分。编程不仅仅是代码编写，其核心在于创造解决方案、开发产品和提供服务。理解软件开发的核心逻辑和基本原则，对于利用 AI 进行高效开发至关重要。",
+     "演讲者强调，软件开发人员应掌握至少两门编程语言（如 Python 和 JavaScript），这能帮助他们更深层次地理解编程概念。随着 AI 技术的介入，编程的角色从单一的编码转变为一种更广泛的系统设计和问题解决工具。",
+     "视频中讨论了不同开发者在使用 AI 工具时的差异：专业开发者能将 AI 视为强大的工具，显著提升开发效率并保持代码质量；而非专业开发者在理解 AI 工具的同时，往往缺乏深度的系统设计知识和最佳实践，这可能导致输出代码质量不高或存在技术债务。",
+     "最后，演讲者认为，掌握基础的编程原理、理解不同 AI 模型的适用场景以及学习系统设计等技能，是未来成为一名优秀软件开发者的关键。这些技能能够确保开发者在 AI 辅助开发中产出高质量、可维护的代码。"
+    ],
+    "brief_en": "This video explores the role and necessity of programming skills in software development in the age of AI.",
+    "detail_en": [
+     "The video highlights that although AI is changing the software development process, programming skills remain an essential component of modern software development. Programming is not just about writing code; it is fundamentally about creating solutions, developing products, and facilitating services. Understanding core programming logic and fundamental principles is crucial for effectively leveraging AI tools in development.",
+     "The speaker emphasizes that software developers should master at least two programming languages, such as Python and JavaScript, to deepen their understanding of programming concepts. With the integration of AI, the role of programming is shifting from pure coding toward a broader system design and problem solving toolkit.",
+     "The video compares how different developers use AI tools. Professional developers leverage AI as a powerful force multiplier, significantly enhancing efficiency while maintaining code quality. Conversely, non-professional developers, while able to use AI, often lack the deep architectural knowledge and grasp of best practices, potentially leading to lower quality or technical debt.",
+     "The speaker concludes that mastery of fundamental programming principles, understanding the applicability of different AI models, and proficiency in system design are essential for the future of software development. These competencies ensure that developers can generate high quality and maintainable code in an AI-assisted environment."
+    ],
+    "topics": [
+     "Software Development",
+     "Artificial Intelligence",
+     "Programming"
+    ]
+   }
+  },
+  {
+   "model": "gemini-3.1-flash-lite",
+   "id": "gXoqed9VdL8",
+   "seconds": 24,
+   "fps": "0.05",
+   "res": "LOW",
+   "usage": {
+    "prompt": 99839,
+    "output": 613,
+    "thoughts": 0,
+    "total": 100452,
+    "by_modality": {
+     "TEXT": 328,
+     "VIDEO": 99511
+    }
+   },
+   "summary": {
+    "brief_zh": "Data Engineering Podcast 在本期节目中探讨了在处理实体导向数据时 LLM 的应用场景及其局限性。",
+    "detail_zh": [
+     "本期 Data Engineering Podcast 采访了 Tylorez 的联合创始人兼首席执行官 Stephen Renwick。Renwick 讨论了实体解析（Entity Resolution）在数据工程中的核心地位，并解释了实体识别、身份解析和去重等不同称呼在实际工作中的细微差别。他认为实体可以是自然人、公司、产品甚至 DNA 等任何现实世界的事物。",
+     "Renwick 深入剖析了大型语言模型（LLM）在实体解析中的角色。他认为 LLM 在处理少量数据时表现良好，但在处理大规模生产环境的数据时，面临计算复杂度呈二次方增长的问题，这导致其在规模和成本上存在瓶颈。此外，LLM 还存在数据一致性和可解释性等局限，难以满足金融等行业对于精准度的严格要求。",
+     "Renwick 分享了 Tylorez 的实践经验。他们采用基于 AWS 的 Serverless 架构，在数据摄入时实时索引，并通过图结构存储数据。为了处理复杂实体，他们采用了基于 Clique（派系）的图压缩技术，而非单纯依赖 LLM。这种方法使得他们在处理数亿条记录时，依然能保持高效的性能，并避免了大规模数据处理的性能开销。"
+    ],
+    "brief_en": "This episode of the Data Engineering Podcast discusses the practical application and limitations of LLMs in entity-oriented data processing.",
+    "detail_en": [
+     "In this episode, the Data Engineering Podcast features Stephen Renwick, co-founder and CEO of Tylorez. Renwick highlights the critical importance of entity resolution in data engineering, clarifying the distinctions between terms like identity resolution, record linkage, and deduplication. He defines an entity as any real-world object, such as a person, company, product, or even DNA.",
+     "Renwick provides an in-depth analysis of the role of Large Language Models (LLMs) in entity resolution. While LLMs excel with small datasets, they struggle in large-scale production environments due to quadratic scaling issues, which create bottlenecks in performance and cost. Furthermore, LLMs face challenges with data consistency and explainability, failing to meet the precision requirements of industries like finance.",
+     "Renwick shares Tylorez’s approach, which utilizes a serverless architecture on AWS with real-time indexing and graph storage. To handle complex entities, they employ clique-based graph compression instead of relying solely on LLMs. This strategy allows them to maintain high efficiency when processing hundreds of millions of records while avoiding the performance overhead associated with large-scale LLM data processing."
+    ],
+    "topics": [
+     "Data Engineering",
+     "Entity Resolution",
+     "LLM"
+    ]
+   }
+  },
+  {
+   "model": "gemini-3.8-flash",
+   "id": "Hy7iE1iLmxw",
+   "error": "HTTP 503"
+  }
+ ]
+}
