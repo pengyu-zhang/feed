@@ -3,6 +3,9 @@ name: gemini-youtube-probe
 
 on:
   workflow_dispatch:
+    inputs:
+      script:
+        default: gemini_youtube_diag.py
 
 permissions:
   contents: read
@@ -21,4 +24,4 @@ jobs:
         working-directory: scripts
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python gemini_youtube_probe.py
+        run: python ${{ inputs.script }}
