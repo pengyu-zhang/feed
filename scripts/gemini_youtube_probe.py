@@ -15,7 +15,7 @@ from google import genai
 from google.genai import types
 
 ROOT = Path(__file__).resolve().parents[1]
-client = genai.Client(http_options={"timeout": 900_000})
+client = genai.Client(http_options={"timeout": 900_000, "api_version": "v1beta"})
 
 VIDEOS = [
     {"id": "eqe3ainzPtM", "title": "Why Would Anyone Learn to Code in 2027?", "channel": "Stefan Mischook",
