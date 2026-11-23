@@ -7,7 +7,7 @@ from google import genai
 from google.genai import types
 
 ROOT = Path(__file__).resolve().parents[1]
-client = genai.Client(http_options={"timeout": 300_000, "api_version": "v1beta"})
+client = genai.Client(http_options={"timeout": 600_000, "api_version": "v1beta"})
 VID = "eqe3ainzPtM"
 URL = f"https://www.youtube.com/watch?v={VID}"
 common = (ROOT / "prompts" / "common.md").read_text(encoding="utf-8").strip()
