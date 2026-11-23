@@ -10,26 +10,28 @@
    "url": "https://www.construction-physics.com/p/reading-list-11212026",
    "published": "2026-11-21T13:04:03+00:00",
    "basis": "full",
-   "brief_zh": "这是一期关于建筑、基础设施和工业科技的每周链接汇总，重点包括参议院通过许可制度改革法案 BAAJA、爱国者导弹因特种人造纤维供应受限而难以增产，以及特斯拉 Cybercab 的购买条件。",
-   "brief_en": "A weekly roundup of links on buildings, infrastructure and industrial technology, including the Senate's passage of the BAAJA permitting bill and a bottleneck in Patriot missile production.",
-   "detail_zh": [
-    "这一期没有长文。作者说，他正在写一篇关于“技术搜索”的长文，续写他之前的那篇文章，预计下周发布。本期的链接主要涉及政策、国防、工业和汽车等方面。",
-    "政策方面，美国参议院通过了许可制度改革法案 BAAJA（Bipartisan American Affordability and Jobs Act），Kalshi 预测市场给它 75% 的概率成为法律。新墨西哥州参议员 Martin Heinrich 在《经济学人》撰文支持，他说法案不会取消环境考量、诉讼权利或社区意见征询，而是把这些审查变成标准化、可预期的流程。另外，作者分享了一个数据集，展示各城市超额死亡与气温的关系，可以看出没有空调的地区对高温尤其敏感。还有一篇 WSJ 报道提到，有人反对送货无人机飞过自家后院。《泰晤士报》则报道了克罗地亚杜布罗夫尼克（《权力的游戏》拍摄地）如何应对大量游客和黑山的毒品集团。",
-    "国防供应链方面，作者引用 WSJ 的报道说明爱国者导弹增产的瓶颈。最先进的爱国者导弹只能使用一种特殊的碳化人造纤维布料，目前只有美国 Park Aerospace 堪萨斯工厂的一款产品获准使用。Park 的上游供应商是法国 ArianeGroup，它在波尔多附近生产这种布料，供应一直有限。五角大楼官员催 Park 增产，结果发现问题出在大西洋另一边。",
-    "工业与国防方面的其他消息包括：自动化制造初创公司 Hadrian 收购为核潜艇等提供铸件的 Kutztown Foundry and Machine；美国海洋矿产管理局（前身为 BOEM）拍卖了美属萨摩亚附近约 3100 万英亩海底的采矿权；美国参议院拨款委员会削减了多艘计划中的海军舰艇；GAO 报告称 F-35 项目约有 2600 万件备件，价值约 310 亿美元，分布在全球约 700 个地点。",
-    "汽车方面，特斯拉开始向“部分客户”出售 Cybercab，售价 29,990 美元，但必须另外每月支付 299 美元的 Autonomy Subscription，车才能开动。车辆只能在德州和佛州的 Robotaxi 服务区内使用，而这些服务区比特斯拉宣传的要小得多。Giga Texas 也在建设 Optimus 机器人的工厂。另外，作者还附了一条只写着“中国生产大量空调”的链接。"
-   ],
-   "detail_en": [
-    "This week has no long essay. The author says a longer follow-up to an earlier essay on technological search should come out next week.",
-    "On policy, the Senate passed the BAAJA permitting reform bill, and Kalshi gives it a 75% chance of becoming law. Senator Martin Heinrich argues in The Economist that the bill keeps environmental review, litigation rights and public comment, but makes reviews a standard, predictable process. The post also links a dataset on excess deaths and temperature in cities, which shows that places without air conditioning are much more sensitive to heat. A WSJ story covers residents who oppose delivery drones flying over their backyards. A Times story covers how Dubrovnik, where Game of Thrones was filmed, deals with huge crowds of tourists and Montenegrin drug cartels.",
-    "On defense supply chains, a WSJ story explains a bottleneck in making Patriot missiles. The most advanced Patriot missiles need a specialized carbonized rayon fabric. Only one product from Park Aerospace in Kansas is approved for them. Park's supplier, ArianeGroup in France, makes the fabric near Bordeaux, and its supply is limited. The Pentagon pushed Park for more, but the problem was in France.",
-    "Other industry news includes Hadrian buying Kutztown Foundry and Machine, a maker of castings for nuclear submarines among other things. The former BOEM, now the Marine Minerals Administration, auctioned seabed mining rights on 31 million acres near American Samoa. The Senate appropriations committee cut several planned naval vessels. A GAO report says the F-35 program has about 26 million spare parts, worth about 31 billion dollars, spread across about 700 sites worldwide.",
-    "On vehicles and robots, Tesla is offering the Cybercab to select customers for 29,990 dollars. The car only moves if the buyer also pays 299 dollars a month for an Autonomy Subscription. It only works inside Tesla's Robotaxi areas in Texas and Florida, which are much smaller than Tesla advertises. A factory for the Optimus robot is under construction at Giga Texas. The post also includes a short link noting that China produces a lot of air conditioners."
-   ],
+   "brief_zh": "本期汇总说明，参议院已通过许可改革法案BAAJA，而一种特殊人造丝织物正在限制美国扩大爱国者导弹的产量。",
+   "brief_en": "This week's roundup says the Senate passed the BAAJA permitting reform bill, and a rare rayon fabric limits how fast the US can make Patriot missiles.",
    "topics": [
-    "infrastructure policy",
-    "defense supply chain",
-    "industrial news"
+    "Permitting reform",
+    "Defense manufacturing",
+    "Tesla"
+   ],
+   "background_zh": "这是Construction Physics的每周阅读清单，收集建筑、基础设施和工业技术方面的新闻与链接。本期没有原创长文。",
+   "conclusion_zh": "作者没有给出总结性结论，只说下周会发布其技术搜索长文的续篇。",
+   "background_en": "This is a weekly reading list on buildings, infrastructure and industrial technology. There is no original essay this week.",
+   "conclusion_en": "The author gives no overall conclusion. They say a long follow-up to their technology search essay should come out next week.",
+   "points_zh": [
+    "参议院已通过许可改革法案BAAJA，预测市场Kalshi给出的通过概率为75%。新墨西哥州参议员Martin Heinrich在《经济学人》撰文支持该法案，文中称它保留了环境审查、诉讼权和社区意见，只是让审查成为标准化、可预期的流程。",
+    "爱国者导弹的产量卡在一种特殊人造丝织物上。最先进的爱国者导弹只批准使用一种这样的产品，由堪萨斯州的Park Aerospace独家供货。据WSJ报道，Park的上游ArianeGroup在法国波尔多附近生产这种碳化人造丝布，即Raycarb，它明确表示供应本来就有限，Park也因此无法快速增产。",
+    "特斯拉邀请部分客户以29,990美元购买Cybercab用于个人使用，但每月还要支付299美元的Autonomy Subscription，车才能开动。它只能在德州和佛罗里达的Robotaxi服务区内使用，而Electrek指出这些区域比特斯拉宣传的小很多。另外，Giga Texas正在建设Optimus工厂。",
+    "其他几条消息：GAO称F-35项目约有2600万个备件，总价约310亿美元，分散在全球700个地点。参议院拨款委员会削减了一批计划中的海军舰艇。前BOEM现名美国海洋矿产管理局，拍卖了美属萨摩亚附近3100万英亩海床的采矿权。Hadrian正在收购Kutztown Foundry and Machine，该公司为核潜艇等产品制造铸件。Our World in Data的数据显示，超额死亡人数随气温升高而上升，缺少空调的城市最为敏感。"
+   ],
+   "points_en": [
+    "The Senate has passed the BAAJA permitting reform bill, and Kalshi gives it a 75% chance of becoming law. Senator Martin Heinrich, writing in The Economist, says the bill keeps environmental review, litigation rights and local comment, but makes reviews a standard, predictable process.",
+    "Patriot missile output is limited by a specialized rayon fabric. Only one rayon product is approved for the most advanced Patriot missiles, and it comes from Park Aerospace in Kansas. Park's supplier, ArianeGroup in Bordeaux, France, makes the carbonized fabric, called Raycarb. According to WSJ, ArianeGroup said its supply was limited, so Park could not ramp up quickly.",
+    "Tesla is inviting select customers to buy a Cybercab for personal use at $29,990. The car needs a $299 monthly Autonomy Subscription to move, and it only works inside Robotaxi service areas in Texas and Florida. Electrek says those areas are much smaller than Tesla advertises. A factory for Optimus is under construction at Giga Texas.",
+    "Other items: the GAO says the F-35 program has about 26 million spare parts, worth about $31 billion, spread across 700 sites. The Senate appropriations committee cut several planned naval vessels. The US Marine Minerals Administration, formerly BOEM, auctioned seabed mining rights on 31 million acres near American Samoa. Hadrian is buying Kutztown Foundry and Machine, which makes castings for nuclear submarines among other things. An Our World in Data dataset shows excess deaths rising with temperature, most sharply in cities without air conditioning."
    ]
   },
   {
@@ -41,20 +43,25 @@
    "url": "https://shkspr.mobi/blog/2026/11/relicensing-to-cc-by-sa-and-making-it-visible-in-schema-metadata/",
    "published": "2026-11-21T12:34:40+00:00",
    "basis": "full",
-   "brief_zh": "作者介绍了如何用 Schema.org 结构化数据标明博客文章的版权和许可协议，让机器不用打开链接也能读懂，并宣布自己的博客改用 CC BY-SA 协议。",
-   "brief_en": "The author shows how to mark a blog post's copyright licence with Schema.org microdata so that machines can read it directly, and says the blog is now CC BY-SA.",
-   "detail_zh": [
-    "作者想解决一个问题：怎样让网页清楚地标明使用哪种版权许可。最简单的办法是在页面 head 中加入 license 类型的 link，指向一个版权说明页面。但这种写法不够具体，读者或程序必须打开那个页面，才能知道内容是什么。",
-    "因此作者建议用 Schema.org 的 microdata 来标注。示例中，整个站点被标为 Blog，文章本身是 BlogPosting，作者同时也是 copyrightHolder（版权持有人，两者也可以不是同一人）。文章中的链接指向许可协议的网址，并带有 license 属性；图片徽标带有 copyrightNotice 属性，并附有人类可读的文字说明。作者认为，这种结构还可以让同一页面的不同部分使用不同的版权或 copyleft 许可。最后，作者说他的博客现在已经改为 CC BY-SA 协议。"
-   ],
-   "detail_en": [
-    "The author asks how to make a blog's licence clear. A link tag with rel set to license points to a copyright page, but that is not specific. A reader or program has to open the page to interpret it.",
-    "The author suggests Schema.org microdata instead. The example marks the site as a Blog and the page as a BlogPosting. The author is marked as copyrightHolder, which can be a different entity. The licence link uses the license property, and the badge image uses copyrightNotice with readable text. The structure can also give different parts of one page different licences. The author says the blog is now CC BY-SA."
-   ],
+   "brief_zh": "作者把自己的博客改为CC BY-SA协议，并建议用Schema.org结构化元数据把版权信息写清楚，让机器也能识别。",
+   "brief_en": "The author has relicensed their blog under CC BY-SA and suggests using Schema.org metadata to make the licence readable by machines as well as people.",
    "topics": [
-    "schema.org",
-    "copyright licensing",
-    "web metadata"
+    "Copyright licensing",
+    "Schema.org"
+   ],
+   "background_zh": "作者希望让人和机器都能清楚看出一篇博客文章用的是哪种版权协议。只在页面头部放一个license链接，还得让访问者或程序专门去打开那个页面，才能知道具体条款。",
+   "conclusion_zh": "作者宣布自己的博客现在采用CC BY-SA协议。",
+   "background_en": "The author wants it to be clear which copyright licence a blog post uses, for both humans and machines. A license link tag in the page head still requires a visitor or program to open the linked page to learn the terms.",
+   "conclusion_en": "The author has now relicensed their own blog under CC BY-SA.",
+   "points_zh": [
+    "页面头部的“rel=license”属性可以指向版权说明，但它只是一个链接，需要有人或程序访问之后才能理解其中内容。",
+    "Schema.org结构化数据可以把授权信息标得更精确。页面标为Blog，文章标为BlogPosting，作者和版权持有人标为Person，再加上许可协议的链接和版权声明。作者给出了一个可以粘贴到验证器里的示例，并指出作者和版权持有人可能是两个不同的主体。",
+    "这种写法可以让同一个页面的不同部分使用不同的版权或copyleft协议。"
+   ],
+   "points_en": [
+    "A rel=license link in the page head can point to the copyright information. But it is only a link, so someone or something has to visit it before the terms are understood.",
+    "Schema.org markup can state the licence more precisely. The page is marked as a Blog, the post as a BlogPosting, and the author and copyright holder as a Person, with a licence link and a copyright notice. The author gives an example that can be pasted into the validator, and notes that the author and copyright holder may be different entities.",
+    "This structure lets different parts of the same page carry different copyright or copyleft licences."
    ]
   },
   {
@@ -66,20 +73,25 @@
    "url": "https://dfarq.homeip.net/what-three-bolt-mount-means-on-a-garbage-disposal/?utm_source=rss&utm_medium=rss&utm_campaign=what-three-bolt-mount-means-on-a-garbage-disposal",
    "published": "2026-11-21T12:00:16+00:00",
    "basis": "full",
-   "brief_zh": "作者解释了垃圾处理器广告中“三螺栓安装”的含义：这是 Insinkerator 使用几十年的安装方式，很多品牌沿用它，方便旧机直接替换。",
-   "brief_en": "The post explains that a three-bolt mount on a garbage disposal is the Insinkerator mounting system, which many store brands copy so old units can be swapped out quickly.",
-   "detail_zh": [
-    "作者看到平价品牌的垃圾处理器广告写着“三螺栓安装，便于替换”，想弄清楚这是什么意思。他说，这种安装方式是 Insinkerator 从几十年前开始使用的。很多非知名品牌不便直接提竞争对手的名字，就用“三螺栓”来表示兼容。有些所谓的杂牌其实就是换了标签的 Insinkerator。Moen 也有三螺栓款式，同时也有自己的安装系统。作者给出的判断方法是：外形像 Insinkerator 的多半就是；外形不同，而且底部没有用来解卡的六角螺栓（需要用 wrenchette 工具转动）的，大概率是 Moen。",
-    "作者还列举了 Ace Hardware 和 Home Depot 的 Glacier Bay 等品牌也采用三螺栓系统。更换时，可以直接把旧机扭下来，保留原来的安装座，再把新机扭上去，省下大约一个小时的安装时间。只要旧机没有从水槽处漏水，保留安装座就没有问题。如果换得不频繁，这样做尤其划算。"
-   ],
-   "detail_en": [
-    "The author saw store-brand disposals advertised with a three-bolt mount for easy retrofit. Insinkerator has used this system for decades, and other brands use the same term without naming it. Some store brands are relabeled Insinkerators. Moen also makes three-bolt units, plus its own system. A unit that looks like an Insinkerator probably is one. A unit with no hex bolt on the bottom for turning a jammed disposal with a wrenchette is probably a Moen.",
-    "Ace Hardware and a Glacier Bay unit at Home Depot also use the three-bolt system. To replace a unit, you can twist off the old disposal, leave the mount in place, and twist on the new one. This saves about an hour. It is fine to keep the old mount as long as it was not leaking."
-   ],
+   "brief_zh": "“three-bolt mount”指的是Insinkerator用了几十年的三螺栓安装方式，其他品牌用这个说法，意思是可以直接替换Insinkerator的机器。",
+   "brief_en": "The three-bolt mount is the attachment system Insinkerator has used for decades. Store brands use the term to mean their unit fits where an Insinkerator goes.",
    "topics": [
-    "home appliances",
-    "DIY installation",
-    "garbage disposals"
+    "Home repair",
+    "Kitchen appliances"
+   ],
+   "background_zh": "作者在挑选店牌垃圾处理器时，看到商品写着“three-bolt mount for easy retrofit”，不确定这是什么意思，于是写文解释。",
+   "conclusion_zh": "三螺栓款可以省时省力地替换旧机。只要旧的安装座没有漏水，就可以留着继续用。",
+   "background_en": "While shopping for store-brand garbage disposals, the author saw the phrase three-bolt mount for easy retrofit and wanted to know what it meant.",
+   "conclusion_en": "Three-bolt units can be swapped in quickly. As long as the old mount was not leaking, it can stay in place.",
+   "points_zh": [
+    "三螺栓安装方式来自Insinkerator，很多店牌不便直接点名竞争对手，就用这个说法。Insinkerator用这套系统已经几十年。如果要换掉用坏的Insinkerator，又不想付原厂的价钱，就应该选带三螺栓的店牌。",
+    "不少三螺栓产品其实是Insinkerator的换标版本，但Moen也有三螺栓型号，同时有自己的安装系统。判断方法是：外形像Insinkerator，多半就是；底部没有用扳手转动卡住机器的六角螺栓，多半是Moen。Ace Hardware的产品也用三螺栓系统，Home Depot的Glacier Bay产品同样如此。",
+    "换机时可以保留原来的安装座，直接拧下旧机、拧上新机，作者说这能省下约一个小时。前提是旧机没有从水槽处漏水。"
+   ],
+   "points_en": [
+    "The three-bolt mount comes from Insinkerator, and store brands use the phrase to avoid naming a competitor. Insinkerator has used this system for decades. If you need to replace a worn-out Insinkerator without paying its price, look for a store-brand unit with a three-bolt mount.",
+    "Some three-bolt units are relabeled Insinkerators, but Moen makes three-bolt models and its own mounting system too. If the unit looks like an Insinkerator, it probably is. If it lacks the hex bolt on the bottom for turning the disposal with a wrench when it jams, it is probably a Moen. Ace Hardware units and the Glacier Bay unit sold at Home Depot also use the three-bolt system.",
+    "When replacing a unit, you can leave the existing mount in place, twist off the old disposal and twist on the new one. The author says this can save about an hour. It is fine as long as the old unit was not leaking at the sink."
    ]
   },
   {
@@ -91,25 +103,29 @@
    "url": "https://nesbitt.io/2026/11/21/this-week-in-package-management.html",
    "published": "2026-11-21T10:00:00+00:00",
    "basis": "full",
-   "brief_zh": "这是一期每周包管理新闻，主要记录 Gemstash、Ruby、Java 的安全修复，以及 pnpm、RubyGems、conda、Nix、PyPI、NuGet 等工具和平台的版本与机制变化。",
-   "brief_en": "Weekly package management news, mainly security fixes in Gemstash, Ruby and Java, plus release changes in pnpm, RubyGems, conda, Nix and PyPI.",
-   "detail_zh": [
-    "安全问题方面，Gemstash 2.9.0 修复了八个漏洞，其中最严重的是因不安全地加载上游数据而导致的未认证远程代码执行，CVSS 评分为 10.0。新版要求非默认上游必须列入 :allowed_upstreams，并把上游响应限制在 64 MiB 和 300 秒以内。RubyGems 团队同时宣布，2.9.0 是 Gemstash 的最后一个功能版本，之后只接收漏洞报告和修复。Ruby 4.0.10、3.4.13 和 3.3.14 修复了七个漏洞，涉及 Regexp 和字符串大小写转换，有几个可能在应用编译攻击者可控的正则时导致远程代码执行。Calif 公开了 Java4Shell（CVE-2026-114938），这是 OpenJDK HotSpot 在 x86-64 上 AVX-512 Base64 解码内建函数中的堆内存破坏漏洞，据称可以对 Artifactory 等 Java 服务器实现认证前远程代码执行。在官方补丁发布前，可以用 -XX:-UseBASE64Intrinsics 作为临时缓解。",
-    "包管理器方面，pnpm 12.22.0 和 11.28.13 修复了 registry 切换后 pnpm install 可能跳过 minimumReleaseAge 和 trustPolicy 检查的问题。Bun 1.4.5 是安全更新，升级了 lsquic、c-ares、SQLite、llhttp 和 BoringSSL。RubyGems 和 Bundler 4.1.0 在 Gemfile 中新增 override 方法，可以改写依赖声明的版本约束，包括传递依赖。cooldown 功能也可用于 gem 命令，gem install --cooldown 7 会跳过最近七天发布的版本。另有一个可选的凭据存储，可把 API key 和 Bundler 凭据存入系统钥匙串，并新增内容寻址 gem 和 ML-DSA 签名支持。",
-    "其他工具方面，conda 26.10.0 把 Rattler 设为新安装和未指定求解器时升级的默认求解器，可以用 conda config --set solver libmamba 切换回去。经典求解器改为独立插件 conda-pycosat-solver，内置模块计划在 27.9 移除，conda 本身需要 Python 3.11 以上。pip-tools 7.7.0 是项目迁入 PyPA 组织后的第一个版本，它在 Jazzband 待了九年，Jazzband 即将关闭。新版要求 pip 26.2.2 以上，并放弃 Python 3.9。sbt 2.1.0 去掉了 Apache Ivy 依赖，元构建改用 Scala 3.9 LTS，因此用 2.1.0 发布的插件只能在 2.1.x 上使用。Docker Engine 29.10.0 中，只有明确列在 insecure-registries 里的仓库才算不安全，本地 HTTP 或证书不可信的仓库需要显式配置，例如 localhost:5000。",
-    "更多工具的更新包括：mise 新增 lock pool，允许一个任务锁有多个槽位，并新增 --deny-unix 和 --allow-unix 选项以阻止连接 SSH agent 等 Unix 套接字。Homebrew 7.0.15 改为用 Ruby 验证 Sigstore bundle，并内置 Ruby 4.0.10。Nix 2.36.0 重写了 nix-daemon 的工作进程方式，多数 nix.conf 修改无需重启 daemon 即可生效。uv 0.13.9 预览支持 PEP 832 的 .venv 重定向文件，并拒绝索引中以不同包名列出的 wheel。ORAS 1.4.0 改用 oras-go v3，认证信息按仓库而非按 registry 主机缓存。",
-    "平台方面，PyPI 新增上传检查，拒绝 V7 格式 tar 打包的 sdist，以及 ZIP 注释可能被解析为控制结构的 wheel。另有两项检查在评估中，分别是拒绝 GNU 格式 tar sdist 和拒绝任何 ZIP 注释。NuGet.org 推出分阶段发布，上传的包会先经过校验和仓库签名，但在有 2FA 的维护者于网站上提升之前，搜索和还原都看不到，包括包的所有者。另外，本期还包括 Farid Zakaria 关于把 Nix 构建转为 Bazel 目标的几篇文章，一个 mpld3 维护者寻找新维护者时遇到疑似批量发帖的账号，Collaborations Workshop 2027 的征稿信息，以及 GitHub 把安全公告权限正式推出、Dependabot 关闭请求改为一年后过期等消息。"
-   ],
-   "detail_en": [
-    "Gemstash 2.9.0 fixes eight vulnerabilities. The worst one allows unauthenticated remote code execution through unsafe loading of upstream data, rated CVSS 10.0. Non-default upstreams must now be listed in allowed_upstreams, and responses are capped at 64 MiB and 300 seconds. 2.9.0 is the last feature release. Ruby 4.0.10, 3.4.13 and 3.3.14 fix seven bugs in Regexp and string case conversion. Java4Shell (CVE-2026-114938) is a heap corruption bug in an AVX-512 Base64 decoder in OpenJDK. A workaround is the flag -XX:-UseBASE64Intrinsics until patches ship.",
-    "pnpm 12.22.0 and 11.28.13 fix a bug where pnpm install could skip release-age and trust checks after a registry changed. Bun 1.4.5 is a security update of bundled libraries. RubyGems and Bundler 4.1.0 add an override method to Gemfile that can rewrite version constraints, including transitive ones. Cooldowns now work in the gem command too. An opt-in credential store puts API keys in the OS keychain. conda 26.10.0 makes Rattler the default solver. The classic solver moves to a plugin. pip-tools 7.7.0 is the first release since the project moved from Jazzband to PyPA. sbt 2.1.0 drops Apache Ivy. Docker Engine 29.10.0 treats only listed registries as insecure.",
-    "mise adds lock pools so a task lock can have several slots, and flags to block Unix socket connections. Homebrew 7.0.15 verifies Sigstore bundles in Ruby and bundles Ruby 4.0.10. Nix 2.36.0 reworks nix-daemon so most config changes apply without a restart. uv 0.13.9 previews PEP 832 .venv redirect files. ORAS 1.4.0 caches authentication per repository instead of per host.",
-    "PyPI now rejects some uploads that could confuse parsers, such as V7-format tar sdists and wheels with ZIP comments. Two more checks are under review. NuGet.org adds staged publishing. Uploaded packages are signed but hidden from search and restore until a maintainer with 2FA promotes them on the website. The post also covers two Nix and Bazel posts by Farid Zakaria, a spam pattern seen on an mpld3 issue, the Collaborations Workshop 2027 call, a report on open source maintenance funding, GitHub's new advisory permissions, and a change that makes Dependabot dismissal requests expire after a year."
-   ],
+   "brief_zh": "本周包管理领域的重点是安全问题：Gemstash修复了一个CVSS 10.0的远程代码执行漏洞，Ruby也发布了多项安全修复。",
+   "brief_en": "Security is the main story this week. Gemstash patched a CVSS 10.0 remote code execution bug, and Ruby also shipped several security fixes.",
    "topics": [
-    "package management",
-    "security advisories",
-    "supply chain"
+    "Package management",
+    "Security"
+   ],
+   "background_zh": "这是作者每周汇总包管理器新闻的一期，素材来自一组包管理器的OPML订阅源、作者在Mastodon上的动态以及读者投稿。版本控制和代码托管的新闻另有周三的专题。",
+   "conclusion_zh": "文章没有总结性结论，结尾请读者把下周值得收录的链接发给作者。",
+   "background_en": "This is one weekly roundup of package manager news. It draws on a set of package manager feeds, the author's Mastodon posts and reader tips. Version control and forge news appears in a separate Wednesday roundup.",
+   "conclusion_en": "The post gives no overall conclusion. It ends by asking readers to send links for next week.",
+   "points_zh": [
+    "Gemstash 2.9.0修复了8个漏洞，最严重的是通过不安全地加载上游数据，可以实现未认证的远程代码执行，CVSS评分为10.0。此版本要求非默认上游必须列在:allowed_upstreams中，并把上游响应限制在64 MiB和300秒以内。RubyGems团队还宣布2.9.0是Gemstash最后一个功能版本，之后只接受漏洞报告和修复贡献。",
+    "Java4Shell（CVE-2026-114938）是OpenJDK HotSpot在x86-64上AVX-512 Base64解码器中的堆内存破坏漏洞。披露文章称，它可以对Artifactory等Java服务器实现认证前的远程代码执行。在补丁发布之前，可以用参数-XX:-UseBASE64Intrinsics作为临时缓解。",
+    "Ruby 4.0.10、3.4.13和3.3.14修复了7个漏洞，涉及正则表达式和字符串大小写转换。如果应用编译了攻击者可控的模式，其中几个可能导致远程代码执行。Ruby 3.2及更早版本已经停止维护。Homebrew 7.0.15也随附了Ruby 4.0.10，以包含这些修复。",
+    "多个包管理器有功能更新。RubyGems和Bundler 4.1.0在Gemfile中新增override方法，在gem命令中加入cooldown选项，例如gem install --cooldown 7会跳过过去七天发布的版本，并提供可选的系统钥匙串凭据存储。conda 26.10.0默认改用Rattler求解器。pnpm 12.22.0修复了切换registry后可能跳过minimumReleaseAge和trustPolicy检查的问题。sbt 2.1.0移除了Apache Ivy。",
+    "其他消息：PyPI新增上传检查，拒绝V7格式tar压缩的sdist，以及ZIP注释可能被解析为控制结构的wheel。NuGet.org推出分阶段发布，新包上传后会被验证和签名，但在维护者通过2FA在网站上推广之前，不会出现在搜索和还原中。GitHub的安全公告权限已正式可用，自定义角色无需管理员权限即可访问。Dependabot的警报忽略请求现在一年后过期，不再是一周。"
+   ],
+   "points_en": [
+    "Gemstash 2.9.0 fixes eight vulnerabilities. The worst allows unauthenticated remote code execution through unsafe loading of upstream data, rated CVSS 10.0. Non-default upstreams must now be listed in :allowed_upstreams, and upstream responses are capped at 64 MiB and 300 seconds. RubyGems says 2.9.0 is the last feature release, and after that only vulnerability reports and bug fixes will be accepted.",
+    "Java4Shell (CVE-2026-114938) is a heap memory corruption bug in the AVX-512 Base64 decoder intrinsic in OpenJDK HotSpot on x86-64. The write-up reports pre-authentication remote code execution against Artifactory and other Java servers. Until patches are applied, the workaround is the flag -XX:-UseBASE64Intrinsics.",
+    "Ruby 4.0.10, 3.4.13 and 3.3.14 fix seven vulnerabilities in Regexp and String case conversion. Several can lead to remote code execution when an application compiles an attacker-controlled pattern. Ruby 3.2 and earlier are end of life. Homebrew 7.0.15 bundles Ruby 4.0.10 to include these fixes.",
+    "Several package managers shipped feature changes. RubyGems and Bundler 4.1.0 add an override method to the Gemfile and cooldowns to the gem command, for example gem install --cooldown 7 skips versions published in the last seven days. They also add an opt-in keychain credential store. conda 26.10.0 makes Rattler the default solver. pnpm 12.22.0 fixes a bug where installs could skip minimumReleaseAge and trustPolicy checks after a registry change. sbt 2.1.0 removes Apache Ivy.",
+    "Other items: PyPI now rejects sdists packed as V7-format tar archives, and wheels whose ZIP comment could be read as ZIP control structures. NuGet.org added staged publishing, so a new upload stays out of search and restore until a maintainer with 2FA promotes it on the website. GitHub made security advisory permissions generally available for custom roles. Dependabot alert dismissal requests now expire after a year instead of a week."
    ]
   },
   {
@@ -121,23 +137,26 @@
    "url": "https://www.johndcook.com/blog/2026/11/20/grh/",
    "published": "2026-11-21T03:35:05+00:00",
    "basis": "full",
-   "brief_zh": "作者用一个“梯子”的结构解释广义黎曼猜想，说明它如何从黎曼猜想的 zeta 函数推广到 L(s, χ) 这一类函数，并指出当天有两份对 GRH 的证明被宣布。",
-   "brief_en": "The author explains the Generalized Riemann Hypothesis as a ladder of conjectures, starting from the Riemann zeta function and moving to Dirichlet L-functions. He notes that two proofs of the hypothesis were announced that day.",
-   "detail_zh": [
-    "文章先说，当天宣布了两份黎曼猜想（RH）的证明，一份由 AI 生成，一份由人写成。两者都声称证明了更一般的广义黎曼猜想（GRH），而 RH 只是它的一个特例。",
-    "黎曼猜想说的是，黎曼 zeta 函数 ζ(s) 在临界带（实部介于 0 和 1 之间的区域）里的所有零点都落在中线 Re(s)=½ 上。作者把相关猜想看成一个梯子：把 ζ(s) 换成越来越一般的函数族，结论始终是临界带内的零点都在中线上。最底层是 ζ(s) 的黎曼猜想，往上一层是 L(s, χ) 这一类函数的广义黎曼猜想，更高的层次作者说他不打算细讲。",
-    "作者给出 zeta 函数的定义：实部大于 1 时由级数给出，然后通过解析延拓可以唯一延拓到整个复平面，只有 s=1 例外。L(s, χ) 则是把级数的分子换成函数 χ(n)。χ 是模为 m 的 Dirichlet 特征，也就是从整数映到复数的函数。常数函数 χ(n)=1 也属于这一类，它对应的正是 ζ(s)。",
-    "举例来说，χ 可以是 Legendre 符号或 Jacobi 符号，分子是 n，分母是 m。Legendre 符号要求 m 是奇素数，Jacobi 符号只要求 m 是奇数。原文中的部分公式没有完整保留，这里只转述了文字部分。"
-   ],
-   "detail_en": [
-    "The post starts by saying that two proofs of the Riemann Hypothesis (RH) were announced on the same day. One was AI-generated and one was human-generated. Both claimed to prove the Generalized Riemann Hypothesis (GRH), which includes RH as a special case.",
-    "RH says that all zeros of the Riemann zeta function ζ(s) in the critical strip, the region where the real part of s is between 0 and 1, lie on the central line Re(s) = ½. The author describes a ladder of related conjectures. Each rung replaces ζ(s) with a more general family of functions, and the claim stays the same: all zeros in the critical strip lie on the central line. The bottom rung is RH for ζ(s). The next rung is GRH for the functions L(s, χ). He says the higher rungs are too abstract for him to cover.",
-    "The zeta function is defined by a series when the real part of s is greater than 1. It extends uniquely by analytic continuation to the whole complex plane, except at s = 1. The functions L(s, χ) replace the numerator in that series with a function χ(n). Here χ is a Dirichlet character of modulus m, a function from the integers to the complex numbers. The constant function χ(n) = 1 belongs to this class and corresponds to ζ(s).",
-    "For example, χ can be a Legendre symbol or a Jacobi symbol, with n on top and m on the bottom. The Legendre symbol requires m to be an odd prime, while the Jacobi symbol only requires m to be odd. Some formulas in the original text did not survive, so this summary covers only the written explanation."
-   ],
+   "brief_zh": "广义黎曼猜想是黎曼猜想的推广：把ζ(s)换成更一般的一族函数L(s, χ)，断言这些函数在临界带内的零点同样都落在中线Re(s) = 1/2上。",
+   "brief_en": "The Generalized Riemann Hypothesis extends the Riemann Hypothesis by replacing zeta with a wider family of functions L(s, χ). It says all zeros of these functions in the critical strip also lie on the line Re(s) = 1/2.",
    "topics": [
-    "number theory",
-    "Riemann hypothesis"
+    "Riemann Hypothesis",
+    "Dirichlet characters",
+    "number theory"
+   ],
+   "background_zh": "今天同时公布了两个黎曼猜想的证明，一个由AI生成，一个由人类完成，两者都声称证明了更一般的广义黎曼猜想。作者先讲清楚广义黎曼猜想是什么。",
+   "conclusion_zh": "文章没有单独的结论，停在Dirichlet特征的定义和例子上，更高层的推广作者不打算展开。",
+   "background_en": "Two proofs of the Riemann Hypothesis were announced on the same day, one AI-generated and one human-generated. Both claimed to prove the Generalized Riemann Hypothesis, so the author first explains what that is.",
+   "conclusion_en": "The post has no separate conclusion. It ends with the definition and examples of Dirichlet characters. The author does not want to go into the more abstract rungs.",
+   "points_zh": [
+    "黎曼猜想说的是，ζ(s)在临界带内的所有零点都位于中线Re(s) = 1/2上。临界带指实部在0到1之间的那片复平面区域。",
+    "广义黎曼猜想是一组层层推广的猜想，把ζ(s)换成越来越一般的函数族，结论都一样。黎曼猜想之上一层是针对L(s, χ)的广义版本，再往上更抽象，作者说不打算细讲。",
+    "L(s, χ)里的χ是模为m的Dirichlet特征，满足积性，gcd(a, m) > 1时取值为0，并且以m为周期。Legendre符号（m为奇素数）和Jacobi符号（m为奇数）都是例子，常数函数χ(n) = 1对应的正是ζ(s)。"
+   ],
+   "points_en": [
+    "The Riemann Hypothesis says all zeros of the zeta function in the critical strip lie on the central line. The critical strip is the region where the real part of s is between 0 and 1, and the central line is Re(s) = 1/2.",
+    "The Generalized Riemann Hypothesis is a ladder of conjectures that replace zeta with wider families of functions, with the same conclusion. The next rung up uses L(s, χ). The higher rungs are more abstract, and the author does not go into them.",
+    "The χ in L(s, χ) are Dirichlet characters of modulus m. They are multiplicative, equal zero when gcd(a, m) > 1, and have period m. Legendre and Jacobi symbols are examples. The constant function χ(n) = 1 gives back zeta."
    ]
   },
   {
@@ -149,26 +168,28 @@
    "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
    "published": "2026-11-21T00:36:39+00:00",
    "basis": "full",
-   "brief_zh": "美国司法部起诉了一家自称能用先进密码学恢复勒索软件加密数据的佛罗里达公司联合创始人，指控他私下付赎金拿解密密钥，再向受害者加价收费。",
-   "brief_en": "The US Justice Department charged the co-founder of RansomwareHelp, a Florida firm that offered ransomware recovery, with wire fraud. He allegedly paid ransomware groups for decryption keys and charged victims much more.",
-   "detail_zh": [
-    "RansomwareHelp 是一家成立六年的佛罗里达公司，网站宣称用“先进密码学工具”恢复被勒索软件锁住的数据，并劝受害者不要付钱。公司联合创始人兼首席技术官 Juan Ricardo Palacio Escobar 在罗德岛被指控电信诈骗。起诉书称，他经常向勒索软件团伙付钱拿解密密钥，然后向受害者收取远高于实际付款的费用，而且并没有做相应的工作。",
-    "起诉书说，联邦调查局设下了一个诱捕行动，探员假扮成遭受攻击的公司和一个虚构的勒索团伙。公司回复说，他们的政策是不与勒索者谈判，也不代付赎金。随后 Palacio 联系了这个假团伙，要求最低价格。调查局开价 0.2 个比特币，约合 1.3 万美元。不到两天，他告诉假受害公司，解密费用是 13,260 美元。第二天他又要求降到 4,000 美元，最终成交价约为 6,000 美元等值的比特币。他向这家假受害公司一共收取了 16,010 美元，其中包括 2,750 美元的诊断费和 13,260 美元的解密费。",
-    "Soteria 联合创始人 Paul Ihme 讲述了另一起案例。2024 年，一家小会计师事务所因 LockBit 勒索软件感染，向 RansomwareHelp 支付了诊断费。对方给出的报价是 438,880 美元，理由包括“510 台预配置的取证服务器”和“用暴力方式注入加密代码”。对方坚持要远程控制受害者的网络，使用 AnyDesk 进行诊断。Ihme 认为，这样做的一个目的可能是删除勒索信，让受害者无法直接联系攻击者。他们在网络中只找到一份勒索信，而且有人已经和 LockBit 谈判好几天了。RansomwareHelp 在聊天中一再请求 LockBit 不要向受害者透露谈判的事情。LockBit 则表示，每拖一天，赎金就增加 10 万美元。最后这家会计师事务所选择了另一家更有名的安全公司帮忙谈判，支付的金额只有 RansomwareHelp 报价的一半。",
-    "Ihme 说，这家公司主要针对不懂技术、急需帮助、身边也没有专业人士指导的中小企业。它的报价声称能破解六种加密算法，但列出的却是 SHA-256 之类的密码哈希算法，与解密无关。Ihme 说：“如果这些人真能解开任何勒索软件，这个人早就是亿万富翁了。”",
-    "文章最后提到，这起案件是美国司法部近期起诉安全公司系列案件中的一个。今年 10 月，加拿大网络安全公司 Cybersteward 的高管 Edward Dubrovsky 被起诉，案件目前已被封存，他面临网络勒索和共谋指控。大约同一时间，MonsterCloud 首席执行官 Zohar Pinhasi 被指控诈骗和共谋，据称他瞒着客户私下付钱给黑客，共支付 800 万美元，却向客户收取了 1,900 万美元。今年 7 月，勒索软件谈判员 Angelo Martino 因与 BlackCat/ALPHV 团伙共谋勒索多名受害者，被判处 70 个月监禁。司法部称，他受雇于 BlackCat 攻击者，向对方提供雇主客户的保密谈判底线和策略，帮助对方抬高赎金。"
-   ],
-   "detail_en": [
-    "RansomwareHelp is a six-year-old Florida company. Its website said it used advanced cryptographic tools to restore data locked by ransomware, and it told victims not to pay. Co-founder and CTO Juan Ricardo Palacio Escobar has been charged with wire fraud in Rhode Island. The indictment says he regularly paid ransomware groups for decryption keys and then charged victims well above what he paid, for work that was never done.",
-    "The FBI ran a sting operation. Agents posed as a victim company and as a fake ransomware group. The company replied that it does not negotiate with attackers or pay ransoms. Palacio then contacted the fake group and asked for the lowest price. The FBI offered 0.2 bitcoin, about $13,000. Less than 48 hours later, Palacio said the decryption cost would be $13,260. The next day he asked for $4,000, and the agreed price was about $6,000 in bitcoin. He charged the fake victim $16,010 in total, including a $2,750 diagnostic fee and the $13,260 decryption fee.",
-    "Paul Ihme, co-founder of the security firm Soteria, described a separate case. In 2024, a small accounting firm hit by LockBit ransomware paid RansomwareHelp a diagnostic fee. The firm's proposal asked for $438,880 and cited 510 forensic servers and brute-force code injection. RansomwareHelp insisted on full remote access through AnyDesk. Ihme believes this was partly so it could delete ransom notes and keep the victim from contacting the attackers. The company found only one note, and someone had already been negotiating with LockBit for days. RansomwareHelp begged LockBit not to tell the victim, but LockBit added $100,000 to the demand for each day of delay. The accounting firm hired a more established firm instead and paid about half of RansomwareHelp's price.",
-    "Ihme said the company targeted small and medium businesses that had little technical knowledge. Its proposal claimed it could break six types of encryption, but the list included password hashing algorithms such as SHA-256, which are not relevant to decryption. Ihme said: “If these guys could decrypt any ransomware out there, this guy would be a billionaire.”",
-    "The post places this case in a series of recent Justice Department prosecutions of security firms. In early October, Edward Dubrovsky, an executive at the Canadian firm Cybersteward, was charged with cyber extortion and conspiracy. The case is sealed. Around the same time, MonsterCloud CEO Zohar Pinhasi was charged with wire fraud and conspiracy. The charging documents say he paid ransomware groups $8 million while charging customers $19 million. In July, ransomware negotiator Angelo Martino was sentenced to 70 months in prison for conspiring with the BlackCat/ALPHV group. He allegedly gave the group confidential negotiating positions and strategies from his employer's clients, which helped raise the ransoms."
-   ],
+   "brief_zh": "一家声称不付赎金也能恢复勒索软件数据的公司，实际是花钱买解密密钥，再加价卖给受害者，其首席技术官兼联合创始人已被以 wire fraud 罪名起诉。",
+   "brief_en": "A company that claimed it could recover ransomware data without paying ransoms actually paid attackers for decryption keys and marked up the price to victims. Its CTO and co-founder was charged with wire fraud.",
    "topics": [
     "ransomware",
-    "cybercrime",
-    "fraud"
+    "wire fraud",
+    "cybersecurity"
+   ],
+   "background_zh": "这家名为 RansomwareHelp 的佛罗里达公司网站称，它用“先进加密工具”能恢复100%的数据，并劝受害者不要付赎金。FBI设局调查后，检方提起了起诉。",
+   "conclusion_zh": "文章没有单独写结论，最后列出近期几起类似案件后结束。",
+   "background_en": "RansomwareHelp, a Florida company, said on its website that its advanced cryptographic tools could recover 100 percent of locked data, and urged victims not to pay ransoms. The FBI ran a sting operation, and prosecutors then filed charges.",
+   "conclusion_en": "The post has no separate conclusion. It ends by listing other recent cases of the same kind.",
+   "points_zh": [
+    "这家公司对外宣称不付赎金，实际却付钱给勒索团伙拿解密密钥，再向受害者加价收费。在FBI的诱捕行动中，对方报价0.2个比特币（约1.3万美元），之后收取13,260美元的解密费，并通过谈判把勒索团伙的价格压到约6,000美元，却向FBI假扮的受害公司收取了16,010美元，其中包括2,750美元的诊断费。",
+    "在一起LockBit勒索案中，该公司要求通过AnyDesk远程控制受害者的网络，安全公司Soteria的Paul Ihme认为，其目的是删除勒索信，让受害者无法联系攻击者。该公司的报价为438,880美元，理由是使用510台取证服务器进行暴力破解。受害者最后找了另一家更正规的公司谈判，付的钱只有对方报价的一半。",
+    "该公司主要针对不懂技术、又走投无路的中小企业，其技术宣传被业内人士认为很荒谬。例如，提案称能破解六种加密，列出的却是SHA-256等与勒索加密无关的密码哈希算法。Ihme称，如果它真能解密所有勒索软件，“这个人早就是亿万富翁了”。",
+    "这起案件是美国司法部近期一连串起诉安全公司串通诈骗客户案件中的一例。10月，Cybersteward高管Edward Dubrovsky被起诉，案件已被封存；MonsterCloud的CEO Zohar Pinhasi被指向勒索团伙支付800万美元，同时向客户收取1,900万美元；7月，勒索谈判人员Angelo Martino因与BlackCat/ALPHV共谋被判70个月。"
+   ],
+   "points_en": [
+    "The company said it did not pay ransoms, but it paid ransomware groups for decryption keys and charged victims more. In an FBI sting, it was quoted 0.2 bitcoin, about 13,000 dollars. It then charged 13,260 dollars for decryption, and negotiated the group's price down to about 6,000 dollars. It charged the FBI's fake victim 16,010 dollars, including a 2,750 dollar diagnostic fee.",
+    "In a LockBit case, the company asked a victim to give it remote access through AnyDesk. Paul Ihme of Soteria believes it did this to delete ransom notes, so the victim could not contact the attackers. Its proposal was 438,880 dollars. The victim hired a more established firm instead and paid half that amount.",
+    "The company targeted small and medium businesses without technical staff, and its technical claims were not credible. Its proposal said it could break six types of encryption, but listed password hashing algorithms such as SHA-256, which are not ransomware encryption. Ihme said that if it could decrypt any ransomware, its owner would be a billionaire.",
+    "The case is one of several recent US Justice Department prosecutions of security firms accused of defrauding clients. In October, Cybersteward executive Edward Dubrovsky was charged, and the case is sealed. MonsterCloud CEO Zohar Pinhasi allegedly paid ransomware groups 8 million dollars while charging customers 19 million dollars. In July, negotiator Angelo Martino was sentenced to 70 months for conspiring with BlackCat/ALPHV."
    ]
   },
   {
@@ -180,24 +201,28 @@
    "url": "https://seangoedecke.com/why-output-caching-doesnt-work/",
    "published": "2026-11-21T00:00:00+00:00",
    "basis": "full",
-   "brief_zh": "作者认为缓存模型输出行不通，因为重复输出只占可见输出的一小部分，而可见输出又只占总输出 token 的一小部分，真正决定成本的是模型本身更聪明、用更少的推理和工具调用得出答案。",
-   "brief_en": "The author argues that caching model outputs would not save much. Visible output is only a small share of total output tokens, so the real cost driver is how few reasoning and tool-call tokens a smarter model needs.",
-   "detail_zh": [
-    "LLM 推理的成本很大程度上依赖于对输入做缓存（即 KV cache），这样每次发消息时就不用把整段对话重新计算一遍。那么能不能也缓存模型的输出？作者的结论是不能。",
-    "先说为什么看起来可以。LLM 的输出里也有大量重复工作。比如作者让智能体读文件、总结结果，有时模型会把文件里的代码行原样再输出一遍，或者反复重复同样的内容。这些重复的输出 token 是浪费，而且输出 token 比输入 token 贵得多。如果要解决，可以训练或提示模型，让它引用“src/script.py:12-15”这样的位置，而不是复述原文。也可以让模型引用自己对话历史中的片段，由框架在显示时展开，对用户来说是透明的。",
-    "作者认为这些做法都不好，因为它们只优化了用户能看到的输出。他认为模型在内部推理链里不太会重复自己，而且前沿模型的推理可能也不需要重复，因为信息已经在那里了。根据他自己的智能体记录，可见输出大约只占 6%。推理 token 占 50%，剩下 44% 是工具调用。即使把可见输出的重复部分省掉三分之二（作者说这是非常乐观的估计），总输出 token 也只能节省约 4%，这就是阿姆达尔定律的限制。",
-    "作者认为，真正要节省输出 token，就得减少那 94% 不可见的部分，而这主要取决于模型的智能程度。模型越聪明，得到正确答案需要的推理 token 和工具调用就越少。所以更贵的模型反而可能更便宜：单价可能贵 5 倍，但如果得出答案所需的 token 只有 1/6，总成本反而更低。文末作者还补充说，输出 token 必须一个一个生成，而输入 token 可以并行处理，这也是输出更贵的原因之一。"
-   ],
-   "detail_en": [
-    "LLM inference costs depend heavily on caching model inputs, so the whole conversation does not have to be recomputed on every message. The author asks whether outputs should be cached the same way. His answer is no.",
-    "He first explains why it looks promising. Models often repeat content in their output. For example, when an agent reads files and summarizes them, it may copy lines of code back out. Repeated output tokens are wasteful, and output tokens cost much more than input tokens. One fix would be to train or prompt a model to write a reference such as “src/script.py:12-15” instead of copying the lines. Another would be to have the model refer to earlier parts of the conversation, with the harness expanding those references for the user.",
-    "The author thinks these fixes only target visible output. He doubts that models repeat much in their internal reasoning. From his own agent logs, visible output is about 6% of the total. Reasoning tokens are 50%, and tool calls are 44%. Even if two-thirds of the visible output were saved, which he calls very optimistic, total output would drop by only about 4%. He points to Amdahl's law as the limit.",
-    "To save output tokens, he argues, you have to reduce the 94% that is not visible, and that depends mostly on how intelligent the model is. Smarter models need fewer reasoning tokens and tool calls to reach the right answer. So a more expensive model can be cheaper overall. For example, a model might cost 5 times more per token but need 6 times fewer tokens. He also notes that output tokens must be generated one at a time, while input tokens can be processed in parallel, which is one reason output is more expensive."
-   ],
+   "brief_zh": "输出缓存大概率不值得做，因为用户能看到的输出只占全部输出token的约6%，即使缓存省下这部分，总体也省不了多少。",
+   "brief_en": "Output caching is probably a bad idea, because only about 6 percent of output tokens are visible to the user. Caching that part would save little overall.",
    "topics": [
     "LLM inference",
-    "cost",
-    "agents"
+    "output caching",
+    "token cost"
+   ],
+   "background_zh": "LLM推理的成本很大程度依赖输入缓存，这样每条新消息就不用重算整段对话。作者由此问：输出能不能也缓存？他注意到，agent常会重复输出代码和文档内容，这看起来像是浪费。",
+   "conclusion_zh": "作者认为输出缓存大概率是个坏主意。省输出token的关键在于让模型用更少的推理和工具调用得到答案，也就是让模型更聪明。",
+   "background_en": "LLM inference costs depend largely on caching model inputs, so each new message does not recompute the whole conversation. The author asks whether outputs could be cached too, since agents often repeat code and document text.",
+   "conclusion_en": "The author thinks output caching is probably a bad idea. Saving output tokens depends mainly on smarter models that reach answers with fewer reasoning tokens and tool calls.",
+   "points_zh": [
+    "输出重复确实存在，也看起来是浪费。作者让agent写PR时常要它复述代码片段，调查时要它引用证据文档，做AI研究时也要它复述样例输出。输出token比输入贵得多，因为输入可以并行处理，输出却要一个一个生成。",
+    "想避免输出重复，就得让模型引用而不是复述，比如写“src/script.py:12-15”，再由harness展开引用。这需要微调或提示模型，但它只能优化用户看到的那部分输出。",
+    "可见输出只占很小一部分。作者自己的agent记录显示，50%是推理token，44%是工具调用，只有约6%是可见输出。即使省掉可见输出的三分之二，总输出也只省约4%，这是Amdahl定律的限制。",
+    "要真正省输出token，得减少那94%不可见的部分，这主要取决于模型是否聪明。更聪明的模型需要更少的推理和工具调用。作者举例说，某模型单价贵5倍，但token少6倍，总成本反而更低。"
+   ],
+   "points_en": [
+    "Output repetition does happen and looks wasteful. The author often asks agents to repeat code snippets, quote evidence documents, or repeat sample outputs. Output tokens cost much more than input tokens, because inputs can be processed in parallel but outputs must be generated one at a time.",
+    "To avoid repeated output, the model would have to reference content instead of repeating it, such as writing a file path and line range that the harness expands. This would need fine-tuning or prompting, and it would only optimize the visible part of the output.",
+    "Visible output is a small share. In the author's agent logs, 50 percent of output tokens are reasoning tokens, 44 percent are tool calls, and about 6 percent are visible. Even saving two-thirds of visible output would cut total output by only about 4 percent, which is Amdahl's law.",
+    "Real savings require cutting the 94 percent of hidden output, and that depends mostly on model intelligence. Smarter models need fewer reasoning tokens and tool calls. The author gives an example of a model that costs 5 times more per token but uses 6 times fewer tokens, so its total cost is lower."
    ]
   },
   {
@@ -209,14 +234,22 @@
    "url": "https://daringfireball.net/thetalkshow/2026/11/20/ep-457",
    "published": "2026-11-20T23:28:51+00:00",
    "basis": "short",
-   "brief_zh": "这是 Daring Fireball 播客 The Talk Show 的一期节目介绍，列出了本期讨论的话题、赞助商，以及推荐的两部电影。",
-   "brief_en": "This is the show note for an episode of The Talk Show. It lists the topics, sponsors and two film recommendations.",
-   "detail_zh": [],
-   "detail_en": [],
+   "brief_zh": "这期《The Talk Show》聊了Nvidia的Jensen Huang-gate、HomeView、新款iPad Mini等近期科技话题，并推荐了两部电影。",
+   "brief_en": "This episode of The Talk Show covers recent tech news, including Nvidia's Jensen Huang-gate, HomeView, and the new iPad Mini, and recommends two movies.",
    "topics": [
-    "podcast",
     "Apple",
-    "Nvidia"
+    "Nvidia",
+    "podcast"
+   ],
+   "background_zh": "",
+   "conclusion_zh": "",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "节目涉及Nvidia的Jensen Huang-gate事件、HomeView、新款iPad Mini、iPhone Duo，以及Robert Pattinson接演James Bond的话题。节目还推荐了《Sicario》（2015，Denis Villeneuve执导，讲墨西哥毒品集团）和《Primetime》（Lance Oppenheim的新片，Pattinson饰演主持人Chris Hansen）。"
+   ],
+   "points_en": [
+    "The episode covers Nvidia's Jensen Huang-gate, HomeView, the new iPad Mini, the iPhone Duo, and Robert Pattinson taking the role of James Bond. It recommends Sicario (2015), directed by Denis Villeneuve about Mexican drug cartels, and Primetime, a new film by Lance Oppenheim in which Pattinson plays TV host Chris Hansen."
    ]
   },
   {
@@ -228,26 +261,30 @@
    "url": "https://dfarq.homeip.net/why-johnny-cant-patch-2/?utm_source=rss&utm_medium=rss&utm_campaign=why-johnny-cant-patch-2",
    "published": "2026-11-20T22:07:28+00:00",
    "basis": "full",
-   "brief_zh": "一位有二十多年经验的安全工程师解释了大公司为什么难以及时修补漏洞。他认为问题主要出在人手不足、工具落后、衡量指标错误，以及有人担心补丁会出问题而不愿更新，而不只是员工不积极。",
-   "brief_en": "A security engineer with about 25 years of experience explains why large companies struggle to apply patches. He points to understaffing, weak deployment tools, poor metrics, and fear that patches will break things. He does not blame lack of effort alone.",
-   "detail_zh": [
-    "作者 Dave 说自己做了近二十五年的漏洞发现和修复工作。其中有四年专门为美国空军修补漏洞，这套系统支撑过两场战争，他在这四年里处理了约九十万个漏洞，成功率百分之百，只错过一次截止日期，平均修复时间约二十一天。2026 年 10 月和 11 月，PHP、Nginx、Ruby、Java 等软件接连出现受到广泛关注的漏洞，行业压力很大。作者强调这篇文章是以个人身份写的，与任何雇主无关。",
-    "文章先解释了基本概念。漏洞是软件里的缺陷，厂商发现后会发布补丁。作者介绍了几个发布规律：微软和 Adobe 每月第二个星期二发布更新；Oracle 在 2026 年开始每月更新，但是放在第三个星期二，而且需要订阅，月度更新也不是累积的，漏掉十月的更新就要把十月和十一月的都装上；PHP 每四周在星期四发布一次。作者还提到，二十五年前一个补丁通常只修一个 bug，现在一个补丁可能修几百个。",
-    "作者认为漏洞变多的原因有几个。大约从 2016 年起，各大公司推出漏洞赏金，很多爱好者靠找漏洞赚的钱超过了本职工作，于是全职去找漏洞，每年的 CVE 数量都创新高。2026 年到目前为止的数量已经超过去年的两倍，而且 AI 发现漏洞更快、也更严重，有时还参与写修复代码。作者还谈到从 Heartbleed 开始流行的“设计型漏洞”，即给漏洞取名字、做标志、搞营销。他说这一潮流在 AI 发现的漏洞太多之后正在退热。",
-    "作者谈了人手和工具的问题。1990 年代 IT 行业很缺人，什么背景的人都能进。2000 年后公司裁员、外包、离岸，现在很多公司的 IT 人员比二十五年前还少，但电脑数量却多得多。作者说，他在空军那边一个人负责的电脑量，只是那家财富 20 强公司同事的二十分之一，而且他的工具也更好。漏洞扫描器近十年进步很大，但补丁部署工具从 2009 年以后几乎没有进步，有的甚至变差了。有些公司为了省钱换便宜的工具，原本解决了的问题又变回来。作者认为这是人员减少、更新量增加、修复工具跟不上扫描工具三个问题叠在一起。他现在帮客户设计自动化方案，但说服客户接受并不容易。",
-    "在衡量标准上，作者说很多安全团队只统计未修复漏洞的总数，每月报告一个很吓人的数字，这个数字永远降不到零，于是团队产生习得性无助。他建议改看两件事：关键漏洞能否在一周内修好，以及未修复漏洞的平均存在时间和修复耗时，并与公司的安全政策对齐。作者还指出，有时不是修不了，而是有人不愿意修。补丁有时会破坏其他功能，即使公司有政策，私下也可能有人压着不让更新。作者在空军时有一套测试环境，所以能做到百分之百及时更新。他还提到，2026 年 11 月微软的一次大规模故障追溯到七月的一个安全更新，而其中至少一次中断是仓促维护、没有按正常流程做造成的。作者最后说，11 月和 12 月本来就是漏洞集中披露的时候，研究人员会在假期前的业务冻结期之前抢先公开，但发现漏洞的人有钱赚，修复的人却没有，激励机制放错了地方。他认为根本问题是钱。2026 年数据泄露的平均成本是 499 万美元，但只要泄露不是每年都发生，公司就倾向于在人手和工具上省钱。他承认这个问题没有简单答案。"
-   ],
-   "detail_en": [
-    "The author, Dave, has spent about 25 years finding and fixing vulnerabilities. For four years he patched systems for the US Air Force, which supported two wars. In that time he resolved about 900,000 vulnerabilities with a 100% success rate, missed one deadline by less than a day, and had a mean time to remediate of about 21 days. In October and November 2026, serious flaws were disclosed in PHP, Nginx, Ruby, and Java, which put heavy pressure on the industry. He says he writes this as an individual, not for any employer.",
-    "He explains the basics first. A vulnerability is a flaw in software, and vendors release patches to fix them. He describes release schedules. Microsoft and Adobe release updates on the second Tuesday of each month. Oracle began monthly updates in 2026, but releases them on the third Tuesday, requires a subscription, and does not make them cumulative, so a missed October update means installing October and November. PHP releases every four weeks on Thursdays. He notes that 25 years ago one patch usually fixed one bug, while now one patch can fix hundreds.",
-    "The author lists reasons for the growing number of vulnerabilities. Since about 2016, bug bounty programs have let hobbyists earn more than their day jobs, so many went full time and CVE counts hit records each year. In 2026 the count is already more than double last year's, and AI is finding more serious flaws faster and sometimes helping write fixes. He also discusses \"designer vulnerabilities\", which started with Heartbleed and came with names, logos, and marketing. He says this trend is fading now that AI finds so many bugs that none stand out.",
-    "He describes staffing and tooling. IT hiring was strong in the 1990s, but after Y2K and the dotcom bust companies cut, outsourced, and offshored, and many now have fewer IT staff than 25 years ago while managing far more computers. At the Air Force he handled about one twentieth as many machines as a Fortune 20 counterpart, and he had better tools. Vulnerability scanners have improved a lot in the last decade, but patch deployment tools have barely changed since 2009, and some have gotten worse. Some companies switch to cheaper tools and recreate problems they had already solved. He calls this a trifecta of more updates, shrinking staff, and tools that lag behind scanning. He now helps clients automate patching, but convincing them to accept it is hard.",
-    "On metrics, he says many teams count their total open vulnerabilities each month. That number never reaches zero, which leads to learned helplessness. He recommends tracking whether critical vulnerabilities are fixed within a week, the average age of open vulnerabilities, and how long fixes take, and checking these against security policy. He also says sometimes organizations will not patch. Patches can break things, and even when there is a policy, someone may quietly block updates. He had a test environment at the Air Force that let him apply every update, and he says he has not seen one as good in the private sector. He notes that a major Microsoft outage in November 2026 was traced to a July security update, and that at least one November outage was caused partly by rushed maintenance that skipped normal procedure. He concludes that November and December are heavy months for disclosures, since researchers release before change freezes. Finding vulnerabilities pays, but fixing them does not, so incentives point the wrong way. He thinks the root problem is money. The average data breach cost $4.99 million in 2026, but companies that do not get breached every year tend to cut staffing and tooling. He admits there is no easy answer."
-   ],
+   "brief_zh": "企业打补丁慢，主要原因是人手不足、打补丁的工具落后、考核指标用错，以及大家怕补丁把系统弄坏，而不是员工不肯干。作者认为，根子在钱。",
+   "brief_en": "Companies patch slowly mainly because of understaffing, weak tools, wrong metrics, and fear that patches will break things, not because staff don't care. The author says the root cause is money.",
    "topics": [
-    "cybersecurity",
     "patch management",
-    "vulnerability management"
+    "vulnerability management",
+    "IT staffing"
+   ],
+   "background_zh": "作者David Farquhar做了近25年的计算机安全工作，其中4年专职为美国空军系统打补丁。2026年10月底到11月，PHP、Nginx、Ruby、Java等接连曝出严重漏洞，他想解释为什么大公司总是打不好补丁。",
+   "conclusion_zh": "作者说自己没有简单的答案，因为这件事涉及多个学科、多家公司，需要大量协作。他的判断是，问题的根子在钱。如果公司不是每年都出大事，就会有动机在人手和工具上省钱，把省下的钱留着，然后寄希望于运气。他提到，2026年数据泄露的平均成本是499万美元，他认为这个数字要大到足以吓住企业，情况才会有改变。",
+   "background_en": "David Farquhar has worked in computer security for almost 25 years, including four years patching vulnerabilities for the US Air Force. He wrote this after serious flaws in PHP, Nginx, Ruby and Java came out in October and November 2026, to explain why big companies keep failing to patch.",
+   "conclusion_en": "The author says he has no easy answer, since the problem spans disciplines and companies. He thinks the root cause is money. If breaches do not happen often, companies have an incentive to cut staffing and tooling costs and hope for the best. The average breach cost in 2026 is $4.99 million, and he expects nothing to change until that number scares companies.",
+   "points_zh": [
+    "人手不足是打补丁慢的根本原因。过去25年，企业IT人员反而比当年少，电脑却多得多，很多公司裁员、外包、离岸外包之后，剩下的人还得把事情做好。作者提到，他接触的一家Fortune 20公司，一个人要管的电脑是他的20倍，工具还比他的差。作者自己在美国空军的4年里，修复了约90万个漏洞，成功率100%，平均修复时间约21天，只错过一次期限，而且迟了不到24小时。",
+    "打补丁的工具多年没有进步，有的还退步了。漏洞扫描工具近十年改进明显，但用来在大公司里批量部署补丁的工具，自2009年以来基本没有提升。作者说，有公司为了省几千美元换掉好用的工具，原本解决了的问题又回来了，他2009年离开打补丁的工作，也和这件事有关。",
+    "常用的考核指标是错的，团队很难看出自己在进步。多数公司每个月汇报的是未修复漏洞的总数，这个数字几乎永远降不到零，团队容易陷入习得性无助，哪怕已经做得不错也察觉不到。作者的做法是让团队看两个数：未修复漏洞的平均存在时长，以及已修复漏洞的平均修复耗时，并和安全政策对照。他说，大多数安全团队其实想要的是严重漏洞一周内修复，但很多人一开始并没有把它当成目标。按这套指标做的团队明显更成功。",
+    "很多时候不是打不了补丁，而是有人不愿意打，怕补丁把别的东西弄坏。补丁偶尔确实会破坏其他功能，虽然比大家以为的少见，但人们记得很清楚，于是一些公司政策上要求打补丁，私下却有人压着不执行。作者提到，2026年11月微软一次大范围故障，追溯到了7月的一个安全更新。他自己能做到每个更新都打、每次都打，是因为有测试环境，他说那套环境比他后来在私营企业见过的都好。另外，很多企业系统设计时没考虑定期维护，11月的几次故障中，至少有一次部分原因是仓促维护、没有走正常流程。",
+    "漏洞数量增长很快，挖洞的利益分配又让局面更糟。2026年还没结束，漏洞数量已经超过去年的两倍多。作者认为AI发现漏洞更快、问题也更严重，有时还参与写修复。赏金制度让个人挖洞者能靠找漏洞赚钱，负责修复的运维人员却没有同样的回报。研究者还常把漏洞集中在11月披露，因为零售商在年底前忙，很多公司会冻结变更，之后披露的漏洞容易被拖延。"
+   ],
+   "points_en": [
+    "Understaffing is the root cause of slow patching. Companies have fewer IT staff than 25 years ago but far more computers. At one Fortune 20 company, one person managed 20 times as many machines as the author, with worse tools. In four years at the US Air Force, the author resolved about 900,000 vulnerabilities with a 100% success rate and a mean time to remediate of about 21 days. He missed one deadline, by less than 24 hours.",
+    "Patching tools have barely improved since 2009, and some have gotten worse. Vulnerability scanners have improved a lot in the last decade, but tools for deploying patches at scale have not. Some companies switch to cheaper tools to save a few thousand dollars, and old problems come back. This is one reason the author left patching work in 2009.",
+    "Companies often measure the wrong thing, so teams cannot see their progress. Most report the total count of open vulnerabilities each month. That number almost never reaches zero, which leads to learned helplessness. The author suggests tracking the average age of open vulnerabilities and the average time to fix closed ones, checked against security policy. Most security teams want critical vulnerabilities fixed within a week. Teams that track these numbers do much better.",
+    "Some teams do not patch because they fear breakage. Patches sometimes break other things. That happens less often than people think, but people remember it, so some companies have a patch policy while someone quietly blocks updates. The author cites a November 2026 Microsoft outage traced to a July security update. He could apply every update every time because his Air Force system had a test facility, which he says was better than any he has seen in the private sector. Many corporate systems are not designed for maintenance, and at least one November outage was partly caused by rushed maintenance.",
+    "The number of vulnerabilities is growing fast, and the incentives make it worse. With 2026 not over, the count has more than doubled last year's total. The author says AI finds vulnerabilities faster and finds more serious ones, and sometimes helps write fixes. Bug bounties let individuals earn money by finding bugs, but the people who fix them get no such reward. Researchers often push disclosures into November, before companies freeze changes for their busy season."
    ]
   },
   {
@@ -259,30 +296,27 @@
    "url": "https://simonwillison.net/2026/Nov/20/ravi-vakil/",
    "published": "2026-11-20T19:21:49+00:00",
    "basis": "short",
-   "brief_zh": "Simon Willison 转引了 Ravi Vakil 的一则公告，内容是 Alessandro Masullo 提出了广义黎曼猜想的证明草稿。公告说这份证明完全由人类完成，正经过专家审阅，所以决定先公开当前草稿。",
-   "brief_en": "Simon Willison quotes an announcement by Ravi Vakil about a proposed proof of the Generalized Riemann Hypothesis by Alessandro Masullo. The announcement says the work is entirely human and is being reviewed, so the current draft will be published.",
-   "detail_zh": [
-    "这篇文章是 Simon Willison 博客上的一条引用，内容只有 Ravi Vakil 的一段公告。公告称，Alessandro Masullo 提出了广义黎曼猜想（Generalized Riemann Hypothesis）的证明。Brian Conrad 几个月来一直在仔细审看，并给出了大量意见，作者正在据此修改。公告特别说明，这份证明完全是人类完成的，没有使用 AI。原本的计划是请 Masullo 到斯坦福待一年，打磨文稿，在足够多的人审阅后再正式公布。现在看来，最好先公开目前的草稿。文章没有说明转引这段公告的原因。"
-   ],
-   "detail_en": [
-    "This post is a short quote from Ravi Vakil's announcement, shared on Simon Willison's blog. The announcement says Alessandro Masullo has a proposed proof of the Generalized Riemann Hypothesis. Brian Conrad has examined it closely for months and gave extensive feedback, which is being incorporated. The announcement states that the work is all human, with no AI involved. The original plan was to bring Masullo to Stanford for a year to polish the writing, then announce it after enough people had reviewed it. Now it seems best to publish the current draft. The post does not say why the quote was shared beyond the quote itself."
-   ],
+   "brief_zh": "Ravi Vakil公布了Alessandro Masullo对广义黎曼猜想（Generalized Riemann Hypothesis，GRH）的证明草稿。目前看起来不错，全部由人完成，没有使用AI，因此决定先把现有草稿发布出来。",
+   "brief_en": "Ravi Vakil announces a draft proof of the Generalized Riemann Hypothesis (GRH) by Alessandro Masullo. It looks good so far and is all human work with no AI, so the current draft is being released now.",
    "topics": [
     "mathematics",
-    "number theory"
+    "Riemann hypothesis"
+   ],
+   "background_zh": "",
+   "conclusion_zh": "",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "这份证明草稿目前看起来不错，Brian Conrad已经审读了好几个月，并给出大量反馈，作者正在把这些意见吸收进去。原本的计划是请Alessandro到斯坦福待一年，打磨文字后再公布，并先请足够多的人过目。现在看来，最好先把当前草稿发出来。"
+   ],
+   "points_en": [
+    "Brian Conrad has studied the draft for months and given extensive feedback, which is being incorporated. The original plan was to bring Alessandro to Stanford for a year to polish the writing, then announce after enough people had reviewed it. Now the current draft seems best to put out."
    ]
   }
  ],
  "picks": {
-  "important": [
-   "6a73fdd651f9",
-   "e412cf50370b",
-   "63bee15d7194"
-  ],
-  "liked": [
-   "f283fc8e5773",
-   "f07caabffe70"
-  ]
+  "important": [],
+  "liked": []
  },
  "generated_at": "2026-11-21T13:39:46.401689+00:00"
 }

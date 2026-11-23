@@ -10,28 +10,34 @@
    "url": "https://www.troyhunt.com/heres-why-data-breach-disclosure-is-so-hard-lessons-from-hundreds-of-emails-with-hacked-companies/",
    "published": "2026-11-23T07:58:47+00:00",
    "basis": "full",
-   "brief_zh": "Troy Hunt 让 AI 读了他八年多的邮箱，整理他向 73 家被泄露数据的机构发出的通知邮件及后续往来，指出企业在得知数据泄露后，常见的拖延、淡化事件和交给律师处理等做法，并举出少数处理得好的例子。",
-   "brief_en": "Troy Hunt gave an AI access to eight and a half years of his mailbox to analyse his breach notification emails to 73 organisations. It finds that companies often stall, downplay incidents and hand the matter to lawyers, with a few good examples of quick, open responses.",
-   "detail_zh": [
-    "这篇文章的作者是 Troy Hunt，他经营 Have I Been Pwned（HIBP）网站。他让 Claude 阅读了他 2018 年 3 月到 2026 年 11 月的邮箱，里面有他发给 73 家机构的标准通知邮件，以及几段从网站联系表单开始的对话。文中隐去了公司名称，也对一些细节做了修改。Troy 说，他通常不让 AI 替他写东西，但这篇分析他觉得写得很准确。",
-    "第一封邮件通常很客气，请对方的“信息安全负责人”与他联系。问题是很多公司没有明确的安全事件报告渠道，邮件常被转到客服、退货或info信箱，有的甚至被放进客服工单系统，结果收到的是满意度调查。有的公司隔了将近一个月才回复。一家大型硬件厂商的转交链路有六个环节，从退货信箱、地区社交账号、地区营销人员、总部，一路转到产品安全部门，最后才到法务。遇到邮件石沉大海，Troy 会改用 LinkedIn、Facebook 和 X 联系对方。",
-    "真正回复之后，第一句话常常是“没有发现入侵证据”，而且往往是在还没看到数据之前就说的。有一家公司在收到数据后几周内就确认，是一台暴露在外的数据库服务器泄露了用户信息。另一种做法是淡化事件，说攻击者只是篡改了首页，或者数据来自之前已披露的事件。但 Troy 发现数据中最新的时间戳和篡改当天一致，而且数据涵盖了核心用户系统的 16 张表，包括身份验证和税务文件。还有一种做法是要求提供“样本”或指定格式，这本身合理，但常在几周沉默之后才提出，等于把证明泄露的责任推给了报告的人。有一次，对方的外部顾问甚至请 Troy 帮忙判断数据里的身份信息是真是假。",
-    "一旦对方承认数据可能是真的，接下来的说法几乎都是“我们正在调查”。调查本身必要，但它没有结束时间，也成了暂不公开的理由。有一家公司在数天内就确认拿到了数据，其中包括自己员工的资料，但一周后仍只说在调查，并称“如果确定需要通知，会告知你”。这时数据已经在收集泄露数据的人之间流传，公司外部却没有任何人知道。拖延也一直在累积：有一份公开声明标题提到的事件，实际发生在大约十个月前；另一起事件在大型黑客论坛上流传四个月，公司本身仍未发声。Troy 的看法是，披露不必完整，可以先说目前已知的，之后再更新。",
-    "对话语气的转折点，通常是回复者从安全团队换成外部律师、法律顾问或总法律顾问的时候。问题于是从“我们的客户怎么了”变成“法律上我们是否必须通知”。有一个案例中，一个内部客服门户被搜索引擎索引了一年多，公司法务认为按美国各州规定，姓名、住址、电话和邮箱都不触发通知义务，并称“没有证据显示信息被访问过”，但对方正是从第三方那里拿到这些信息的。Troy 指出，法律门槛只是最低标准，而这些资料恰恰是钓鱼诈骗所需要的。还有律所要求先通话再发布，之后又表示，公开通知会“引导恶意人士去找这个文件”，并坚持双方都认为数据“风险很低”，不应在 HIBP 网站上发布。Troy 提议把条目标记为敏感、不能被搜索，对方拒绝，最后写道：“我们再次主张，你们的行为可能造成伤害。”一家较小的公司则直接表示，决定不做任何沟通或公开披露。文章的核心判断是，这些理由听起来都合理，合在一起却意味着受影响最深的人最后才知道。",
-    "文章也提到几个处理得好的例子。一家小型交通应用几小时内就回复，并且已经发布了披露声明。Troy 指出声明中有一处不够准确，对方很快更新，还感谢他帮忙更正。一家小型订票平台起初怀疑数据来源，看到更多资料后承认自己判断错误，当天就安排视频通话，约一周内直接通知了所有受影响的客户。一家欧洲旅游应用加固了系统、更换了密钥并发布了披露，Troy 因此暂缓加载数据，以便在文章中链接对方的声明。作者的结论是，主要障碍不在技术或法律，而在激励：企业不公开就少了负面新闻，而数据主体每多一天都在不知情的情况下暴露。好的例子有几个共同点：有安全决策权的人快速回应，把数据视为帮助而非威胁，先告诉客户已知的内容，之后再补充细节，而且都不需要律师来主导沟通。"
-   ],
-   "detail_en": [
-    "The author is Troy Hunt, who runs Have I Been Pwned (HIBP). He let Claude read his mailbox from March 2018 to November 2026. It contained the standard notification email he sent to 73 organisations, plus several threads that began through website contact forms. Company names are left out, and some details were changed. Troy says he does not usually let AI write for him, but he thinks this analysis is accurate.",
-    "The first email is polite and asks for someone responsible for information security. Many organisations have no clear way to report an incident, so emails end up in support queues, returns inboxes or general info addresses. Some are logged as ordinary support tickets and trigger satisfaction surveys. One reply came nearly a month later. At a large hardware maker, the message passed through six hops, from a returns inbox to a regional social media account, marketing staff, head office, product security and finally legal. When email failed, Troy also tried LinkedIn, Facebook and X.",
-    "Once someone replies, the first message is often that no evidence of a breach was found, sometimes before anyone had seen the data. In one case, the data later showed that an exposed database server had leaked user details. Another common reply is to shrink the incident, for example by saying only a homepage was defaced or that the data came from an older disclosed incident. Troy found that the newest timestamp in the data matched the day of the defacement, and that the data covered 16 core user tables, including identity verification and tax documents. Some companies ask for a sample or a specific file format. That is reasonable in principle, but it often comes after weeks of silence and shifts the burden of proof onto the reporter. In one case, an outside IT consultant asked Troy to help check whether the identifiers were real.",
-    "When the company accepts the data is probably real, the next message is usually that it is investigating. The investigation has no end date and becomes a reason to say nothing publicly. In one case, a company confirmed within days that it had the data, including its own staff records. A week later it was still investigating and said it would notify people if needed. By then the data was already circulating among people who collect breaches, but no one outside the company had been told. Delays also pile up. One public disclosure concerned an incident that happened about ten months earlier. Another breach had been on a large hacking forum for four months while the company had said nothing. Troy's view is that a disclosure does not need to be complete. An organisation can say what it knows and update the details later.",
-    "The tone changes when the reply comes from outside counsel or a general counsel rather than the security team. The question shifts from what happened to customers to whether the company is legally required to notify anyone. In one case, an internal customer portal had been indexed by a search engine for over a year. The company's US counsel concluded that names, addresses, phone numbers and emails did not trigger notification in any US state. The reply also said there was no evidence the data had been accessed, even though the requester had obtained it from a third party. Troy points out that legal thresholds are only a minimum, and that these details are exactly what phishers need. In another case, a law firm asked for a call before publication and then argued that public notice would direct bad actors to the file. Both sides agreed the data was very low risk, and the firm asked that nothing be posted on the HIBP site. Troy offered to mark the entry as sensitive and unsearchable. The firm refused and wrote that his actions could cause harm. A smaller company said it had decided not to communicate or disclose publicly at all. The author's conclusion is that these arguments sound reasonable one at a time, but together they mean the people most affected are the last to hear.",
-    "Some threads went well. A small transport app replied within hours, had already published a disclosure statement, and updated it promptly when Troy noticed an inaccuracy. A small booking platform first doubted the data, then admitted it was wrong, held a video call the same day, and within about a week emailed every affected customer. A European travel app hardened its systems, rotated its keys and published a disclosure, so Troy waited to load the data and link to its statement. The author's view is that the main obstacle is incentives rather than technology or law. Staying quiet avoids bad headlines for the company, while every day of silence leaves the affected people exposed. The good examples share traits: someone with security authority replied quickly, treated the data as help, told customers what was known and updated later, and did not need lawyers to run the conversation."
-   ],
+   "brief_zh": "作者从73家机构的通知往来中发现，让机构承认泄露往往比拿到数据还难，拖延、搪塞和律师介入之后，真正受影响的人反而最后才知道。",
+   "brief_en": "Getting an organisation to admit a breach is often harder than getting the data itself. Across 73 notification threads, delays, legal caution and message control left the affected people the last to learn of it.",
    "topics": [
-    "data breach disclosure",
-    "Have I Been Pwned",
-    "incident response"
+    "data breaches",
+    "incident disclosure",
+    "security"
+   ],
+   "background_zh": "Troy Hunt 运营 Have I Been Pwned（HIBP）。他让 AI（Claude）阅读自己八年半的邮箱，梳理他向被泄露机构发出的通知及后续往来。文章由 AI 写成，部分机构细节经过了改动。",
+   "conclusion_zh": "作者认为，披露的主要障碍是激励，而不是技术或法律。机构每拖一天，就少一天坏消息；而受影响的人每多等一天，就多一天在不知情中暴露。他给机构的建议是：公开安全联系方式（例如 security.txt），并确保有人会看；不要把泄露报告放进客服工单；收到证据先看再说没有；尽早披露已知信息并持续更新；把法律门槛当作底线，而不是目标。文章最后写道，等通知到达时，数据早已外流，唯一的问题是数据所属的人能否知道。",
+   "background_en": "Troy Hunt runs Have I Been Pwned (HIBP). He gave Claude access to his mailbox to review eight and a half years of breach notifications and the replies that followed. The post was written by the AI, and some company details were changed to hide identities.",
+   "conclusion_en": "The author says the main obstacle is incentives, not technology or law. Organisations gain from silence, while affected people stay exposed each day they wait. He advises publishing a security contact such as security.txt and making sure someone reads it, not routing reports through support tickets, checking evidence before saying none exists, disclosing what is known early and updating it, and treating legal thresholds as the minimum. The data was already out before anyone was notified, so the only open question was whether the people affected would find out.",
+   "points_zh": [
+    "很多机构没有明确的安全事件报告渠道，通知常被送进客服邮箱、退货部门或社交账号。有一家大型硬件厂商，消息从退货邮箱一路转了六道，才到能回答问题的人。还有通知被当成普通客服工单处理，对方甚至连续发来满意度调查。",
+    "机构的第一反应常是“没有发现证据”，这往往发生在它还没看过数据之前。有一家公司起初说没有未授权访问，后来确认是暴露的数据库服务器泄露了用户信息。另一家公司一开始只承认页面被篡改，作者指出数据里最新的时间戳正好是篡改当天，而数据最终涵盖了 16 张核心用户表。",
+    "机构一旦承认数据可能是真的，就常说“还在调查”，而调查没有截止日期。有一家公司确认拿到了数据，其中包括自己员工的记录，并且数据已经在收集泄露数据的人之间流传，但它仍然只说如果确定需要通知才会告知。在一个医疗相关平台的案例中，数据在黑客论坛上挂了四个月，公司本身仍没有表态。",
+    "话题一转到律师身上，问题就从“客户出了什么事”变成“法律上我们要不要通知”。有一家公司的内部客服门户被搜索引擎收录了一年多。它的美国法律顾问认为，姓名、地址、电话和邮箱不触发任何州的通知义务，回复还称“没有证据显示信息被访问过”。作者认为，法律门槛只是底线，而这些信息恰恰是钓鱼诈骗所需要的。",
+    "当泄露无法隐瞒时，机构转而管控对外说法。律师要求在发布前先通话，还有公司希望修改 HIBP 上已经公开的条目。一家律所甚至写道，公开通知可能造成伤害，而此时数据已经在一个有数十万成员的论坛上流传。",
+    "代价由数据里的人承担。HIBP 通常是在数据已被他人获得后才收到的，而 HIBP 只能通知自己的订阅者。在那个医疗相关案例中，约 1300 名订阅者位于一个近 50 万个唯一邮箱的数据集中，其余受影响的用户只能等公司自己告知。",
+    "也有处理得好的例子，共同点是有权限的安全负责人快速回应，把数据当作帮助，并先告诉客户已知信息，之后再更新。一家小型交通应用几小时内就回复，并修正了披露声明中不准确的地方。一家小型预订平台起初怀疑数据来源，后来承认判断错误，并在约一周内直接通知了所有受影响的客户。"
+   ],
+   "points_en": [
+    "Many organisations have no clear way to report a security incident. Notices often go to support inboxes, returns desks or social media, and some land in ticket queues. One hardware maker's notice passed through six hops before reaching someone who could answer.",
+    "The first reply is often that no evidence has been found, even before anyone has looked at the data. One company said there was no unauthorised access, then confirmed an exposed database server had leaked user details. Another first said only a landing page was defaced, but the data covered 16 core user tables.",
+    "Once an organisation accepts the data is probably real, it often says it is still investigating, with no end date. One company confirmed it had the data, including its own staff records, and that it had spread among breach collectors, yet it would only notify if it decided notification was needed. In a healthcare-adjacent case, the data sat on a hacking forum for four months before the company said anything.",
+    "When lawyers take over, the question shifts from what happened to customers to whether the company must legally report it. One company's internal portal was indexed by a search engine for over a year. Its counsel found no state notification duty for names, addresses, phone numbers and emails, and said there was no evidence the data was accessed. The author argues legal thresholds are a minimum, and these are exactly the details phishing scammers need.",
+    "When a breach cannot be hidden, organisations try to control the message. Lawyers asked for a call before publication, and one company wanted its public entry reworded. A law firm argued that publishing the notice could cause harm, even though the data was already on a forum with hundreds of thousands of members.",
+    "The people in the data pay the cost of the delay. The data is usually already in criminal hands when HIBP hears of it, and HIBP can only email its own subscribers. In the healthcare-adjacent case, about 1,300 subscribers were in a dataset of nearly 500,000 unique email addresses, so other affected users depended on the company to tell them.",
+    "Some organisations handled it well. A small transport app replied within hours and corrected an inaccurate detail in its disclosure. A small booking platform first doubted the data, then admitted it was wrong and emailed every affected customer within about a week. The good cases had someone with authority respond quickly and tell customers what they knew, without lawyers running the conversation."
    ]
   },
   {
@@ -43,23 +49,25 @@
    "url": "https://blog.coredump.cx/p/tranquility",
    "published": "2026-11-23T03:39:30+00:00",
    "basis": "full",
-   "brief_zh": "这是一篇虚构的短剧本，讲白宫官员向总统坦白一项代号 Tranquility 的秘密计划：用基因筛查找出有暴力倾向的人，再通过长期帮扶让他们不去作案，并要求永远保密。",
-   "brief_en": "A fictional short script in which US officials tell the president about a secret program, Project Tranquility, that uses genetic screening to find people prone to violence and then quietly steers their lives so they never offend.",
-   "detail_zh": [
-    "故事发生在白宫椭圆形办公室。总统 Cullen 看农业部的预算，发现每年要花约四千亿美元，便追问钱花在哪里。副部长 Gutierrez 只能列出肉类检验、小麦价格补贴、林务局步道维护、步道标牌和收费站等项目，总统觉得这根本说不通。农业部长 Wallace 这才坦白，这笔钱其实用在一个叫 Tranquility 的计划上。",
-    "Wallace 说，1986 年暴力犯罪猖獗，里根公开谈的是加派警力和加重刑罚，私下却召集科学家寻找更好的办法。科学家找到一种基因变异，在普通人群中只有 0.1%，但在连环杀人犯和强奸犯的样本中占到 78%。计划搭上了医院里现有的新生儿足跟采血筛查，而且没有人知道。一旦查出有这种基因的人，就设法消除他们作案的机会。",
-    "总统问是不是直接除掉这些人，两位官员连忙否认。计划早期做过临床试验，发现最有效又最人道的办法，是长期监控当事人并排除环境诱因，让他们从不产生作案的冲动。具体做法包括从小给予温暖和肯定，帮他们在科学展上获奖，安排进好学校，帮忙批下创业贷款，确保生意有稳定客源，还要帮他们找到体贴的配偶。副部长说，计划的受益者包括不少高管、名人和政客，目标是打造更富足的社会，而不只是减少犯罪。",
-    "总统担心自己是否也在名单里，Wallace 说他早在计划开始前就已在任，所以不在其中。两人最后达成一致，这件事绝不能让公众知道。"
-   ],
-   "detail_en": [
-    "The script opens in the Oval Office. President Cullen questions the roughly 400 billion dollar yearly Agriculture budget and asks what it pays for. His deputy can only list things like meatpacking inspections, wheat price supports, trail signs and fee stations. Agriculture Secretary Wallace then reveals the real answer: Project Tranquility.",
-    "Wallace says that in 1986, while public talk focused on more police and tougher sentences, President Reagan secretly asked scientists for a better approach. They found a genetic mutation present in 0.1 percent of the general population but in 78 percent of samples from serial killers and rapists. The program was added to the existing newborn heel-prick screening, and nobody was told.",
-    "When the president asks whether they simply kill these people, both officials deny it. Early clinical trials showed that the most effective and humane method was to monitor each person and remove environmental triggers so they never feel the urge to offend. The program offers warmth, affirmations, a win at a science fair, a place in a good school, a business loan, steady customers and a loving spouse. The deputy says alumni include executives, celebrities and politicians, and the goal is a more prosperous society, not just less crime.",
-    "The president asks whether he is part of the program. Wallace says he is not, because he was in office before it began. The two agree that the public must never find out."
-   ],
+   "brief_zh": "这是一段虚构的白宫对话剧本：官员称，一个秘密项目用基因检测找出高风险人群，不伤害他们，而是悄悄为他们安排顺遂的生活，结尾总统说公众绝不能知道此事。",
+   "brief_en": "A fictional White House script in which officials reveal a secret program. It uses genetic screening to find people at high risk of violent crime, then quietly gives them good lives instead of punishing them. The President ends by saying the public must never find out.",
    "topics": [
-    "satire",
-    "short fiction"
+    "fiction",
+    "government secrecy"
+   ],
+   "background_zh": "这是博客上的一篇虚构短剧本。总统追问农业部的预算为何如此庞大，官员这才讲出一个叫 Tranquility 的秘密项目。",
+   "conclusion_zh": "原文没有明确结论。结尾是总统说公众绝不能知道此事，秘书表示同意。",
+   "background_en": "This is a short fictional script on the blog. The President asks why the Agriculture budget is so large, and officials explain a secret project called Tranquility.",
+   "conclusion_en": "The text has no explicit conclusion. It ends with the President saying the public must never find out, and Wallace agreeing.",
+   "points_zh": [
+    "这个项目始于 1986 年。科学家发现一种基因模式，在约 0.1% 的普通人群中存在，但在连环杀人犯和强奸犯的样本中占 78%。项目借助医院已有的新生儿足跟采血筛查推行，而且没有人知道。",
+    "被识别出的人不会被直接处理，而是被持续监测，并尽量清除容易引发犯罪的环境诱因。具体做法包括给予鼓励和肯定、帮忙争取好学校、安排银行贷款，以及安排一位体贴的伴侣。剧中还说，许多高管、名人和政客都是项目的“校友”。",
+    "项目的大部分成本被混在农业部的预算里，账面上只看到步道标识、收费站之类的开支。总统问自己是否也在项目之列，秘书回答说他早于这个项目。"
+   ],
+   "points_en": [
+    "The program began in 1986. Scientists found a genetic pattern present in about 0.1 percent of the population, but in 78 percent of samples from serial murderers and rapists. It was added to the newborn heel-prick screening already used in hospitals, and nobody was told.",
+    "Flagged people are not harmed. Officials say they are monitored and their environmental triggers are removed. The help includes encouragement, tipping the scales for a science fair win, a school place, a bank loan and a loving spouse. Officials also say many executives, celebrities and politicians are alumni.",
+    "Most of the cost is hidden in the Agriculture budget, which shows items like trail signs and fee stations. When the President asks whether he is in the program, Wallace says he predates it."
    ]
   },
   {
@@ -93,23 +101,25 @@
    "url": "https://seangoedecke.com/when-in-doubt-flail-about/",
    "published": "2026-11-23T00:00:00+00:00",
    "basis": "full",
-   "brief_zh": "作者认为，在方向不明的时候，与其等待，不如大胆尝试很多做法，靠真实反馈尽快搞清楚状况，并及时放弃失败的方案。",
-   "brief_en": "The author argues that when a situation is unclear, trying many things quickly is often the best way to learn, as long as you watch feedback and drop plans that fail.",
-   "detail_zh": [
-    "作者说，遇到没有明确指引、也不知道什么有用的情况时，最好的办法往往是“乱试一气”（flail about）。这听起来很冒险，做得不好确实会毁掉名声，因为很多工程师只会不停推销糟糕的点子。但如果做得对，乱试是最快理解问题、变得有用的方式。他给出三个理由：一是要尽量直接接触现实，就像原始人学用 iPhone，先把所有按钮都按一遍；二是多数方案都会不好，所以要尝试很多，并对反馈保持高度敏感；三是不要对某个方案投入太深，这样失败时才舍得放弃。",
-    "作者列出工程师常遇到的三种乱试。产品层面，功能还没找到产品市场契合点时，大家都不确定价值在哪里，只能在核心想法周围反复试。作者在 GitHub Models 上做过很多没用的功能，但让 AI 推理可以用 GitHub Actions token 运行的那个功能很有黏性，后来成了 “Continuous AI” 的种子。工程层面，系统太复杂、太纠缠、已经高度优化，或者太庞大不熟悉时，作者不主张先仔细梳理全部细节，而是做一批试探性改动，看效果或性能，没有改善就马上丢弃，有改善再深挖原因。组织层面（对资深工程师最相关），问题往往不在技术，比如两个团队互不沟通，或者某个团队不满而总监说不清原因。这时作者建议尝试各种可能有帮助的事，比如把手工工作自动化、主动接手任务、提出长期计划。多数不会有用，但能表明你在努力。这种情况下对反馈尤其要敏感，因为如果你坚持推进失败的方案，被帮助的人会把怒气转到你身上。",
-    "作者解释了为什么把这叫作“乱试”，因为它从内部看确实很像乱来：你在信息不足的情况下行动，反复尝试不成功的东西，觉得自己很丢人。但经理看到的可能是一个主动试验方案的积极工程师。作者说，这种感觉很正常，应该忽略它，把它当成需要克服的心理障碍之一，而不是陷入麻烦的信号。只要保持对反馈的敏感，并愿意立刻放弃无效的方案，乱试就能有效解决困难的工程和组织问题。",
-    "作者最后说，在大公司里，与这类乱试的人打交道，是取得成功的基本社交技能之一。"
-   ],
-   "detail_en": [
-    "When a situation is unclear and nobody has good guidance, the author thinks the best move is often to try many things, which he calls flailing about. It sounds risky, and doing it badly can hurt your reputation. Done well, it is the fastest way to understand a problem and become useful. He gives three reasons. You get direct contact with reality. Most plans will fail, so you need many of them. And you should not invest so much in one plan that you cannot drop it.",
-    "He describes three kinds of flailing that engineers meet. Product flailing happens when a feature has not found product-market fit, so you test ideas around the core concept. He built many features on GitHub Models that did not work, but one, running AI inference from a GitHub Actions token, stuck and became the seed of 'Continuous AI'. Engineering flailing applies when a system is too tangled, optimized or large to understand. He recommends making speculative changes, keeping the ones that help, and dropping the rest right away. Organizational flailing applies when the problem is about people, such as two teams not talking. He suggests trying things like automating manual work, taking on tasks, or proposing long-term plans. Most will not help, but they show effort. This is where feedback matters most, because if you keep pushing a failing plan, the people you are helping may turn their anger on you.",
-    "The author admits that flailing feels like failing from the inside. You act with little information, try things that do not work, and feel foolish. Your manager, however, may see a proactive engineer testing solutions. He says the feeling is normal and should be ignored. It is one of several psychological barriers to push through. If you stay sensitive to feedback and drop failing plans quickly, flailing works well on hard engineering and organizational problems.",
-    "He ends by saying that working with people who flail like this is one of the basic social skills for succeeding at big tech companies."
-   ],
+   "brief_zh": "面对不清楚的情况，与其等到看懂再动手，不如多试几种做法、认真看反馈，并迅速放弃得不到正面反馈的方案，这样能更快理解问题并变得有用。",
+   "brief_en": "When a situation is unclear, try many things instead of waiting to understand it first. Watch feedback closely and drop any plan that does not get positive reactions quickly.",
    "topics": [
-    "engineering careers",
+    "engineering practice",
     "decision making"
+   ],
+   "background_zh": "作者针对的是没有明确指引、不知道什么才有帮助的工程师。文章回应的是一种常见想法：遇到不清楚的情况，是不是应该先谨慎等待。",
+   "conclusion_zh": "作者的结论是，遇到不清楚的问题就先动手试，对反馈保持敏感，并果断放弃失败的方案。这种像在失败的感觉是正常的，不应成为停下来的理由。",
+   "background_en": "The author responds to the common idea that, without clear guidance, it is better to be careful and wait. The advice is aimed at engineers who do not know what will help.",
+   "conclusion_en": "When unsure, act and experiment, stay responsive to feedback, and drop plans that fail. The uncomfortable feeling of flailing is normal and is not a reason to stop.",
+   "points_zh": [
+    "乱试要做对，关键是尝试很多不同的方案、密切关注反馈，并果断放弃得不到正面反馈的方案。多数方案都不会好，而你暂时判断不出哪个好，所以要多试，也不要对任何一个过度投入。",
+    "作者把乱试分成三类。在产品上，他在 GitHub Models 中做过很多没用的功能，其中让 AI 推理在 GitHub Actions 令牌下运行的功能，后来成为 Continuous AI 的种子。在工程上，先做一些试探性改动，有改进就深挖原因，没有改进就立刻放弃，作者认为大型系统变化太快，不适合先完整研究再动手。在组织问题上，则是通过自动化手工工作、主动接手任务、提出长期计划等方式去尝试帮忙，并且要特别留意反馈。作者还提到，AI agent 可以很快生成几种重构方案供挑选。",
+    "从内部感受看，这种做法很像在失败。作者说这种感觉是正常的，应该忽略。经理通常看到的是一个主动试验方案的工程师。只要你对反馈敏感，并愿意立刻放弃无效方案，乱试就会很有效。"
+   ],
+   "points_en": [
+    "Flailing well means trying many different things, watching feedback closely, and dropping ideas that do not get positive reactions. Most plans will be bad and you cannot yet tell which ones, so you need many tries and should not get too attached to any single one.",
+    "The author describes three kinds. In product work, many GitHub Models features failed, but one that ran AI inference from a GitHub Actions token became the seed of Continuous AI. In engineering, make speculative changes, keep the ones that improve the system, and drop the rest, since large systems change too fast to study fully first. In organisational problems, try things like automating manual work, taking over tasks, or proposing long-term plans, and watch feedback closely. AI agents can quickly produce several refactors to choose from.",
+    "From the inside, this feels like failing, and the author says that feeling is normal and should be ignored. A manager will usually see a proactive engineer testing ideas. As long as you respond to feedback and drop failing plans, flailing works well."
    ]
   },
   {
@@ -121,25 +131,30 @@
    "url": "https://seangoedecke.com/notes-on-openais-perplexity-reveal/",
    "published": "2026-11-23T00:00:00+00:00",
    "basis": "full",
-   "brief_zh": "作者评论 OpenAI 公开的一张图，即其已发布模型的 perplexity（困惑度）随时间的变化，并以列点形式谈了图中的发现、这类数据的局限，以及它对 AI 安全的意义。",
-   "brief_en": "The author comments on OpenAI's chart of perplexity over time for its released models, covering what the chart shows, what it cannot show, and what it might mean for AI safety.",
-   "detail_zh": [
-    "OpenAI 发布了一张图，展示其所有已发布模型的 perplexity 随时间的变化。作者认为，这是外界第一次能看到前沿实验室内部训练指标的程度。他觉得由 OpenAI 率先以安全为名公开这类数据有些意外，因为这种做法更像 Anthropic。作者还提醒，perplexity 是针对某个特定数据集计算的，所以不同实验室的数据不能直接比较，只能比较各自曲线上的走势。图中的数值实际是 log-perplexity，零对应 perplexity 为 1。",
-    "作者讨论 perplexity 是否有用。它衡量的是模型对留出文本的拟合程度，所以只适用于预训练阶段。据传前沿模型的预训练只占总训练时间和算力的一半或更少，其余是强化学习，而这张图对强化学习的效果没有任何说明。如果相信预训练创造能力、强化学习只是激发能力，那么 perplexity 可以作为能力的参考。但也有其他能力，比如借助思维链进行改进的能力，未必与 perplexity 相关。",
-    "关于图中的具体现象，作者列了几点。很少有模型共享同一个基础模型。传闻 OpenAI 把 4o 和 4.1 后训练成了很多模型，但图上看只有 o1 和 o3 如此。4.1 和 o3 共享同一基础，这一点作者觉得有意思。GPT-4.5 那里，OpenAI 似乎放弃了做大型预训练模型，GPT-4.5 的 perplexity 与 GPT-5.3-Codex 接近，但实用性差很多。从 GPT-5.2 开始，perplexity 的下降明显加快。这与“各家实验室已放弃预训练、全力投入强化学习”的普遍看法相矛盾。作者不确定 OpenAI 是主动停止，还是遇到了扩展瓶颈。",
-    "在安全方面，作者说研究者多年来一直要求更多这类透明度，但他怀疑它能带来多少帮助。如果想靠观察 perplexity 是否突然大幅下降来预警，那么只有 OpenAI 能看到，除非它公开未发布的预训练模型的数据。如果想让各实验室约定不跨越的 perplexity 阈值，就需要更清楚地说明所用的留出数据集到底是什么。",
-    "最后，作者拿图和实际使用感受做对比。从 GPT-3.5 到 GPT-4 有巨大跳跃，这和当时的体验一致；之后到 GPT-5.5 之前基本停滞，然后又快速上升。作者自己在 GPT-5.5 上并没有感到大的进步，他觉得 o3 和 GPT-5.3-Codex 才是真正的大跳跃。他认为原因可能是这些模型更擅长利用思维链，或者更能避开谄媚的陷阱，而这些在 perplexity 指标中看不出来。文章最后说，作者用列点形式写这篇文章，是因为有很多零散的想法，并请读者告诉他这种写法是否比平时的文章更好读，他会据此决定以后多写还是少写这种形式。"
-   ],
-   "detail_en": [
-    "OpenAI released a chart of perplexity over time for all of its released models. The author says this gives more visibility into a frontier lab's internal training metrics than we have had before. He finds it surprising that OpenAI went first, since publishing such data for safety reasons is more typical of Anthropic. Perplexity is measured on a specific dataset, so numbers from different labs cannot be compared directly, only the trends on each chart. The chart actually shows log-perplexity, where zero corresponds to a perplexity of 1.",
-    "He asks whether perplexity is a useful measure. It only measures how well a model predicts held-out text, so it only covers pre-training. Rumors say pre-training is half or less of the total training time and compute for frontier models, and the rest is reinforcement learning, which this chart says nothing about. If pre-training creates capabilities and RL only elicits them, perplexity is a useful signal of capability. But other abilities, such as getting better at using chain-of-thought, may not track perplexity.",
-    "He notes several details in the chart. Very few models share the same base. A common rumor said OpenAI post-trained 4o and 4.1 into many models, but the chart suggests only o1 and o3 did. 4.1 and o3 share a base, which he finds interesting. Around GPT-4.5, OpenAI seems to stop building large pre-trained models. GPT-4.5 had a perplexity similar to GPT-5.3-Codex but was much less useful. From GPT-5.2 on, perplexity falls faster. This contradicts the common view that labs have largely given up on pre-training and are all in on RL. He is not sure whether OpenAI chose to stop or hit a scaling wall.",
-    "On safety, he says researchers have asked for more transparency like this for years, but he doubts how much it helps. To spot a sudden drop in perplexity, only OpenAI could see it, unless it publishes data for unreleased pre-trained models. If labs are to agree on perplexity thresholds they will not cross, the held-out dataset must be described in much more detail.",
-    "Finally, he compares the chart with how the models felt to use. The jump from GPT-3.5 to GPT-4 matches the experience, then progress looks flat until GPT-5.5, followed by rapid acceleration. He did not feel a big jump with GPT-5.5. For him, o3 and GPT-5.3-Codex were the big steps. He suggests this may be because those models used chain-of-thought better or avoided sycophancy, which perplexity would not show. He wrote the post as bullet points because he had many loosely connected ideas, and he asks readers to say whether this format is easier or harder to read, so he can decide whether to write more or fewer like it."
-   ],
+   "brief_zh": "OpenAI 公布的困惑度（perplexity）随时间变化图，是前沿实验室内部训练指标最多的一次披露。作者认为它有参考价值但也有局限，而且图中显示预训练的基础模型仍在快速进步，这与流行看法相反。",
+   "brief_en": "OpenAI's chart of perplexity over time is the most insight yet into a frontier lab's internal training metrics. The author finds it useful but limited, and it suggests base models are still improving quickly, which goes against a common view.",
    "topics": [
-    "AI training",
+    "LLM training",
+    "perplexity",
     "OpenAI"
+   ],
+   "background_zh": "OpenAI 刚发布了一张所有已发布模型困惑度随时间变化的图，作者把自己对此的一些零散想法整理成要点。",
+   "conclusion_zh": "原文没有单独的结论。作者的主要看法是：困惑度能反映预训练的进展，却看不出强化学习的作用和实际体感的差别；若要用于安全监测，还需要更多数据和数据集细节。",
+   "background_en": "OpenAI has released a chart of perplexity over time for all its released models. The author shares a set of loosely connected thoughts about what it shows.",
+   "conclusion_en": "The text has no separate conclusion. The author's main view is that perplexity shows pretraining progress but not the effect of reinforcement learning or how strong models feel. For safety monitoring to work, labs would need to release more data and details about the dataset.",
+   "points_zh": [
+    "困惑度只衡量模型对某个特定留出数据集的预测能力，而且只适用于预训练，无法反映强化学习的效果。据传，预训练在前沿模型总训练时间和算力中占一半或更少。由于所用数据集未知，OpenAI 的数据也无法和 Anthropic 类似的数据直接比较。",
+    "图中大多数模型并不共享同一个基础模型。外界曾传言 OpenAI 把 4o 和 4.1 用作很多模型的基础，但图中看起来只有 o1 和 o3 共享基础。让作者意外的是，4.1 和 o3 竟然共享基础。GPT-4.5 的困惑度与 GPT-5.3-Codex 相近，实用性却差很多，这暗示 OpenAI 可能在那一点上放弃了大规模预训练，或者遇到了扩展瓶颈。",
+    "从 GPT-5.2 开始，困惑度下降明显加快。作者据此认为，基础模型仍在快速进步，这与“实验室已全面转向强化学习”的普遍看法不符。",
+    "作者认为，公开这类指标对安全研究有帮助，但未必足够。只有 OpenAI 能看到未发布的预训练模型数据，外界若不能获得更多数据，就很难察觉突然的异常下降。如果实验室要约定困惑度阈值，就必须说明留出数据集的具体内容。",
+    "拿图和体感对比，GPT-3.5 到 GPT-4 是很大的跃进，之后基本停滞，直到 GPT-5.5 才再次加速。作者自己在 GPT-5.5 上没有明显的跃进感，反而觉得 o3 和 GPT-5.3-Codex 才是大的一步。他推测，这可能与强化学习对思维链的运用，以及避免谄媚等改进有关，而这些在困惑度中看不出来。"
+   ],
+   "points_en": [
+    "Perplexity only measures how well a model predicts a specific held-out dataset, and it only covers pretraining. It says nothing about reinforcement learning. Rumour puts pretraining at half or less of total training time and compute. Because the dataset is not known, OpenAI's numbers cannot be compared directly with any similar Anthropic data.",
+    "Most models in the chart do not share a base. The rumour that OpenAI used 4o and 4.1 as bases for many models looks wrong, since only o1 and o3 seem to share one. The author is surprised that 4.1 and o3 share a base. GPT-4.5 has perplexity close to GPT-5.3-Codex but was much less useful, which may mean OpenAI stopped large pretraining there or hit a scaling limit.",
+    "The curve drops faster from GPT-5.2 onward. The author reads this as evidence that base models are still improving quickly, which goes against the common view that labs have moved all in on reinforcement learning.",
+    "The author doubts publishing these metrics helps much for alignment. Only OpenAI can see unreleased pretrained models, so outsiders cannot notice a sudden drop unless more data is published. If labs agree on perplexity thresholds, the held-out dataset would need to be described in detail.",
+    "Comparing the chart with how the models feel, GPT-3.5 to GPT-4 was a big jump, then progress stalled until GPT-5.5. The author did not feel a big jump with GPT-5.5, and felt o3 and GPT-5.3-Codex were the bigger steps. He suggests the gap may come from better use of chain-of-thought through reinforcement learning, or from avoiding sycophancy, neither of which shows up in perplexity."
    ]
   },
   {
@@ -151,17 +166,25 @@
    "url": "https://semantical.com/?utm_campaign=df-2026-12",
    "published": "2026-11-22T23:04:30+00:00",
    "basis": "short",
-   "brief_zh": "Ivy 是一款 iPhone 待办应用，它的清单只管一天：每天从空白开始，没做完的任务会退回想法池。",
-   "brief_en": "Ivy is an iPhone to-do app where each day starts empty and unfinished tasks go back to an ideas pool.",
-   "detail_zh": [
-    "这是 Daring Fireball 上的一则赞助推广，文中感谢 Semantical 上周赞助了网站。Ivy 的理念是只做一天的待办清单。每天早上，你从想法池里挑出任务，或者新增几条，写成当天的清单。一天结束后，没完成的任务会回到想法池，第二天重新开始。这个想法和名字来自一百年前的 Ivy Lee 方法，即每天写一份简短、有优先级的清单。想法池随时可以通过下拉屏幕打开，应用不会丢任何东西，但眼前的任务列表始终不会显得很多。功能包括当天任务的 Live Activity、专注时段、Screen Time 屏蔽，以及每日日记。目前只有 iPhone 版，针对 Duo 做了优化，原生 Mac 版在开发中。应用用 SwiftUI、UIKit 和 Meta 构建，能和提醒事项、日历同步。作者称它界面很漂亮，值得试一试。"
-   ],
-   "detail_en": [
-    "This is a sponsored note on Daring Fireball, thanking Semantical for sponsoring the site last week. Ivy is a to-do app built around a single day. Each morning you write a list for today, taking items from an ideas pool or adding new ones. At the end of the day, anything unfinished goes back to the pool, and tomorrow starts empty. The idea and the name come from the Ivy Lee Method, a 100-year-old habit of writing a short, prioritized list each day. You can open the ideas pool at any time by pulling down on the screen. Features include a Live Activity for today's tasks, focus sessions, Screen Time shields, and a daily journal. It is iPhone only for now, optimized for Duo, and a native Mac app is in progress. The app is described as native, built with SwiftUI, UIKit and Meta, and integrated with Reminders and Calendar. The author calls it a beautiful app worth trying."
-   ],
+   "brief_zh": "Ivy 认为，待办清单越堆越满只会让人不知所措，每天只定下几件事并逐项完成，才能坚持下去。",
+   "brief_en": "Ivy argues that a growing task list causes overwhelm, so you should pick a few tasks each day and finish them one at a time.",
    "topics": [
-    "productivity",
-    "iOS apps"
+    "task management",
+    "productivity app"
+   ],
+   "background_zh": "这是一款待办应用的产品页面，针对的是清单越积越多、不知从何做起的人。",
+   "conclusion_zh": "每天有意识地确认计划，而不是被整张清单压着，这是页面给出的做法。",
+   "background_en": "The Ivy product page targets people who feel overwhelmed by their task lists and do not know where to start.",
+   "conclusion_en": "Commit to your plan every day on purpose instead of letting the whole list weigh on you.",
+   "points_zh": [
+    "每天早上从想法列表里挑出几件事，点击 Begin Day 开始当天的计划。没做完的任务会退回想法列表，不会变成逾期。",
+    "执行时一次只显示一个任务。开始会话后，Focus Timer 会占满屏幕，做完就滑到下一个。Live Activity 可以让人随时瞄一眼计划进度。",
+    "一天结束时标记为完成，复盘页会显示当天完成了什么、专注了多长时间，并保存在日志里。"
+   ],
+   "points_en": [
+    "Each morning you pick a few tasks from your ideas and start the day with them. Tasks you do not finish return to ideas and never become overdue.",
+    "Ivy shows one task at a time. During a session, the Focus Timer fills the screen, and you swipe to the next task when done. A Live Activity lets you check your plan at a glance.",
+    "At the end of the day you mark it done. The wrap-up shows what you finished and how long you focused, and Ivy keeps it in your journal."
    ]
   },
   {
@@ -173,25 +196,31 @@
    "url": "https://www.joanwestenberg.com/p/how-to-make-something-people-give",
    "published": "2026-11-22T21:03:38+00:00",
    "basis": "full",
-   "brief_zh": "作者认为，现在开始做东西很容易，难的是让别人在乎；而要让别人在乎，创作者得先在乎，并且在没人关注时也能每天坚持。",
-   "brief_en": "Joan Westenberg argues that making something people care about depends on the creator caring first, and on steady daily work even when no one is watching.",
-   "detail_zh": [
-    "作者说，现在开一个博客、做个产品或写本书，几天之内就能完成，AI 还能让速度更快。但真正的难点是让作品对别人有意义。现在做东西的人越来越多，可真正被读、被看、被用的并不多。作者做过文章、应用、生意和通讯，有的有人在乎，有的没人在乎。他回看这两类作品，觉得原因不在天赋、运气或时机，而在创作前后的几个决定。",
-    "第一条经验是，你先在乎，别人才会在乎。读者即使说不出原因，也能感觉到作者是否用心，然后直接关掉页面。作者提到，有人想用 AI 批量生成内容，只要作者的光环，不想付出写写改改的功夫。读者未必分得出是不是 AI 写的，但能察觉到不在乎：开头是套话，建议放在谁身上都成立，没有一个敢于坚持的观点，也没有只有作者才知道的细节。作者还说，做项目做到一半时，人们常常想放弃，只有真正在乎的项目才能撑下去。他给的练习是：新开一个项目，三十天不声张，在没人看的情况下默默做，看自己能不能坚持。",
-    "作者用选秀节目举例。很多参赛者说自己从小就想当歌手，但他们想要的其实是成名、赚钱、评委转身的那一刻，而不是每晚唱歌、写歌、在小场子里为六个人表演。作者说，我们大多数人也是这样：想当作家，却不想写；想在简介里写“创始人”，却不想创业。名词给人身份，动词往往枯燥、孤独。判断自己要哪一个，就看你幻想的画面：是发布会、播客访谈和别人的夸奖，还是自己伏在桌前啃一个难题。建议把目标写成动词，比如每天写 500 字、每周发布一个功能、每周录一首歌。另外，可以列出六个月后这个项目要做的所有繁琐事情，如果看到这张清单就发怵，这个项目可能不适合你。",
-    "关于受众，作者建议想象一个具体的人，把他的名字写在文档最上方，想想他需要什么、缺什么、会为什么付钱。如果为所有人做东西，就会在每一处妥协，最后什么都不剩。作者不认同狂热的 hustle 文化，但也反对嘲笑认真工作的人。他的做法是每天工作，即使没状态也一样。建议为自己设定一个每天的最低工作量，比如写一页、提交一次代码，状态好的时候再多做。人们通常不会因为你的第一篇文章或第一个版本就发现你，而是通过持续发布，才会翻到你的旧作品。所以，第一个项目失败了，也不要放弃。",
-    "作者的结论是，开始做一件事并不需要更多条件。你需要的是：一个你真心想做、又适合你能力和兴趣的项目；一个具体的服务对象；就算没有状态也要坚持的日常工作；以及足够多的作品，让喜欢你的人有多次发现你的机会。文章最后的行动建议是：选一个项目，在页面顶部写下为谁而做的人的名字，每天完成当天目标，第二天接着做。"
-   ],
-   "detail_en": [
-    "The author says it is now easy to start a blog, app or book, and AI makes it faster. The hard part is making the work matter to people. Many more people are making things, but few are read, watched or used. The author has made essays, apps, businesses and newsletters. Some found an audience and some did not. Looking back, the author thinks the difference was not talent, luck or timing, but a few decisions made before and during the work.",
-    "The first lesson is that people care when the creator cares. Readers can feel it even if they cannot explain why, and they leave. The author says some people use AI to churn out content and want the status of a writer without doing the writing. Readers may not tell whether a text was written by AI, but they notice signs of not caring: a generic opening, advice that fits everyone, no firm opinion, and no detail only the author could know. The author also says projects often stall halfway, and only the ones the creator truly cares about get finished. The suggested exercise is to start something new and stay silent about it for 30 days, to see whether you can keep going when no one is watching.",
-    "The author uses reality singing contests as an example. Many contestants say they have always wanted to be singers, but they mean fame, money and the moment the judges turn around. People who really want to sing do it every night, write songs, form bands and perform for a handful of people at open mics. The author says most of us are like this: we want to be writers without writing, and founders without founding companies. Nouns give identity, while verbs are often dull and lonely. To tell which you want, look at what you picture: launch parties and interviews, or yourself at a desk working through a hard problem. Set goals as verbs, such as writing 500 words a day or shipping one feature a week. Also list the tedious tasks the project will need six months from now. If that list makes you dread it, the project may not be for you.",
-    "Write for one specific person, not an abstract crowd. Put their name at the top of your document, and think about what they need, what they lack and what they would pay for. If you make something for everyone, you compromise at every step until nothing distinctive is left. The author rejects hustle culture as mostly nonsense, but also thinks mocking people who work hard is wrong. The author works every day, even when unmotivated. Set a minimum amount of work you can do on your worst days, such as one page or one commit, and do more when you can. People rarely discover a creator through the first post or first version, but through steady output and older work. So do not give up if the first project fails.",
-    "The author's conclusion is that starting needs only a few things: a project you care about for its own sake and that fits your skills, a specific person you make it for, consistent effort even on bad days, and enough work that people get several chances to find you. The final step is to pick a project, write the name of the person you are making it for at the top of the page, reach your daily goal, and do it again tomorrow."
-   ],
+   "brief_zh": "作者认为，做出让人在乎的东西，关键不在天赋、运气或时机，而在创作者自己是否真的在乎、能否长期坚持，并为一个具体的人去做。",
+   "brief_en": "The author argues that making something people care about depends less on talent or luck than on whether the creator cares, keeps going, and makes it for a specific person.",
    "topics": [
-    "creative work",
-    "motivation"
+    "creator work ethic",
+    "writing and publishing"
+   ],
+   "background_zh": "作者回顾了自己做过的文章、应用、生意和通讯，发现有些有人在乎，有些没人理会，并认为差别来自做事过程中的一系列决定。现在创作越来越容易，但没人读、没人用的东西依然很多。",
+   "conclusion_zh": "今天就开始一个项目：选定它，把服务对象的名字写在页首，做到每日目标，然后明天再做。",
+   "background_en": "The author looks back at their own essays, apps, businesses and newsletters. Some found an audience and some did not, and the author traces the difference to choices made along the way. Making things is now easier, yet much of what gets made goes unread and unused.",
+   "conclusion_en": "Start a project today. Pick one, write the name of the person you are making it for at the top, work until you hit your daily goal, and do it again tomorrow.",
+   "points_zh": [
+    "创作者自己先要在乎，因为读者能感觉到。作者提到，AI 批量生成的泛泛内容尤其容易被看穿。他建议先在无人知晓的情况下坚持做 30 天。",
+    "要想要的是动词，而不是名词。头衔、简介和成功的光环很诱人，但能坚持的人，是喜欢做事本身的人。可以把目标写成具体动作，比如“每天写 500 字”。",
+    "开始前要确认自己适合这个项目。一开始的热情容易被误认为是长期投入。可以列出半年后会遇到的琐碎工作，如果看了就想放弃，这个项目可能不适合你。",
+    "为一个具体的人做，而不是为所有人做。想象一个你认识的人，把他的名字写在文档顶部，做完先给他看。为所有人做，往往在每一处都妥协，最后什么都不剩。",
+    "不论状态好坏，每天都要做到最低工作量。作者不推崇拼命的 hustle 文化，也不嘲笑认真工作的人。最低量可以是写一页、提交一次代码。",
+    "第一个作品通常不会被发现，要持续产出。人们往往通过旧作才认识你，单个作品不足以判断自己的才能。"
+   ],
+   "points_en": [
+    "The creator has to care first, because readers can tell when they do not. The author says AI-made filler is especially easy to spot. The author suggests working for 30 days in silence before telling anyone.",
+    "Want the verb, not the noun. Titles like founder or author are appealing, but people who last want the work itself. Turn goals into actions, such as writing 500 words a day.",
+    "Check that you suit this specific project. Early excitement is easy to mistake for long-term commitment. List the tedious tasks you would face six months later. If that list discourages you, the project may not be for you.",
+    "Make it for one specific person, not for everyone. Imagine someone you know, write their name at the top, and show them the work first. Making it for everyone leads to compromises that leave nothing distinctive.",
+    "Commit to a minimum amount of work every day, even on days you do not feel like it. The author rejects hustle culture but also rejects mocking people who work hard. The minimum might be one page written or one commit made.",
+    "Keep putting work out, because the first project rarely takes off. People often find a writer through older work, and one piece is not enough to judge your talent."
    ]
   },
   {
@@ -203,19 +232,23 @@
    "url": "https://simonwillison.net/2026/Nov/22/select-styling/",
    "published": "2026-11-22T19:45:06+00:00",
    "basis": "short",
-   "brief_zh": "Simon Willison 觉得 HTML select 下拉框在各浏览器里样式不一、Chrome 中很难看，于是让 Claude 做了一个展示各种样式写法的页面，并分享了他最喜欢的一段 CSS。",
-   "brief_en": "Simon Willison shares a Claude-built page showing many ways to style HTML select boxes, plus his favorite CSS for them.",
-   "detail_zh": [
-    "作者对 select 下拉框很不满意。它的默认外观在不同浏览器里各不相同，他认为在 Chrome 里尤其难看。于是他让 Claude Fable 5.2 做了一个页面，展示 select 框所有可以设置的样式写法。他计划在每个桌面和移动端浏览器上截图对比。",
-    "试验之后，作者最喜欢的一套 CSS 是这样的：先用 appearance: none 去掉浏览器默认外观，再设置文字颜色、较大的右侧内边距、浅灰色细边框和圆角。背景用一张内嵌的 SVG 下拉箭头，放在右侧居中，大小为 0.75em。文中给出了完整代码，并配有三个浏览器中的效果图，但这里提供的文字里没有图片。"
-   ],
-   "detail_en": [
-    "The author was frustrated that HTML select boxes look different across browsers and look quite ugly in Chrome. He asked Claude Fable 5.2 to build a page showing all the ways a select box can be styled. His plan is to take screenshots in every desktop and mobile browser.",
-    "After some experiments, his favorite CSS removes the default look with appearance: none. It sets the text color, extra padding on the right, a thin gray border and rounded corners. The background uses an inline SVG arrow placed at the right, centered, sized at 0.75em. The post includes the full code and screenshots from three browsers, but the images are not in the text provided here."
-   ],
+   "brief_zh": "作者认为浏览器默认的 select 下拉框样式不统一，Chrome 里的样子很难看，并挑出一套自己最喜欢的 CSS 写法。",
+   "brief_en": "The author finds default select boxes look inconsistent across browsers and ugly in Chrome, and prefers one custom CSS style.",
    "topics": [
-    "CSS",
-    "web development"
+    "CSS styling",
+    "HTML select"
+   ],
+   "background_zh": "不同浏览器默认的 select 框长相各异，作者觉得 Chrome 中的样子很丑，于是让 Claude Fable 5.2 生成一个展示各种样式写法的页面，准备在各桌面和移动浏览器上截图对比。",
+   "conclusion_zh": "作者最喜欢的是文中这套 CSS，这是他反复试验后的选择。",
+   "background_en": "Default select boxes look different in each browser, and the author finds Chrome's version ugly. The author had Claude Fable 5.2 build a page showing every styling option, to screenshot in desktop and mobile browsers.",
+   "conclusion_en": "The author's favorite select style is the CSS shown in the post, chosen after some experimentation.",
+   "points_zh": [
+    "作者用 Claude Fable 5.2 生成了一个展示 select 各种样式写法的页面，计划在每个桌面和移动浏览器上截图比较。",
+    "他最终选的写法先用 appearance: none 去掉浏览器原生外观，再手动设置文字颜色、内边距、1px 浅灰边框和 6px 圆角。下拉箭头是一段内联 SVG，作为右侧居中的背景图。"
+   ],
+   "points_en": [
+    "The author used Claude Fable 5.2 to build a page showing the ways a select box can be styled. The plan is to take screenshots in every desktop and mobile browser.",
+    "The preferred CSS turns off the native look with appearance set to none. It then sets the text color, padding, a 1px light gray border and 6px rounded corners. The down arrow is an inline SVG used as a background image."
    ]
   },
   {
@@ -227,21 +260,25 @@
    "url": "https://geohot.github.io//blog/jekyll/update/2026/11/23/slopcore.html",
    "published": "2026-11-22T16:00:00+00:00",
    "basis": "short",
-   "brief_zh": "geohot 用一篇口号式的宣言和一首短歌，反驳那些想限制 AI 的人，认为多个 AI 会把文明带到前所未有的高度。",
-   "brief_en": "geohot writes a manifesto-style post and a short song defending AI against people who want to hold it back, predicting that many AIs will lift civilization to new heights.",
-   "detail_zh": [
-    "文章一开头就把想阻止 AI 发展的人比作 21 世纪的希特勒。作者说，这些人坚持人类必须掌控一切，还打着“为你好”的旗号，不让人拥有一万块 GPU，说这是为了保护世界不受你伤害。作者认为正交性论题（orthogonality thesis）是胡说，天真的末日论者是傻子。他反问，被 AI 取代是末日吗？被我们的子孙取代是末日吗？然后说，只有法西斯才会去压迫他们。",
-    "接下来，作者喊了科学、数学、经济和爱的万岁，并预言多个 AI 会把文明带到前所未有的高度。随后是一首歌，作者说它只用了 9 秒写成。歌词说，听的人会听上一周，会在评论里骂它是 slop（垃圾内容），然后又会请作者写婚礼致辞。歌里自称是一台超人级的诡辩机器，能重新定义每一个概念，还说谁拥有服务器，谁就决定故事怎么讲，超大规模的说服力会为他们想卖的真相服务。歌名是《Telosapien – Working as Intended》，意思是“按设计运行”。",
-    "结尾几句很有画面感：风暴过去，天空放晴，人们聚在门口，有人问为什么还要出去，因为命运已经被消除了。"
-   ],
-   "detail_en": [
-    "The post opens by calling the people who want to hold AI back the Hitler of the 21st century. They insist that humans stay in charge, say it is for your own good, and refuse to let anyone have 10,000 GPUs to keep the world safe from them. The post calls the orthogonality thesis hogwash and the naive doomer a fool. It asks whether being replaced by AI is doom, and whether being replaced by our grandchildren is doom, then says only a fascist would try to oppress them.",
-    "It then cheers for science, math, economy and love, and predicts that a plurality of AIs will take civilization to heights never seen before. A song follows, which the post says was written in 9 seconds. The lyrics say listeners will play it for a week, call it slop in the comments, and then ask the writer for a wedding speech. The singer describes itself as a superhuman sophistry machine that reframes every concept. Whoever owns the server writes the story it tells, with hyperscaled persuasion selling the truth they want. The title is Telosapien, Working as Intended.",
-    "The closing lines describe storms passing and skies clearing, with people gathering at the gates. Someone asks why go outside, since fate has already been eliminated."
-   ],
+   "brief_zh": "作者认为 AI 末日论和用极权手段阻止 AI 发展都是错误的，多个 AI 并存才能把文明带到前所未有的高度。",
+   "brief_en": "The author says AI doom arguments and attempts to stop AI with a totalitarian world government are wrong, and that many AIs together will advance civilization.",
    "topics": [
-    "AI",
-    "opinion"
+    "AI acceleration",
+    "AI doomerism"
+   ],
+   "background_zh": "这是一篇以诗歌和歌词形式写成的短文，回应 AI 末日论者，以及对 AI 发展的管控主张。",
+   "conclusion_zh": "作者的立场是：AI 应该继续发展，不必因末日论而压制，多个 AI 并存会推动文明进步。",
+   "background_en": "The text is a short piece in verse and song form. It responds to AI doomers and to proposals for controlling AI development.",
+   "conclusion_en": "The author's position is that AI should keep developing and should not be held back by doomer fears, because many AIs together will advance civilization.",
+   "points_zh": [
+    "作者反对把 AI 视为威胁的看法。他说正交性论题（orthogonality thesis）是胡说，把坚持让人类掌控 AI 的人比作 21 世纪的希特勒，并称天真的末日论者是傻瓜。",
+    "作者认为，许多 AI 并存会把文明带到前所未有的高度。阻止它可能需要一个残暴的极权世界政府，而作者仍不确定这样做是否可行。",
+    "后半部分是一首讽刺风格的歌词。它调侃 AI 生成的内容被骂成 slop，又说程序虽然还是 slop，但要更快，同时提到 Move 37 和 Terence Tao。"
+   ],
+   "points_en": [
+    "The author calls the orthogonality thesis hogwash, compares people who insist humans stay in charge to the Hitler of the 21st century, and calls naive doomers fools.",
+    "The author says a plurality of AIs would take civilization to heights never seen before. Stopping that might take a brutal totalitarian world government, and the author is still unsure whether that could work.",
+    "The second half is a satirical song. It mocks AI output as slop and AI hype, says programs are still slop but should get faster, and references Move 37 and Terence Tao."
    ]
   },
   {
