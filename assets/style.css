@@ -7,7 +7,8 @@
    below map the meta to the CSS color-scheme property, which light-dark() and native UI follow. */
 
 /* self-hosted IBM Plex, the same files the homepage serves (SIL Open Font License). Chinese is
-   IBM Plex Sans SC, same family, from fonts/plex-sans-sc.css (split files, loaded per character). */
+   IBM Plex Sans SC, same family: build.py puts the @font-face rules a page needs into its head
+   (from fonts/plex-sans-sc.css; split files, one download per group of characters in use). */
 @font-face {
   font-family: "IBM Plex Sans"; font-style: normal; font-weight: 100 700; font-display: swap;
   src: url("fonts/ibm-plex-sans-latin-ext-var.woff2") format("woff2");
@@ -112,16 +113,17 @@
   }
 }
 
-/* dark-only values that are not colours: the floating shadow and the toggle icon */
+/* dark-only values that are not colours: the floating shadow, and which of the theme toggle's
+   two actions shows (to dark: the moon; to light: the sun) */
 @media (prefers-color-scheme: dark) {
   :root:not(:has(> head > meta[name="color-scheme"][content="light"])) {
     --shadow-float: 0 8px 30px rgba(0, 0, 0, 0.45);
-    --icon-moon: none; --icon-sun: block;
+    --to-dark: none; --to-light: contents;
   }
 }
 :root:has(> head > meta[name="color-scheme"][content="dark"]) {
   --shadow-float: 0 8px 30px rgba(0, 0, 0, 0.45);
-  --icon-moon: none; --icon-sun: block;
+  --to-dark: none; --to-light: contents;
 }
 
 @media (prefers-contrast: more) {
@@ -132,12 +134,23 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { background: var(--bg-page); -webkit-text-size-adjust: 100%; }
+/* the viewport keeps its width with or without a vertical scrollbar */
+html {
+  background: var(--bg-page);
+  -webkit-text-size-adjust: 100%;
+  overflow-y: scroll;
+}
+@supports (scrollbar-gutter: stable) {
+  html { overflow-y: auto; scrollbar-gutter: stable; }
+}
 body {
   margin: 0;
   font-family: var(--font-body);
   line-height: 1.6;
   color: var(--text);
+  /* a word longer than the line (a CVE number, a URL, at a large text size) breaks instead of
+     running out of the page; nothing else changes */
+  overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
 }
 h1, h2, h3 { line-height: 1.25; }
@@ -155,11 +168,24 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   outline-offset: 2px;
 }
 
+/* text for screen readers only (the names of the icon buttons) */
+.visually-hidden {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
 /* skip link: first focusable element, off-screen until focused */
 .skip-link {
   position: fixed;
-  top: 0.75em;
-  left: 0.75em;
+  inset-block-start: 0.75em;
+  inset-inline-start: 0.75em;
   z-index: 50;
   padding: 0.55em 1.1em;
   border: 1px solid var(--card-border);
@@ -173,13 +199,6 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 }
 .skip-link:focus { transform: none; }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    transition-property: opacity, color, background, background-color, border-color, box-shadow !important;
-    transition-duration: 0.15s !important;
-  }
-}
-
 a {
   color: var(--accent);
   text-decoration-thickness: 1px;
@@ -191,22 +210,49 @@ a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 /* language switch: both languages are in the page, the root attribute picks one */
 html:not([data-lang="en"]) [data-l="en"],
 html[data-lang="en"] [data-l="zh"] { display: none; }
-/* without JS: no toggles (they would do nothing) and every panel shows */
-.no-js .icon-btn { display: none; }
+/* without JS: no buttons (they would do nothing) and every panel shows */
+.no-js .icon-btn, .no-js .back-to-top { display: none; }
 
-.wrap {
-  max-width: 78rem;
-  margin: 0 auto;
-  padding: 1.5em 1.25em 4em;
-  display: flex;
-  flex-direction: column;
+/* ==========================================================================
+   FRAME — the homepage's (its _theme.scss, written out as plain CSS): two
+   columns, a floating tab bar with the site's five tabs, footer,
+   back-to-top. Keep the numbers the same as there, so the bar does not move
+   or change size when the visitor goes from one site to the other. The left
+   column holds Feed's side panel where the homepage has the profile card.
+   ========================================================================== */
+
+.layout {
+  display: grid;
+  grid-template-columns: 18.75rem minmax(0, 1fr);
+  grid-template-areas:
+    "left center"
+    "left footer";
   gap: 1.5em;
+  align-items: start;
+  max-inline-size: 78rem;
+  margin: 1.5em auto 0;
+  padding: 0 1.25em;
+}
+.layout__left { grid-area: left; position: sticky; inset-block-start: 1.5em; }
+.layout__center { grid-area: center; min-width: 0; display: flex; flex-direction: column; gap: 1.5em; }
+
+/* content scrolling up dissolves into the page colour below the floating tab bar */
+body::after {
+  content: "";
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  height: 2.2em;
+  background: linear-gradient(to bottom, var(--bg-page) 45%, transparent);
+  z-index: 25;
+  pointer-events: none;
 }
 
-/* tab bar: floating glass, active tab is solid ink, toggles at the right end */
+/* tab bar: floating glass, the current tab is solid ink, theme toggle at the right end */
 .tabbar {
   position: sticky;
-  top: 1em;
+  inset-block-start: 1.5em;
   z-index: 30;
   display: flex;
   align-items: center;
@@ -215,22 +261,85 @@ html[data-lang="en"] [data-l="zh"] { display: none; }
   border: 1px solid var(--card-border);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-float);
+}
+/* the glass sits on a pseudo-element: backdrop-filter on the bar itself would make it the
+   containing block of the small-screen fixed theme toggle */
+.tabbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
   background: var(--glass-bg);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   backdrop-filter: blur(20px) saturate(180%);
 }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .tabbar::before { background: var(--card-bg); }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .tabbar::before { background: var(--card-bg); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
 .tabbar__tabs { display: flex; flex-wrap: wrap; gap: 0.35em; flex: 1; margin: 0; padding: 0; list-style: none; }
 .tabbar__tab {
+  position: relative;
   display: block;
   padding: 0.5em 1.2em;
   border-radius: var(--radius-inner);
+  font-size: 0.98em;
   font-weight: 500;
   color: var(--text);
   text-decoration: none;
 }
 .tabbar__tab:hover { background: var(--hover-bg); color: var(--text); }
-.tabbar__tab.is-active, .tabbar__tab.is-active:hover { background: var(--ink); color: var(--on-ink); }
-.tabbar__tab { position: relative; }
+/* What the browser scrolls into view in the content column (keyboard focus, a link target)
+   stops below the floating bar. A margin on the targets, not scroll-padding on the page: the
+   bar and the top of the side panel sit inside that padding, and focusing them made the page
+   jump (Chrome by hundreds of pixels). */
+.layout__center :where(a, button, summary, [tabindex], [id]) { scroll-margin-block-start: 5.5em; }
+.tabbar :where(a, button) { scroll-margin-block-start: 0; }
+/* the current page: aria-current is the one state, for assistive tech and for the look */
+.tabbar__tab[aria-current], .tabbar__tab[aria-current]:hover { background: var(--ink); color: var(--on-ink); }
+
+.site-footer {
+  grid-area: footer;
+  padding: 0.25em 1em 1.5em;
+  text-align: center;
+  font-size: 0.82em;
+  color: var(--muted);
+}
+
+/* back to top: appears after a screen of scrolling (app.js); it slides in, or only fades in
+   for visitors who asked for reduced motion */
+.back-to-top {
+  position: fixed;
+  inset-block-end: 1.5em;
+  inset-inline-end: 1.5em;
+  z-index: 40;
+  width: 2.6em;
+  height: 2.6em;
+  padding: 0;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-card);
+  background: var(--ink);
+  color: var(--on-ink);
+  font-size: 1.1em;
+  box-shadow: var(--shadow-float);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top { transform: none; transition-property: opacity, visibility, background, color; }
+}
+.back-to-top__icon { width: 1.15em; height: 1.15em; }
+.back-to-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { background: var(--accent); color: var(--card-bg); }
 
 .icon-btn {
   flex: none;
@@ -244,13 +353,25 @@ html[data-lang="en"] [data-l="zh"] { display: none; }
   border-radius: var(--radius-inner);
   background: transparent;
   color: inherit;
-  font: 500 0.9em var(--font-label);
+  font: 500 0.9em/1.6 var(--font-label);
   cursor: pointer;
 }
 .icon-btn:hover { background: var(--hover-bg); }
-.icon-btn svg { width: 1.1em; height: 1.1em; display: block; }
-.icon-btn .icon--moon { display: var(--icon-moon, block); }
-.icon-btn .icon--sun { display: var(--icon-sun, none); }
+
+/* The theme toggle has the homepage's size, so both tab bars are equally tall. It holds both
+   actions, each an icon with its hidden text ("Switch to dark theme": moon; "Switch to light
+   theme": sun); the one that fits the scheme in use shows, and display: none keeps the other
+   from screen readers, so the button's name is always the current action. */
+.theme-toggle {
+  min-width: 2.4em;
+  min-height: 2.4em;
+  padding: 0.3em 0.45em;
+  font-size: 1.1em;
+  line-height: 1;
+}
+.theme-toggle svg { display: block; width: 1.05em; height: 1.05em; }
+.theme-toggle__action--dark { display: var(--to-dark, contents); }
+.theme-toggle__action--light { display: var(--to-light, none); }
 
 .card {
   background: var(--card-bg);
@@ -269,54 +390,105 @@ html[data-lang="en"] [data-l="zh"] { display: none; }
 .label--accent { color: var(--accent); }
 .page-head h1 { margin: 0.2em 0 0.15em; font-size: 1.9em; font-weight: 600; letter-spacing: -0.01em; }
 .muted { color: var(--muted); }
-.small { font-size: 0.875em; }
+
+/* ==========================================================================
+   SIDE PANEL — the same on every page: the title (the page's h1), the
+   language switch, what Feed is (for a visitor who lands here) and three
+   links of equal rank: the latest day, All days, Sources. It stays in view
+   while the page scrolls.
+   ========================================================================== */
+.feed-side { max-height: calc(100vh - 3em); overflow-y: auto; }
+
+/* Text that differs in length between the two languages (.stack, build.py): both sit in one
+   grid cell and the one not on display keeps its space, so the box is as tall as the taller
+   text and nothing below it moves when the language is switched. */
+.stack { display: grid; }
+.stack > [data-l] { grid-area: 1 / 1; }
+html:not([data-lang="en"]) .stack > [data-l="en"],
+html[data-lang="en"] .stack > [data-l="zh"] { display: block; visibility: hidden; }
+
+.feed-side__top { display: flex; align-items: baseline; justify-content: space-between; gap: 1em; }
+.feed-side__title { margin: 0; font-size: 1.25em; font-weight: 600; line-height: 1.25; letter-spacing: -0.01em; }
+/* language switch: both languages always show and the one in use is underlined, so the button
+   keeps its size and place when pressed */
+.lang-toggle {
+  flex: none;
+  display: inline-flex;
+  align-items: baseline;
+  margin-block: -0.6em;
+  margin-inline: 0 -0.5em;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-inner);
+  background: transparent;
+  color: var(--muted);
+  font: 500 0.8em/1.6 var(--font-label);
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+.lang-toggle:hover { background: var(--hover-bg); }
+.lang-toggle__opt { padding: 0.6em 0.5em; }
+html:not([data-lang="en"]) [data-lang-opt="zh"],
+html[data-lang="en"] [data-lang-opt="en"] {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35em;
+}
+.no-js .lang-toggle { display: none; }
+
+.feed-side__intro { margin-block-start: 0.55em; font-size: 0.875em; line-height: 1.6; color: var(--muted); }
+.feed-side__pages { margin-block-start: 1.1em; padding-block-start: 1em; border-block-start: 1px solid var(--border); }
+.feed-side__links { margin: 0; padding: 0; list-style: none; }
+.feed-side__links a {
+  display: block;
+  margin: 0 -0.6em;
+  padding: 0.4em 0.6em;
+  border-radius: var(--radius-inner);
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: none;
+}
+.feed-side__links a:hover { background: var(--hover-bg); }
+/* the current page: heavier and underlined, not told by colour */
+.feed-side__links a[aria-current] {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
 
 .cols { display: flex; flex-wrap: wrap; gap: 1.5em; }
 .cols > .card { flex: 1 1 26em; min-width: 0; }
 .col-title { margin: 0.25em 0 0.15em; font-size: 1.25em; font-weight: 600; letter-spacing: -0.01em; }
+.count-note { font-weight: 400; color: var(--muted); }
 
-.item { padding: 1em 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.35em; }
-.item:first-of-type { margin-top: 0.6em; }
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25em 0.9em;
-  align-items: baseline;
-  font-family: var(--font-label);
-  font-size: 0.82em;
-  font-weight: 500;
-  color: var(--muted);
-}
-.meta .src { color: var(--text); }
-.meta .kind { color: var(--accent); }
-.title { font-size: 1.06em; font-weight: 600; line-height: 1.45; color: var(--text); text-decoration: none; }
-.title:hover { color: var(--accent); text-decoration: underline; text-decoration-color: currentColor; }
-/* the source name is a link: underlined, so it is not told by colour alone */
-.meta a.src { color: var(--text); text-decoration: underline; text-decoration-color: var(--border); }
-.meta a.src:hover { color: var(--accent); text-decoration-color: currentColor; }
-.brief { font-size: 0.97em; line-height: 1.7; }
-.detail { margin-top: 0.35em; }
-.detail p { margin: 0 0 0.75em; font-size: 0.97em; line-height: 1.8; }
-.detail p:last-child { margin-bottom: 0.25em; }
-.tag { font-weight: 600; color: var(--text); }
-.detail .tag-line { margin-bottom: 0.3em; }
-ol.points { margin: 0 0 0.75em; padding-left: 1.4em; }
-ol.points li { margin: 0 0 0.45em; font-size: 0.97em; line-height: 1.8; }
-.list .title { font-weight: 500; }
+/* ==========================================================================
+   THE LIST — one card: the Blogs / YouTube tabs on top, then the items. An
+   item is the source name, the title (the link) and the summary in its four
+   labelled parts.
+   ========================================================================== */
+.lists { container-type: inline-size; }
 
-.section-title { margin: 0; font-size: 1.25em; font-weight: 600; letter-spacing: -0.01em; }
-.empty { padding: 1em 0 0; color: var(--muted); }
-
-/* Blogs / YouTube tabs under "All updates". The selected tab is marked by an underline drawn
-   with a border (survives forced colours), not by colour or fill alone. */
-.seg { display: flex; gap: 0.25em; margin-top: 0.9em; border-bottom: 1px solid var(--border); }
+/* The selected tab is marked by an underline drawn with a border (survives forced colours),
+   not by colour or fill alone. The line height is set here: without it, a tab whose label is
+   Chinese is 11 px taller than one whose label is Latin, and everything below would move
+   when the language is switched. */
+/* the tabs and the date stay on one row; at a large text size they wrap instead of running
+   off the screen */
+.seg-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0 1em; margin-block-start: -0.5em; border-block-end: 1px solid var(--border); }
+/* the tab list takes its natural width first (flex-basis auto): when the row is too narrow, the
+   date moves to the next row before the tabs themselves wrap */
+.seg { flex: 1 1 auto; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.25em; }
+/* on an older day's page: which day this is, at the end of the tab row */
+.seg-row__date { flex: 0 1 auto; padding: 0.55em 0; font-size: 0.95em; line-height: 1.6; color: var(--muted); }
 .seg [role="tab"] {
   position: relative;
   flex: none;
   border: 0;
   background: transparent;
   color: var(--muted);
-  font: 500 0.95em var(--font-body);
+  font: 500 0.95em/1.6 var(--font-body);
   padding: 0.55em 0.9em;
   border-radius: var(--radius-inner) var(--radius-inner) 0 0;
   cursor: pointer;
@@ -324,22 +496,87 @@ ol.points li { margin: 0 0 0.45em; font-size: 0.97em; line-height: 1.8; }
 .seg [role="tab"]:hover { background: var(--hover-bg); color: var(--text); }
 .seg [aria-selected="true"] { color: var(--text); }
 .seg [role="tab"]:focus-visible { outline-offset: -2px; }
-.panel .item:first-of-type { border-top: 0; margin-top: 0.2em; }
 .seg [aria-selected="true"]::after {
   content: "";
   position: absolute;
   inset: auto 0 -1px;
-  border-bottom: 2px solid var(--text);
+  border-block-end: 2px solid var(--text);
 }
-.seg .count { color: var(--muted); font-weight: 400; margin-left: 0.2em; }
-.panel-title { margin: 1.2em 0 0; font-size: 1.05em; font-weight: 600; }
-.js .panel-title { display: none; }
+.seg .count { color: var(--muted); font-weight: 400; margin-inline-start: 0.2em; }
+/* the heading of each list: shown without JS (both lists are open then, and there are no
+   tabs); with the tabs it stays for screen readers, between the page's h1 and the items' h3.
+   The panel that is not selected is hidden="until-found" (app.js), so find-in-page still
+   reaches its text. */
+.panel-title { margin: 1.4em 0 0; font-size: 1.2em; font-weight: 600; letter-spacing: -0.01em; }
+.panel:first-of-type .panel-title { margin-block-start: 0.4em; }
+.js .panel-title {
+  position: absolute;
+  clip-path: inset(50%);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  white-space: nowrap;
+}
 .no-js .seg { display: none; }
+.no-js .seg-row { border-block-end: 0; }
 .js [data-js-hidden] { display: none; }
 
-/* Forced colours (Windows contrast themes): fills vanish, so the current page tab gets a frame */
+.item { padding: 1.1em 0; border-block-start: 1px solid var(--border); }
+.panel > .item:first-of-type { border-block-start: 0; }
+.panel > .item:last-child { padding-block-end: 0.2em; }
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 0.9em;
+  align-items: baseline;
+  margin-block-end: 0.35em;
+  font-family: var(--font-label);
+  font-size: 0.82em;
+  font-weight: 500;
+  color: var(--muted);
+}
+.meta .src { color: var(--text); }
+/* a name longer than the column (only at a large text size) may shrink and break, instead of
+   holding the column open */
+.meta > * { min-inline-size: 0; }
+.item__body { display: flex; flex-direction: column; gap: 0.35em; min-width: 0; }
+/* the source name hangs in a column of its own, like the dates and venues on the homepage,
+   when the card is wide enough */
+@container (min-width: 38em) {
+  .item { display: grid; grid-template-columns: 10.5em minmax(0, 1fr); column-gap: 1.5em; }
+  .meta { flex-direction: column; align-items: flex-start; gap: 0.15em; margin: 0; padding-block-start: 0.32em; overflow-wrap: anywhere; }
+}
+/* the item's heading; it wraps like the running text, not balanced like the section headings */
+.title { margin: 0; font-size: 1.06em; font-weight: 600; line-height: 1.45; text-wrap: wrap; }
+.title a { color: var(--text); text-decoration: none; }
+.title a:hover { color: var(--accent); text-decoration: underline; text-decoration-color: currentColor; }
+/* the source name is a link: underlined (3:1 against the card), so it is not told by colour alone */
+.meta a.src { color: var(--text); text-decoration: underline; text-decoration-color: var(--link-underline); }
+.meta a.src:hover { color: var(--accent); text-decoration-color: currentColor; }
+.brief { font-size: 0.97em; line-height: 1.7; }
+/* the summary keeps a readable line length (about 75 characters of English, 37 of Chinese; the
+   guide asks for at most 80); the title may use the whole column */
+.item__body > .brief, .item__body > .detail { max-inline-size: 36em; }
+.detail p { margin: 0 0 0.75em; font-size: 0.97em; line-height: 1.8; }
+.detail p:last-child { margin-block-end: 0.25em; }
+.tag { font-weight: 600; color: var(--text); }
+.detail .tag-line { margin-block-end: 0.3em; }
+ol.points { margin: 0 0 0.75em; padding-inline-start: 1.4em; }
+ol.points li { margin: 0 0 0.45em; font-size: 0.97em; line-height: 1.8; }
+
+.section-title { margin: 0; font-size: 1.25em; font-weight: 600; letter-spacing: -0.01em; }
+.empty { padding: 0.6em 0 0; color: var(--muted); }
+
+/* older / newer day, at the end of a day page */
+.day-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1em; padding: 0 0.35em; }
+.day-nav a { padding: 0.4em 0.6em; border-radius: var(--radius-inner); color: var(--text); font-size: 0.95em; font-weight: 500; text-decoration: none; }
+.day-nav a:hover { background: var(--hover-bg); }
+
+/* Forced colours (Windows contrast themes): fills vanish, so the current tab gets a frame and
+   the solid button a border; the translucent surfaces become opaque */
 @media (forced-colors: active) {
-  .tabbar__tab.is-active::after {
+  .tabbar__tab[aria-current]::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -347,21 +584,145 @@ ol.points li { margin: 0 0 0.45em; font-size: 0.97em; line-height: 1.8; }
     border-radius: inherit;
     pointer-events: none;
   }
-  .tabbar, .skip-link { background: Canvas; }
+  .tabbar::before { background: Canvas; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .skip-link { background: Canvas; }
+  .back-to-top { border: 1px solid ButtonText; }
 }
 
-table.sources { width: 100%; border-collapse: collapse; font-size: 0.92em; margin-top: 0.8em; }
-table.sources th, table.sources td { text-align: left; padding: 0.55em 0.6em 0.55em 0; border-top: 1px solid var(--border); vertical-align: top; }
-table.sources th { font: 500 0.8em var(--font-label); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+/* Sources: the name column takes the room that is left; a long name breaks after a dot or a
+   slash (build.py puts <wbr> there), the date never breaks, the status and the headings
+   break only between words.
+   Narrow cards get narrower gaps, so the table fits a 320 px phone without scrolling sideways
+   (the wrapper still scrolls if it ever has to). The header row has no top line: the tab
+   row's line is right above it. */
+table.sources { width: 100%; border-collapse: collapse; font-size: 0.92em; margin-block-start: 0.3em; }
+table.sources th, table.sources td { text-align: start; padding-block: 0.55em; padding-inline: 0 1em; border-block-start: 1px solid var(--border); vertical-align: top; }
+table.sources th:last-child, table.sources td:last-child { padding-inline-end: 0; }
+table.sources thead th { border-block-start: 0; }
+table.sources td:first-child { width: 100%; }
+table.sources td:nth-child(2) { white-space: nowrap; }
+/* the headings and the status break between words only, never between two Chinese characters */
+table.sources th, table.sources td:nth-child(3) { word-break: keep-all; }
+@container (max-width: 30em) {
+  table.sources th, table.sources td { padding-inline-end: 0.6em; }
+}
+table.sources th { font: 500 0.8em/1.6 var(--font-label); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
 .table-scroll { overflow-x: auto; }
 .bad { color: var(--accent); }
 
 ul.days { list-style: none; margin: 0.8em 0 0; padding: 0; }
-ul.days li { padding: 0.55em 0; border-top: 1px solid var(--border); display: flex; gap: 1em; flex-wrap: wrap; }
+ul.days li { padding: 0.55em 0; border-block-start: 1px solid var(--border); display: flex; gap: 1em; flex-wrap: wrap; }
 
-footer { text-align: center; font-size: 0.85em; color: var(--muted); }
+/* Touch screens: every control is at least 44 px, the target size the guides ask for on touch
+   (WCAG 2.5.5). Only heights grow; widths and labels stay as they are. */
+@media (pointer: coarse) {
+  /* the site's tab bar: the same rules as the homepage's _theme.scss (the floating toggle on
+     small screens is 2.6em, already more) */
+  .tabbar__tab { display: flex; align-items: center; min-block-size: 44px; }
+  .theme-toggle { min-inline-size: 44px; min-block-size: 44px; }
+  .lang-toggle, .seg [role="tab"] { min-inline-size: 44px; min-block-size: 44px; }
+  .lang-toggle { align-items: center; }
+  .feed-side__links a, .day-nav a { display: flex; align-items: center; min-block-size: 44px; }
+}
 
+/* ==========================================================================
+   NARROWER SCREENS — the same breakpoints and tab-bar rules as the homepage.
+   ========================================================================== */
+
+/* 72em: a slightly narrower left column */
+@media (max-width: 72em) {
+  .layout { grid-template-columns: 17.5rem minmax(0, 1fr); }
+}
+
+/* just past the one-column breakpoint the content column is at its narrowest: tighter tabs */
+@media (min-width: 58.0625em) and (max-width: 62em) {
+  .tabbar__tab { padding: 0.5em 1em; }
+}
+
+/* 58em: one column. The tab bar is fixed to the top of the viewport; the side panel becomes a short
+   header under the bar. */
+@media (max-width: 58em) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "left"
+      "center"
+      "footer";
+    /* room for the fixed tab bar, more when it is taller (app.js keeps --tabbar-block-size at
+       its height); as on the homepage */
+    margin-block-start: max(5em, calc(var(--tabbar-block-size, 0px) + 1.5em));
+  }
+  .layout__left { position: static; }
+  .tabbar { position: fixed; inset-block-start: 0.75em; inset-inline-start: 1.25em; inset-inline-end: 1.25em; }
+
+  .feed-side {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 0.4em 1em;
+    max-height: none;
+    margin: -0.2em 0 -0.4em;
+    padding: 0 0.35em;
+    border: 0;
+    background: none;
+    overflow: visible;
+  }
+  /* first row: the title and the language switch; then the introduction; then the links */
+  .feed-side__top { display: contents; }
+  .feed-side__title { grid-column: 1; grid-row: 1; }
+  .lang-toggle { grid-column: 2; grid-row: 1; margin-block: 0; margin-inline: 0 -0.5em; }
+  .feed-side__intro { grid-column: 1 / -1; grid-row: 2; margin: 0; }
+  .feed-side__pages { grid-column: 1 / -1; grid-row: 3; margin: 0; padding: 0; border: 0; }
+  .feed-side__links { display: flex; flex-wrap: wrap; gap: 0 1.4em; }
+  .feed-side__links a { margin: 0; padding: 0.2em 0; text-decoration: underline; text-decoration-color: var(--link-underline); }
+}
+
+/* one column on a touch screen: the bar is taller (44 px tabs), the same gap below it */
+@media (max-width: 58em) and (pointer: coarse) {
+  .layout { margin-block-start: max(5.6em, calc(var(--tabbar-block-size, 0px) + 1.5em)); }
+}
+
+/* 40em: five tabs and the toggle do not fit one row. The tabs get less padding and the theme
+   toggle leaves the bar for a floating glass button in the bottom-right corner, with
+   back-to-top one gap above it. At the default text size all five tabs fit one row down to
+   320 px; with a larger text size they wrap onto a second row instead of hiding behind a
+   sideways scroll, and the page's top margin follows the taller bar (app.js). */
+@media (max-width: 40em) {
+  .tabbar__tab { padding: 0.5em 0.55em; }
+  .theme-toggle {
+    position: fixed;
+    inset-inline-end: 1.5em;
+    inset-block-end: 1.5em;
+    z-index: 40;
+    width: 2.6em;
+    height: 2.6em;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-float);
+  }
+  .theme-toggle:hover { background: var(--card-bg); }
+  .back-to-top { inset-block-end: calc(1.5em + 2.6em + 0.6em); }
+}
+@media (max-width: 40em) and (prefers-reduced-transparency: reduce) {
+  .theme-toggle { background: var(--card-bg); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@media (max-width: 40em) and (forced-colors: active) {
+  .theme-toggle { border-color: ButtonText; background: Canvas; -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+/* 30em: phones. Less padding everywhere, and the tabs shrink with the viewport between two
+   limits so that all five fit down to 320 px. */
 @media (max-width: 30em) {
+  .layout { padding: 0 0.85em; }
   .card { padding: 1.3em 1.2em; }
-  .tabbar__tab { padding: 0.5em 0.8em; }
+  .feed-side { padding: 0 0.35em; }
+  .tabbar { inset-inline-start: 0.85em; inset-inline-end: 0.85em; padding: 0.3em; }
+  .tabbar__tabs { gap: 0.2em; justify-content: space-between; }
+  .tabbar__tab { padding: 0.5em 0.35em; font-size: clamp(0.68em, 3.4vw, 0.92em); }
 }

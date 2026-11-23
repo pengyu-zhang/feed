@@ -15,6 +15,10 @@ WORK = ROOT / "work"          # scratch, not committed (holds article text)
 SITE = ROOT / "site"          # build output, deployed to GitHub Pages
 STATE_FILE = DATA / "state.json"
 STATUS_FILE = DATA / "sources_status.json"
+# YouTube, written on the owner's PC by youtube.py, never by the GitHub runs
+VIDEOS = DATA / "videos"
+VIDEO_STATE_FILE = DATA / "youtube_state.json"
+VIDEO_STATUS_FILE = DATA / "youtube_status.json"
 ITEMS_FILE = WORK / "items.json"
 
 
