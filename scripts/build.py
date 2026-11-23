@@ -15,9 +15,6 @@ from zoneinfo import ZoneInfo
 from common import DAYS, ROOT, SITE, STATUS_FILE, load_json, load_yaml
 
 WEEKDAY_ZH = "一二三四五六日"
-FONTS = ("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500"
-         "&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap")
-
 MOON = ('<svg class="icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
         'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
         '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>')
@@ -28,11 +25,17 @@ SUN = ('<svg class="icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentCo
        '<line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>'
        '<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>')
 
-# Runs before first paint so the page never flashes the wrong theme or language.
-PREPAINT = """<script>(function(){var r=document.documentElement,t=null,l=null;
-try{t=localStorage.getItem('theme');l=localStorage.getItem('feed-lang');}catch(e){}
-if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
-r.dataset.theme=t;r.dataset.lang=(l==='en')?'en':'zh';if(l==='en')r.lang='en';})();</script>"""
+# Runs before first paint, right after the color-scheme meta: swaps no-js for js, restores a pinned
+# colour scheme (shared with the homepage: same origin, key "theme") and the language, so the page
+# never flashes the wrong scheme or language. Page background hexes match --bg-page in style.css.
+PREPAINT = """<script>(function(){var r=document.documentElement;r.className=r.className.replace(/\\bno-js\\b/,'js');
+window.syncThemeColor=function(t){var m=document.querySelectorAll('meta[name="theme-color"]');
+for(var i=0;i<m.length;i++){var s=t||(m[i].media.indexOf('dark')>-1?'dark':'light');m[i].setAttribute('content',s==='dark'?'#151410':'#f4f1ea');}};
+var t=null,l=null;try{t=localStorage.getItem('theme');l=localStorage.getItem('feed-lang');}catch(e){}
+if(t==='light'||t==='dark'){document.querySelector('meta[name="color-scheme"]').content=t;window.syncThemeColor(t);}
+if(l==='en'){r.dataset.lang='en';r.lang='en';}else{r.dataset.lang='zh';}})();</script>"""
+
+DESCRIPTION = "鹏宇的每日阅读摘要：博客和 YouTube 视频的中英文转述。"
 
 
 def bi(zh, en):
@@ -50,30 +53,41 @@ def date_label(iso):
 def page(title_zh, title_en, active, body):
     tabs = [("index.html", "今天", "Today"), ("archive.html", "往期", "Archive"),
             ("sources.html", "来源", "Sources")]
-    nav = "".join(
-        f'<li><a class="tabbar__tab{" is-active" if href == active else ""}" href="{href}"'
-        f'{" aria-current=\"page\"" if href == active else ""}>{bi(zh, en)}</a></li>'
-        for href, zh, en in tabs)
+    items = []
+    for href, zh, en in tabs:
+        on = href == active
+        cls = "tabbar__tab is-active" if on else "tabbar__tab"
+        cur = ' aria-current="page"' if on else ""
+        items.append(f'<li><a class="{cls}" href="{href}"{cur}>{bi(zh, en)}</a></li>')
+    nav = "".join(items)
     return f"""<!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(title_en)} · Feed</title>
+<meta name="description" content="{escape(DESCRIPTION)}">
+<meta name="robots" content="noindex">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f1ea">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151410">
+<meta name="color-scheme" content="light dark">
 {PREPAINT}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="{FONTS}">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/plex-sans-sc.css">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 </head>
 <body>
+<a class="skip-link" href="#content">{bi("跳到正文", "Skip to content")}</a>
 <div class="wrap">
 <nav class="tabbar" aria-label="Feed">
 <ul class="tabbar__tabs">{nav}</ul>
 <button type="button" id="lang-toggle" class="icon-btn" aria-label="切换语言 / Switch language" title="切换语言 / Switch language"><span data-l="zh">EN</span><span data-l="en">中</span></button>
 <button type="button" id="theme-toggle" class="icon-btn" aria-label="切换亮色和暗色 / Toggle light and dark" title="切换亮色和暗色 / Toggle light and dark">{MOON}{SUN}</button>
 </nav>
-<main style="display:flex;flex-direction:column;gap:1.5em">
+<main id="content" style="display:flex;flex-direction:column;gap:1.5em">
 {body}
 </main>
 <footer>{bi("摘要由模型生成，可能有误，以原文为准。每条都附原文链接。",
@@ -177,15 +191,22 @@ def day_body(day, picks_on=True):
         return "".join(item_html(it, compact=True, detail=it["id"] not in picked) for it in rows) or \
             f'<p class="empty">{bi(*empty)}</p>'
 
-    seg = (f'<div class="seg" role="tablist">'
-           f'<button type="button" role="tab" data-tab="blog" aria-selected="true">{bi("博客", "Blogs")}'
-           f' <span class="count">{len(blogs)}</span></button>'
-           f'<button type="button" role="tab" data-tab="video" aria-selected="false">YouTube'
-           f' <span class="count">{len(videos)}</span></button></div>')
+    def tab(key, label, count, on):
+        return (f'<button type="button" role="tab" id="tab-{key}" data-tab="{key}" data-panel="panel-{key}"'
+                f' aria-selected="{"true" if on else "false"}" tabindex="{0 if on else -1}">{label}'
+                f' <span class="count">{count}</span></button>')
+
+    seg = (f'<div class="seg" role="tablist" aria-label="{escape("Blogs / YouTube")}">'
+           + tab("blog", bi("博客", "Blogs"), len(blogs), True)
+           + tab("video", "YouTube", len(videos), False) + "</div>")
+    # Without JS both panels show, each under its own heading; with JS the tabs switch them
+    # (data-js-hidden keeps the second one out of the first paint until app.js takes over).
     all_sec = (f'<section class="card list"><h2 class="section-title">{bi("全部更新", "All updates")}</h2>{seg}'
-               f'<div class="panel" data-panel="blog">'
+               f'<div class="panel" id="panel-blog" role="tabpanel" aria-labelledby="tab-blog">'
+               f'<h3 class="panel-title">{bi("博客", "Blogs")}</h3>'
                f'{listing(blogs, ("这段时间没有新文章。", "No new posts in this period."))}</div>'
-               f'<div class="panel" data-panel="video" hidden>'
+               f'<div class="panel" id="panel-video" role="tabpanel" aria-labelledby="tab-video" data-js-hidden>'
+               f'<h3 class="panel-title">YouTube</h3>'
                f'{listing(videos, ("这段时间没有新视频。", "No new videos in this period."))}</div></section>')
     return head + cols + all_sec
 
@@ -193,7 +214,7 @@ def day_body(day, picks_on=True):
 def archive_body(days):
     rows = "".join(
         f'<li><a href="{d["date"]}.html">{bi(*date_label(d["date"]))}</a>'
-        f'<span class="muted">{bi(f"{len(d["items"])} 条", f"{len(d["items"])} items")}</span></li>'
+        f'<span class="muted">{bi(str(len(d["items"])) + " 条", str(len(d["items"])) + " items")}</span></li>'
         for d in days)
     return (f'<section class="card"><h1 class="section-title">{bi("往期", "Archive")}</h1>'
             f'<ul class="days">{rows}</ul></section>')
@@ -243,11 +264,9 @@ def sources_body(groups, status):
 
 
 def main():
-    if SITE.exists():
-        shutil.rmtree(SITE)
-    (SITE / "assets").mkdir(parents=True)
-    for f in (ROOT / "assets").iterdir():
-        shutil.copy(f, SITE / "assets" / f.name)
+    # Overwrite in place when the old build cannot be removed (a folder where deleting is not allowed)
+    shutil.rmtree(SITE, ignore_errors=True)
+    shutil.copytree(ROOT / "assets", SITE / "assets", dirs_exist_ok=True)
 
     days = sorted((load_json(p, None) for p in DAYS.glob("*.json")), key=lambda d: d["date"], reverse=True)
     days = [d for d in days if d]

@@ -1,45 +1,134 @@
-/* Tokens copied from pengyu-zhang.github.io (_sass/_theme.scss) so both sites read as one. */
+/* Design tokens and colour-scheme handling follow pengyu-zhang.github.io (_sass/_theme.scss), so
+   both sites read as one and share one theme choice (same origin, localStorage key "theme").
+
+   COLOUR SCHEME. The page follows the OS unless the visitor pins a scheme. The pin is the content
+   of <meta name="color-scheme"> ("light dark" = follow the OS, "light"/"dark" = pinned); app.js
+   writes it, the inline script in the head restores a saved pin before first paint. The rules
+   below map the meta to the CSS color-scheme property, which light-dark() and native UI follow. */
+
+/* self-hosted IBM Plex, the same files the homepage serves (SIL Open Font License). Chinese is
+   IBM Plex Sans SC, same family, from fonts/plex-sans-sc.css (split files, loaded per character). */
+@font-face {
+  font-family: "IBM Plex Sans"; font-style: normal; font-weight: 100 700; font-display: swap;
+  src: url("fonts/ibm-plex-sans-latin-ext-var.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "IBM Plex Sans"; font-style: normal; font-weight: 100 700; font-display: swap;
+  src: url("fonts/ibm-plex-sans-latin-var.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("fonts/ibm-plex-mono-latin-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("fonts/ibm-plex-mono-latin-500.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
-  color-scheme: light;
-  --accent: #8a2c3c;
-  --accent-hover: #73222f;
-  --link-underline: #ad6b74;
-  --bg-page: #f4f1ea;
-  --card-bg: #fffdf8;
-  --card-border: #d6cdb9;
-  --text: #26231d;
-  --muted: #6a6356;
-  --border: #e7e0d2;
+  color-scheme: light dark;
+
+  --accent-light:         #8a2c3c;
+  --accent-dark:          #f09aa6;
+  --accent-hover-light:   #73222f;
+  --accent-hover-dark:    #f4b1ba;
+  --link-underline-light: #ad6b74;
+  --link-underline-dark:  #b1747b;
+  --bg-page-light:        #f4f1ea;
+  --bg-page-dark:         #151410;
+  --card-bg-light:        #fffdf8;
+  --card-bg-dark:         #1d1b16;
+  --card-border-light:    #d6cdb9;
+  --card-border-dark:     #3d382d;
+  --text-light:           #26231d;
+  --text-dark:            #e3ddd0;
+  --muted-light:          #6a6356;
+  --muted-dark:           #a69e8d;
+  --border-light:         #e7e0d2;
+  --border-dark:          #2e2a22;
+  --hover-bg-light:       rgba(38, 35, 29, 0.08);
+  --hover-bg-dark:        rgba(227, 221, 208, 0.1);
+  --glass-bg-light:       rgba(255, 253, 248, 0.84);
+  --glass-bg-dark:        rgba(29, 27, 22, 0.84);
+
   --ink: var(--text);
   --on-ink: var(--card-bg);
-  --hover-bg: rgba(38, 35, 29, 0.08);
-  --glass-bg: rgba(255, 253, 248, 0.84);
   --shadow-float: 0 1px 2px rgba(60, 50, 30, 0.08), 0 6px 18px rgba(60, 50, 30, 0.08);
   --radius-card: 6px;
   --radius-inner: 4px;
-  --font-body: "IBM Plex Sans", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-label: "IBM Plex Mono", "Noto Sans SC", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  /* Latin in IBM Plex Sans, Chinese in IBM Plex Sans SC; system fonts while they load */
+  --font-body: "IBM Plex Sans", "IBM Plex Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-label: "IBM Plex Mono", "IBM Plex Sans SC", ui-monospace, "SFMono-Regular", Consolas, "PingFang SC", "Microsoft YaHei", monospace;
 }
 
-[data-theme="dark"] {
-  color-scheme: dark;
-  --accent: #f09aa6;
-  --accent-hover: #f4b1ba;
-  --link-underline: #b1747b;
-  --bg-page: #151410;
-  --card-bg: #1d1b16;
-  --card-border: #3d382d;
-  --text: #e3ddd0;
-  --muted: #a69e8d;
-  --border: #2e2a22;
-  --hover-bg: rgba(227, 221, 208, 0.1);
-  --glass-bg: rgba(29, 27, 22, 0.84);
+/* a pinned scheme overrides the OS setting */
+:root:has(> head > meta[name="color-scheme"][content="light"]) { color-scheme: light; }
+:root:has(> head > meta[name="color-scheme"][content="dark"]) { color-scheme: dark; }
+
+@supports (color: light-dark(white, black)) {
+  :root {
+    --accent: light-dark(var(--accent-light), var(--accent-dark));
+    --accent-hover: light-dark(var(--accent-hover-light), var(--accent-hover-dark));
+    --link-underline: light-dark(var(--link-underline-light), var(--link-underline-dark));
+    --bg-page: light-dark(var(--bg-page-light), var(--bg-page-dark));
+    --card-bg: light-dark(var(--card-bg-light), var(--card-bg-dark));
+    --card-border: light-dark(var(--card-border-light), var(--card-border-dark));
+    --text: light-dark(var(--text-light), var(--text-dark));
+    --muted: light-dark(var(--muted-light), var(--muted-dark));
+    --border: light-dark(var(--border-light), var(--border-dark));
+    --hover-bg: light-dark(var(--hover-bg-light), var(--hover-bg-dark));
+    --glass-bg: light-dark(var(--glass-bg-light), var(--glass-bg-dark));
+  }
+}
+
+/* browsers without light-dark(): the same result from the media query and the pin */
+@supports not (color: light-dark(white, black)) {
+  :root {
+    --accent: var(--accent-light); --accent-hover: var(--accent-hover-light);
+    --link-underline: var(--link-underline-light); --bg-page: var(--bg-page-light);
+    --card-bg: var(--card-bg-light); --card-border: var(--card-border-light);
+    --text: var(--text-light); --muted: var(--muted-light); --border: var(--border-light);
+    --hover-bg: var(--hover-bg-light); --glass-bg: var(--glass-bg-light);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not(:has(> head > meta[name="color-scheme"][content="light"])) {
+      --accent: var(--accent-dark); --accent-hover: var(--accent-hover-dark);
+      --link-underline: var(--link-underline-dark); --bg-page: var(--bg-page-dark);
+      --card-bg: var(--card-bg-dark); --card-border: var(--card-border-dark);
+      --text: var(--text-dark); --muted: var(--muted-dark); --border: var(--border-dark);
+      --hover-bg: var(--hover-bg-dark); --glass-bg: var(--glass-bg-dark);
+    }
+  }
+  :root:has(> head > meta[name="color-scheme"][content="dark"]) {
+    --accent: var(--accent-dark); --accent-hover: var(--accent-hover-dark);
+    --link-underline: var(--link-underline-dark); --bg-page: var(--bg-page-dark);
+    --card-bg: var(--card-bg-dark); --card-border: var(--card-border-dark);
+    --text: var(--text-dark); --muted: var(--muted-dark); --border: var(--border-dark);
+    --hover-bg: var(--hover-bg-dark); --glass-bg: var(--glass-bg-dark);
+  }
+}
+
+/* dark-only values that are not colours: the floating shadow and the toggle icon */
+@media (prefers-color-scheme: dark) {
+  :root:not(:has(> head > meta[name="color-scheme"][content="light"])) {
+    --shadow-float: 0 8px 30px rgba(0, 0, 0, 0.45);
+    --icon-moon: none; --icon-sun: block;
+  }
+}
+:root:has(> head > meta[name="color-scheme"][content="dark"]) {
   --shadow-float: 0 8px 30px rgba(0, 0, 0, 0.45);
+  --icon-moon: none; --icon-sun: block;
 }
 
 @media (prefers-contrast: more) {
-  :root { --card-border: #8f8672; --border: #8f8672; }
-  [data-theme="dark"] { --card-border: #6b6452; --border: #6b6452; }
+  :root {
+    --card-border-light: #8f8672; --border-light: #8f8672;
+    --card-border-dark: #6b6452;  --border-dark: #6b6452;
+  }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -54,6 +143,43 @@ body {
 h1, h2, h3 { line-height: 1.25; }
 p { margin: 0; }
 
+/* line breaking: even heading lines; running text does not end on a single short word */
+h1, h2, h3 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+
+::selection { background: var(--accent); color: var(--card-bg); }
+
+/* keyboard focus ring (keyboard only, not mouse clicks) */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* skip link: first focusable element, off-screen until focused */
+.skip-link {
+  position: fixed;
+  top: 0.75em;
+  left: 0.75em;
+  z-index: 50;
+  padding: 0.55em 1.1em;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-inner);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-float);
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-property: opacity, color, background, background-color, border-color, box-shadow !important;
+    transition-duration: 0.15s !important;
+  }
+}
+
 a {
   color: var(--accent);
   text-decoration-thickness: 1px;
@@ -63,8 +189,10 @@ a {
 a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
 
 /* language switch: both languages are in the page, the root attribute picks one */
-html[data-lang="zh"] [data-l="en"],
+html:not([data-lang="en"]) [data-l="en"],
 html[data-lang="en"] [data-l="zh"] { display: none; }
+/* without JS: no toggles (they would do nothing) and every panel shows */
+.no-js .icon-btn { display: none; }
 
 .wrap {
   max-width: 78rem;
@@ -102,6 +230,7 @@ html[data-lang="en"] [data-l="zh"] { display: none; }
 }
 .tabbar__tab:hover { background: var(--hover-bg); color: var(--text); }
 .tabbar__tab.is-active, .tabbar__tab.is-active:hover { background: var(--ink); color: var(--on-ink); }
+.tabbar__tab { position: relative; }
 
 .icon-btn {
   flex: none;
@@ -120,9 +249,8 @@ html[data-lang="en"] [data-l="zh"] { display: none; }
 }
 .icon-btn:hover { background: var(--hover-bg); }
 .icon-btn svg { width: 1.1em; height: 1.1em; display: block; }
-.icon-btn .icon--sun { display: none; }
-[data-theme="dark"] .icon-btn .icon--sun { display: block; }
-[data-theme="dark"] .icon-btn .icon--moon { display: none; }
+.icon-btn .icon--moon { display: var(--icon-moon, block); }
+.icon-btn .icon--sun { display: var(--icon-sun, none); }
 
 .card {
   background: var(--card-bg);
@@ -163,8 +291,9 @@ html[data-lang="en"] [data-l="zh"] { display: none; }
 .meta .kind { color: var(--accent); }
 .title { font-size: 1.06em; font-weight: 600; line-height: 1.45; color: var(--text); text-decoration: none; }
 .title:hover { color: var(--accent); text-decoration: underline; text-decoration-color: currentColor; }
-.meta a.src { color: var(--text); text-decoration: none; }
-.meta a.src:hover { color: var(--accent); text-decoration: underline; }
+/* the source name is a link: underlined, so it is not told by colour alone */
+.meta a.src { color: var(--text); text-decoration: underline; text-decoration-color: var(--border); }
+.meta a.src:hover { color: var(--accent); text-decoration-color: currentColor; }
 .brief { font-size: 0.97em; line-height: 1.7; }
 .detail { margin-top: 0.35em; }
 .detail p { margin: 0 0 0.75em; font-size: 0.97em; line-height: 1.8; }
@@ -178,12 +307,48 @@ ol.points li { margin: 0 0 0.45em; font-size: 0.97em; line-height: 1.8; }
 .section-title { margin: 0; font-size: 1.25em; font-weight: 600; letter-spacing: -0.01em; }
 .empty { padding: 1em 0 0; color: var(--muted); }
 
-.seg { display: inline-flex; gap: 0.25em; margin-top: 0.9em; padding: 0.25em; border: 1px solid var(--card-border); border-radius: var(--radius-inner); }
-.seg button { border: 0; background: transparent; color: var(--text); font: 500 0.92em var(--font-body, inherit); padding: 0.4em 1em; border-radius: var(--radius-inner); cursor: pointer; }
-.seg button:hover { background: var(--hover-bg); }
-.seg button[aria-selected="true"] { background: var(--ink); color: var(--on-ink); }
-.seg .count { opacity: 0.7; font-weight: 400; margin-left: 0.2em; }
-.panel[hidden] { display: none; }
+/* Blogs / YouTube tabs under "All updates". The selected tab is marked by an underline drawn
+   with a border (survives forced colours), not by colour or fill alone. */
+.seg { display: flex; gap: 0.25em; margin-top: 0.9em; border-bottom: 1px solid var(--border); }
+.seg [role="tab"] {
+  position: relative;
+  flex: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: 500 0.95em var(--font-body);
+  padding: 0.55em 0.9em;
+  border-radius: var(--radius-inner) var(--radius-inner) 0 0;
+  cursor: pointer;
+}
+.seg [role="tab"]:hover { background: var(--hover-bg); color: var(--text); }
+.seg [aria-selected="true"] { color: var(--text); }
+.seg [role="tab"]:focus-visible { outline-offset: -2px; }
+.panel .item:first-of-type { border-top: 0; margin-top: 0.2em; }
+.seg [aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px;
+  border-bottom: 2px solid var(--text);
+}
+.seg .count { color: var(--muted); font-weight: 400; margin-left: 0.2em; }
+.panel-title { margin: 1.2em 0 0; font-size: 1.05em; font-weight: 600; }
+.js .panel-title { display: none; }
+.no-js .seg { display: none; }
+.js [data-js-hidden] { display: none; }
+
+/* Forced colours (Windows contrast themes): fills vanish, so the current page tab gets a frame */
+@media (forced-colors: active) {
+  .tabbar__tab.is-active::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid CanvasText;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  .tabbar, .skip-link { background: Canvas; }
+}
 
 table.sources { width: 100%; border-collapse: collapse; font-size: 0.92em; margin-top: 0.8em; }
 table.sources th, table.sources td { text-align: left; padding: 0.55em 0.6em 0.55em 0; border-top: 1px solid var(--border); vertical-align: top; }
