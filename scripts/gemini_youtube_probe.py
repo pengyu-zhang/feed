@@ -15,7 +15,7 @@ from google import genai
 from google.genai import types
 
 ROOT = Path(__file__).resolve().parents[1]
-client = genai.Client(http_options={"timeout": 900_000, "api_version": "v1beta"})
+client = genai.Client(http_options={"timeout": 600_000, "api_version": "v1beta"})
 
 VIDEOS = [
     {"id": "eqe3ainzPtM", "title": "Why Would Anyone Learn to Code in 2027?", "channel": "Stefan Mischook",
@@ -29,8 +29,7 @@ VIDEOS = [
 
 MODES = [
     ("transcript-only", "gemini-3.5-flash-lite"),
-    ("transcript-only", "gemini-3.6-flash"),
-    ("agentic", "gemini-3.6-flash"),
+    ("agentic", "gemini-3.5-flash-lite"),
 ]
 
 common = (ROOT / "prompts" / "common.md").read_text(encoding="utf-8").strip()
@@ -53,7 +52,7 @@ def video_part(vid, mode, start=None, end=None):
         meta["content_layers"] = [types.VideoMetadataContentLayer.TRANSCRIPT]
     if start is not None:
         meta["start_offset"], meta["end_offset"] = f"{start}s", f"{end}s"
-    kw = {"file_data": types.FileData(file_uri=url)}
+    kw = {"file_data": types.FileData(file_uri=url, mime_type="video/mp4" if mode == "agentic" else None)}
     if meta:
         kw["video_metadata"] = types.VideoMetadata(**meta)
     if mode == "agentic":
@@ -72,7 +71,7 @@ def usage_of(r):
 
 def call(model, parts, json_out=True):
     cfg = types.GenerateContentConfig(response_mime_type="application/json") if json_out else None
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             t0 = time.time()
             r = client.models.generate_content(model=model, contents=types.Content(parts=parts), config=cfg)
@@ -80,27 +79,11 @@ def call(model, parts, json_out=True):
         except Exception as e:  # noqa: BLE001
             err = str(e)[:300]
             print(f"  attempt {attempt + 1}: {err}")
-            if not any(c in err for c in ("503", "429", "500", "timed out", "UNAVAILABLE")):
+            if not any(c in err for c in ("503", "500", "UNAVAILABLE")):
                 return None, 0, err
-            time.sleep(60)
+            time.sleep(30)
     return None, 0, err
 
-
-# 1. Where does the transcript come from? Ask for the first 2 minutes verbatim, print only markers.
-MARKERS = {"gXoqed9VdL8": ["Renick", "Renwick", "Torres", "Tilores", "Tobias Macy", "Tobias Macey"],
-           "Hy7iE1iLmxw": ["價錢", "价钱", "這支影片", "这支影片", "十分之一"]}
-for vid, marks in MARKERS.items():
-    parts = [video_part(vid, "transcript-only", 0, 120),
-             types.Part(text="Output the transcript of this clip verbatim, exactly as given, no summary.")]
-    r, dt, err = call("gemini-3.6-flash", parts, json_out=False)
-    if err:
-        print(f"PROVENANCE {vid}: ERROR {err}")
-        continue
-    text = r.text or ""
-    found = {m: (m in text) for m in marks}
-    print(f"PROVENANCE {vid}: chars={len(text)} seconds={dt:.0f} markers={json.dumps(found, ensure_ascii=False)} "
-          f"usage={json.dumps(usage_of(r))}")
-    time.sleep(10)
 
 # 2. Summaries
 for model_mode, model in MODES:
