@@ -91,6 +91,26 @@ def paragraphs(items):
     return "".join(f"<p>{escape(x)}</p>" for x in items)
 
 
+LABELS = {"zh": ("背景：", "要点：", "结论："), "en": ("Background: ", "Key points:", "Takeaway: ")}
+
+
+def four_parts(it, lang):
+    """Background, numbered key points and conclusion, as in DIGEST_写作规范 (brief is shown above)."""
+    other = "en" if lang == "zh" else "zh"
+    get = lambda k: it.get(f"{k}_{lang}") or it.get(f"{k}_{other}") or ""
+    bg, pts, end = get("background"), get("points"), get("conclusion")
+    lb = LABELS[lang]
+    html = []
+    if bg:
+        html.append(f'<p><b class="tag">{lb[0]}</b>{escape(bg)}</p>')
+    if pts:
+        html.append(f'<p class="tag-line"><b class="tag">{lb[1]}</b></p><ol class="points">'
+                    + "".join(f"<li>{escape(p)}</li>" for p in pts) + "</ol>")
+    if end:
+        html.append(f'<p><b class="tag">{lb[2]}</b>{escape(end)}</p>')
+    return "".join(html)
+
+
 def item_html(it, compact=False, detail=True):
     kind = bi("博客", "Blog") if it.get("kind") == "blog" else bi("视频", "Video")
     src = escape(it["source"])
@@ -103,15 +123,21 @@ def item_html(it, compact=False, detail=True):
         meta.append(f"<span>{bi('原文较短', 'short source text')}</span>")
     brief_zh = it.get("brief_zh") or it.get("summary_zh") or ""
     brief_en = it.get("brief_en") or it.get("summary_en") or ""
+    structured = bool(it.get("points_zh") or it.get("points_en"))
     if brief_zh or brief_en:
         brief = bi(brief_zh or brief_en, brief_en or brief_zh)
+        if structured:
+            brief = f'<b class="tag">{bi("一句话：", "In one line: ")}</b>{brief}'
     else:
         brief = bi("这条没有生成摘要，点标题看原文。", "No summary for this one. Open the title to read the original.")
     out = [f'<article class="item"><div class="meta">{"".join(meta)}</div>',
            f'<a class="title" href="{escape(it["url"])}" target="_blank" rel="noopener">{escape(it["title"])}</a>',
            f'<p class="brief">{brief}</p>']
+    if detail and structured:
+        out.append(f'<div class="detail"><div data-l="zh">{four_parts(it, "zh")}</div>'
+                   f'<div data-l="en" lang="en">{four_parts(it, "en")}</div></div>')
     dz, de = it.get("detail_zh") or [], it.get("detail_en") or []
-    if detail and (dz or de):
+    if detail and not structured and (dz or de):  # older items written before the four-part structure
         out.append(f'<div class="detail"><div data-l="zh">{paragraphs(dz or de)}</div>'
                    f'<div data-l="en" lang="en">{paragraphs(de or dz)}</div></div>')
     out.append("</article>")

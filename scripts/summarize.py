@@ -12,37 +12,32 @@ import subprocess
 import sys
 from datetime import timedelta
 
-from common import (DAYS, ITEMS_FILE, STATE_FILE, load_json, load_yaml, local_date,
+from common import (DAYS, ITEMS_FILE, ROOT, STATE_FILE, load_json, load_yaml, local_date,
                     now_utc, save_json)
 
 FAKE = os.environ.get("FEED_FAKE_LLM") == "1"
 
-SUMMARY_PROMPT = """You write a daily reading digest for one reader: a machine learning researcher \
-whose first language is Chinese. He wants to understand each post well in Chinese without opening \
-the original. Below are {n} new blog posts. For each post write:
 
-- "brief_zh": one sentence in natural Chinese saying what the post is about and its main point.
-- "detail_zh": a list of 2 to 5 Chinese paragraphs that retell the post in your own words: the \
-question or situation, the main arguments or findings, the key examples, numbers or steps, and the \
-author's conclusion. Scale the length to the post: a short link post gets one paragraph, a long \
-essay gets four or five. Do not translate sentence by sentence and do not quote long passages; \
-explain it the way a well-read friend would. Keep names, product names and technical terms in \
-their original form where that is clearer. Only report what the post says: do not add your own \
-judgement or commentary about the post (no "the author gives no evidence", no "this matters because").
-- "brief_en" and "detail_en": the same in plain, short English sentences. No em dashes.
-- "topics": 1-3 short English topic tags.
 
-Chinese style: plain spoken Chinese, not translated-sounding, no hype, no filler such as \
-"本文介绍了" or "总的来说", Chinese full-width punctuation. If a post is only a short link or \
-quote, explain what it points to and why the author shared it. If the text is cut off, cover what \
-is there and do not invent the rest.
+def load_prompt(name):
+    """prompts/<name>.md with the shared writing rules from prompts/common.md filled in."""
+    common = (ROOT / "prompts" / "common.md").read_text(encoding="utf-8").strip()
+    return (ROOT / "prompts" / f"{name}.md").read_text(encoding="utf-8").replace("$COMMON", common)
 
-Reply with ONLY a JSON array, one object per post, in the same order, each with keys \
-"id", "brief_zh", "detail_zh", "brief_en", "detail_en", "topics". No other text.
 
-POSTS:
-{posts}
-"""
+SUMMARY_FIELDS = ("brief_zh", "background_zh", "conclusion_zh", "brief_en", "background_en", "conclusion_en")
+
+
+def apply_summary(it, r):
+    """Copy one model reply (the four-part structure in prompts/common.md) onto an item."""
+    for k in SUMMARY_FIELDS:
+        it[k] = (r.get(k) or "").strip()
+    it["points_zh"] = as_paragraphs(r.get("points_zh"))
+    it["points_en"] = as_paragraphs(r.get("points_en"))
+    it["topics"] = r.get("topics") or []
+    it.pop("detail_zh", None)
+    it.pop("detail_en", None)
+
 
 PICKS_PROMPT = """You are choosing highlights for a daily reading digest. The reader is a machine \
 learning researcher (knowledge graphs, recommender systems, temporal and multimodal ML) who also \
@@ -99,25 +94,21 @@ def summarize(items, cfg):
         batch = items[i:i + size]
         if FAKE:
             for it in batch:
-                it.update(brief_zh=f"[测试] {it['title']} 的一句话概括。",
-                          detail_zh=["[测试] 第一段详细介绍。", "[测试] 第二段详细介绍。"],
-                          brief_en=f"[Test] One-line summary of {it['title']}.",
-                          detail_en=["[Test] First paragraph.", "[Test] Second paragraph."],
-                          topics=["test"])
+                apply_summary(it, {"brief_zh": f"[测试] {it['title']} 的一句话。", "background_zh": "[测试] 背景。",
+                                   "points_zh": ["[测试] 要点一。", "[测试] 要点二。"], "conclusion_zh": "[测试] 结论。",
+                                   "brief_en": f"[Test] {it['title']}.", "background_en": "[Test] Background.",
+                                   "points_en": ["[Test] Point one.", "[Test] Point two."],
+                                   "conclusion_en": "[Test] Takeaway.", "topics": ["test"]})
             continue
         posts = "\n\n".join(
             f"### id: {it['id']}\nsource: {it['source']}\ntitle: {it['title']}\n"
             f"text:\n{it['text'][:limit]}" for it in batch)
         try:
-            reply = ask_claude(SUMMARY_PROMPT.format(n=len(batch), posts=posts), model)
+            prompt = load_prompt("blog").replace("$N", str(len(batch))).replace("$POSTS", posts)
+            reply = ask_claude(prompt, model)
             by_id = {r.get("id"): r for r in reply if isinstance(r, dict)}
             for it in batch:
-                r = by_id.get(it["id"], {})
-                it["brief_zh"] = (r.get("brief_zh") or "").strip()
-                it["brief_en"] = (r.get("brief_en") or "").strip()
-                it["detail_zh"] = as_paragraphs(r.get("detail_zh"))
-                it["detail_en"] = as_paragraphs(r.get("detail_en"))
-                it["topics"] = r.get("topics") or []
+                apply_summary(it, by_id.get(it["id"], {}))
         except Exception as e:
             print(f"summary batch {i // size} failed: {e}", file=sys.stderr)
 
