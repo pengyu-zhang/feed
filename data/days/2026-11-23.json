@@ -2,6 +2,39 @@
  "date": "2026-11-23",
  "items": [
   {
+   "id": "2e92de5c4e42",
+   "kind": "blog",
+   "source": "troyhunt.com",
+   "source_url": "https://troyhunt.com",
+   "title": "Here's Why Data Breach Disclosure is so Hard: Lessons from Hundreds of Emails with Hacked Companies",
+   "url": "https://www.troyhunt.com/heres-why-data-breach-disclosure-is-so-hard-lessons-from-hundreds-of-emails-with-hacked-companies/",
+   "published": "2026-11-23T07:58:47+00:00",
+   "basis": "full",
+   "brief_zh": "Troy Hunt 让 AI 读了他八年多的邮箱，整理他向 73 家被泄露数据的机构发出的通知邮件及后续往来，指出企业在得知数据泄露后，常见的拖延、淡化事件和交给律师处理等做法，并举出少数处理得好的例子。",
+   "brief_en": "Troy Hunt gave an AI access to eight and a half years of his mailbox to analyse his breach notification emails to 73 organisations. It finds that companies often stall, downplay incidents and hand the matter to lawyers, with a few good examples of quick, open responses.",
+   "detail_zh": [
+    "这篇文章的作者是 Troy Hunt，他经营 Have I Been Pwned（HIBP）网站。他让 Claude 阅读了他 2018 年 3 月到 2026 年 11 月的邮箱，里面有他发给 73 家机构的标准通知邮件，以及几段从网站联系表单开始的对话。文中隐去了公司名称，也对一些细节做了修改。Troy 说，他通常不让 AI 替他写东西，但这篇分析他觉得写得很准确。",
+    "第一封邮件通常很客气，请对方的“信息安全负责人”与他联系。问题是很多公司没有明确的安全事件报告渠道，邮件常被转到客服、退货或info信箱，有的甚至被放进客服工单系统，结果收到的是满意度调查。有的公司隔了将近一个月才回复。一家大型硬件厂商的转交链路有六个环节，从退货信箱、地区社交账号、地区营销人员、总部，一路转到产品安全部门，最后才到法务。遇到邮件石沉大海，Troy 会改用 LinkedIn、Facebook 和 X 联系对方。",
+    "真正回复之后，第一句话常常是“没有发现入侵证据”，而且往往是在还没看到数据之前就说的。有一家公司在收到数据后几周内就确认，是一台暴露在外的数据库服务器泄露了用户信息。另一种做法是淡化事件，说攻击者只是篡改了首页，或者数据来自之前已披露的事件。但 Troy 发现数据中最新的时间戳和篡改当天一致，而且数据涵盖了核心用户系统的 16 张表，包括身份验证和税务文件。还有一种做法是要求提供“样本”或指定格式，这本身合理，但常在几周沉默之后才提出，等于把证明泄露的责任推给了报告的人。有一次，对方的外部顾问甚至请 Troy 帮忙判断数据里的身份信息是真是假。",
+    "一旦对方承认数据可能是真的，接下来的说法几乎都是“我们正在调查”。调查本身必要，但它没有结束时间，也成了暂不公开的理由。有一家公司在数天内就确认拿到了数据，其中包括自己员工的资料，但一周后仍只说在调查，并称“如果确定需要通知，会告知你”。这时数据已经在收集泄露数据的人之间流传，公司外部却没有任何人知道。拖延也一直在累积：有一份公开声明标题提到的事件，实际发生在大约十个月前；另一起事件在大型黑客论坛上流传四个月，公司本身仍未发声。Troy 的看法是，披露不必完整，可以先说目前已知的，之后再更新。",
+    "对话语气的转折点，通常是回复者从安全团队换成外部律师、法律顾问或总法律顾问的时候。问题于是从“我们的客户怎么了”变成“法律上我们是否必须通知”。有一个案例中，一个内部客服门户被搜索引擎索引了一年多，公司法务认为按美国各州规定，姓名、住址、电话和邮箱都不触发通知义务，并称“没有证据显示信息被访问过”，但对方正是从第三方那里拿到这些信息的。Troy 指出，法律门槛只是最低标准，而这些资料恰恰是钓鱼诈骗所需要的。还有律所要求先通话再发布，之后又表示，公开通知会“引导恶意人士去找这个文件”，并坚持双方都认为数据“风险很低”，不应在 HIBP 网站上发布。Troy 提议把条目标记为敏感、不能被搜索，对方拒绝，最后写道：“我们再次主张，你们的行为可能造成伤害。”一家较小的公司则直接表示，决定不做任何沟通或公开披露。文章的核心判断是，这些理由听起来都合理，合在一起却意味着受影响最深的人最后才知道。",
+    "文章也提到几个处理得好的例子。一家小型交通应用几小时内就回复，并且已经发布了披露声明。Troy 指出声明中有一处不够准确，对方很快更新，还感谢他帮忙更正。一家小型订票平台起初怀疑数据来源，看到更多资料后承认自己判断错误，当天就安排视频通话，约一周内直接通知了所有受影响的客户。一家欧洲旅游应用加固了系统、更换了密钥并发布了披露，Troy 因此暂缓加载数据，以便在文章中链接对方的声明。作者的结论是，主要障碍不在技术或法律，而在激励：企业不公开就少了负面新闻，而数据主体每多一天都在不知情的情况下暴露。好的例子有几个共同点：有安全决策权的人快速回应，把数据视为帮助而非威胁，先告诉客户已知的内容，之后再补充细节，而且都不需要律师来主导沟通。"
+   ],
+   "detail_en": [
+    "The author is Troy Hunt, who runs Have I Been Pwned (HIBP). He let Claude read his mailbox from March 2018 to November 2026. It contained the standard notification email he sent to 73 organisations, plus several threads that began through website contact forms. Company names are left out, and some details were changed. Troy says he does not usually let AI write for him, but he thinks this analysis is accurate.",
+    "The first email is polite and asks for someone responsible for information security. Many organisations have no clear way to report an incident, so emails end up in support queues, returns inboxes or general info addresses. Some are logged as ordinary support tickets and trigger satisfaction surveys. One reply came nearly a month later. At a large hardware maker, the message passed through six hops, from a returns inbox to a regional social media account, marketing staff, head office, product security and finally legal. When email failed, Troy also tried LinkedIn, Facebook and X.",
+    "Once someone replies, the first message is often that no evidence of a breach was found, sometimes before anyone had seen the data. In one case, the data later showed that an exposed database server had leaked user details. Another common reply is to shrink the incident, for example by saying only a homepage was defaced or that the data came from an older disclosed incident. Troy found that the newest timestamp in the data matched the day of the defacement, and that the data covered 16 core user tables, including identity verification and tax documents. Some companies ask for a sample or a specific file format. That is reasonable in principle, but it often comes after weeks of silence and shifts the burden of proof onto the reporter. In one case, an outside IT consultant asked Troy to help check whether the identifiers were real.",
+    "When the company accepts the data is probably real, the next message is usually that it is investigating. The investigation has no end date and becomes a reason to say nothing publicly. In one case, a company confirmed within days that it had the data, including its own staff records. A week later it was still investigating and said it would notify people if needed. By then the data was already circulating among people who collect breaches, but no one outside the company had been told. Delays also pile up. One public disclosure concerned an incident that happened about ten months earlier. Another breach had been on a large hacking forum for four months while the company had said nothing. Troy's view is that a disclosure does not need to be complete. An organisation can say what it knows and update the details later.",
+    "The tone changes when the reply comes from outside counsel or a general counsel rather than the security team. The question shifts from what happened to customers to whether the company is legally required to notify anyone. In one case, an internal customer portal had been indexed by a search engine for over a year. The company's US counsel concluded that names, addresses, phone numbers and emails did not trigger notification in any US state. The reply also said there was no evidence the data had been accessed, even though the requester had obtained it from a third party. Troy points out that legal thresholds are only a minimum, and that these details are exactly what phishers need. In another case, a law firm asked for a call before publication and then argued that public notice would direct bad actors to the file. Both sides agreed the data was very low risk, and the firm asked that nothing be posted on the HIBP site. Troy offered to mark the entry as sensitive and unsearchable. The firm refused and wrote that his actions could cause harm. A smaller company said it had decided not to communicate or disclose publicly at all. The author's conclusion is that these arguments sound reasonable one at a time, but together they mean the people most affected are the last to hear.",
+    "Some threads went well. A small transport app replied within hours, had already published a disclosure statement, and updated it promptly when Troy noticed an inaccuracy. A small booking platform first doubted the data, then admitted it was wrong, held a video call the same day, and within about a week emailed every affected customer. A European travel app hardened its systems, rotated its keys and published a disclosure, so Troy waited to load the data and link to its statement. The author's view is that the main obstacle is incentives rather than technology or law. Staying quiet avoids bad headlines for the company, while every day of silence leaves the affected people exposed. The good examples share traits: someone with security authority replied quickly, treated the data as help, told customers what was known and updated later, and did not need lawyers to run the conversation."
+   ],
+   "topics": [
+    "data breach disclosure",
+    "Have I Been Pwned",
+    "incident response"
+   ]
+  },
+  {
    "id": "8393a9125272",
    "kind": "blog",
    "source": "lcamtuf.substack.com",
@@ -212,6 +245,37 @@
    ]
   },
   {
+   "id": "yt-eqe3ainzPtM",
+   "kind": "video",
+   "source": "Stefan Mischook",
+   "source_url": "https://www.youtube.com/@StefanMischook",
+   "title": "Why Would Anyone Learn to Code in 2027?",
+   "url": "https://www.youtube.com/watch?v=eqe3ainzPtM",
+   "published": "2026-11-19T00:00:00+00:00",
+   "basis": "transcript",
+   "brief_zh": "Stefan Mischook 认为，2027 年学编程仍然有必要，但重点不再是亲手写代码，而是理解编程概念、系统设计，以及如何用好各种 AI 工具。",
+   "brief_en": "Stefan Mischook argues that learning to code is still worth it in 2027, but the focus should be on concepts, system design and using AI tools well, not on writing code by hand.",
+   "detail_zh": [
+    "Stefan Mischook 说，问“2027 年还要不要学编程”本身就问错了。担心编程消失的人，多半把写代码和软件开发混为一谈。写代码只是软件开发的一部分，开发者真正拿报酬的是做出解决方案、产品和服务，代码只是工具。他还说，只有初学者才会因为代码被 AI 写而担心这个职业消失。他做了几十年开发，见过很多技术和工作内容消失，同时又出现了高级语言、框架，以及 React、Angular 这类库。",
+    "他给想入行的人列出的路线是：先掌握几门编程语言的基础，首选 Python 和 JavaScript。JavaScript 是软件领域的通用语言，大多数应用以 web 应用的形式交付。Python 在 AI 领域用得最广。为什么要学两门？第一门最难，之后学第二门只需要大约十分之一的时间，因为现代语言有 90% 到 95% 的原理相通，比如变量、数组、对象和错误处理。对比不同语言怎样表达同样的概念，能让人对编程有更深的理解。不过 Rust 这类语言是例外。",
+    "他说，既然 AI 会写代码，学语言是为了掌握概念。他接触过两类人：一类是转向 AI 的开发者，把 AI 当电动工具用，原来要 10 个月的活一个月甚至两周就能做完；另一类是懂自己业务、但不懂软件开发的人，他们也能用 AI 做出东西，但慢得多。懂面向对象、最佳实践、系统级设计和设计模式的开发者，做出的应用又快又好。他把这比作早年非程序员用 PHP 做出的简单 CRUD 网页应用，质量远不如专业开发者。他预计早期的 AI 项目会留下大量技术债，这也是机会。",
+    "所以 2027 年的开发者只需要少量编码，大部分时间应花在系统思维、设计模式、软件开发原则，以及 AI 技术栈上。AI 技术栈包括：了解不同模型的能力差异、agent 和自主 agent、MCP 和 connector、用来给 AI 提供更集中上下文的 MD 文件、本地模型和前沿模型的区别、通用模型和专用模型的区别，以及 agent 的编排和叠加。他说具体怎么用某个产品的教程很快会过时，因为 AI 开发方式每半年就大变一次，所以要学通用、持久的原理。",
+    "他举了一个例子：他和一位只会葡萄牙语的女士约会，用手机测试三个模型的实时翻译。ChatGPT 最好，Claude 最差，Grok 最快，但会擅自加内容。目前 Claude 写代码最好，翻译却是 ChatGPT 更强，所以开发者要懂得选模型，这也是以后拿报酬的地方。他把专业人士和外行的差别比作木匠和外行用同样的工具做家具：输出质量、安全性、可更新性都不一样。外行用 AI 通常能完成 80%，然后就垮掉了，最后那 20% 要靠专业人士。视频中还有他自己的辅导课程的推广，这里略去。"
+   ],
+   "detail_en": [
+    "Stefan Mischook says asking whether to learn coding in 2027 is the wrong question. People who fear coding will vanish confuse coding with software development. Coding is only one part of the job. Developers are paid to build solutions, products and services, and code is just a tool. He says only juniors fear the career will disappear. He has seen many technologies and tasks disappear over the decades, while new things like high-level languages, frameworks, React and Angular appeared.",
+    "His roadmap starts with the basics of a couple of languages, mainly Python and JavaScript. JavaScript is the common language of software, and most apps are delivered as web apps. Python is widely used in AI. He recommends two languages because the first is the hardest, and the second takes about 10% of the time. Modern languages share 90 to 95% of their principles, such as variables, arrays, objects and error handling. Seeing the same ideas expressed differently gives a deeper understanding. Rust is one exception.",
+    "He says you learn languages for the concepts, even if AI writes the code. He talks to two groups. Developers who moved to AI use it like a power tool and finish in a month or two weeks what took 10 months. Non-coders with domain knowledge get results too, but much more slowly. Developers who know object-oriented programming, best practices, system design and design patterns build better apps in far less time. He compares this to early non-programmers building weak CRUD apps in PHP. He expects a lot of technical debt from early AI projects, which he sees as an opportunity.",
+    "So in 2027 a developer writes little code and spends most of the time on system thinking, design patterns, software principles and the AI stack. That includes model strengths, agents and autonomous agents, MCP and connectors, MD files that give AI tighter context, local versus frontier models, general versus specialized models, and agent orchestration. He says tool-specific tutorials go stale because AI development changes every six months, so universal principles matter more.",
+    "He gives an example. On a date with a woman who spoke only Portuguese, he tested three models for real-time translation. ChatGPT was the best, Claude the worst, and Grok the fastest but it added extra content. Claude is best for code today, yet ChatGPT wins at translation. Choosing the right model is what developers will be paid for. He compares pros and amateurs to a carpenter and a beginner with the same tools. Quality, security and updatability differ. Amateurs usually get 80% of the way and then things fall apart, and the pros handle the last 20%. He also promotes his own mentoring program in the video, which is skipped here."
+   ],
+   "topics": [
+    "AI and software careers",
+    "Learning to code",
+    "AI agents"
+   ]
+  },
+  {
    "id": "yt-gXoqed9VdL8",
    "kind": "video",
    "source": "Data Engineering Podcast",
@@ -274,42 +338,11 @@
     "AI Agents",
     "Token pricing"
    ]
-  },
-  {
-   "id": "yt-eqe3ainzPtM",
-   "kind": "video",
-   "source": "Stefan Mischook",
-   "source_url": "https://www.youtube.com/@StefanMischook",
-   "title": "Why Would Anyone Learn to Code in 2027?",
-   "url": "https://www.youtube.com/watch?v=eqe3ainzPtM",
-   "published": "2026-11-19T00:00:00+00:00",
-   "basis": "transcript",
-   "brief_zh": "Stefan Mischook 认为，2027 年学编程仍然有必要，但重点不再是亲手写代码，而是理解编程概念、系统设计，以及如何用好各种 AI 工具。",
-   "brief_en": "Stefan Mischook argues that learning to code is still worth it in 2027, but the focus should be on concepts, system design and using AI tools well, not on writing code by hand.",
-   "detail_zh": [
-    "Stefan Mischook 说，问“2027 年还要不要学编程”本身就问错了。担心编程消失的人，多半把写代码和软件开发混为一谈。写代码只是软件开发的一部分，开发者真正拿报酬的是做出解决方案、产品和服务，代码只是工具。他还说，只有初学者才会因为代码被 AI 写而担心这个职业消失。他做了几十年开发，见过很多技术和工作内容消失，同时又出现了高级语言、框架，以及 React、Angular 这类库。",
-    "他给想入行的人列出的路线是：先掌握几门编程语言的基础，首选 Python 和 JavaScript。JavaScript 是软件领域的通用语言，大多数应用以 web 应用的形式交付。Python 在 AI 领域用得最广。为什么要学两门？第一门最难，之后学第二门只需要大约十分之一的时间，因为现代语言有 90% 到 95% 的原理相通，比如变量、数组、对象和错误处理。对比不同语言怎样表达同样的概念，能让人对编程有更深的理解。不过 Rust 这类语言是例外。",
-    "他说，既然 AI 会写代码，学语言是为了掌握概念。他接触过两类人：一类是转向 AI 的开发者，把 AI 当电动工具用，原来要 10 个月的活一个月甚至两周就能做完；另一类是懂自己业务、但不懂软件开发的人，他们也能用 AI 做出东西，但慢得多。懂面向对象、最佳实践、系统级设计和设计模式的开发者，做出的应用又快又好。他把这比作早年非程序员用 PHP 做出的简单 CRUD 网页应用，质量远不如专业开发者。他预计早期的 AI 项目会留下大量技术债，这也是机会。",
-    "所以 2027 年的开发者只需要少量编码，大部分时间应花在系统思维、设计模式、软件开发原则，以及 AI 技术栈上。AI 技术栈包括：了解不同模型的能力差异、agent 和自主 agent、MCP 和 connector、用来给 AI 提供更集中上下文的 MD 文件、本地模型和前沿模型的区别、通用模型和专用模型的区别，以及 agent 的编排和叠加。他说具体怎么用某个产品的教程很快会过时，因为 AI 开发方式每半年就大变一次，所以要学通用、持久的原理。",
-    "他举了一个例子：他和一位只会葡萄牙语的女士约会，用手机测试三个模型的实时翻译。ChatGPT 最好，Claude 最差，Grok 最快，但会擅自加内容。目前 Claude 写代码最好，翻译却是 ChatGPT 更强，所以开发者要懂得选模型，这也是以后拿报酬的地方。他把专业人士和外行的差别比作木匠和外行用同样的工具做家具：输出质量、安全性、可更新性都不一样。外行用 AI 通常能完成 80%，然后就垮掉了，最后那 20% 要靠专业人士。视频中还有他自己的辅导课程的推广，这里略去。"
-   ],
-   "detail_en": [
-    "Stefan Mischook says asking whether to learn coding in 2027 is the wrong question. People who fear coding will vanish confuse coding with software development. Coding is only one part of the job. Developers are paid to build solutions, products and services, and code is just a tool. He says only juniors fear the career will disappear. He has seen many technologies and tasks disappear over the decades, while new things like high-level languages, frameworks, React and Angular appeared.",
-    "His roadmap starts with the basics of a couple of languages, mainly Python and JavaScript. JavaScript is the common language of software, and most apps are delivered as web apps. Python is widely used in AI. He recommends two languages because the first is the hardest, and the second takes about 10% of the time. Modern languages share 90 to 95% of their principles, such as variables, arrays, objects and error handling. Seeing the same ideas expressed differently gives a deeper understanding. Rust is one exception.",
-    "He says you learn languages for the concepts, even if AI writes the code. He talks to two groups. Developers who moved to AI use it like a power tool and finish in a month or two weeks what took 10 months. Non-coders with domain knowledge get results too, but much more slowly. Developers who know object-oriented programming, best practices, system design and design patterns build better apps in far less time. He compares this to early non-programmers building weak CRUD apps in PHP. He expects a lot of technical debt from early AI projects, which he sees as an opportunity.",
-    "So in 2027 a developer writes little code and spends most of the time on system thinking, design patterns, software principles and the AI stack. That includes model strengths, agents and autonomous agents, MCP and connectors, MD files that give AI tighter context, local versus frontier models, general versus specialized models, and agent orchestration. He says tool-specific tutorials go stale because AI development changes every six months, so universal principles matter more.",
-    "He gives an example. On a date with a woman who spoke only Portuguese, he tested three models for real-time translation. ChatGPT was the best, Claude the worst, and Grok the fastest but it added extra content. Claude is best for code today, yet ChatGPT wins at translation. Choosing the right model is what developers will be paid for. He compares pros and amateurs to a carpenter and a beginner with the same tools. Quality, security and updatability differ. Amateurs usually get 80% of the way and then things fall apart, and the pros handle the last 20%. He also promotes his own mentoring program in the video, which is skipped here."
-   ],
-   "topics": [
-    "AI and software careers",
-    "Learning to code",
-    "AI agents"
-   ]
   }
  ],
  "picks": {
   "important": [],
   "liked": []
  },
- "generated_at": "2026-11-23T07:57:43.896826+00:00"
+ "generated_at": "2026-11-23T08:28:43.786906+00:00"
 }
