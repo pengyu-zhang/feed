@@ -209,9 +209,10 @@ def sources_body(groups, status):
             + "</section>")
 
 
-MODEL_NAMES = {"gemini-3.1-flash-lite": "Gemini 3.1 Flash Lite", "gemini-3.6-flash": "Gemini 3.6 Flash",
-               "gemini-3.5-flash-lite": "Gemini 3.5 Flash Lite",
-               "gemini-3.8-flash": "Gemini 3.8 Flash"}
+MODEL_NAMES = {"claude-opus-5-5": "Claude Opus 5.5（字幕）", "claude-sonnet-5-5": "Claude Sonnet 5.5（字幕）",
+               "gemini-3.1-flash-lite": "Gemini 3.1 Flash Lite（看视频）", "gemini-3.6-flash": "Gemini 3.6 Flash（看视频）",
+               "gemini-3.5-flash-lite": "Gemini 3.5 Flash Lite（看视频）",
+               "gemini-3.8-flash": "Gemini 3.8 Flash（看视频）"}
 
 
 def yt_test_body(test):

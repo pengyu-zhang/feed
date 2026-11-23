@@ -1,11 +1,13 @@
 {
  "date": "2026-11-20",
- "note_zh": "2026-11-20 的测试：三个视频分别交给三个模型看，清晰度最低，每 20 秒取一帧。3.8 Flash 两轮都只返回“服务繁忙”（HTTP 503），没有结果，参照组换成 3.6 Flash。下面每条的样子就是以后日报里视频条目的样子。这个页面不在标签栏里，测试完就删。",
- "note_en": "Test run on 2026-11-20: three videos, each watched by three models at the lowest resolution, one frame every 20 seconds. Gemini 3.8 Flash only returned \"busy\" (HTTP 503) in two rounds, so Gemini 3.6 Flash is the reference instead. Each entry below looks the way video items will look in the daily page. This page is not in the tab bar and will be removed after testing.",
+ "note_zh": "两种做法对比。字幕：2026-11-23 在浏览器里打开视频、点“显示文字稿”取出字幕，交给 Claude Opus 5.5 和 Sonnet 5.5 写摘要。看视频：2026-11-20 让 Gemini 直接看视频，清晰度最低，每 20 秒取一帧。3.8 Flash 两轮都只返回“服务繁忙”（HTTP 503），没有结果，参照组换成 3.6 Flash。下面每条的样子就是以后日报里视频条目的样子。这个页面不在标签栏里，测试完就删。",
+ "note_en": "Two approaches compared. Transcript: on 2026-11-23 the transcript was copied from each video page in a browser and summarised by Claude Opus 5.5 and Sonnet 5.5. Video: on 2026-11-20 Gemini watched each video at the lowest resolution, one frame every 20 seconds. Gemini 3.8 Flash only returned \"busy\" (HTTP 503) in two rounds, so Gemini 3.6 Flash is the reference instead. Each entry below looks the way video items will look in the daily page. This page is not in the tab bar and will be removed after testing.",
  "models": [
+  "claude-opus-5-5",
+  "claude-sonnet-5-5",
+  "gemini-3.6-flash",
   "gemini-3.1-flash-lite",
   "gemini-3.5-flash-lite",
-  "gemini-3.6-flash",
   "gemini-3.8-flash"
  ],
  "videos": [
@@ -366,6 +368,204 @@
      "Data Engineering"
     ]
    }
+  },
+  {
+   "model": "claude-sonnet-5-5",
+   "id": "gXoqed9VdL8",
+   "seconds": 26,
+   "usage": {
+    "prompt": 28363,
+    "output": 2719
+   },
+   "summary": {
+    "brief_zh": "Torres 公司 CEO Steven Renick 接受访谈，讲实体解析（entity resolution）在大规模生产中为什么不能靠 LLM 直接做匹配，以及 LLM 在配置、复核和抽取环节的合适用法。",
+    "detail_zh": [
+     "嘉宾 Steven Renick 是 Torres 的 CEO 和联合创始人，公司在德国，专做实体解析。他本人是遗传学博士，后来读 MBA，做过对接云会计软件的信用数据公司，之后进了德国一家消费者征信机构，Torres 的技术就是在那里为处理海量数据而做出来的。他先理清了几个容易混的术语：实体解析、身份解析、记录关联、去重说的基本是同一件事；命名实体识别（NER）是从非结构化文本里抽取实体，和实体解析不同，但客户常把两者一起问。实体指任何现实中的东西，多数是自然人或公司，也可以是产品、零件。几乎所有有一定数据规模的企业都有这个问题，金融业的 KYC 和制裁名单筛查、政府的选民登记和死亡登记比对尤其关键，做错会带来合规问题。",
+     "谈到 LLM 能不能直接做实体解析，他的回答是“算能也算不能”。小规模数据放进去效果不错，但生产环境有几个硬问题。第一，实体解析是平方级增长的问题，100 万条记录就有约 5000 亿个两两组合，LLM 又慢又贵，而他们的客户每天要处理上亿条记录。第二，同样的数据多次输入，结果会有差异。第三，受监管的客户要求能准确解释为什么 A 和 B 被关联。第四，LLM 无状态，而实体解析需要有状态：他们用图来组织数据，新记录进来可以挂到已有节点上，删除一条记录后实体可能要拆成两个，这些 LLM 都不适合做。",
+     "LLM 真正有用的地方有几处：一是从文档里做实体抽取，别人用得不错；二是作为“循环中的 agent”，处理匹配分数落在灰色地带、本来要人工复核的少量记录，结果仍写回实体图；三是用于上手配置，Torres 训练了模型来根据客户数据配置匹配规则，并能自行迭代优化；四是在发现阶段帮忙找出数据里可能的实体类型，用 LLM 给数据打标签来估算精确率和召回率（多数客户没有标注数据），以及检查抽取结果。他还提到，团队常让 LLM 写一个基于编辑距离、余弦相似度、音似匹配的小型 Python 实体解析原型，用来向管理层证明值得投入。他们也尝试推广过“identity RAG”的说法，认为干净、实时解析过的客户数据是 AI 的好数据源。向量数据库对实体解析效果不好，因为相似但应分开的实体容易混在一起，但适合处理抽取之后的文档内容，两者互补。",
+     "在架构上，他们试过 Spark、Elasticsearch、Neo4j 和 AWS Neptune，图数据库做多跳遍历太慢，达不到银行和欺诈决策要求的几百毫秒。最后他们用 AWS 无服务器技术：记录写入时就在 DynamoDB 里建索引并立即并入实体，实体预先算好，存成 S3 文件，查询时无论实体含 1 条还是 10 万条记录，返回时间都稳定。API 用 GraphQL，方便按需汇总大实体。对公司这类可能含几十万条记录的大实体，他们用了学术文献里的团（clique）图压缩。五年没有停机，也不用考虑分片扩容。规则变更只对之后写入的数据生效，需要追溯时可以并行重新摄入，十亿条记录几小时内能完成。",
+     "对于要不要自己做，他认为数据量只有一万左右实体时，用 LLM 或开源库 Splink 做两两匹配就够了；但一旦涉及实时流式处理、多数据源的清洗归一化、可解释、可撤销合并、按数据源设定不同保留期限，难度会大增，很多做过的人都不想再做一次，所以他认为“买”通常比“自己建”划算。简单的 CRM 去重或一次性的两表比对不需要这种系统。他举了两个例子：委内瑞拉地震后，他们用 MCP server 在一个周末里把多份失踪人员名单去重，并与医院收治名单对接，帮家属找到人；另一个是大型物流公司的客户数据里，有电商平台会把称谓合并进姓氏。他还说，实体解析应放在图数据库之前，把已合并的实体再导入知识图谱。最后他提到新的概率式模型 Jev，算过用它处理 1 亿条记录约需 80 万美元，不会取代专门的实体解析引擎，但可能当作其中一个匹配器。他认为目前最大的缺口是可信的身份层，以及大规模下衡量数据质量（精确率和召回率）的方法。"
+    ],
+    "brief_en": "Torres CEO Steven Renick explains why LLMs should not do entity resolution matching at production scale, and where LLMs do help, such as setup, review and extraction.",
+    "detail_en": [
+     "The guest is Steven Renick, CEO and co-founder of Torres, an entity resolution company in Germany. He has a PhD in genetics, an MBA, and worked at a consumer credit bureau where the Torres engine was built. He first sorts out terms: entity resolution, identity resolution, record linkage and deduplication mean about the same thing. Named entity recognition extracts entities from text and is a different task. An entity is any real world thing, most often a person or company. Almost every business with enough data has this problem, and it matters most in finance (KYC, sanctions screening) and public sector work like voter rolls.",
+     "On whether LLMs can do the matching, he says yes and no. They work on small samples, but not in production. The problem scales quadratically: one million records means about 500 billion pairs, which is too slow and costly, and clients ingest hundreds of millions of records a day. LLM output also varies between runs, is hard to explain to regulators, and is stateless. Torres keeps entities as graphs, so new records link in, and deleting a record can split an entity.",
+     "LLMs do help in other places. They work well for entity extraction from documents. They can act as an agent in the loop for the small share of uncertain pairs that would go to a human reviewer. They help configure Torres for a new customer and discover entity types. They can label data to estimate precision and recall, and write quick prototype matchers that prove value to management. He says vector databases do not work well for entity resolution but suit unstructured text after extraction.",
+     "On architecture, the team found Spark, Elasticsearch, Neo4j and Neptune too slow or hard to scale. Torres runs on AWS serverless. Each record is indexed in DynamoDB on ingest and merged into a precomputed entity stored in S3, so lookups take constant time. It uses GraphQL to summarize big entities and clique-based graph compression for huge company entities. It has had no downtime in five years. Rule changes apply only to new data, and re-ingesting a billion records takes a few hours.",
+     "He says small jobs (around 10,000 entities) can use an LLM or Splink, but real time, messy sources, explainability, reversible merges and retention rules make building your own hard, so buying usually wins. He gives two examples: after the Venezuela earthquake he deduplicated missing person lists over a weekend with the MCP server and matched them to hospital lists, and a logistics client had e-commerce data with titles merged into surnames. He says entity resolution should come before a knowledge graph. He estimates the new Jev model would cost about $800,000 for 100 million records, so it could be one matcher but not a replacement. He sees the biggest gaps in a trustworthy identity layer and in measuring data quality at scale."
+    ],
+    "topics": [
+     "Entity resolution",
+     "LLMs",
+     "Data engineering"
+    ]
+   },
+   "via": "transcript"
+  },
+  {
+   "model": "claude-opus-5-5",
+   "id": "gXoqed9VdL8",
+   "seconds": 40,
+   "usage": {
+    "prompt": 28435,
+    "output": 3925
+   },
+   "summary": {
+    "brief_zh": "Data Engineering Podcast 主持人 Tobias Macey 访谈 TiloRes 的 CEO Stephen Renick，讨论大规模 entity resolution 怎么做。他的核心观点是：LLM 适合做实体抽取、配置和灰色地带的人工复核，但不适合在生产环境里直接做大规模匹配。",
+    "detail_zh": [
+     "Stephen Renick 是苏格兰人，学的是遗传学，读过 MBA，后来在德国一家个人征信机构工作。征信机构要把几十个来源的个人数据对到同一个人身上，这些数据格式不一，人还会改名、搬家、换邮箱。市面上找不到能满足规模和速度要求的工具，他们就自己从头写了一个 entity resolution 引擎，后来独立成了 TiloRes。他先把几个概念讲清楚：entity resolution、identity resolution、record linkage、deduplication 说的基本是同一件事，即判断哪些记录指向同一个现实中的实体；它和 named entity recognition 不是一回事，但实际项目里往往连在一起做。他认为几乎所有有一定数据量的公司都有这个问题，金融业最突出，比如 KYC、跨业务线的客户合并、制裁名单和 PEP 筛查。公共部门的选民登记也是典型场景。",
+     "关于 LLM 能不能取代 entity resolution，他的回答是“可以也不可以”。拿一千条记录给 LLM，结果还不错，但到了生产环境就不行。第一，这是一个平方级增长的问题，一百万条记录就有约 5000 亿个两两组合，而他们的客户每天可能要处理上亿条记录。第二，LLM 输出不稳定，同样的输入每次结果都可能不同。第三，受监管的客户要能解释 A 为什么和 B 关联。第四，LLM 不保存状态。TiloRes 把每个实体存成一张图，记录之间的边都有理由可查，新记录进来可以直接挂上去，删除某条记录时还能把一个实体拆成两个。他认为 LLM 适合用在三个地方：实体抽取；对置信度处在中间的匹配做“agent in the loop”审核，替代人工分析师；以及在客户接入阶段自动生成和反复调整匹配规则配置。",
+     "架构方面，他们试过 Apache Spark、Elasticsearch、Neo4j 和 AWS Neptune，发现图数据库在多跳遍历时太慢，满足不了信贷和反欺诈决策要求的几百毫秒响应。最后改用 AWS serverless：每条记录进来时，先用 blocking 缩小比对范围，再在 DynamoDB 里建索引，并立即并入对应实体。实体是预先算好并组装完成的，存在 S3 里，查询时取回整个实体，所以耗时稳定。API 用 GraphQL，方便在接口层汇总大实体，不用把同一个名字返回上千次。自然人实体一般不复杂，公司实体可能多达几十万条记录，他们用学术论文里提到的 clique-based graph compression 来压缩这类大图。他说团队很小，同时跑着几百个实例、几十亿条记录，五年里没有停机过一秒，也从来不用操心分片和扩容。",
+     "什么情况下该投入做 entity resolution？他列出几个要考虑的因素：数据量、批处理还是实时、数据源有多杂、出错后果有多严重，以及能不能撤销匹配、能不能按不同来源的保留期限删除数据。简单的 deduplication 把记录合成一条，等于一扇只能单向通过的门。只有一万条左右的数据，或者只是一次性比对两个数据集，用 LLM 或开源库 Splink 就够了；单纯给 CRM 去重也有便宜的现成工具。他还提到，现在很多数据团队先让 LLM 写一个基于 Levenshtein 距离、余弦相似度和音码匹配的小型原型，用来向管理层证明数据清洗有价值。他说用 vector database 做 entity resolution 效果不好，因为相似但本该分开的实体很容易被混在一起，不过向量检索可以和 entity resolution 互补。他还提出“identity RAG”和“entity-resolved knowledge graph”的思路：数据先做实体解析，再放进知识图谱或交给 AI agent 使用。",
+     "他讲了一个公益项目。委内瑞拉地震后出现了多份民间整理的失踪者名单，重复数据多到几乎没法用。他借助 TiloRes 新发布的 MCP server，一个周末自己就搭好了系统，把这些名单去重，再和医院手写名单整理出来的数据做匹配，帮家属找到在医院里的失踪者。他的经验是，真实数据比大多数人想象的糟得多，连大型电商公司都会把称谓并进姓氏字段。他也看过最近新出的非 LLM 概率型 AI 模型，觉得可以作为单个 matcher 放进系统，但取代不了完整的引擎：用其中一个模型处理一亿条记录，估算成本约 80 万美元。最后他说，数据工具最大的缺口是可信的 identity layer：把数据堆进数据仓库并不会让数据变得可信，在大规模场景下衡量 precision 和 recall 也仍然很难。他承认自己有立场，但认为从 build vs buy 的经济账来看，通常买比自己做更划算，因为匹配本身是相对容易的部分，难的是围绕匹配的一长串琐碎问题。"
+    ],
+    "brief_en": "Tobias Macey talks with TiloRes CEO Stephen Renick about entity resolution at scale. Renick argues that LLMs are useful for entity extraction, setup, and reviewing uncertain matches, but not for the core matching in production.",
+    "detail_en": [
+     "Renick trained as a geneticist, did an MBA, and later worked at a German consumer credit bureau. Credit bureaus get messy data about people from dozens of sources, and people change names, addresses, and emails. No tool on the market could handle the scale and speed they needed, so they built an engine from scratch, and it became TiloRes. He explains that entity resolution, identity resolution, record linkage, and deduplication mostly mean the same thing: working out which records refer to the same real-world thing. Named entity recognition is a different task, but the two often show up together in practice. He says almost every sizable business has this problem. It matters most in finance, for KYC, linking customers across business units, and sanctions or PEP screening. Voter rolls in the public sector are another clear example.",
+     "On whether LLMs can replace entity resolution, his answer is yes and no. An LLM does well on a thousand records, but production is different. The problem scales quadratically: one million records means about 500 billion possible pairs, and some customers ingest hundreds of millions of records a day. LLM outputs are also inconsistent, hard to explain to regulators, and stateless. TiloRes stores each entity as a graph, with a reason behind every edge. New records attach to it, and deleting a record can split an entity in two. He sees three good uses for LLMs: entity extraction, an agent in the loop that reviews gray-zone matches instead of a human analyst, and automatically configuring and refining matching rules during onboarding.",
+     "They tried Apache Spark, Elasticsearch, Neo4j, and AWS Neptune. The graph databases were too slow on multi-hop traversals for credit and fraud decisions that need answers within a few hundred milliseconds. So they built on AWS serverless instead. Each incoming record goes through blocking to narrow the comparison set, gets indexed in DynamoDB, and is linked into its entity right away. Entities are precomputed and stored in S3, so a query returns the whole entity in consistent time. A GraphQL API lets clients summarize large entities instead of getting the same name back a thousand times. Company entities can grow to hundreds of thousands of records, and they handle this with clique-based graph compression. He says a small team runs hundreds of instances holding billions of records, with no downtime in five years and no sharding work.",
+     "To decide how much to invest, he says to look at data volume, batch versus real time, how varied the sources are, the cost of a wrong match, and whether matches can be reversed or records deleted under different retention rules. Simple deduplication merges records into one and cannot be undone. For about 10,000 records or a one-off comparison of two datasets, an LLM or the open source library Splink is enough, and CRM deduplication has cheap dedicated tools. Many teams now ask an LLM to write a small prototype using Levenshtein distance, cosine similarity, and phonetic matching, then use it to show management that cleaning the data is worth it. He finds that vector databases work poorly for matching, because similar but distinct entities blur together. They can still complement entity resolution. He pitches resolving data before loading it into a knowledge graph or handing it to AI agents, an idea his company tried to call identity RAG.",
+     "As a pro bono project after an earthquake in Venezuela, he used TiloRes's new MCP server to set up an instance by himself over one weekend. He deduplicated the citizen-made missing persons lists and matched them against hospital lists that had been transcribed from handwritten notes. This helped families find missing relatives who were in hospital. His main lesson is that real data is far messier than people expect. Even big e-commerce firms do odd things, like merging titles into surnames. He has looked at new non-LLM probabilistic AI models and thinks they could work as one matcher inside an engine, but not replace it. By their estimate, one of these models would cost about $800,000 to resolve 100 million records. He names a trustworthy identity layer as the biggest gap in data tooling, since putting data in a warehouse does not make it trustworthy. Measuring precision and recall at scale is also still hard. He admits his bias, but says the economics of build versus buy usually favor buying, because the matching is the easy part and the long tail of everything around it is the hard part."
+    ],
+    "topics": [
+     "entity resolution",
+     "LLMs",
+     "data engineering"
+    ]
+   },
+   "via": "transcript"
+  },
+  {
+   "model": "claude-sonnet-5-5",
+   "id": "Hy7iE1iLmxw",
+   "seconds": 23,
+   "usage": {
+    "prompt": 25269,
+    "output": 2953
+   },
+   "summary": {
+    "brief_zh": "HC 认为各家闭源模型的额度越来越少，开源模型加上便宜的订阅方案已经够用，并演示了如何设置，还用同一个网站任务比较了各模型消耗的额度。",
+    "detail_zh": [
+     "作者说，Claude 订阅的额度越来越少，GitHub Copilot 也暂停了新用户订阅并收紧了用量。在这种情况下，要么被迫订 100 或 200 美元的方案，要么额度不够，没法熟悉 AI Agent。他认为接下来大家主要会用开源模型。他引用了一张模型评分图：第一梯队是 GPT 5.5、Opus 4.7（Xhigh 和 Max 设定）和 GPT 5.4（Xhigh）；第二梯队有 Kimi 2.6、小米 MiMo V2.5 Pro、Opus 4.6（Max）、Qwen 3.6 Max、GLM 5.1 和 MiniMax M2.7，其中很多是开源模型。他承认有人说开源模型针对测试做了优化，但也指出闭源模型是用最贵的设定来评分的。按他自己的经验，开源模型日常使用已经不输闭源模型。",
+     "在性价比图上，他认为如果还要订阅前沿模型，OpenAI 比 Anthropic 划算，同价能用到更好的模型，额度也更多。Kimi K2.6、MiMo 2.5、DeepSeek V4 Pro 的成本大约是前沿模型的一半，MiniMax M2.7 大约是五分之一。他自己的用法是：MiniMax M2.7 负责执行和日常工作，GPT 5.4 做验证和解决问题，遇到解决不了的难题再用 GPT 5.5。上下文长度已不是问题，DeepSeek V4、小米等开源模型也支持 100 万 token。开源模型最大的短板是多模态：Gemini 遥遥领先，其次是 OpenAI 和 Anthropic，而 Kimi K2.6 能看图，DeepSeek V4、GLM 和 MiniMax M2.7 不能。他说可以切换模型，或用厂商提供的看图配套来补，成本优势大于这个问题。",
+     "订阅方面，他介绍了几个选择。ollama.com 有免费档、Pro 和 Max，20 美元的用量很划算，用 MiniMax M2.7 很难用完一周额度，难题可以换 Kimi K2.6。MiniMax 自己的 Token Plan 有 Starter、Plus、Max 等档位，他订的是 Plus，每 5 小时 4500 次 model request，5 个 Agent 连续跑 5 小时大约调用 3000 多次，所以一两个 Agent 可以 24 小时运行。小米这个月也推出了 Token Plan，打折后 5 美元，他还没试。他自己另外订了 OpenAI 20 美元的方案当备用。",
+     "设置方法：用 Codex（有免费额度，不订阅也能用，选 GPT 5.4）。把 Claude Code 的安装网址和 ollama 文档的链接贴给它，让它装好 Claude Code 并把 ollama 设为模型提供商。之后在终端输入 ollama launch claude，选 MiniMax M2.7 即可，加 --dangerously-skip-permissions 可以跳过权限确认。Hermes Agent 在 Windows 上要靠 WSL2，Mac 则直接可装，在 ollama 申请 API key 后用 hermes model 选 ollama cloud。如果 Codex 不能用了，可以用 OpenCode 桌面版，让它安装 Pi Agent。Pi Agent 是比 Claude Code 更精简、更快的核心型 Agent，需要自己加工具，授权也适合商用。MiniMax 的文档里有各 Agent 的设置说明，还有可装的 MCP，提供网页搜索和图像理解，以及 MiniMax CLI。他认为不要被绑死在单一平台，否则对方怎么涨价都得接受。",
+     "实测任务是做一个星际旅行网站，首页要有粒子组成的可互动银河背景。Sonnet 4.6（带 skill）做完用掉 session 额度 100% 和周额度 12%，作者说 20 美元方案基本不能用 Opus。Claude Design 做原型用掉周额度 18%；再用 Opus 4.7 通过 hand off 加 3D 背景，用量一下到了 51%。Kimi K2.6 做出的网站不错，偏简洁，只用了 ollama 周额度的 1%，约有 10 倍差距。MiniMax M2.7 的成果也完整，包含订票流程、必填检查和确认编号，大约 100 次 request，session 用了 2 到 3%，周额度可能只有 0.1%。GPT 5.4 也做得好，但倾向于做太多，需要限制，提示词和上下文质量对结果影响很大。作者的结论是，开源模型会成为主流，闭源模型留给难题。Anthropic 和 OpenAI 的目标是 AGI，不以一般消费者为重，所以我们没必要为两三倍甚至十倍的价格买单。"
+    ],
+    "brief_en": "HC says closed model quotas keep shrinking, and open source models with cheap plans are now good enough. He shows how to set them up and compares quota use on one website task.",
+    "detail_en": [
+     "HC says Claude quotas keep shrinking. GitHub Copilot also paused new sign-ups and tightened usage. So people must pay 100 or 200 dollars, or run out of quota while learning AI Agents. He expects open source models to become the main choice. In a benchmark chart, the top tier is GPT 5.5, Opus 4.7 and GPT 5.4. The second tier has Kimi 2.6, Xiaomi MiMo V2.5 Pro, Opus 4.6, Qwen 3.6 Max, GLM 5.1 and MiniMax M2.7, many of them open source. He admits some say open models are tuned for benchmarks, but notes the closed models are scored at their most expensive settings. In his own use, open models are already as good for daily work.",
+     "On the price chart, he says OpenAI is a better buy than Anthropic if you still want a frontier plan. Kimi K2.6, MiMo 2.5 and DeepSeek V4 Pro cost about half as much. MiniMax M2.7 costs about one fifth. He uses M2.7 for execution, GPT 5.4 for checking, and GPT 5.5 for the hardest problems. Context length is no longer a problem, since several open models support 1 million tokens. The main weakness is multimodal ability. Kimi K2.6 can read images, but DeepSeek V4, GLM and MiniMax M2.7 cannot. He says you can switch models or use vendor add-ons, and the cost savings are bigger than this problem.",
+     "For plans, he covers ollama.com, where the 20 dollar plan is good value and M2.7 is hard to use up in a week. MiniMax has a Token Plan. His Plus plan gives 4500 model requests every 5 hours, enough for one or two agents to run all day. Xiaomi has a new Token Plan at 5 dollars after a discount, which he has not tried. He keeps a 20 dollar OpenAI plan as a backup.",
+     "For setup, he uses Codex with GPT 5.4 to install Claude Code and set ollama as the provider. Then he runs ollama launch claude and picks MiniMax M2.7. He also installs Hermes Agent, which needs WSL2 on Windows. If Codex stops working, he uses OpenCode desktop, which can install Pi Agent. Pi Agent is a lighter and faster core agent, and its license allows commercial use. MiniMax also offers MCP tools for web search and image understanding. He says you should not be locked into one platform, or you must accept any price rise.",
+     "The test task was a space travel website with an interactive particle galaxy background. Sonnet 4.6 used 100 percent of the session quota and 12 percent of the weekly quota. Claude Design used 18 percent of the weekly quota. Adding a 3D background with Opus 4.7 pushed usage to 51 percent. Kimi K2.6 made a good, clean site and used 1 percent of the weekly quota, about 10 times less. MiniMax M2.7 made a full site with a booking flow, using about 2 to 3 percent of the session. GPT 5.4 did well too, but tends to do too much and needs limits. His conclusion is that open models will become mainstream and closed models will be kept for hard problems.",
+     "",
+     ""
+    ],
+    "topics": [
+     "Open source LLMs",
+     "AI Agents",
+     "Token pricing"
+    ]
+   },
+   "via": "transcript"
+  },
+  {
+   "model": "claude-opus-5-5",
+   "id": "Hy7iE1iLmxw",
+   "seconds": 31,
+   "usage": {
+    "prompt": 25341,
+    "output": 3416
+   },
+   "summary": {
+    "brief_zh": "Claude 和 GitHub Copilot 的订阅额度越来越紧，HC 认为开源模型已经够日常用了，于是演示怎么用 Ollama Cloud、MiniMax 这类便宜的订阅，配合 Claude Code、Hermes Agent、OpenCode 等 agent 工具，大约花十分之一的钱做出接近 Sonnet 和 Opus 的效果。",
+    "detail_zh": [
+     "HC 一开头就说，“token 买一送一”的时代结束了：Anthropic 订阅的额度越来越少，GitHub Copilot 暂停接受新用户，还改了计费方式、收紧了额度。他认为 AI Agent 一定是未来的核心，可额度不够，普通人就很难练熟，所以他判断以后主要会用开源模型。他拿排行榜举例：第一梯队是 GPT-5.5、Opus 4.7、GPT-5.4，都是在 xhigh 或 max 这种最贵的设置下测的；第二梯队里有很多开源模型，比如 Kimi K2.6、小米 MiMo V2.5 Pro、Qwen 3.6 Max、GLM 5.1、MiniMax M2.7。他也承认开源模型可能有 benchmaxxing，也就是专门针对测试做了优化，但他指出闭源模型一旦关掉 reasoning，排名同样会掉下来。从价格和智力的对比图看，Kimi K2.6、MiMo、DeepSeek V4 Pro 的成本差不多只有一半，MiniMax M2.7 大约是五分之一。如果还想订一个前沿模型，他觉得 OpenAI 比 Anthropic 划算。",
+     "上下文长度方面，DeepSeek V4、MiMo 等开源模型也已经支持 100 万 token，不再是短板。开源模型最大的弱点是多模态：Gemini 遥遥领先，其次是 OpenAI 和 Anthropic；开源这边 Kimi K2.6 和 Qwen 能看图，DeepSeek V4、GLM 和 MiniMax M2.7 都不能。他的办法是切换到别的模型，或者用厂商另外提供的读图工具。他自己平时用 MiniMax M2.7 干活，用 GPT-5.4 做验证和排查问题，真遇到解决不了的再上 GPT-5.5。",
+     "平台方面，他推荐 Ollama Cloud，有免费档、20 美元的 Pro 和更高的 Max 档，用 MiniMax M2.7 的话一周额度很难用完。MiniMax 也有自己的 token plan，他订的 Plus 档每 5 小时有 4500 次 model request。他实测 5 个 agent 连续跑 5 小时，大约只用了 3000 多次。小米最近也推出了 token plan，但他还没试。安装方面，他先用 Codex（有免费额度）装好 Claude Code，再把 Ollama 设成模型提供商，用 `ollama launch claude` 命令选 MiniMax M2.7 就能直接跑。他还让 Codex 装了 Hermes Agent，这个工具在 Windows 上要靠 WSL2 才能运行。如果 Codex 不能用了，可以换开源的 OpenCode 桌面版，接上 Ollama Cloud，再让它去装其他 agent，比如更轻量、允许商用的 pi agent。用 MiniMax 自己的 plan 时，还要装它的 MCP，补上网页搜索和读图能力。",
+     "最后他做了对比实验：让各个模型按同一个 prompt 做一个未来星际旅行的网站，首页要有一个由粒子组成、可以互动的银河背景。用 Claude 20 美元的方案跑 Sonnet 4.6，直接把单个 session 的额度用光，还占了一周额度的 12%。Claude Design 做一个原型就用了一周额度的 18%。让 Opus 4.7 只改首页那一块，额度就跳到 51%。Kimi K2.6 在 Ollama 上只用了 session 额度的 6%、一周额度的 1%，效果和 Sonnet 差不多，他认为两者的成本差了 10 倍以上。MiniMax M2.7 大约只用了 100 次请求，还做出了完整的预订流程。GPT-5.4 能完成任务，但喜欢多做很多事，需要更清楚的指令去约束。他的结论是，Anthropic 和 OpenAI 首先追求的是做出 AGI，消费者不是他们的优先对象，日常使用没必要多花几倍甚至十倍的钱。他也提醒大家多接触不同的工具，免得被一个平台绑住，对方涨价也只能接受。"
+    ],
+    "brief_en": "HC argues that Claude and GitHub Copilot quotas keep shrinking and open-weight models are now good enough for daily agent work. He shows how to use cheap plans like Ollama Cloud and MiniMax with Claude Code, Hermes Agent and OpenCode to get close to Sonnet and Opus results for about a tenth of the cost.",
+    "detail_en": [
+     "HC says the era of cheap tokens is over. Anthropic subscription quotas keep shrinking. GitHub Copilot has paused new sign-ups, changed how it bills, and cut usage limits. He believes AI agents are clearly the future, but people cannot learn them without enough quota, so he expects open models to become the main choice. On a leaderboard, the top tier is GPT-5.5, Opus 4.7 and GPT-5.4, all tested at xhigh or max settings. The second tier includes many open models: Kimi K2.6, Xiaomi MiMo V2.5 Pro, Qwen 3.6 Max, GLM 5.1 and MiniMax M2.7. He admits open models may be benchmaxxed, meaning tuned to score well on tests. But he notes that closed models also drop in rank once reasoning is turned off. On a price versus intelligence chart, Kimi K2.6, MiMo and DeepSeek V4 Pro cost about half as much, and MiniMax M2.7 costs about a fifth. If you still want to pay for a frontier model, he thinks OpenAI is better value than Anthropic.",
+     "Open models such as DeepSeek V4 and MiMo now support 1M-token context, so context length is no longer a weakness. Their main weakness is multimodal input. Gemini leads by a wide margin, followed by OpenAI and Anthropic. Among open models, Kimi K2.6 and Qwen can read images, but DeepSeek V4, GLM and MiniMax M2.7 cannot. His workaround is to switch models or use the separate vision tools that vendors offer. His own setup uses MiniMax M2.7 for daily work, GPT-5.4 to check results and fix problems, and GPT-5.5 only for the hardest cases.",
+     "For platforms, he recommends Ollama Cloud. It has a free tier, a $20 Pro tier and a higher Max tier, and with MiniMax M2.7 the $20 weekly quota is hard to use up. MiniMax also sells its own token plan. His Plus plan gives 4,500 model requests every 5 hours. In his test, 5 agents running nonstop for 5 hours used only about 3,000 requests. Xiaomi has also launched a token plan, but he has not tried it yet. For setup, he has Codex, which has a free quota, install Claude Code and set Ollama as the model provider. He then runs `ollama launch claude` and picks MiniMax M2.7. He also has Codex install Hermes Agent, which needs WSL2 to run on Windows. If Codex stops being free, the open-source OpenCode desktop app can connect to Ollama Cloud and install other agents. One example is pi agent, a lighter core agent that can be used commercially. If you use MiniMax's own plan, you should also install its MCP to add web search and image understanding.",
+     "In his test, every model got the same prompt: build a website for future space travel, with an interactive galaxy background made of particles on the home page. On Claude's $20 plan, Sonnet 4.6 used up the whole session quota and 12% of the weekly quota. Claude Design used 18% of the weekly quota for one prototype. Asking Opus 4.7 to fix only the top section of the home page pushed usage to 51%. On Ollama, Kimi K2.6 used 6% of the session quota and 1% of the weekly quota. Its result was about as good as Sonnet's, and he puts the cost gap at more than 10 times. MiniMax M2.7 used about 100 requests and even built a full booking flow. GPT-5.4 completed the task but tended to add too much, so it needs tighter instructions. He concludes that Anthropic and OpenAI care most about reaching AGI, not about consumers, so everyday users do not need to pay several times more. He also suggests learning several tools so you are not stuck accepting one platform's price increases."
+    ],
+    "topics": [
+     "open-weight LLMs",
+     "coding agents",
+     "AI subscription costs"
+    ]
+   },
+   "via": "transcript"
+  },
+  {
+   "model": "claude-sonnet-5-5",
+   "id": "eqe3ainzPtM",
+   "seconds": 18,
+   "usage": {
+    "prompt": 16157,
+    "output": 2093
+   },
+   "summary": {
+    "brief_zh": "Stefan Mischook 认为，2027 年学编程仍然有必要，但重点不再是亲手写代码，而是理解编程概念、系统设计，以及如何用好各种 AI 工具。",
+    "detail_zh": [
+     "Stefan Mischook 说，问“2027 年还要不要学编程”本身就问错了。担心编程消失的人，多半把写代码和软件开发混为一谈。写代码只是软件开发的一部分，开发者真正拿报酬的是做出解决方案、产品和服务，代码只是工具。他还说，只有初学者才会因为代码被 AI 写而担心这个职业消失。他做了几十年开发，见过很多技术和工作内容消失，同时又出现了高级语言、框架，以及 React、Angular 这类库。",
+     "他给想入行的人列出的路线是：先掌握几门编程语言的基础，首选 Python 和 JavaScript。JavaScript 是软件领域的通用语言，大多数应用以 web 应用的形式交付。Python 在 AI 领域用得最广。为什么要学两门？第一门最难，之后学第二门只需要大约十分之一的时间，因为现代语言有 90% 到 95% 的原理相通，比如变量、数组、对象和错误处理。对比不同语言怎样表达同样的概念，能让人对编程有更深的理解。不过 Rust 这类语言是例外。",
+     "他说，既然 AI 会写代码，学语言是为了掌握概念。他接触过两类人：一类是转向 AI 的开发者，把 AI 当电动工具用，原来要 10 个月的活一个月甚至两周就能做完；另一类是懂自己业务、但不懂软件开发的人，他们也能用 AI 做出东西，但慢得多。懂面向对象、最佳实践、系统级设计和设计模式的开发者，做出的应用又快又好。他把这比作早年非程序员用 PHP 做出的简单 CRUD 网页应用，质量远不如专业开发者。他预计早期的 AI 项目会留下大量技术债，这也是机会。",
+     "所以 2027 年的开发者只需要少量编码，大部分时间应花在系统思维、设计模式、软件开发原则，以及 AI 技术栈上。AI 技术栈包括：了解不同模型的能力差异、agent 和自主 agent、MCP 和 connector、用来给 AI 提供更集中上下文的 MD 文件、本地模型和前沿模型的区别、通用模型和专用模型的区别，以及 agent 的编排和叠加。他说具体怎么用某个产品的教程很快会过时，因为 AI 开发方式每半年就大变一次，所以要学通用、持久的原理。",
+     "他举了一个例子：他和一位只会葡萄牙语的女士约会，用手机测试三个模型的实时翻译。ChatGPT 最好，Claude 最差，Grok 最快，但会擅自加内容。目前 Claude 写代码最好，翻译却是 ChatGPT 更强，所以开发者要懂得选模型，这也是以后拿报酬的地方。他把专业人士和外行的差别比作木匠和外行用同样的工具做家具：输出质量、安全性、可更新性都不一样。外行用 AI 通常能完成 80%，然后就垮掉了，最后那 20% 要靠专业人士。视频中还有他自己的辅导课程的推广，这里略去。"
+    ],
+    "brief_en": "Stefan Mischook argues that learning to code is still worth it in 2027, but the focus should be on concepts, system design and using AI tools well, not on writing code by hand.",
+    "detail_en": [
+     "Stefan Mischook says asking whether to learn coding in 2027 is the wrong question. People who fear coding will vanish confuse coding with software development. Coding is only one part of the job. Developers are paid to build solutions, products and services, and code is just a tool. He says only juniors fear the career will disappear. He has seen many technologies and tasks disappear over the decades, while new things like high-level languages, frameworks, React and Angular appeared.",
+     "His roadmap starts with the basics of a couple of languages, mainly Python and JavaScript. JavaScript is the common language of software, and most apps are delivered as web apps. Python is widely used in AI. He recommends two languages because the first is the hardest, and the second takes about 10% of the time. Modern languages share 90 to 95% of their principles, such as variables, arrays, objects and error handling. Seeing the same ideas expressed differently gives a deeper understanding. Rust is one exception.",
+     "He says you learn languages for the concepts, even if AI writes the code. He talks to two groups. Developers who moved to AI use it like a power tool and finish in a month or two weeks what took 10 months. Non-coders with domain knowledge get results too, but much more slowly. Developers who know object-oriented programming, best practices, system design and design patterns build better apps in far less time. He compares this to early non-programmers building weak CRUD apps in PHP. He expects a lot of technical debt from early AI projects, which he sees as an opportunity.",
+     "So in 2027 a developer writes little code and spends most of the time on system thinking, design patterns, software principles and the AI stack. That includes model strengths, agents and autonomous agents, MCP and connectors, MD files that give AI tighter context, local versus frontier models, general versus specialized models, and agent orchestration. He says tool-specific tutorials go stale because AI development changes every six months, so universal principles matter more.",
+     "He gives an example. On a date with a woman who spoke only Portuguese, he tested three models for real-time translation. ChatGPT was the best, Claude the worst, and Grok the fastest but it added extra content. Claude is best for code today, yet ChatGPT wins at translation. Choosing the right model is what developers will be paid for. He compares pros and amateurs to a carpenter and a beginner with the same tools. Quality, security and updatability differ. Amateurs usually get 80% of the way and then things fall apart, and the pros handle the last 20%. He also promotes his own mentoring program in the video, which is skipped here."
+    ],
+    "topics": [
+     "AI and software careers",
+     "Learning to code",
+     "AI agents"
+    ]
+   },
+   "via": "transcript"
+  },
+  {
+   "model": "claude-opus-5-5",
+   "id": "eqe3ainzPtM",
+   "seconds": 25,
+   "usage": {
+    "prompt": 16229,
+    "output": 2331
+   },
+   "summary": {
+    "brief_zh": "Stefan Mischook 认为，AI 写代码不等于软件开发会消失，2027 年想入行的人仍要学一两门语言，不过重点应该放在编程概念、系统设计和用好 AI 工具上。",
+    "detail_zh": [
+     "Stefan Mischook 是一位有几十年经验的老开发者。他觉得“AI 来了还要不要学写代码”这个问题本身就问错了：担心编程消失的人，是把“写代码”和“软件开发”当成了一回事。写代码一直只是手段，开发者拿钱是因为能做出产品、服务，帮业务把流程跑起来。他说这几十年里，开发流程中很多环节都消失过，但每次都会冒出新东西，比如更高级的语言、框架，还有 React、Angular 这样的库。只有新手才会害怕这个职业会消失。",
+     "他给 2027 年的入门路线是：先学两门语言的基础，首推 JavaScript 和 Python。JavaScript 是 Web 应用的通用语言，Python 是 AI 领域的主力。之所以要学两门，是因为第一门最难，学会之后，第二门大概只要十分之一的时间，主流现代语言有 90% 到 95% 的原理是相通的，Rust 这类算例外。同一个概念在两门语言里写法不同，对照着看，能更深地理解变量、数组、对象、错误处理这些通用概念。",
+     "既然以后代码大多由 AI 来写，为什么还要学语言？他的回答是：学的是概念。他观察过两类 AI 用户。一类是转向 AI 的开发者，把 AI 当电动工具用，以前要 10 个月的活，现在一个月甚至两周就能做完。另一类是懂业务但不懂开发的人，他们也能做出东西，但速度慢，质量也差。开发者懂面向对象、设计模式、系统设计和最佳实践，做出来的应用更复杂，也更好。他拿早年非程序员用 PHP 拼 CRUD 应用来类比，预计这一波非开发者用 AI 做出来的产品会留下大量技术债，他认为这对专业开发者是个机会。",
+     "他认为开发者应该把大部分精力放在系统层面的思考、设计模式、开发原则和 AI 技术栈上。这包括：本地模型和前沿模型各有什么优劣，通用模型和专用模型怎么选，agent 和自主 agent，多个 agent 怎么编排和叠加，MCP 和 connector，用 MD 文件给 AI 收紧上下文。他不推荐“怎么用某个工具做某件事”这类教程，因为 AI 开发方式每半年就大变一次，只有原则才能长期适用。各家模型擅长的事情也不一样：他说眼下 Claude 写代码最强。他有一次和一位只会说葡萄牙语的巴西女士约会，现场测了三个模型做实时翻译，结果 ChatGPT 最好，Claude 最差，Grok 最快但会自己加没要求的内容。",
+     "他的结论是：开发者的价值在于做选择和把控质量，就像以前要决定用 TypeScript 还是 JavaScript，做原生还是用 Flutter 跨平台。他打了个比方：给外行一套木工工具，也能做出一件家具，但会歪歪扭扭，木匠用同样的工具却能做出漂亮的家具。业余的人用 AI 通常能做到 80%，然后就做不下去了，剩下的 20%，包括安全性、质量和可维护性，正是专业开发者的用武之地。所以不必因为外行也能做出基础的东西就觉得受到了 AI 的威胁。"
+    ],
+    "brief_en": "Stefan Mischook argues that AI writing code does not end software development, and new developers in 2027 should still learn a couple of languages but focus on concepts, system design, and using AI tools well.",
+    "detail_en": [
+     "Stefan Mischook is a veteran developer with decades of experience. He says asking whether to learn coding in the AI era is the wrong question. People who fear coding is going away are mixing up coding with software development. Coding was always just a tool. Developers are paid to build products and services and to support business processes. Over the decades he has seen many parts of the job disappear, and each time new things appeared, such as higher-level languages, frameworks, and libraries like React and Angular. He says only juniors fear the career is disappearing.",
+     "His roadmap for 2027 starts with the basics of two languages: JavaScript and Python. JavaScript is the common language of web apps. Python dominates AI work. The first language is the hardest. After it, a second one takes about a tenth of the time, because modern languages share 90 to 95 percent of their principles, with exceptions like Rust. Seeing the same concepts written two ways gives a deeper understanding of things like variables, arrays, objects, and error handling.",
+     "Why learn languages if AI writes the code? Because the concepts matter. He describes two groups of AI users. Developers who moved to AI use it like a power tool and finish 10 months of work in a month or even two weeks. People with business knowledge but no development background can also get results, but they are slower and their apps are worse. Developers understand object-oriented programming, design patterns, system design, and best practices. He compares this to early non-programmers building basic CRUD apps in PHP. He expects a lot of technical debt from non-developers using AI, and he sees that as an opportunity for professional developers.",
+     "He says most of a developer's effort should now go to system-level thinking, design patterns, principles, and the AI stack. That includes the tradeoffs between local and frontier models, general and specialized models, agents and autonomous agents, orchestrating and stacking agents, MCP and connectors, and MD files that give the AI tighter context. He avoids \"how to do X with one tool\" tutorials because AI development practices change every six months, while principles last. Models also differ: he says Claude is currently best at coding. On a date with a Brazilian woman who spoke only Portuguese, he tested three models for real-time translation. ChatGPT was best, Claude was worst, and Grok was fastest but added content nobody asked for.",
+     "His conclusion is that developers are paid for these choices and for quality. In the past they chose between TypeScript and JavaScript, or between native apps and Flutter. He compares it to carpentry: an amateur with good tools can build furniture, but it comes out crooked, while a skilled carpenter makes something beautiful with the same tools. Amateurs using AI usually get about 80 percent of the way and then things fall apart. Professionals handle the last 20 percent, including security, quality, and maintainability. So he says developers should not feel threatened by AI just because amateurs can now build basic things."
+    ],
+    "topics": [
+     "AI-assisted coding",
+     "software careers",
+     "learning to program"
+    ]
+   },
+   "via": "transcript"
   }
  ]
 }
