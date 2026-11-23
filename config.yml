@@ -9,11 +9,17 @@ max_catchup_hours: 168
 # 同一个来源一天最多收几篇（simonwillison.net 一天能发十几条短链接）
 max_per_source: 5
 
-# 用 Claude 会员令牌跑，模型名可以随时换
+# 用 Claude 会员令牌跑，模型名可以随时换。2026-11-23 起博客和视频统一用 Sonnet 5.5。
 models:
-  summary: "claude-haiku-5-5"   # 每篇写中英摘要
+  summary: "claude-sonnet-5-5"  # 每篇博客写中英摘要
   picks: "claude-sonnet-5-5"    # 每天挑"该知道的"和"可能喜欢"（picks_enabled 为 true 时才用）
   video: "claude-sonnet-5-5"    # YouTube 视频：读字幕写摘要
+
+# YouTube（你电脑上 Claude 桌面版的定时任务，scripts/youtube.py）：和博客一样抓上次成功之后的新视频
+youtube:
+  max_videos_per_run: 20  # 一次最多写几个视频的摘要，多出来的留到下次
+  max_tries: 3            # 字幕还没生成的视频，最多等几次运行
+
 summary_batch_size: 4
 # 每篇喂给模型的正文最多多少字符
 max_chars_per_item: 20000
