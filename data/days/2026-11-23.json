@@ -2,6 +2,259 @@
  "date": "2026-11-23",
  "items": [
   {
+   "id": "3f29109e4662",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Semafor: ‘Hours Before Huang’s Reinstatement, Trump Called Nvidia’s Board to Argue for His Return’",
+   "url": "https://www.semafor.com/article/11/23/2026/jensen-huang-reinstated-as-nvidia-ceo",
+   "published": "2026-11-23T16:00:29+00:00",
+   "basis": "short",
+   "brief_zh": "据 Semafor 的知情人士说，Trump 在 Nvidia 董事会开会时打电话，力主让 Jensen Huang 回任，几小时后董事会就宣布了复职。",
+   "background_zh": "Nvidia 董事会主席 Harvey Jones 在六天前的财报电话会上还表示，董事会已一致接受 Huang 的辞职，不打算让他复任 CEO。复职的反转如此突然，所以外界关注是谁在背后推动。",
+   "conclusion_zh": "文章没有另外的结论。Gruber 最后用一句讽刺的话收尾，指 Jones 需要有人帮他找回裤子。",
+   "brief_en": "Semafor reports that Trump called Nvidia's board to argue for Jensen Huang's return. The board reinstated Huang hours later.",
+   "background_en": "Six days earlier, the board chairman had said on an earnings call that the board would not bring Huang back as CEO. The quick reversal is why the role of outside pressure is the main question here.",
+   "conclusion_en": "The post does not state a further conclusion. Gruber ends with a joke about Jones needing help finding his pants.",
+   "points_zh": [
+    "Semafor 的消息来源称，Trump 在 Nvidia 董事会的紧急会议中拨入电话，支持 Huang 回任，时间是复职宣布前几个小时。白宫传播事务主任 Steven Cheung 表示，Trump 全程参与，并称这是一个很好的决定。",
+    "董事会主席 Harvey Jones 发表声明，认为 Huang 是领导 Nvidia 的合适人选，复职符合股东、员工、合作伙伴和客户的利益。Gruber 指出，这与 Jones 在财报电话会上的说法正好相反。",
+    "Gruber 认为，一直主张政府不应干预企业事务的共和党人，如果支持 Trump 这样为人事决定施压，就是前后不一。他说，同样的事如果换成 Newsom 或 Ossoff 去做，这些人也不会支持。"
+   ],
+   "points_en": [
+    "Semafor's sources say Trump dialed into the Nvidia board meeting to argue for Huang's return. The call came hours before the reinstatement. White House communications director Steven Cheung said Trump was 'totally involved' and called the decision a good one.",
+    "Board chairman Harvey Jones said Huang is the right person to lead Nvidia and that his return serves shareholders, employees, partners and customers. Gruber notes that Jones had said the opposite on the earnings call six days earlier.",
+    "Gruber argues that Republicans who oppose government involvement in business would be inconsistent to support Trump's call. He says they would not support the same move by Democrats such as Gavin Newsom or Jon Ossoff."
+   ],
+   "topics": [
+    "Nvidia",
+    "Jensen Huang",
+    "US politics"
+   ]
+  },
+  {
+   "id": "d2d6bb654973",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Government Regulation and Demand",
+   "url": "https://stratechery.com/2026/obituaries/",
+   "published": "2026-11-23T15:31:50+00:00",
+   "basis": "full",
+   "brief_zh": "Ben Thompson 认为，技术生态需要真实的需求来推动，光靠政府投入不够。Gruber 同意这个看法，并认为欧盟的做法让本土替代品既出不来，用户又用不到更好的版本。",
+   "background_zh": "作者上周转发过 Ben Thompson 谈 Nvidia 和 Jensen Huang 的文章。这篇文章讨论的是其中一段关于政府政策与需求的论述，作者认为这段论述很有道理。",
+   "conclusion_zh": "作者的结论是，技术替代品要靠真实的使用需求才能成长，光有愿望不够。只要外国平台还容易使用，本土竞争者就拿不到它需要的需求。",
+   "brief_en": "Gruber agrees with Ben Thompson that homegrown tech needs real demand, not just government backing. He says the EU approach gives it neither alternatives nor better versions of the platforms.",
+   "background_en": "Gruber had linked to a column by Ben Thompson on Nvidia and Jensen Huang the week before. This post looks at one passage in that column about government policy and demand.",
+   "conclusion_en": "Alternatives grow only when people use them. As long as foreign platforms stay easy to use, local rivals do not get the demand they need.",
+   "points_zh": [
+    "Thompson 认为，中国政府只能通过投资和自上而下的指令推动供给，但建立技术生态还需要需求。模型和芯片的进步依赖用户与开发者之间的反馈循环，而需求方通常比政府更看重短期。他还说，模型公司会互相跟随，别人蒸馏，它也蒸馏；别人用 Nvidia 芯片，它也用。",
+    "Thompson 用防火长城做类比。中国切断了美国科技公司的服务，才逼出了本土科技巨头。他认为，中国禁止进口 Nvidia 的 H20 芯片，也是在重演同样的做法，让国内需求被迫转向较弱的替代品，替代品只有这样才会变好。",
+    "Gruber 同意这一观点，并以欧盟为例。他说，如果欧盟真想要 Facebook、Google 搜索和 iOS 的本土替代品，就该像中国那样封禁这些平台。实际上，欧盟允许这些平台运营，却要求它们删减功能，结果欧盟既得不到替代品，公民用到的也是功能更少的版本。"
+   ],
+   "points_en": [
+    "Thompson argues that China's government can only push the supply side through money and top-down orders. Building an ecosystem also needs demand, and progress in models and chips depends on a feedback loop between users and developers. Model companies follow each other, so if one distills or uses Nvidia chips, the others do too.",
+    "Thompson compares this to the Great Firewall. By cutting off American tech companies, China created the demand that grew its own tech giants. He says China's ban on imports of Nvidia's H20 chip follows the same playbook, forcing domestic demand onto weaker alternatives.",
+    "Gruber agrees and uses the EU as an example. If the EU wanted homegrown alternatives to Facebook, Google search and iOS, it would need to ban them, as China does. Instead, the EU lets these platforms run while forcing them to remove features. Gruber says this leaves the EU without alternatives and gives its citizens worse versions of the platforms."
+   ],
+   "topics": [
+    "tech policy",
+    "China",
+    "EU regulation"
+   ]
+  },
+  {
+   "id": "bd53eba9d92f",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Elon Musk Claims to Be Unfamiliar With MAGA",
+   "url": "https://www.usatoday.com/story/opinion/columnist/2026/11/19/musk-maga-trump-republicans-billionaires/92855121007/",
+   "published": "2026-11-23T15:16:35+00:00",
+   "basis": "short",
+   "brief_zh": "Musk 在共和党中期选举大败后表示，他不确定 MAGA 是什么意思，并对自己在选举上的巨额花费感到“很愚蠢”。Gruber 认为，这些说法与 Musk 过去公开支持 MAGA 的言行明显不符。",
+   "background_zh": "共和党在中期选举中大败。Musk 是特斯拉和 SpaceX 的 CEO，也是这次选举中个人捐款最多的人。",
+   "conclusion_zh": "文章没有另外的结论。Gruber 认为，多数商界高管都不会站得离政治太近，而 Musk 在这方面已经走得很远。",
+   "brief_en": "Musk says he is not sure what MAGA means and feels foolish about his midterm spending. Gruber says those claims do not match Musk's earlier public support for MAGA.",
+   "background_en": "The Republicans lost badly in the midterm elections. Musk, who runs Tesla and SpaceX, was the top individual donor in the election.",
+   "conclusion_en": "The post does not add a further conclusion. Gruber says most executives keep a short distance from politics, and Musk has gone much further than that.",
+   "points_zh": [
+    "Musk 说他不确定 MAGA 指的是什么，并表示如果它指的是对共和党政策的盲目服从，那他并不是这样的人。这段话出自 USA Today 专栏作者 Rex Huppke 的文章。",
+    "Musk 表示，他对花在中期选举上的巨额资金感到很愚蠢。据报道，他捐出 4.46 亿美元支持共和党，主要是在他的公司大多所在的德州。他是这届选举中个人捐款最多的人。",
+    "Gruber 列出 Musk 过去的言行：他戴过 MAGA 帽子，在 Trump 的集会上发言，并在 2024 年自称是“dark MAGA”。Gruber 认为，这与他现在说的不了解 MAGA 对不上。"
+   ],
+   "points_en": [
+    "Musk says he is not sure what MAGA means. He adds that he does not follow Republican Party policies blindly.",
+    "Musk says he feels pretty foolish about the record sum he spent on the midterms. He gave $446m to support the Republican Party, mostly in Texas, where many of his companies are based.",
+    "Gruber lists Musk's earlier ties to MAGA. Musk wore a MAGA hat, spoke at Trump rallies and in 2024 called himself 'dark MAGA'. Gruber says this does not fit with Musk now saying he is unfamiliar with the movement."
+   ],
+   "topics": [
+    "Elon Musk",
+    "US midterm elections",
+    "MAGA"
+   ]
+  },
+  {
+   "id": "be9c8fb91e88",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Nvidia Board Reinstates Jensen Huang",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+   "published": "2026-11-23T14:43:27+00:00",
+   "basis": "short",
+   "brief_zh": "Nvidia 宣布 Jensen Huang 即日起复任 President 和 CEO，并重新担任董事。董事会表示，在听取美国政府高层意见后，认为他的复职不存在国家安全风险。",
+   "background_zh": "Huang 之前被移出 CEO 职位，现在董事会撤销了这一决定。Gruber 还提到，NYT 在复职前一个周末报道称，Alice Huang 一年多来一直与中国国家安全部（MSS）的一名官员保持定期联系，直到今年秋天；原文没有说明她与 Jensen Huang 是否有关系。",
+   "conclusion_zh": "Gruber 承认，这次科技界的判断比政界更准确，他自己也判断错了。他认为，原因可能是 AI 和风投圈对 Trump 政府还剩多少政治资本，以及它愿不愿意动用，判断得更清楚。",
+   "brief_en": "Nvidia reinstated Jensen Huang as President and CEO with immediate effect. The board says his return poses no national security risk.",
+   "background_en": "Huang had been removed as CEO, and the board has now reversed that decision. Gruber also cites a New York Times report from the weekend before, about Alice Huang's contact with a Chinese MSS official, though the post does not link her to Huang.",
+   "conclusion_en": "Gruber admits that the tech side read the situation better than the political side, and that he was wrong. He suggests the AI and venture capital circles may have had a clearer sense of how much political capital the Trump administration had left and how willing it was to use it.",
+   "points_zh": [
+    "Nvidia 宣布 Huang 即日起复任 President 和 CEO，并重新担任董事会成员。董事会一致投票通过，此前与他多次讨论和会面，最后对他的坦诚和领导能力感到满意。",
+    "董事会表示，在作出决定的过程中，它收到了美国政府高层的意见。根据这些意见，董事会确信 Huang 的复职不会带来国家安全风险。",
+    "Trump 在自己的博客上表示，他与 Huang 已经有了接触，称他是“伟大的爱国者和国宝”。他还要求 Nvidia 继续对公司遵守美国出口管制的情况进行彻底的内部调查，以履行法律义务和爱国责任。Gruber 讽刺地说，Huang 担任董事长后，应该会马上去处理这件事。"
+   ],
+   "points_en": [
+    "Nvidia announced that Jensen Huang is reinstated as President and CEO with immediate effect, and as a board member. The board voted unanimously after a series of discussions and meetings with him. It said it was satisfied with his candor and his ability to lead Nvidia.",
+    "The board says it received input from senior levels of the US government during its decision. Based on that input, it is confident that Huang's reinstatement poses no national security risk.",
+    "Trump wrote on his blog that he has gotten to know Huang and calls him a 'Great Patriot and National Treasure'. He also says Nvidia should continue its internal investigation into its compliance with US export controls. Gruber responds sarcastically that Huang will surely get right on it."
+   ],
+   "topics": [
+    "Nvidia",
+    "export controls",
+    "Jensen Huang"
+   ]
+  },
+  {
+   "id": "7f7146bf8263",
+   "kind": "blog",
+   "source": "pluralistic.net",
+   "source_url": "https://pluralistic.net",
+   "title": "Pluralistic: The Debt Trap (23 Nov 2026)",
+   "url": "https://pluralistic.net/2026/11/23/grasshoppers-v-ants/",
+   "published": "2026-11-23T13:18:44+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为，因果之间隔着很长的时间和空间，人们就会低估代价，许多危害因此不断积累，直到整个系统突然崩溃。",
+   "background_zh": "作者从自己吸烟并确诊癌症的经历谈起，想弄清楚人们为什么明知有害还会去做。他把这个问题延伸到政策、垄断、气候和机构等领域。",
+   "conclusion_zh": "作者的结论是，因果之间的距离让健康、技术、政策和信誉方面的“债务”不断累积，而人们很难判断系统何时到达临界点。文中没有提出具体的解决办法。",
+   "brief_en": "The author argues that when cause and effect are far apart in time and space, people underestimate the cost, and the resulting damage builds up until a system suddenly fails.",
+   "background_en": "The author starts with his own smoking and cancer diagnosis and asks why people keep doing harmful things when the cost comes much later. He then applies the same idea to policy, monopolies, climate and institutions.",
+   "conclusion_en": "The author concludes that delayed cause and effect build up debt in health, technology, policy and credibility. He says it is impossible to know when a system has lost its ability to absorb the next strain. The essay does not set out a specific remedy.",
+   "points_zh": [
+    "人对延迟的代价估计偏低，是因为缺少可以对照的切身经验。作者说，他知道吸烟致癌的统计数字，却没有经历过癌症诊断的那种感受，所以很难估出代价。疫苗也是一样，群体免疫建立以后，很多人已经忘了麻疹有多可怕。",
+    "利益相关方正好利用了这段时间差。作者认为，烟草公司借此制造了对吸烟与癌症关系的怀疑。他还认为，特朗普的“Big Bill”把最严重的医疗补助和农村医院削减安排在中期选举之后；拜登的降药价计划也被缩水，并且要到 2025 年才生效，正好在 2024 年选举之后。",
+    "反垄断和气候问题也是同一种模式。作者说，美国的反垄断执法从卡特时期开始放松，政策的后果要很久才显现，公众很难把它和垄断联系起来。他还举例说，Exxon 自己的科学家在 1970 年代就提醒公司注意全球变暖，而 Mobil 却在报纸上刊登广告，说气候科学太不确定，不足以制定行动计划。",
+    "机构的韧性会一点点被消耗，直到某次小冲击引发崩溃。作者列举了 Twitter 的大规模裁员、大学用兼职教师替代终身教授，以及 IT 团队被裁减的例子，认为这些损害要过一段时间才显现。他把这个过程比作雪崩：每一小片雪只造成微小的变化，直到最后一片雪让整座雪山崩落。"
+   ],
+   "points_en": [
+    "People underestimate delayed costs because they have no direct experience to compare with. The author says he knew the smoking statistics but could not feel the cost until his own cancer diagnosis. The same gap lets people forget how serious measles was once herd immunity exists.",
+    "Interest groups and policymakers use the same gap to their advantage. The author says the tobacco industry sowed doubt about smoking and cancer. He also says Trump's Big Bill put its deepest Medicaid and rural hospital cuts after the midterm elections, and that Biden's drug price plan was narrowed and set to start in 2025, after the 2024 election.",
+    "Antitrust and climate follow the same pattern. The author says US antitrust enforcement faded from Jimmy Carter's time onwards. He also says Exxon's own scientists warned of global warming in the 1970s, while Mobil ran newspaper ads saying the science was too uncertain to justify action.",
+    "Institutions lose resilience bit by bit until a small shock breaks them. The author lists the mass firings at Twitter, the replacement of tenured professors with adjuncts, and IT staff cuts, where the damage shows only after a delay. He compares this to an avalanche: each small load changes little until one more snowflake sets the whole slope moving."
+   ],
+   "topics": [
+    "attenuated causality",
+    "policy",
+    "systemic risk"
+   ]
+  },
+  {
+   "id": "c98a243701c0",
+   "kind": "blog",
+   "source": "shkspr.mobi",
+   "source_url": "https://shkspr.mobi",
+   "title": "Gadget Review: Cheap Zigbee Environmental Sensors ★★★☆☆",
+   "url": "https://shkspr.mobi/blog/2026/11/gadget-review-cheap-zigbee-environmental-sensors/",
+   "published": "2026-11-23T12:34:29+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为，Sonoff AirGuard TH Lite 在 Home Assistant 里接入简单、读数稳定，但有两个传感器耗电很快，所以他只给三星。",
+   "background_zh": "作者读到一篇测试多款 Zigbee 温湿度传感器的文章，其中 Sonoff AirGuard TH Lite 被点名推荐。于是他在英国买了一组四个来试用，这是他能找到的最便宜的选择。",
+   "conclusion_zh": "作者认为，这类设备正常工作时就是小巧、不用操心的东西，放在架子上或挂在钩子上就行。他希望以后能支持 USB-C 充电，但觉得找 AAA 电池并不难。",
+   "brief_en": "The author finds the Sonoff AirGuard TH Lite sensors reliable and easy to set up in Home Assistant, but gives them three stars out of five because two units drained their batteries quickly.",
+   "background_en": "The author read a blog post that tested several Zigbee temperature and humidity sensors. The Sonoff AirGuard TH Lite got an honourable mention there, so he bought a four pack in the UK, where it was the cheapest option he could find.",
+   "conclusion_en": "When they work, the author says the sensors are small and dull devices that need little attention, which suits a shelf or a hook. He would like USB-C charging in future, but he says AAA batteries are easy enough to find.",
+   "points_zh": [
+    "电池耗电是主要问题。作者买的四个里有两个在不到两周内电量骤降，之后就掉线了，他还没查清是电池还是传感器本身的问题。他换了新电池，几天后又收到固件更新，说是为了改善续航和稳定性，更新以后电量一直显示 100%。",
+    "读数和连接表现不错，但作者没有做过校准。传感器每隔几分钟上报一次，隔着金属盒子、离 Zigbee 网关较远时，LQI 约 96、RSSI 约 -87，仍能正常上报。偶尔会掉线，按一下按钮就能重新连上，丢失的数据不会重发。",
+    "接入 Home Assistant 很省事。Home Assistant 直接识别了它们，说明书建议安装后等 30 分钟让传感器自校准。露点和水汽压差（VPD）在 ZHA 里还不支持，作者手动加了 Quirk 文件，无需重新配对就生效了。",
+    "硬件上有几处小不便。挂绳偏短，只适合挂在钉子上；供电用的是 AAA 电池，不能 USB-C 充电。不过四个装售价 30 英镑，平均每个 7.5 英镑，作者觉得价格合理。"
+   ],
+   "points_en": [
+    "Battery drain was the main problem. Two of the four sensors lost their charge in under two weeks, then dropped off the network. The author has not worked out whether the cause was the batteries or the sensors. After he fitted new batteries, a firmware update arrived, which is meant to improve battery life and stability. Since then the batteries have reported 100%.",
+    "Readings and connection are solid, although the author did not calibrate the sensors. They report every few minutes. Even inside a metal box and some distance from the Zigbee dongle, the LQI was about 96 and the RSSI about -87, which was enough to report regularly. They sometimes drop off, but a press of the button reconnects them. Lost readings are not sent again.",
+    "Setup and Home Assistant integration are easy. Home Assistant added the sensors at once, and the manual suggests waiting 30 minutes for self-calibration. Dew point and vapour pressure deficit are not yet supported in ZHA. The author added a Quirk file by hand, and these values appeared without re-pairing.",
+    "The hardware has some small limits. The lanyard is short, and the sensors use AAA batteries rather than USB-C charging. At £7.50 each in a four pack, the author finds the price reasonable."
+   ],
+   "topics": [
+    "Zigbee",
+    "smart home",
+    "Home Assistant"
+   ]
+  },
+  {
+   "id": "792c64292692",
+   "kind": "blog",
+   "source": "dfarq.homeip.net",
+   "source_url": "https://dfarq.homeip.net",
+   "title": "Why the Atari Jaguar is so expensive",
+   "url": "https://dfarq.homeip.net/why-the-atari-jaguar-is-so-expensive/?utm_source=rss&utm_medium=rss&utm_campaign=why-the-atari-jaguar-is-so-expensive",
+   "published": "2026-11-23T12:00:10+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为，Atari Jaguar 现在价格高，主要是因为当年产量本来就少，而如今有怀旧情怀又有消费能力的 Generation X 开始追捧它。",
+   "background_zh": "Jaguar 1993 年发售，1996 年就退出了市场，如今却成了收藏品，价格远高于当年的售价。作者想解释其中的原因。",
+   "conclusion_zh": "作者的结论是，Jaguar 当年是为一代人做的，但那代人当时没钱或没兴趣去买。三十年后他们想补上这段记忆，而产量原本就少，价格因此被推高。",
+   "brief_en": "The author says the Atari Jaguar is expensive now because very few were made, and Generation X buyers who feel nostalgic for it now have the money to buy one.",
+   "background_en": "The Jaguar launched in 1993 and left the market in 1996. It is now a collectible that sells for far more than its original price, and the author wants to explain why.",
+   "conclusion_en": "The author concludes that the Jaguar was built for a generation that could not or did not want to buy it at the time. Thirty years later that generation wants what it missed, and the small original production has pushed prices up.",
+   "points_zh": [
+    "这台主机多年来都不贵，直到 2017 年才开始涨价。作者的数据从 2010 年开始，当时二手价约 70 到 85 美元，和 NES、Genesis 差不多。2017 年后需求上升，2020 年 5 月达到高点。现在一台裸机仍接近 400 美元，接近当今主流主机的价格。",
+    "怀旧情绪推动了需求。作者认为，Generation X 中年长的那一半对 Atari 有深刻记忆，如今进入中年、有了可支配收入，就开始找童年的东西。Jaguar 发售时，很多人还在上大学，没什么钱，或者只能在 Jaguar 和其他主机里选一个。",
+    "产量本来就少，上市初期也不顺。作者根据 Boris Kretzinger 的 Clipped Claws 一书中的数字，估算总产量约 22.5 万台。1993 年计划出货 5 万台，实际只造了约 1.7 万台；1994 年售出 10 万台，远低于 50 万台的目标。",
+    "它并非一直昂贵。1995 年 Atari 清理了库存，到 2001 年还能以 30 美元买到全新盒装。作者 2006 年开始留意，二手价约 50 美元，和 NES、Genesis 的差距在 10 美元以内。"
+   ],
+   "points_en": [
+    "The Jaguar was cheap for years, and its price rose only from 2017. The author's pricing data starts in 2010, when used units sold for about $70 to $85, close to an NES or Genesis. Demand rose from 2017 and peaked in May 2020. A loose unit still sells for nearly $400 today, which is close to the price of a current console.",
+    "Nostalgia among Generation X drives much of the demand. The author says the older half of the generation remembers the Atari 2600 well, and now has middle-age income to spend on childhood favourites. Many fans were in college when the Jaguar launched, had little money, or could only choose between the Jaguar and a rival console.",
+    "Production was small, and the launch went badly. The author estimates about 225,000 units were made, based on figures in Clipped Claws by Boris Kretzinger. Atari planned to make 50,000 units in 1993 but made only about 17,000. It sold 100,000 in 1994, far short of its target of 500,000.",
+    "The Jaguar was not always expensive. Atari cleared its excess stock in 1995, and as late as 2001 a new boxed unit could cost $30. When the author began tracking prices around 2006, a used unit sold for about $50, within $10 of an NES or Genesis."
+   ],
+   "topics": [
+    "Atari Jaguar",
+    "retro gaming",
+    "collectibles"
+   ]
+  },
+  {
+   "id": "b524d3534e22",
+   "kind": "blog",
+   "source": "johndcook.com",
+   "source_url": "https://johndcook.com",
+   "title": "Gravity on an oblate planet",
+   "url": "https://www.johndcook.com/blog/2026/11/23/oblate-spheroid-gravity/",
+   "published": "2026-11-23T10:17:22+00:00",
+   "basis": "full",
+   "brief_zh": "作者的核心结论是：把扁球形行星的质量当成集中在球心的点质量来算，会把两极与赤道的重力差异高估约十倍。",
+   "background_zh": "作者在读 Hal Clement 的小说《Mission of Gravity》，书中的行星非常扁，两极和赤道的重力差别很大。他想弄清楚这种星球上的重力应该怎么算。",
+   "conclusion_zh": "作者的结论是，点质量模型对中等扁平的星球（比如地球）不适用，它把扁平造成的重力变化高估了大约十倍。",
+   "brief_en": "The author says that treating an oblate planet's mass as a point at the centre overstates the gravity difference between the poles and the equator by about tenfold.",
+   "background_en": "The author was reading Hal Clement's novel Mission of Gravity, which is set on a very oblate planet with large gravity differences from pole to equator. He wanted to work out how gravity behaves on such a planet.",
+   "conclusion_en": "The author concludes that the point-mass model does not work for a moderately oblate planet like Earth. It overstates the gravity variation by about a factor of 10.",
+   "points_zh": [
+    "点质量模型严重高估了扁平造成的影响。如果质量全部集中在球心，两极与赤道的重力比就是 (a/b)²，展开后约为 1 + 2ε，其中 ε = 1 − b/a 是扁率，a 是赤道半径，b 是极半径。作者认为，这个模型即使对地球这样中等扁平的星球也不适用。",
+    "如果假设密度均匀，两极与赤道的重力比展开式是 1 + ε/5 + (9/175)ε² + …，一阶效应只有 ε/5。这大约是点质量模型估计值的十分之一。",
+    "扁平对卫星轨道也有影响。作者提到，即使对地球这样接近球形的星球，扁平仍然是计算卫星轨道时的重要因素，这叫做 J2 效应。小说中的星球每 18 分钟自转一圈，离心力削弱了赤道处的表观重力，因此两极与赤道的差距更大。"
+   ],
+   "points_en": [
+    "The point-mass model badly overstates the effect of flattening. If all the mass sits at the centre, the ratio of polar to equatorial gravity is (a/b)², which expands to about 1 + 2ε. Here a is the equatorial radius, b is the polar radius, and ε = 1 − b/a is the flattening. The author says this model is not useful even for a moderately oblate planet like Earth.",
+    "A uniform density model gives a much smaller effect. The ratio of polar to equatorial gravity is 1 + ε/5 + (9/175)ε² + …, so the first-order effect is ε/5. That is about one tenth of the point-mass estimate.",
+    "Oblateness also matters for satellites. The author says this is the J2 effect, which still affects orbit calculations for Earth, a nearly spherical planet. The novel's planet rotates every 18 minutes, and centrifugal force lowers the apparent gravity at the equator, which widens the gap."
+   ],
+   "topics": [
+    "planetary gravity",
+    "oblate planets"
+   ]
+  },
+  {
    "id": "2e92de5c4e42",
    "kind": "blog",
    "source": "troyhunt.com",
@@ -399,5 +652,5 @@
   "important": [],
   "liked": []
  },
- "generated_at": "2026-11-23T09:24:39.799830+00:00"
+ "generated_at": "2026-11-23T16:18:37.347414+00:00"
 }
