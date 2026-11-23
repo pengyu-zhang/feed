@@ -20,11 +20,7 @@ CHANNEL: Stefan Mischook
 Reply with ONLY a JSON object with keys "brief_zh", "background_zh", "points_zh", "conclusion_zh", \
 "brief_en", "background_en", "points_en", "conclusion_en", "topics"."""
 
-CASES = [
-    ("transcript", "gemini-3.5-flash-lite"),
-    ("agentic", "gemini-3.5-flash-lite"),
-    ("transcript", "gemini-3.1-flash-lite"),
-]
+CASES = [("transcript", "gemini-3.5-flash-lite"), ("agentic", "gemini-3.5-flash-lite")]
 
 
 def run(case):
@@ -35,20 +31,30 @@ def run(case):
     if mode == "agentic":
         kw["media_processing"] = types.MediaProcessing.AGENTIC
     t0 = time.time()
-    try:
+    for attempt in range(4):
+        try:
+            return once(mode, model, kw, t0, attempt)
+        except Exception as e:  # noqa: BLE001
+            err = str(e).replace("\n", " ")[:600]
+            if "503" not in err or attempt == 3:
+                return {"case": f"{mode} {model}", "attempts": attempt + 1, "seconds": round(time.time() - t0), "error": err}
+            time.sleep(60)
+
+
+def once(mode, model, kw, t0, attempt):
+    if True:
         r = client.models.generate_content(
             model=model, contents=types.Content(parts=[types.Part(**kw), types.Part(text=PROMPT)]),
             config=types.GenerateContentConfig(response_mime_type="application/json"))
         u = r.usage_metadata
-        return {"case": f"{mode} {model}", "seconds": round(time.time() - t0),
+        return {"case": f"{mode} {model}", "attempts": attempt + 1, "seconds": round(time.time() - t0),
+                "usage_full": u.model_dump(exclude_none=True, mode="json"),
                 "usage": {"prompt": u.prompt_token_count, "output": u.candidates_token_count,
                           "thoughts": u.thoughts_token_count, "total": u.total_token_count,
                           "by_modality": {str(d.modality): d.token_count for d in (u.prompt_tokens_details or [])}},
                 "summary": json.loads(r.text)}
-    except Exception as e:  # noqa: BLE001
-        return {"case": f"{mode} {model}", "seconds": round(time.time() - t0), "error": str(e).replace("\n", " ")[:1200]}
 
 
-with ThreadPoolExecutor(3) as ex:
+with ThreadPoolExecutor(2) as ex:
     for res in ex.map(run, CASES):
         print("RESULT_JSON " + json.dumps(res, ensure_ascii=False), flush=True)
