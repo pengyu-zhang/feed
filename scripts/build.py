@@ -118,49 +118,56 @@ def item_html(it, compact=False, detail=True):
     return "".join(out)
 
 
-def day_body(day):
+def day_body(day, picks_on=True):
     items = {it["id"]: it for it in day["items"]}
+    blogs = [it for it in day["items"] if it.get("kind") != "video"]
+    videos = [it for it in day["items"] if it.get("kind") == "video"]
     zh, en = date_label(day["date"])
-    n = len(day["items"])
-    sources = len({it["source"] for it in day["items"]})
     gen = day.get("generated_at")
     when = ""
     if gen:
-        t = datetime.fromisoformat(gen).astimezone(ZoneInfo("Europe/Amsterdam")).strftime("%H:%M")
-        when = t
+        when = datetime.fromisoformat(gen).astimezone(ZoneInfo("Europe/Amsterdam")).strftime("%H:%M")
     head = (f'<header class="card page-head"><div class="label label--accent">Feed</div>'
             f'<h1>{bi(zh, en)}</h1><p class="muted">'
-            f'{bi(f"{sources} 个来源更新了 {n} 篇" + (f" · {when} 更新" if when else ""), f"{n} posts from {sources} sources" + (f" · updated {when}" if when else ""))}'
+            f'{bi(f"博客 {len(blogs)} 篇 · 视频 {len(videos)} 个" + (f" · {when} 更新" if when else ""), f"{len(blogs)} posts · {len(videos)} videos" + (f" · updated {when}" if when else ""))}'
             f"</p></header>")
+    picks = day.get("picks", {}) if picks_on else {}
 
-    def column(key, label, title, sub):
-        ids = [p["id"] if isinstance(p, dict) else p for p in day.get("picks", {}).get(key, [])]
+    def column(key, label, title):
+        ids = [p["id"] if isinstance(p, dict) else p for p in picks.get(key, [])]
         inner = "".join(item_html(items[i]) for i in ids if i in items) or \
-            f'<p class="empty">{bi("今天没有挑出来的。", "Nothing picked today.")}</p>'
+            f'<p class="empty">{bi("暂时空着。", "Empty for now.")}</p>'
         return (f'<section class="card" aria-label="{escape(title[1])}"><div class="label">{bi(*label)}</div>'
-                f'<h2 class="col-title">{bi(*title)}</h2><p class="muted small">{bi(*sub)}</p>{inner}</section>')
+                f'<h2 class="col-title">{bi(*title)}</h2>{inner}</section>')
 
     cols = ('<div class="cols">'
-            + column("important", ("热门", "Trending"), ("该知道的", "Worth knowing"),
-                     ("今天圈子里最受关注的，不管你平时看不看", "What people are talking about today, your usual topics or not"))
-            + column("liked", ("为你挑选", "For you"), ("可能喜欢", "You might like"),
-                     ("按你的兴趣挑的。打分功能上线后改按你的历史", "Picked by your interests; by your ratings once rating is added"))
+            + column("important", ("热门", "Trending"), ("该知道的", "Worth knowing"))
+            + column("liked", ("为你挑选", "For you"), ("可能喜欢", "You might like"))
             + "</div>")
-    picked = {p["id"] if isinstance(p, dict) else p
-              for col in day.get("picks", {}).values() for p in col}
-    # posts already shown in full in the two columns above: title and one line only here
-    listing = "".join(item_html(it, compact=True, detail=it["id"] not in picked)
-                      for it in day["items"]) or \
-        f'<p class="empty">{bi("这段时间没有新文章。", "No new posts in this period.")}</p>'
-    all_sec = (f'<section class="card list"><h2 class="section-title">{bi("全部更新", "All updates")}'
-               f' <span class="muted" style="font-weight:400">{n}</span></h2>{listing}</section>')
+    picked = {p["id"] if isinstance(p, dict) else p for col in picks.values() for p in col}
+
+    def listing(rows, empty):
+        # posts already shown in full in the two columns above: title and one line only here
+        return "".join(item_html(it, compact=True, detail=it["id"] not in picked) for it in rows) or \
+            f'<p class="empty">{bi(*empty)}</p>'
+
+    seg = (f'<div class="seg" role="tablist">'
+           f'<button type="button" role="tab" data-tab="blog" aria-selected="true">{bi("博客", "Blogs")}'
+           f' <span class="count">{len(blogs)}</span></button>'
+           f'<button type="button" role="tab" data-tab="video" aria-selected="false">YouTube'
+           f' <span class="count">{len(videos)}</span></button></div>')
+    all_sec = (f'<section class="card list"><h2 class="section-title">{bi("全部更新", "All updates")}</h2>{seg}'
+               f'<div class="panel" data-panel="blog">'
+               f'{listing(blogs, ("这段时间没有新文章。", "No new posts in this period."))}</div>'
+               f'<div class="panel" data-panel="video" hidden>'
+               f'{listing(videos, ("这段时间没有新视频。", "No new videos in this period."))}</div></section>')
     return head + cols + all_sec
 
 
 def archive_body(days):
     rows = "".join(
         f'<li><a href="{d["date"]}.html">{bi(*date_label(d["date"]))}</a>'
-        f'<span class="muted">{bi(f"{len(d["items"])} 篇", f"{len(d["items"])} posts")}</span></li>'
+        f'<span class="muted">{bi(f"{len(d["items"])} 条", f"{len(d["items"])} items")}</span></li>'
         for d in days)
     return (f'<section class="card"><h1 class="section-title">{bi("往期", "Archive")}</h1>'
             f'<ul class="days">{rows}</ul></section>')
@@ -209,55 +216,6 @@ def sources_body(groups, status):
             + "</section>")
 
 
-MODEL_NAMES = {"claude-opus-5-5": "Claude Opus 5.5（字幕）", "claude-sonnet-5-5": "Claude Sonnet 5.5（字幕）",
-               "gemini-3.1-flash-lite": "Gemini 3.1 Flash Lite（看视频）", "gemini-3.6-flash": "Gemini 3.6 Flash（看视频）",
-               "gemini-3.5-flash-lite": "Gemini 3.5 Flash Lite（看视频）",
-               "gemini-3.8-flash": "Gemini 3.8 Flash（看视频）"}
-
-
-def yt_test_body(test):
-    """Test page: each video summarised by several Gemini models, in the normal item style."""
-    models = test["models"]
-    res = {(r["model"], r["id"]): r for r in test["results"]}
-    head = (f'<header class="card page-head"><div class="label label--accent">{bi("测试", "Test")}</div>'
-            f'<h1>{bi("YouTube 视频摘要测试", "YouTube summary test")}</h1>'
-            f'<p class="muted">{bi(test["note_zh"], test["note_en"])}</p></header>')
-    rows = []
-    for v in test["videos"]:
-        cells = []
-        for m in models:
-            r = res.get((m, v["id"]), {})
-            u = r.get("usage") or {}
-            cells.append(f'<td>{u.get("prompt", 0) / 1000:.0f}K · {r.get("seconds", "?")}s</td>'
-                         if u else f'<td class="bad">{escape(r.get("error", "—"))}</td>')
-        rows.append(f'<tr><td>{bi(v["type_zh"], v["type_en"])}<br><span class="muted">'
-                    f'{v["minutes"]:.0f} min</span></td>{"".join(cells)}</tr>')
-    table = (f'<section class="card"><h2 class="col-title">{bi("用量", "Usage")}</h2>'
-             f'<p class="muted small">{bi("输入 token · 出结果用的秒数", "input tokens · seconds to answer")}</p>'
-             f'<div class="table-scroll"><table class="sources"><thead><tr><th>{bi("视频", "Video")}</th>'
-             + "".join(f"<th>{escape(MODEL_NAMES.get(m, m))}</th>" for m in models)
-             + f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>')
-    cards = []
-    for v in test["videos"]:
-        items = []
-        for m in models:
-            r = res.get((m, v["id"]), {})
-            if "error" in r or not r:
-                items.append(f'<div class="label" style="margin-top:1.4em">{escape(MODEL_NAMES.get(m, m))}</div>'
-                             f'<p class="muted">{bi("没有结果：", "No result: ")}{escape(r.get("error", "—"))}</p>')
-                continue
-            sm = r.get("summary") or {}
-            it = {"kind": "video", "source": v["channel"], "source_url": v["channel_url"],
-                  "url": f'https://www.youtube.com/watch?v={v["id"]}', "title": v["title"],
-                  "brief_zh": sm.get("brief_zh", ""), "brief_en": sm.get("brief_en", ""),
-                  "detail_zh": sm.get("detail_zh") or [], "detail_en": sm.get("detail_en") or []}
-            items.append(f'<div class="label" style="margin-top:1.4em">{escape(MODEL_NAMES.get(m, m))}</div>'
-                         + item_html(it))
-        cards.append(f'<section class="card"><div class="label label--accent">{bi(v["type_zh"], v["type_en"])}'
-                     f' · {v["minutes"]:.0f} min</div>{"".join(items)}</section>')
-    return head + table + "".join(cards)
-
-
 def main():
     if SITE.exists():
         shutil.rmtree(SITE)
@@ -267,13 +225,14 @@ def main():
 
     days = sorted((load_json(p, None) for p in DAYS.glob("*.json")), key=lambda d: d["date"], reverse=True)
     days = [d for d in days if d]
+    picks_on = load_yaml("config.yml").get("picks_enabled", True)
     for d in days:
         zh, en = date_label(d["date"])
-        (SITE / f"{d['date']}.html").write_text(page(zh, en, "", day_body(d)), encoding="utf-8")
+        (SITE / f"{d['date']}.html").write_text(page(zh, en, "", day_body(d, picks_on)), encoding="utf-8")
     if days:
         latest = days[0]
         zh, en = date_label(latest["date"])
-        index = page(zh, en, "index.html", day_body(latest))
+        index = page(zh, en, "index.html", day_body(latest, picks_on))
     else:
         index = page("还没有内容", "Nothing yet", "index.html",
                      f'<section class="card"><p>{bi("第一次运行之后这里就有内容了。", "Content appears after the first run.")}</p></section>')
@@ -282,10 +241,6 @@ def main():
     groups = load_yaml("sources.yml")
     (SITE / "sources.html").write_text(
         page("来源", "Sources", "sources.html", sources_body(groups, load_json(STATUS_FILE, {}))), encoding="utf-8")
-    yt_test = load_json(ROOT / "data" / "yt_test.json", None)
-    if yt_test:  # not linked from the tab bar; open /feed/yt-test.html directly
-        (SITE / "yt-test.html").write_text(
-            page("YouTube 测试", "YouTube test", "", yt_test_body(yt_test)), encoding="utf-8")
     (SITE / ".nojekyll").write_text("")
     print(f"built {len(days)} day pages into {SITE}")
     return 0

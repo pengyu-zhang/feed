@@ -18,4 +18,19 @@
     root.lang = next === 'en' ? 'en' : 'zh-CN';
     save('feed-lang', next);
   });
+
+  // "All updates": Blogs / YouTube tabs. The last choice is remembered.
+  var tabs = document.querySelectorAll('.seg [data-tab]');
+  function show(name) {
+    tabs.forEach(function (b) { b.setAttribute('aria-selected', b.dataset.tab === name ? 'true' : 'false'); });
+    document.querySelectorAll('.panel[data-panel]').forEach(function (p) { p.hidden = p.dataset.panel !== name; });
+  }
+  tabs.forEach(function (b) {
+    b.addEventListener('click', function () { show(b.dataset.tab); save('feed-tab', b.dataset.tab); });
+  });
+  if (tabs.length) {
+    var saved = null;
+    try { saved = localStorage.getItem('feed-tab'); } catch (e) {}
+    if (saved === 'video' || saved === 'blog') show(saved);
+  }
 })();

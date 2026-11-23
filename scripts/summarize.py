@@ -169,7 +169,9 @@ def main():
         if it["id"] not in known:
             day["items"].append({k: v for k, v in it.items() if k not in ("text", "undated")})  # never publish article text
     day["items"].sort(key=lambda x: x["published"], reverse=True)
-    if new or not day.get("picks"):  # no new posts: keep today's picks, save usage
+    if not cfg.get("picks_enabled", True):
+        day["picks"] = {"important": [], "liked": []}
+    elif new or not day.get("picks"):  # no new posts: keep today's picks, save usage
         day["picks"] = pick(day["items"], cfg)
     day["generated_at"] = now_utc().isoformat()
     save_json(day_file, day)

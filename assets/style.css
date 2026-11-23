@@ -174,6 +174,13 @@ html[data-lang="en"] [data-l="zh"] { display: none; }
 .section-title { margin: 0; font-size: 1.25em; font-weight: 600; letter-spacing: -0.01em; }
 .empty { padding: 1em 0 0; color: var(--muted); }
 
+.seg { display: inline-flex; gap: 0.25em; margin-top: 0.9em; padding: 0.25em; border: 1px solid var(--card-border); border-radius: var(--radius-inner); }
+.seg button { border: 0; background: transparent; color: var(--text); font: 500 0.92em var(--font-body, inherit); padding: 0.4em 1em; border-radius: var(--radius-inner); cursor: pointer; }
+.seg button:hover { background: var(--hover-bg); }
+.seg button[aria-selected="true"] { background: var(--ink); color: var(--on-ink); }
+.seg .count { opacity: 0.7; font-weight: 400; margin-left: 0.2em; }
+.panel[hidden] { display: none; }
+
 table.sources { width: 100%; border-collapse: collapse; font-size: 0.92em; margin-top: 0.8em; }
 table.sources th, table.sources td { text-align: left; padding: 0.55em 0.6em 0.55em 0; border-top: 1px solid var(--border); vertical-align: top; }
 table.sources th { font: 500 0.8em var(--font-label); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
