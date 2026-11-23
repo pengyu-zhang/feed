@@ -1,0 +1,52 @@
+name: build
+
+# Build the site from what is in the repository and deploy it, without fetching or summarising:
+# after a push to main by a person (a code change, or data pushed from elsewhere), or by hand.
+# The bot's own pushes in daily.yml and resummarize.yml use GITHUB_TOKEN, and GitHub starts no
+# workflow for those, so this never runs in a loop.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# The same group as daily.yml and resummarize.yml: one run at a time, so a build always starts
+# from the latest data and code and is never overtaken by an older build. (GitHub keeps only the
+# newest pending run of a group; a pending daily run could be replaced by a build queued behind
+# it. That needs a push within the minute a build is running at the daily run's start; the next
+# daily run then catches up on the missed posts.)
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Build site
+        working-directory: scripts
+        run: python build.py
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,8 +1,13 @@
 name: daily
 
 on:
+  # GitHub starts scheduled runs late, sometimes by hours (8 to 11 hours on 21-23 November 2026),
+  # so three tries a night: the first one to start does the day, the later ones see that and stop.
+  # 01:23, 03:23, 05:23 UTC = 02:23, 04:23, 06:23 in Amsterdam in winter, an hour later in summer
+  # (GitHub cron is always UTC).
   schedule:
-    # 05:23 UTC = 06:23 in Amsterdam in winter, 07:23 in summer (GitHub cron is always UTC)
+    - cron: "23 1 * * *"
+    - cron: "23 3 * * *"
     - cron: "23 5 * * *"
   workflow_dispatch: {}
 
@@ -16,7 +21,36 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Scheduled runs only: has today (Amsterdam date) already been done? A run by hand always goes ahead.
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      go: ${{ steps.check.outputs.go }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: data/state.json
+          sparse-checkout-cone-mode: false
+      - id: check
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import json, os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          tz = ZoneInfo("Europe/Amsterdam")
+          try:
+              last = json.load(open("data/state.json"))["last_run"]
+              done = datetime.fromisoformat(last).astimezone(tz).date() == datetime.now(tz).date()
+          except (FileNotFoundError, KeyError):
+              done = False
+          print("go=" + ("false" if done else "true"))
+          EOF
+
   build:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 40
     environment:
@@ -58,7 +92,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data
           git diff --cached --quiet || git commit -m "digest $(TZ=Europe/Amsterdam date +%F)"
-          git push
+          # someone may have pushed while this ran (a code change, data from elsewhere)
+          git pull --rebase && git push
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
