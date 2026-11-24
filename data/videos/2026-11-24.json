@@ -1,0 +1,117 @@
+{
+ "date": "2026-11-24",
+ "items": [
+  {
+   "id": "yt-PlnT4uQQZlg",
+   "kind": "video",
+   "source": "Best Partners TV",
+   "source_url": "https://www.youtube.com/@bestpartners",
+   "title": "每个拥抱金融泡沫的人，都坚信自己能全身而退​ | 金融泡沫 | AI泡沫 | 金融投机史 | 爱德华·钱塞勒 | 金融狂热 | 互联网泡沫 | 道德风险 | 动量投资 | 被动投资 | 迷因股",
+   "url": "https://www.youtube.com/watch?v=PlnT4uQQZlg",
+   "published": "2026-11-24T00:00:10+00:00",
+   "basis": "transcript",
+   "brief_zh": "爱德华·钱塞勒认为，400年的金融狂热有一套反复出现的配方，当下的AI热潮几乎全部具备，可能是历次投资热潮中最危险的一次，他建议普通人避开过度集中的被动指数投资。",
+   "background_zh": "嘉宾爱德华·钱塞勒（视频转写写作“钱赛乐”）是《金融投机史》（1999年出版）的作者，做过多年投资，也是历史学出身。他在一档播客访谈中，把郁金香狂热、南海泡沫、铁路泡沫、日本泡沫和互联网泡沫，与当前的AI热潮逐项对照。",
+   "conclusion_zh": "钱塞勒认为现在的局面看起来、叫起来都像泡沫，就是泡沫，但他不预测破裂时点，也承认做投资的人总会被证明判断错过。他给听众最重要的建议是避开被动或指数投资，因为指数过于集中在最具投机性的主题上，应把钱交给真正做价值判断的人；若不担心政府最终偿付能力，减一些股票仓位、多配债券是合理的。",
+   "brief_en": "Edward Chancellor argues that 400 years of financial manias follow a repeating recipe, that the current AI boom has nearly all of it and may be the most dangerous boom yet, and that ordinary investors should avoid heavily concentrated passive index funds.",
+   "background_en": "The guest, Edward Chancellor (spelled \"钱赛乐\" in the transcript), wrote Devil Take the Hindmost (1999), has worked in investing for years and trained as a historian. In a podcast interview he compared tulip mania, the South Sea Bubble, the railway bubble, the Japanese bubble and the dot-com bubble with the current AI boom.",
+   "conclusion_en": "Chancellor says the situation looks and sounds like a bubble, so it is one, but he does not predict when it will burst and admits that investors are often proven wrong. His main advice is to avoid passive or index investing, because indexes are too concentrated in the most speculative themes, and to give money to investors who actually judge fair value. If one is not worried about the government's solvency, he says it is reasonable to cut some equity exposure and hold more bonds.",
+   "points_zh": [
+    "他把投机狂热看作发生在经济领域的社会运动，泡沫的核心是多数人从投资者变成了赌徒。引用《客户的游艇在哪里》的说法：投机是想把一点钱变成一大笔钱，多半不成功；投资是设法不让一大笔钱变成一点钱。他提到，今天散户交易平台上的交易量巨大，很多人自以为在投资，其实是在赌或投机。",
+    "泡沫有一套反复出现的配方：低利率、杠杆、资本流入、通信提速，外加救世主式的领袖。荷兰郁金香狂热时利率低、外资涌入，还出现了期货，最后因期货价格与现货脱节而自行崩盘。通信越快，投机传播越快，从报纸、电报到Reddit的WallStreetBets都是如此。南海泡沫的核心人物约翰·布伦特（转写为“布劳特”）有夸张的救世主做派，还通过银行给买股票的人提供杠杆，并行贿。他把黄仁勋、Dario Amodei、Sam Altman和Elon Musk放在同类对照里，说救世主式领袖会让狂热运转更有效率，但往往最后越过界限。",
+    "博傻心态和道德风险让人相信自己能全身而退。南海泡沫时有银行家说“既然世人都疯了，我们也得跟着学几分”，结果赔光，并事后找替罪羊。日本1980年代的人相信政府不会让股价下跌、银行大到不能倒，泡沫仍然破了，股市花了30多年才恢复。中国房地产也有“北京不会让泡沫破”的说法，直到2020年末三道红线出台。他认为这次与历史的最大不同是政府财政托底能力：英国、美国、法国依赖外国借款，国际投资净头寸大幅为负，而1920年代和1999到2000年美国有财政盈余。",
+    "他认为大家都在讨论泡沫，并不意味着泡沫马上破。铁路泡沫时人人都说是泡沫，照样破了，当时对铁路的兴奋（比如带来世界和平）与今天对AI的说法很像，还有大量重复建设：伦敦到彼得伯勒修了三条线，利兹到曼彻斯特也是三条线。他提到，有人估算未来五年数据基础设施和AI投资可能达到15万亿美元，比铁路狂热还大一点。动量可以非常强，动量因子在美国的回测可追溯到1920年代，但他也看到一项研究称1995到2015年做动量赚不到钱。",
+    "他认为AI热潮可能是历次中最危险的一次，因为技术路线不确定，真正的赢家要等泡沫破裂后才浮现。英伟达GPU占主导，但谷歌和博通在做TPU，中国也有竞争产品；也有人认为未来会转向能在办公室甚至手机上跑的小模型，到时不需要那么多芯片。Anthropic和OpenAI的前沿模型在被中国开源模型抢份额，有说法称后者能做到95%的效果、成本只有2%。互联网泡沫时的经验是，亚马逊股价当时也跌了约95%，谷歌还没上市，Facebook还没成立，真正的赢家后来才出现。他认为独立数据中心供应商可能像当年的接入商一样变成同质化生意。",
+    "他认为“万物泡沫”特征现在齐备，并以资金趋紧作为泡沫破裂的头号特征，但不预测时点。他列举：SPAC完成了有史以来最大的IPO，他视为史上最大的迷因股；城堡证券数据显示2026年夏天美股成交量超过2021年峰值；Robinhood客户数量是过去的好几倍；预测博彩平台转向永续期货，杠杆可达100到200倍；还有追踪英伟达等的3倍杠杆ETF；韩国散户加杠杆炒半导体股，总理公开支持。历史上，美联储1928年加息后1929年崩盘，日本银行1989年加息，美联储1999到2000年加息，2004年加息后美国房地产泡沫破裂。眼下利率比五年前高很多，通胀保值债券实际收益率不错，股票风险溢价几乎没有，1999到2000年该收益率曾达4.5%。"
+   ],
+   "points_en": [
+    "He sees speculative manias as social movements that happen in the economy. The core of a bubble is that most people stop being investors and become gamblers. He cites a line from the book Where Are the Customers' Yachts?: speculation tries to turn a little money into a lot and mostly fails, while investing tries to keep a lot of money from becoming a little. He notes that volumes on retail trading platforms are huge, and many people who think they are investing are gambling or speculating.",
+    "Bubbles share a recurring recipe: low interest rates, leverage, capital inflows, faster communication and often a messianic leader. In the Dutch tulip mania, rates were low, foreign capital flowed in and a futures market appeared. The bubble collapsed on its own when futures prices detached from spot prices. Faster communication speeds up speculation, from newspapers and the telegraph to Reddit's WallStreetBets. The South Sea figure John Blunt (\"布劳特\" in the transcript) had a messianic manner, gave leverage to share buyers through his bank and bribed officials. Chancellor puts Jensen Huang, Dario Amodei, Sam Altman and Elon Musk in a similar position. He says such leaders make a mania run more efficiently, but they often overstep in the end.",
+    "The belief that one can exit in time, together with moral hazard, runs through these episodes. During the South Sea Bubble a banker said that since the world had gone mad, they should follow a little. He lost everything and then blamed others. In 1980s Japan people believed the government would not let stocks fall and that banks were too big to fail, yet the bubble burst and stocks took over 30 years to recover. Chinese property had a similar belief that Beijing would not let the bubble pop, until the Three Red Lines in late 2020. He says the biggest difference this time is the state's fiscal backing. The UK, the US and France rely on foreign borrowing and have sharply negative net international investment positions. The US had surpluses in the 1920s and in 1999 and 2000.",
+    "He says that wide discussion of a bubble does not mean it will burst soon. In the 1840s railway bubble everyone said it was a bubble and it still burst. The excitement then, such as the claim that railways would bring world peace, resembles talk about AI today. There was also duplication: three lines from London to Peterborough and three from Leeds to Manchester. He mentions an estimate that data infrastructure and AI investment could reach 15 trillion dollars over the next five years, slightly more than the railway mania. Momentum can be very strong. He notes that a momentum factor shows excess returns in US backtests going back to the 1920s, but he has seen one study finding no profit from momentum between 1995 and 2015.",
+    "He thinks the AI boom may be the most dangerous of all, because the technology path is uncertain and the real winners will only appear after the bubble bursts. Nvidia's GPUs dominate, but Google and Broadcom make TPUs and China has competing products. Some expect a shift to small models that run in an office or on a phone, which would need far fewer chips. Frontier models from Anthropic and OpenAI are losing share to Chinese open-source models, with one claim of 95% of the performance at 2% of the cost. In the dot-com bubble, Amazon also fell about 95%, Google was not yet listed and Facebook did not exist. The real winners came later. He suggests independent data center providers may become a commodity business like the access providers of that time.",
+    "He says the signs of an \"everything bubble\" are now all present, and that tight money is the main sign that a speculative bubble is about to burst, though he does not predict timing. He lists these signs: a SPAC completed the largest IPO ever, which he sees as the biggest meme stock in history; Citadel Securities data shows US equity volume in summer 2026 above the 2021 peak; Robinhood has several times more customers than before; prediction-betting platforms have moved to perpetual futures with leverage of 100 to 200 times; and there are 3x leveraged ETFs on Nvidia and others. In South Korea, retail investors use leverage on semiconductor stocks and the prime minister openly supports them. Historically, bubbles burst after rate rises: the Fed raised rates from 1928 before the 1929 crash, the Bank of Japan raised in 1989, the Fed raised in 1999 and 2000, and the US housing bubble burst after the Fed raised rates from 2004. Rates are now much higher than five years ago, inflation-protected bonds yield well, and the equity risk premium is almost gone. He notes that the real yield on these bonds was 4.5% in 1999 and 2000."
+   ],
+   "topics": [
+    "Financial bubbles",
+    "AI bubble",
+    "Market history"
+   ]
+  },
+  {
+   "id": "yt-R5Y-UauQaHs",
+   "kind": "video",
+   "source": "废才俱乐部Club",
+   "source_url": "https://www.youtube.com/@feicaiclub",
+   "title": "我用纯代码做动画，美术风格不再靠抽卡",
+   "url": "https://www.youtube.com/watch?v=R5Y-UauQaHs",
+   "published": "2026-11-23T23:37:31+00:00",
+   "basis": "transcript",
+   "brief_zh": "作者做了一套叫 Montage 的 Harness（三个 skill 加一份项目规则），用 12 个预设美术风格兜底，让纯代码做出的动画风格稳定，不再靠抽卡。",
+   "background_zh": "作者已经能用代码直接做出动画，不用任何视频生成模型。但画面效果取决于提示词写得是否细致专业，新手的结果接近抽卡：第一次好看，下一次可能就一般。垫图也不稳定，同一张参考图每次被理解的结果都不同。所以他想把风格固定下来，稳定输出。",
+   "conclusion_zh": "作者的结论是，自己搭建纯代码做视频的 Harness 需要三个 skill（采访、风格、修改）加一份项目规则。模型会越来越强，流程上要操心的事会越来越少，真正值得多花时间的是剧本、创意和审美。",
+   "brief_en": "The author built a harness called Montage (three skills plus a set of project rules) that uses 12 preset art styles as a fallback, so animation made purely with code keeps a stable style and no longer depends on luck.",
+   "background_en": "The author already makes animation directly with code, without any video generation model. The result still depends on how detailed and professional the prompt is, so a beginner's output is close to a lottery: the first try looks good and the next may not. Reference images are also unstable, because the model reads the same image differently each time. He wanted a way to fix the style and get steady output.",
+   "conclusion_en": "The author concludes that a harness for making video purely with code needs three skills (interview, style and revision) plus a set of project rules. Models will keep improving and leave less to manage in the process, so the things worth more time are the script, the creative idea and the aesthetics.",
+   "points_zh": [
+    "Montage 由三个 skill 和一份项目规则组成，分工明确。interview 负责采访，根据你的描述生成问题，帮你理清思路并写成稿子。style 负责风格，存放 12 个预设。revision 负责修改，先问清楚修改意见，列成清单再由你确认。项目规则把需求确认、风格确认、视频生成、剪辑和修改串成一条工作流。作者建议把精力多放在采访和选风格上，因为这两步改起来很快，而视频生成和后续修改每次渲染要十几分钟到一两个小时。",
+    "12 个预设风格是兜底，不是上限。预设有纸雕立体书、水墨、彩色玻璃一类的传统风格，也有线框、粒子点云这样的数字风格，都是用代码渲染的，同一座灯塔场景只换风格。选风格时，AI 会从预设里挑两三个，附上预览图，并说明各自为什么适合、有什么问题。例如粒子点云配色失控会变成蓝紫发光的典型 AI 味；墨比乌斯线描里光点不会发光；1-bit 风格只有两种颜色，做不出金色晨光。作者强调要看预览图而不是只看文字描述，也要重视 AI 提前预警的问题。",
+    "作者对视频生成和剪辑这一步故意没写任何 skill。他认为 Harness 里的每个部件都隐含一个“模型做不到”的假设，而模型在变强，假设会过时，硬性规定技术路线反而会限制模型。项目规则里只写了两条模型自己发现不了的问题：逐帧渲染时检查是否空白帧（浏览器图形上下文可能丢失，后面全是空白帧且不报错），以及合成配音前检查多音字读法（他之前有一条片子把“斗”读成了“斗争”的斗）。他的原则是规则里只写模型不知道的事。常用的代码做视频技术有四种：Canvas 2D、Three.js、shader 和 Blender，一条片子常混用多种。",
+    "实测案例《小小探测车》：从发出第一句话到拿到第二版共 2 小时 36 分钟，其中前两步不到 14 分钟，其余两个多小时主要花在生成和渲染上。流程是：采访问了 8 个问题，约 3 分钟写出 41 秒、六段的稿子；选了粒子点云风格；GPT 5.2 用 Three.js 全程用代码完成，不用贴图和现成 3D 模型，第一版 42 秒半、20 个镜头。第一版后他提了两条修改意见（去掉左下角日志字幕，修小车头部和眼睛的穿模），经过六个问题的追问后列出五条清单，25 分钟后出了第二版。作者共确认三次、点选十几次，模型输出约 65 万 token。他提修改意见的习惯是：只说看到的现象，说清范围，并说明满意、不能动的地方。",
+    "作者认为这条片子美术风格令人满意，但剧情偏平，原因在他自己没有提前准备剧本，AI 只是顺着他给的无冲突的故事去补。他建议准备剧本时至少想清楚四件事：有没有冲突、有没有意外或反转、情绪有没有起伏、有没有让人眼前一亮的地方。",
+    "什么时候用代码，什么时候用视频生成模型，作者只看两点：镜头里有没有表演，以及场景用代码搭建的成本高不高。适合代码的有五类：产品，程序生成的场景（地形、星球、天空、海面），结构简单的角色，风格化动画，图解演示和片头包装。他也说代码并不只能做风格化画面，他之前用代码做过讲太和殿的片子，琉璃瓦、红柱、汉白玉台阶都是渲染出来的。适合视频生成模型的也有五类：真人对白和表情特写，两个以上角色的对手戏，人和动物的自然动作，元素极多的场景（热闹街道、一桌菜、风中树林、动物群），头发和衣料这类随身体抖动的细节。两种方式可以结合。",
+    "Codex 也能用这套 Harness 做视频，作者展示了深海沙丁鱼群和马里奥的片段，但认为 Codex 在视频创作上的自主性略差，特点是指哪打哪，所以要把画面描述清楚。添加新风格只需两步：用固定的测试场景（海峡上的一座灯塔），让模型用代码按该风格渲染一帧。他演示了加入第 13 个风格“彩色玻璃花窗”，参考图是 Tiffany 工作室约 1990 年的作品。这次一次生成、未做细节调整，他提醒如果风格还原不了，之后做视频时模型就只能降级用替代方案，所以不如一开始就把预设做到位。"
+   ],
+   "points_en": [
+    "Montage has three skills and one set of project rules, each with a clear job. The interview skill generates questions from your description and helps you turn your ideas into a script. The style skill stores the 12 presets. The revision skill asks about your changes, lists them and waits for your confirmation. The project rules link requirement checking, style selection, video generation, editing and revision into one workflow. The author advises spending most effort on the interview and style steps, because they are quick to change, while each render for generation or revision takes from over ten minutes to one or two hours.",
+    "The 12 presets are a safety net, not a limit. They include traditional styles such as paper-cut pop-up book, ink wash and stained glass, and digital styles such as wireframe and particle cloud. All are rendered with code, and each shows the same lighthouse scene in a different style. When you choose a style, the AI picks two or three presets, shows preview images and explains why each fits and what its problems are. For example, particle cloud can drift into a blue-purple glow that looks typical of AI. In Moebius line art, light points do not glow. The 1-bit style has only two colours, so it cannot produce the golden light in the script. The author says to look at the previews, not just the text descriptions, and to take the AI's warnings seriously.",
+    "The author deliberately wrote no skill for video generation and editing. He argues that every part of a harness carries an assumption that the model cannot do something, that models keep improving, and that those assumptions go out of date. Fixing the technical route would also limit the model. The project rules contain only two problems the model cannot detect by itself. One is checking each rendered frame for blank output, because the browser graphics context can be lost and every later frame comes out blank without any error. The other is checking the reading of polyphonic characters before the voice-over is made. In an earlier video, 斗 was read as in 斗争. His principle is to tell the model only what it does not already know. He lists four common code techniques for video: Canvas 2D, Three.js, shaders and Blender. One video often mixes several.",
+    "The test case was the video 小小探测车 (Little Probe Rover). From his first message to the second version took 2 hours 36 minutes. The first two steps took under 14 minutes, and most of the remaining time went on generation and rendering. The interview asked 8 questions and produced a 41-second script in six sections in about 3 minutes. He chose the particle cloud style. GPT 5.2 then built the video entirely in code with Three.js, with no textures or ready-made 3D models. The first version ran 42.5 seconds with 20 shots. He then gave two revision notes: remove the log-style captions at the lower left, and fix clipping in the rover's head and eye. After six follow-up questions the model listed five changes, and the second version arrived 25 minutes later. He confirmed three times, made a dozen or so clicks, and the model produced about 650,000 tokens. His habit for revision notes is to describe only what he sees, state the scope, and say what he is happy with and must not change.",
+    "The author was satisfied with the art style of this video but found the plot flat. He says the cause was himself: he had not prepared a script, and the AI only filled in details on a story that had no conflict. He suggests thinking through at least four things when preparing a script: whether there is conflict, whether there is a surprise or twist, whether the emotion rises and falls, and whether there is a moment that stands out.",
+    "To choose between code and a video generation model, the author looks at two things: whether the shot needs acting, and whether the scene is expensive to build in code. Five types suit code: products, procedurally generated scenes (terrain, planets, sky, sea), simple characters, stylised animation, and diagrams or title sequences. He adds that code is not limited to stylised images. In an earlier video on the Hall of Supreme Harmony he rendered glazed tiles, red columns and white marble steps with code. Five types suit a video model: live-action dialogue and facial close-ups, scenes with two or more characters acting together, natural movement of people and animals, scenes with very many objects (a busy street, a table of food, trees in wind, animal herds), and details such as hair and cloth that move with the body. The two methods can be combined.",
+    "The author says Codex can also use the harness. He showed a deep-sea sardine school and a Mario clip, but found Codex somewhat less autonomous for video work: it does what it is told, so the visuals must be described clearly. Adding a new style takes two steps: fix a test scene (a lighthouse on a strait) and have the model render one frame in that style with code. He demonstrated adding a 13th style, stained glass window, with a reference image from a Tiffany studio work from around 1990. The result came from a single generation with no refinement. He warns that if a style cannot be reproduced well, the model will later fall back to a weaker substitute when making videos, so the preset should be done properly first."
+   ],
+   "topics": [
+    "AI video",
+    "Claude Code",
+    "Agent harness"
+   ]
+  },
+  {
+   "id": "yt-jP9yjEDlc4k",
+   "kind": "video",
+   "source": "Fireship",
+   "source_url": "https://www.youtube.com/@Fireship",
+   "title": "Opus just lost to the last company you'd expect...",
+   "url": "https://www.youtube.com/watch?v=jP9yjEDlc4k",
+   "published": "2026-11-23T19:14:30+00:00",
+   "basis": "transcript",
+   "brief_zh": "Google 发布的中档模型 Gemini 4 Neon 在多项基准上超过了三周前发布的旗舰 Carbon，也在 Google 自己挑选的对比中领先 Opus 5.5，但这些基准由 Google 挑选，视频作者认为 Neon 是 Google 重新开始出货的一个好信号，画 3D 马的表现仍不如 Anthropic。",
+   "background_zh": "Fireship 的 Code Report 在 2026 年 11 月 23 日这期里，讨论上周 Google 发布 Gemini 4 Neon。这是 Gemini 4 系列七周内的第四个模型，而且同一周 AI 圈发生了很多事，所以很容易被忽略。",
+   "conclusion_zh": "作者认为 Neon 是 Google 向正确方向迈出的一步，虽然在 3D 马上仍落后于 Anthropic，但 Google 重新开始出货是好事。",
+   "brief_en": "Google's mid-tier Gemini 4 Neon beats its three-week-old flagship Carbon on several benchmarks and leads Opus 5.5 on Google's own comparisons, but the author notes the benchmarks are Google's picks and Neon still trails Anthropic on his 3D horse test.",
+   "background_en": "On the 23rd of November 2026, Fireship's Code Report covers Google's release of Gemini 4 Neon last week. It is the fourth Gemini 4 model in seven weeks, and it landed in a week with a lot of other AI news.",
+   "conclusion_en": "The author sees Neon as a step in the right direction for Google. It still trails Anthropic on the 3D horse test, but he is glad to see Google shipping again.",
+   "points_zh": [
+    "Neon 是面向编码 agent、知识工作和科学的中档模型，由 Gemini 4 Carbon 改造而来，规格如下。它支持文本、图像、音频和视频输入，上下文窗口为 100 万 token，价格约为每百万输入 token 3 美元、输出 15 美元。另有一个只给受信任网络防御者使用的 cyber 版本，普通用户用不了。视频还说，到 12 月 1 日之前，它是 Gemini 4 系列里最贵的模型。",
+    "基准成绩很好，但视频提醒这些是 Google 自己挑的。在 Artificial Analysis 智能指数上，Neon 得 61 分，比 Carbon 高 1 分，总排名第三，排在 Claude Fable 5.2 和 GPT 6.2 Astra 之后。在其编码 agent 指数上，它超过 Opus 5.5 和 Fable 5.2，成本约为一半。它还在 Riemann 相关的高难度数学基准上排第一。作者指出，模型卡里的对比表只放了 Opus 5.5 和 GPT 6.2 Soul 这两个 Neon 恰好能赢的模型，没有放 Fable 和 Astra。他还说，黎曼猜想据称在周五被证明，出力的是 Anthropic 的 Claude 而不是 Neon，这个证明尚待验证，并且有一个竞争的人类证明。",
+    "速度方面表现不一。Neon 每秒输出约 106 个 token，接近 Carbon 的两倍。但 Artificial Analysis 仍把它标为极慢，测试中消耗了 2.83 亿个 token，是中位数的四倍多。作者个人的使用体验是，Neon 明显比大多数其他模型快。他还推荐在 Google 的 Antigravity IDE 里用它，因为编排器可以让 Neon 指挥一群子 agent，更快也更省钱。",
+    "作者用“用 Three.js 生成一匹逼真的 3D 马”做了一次非正式测试。Neon 比其他旗舰模型快很多，结果也比几周前的 Argon 明显进步，并且修掉了 Argon 上那个不当的内容问题。但他认为它在“马”这个项目上仍落后于 Anthropic，GPT 6.2 Astra 虽然被骂，画出的马却比 Gemini 的更逼真，只是耗时更久。这只是作者的一次试用，不是系统评测。",
+    "Gemini 4 的命名像元素周期表，让人难以跟上。Gemini 4 在 9 月以 Argon 开头，作者不清楚这个模型后来怎样了。Google 在这次发布里说，Neon 仍是大多数软件工程和知识工作的理想选择，所以作者判断 Argon 会被 Google 放弃。"
+   ],
+   "points_en": [
+    "Neon is a mid-tier model for coding agents, knowledge work and science, adapted from Gemini 4 Carbon. It takes text, images, audio and video, has a 1 million token context window, and costs about $3 per million input tokens and $15 for output. A cyber version exists only for trusted cyber defenders. The video also says Neon is the most expensive model in the Gemini 4 lineup until December 1st.",
+    "The benchmark results are strong, but the author stresses that they are chosen by Google. On the Artificial Analysis intelligence index Neon scores 61, one point above Carbon and third overall behind Claude Fable 5.2 and GPT 6.2 Astra. On the coding agent index it beats Opus 5.5 and Fable 5.2 at roughly half the cost. It also ranks first on a very hard Riemann-related math benchmark. The model card's comparison table includes only Opus 5.5 and GPT 6.2 Soul, which Neon happens to beat, and leaves out Fable and Astra. The author adds that the Riemann hypothesis was reportedly proved on Friday by Anthropic's Claude, not Neon. That proof awaits verification and competes with a human proof.",
+    "Speed results are mixed. Neon streams about 106 tokens per second, nearly twice as fast as Carbon. Artificial Analysis still labels it extremely slow, and it used 283 million tokens in their test, more than four times the median. In the author's own experience Neon is much faster than most other models. He recommends using it in Google's Antigravity IDE, where the orchestrator can direct a swarm of sub-agents with Neon, which is faster and cheaper.",
+    "The author ran an informal test: generate a realistic 3D horse with Three.js. Neon finished much faster than the other flagship models he has tried, and the result is a clear improvement over Argon from a few weeks ago. It also fixed an inappropriate content problem that Argon had. He still rates it behind Anthropic on this task. GPT 6.2 Astra was widely criticised, yet it produced a more realistic horse than Gemini, though it took longer. This is one personal trial, not a systematic evaluation.",
+    "The Gemini 4 model names are hard to follow, like a periodic table. Gemini 4 began in September with Argon, and the author does not know what happened to it. Google says in this release that Neon remains the ideal choice for most software engineering and knowledge work, so the author concludes that Argon is headed for the Google graveyard."
+   ],
+   "topics": [
+    "Gemini",
+    "LLM benchmarks",
+    "AI industry"
+   ]
+  }
+ ],
+ "generated_at": "2026-11-24T04:22:48.798466+00:00"
+}
