@@ -568,10 +568,6 @@ ol.points li { margin: 0 0 0.45em; font-size: 0.97em; line-height: 1.8; }
 .section-title { margin: 0; font-size: 1.25em; font-weight: 600; letter-spacing: -0.01em; }
 .empty { padding: 0.6em 0 0; color: var(--muted); }
 
-/* older / newer day, at the end of a day page */
-.day-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1em; padding: 0 0.35em; }
-.day-nav a { padding: 0.4em 0.6em; border-radius: var(--radius-inner); color: var(--text); font-size: 0.95em; font-weight: 500; text-decoration: none; }
-.day-nav a:hover { background: var(--hover-bg); }
 
 /* Forced colours (Windows contrast themes): fills vanish, so the current tab gets a frame and
    the solid button a border; the translucent surfaces become opaque */
@@ -622,7 +618,7 @@ ul.days li { padding: 0.55em 0; border-block-start: 1px solid var(--border); dis
   .theme-toggle { min-inline-size: 44px; min-block-size: 44px; }
   .lang-toggle, .seg [role="tab"] { min-inline-size: 44px; min-block-size: 44px; }
   .lang-toggle { align-items: center; }
-  .feed-side__links a, .day-nav a { display: flex; align-items: center; min-block-size: 44px; }
+  .feed-side__links a { display: flex; align-items: center; min-block-size: 44px; }
 }
 
 /* ==========================================================================

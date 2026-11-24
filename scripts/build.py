@@ -352,16 +352,7 @@ def day_body(day, picks_on=True, latest=True):
         ("blog", bi("博客", "Blogs"), len(blogs), listing(blogs, ("这段时间没有新文章。", "No new posts in this period."))),
         ("video", "YouTube", len(videos), listing(videos, ("这段时间没有新视频。", "No new videos in this period."))),
     ], which)
-    # older / newer day, at the end of the page
-    i = RECENT.index(day["date"]) if day["date"] in RECENT else -1
-    older = RECENT[i + 1] if 0 <= i < len(RECENT) - 1 else None
-    newer = RECENT[i - 1] if i > 0 else None
-    nav = ""
-    if older or newer:
-        left = f'<a href="{older}.html" rel="prev">← {bi(*date_short(older))}</a>' if older else "<span></span>"
-        right = f'<a href="{newer}.html" rel="next">{bi(*date_short(newer))} →</a>' if newer else ""
-        nav = f'<nav class="day-nav" aria-label="Days">{left}{right}</nav>'
-    return cols + lists + nav
+    return cols + lists
 
 
 def archive_body(days):

@@ -15,10 +15,10 @@ models:
   picks: "claude-sonnet-5-5"    # 每天挑"该知道的"和"可能喜欢"（picks_enabled 为 true 时才用）
   video: "claude-sonnet-5-5"    # YouTube 视频：读字幕写摘要
 
-# YouTube（你电脑上 Claude 桌面版的定时任务，scripts/youtube.py）：和博客一样抓上次成功之后的新视频
+# YouTube（GitHub 上的 youtube.yml：Gemini 取文字稿，Claude 写摘要）：和博客一样抓上次成功之后的新视频
 youtube:
-  max_videos_per_run: 20  # 一次最多写几个视频的摘要，多出来的留到下次
-  max_tries: 3            # 字幕还没生成的视频，最多等几次运行
+  max_videos_per_run: 10  # 一次最多写几个视频的摘要，多出来的留到下次
+  max_tries: 3            # 拿不到文字稿的视频，最多试几次运行，之后放弃
 
 summary_batch_size: 4
 # 每篇喂给模型的正文最多多少字符

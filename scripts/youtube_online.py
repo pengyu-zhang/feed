@@ -11,8 +11,8 @@ prompts/video.md, the same way as the blogs.
 
 The transcript is used in memory only: never written to a file, never printed (the logs of a
 public repository are public). A video whose transcript could not be fetched this time (the
-free tier often answers 503 "high demand") gets no file, so it stays on the waiting list for
-the next run.
+free tier often answers 503 "high demand") counts as one failed try and stays on the waiting
+list for the next run, at most youtube.max_tries runs (config.yml), then it is dropped.
 
 Needs GEMINI_API_KEY (AI Studio key) and CLAUDE_CODE_OAUTH_TOKEN.
 """
@@ -97,6 +97,8 @@ def main():
         if text is None:
             failed += 1
             print(f"  {v['video_id']} {v['channel']}: no transcript this time ({err})")
+            # counts as one try; youtube.py save drops the video after youtube.max_tries runs
+            out.write_text(json.dumps({"no_transcript": True}), encoding="utf-8")
             continue
         prompt = (template.replace("$TITLE", v["title"]).replace("$CHANNEL", v["channel"])
                   .replace("$DESCRIPTION", v.get("description") or "(none)").replace("$TRANSCRIPT", text))
