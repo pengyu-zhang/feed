@@ -2,32 +2,6 @@
  "date": "2026-11-24",
  "items": [
   {
-   "id": "b1218f591ea7",
-   "kind": "blog",
-   "source": "daringfireball.net",
-   "source_url": "https://daringfireball.net",
-   "title": "[Sponsor] Finalist Daily Planner Meets iPhone Duo",
-   "url": "https://www.finalist.works/iphone-duo-planner/?utm_source=df-nov-2026",
-   "published": "2026-11-24T00:03:56+00:00",
-   "basis": "full",
-   "brief_zh": "这是一条赞助广告,推广 Finalist 4.3 这款纸质手账风格的日程应用,称它适配 iPhone Duo 的双页展开。",
-   "background_zh": "",
-   "conclusion_zh": "",
-   "brief_en": "This is a sponsor post promoting Finalist 4.3, a paper-style planner app that it says is built for the two-page layout of iPhone Duo.",
-   "background_en": "",
-   "conclusion_en": "",
-   "points_zh": [
-    "这是 Daring Fireball 上的赞助内容,不是作者自己的文章。内容为 Finalist 的产品介绍,称它有双页日程、桌面时钟、习惯记录和 Markdown 任务,并支持 iPhone、iPad 和 Mac。"
-   ],
-   "points_en": [
-    "This is sponsored content on Daring Fireball, not the author's own writing. It is a product description of Finalist, which it says offers a two-page agenda, a Desk Clock, habit tracking and Markdown tasks, and runs on iPhone, iPad and Mac."
-   ],
-   "topics": [
-    "sponsor",
-    "apps"
-   ]
-  },
-  {
    "id": "483d6c3df88c",
    "kind": "blog",
    "source": "daringfireball.net",
