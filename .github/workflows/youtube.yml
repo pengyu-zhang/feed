@@ -1,0 +1,98 @@
+name: youtube
+
+# YouTube videos on GitHub: Gemini reads each new video's transcript, Claude Sonnet writes the
+# summary (scripts/youtube_online.py). The free Gemini tier often answers 503 at busy hours, and
+# GitHub starts scheduled runs late, so three tries a night; a video that failed stays on the
+# waiting list for the next run. Each run only does what is new or still waiting.
+# 01:43, 03:43, 05:43 UTC = 02:43, 04:43, 06:43 in Amsterdam in winter.
+on:
+  schedule:
+    - cron: "43 1 * * *"
+    - cron: "43 3 * * *"
+    - cron: "43 5 * * *"
+  workflow_dispatch:
+    inputs:
+      since_hours:
+        description: "Look back this many hours instead of since the last run (for a test)"
+        required: false
+        default: ""
+      max:
+        description: "At most this many videos in this run"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: youtube
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - run: npm install -g @anthropic-ai/claude-code
+
+      - name: List new videos
+        working-directory: scripts
+        env:
+          FEED_YT_SINCE_HOURS: ${{ inputs.since_hours }}
+          FEED_YT_MAX: ${{ inputs.max }}
+        run: python youtube.py list
+
+      - name: Transcripts (Gemini) and summaries (Claude)
+        working-directory: scripts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: python youtube_online.py
+
+      - name: Save
+        working-directory: scripts
+        run: python youtube.py save
+
+      - name: Build site
+        working-directory: scripts
+        run: python build.py
+
+      - name: Save data
+        run: |
+          git config user.name "feed-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "youtube $(TZ=Europe/Amsterdam date +%F)"
+          # the blog run may have pushed meanwhile; it writes other files, so this rebases cleanly
+          git pull --rebase && git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      # GitHub's Pages API fails now and then ("Fetching artifact metadata failed"): wait, try once more
+      - if: steps.deploy.outcome == 'failure'
+        run: sleep 60
+      - if: steps.deploy.outcome == 'failure'
+        uses: actions/deploy-pages@v4

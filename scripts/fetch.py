@@ -93,6 +93,8 @@ def fetch_source(src, since, seen, cap, baselined):
                 latest = when
             if when <= since:
                 continue
+        if re.match(r"\s*\[sponsor", entry.get("title", ""), re.I):
+            continue  # paid posts (Daring Fireball's "[Sponsor] ..."): the writing rules skip ads
         content = ""
         if entry.get("content"):
             content = entry.content[0].get("value", "")

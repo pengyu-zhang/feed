@@ -1,4 +1,7 @@
-"""YouTube videos: the part of the daily digest that runs on the owner's PC, not on GitHub.
+"""YouTube videos: list the new ones, save the summaries, publish.
+
+On GitHub (youtube.yml) the transcripts come from Gemini, see youtube_online.py. The text below
+describes the older way, a scheduled task on the owner's PC, which still works the same.
 
 YouTube often refuses subtitle requests from cloud machines, so a scheduled task in the Claude
 desktop app does this every morning while the PC is on. The task reads each transcript itself in
@@ -23,6 +26,7 @@ no transcript (yet).
 """
 
 import json
+import os
 import subprocess
 import sys
 import urllib.request
@@ -87,6 +91,11 @@ def cmd_list():
     last = state.get("last_run")
     since = max(datetime.fromisoformat(last) - timedelta(hours=1), oldest) if last else \
         now - timedelta(hours=cfg.get("first_run_hours", 26))
+    if os.environ.get("FEED_YT_SINCE_HOURS"):  # a run by hand that should look further back (a test)
+        since = min(since, now - timedelta(hours=float(os.environ["FEED_YT_SINCE_HOURS"])))
+        oldest = min(oldest, since)
+    if os.environ.get("FEED_YT_MAX"):
+        cap = int(os.environ["FEED_YT_MAX"])
 
     with ThreadPoolExecutor(max_workers=8) as pool:
         results = list(pool.map(read_channel, sources))
