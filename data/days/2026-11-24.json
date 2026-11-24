@@ -1,0 +1,239 @@
+{
+ "date": "2026-11-24",
+ "items": [
+  {
+   "id": "b1218f591ea7",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "[Sponsor] Finalist Daily Planner Meets iPhone Duo",
+   "url": "https://www.finalist.works/iphone-duo-planner/?utm_source=df-nov-2026",
+   "published": "2026-11-24T00:03:56+00:00",
+   "basis": "full",
+   "brief_zh": "这是一条赞助广告,推广 Finalist 4.3 这款纸质手账风格的日程应用,称它适配 iPhone Duo 的双页展开。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "This is a sponsor post promoting Finalist 4.3, a paper-style planner app that it says is built for the two-page layout of iPhone Duo.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "这是 Daring Fireball 上的赞助内容,不是作者自己的文章。内容为 Finalist 的产品介绍,称它有双页日程、桌面时钟、习惯记录和 Markdown 任务,并支持 iPhone、iPad 和 Mac。"
+   ],
+   "points_en": [
+    "This is sponsored content on Daring Fireball, not the author's own writing. It is a product description of Finalist, which it says offers a two-page agenda, a Desk Clock, habit tracking and Markdown tasks, and runs on iPhone, iPad and Mac."
+   ],
+   "topics": [
+    "sponsor",
+    "apps"
+   ]
+  },
+  {
+   "id": "483d6c3df88c",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Jensen Huang Returns to Work",
+   "url": "https://www.businessinsider.com/jensen-huang-returns-to-nvidia-hq-im-terribly-sorry-2026-11",
+   "published": "2026-11-23T23:53:25+00:00",
+   "basis": "short",
+   "brief_zh": "据 Business Insider 报道,黄仁勋回到 Nvidia 总部上班,员工围着他欢呼,他向大家道歉,并说自己这次会当一个更好的 CEO。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "Business Insider reports that Jensen Huang returned to work at Nvidia headquarters to cheering staff, apologized to them and said he will be a better CEO the second time around.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "Business Insider 的 Geoff Weiss 报道,员工聚在总部迎接黄仁勋,高喊“Jensen! Jensen!”,人多到互相推挤着想看他一眼。据知情人士说,他没穿标志性的黑皮夹克,而是穿了一件海军蓝的棉外套。他多次把手放在胸口,说“这是我上班的第一天”,并为让大家经历这一切道歉,还说“第二次当 CEO,我会做得更好”。Gavin Baker 在 X 上发了他向数百名欢呼员工讲话的视频和照片。这些说法来自知情人士和视频,报道原文没有说明他离开的原因。"
+   ],
+   "points_en": [
+    "Geoff Weiss of Business Insider reports that employees gathered at headquarters and chanted “Jensen! Jensen!”, packing in so tightly that people jostled for a view. A person familiar with the scene said he wore a navy cotton coat instead of his usual black leather jacket. He put his hand on his heart several times and said “This is my first day at work”. He apologized for putting everyone through all of this and said he would be a better CEO the second time around. Gavin Baker posted video and photos of the scene on X. The claims rest on a source and on video, and the excerpt does not say why he was away."
+   ],
+   "topics": [
+    "Nvidia",
+    "news"
+   ]
+  },
+  {
+   "id": "efbefb658499",
+   "kind": "blog",
+   "source": "johndcook.com",
+   "source_url": "https://johndcook.com",
+   "title": "Finite Projective Spaces",
+   "url": "https://www.johndcook.com/blog/2026/11/23/finite-projective-spaces/",
+   "published": "2026-11-23T23:49:05+00:00",
+   "basis": "full",
+   "brief_zh": "有限射影空间在维数 d ≥ 3 时,点数相同的最多只有一个,所以分类反而比有限射影平面更简单。",
+   "background_zh": "John D. Cook 接着之前讲有限射影平面的文章,谈更高维的有限射影空间,并指出它们和平面相比有一个出人意料的差别。",
+   "conclusion_zh": "文章没有另下结论,落点是上面的分类结果:通常维数越高情况越复杂,但在有限射影几何里,d ≥ 3 之后的空间都来自有限域,比平面更简单。",
+   "brief_en": "For dimension d ≥ 3, at most one finite projective space exists for a given number of points, so these spaces are simpler to classify than finite projective planes.",
+   "background_en": "John D. Cook follows an earlier post on finite projective planes and turns to finite projective spaces of higher dimension. He points out a surprising difference between the two.",
+   "conclusion_en": "The post draws no further conclusion beyond the classification result. Higher dimension usually brings more complicated behavior, but here the spaces for d ≥ 3 all come from finite fields and are simpler than the planes.",
+   "points_zh": [
+    "高维有限射影空间的分类比射影平面简单。射影平面不由点数决定:文中说点数为 10 的射影平面有四种,点数为 17 的射影平面有多少种还不知道,至少有 22 种。但当 d ≥ 3 时,给定点数,最多只有一个射影空间。",
+    "这个唯一的空间可以用域来构造。给定素数幂 q,存在唯一的 q 元域 F。取 F^(d+1) 中的非零向量,再除去非零标量倍数,就得到 d 维射影空间,做法和构造实射影空间一样。d ≥ 3 时,在同构意义下只有这一种构造。用术语说,射影平面可以是非 Desargues 的,更高维的射影空间不会。",
+    "这些空间的公理里没有明确的维数概念,维数可以用归纳法定义。第二条公理和射影平面里对应的那条略有不同:它允许存在异面直线,但不允许平行线。"
+   ],
+   "points_en": [
+    "Higher-dimensional finite projective spaces are simpler to classify than planes. Planes are not determined by their number of points: the post says there are four planes with 10 points, and the number with 17 points is unknown but at least 22. For d ≥ 3, at most one projective space exists for a given number of points.",
+    "That unique space comes from a field. For a prime power q there is a unique field F with q elements. Take the non-zero vectors in F^(d+1) and mod out by non-zero scalar multiples, as one does for real projective space. For d ≥ 3 this is the only construction up to isomorphism. In technical terms, projective planes can be non-Desarguesian but higher-dimensional projective spaces cannot.",
+    "The axioms contain no explicit notion of dimension, and dimension can be defined by induction. The second axiom differs slightly from its counterpart for planes: it allows skew lines but not parallel lines."
+   ],
+   "topics": [
+    "finite geometry",
+    "projective spaces",
+    "mathematics"
+   ]
+  },
+  {
+   "id": "efc98a45d931",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+   "url": "https://simonwillison.net/2026/Nov/23/glm-54/",
+   "published": "2026-11-23T23:40:49+00:00",
+   "basis": "full",
+   "brief_zh": "Z.ai 发布了首个采用循环 Transformer 架构的模型 GLM 5.4,Simon Willison 试用后觉得它画的鹈鹕和 5.3 质量相近。",
+   "background_zh": "Simon Willison 在一周内第二次看到循环 Transformer:此前 Thinking Machines Lab 在 11 月 20 日发布的 Inkling 2 Mini 也用了这种架构。GLM 5.4 刚上线,他就去试用了。",
+   "conclusion_zh": "Simon 没有给出总体评价。他的结论是:5.4 目前只能通过 Coding Plan 使用,他的 llm-glm 插件是临时方案,而从鹈鹕图看,GLM 的风格从 5.3 开始变得和其他主流模型相似。",
+   "brief_en": "Z.ai has released GLM 5.4, its first looped transformer, and Simon Willison found its pelican drawings similar in quality to those of GLM 5.3.",
+   "background_en": "This is the second looped transformer Simon Willison has seen in a week. The first was Inkling 2 Mini from Thinking Machines Lab on November 20th. He tried GLM 5.4 soon after its release.",
+   "conclusion_en": "Simon gives no overall verdict. For now 5.4 is reachable only through the Coding Plan, his llm-glm plugin is a stopgap, and the pelican drawings suggest GLM's style became similar to other major models from 5.3 onward.",
+   "points_zh": [
+    "GLM 5.4 是 Z.ai 第一个循环 Transformer。Z.ai 的说法是:一组共享权重的层在一次前向传播中重复运行多轮,每轮细化上一轮的隐藏状态,这样不增加参数量也能得到更深的网络。Inkling 2 Mini 的做法是让中间层对每个 token 运行三次,Thinking Machines Lab 称这能用更少的 token 完成更多推理,尤其适合 agentic coding。",
+    "这个模型目前没有开放权重(文中写的是“not yet?”)。Simon 通过 Z.ai API 试用,但必须订阅 Coding Plan,因为 5.4 暂时不能用普通 API 访问。两者共用同一个兼容 OpenAI 的 Responses API,Coding Plan 的密钥可以直接调用新模型。他为此写了 llm-glm 插件,尽管 Tommy Hughes 的 llm-zai 已经存在;因为 llm-zai 还不支持新模型,他才发布了自己的版本,等对方跟上后可能会停用。",
+    "在他自己的“鹈鹕骑自行车”测试里,他跑了 GLM-5.4 的 low、high 和 max 三档,并补跑了 5.3 的同样三档,两者质量看起来相近。他观察到 5.1 和 5.2 画出的鹈鹕和其他模型很不一样,5.3 和 5.4 则更接近 OpenAI 或 Anthropic 模型的结果,5.2 到 5.3 之间的风格转变很明显。他还做了四代 GLM 的对比图。这些只是他个人的图像测试观察。"
+   ],
+   "points_en": [
+    "GLM 5.4 is the first looped transformer from Z.ai. Z.ai says a group of weight-shared layers runs for several iterations in one forward pass, and each pass refines the hidden states from the last. This gives a deeper network without more parameters. Inkling 2 Mini runs its middle layers three times for every token. Thinking Machines Lab says this lets it reason with fewer tokens, especially in agentic coding.",
+    "The model is not available as open weights, and the post asks whether that may change. Simon used the Z.ai API, which required a Coding Plan subscription because 5.4 cannot yet be reached through the regular API. Both share the same OpenAI-compatible Responses API, and the Coding Plan key worked with it. He wrote an llm-glm plugin, although Tommy Hughes' llm-zai already exists. He shipped his own because llm-zai does not yet support the new model, and he will likely retire it once that plugin catches up.",
+    "In his pelican-riding-a-bicycle test he ran GLM-5.4 at low, high and max effort. He also ran GLM-5.3 at the same levels, and the two look similar in quality. He notes that GLM 5.1 and 5.2 produced pelicans very different from other models. The 5.3 and 5.4 pelicans are much closer to those from OpenAI or Anthropic models. The change between 5.2 and 5.3 is stark, and he made a comparison grid of all four generations. These are his own observations from one informal image test."
+   ],
+   "topics": [
+    "looped transformer",
+    "GLM",
+    "LLM release"
+   ]
+  },
+  {
+   "id": "ca7cd22c6e9c",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "Ladybird's first alpha release",
+   "url": "https://simonwillison.net/2026/Nov/23/ladybird/",
+   "published": "2026-11-23T21:46:35+00:00",
+   "basis": "full",
+   "brief_zh": "Simon Willison 试用了 Ladybird 刚发布的第一个 alpha 版，觉得它速度快、界面轻、大多数网站能正常显示，但因为安全上没有保证，他只打算用它做匿名浏览。",
+   "background_zh": "Ladybird 是一个几乎从零自研浏览器引擎的项目，自己实现了 HTML 解析、CSS、排版、JavaScript 乃至 WebAssembly。项目刚发布第一个 alpha 版，macOS 和 Linux 用户不必自己编译就能安装，Simon 当天试用后写下了这篇文章。",
+   "conclusion_zh": "Simon 认为浏览器很难做安全，所以不会用 Ladybird 登录 GitHub、Gmail 等敏感账号。他会留着它做匿名浏览，一是参与测试，二是因为看到停滞的浏览器引擎市场里出现有前景的新选手，让他感到一点乐观。",
+   "brief_en": "Simon Willison tried Ladybird's first alpha and found it fast, light and mostly compatible with the sites he tested. Because security is not guaranteed, he will use it only for anonymous browsing.",
+   "background_en": "Ladybird is a project that builds its own browser engine almost from scratch, with its own HTML parsing, CSS, layout, JavaScript and WebAssembly. It has just released its first alpha, which macOS and Linux users can install without compiling. Simon tried it the same day.",
+   "conclusion_en": "Simon says a browser is hard to secure, so he will not use Ladybird to sign into GitHub, Gmail or other sensitive accounts. He will keep it for anonymous browsing, partly to help with testing and partly because a promising new entrant in a stagnant browser engine market gives him some optimism.",
+   "points_zh": [
+    "Ladybird 的自研程度很高，但并非完全不依赖外部组件。HTML、CSS、排版、JavaScript 和 WebAssembly 都是自己实现的，仍然使用 HarfBuzz（文字排版）、Skia（2D 图形）、ffmpeg（视频）和 SQLite，其余部分来自 Ladybird 本身或前身项目 SerenityOS。",
+    "Simon 的试用结果总体不错，只有一处失败。他觉得浏览器很快，界面轻巧直观，试过的大多数网站都正常。他的 video-compressor（在 WebAssembly 中运行 ffmpeg）、image-resize 工具和 Pyodide REPL 都能运行。唯一失败的是 Datasette Lite，它在 service worker 和 web worker 的组合下报错 `navigator.serviceWorker.startMessages` 未定义。他已提交 issue，并在源码里发现了对应的 FIXME。他开了六个标签页加另一个窗口的一个标签页，每个标签页用独立进程，整体内存占用在几十到几百 MB 之间，其中一个 WebContent 进程达到 819 MB。",
+    "项目今年大量使用 coding agent。2026 年 2 月 23 日，Andreas Kling 发文说，他们用 Claude Code 和 Codex 在两周内把 LibJS 的部分代码从 C++ 移植成了 25,000 行 Rust。10 月的月报称，团队让 AI coding agent 去补全 web-platform-tests 中缺失的功能，约 2.25 百万个子测试里新增通过 75,650 项，超过了 Safari；其中大部分增长发生在 10 月 22 日到 27 日这五天，约从 212 万升到 218 万，/css 增加约 3 万，/editing 增加约 1 万。同月他们还把样式和布局移到独立线程，上线了新的 JavaScript JIT，并用新代码替换了 C++ 的 Cranelift WebAssembly 引擎，在 JetStream 3 的 WASM 测试中提升 7 倍。Simon 说他不清楚团队用的具体模型版本，想知道。",
+    "官方明确说这是 alpha，不保证安全。Andreas 表示有些网站打不开，也会崩溃，欢迎用户在浏览器内报告；他们不对当前的安全性作任何承诺，欢迎安全研究者来攻击并告知方法。"
+   ],
+   "points_en": [
+    "Ladybird implements most of its stack itself, but not all of it. HTML, CSS, layout, JavaScript and WebAssembly are its own. It still uses HarfBuzz for text shaping, Skia for 2D graphics, ffmpeg for video and SQLite. The rest is Ladybird code or code from its predecessor project SerenityOS.",
+    "Simon's trial went well, with one failure. He found the browser fast, the interface light and intuitive, and most sites he tried worked. His video-compressor (ffmpeg compiled to WebAssembly), his image-resize tool and his Pyodide REPL all ran. Datasette Lite failed, because its mix of service workers and web workers raised an error that `navigator.serviceWorker.startMessages` is undefined. He filed an issue and found a matching FIXME in the source. With six tabs in one window and one in another, each tab ran in its own process. One WebContent process used 819 MB.",
+    "The project has leaned heavily on coding agents this year. On February 23, 2026 Andreas Kling wrote that the team ported parts of the LibJS engine from C++ to 25,000 lines of Rust in two weeks, using Claude Code and Codex. The October report says they pointed AI coding agents at web-platform-tests to fill in missing features. They gained 75,650 passes out of about 2.25 million subtests, which beat Safari. Most of the gain came between October 22 and 27, from about 2.12 million to about 2.18 million, with about 30,000 in /css and 10,000 in /editing. That month they also moved style and layout to their own thread, landed a new JavaScript JIT and replaced the C++ Cranelift WebAssembly engine with new code that was 7x faster on the JetStream 3 WASM benchmark. Simon says he does not know which model versions the team used and would like to.",
+    "The project states plainly that this is an alpha with no security promises. Andreas says some sites will not work and the browser will sometimes crash, and users can report both from inside the browser. The team makes no promises about security today and invites security researchers to attack it and report how."
+   ],
+   "topics": [
+    "browsers",
+    "coding agents",
+    "WebAssembly"
+   ]
+  },
+  {
+   "id": "49669edf42c2",
+   "kind": "blog",
+   "source": "blog.jim-nielsen.com",
+   "source_url": "https://blog.jim-nielsen.com",
+   "title": "Am I A Design Engineer?",
+   "url": "https://blog.jim-nielsen.com/2026/am-i-a-design-engineer/",
+   "published": "2026-11-23T19:00:00+00:00",
+   "basis": "full",
+   "brief_zh": "Jim Nielsen 认为设计工程的核心不是兼具多种技能，而是在设计、工程、产品等学科之间的关系中工作，有时结论甚至是不该再多写软件。",
+   "background_zh": "有人问“什么是设计工程”，Jim 觉得自己说不全它是什么，只能说它不是什么，而且他发现这个词在日常中的用法和他的理解不一致。他借此梳理自己心目中的这个角色。",
+   "conclusion_zh": "Jim 承认自己也许描述的已经不是“设计工程”，而只是自己喜欢做的那类工作，希望有个名称，比如“Jim Nielsen 风格的软件创作者”，并说如果有人要招这个角色，他可以推荐一个人，就是他自己。",
+   "brief_en": "Jim Nielsen argues that design engineering is not about combining several skills but about working in the relationships between disciplines such as design, engineering and product, and that the answer is sometimes no new software.",
+   "background_en": "Asked what design engineering is, Jim says he can describe what it is not better than what it is, and he finds the everyday use of the term differs from his own view. He uses the post to lay out the role as he sees it.",
+   "conclusion_en": "Jim admits he may no longer be describing design engineering and may just be describing the work he enjoys, for which he wishes there were a label, such as Jim Nielsen–Style Software Maker. He says that if someone wants to fill that role, he knows a person who fits, meaning himself.",
+   "points_zh": [
+    "设计工程不在于把多个学科叠加在一起，而在于在学科之间的关系里工作。Jim 说，他想过造一个新词“Product Design Engineer”，但只把名词拼起来说明不了这份工作。他一直偏爱“人机交互”（HCI）这个概念，因为它天然是多学科的：计算机一侧有设计、工程、产品等背景，人的一侧有心理学、艺术、文学等背景。",
+    "这个角色要问的问题是：面对一个人的问题，能不能（如果能的话）用计算去解决。答案可以是一个人性化的界面、一个更好的按钮、更清楚的文字、一次优化的 API 调用，或者只是一封邮件或一条短信。",
+    "有时答案是完全不用软件。Jim 认为，设计工程师身处各学科的关系之中，所以更有条件看清问题，并主张再加软件可能让事情更糟。"
+   ],
+   "points_en": [
+    "Design engineering is about working in the relationships between disciplines, not about covering several of them. Jim considers coining the term Product Design Engineer, but says joining nouns does not describe the work. He prefers Human-Computer Interaction, which is multidisciplinary by nature. On the computer side it draws on design, engineering and product, and on the human side it draws on psychology, art and literature.",
+    "The role asks how, if at all, computation can solve a given human problem. The answer may be a humane interface, a better button, clearer prose, an optimized API call or just an email or text message.",
+    "Sometimes the answer is no software at all. Jim believes design engineers work between disciplines, so they are well placed to understand a problem and to argue that more software may make things worse."
+   ],
+   "topics": [
+    "design engineering",
+    "HCI"
+   ]
+  },
+  {
+   "id": "ccc0f5f00692",
+   "kind": "blog",
+   "source": "johndcook.com",
+   "source_url": "https://johndcook.com",
+   "title": "Two generators suffice",
+   "url": "https://www.johndcook.com/blog/2026/11/23/two-generators-suffice/",
+   "published": "2026-11-23T17:28:34+00:00",
+   "basis": "short",
+   "brief_zh": "每个有限单群都可以由至多两个元素生成，而且对非阿贝尔有限单群，随机取两个元素以很高概率就能生成整个群。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "Every finite simple group is generated by at most two elements, and for non-Abelian finite simple groups two randomly chosen elements generate the group with high probability.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "有限单群的生成元数量上限是 2，这是有限单群分类定理（CFSG）的推论。对非阿贝尔有限单群 G，随机选两个元素能生成 G 的概率随群的阶 |G| 趋向无穷而趋近于 1，出自 Kantor 和 Lubotzky 1990 年关于有限经典群生成概率的论文。作者还指出，这个概率结果发表时 CFSG 的证明尚未完成：当时有限单群的清单已经列全，也被普遍认为是完整的，但证明还没有写完。"
+   ],
+   "points_en": [
+    "Two generators are enough for any finite simple group, which follows from the classification of finite simple groups (CFSG). For non-Abelian finite simple groups G, the probability that two random elements generate G approaches 1 as the order |G| goes to infinity, according to a 1990 paper by Kantor and Lubotzky on generating finite classical groups. The author notes that this probability result was published before the CFSG proof was finished. The list of finite simple groups was complete and widely believed to be complete, but the proof was not yet done."
+   ],
+   "topics": [
+    "group theory",
+    "mathematics"
+   ]
+  },
+  {
+   "id": "416c038b43e5",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Donald Trump on Jensen Huang’s Reinstatement at Nvidia",
+   "url": "https://truthsocial.com/@realDonaldTrump/posts/117666713950631493",
+   "published": "2026-11-23T17:22:03+00:00",
+   "basis": "short",
+   "brief_zh": "Daring Fireball 转述了特朗普在自己博客上就黄仁勋在 Nvidia 复职发表的帖子，并评论说它抓住了这一时刻的气氛。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "Daring Fireball links to Donald Trump's blog post about Jensen Huang's reinstatement at Nvidia and says the post captures the moment.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "特朗普当天上午 11:30 在自己的博客上发了关于黄仁勋复职的帖子。Gruber 说，他是在接受 CNBC 长达 50 分钟的电话采访之后发的，采访中特朗普把“这笔交易”促成黄仁勋复职说成是自己的功劳。Gruber 评价这个帖子“确实抓住了这一刻”。摘录的帖子正文没有包含在所给文本中。"
+   ],
+   "points_en": [
+    "Trump posted on his blog at 11:30am on the day of the post. John Gruber says he posted it after a 50-minute phone interview with CNBC, in which Trump took credit for the deal to reinstate Huang. Gruber says the post does capture the moment. The text of Trump's post is not included in the material provided."
+   ],
+   "topics": [
+    "Nvidia",
+    "politics"
+   ]
+  }
+ ],
+ "picks": {
+  "important": [],
+  "liked": []
+ },
+ "generated_at": "2026-11-24T03:59:46.286051+00:00"
+}
