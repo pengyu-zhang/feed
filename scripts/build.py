@@ -129,9 +129,11 @@ def sc_faces(html):
     return "".join(_SC_RULES[n] for n in sorted(used))
 
 
-INTRO = ("每天早上自动收集一批科技和 AI 博客、YouTube 频道的新内容，由模型写成中英文摘要。只转述原文，不加评价。",
-         "Tech and AI blogs and YouTube channels, collected every morning and summarised by a model "
-         "in Chinese and English. The summaries report the source and add no opinion.")
+INTRO = ("我给自己做的阅读页，用来跟上科技和 AI 的前沿动态。每天早上自动收集一批博客和 YouTube 频道的新内容，"
+         "由模型写成中英文摘要。只转述原文，不加评价。",
+         "A reading page I made for myself to keep up with what is new in tech and AI. Posts from blogs and "
+         "YouTube channels are collected every morning and summarised by a model in Chinese and English. "
+         "The summaries report the source and add no opinion.")
 
 
 def feed_side(active):
