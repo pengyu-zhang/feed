@@ -1,0 +1,284 @@
+{
+ "date": "2026-11-25",
+ "items": [
+  {
+   "id": "yt-2FQpO2BuGJ8",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "GLM-5.4 今天能試嗎？｜Claude Opus 5.6、Gemini 4 Helium 傳聞核對",
+   "url": "https://www.youtube.com/watch?v=2FQpO2BuGJ8",
+   "published": "2026-11-25T01:10:38+00:00",
+   "basis": "transcript",
+   "brief_zh": "作者的判断是：演示再好看，也要先查今天能不能用、再用自己的小任务验出可重复的结果，这样的结果才值得改计划。GLM-5.4 已可试用，Claude Opus 5.6 和 Gemini 4 Helium 仍无已核实的入口。",
+   "background_zh": "最近几条 AI 消息同时出现：GLM-5.4 的机械臂、3D 场景和游戏演示，Claude Opus 5.6 与 Gemini 4 Helium 的传闻，Claude Ship 测试版，以及 DeepMind 的量子算法研究。作者想说明面对这些消息时，怎么判断哪些值得投入时间。",
+   "conclusion_zh": "作者的处理方式是：Claude Opus 5.6 和 Helium 先留卡片，等明确入口；GLM-5.4 能进入时，用一个小任务按上面的条件试；量子这条追论文和验证过程，把可借用的检查机制记进工作笔记。他建议挑一件每周都在做的事，用相同输入，留一份别人也能打开的结果，每轮修改少解释一遍，工具才算在工作里有价值。",
+   "brief_en": "The author argues that a demo should first prompt two checks: can you use the model today, and does a repeatable test on your own small task pass. Only a result that passes is worth changing your plans for. GLM-5.4 can be tried now, while Claude Opus 5.6 and Gemini 4 Helium have no verified access.",
+   "background_en": "Several AI items appeared together: GLM-5.4 demos of a robot arm, 3D scenes and games, rumors about Claude Opus 5.6 and Gemini 4 Helium, the Claude Ship beta, and DeepMind's quantum algorithm research. The author explains how he decides which of them deserve his time.",
+   "conclusion_en": "The author's plan is to keep cards for Claude Opus 5.6 and Helium until there is a clear access point. When GLM-5.4 is available to him, he will run a small task against the conditions above. For the quantum work, he will follow the paper and its verification process and note the checking method in his work notes. He suggests picking a task you do every week, using the same input and keeping a result that others can open. A tool becomes useful at work when each revision needs less explanation.",
+   "points_zh": [
+    "先查入口，再谈演示。按作者 2026 年 11 月 24 日的核对，GLM-5.4 可通过 Coding Plan 使用，也可在智谱的网页聊天或 Z-Code 入口试；通用 Model API 依官方文档要等评估完成后开放。Anthropic 官方模型目录里只查到 Opus 5.5，没有 5.6；Google 的目录里也没有对上 Gemini 4 Helium 的型号和调用入口。作者把这两个只当公开线索，建议先用手里能选到的型号安排工作，Opus 5.6 的案例标为第三方演示、版本待核对。Claude Ship 则是有官方公告的测试版（GitHub 的 Team／Enterprise 场景）：代码变更请求发出后由 Claude 参与检查和修正，团队可设规则，决定哪些小改动自动通过、哪些要人确认。作者强调这和新模型传闻是两件事。",
+    "看 AI 做的工程成果，要拆成能单独检查的小要求。以 GLM-5.4 的六轴机械臂为例，作者会问能不能单独选中某个零件、改完能不能生成新结果。比如客户要求底座加两个安装孔，就要能点到那两个位置、核对孔距、重开工程再核对。3D 鸟类场景要转到背面、在手机上点一次，看正面精致背面会不会破。视频或游戏要看能否只改一个局部，例如镜头提前两秒、其他顺序和音乐不变。作者还说，GLM-5.4 让部分层多处理一轮，官方称这给推理任务更多反复修正的机会，也承认个别任务会思考很久，所以他建议记下第一版可用的时间，以及改错花的时间。选工具时把从第一次发送到能放心交给下一个人的总时间加起来比较。",
+    "DeepMind 的量子算法研究值得借鉴的是它的筛选机制，但结论有限定。研究里有几个独立的智能体小组，候选方案要先用形式化证明工具检查数学正确性，通过的才放进共享笔记供其他小组继续用。其中一个量子线路案例的估算资源成本降到约 1/11.8，这是单一核融合算例的量子算法资源估算，计入了量子比特和操作数。作者说这只适用于论文设定的那条线路，能否在真实机器上以目标精度跑起来，要看硬件容量和纠错条件，是另一项实验。他建议把这两种状态分开记录。",
+    "用同一份资料跑两轮筛选，演示验收怎么做。资料是虚构的六条工作记录，其中两条已完成，要求是点“已完成”只显示那两条，清空后回到六条，不能靠手动改数据。第一版点击后有响应，界面也合理，显示三行，但逐条对原记录发现混进一条未完成的，判为未通过：按钮能点只说明有响应，不说明数据筛对了。第二版同一条件出来两条，名称也对上，通过。再清空确认回到六条，刷新页面后从同一份资料重筛一次，确认能重做。作者说数量和内容都要看，因为有时数量刚好对，内容却是别的两条。留下这三个动作，别人也能按同样条件复查。"
+   ],
+   "points_en": [
+    "Check access before judging a demo. As of 24 November 2026, the author found that GLM-5.4 is available through the Coding Plan and through Zhipu's web chat or the Z-Code entry. The general Model API opens after evaluation is finished, according to the official documentation. Anthropic's model catalog lists only Opus 5.5, not 5.6, and Google's catalog has no matching Gemini 4 Helium model or access point. He treats both as public leads only, advises planning work with models you can already select, and labels the Opus 5.6 example as a third-party demo with an unconfirmed version. Claude Ship is different: it has an official announcement as a beta for GitHub Team and Enterprise use. Claude helps check and fix code change requests, and teams can set rules for which small changes pass automatically and which need a person. He stresses that this is separate from the model rumors.",
+    "Break an AI-made engineering result into small requirements that can be checked one by one. For the GLM-5.4 six-axis robot arm, he would ask whether a single part can be selected and whether a new result can be generated after an edit. If a client wants two mounting holes on the base, he needs to reach those two positions, check the hole spacing and reopen the project to check again. For the 3D bird scene, he would rotate to the back and tap on a phone, to see whether a polished front hides a broken back. For video or games, he would test whether one part can change alone, for example a shot moved two seconds earlier with the other shots and the music unchanged. He also notes that GLM-5.4 gives some layers an extra processing pass. The official explanation is that this allows more rounds of correction on reasoning tasks, and it admits that some tasks think for a long time. He suggests recording the time to a usable first version and the time spent fixing errors. He compares tools by the total time from the first send to a result he can hand over with confidence.",
+    "DeepMind's quantum algorithm research offers a screening method worth borrowing, with limits on its result. Several independent agent groups propose candidates, and a formal proof tool checks the mathematics first. Only verified results go into a shared notebook for other groups to build on. One quantum circuit example had its estimated resource cost cut to about 1/11.8. This is a resource estimate for a single fusion-related calculation and counts qubits and operations. The author says it applies only to the circuit as set up in the paper. Whether it runs on a real machine at the target accuracy depends on hardware capacity and error correction, which is a separate experiment. He suggests recording the two statuses separately.",
+    "He demonstrates acceptance testing with two rounds of filtering on the same fictional data. The data has six work records, two of them completed. Selecting Completed should show only those two, and clearing should return all six, with no manual editing of the data. The first version responded to the click and looked reasonable with three rows, but checking against the source records showed one unfinished item had slipped in, so it failed. A clickable button shows only that it responds, not that the data is right. The second version showed two rows with the right names and passed. He then cleared to confirm six rows returned, refreshed the page and filtered again from the same data to confirm it could be repeated. He says both the count and the content must be checked, because the count can match while the rows are different ones. The three steps can be handed to a colleague to repeat under the same conditions."
+   ],
+   "topics": [
+    "LLM evaluation",
+    "GLM-5.4",
+    "AI news verification"
+   ]
+  },
+  {
+   "id": "yt-QMRQISQH260",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "Copilot Projects｜聊天開新一輪，Word 和 PPT 還能接著做嗎？",
+   "url": "https://www.youtube.com/watch?v=QMRQISQH260",
+   "published": "2026-11-25T01:10:34+00:00",
+   "basis": "transcript",
+   "brief_zh": "Copilot Projects 的价值在于下次回来还能接着做：把当前版文件、长期规则和待确认事项放进项目，换一轮聊天，Word 和 PPT 也能对上同一份依据。",
+   "background_zh": "作者想检验一个场景：培训从周五改到周四，项目做了一周后再开新聊天，Copilot 会沿用旧日期，还是找到最新文件。演示用虚构的培训筹备材料，操作画面来自公开教学和 Microsoft Ignite，在 Mac 上演示。",
+   "conclusion_zh": "作者的立场是：换一轮聊天、换一种交付格式，核对时都应能找到同一份依据。下次回到项目，先打开当前版本就能直接往下做，这个项目才算帮上忙。他用虚构案例演示，实际是否省事，要看自己的真实任务。",
+   "brief_en": "The author says a Copilot Project is worth using if you can come back later and carry on. Keep the current file, the standing rules and the open next steps in the project, and a new chat, a Word file and a PowerPoint should all trace back to the same source.",
+   "background_en": "The author tests one case. A training date moves from Friday to Thursday. After a week of work, a new chat is opened. Will Copilot reuse the old date or find the latest file? The demo uses fictional training materials on a Mac, with screens taken from public tutorials and Microsoft Ignite.",
+   "conclusion_en": "The author's position is that after a new chat or a different output format, the check should still lead to the same source. If you can return to the project, open the current version and carry on, the project has helped. His demo uses fictional material, so the real gain depends on your own task.",
+   "points_zh": [
+    "项目指令和带版本的文件，是下一轮聊天能接上的基础。项目名要说明长期在做什么，比如“下周培训筹备”。项目指令里写三条具体规则：用最新确认的材料给依据，没确认的保留待定，通知正文给报名的人看、开头先写日期和地点。文件起能看懂的名字，如筹备一版、二版，正文里写更新时间。旧版留在能追溯的位置当历史，新版当执行依据，这两点要在提示里说清楚。",
+    "验证要从有明确答案的小问题开始，再开新聊天检查。先问“培训现在是哪一天、哪份文件能证明、旧版写的是哪一天”，比让它总结整个项目好检查。核对三点：周四是当前安排，周五是旧安排，来源要指到写着变更的那一版。然后开新聊天，只让它写一段给报名人的通知，看它是否写周四，负责人和预算有没有被写死。答错时先点回原文，看新版是否进了正确项目、名字有没有区分，再把问题问具体，比如只用“培训筹备二版”。核对时要把活动名称和时间一起看，只对数字或星期几会误判。",
+    "Word 和 PPT 要对照原文件逐项核对，不能只看排版。演示中先出短通知，再出 PPT，对照表比三件事：两份稿是否都写周四，负责人是否仍写待定，预算有没有被写成已批准。作者提到，PPT 标题如果还是周五，排版再整齐也会让人记错，应先修日期。文件出完要打开读一遍。如果再改时间，先更新原文件，再让它按新版本同时改通知和演示两份稿，只修一份会留下不一致。作者还提到，微软说明里生成的文档可以从项目输出里找，并保存在 OneDrive，发给同事前要确认文件权限。",
+    "已有聊天可以归进项目，但只放仍有用的几轮。有决策、改动理由或未解决问题的保留，早期随手试的写法留着也帮不上找最新日期。个人长期跟一件事用 Projects，同事要看共同资料、一起改文件，微软提供的是 Workspaces，要先想清楚这份内容谁需要一起看，并以所在组织实际开放的功能为准。",
+    "交接时留三样东西：当前版本、可沿用的规则、下一步由谁确认。当前版本要文件名和日期看得懂，能直接打开，并标明哪些安排已确认。规则例如通知的日期必须跟最新筹备表走，负责人没确认就留待定。下一步例如谁来确认负责人、什么时候再查预算，不急着把空格填满。作者建议拿每周重复、资料不多的小活试，比如每周培训通知，今天放进当前版和规则，下周另开一轮。评估时别只看写得多快，要看打开文件花多久、有没有又去翻旧聊天、最后核对花多久。"
+   ],
+   "points_en": [
+    "Project instructions and clearly versioned files let the next chat pick up the work. The project name should say what the long-term task is, for example next week's training preparation. The author writes three concrete rules in the instructions: cite the latest confirmed material, keep unconfirmed items as pending, and write notices for the people who signed up, with date and place first. Files get readable names such as version one and version two, with an update time in the text. The old version stays traceable as history and the new version is the basis for action. The prompt should state both.",
+    "Verification starts with a small question that has a clear answer, followed by a new chat. The author first asks what day the training is now, which file proves it and what the old version said. This is easier to check than a project summary. Three checks apply: Thursday is the current plan, Friday is the old plan, and the source must point to the version that records the change. Then he opens a new chat and asks only for a notice for registrants. He looks for Thursday, and for the owner and budget not being written as settled. If the answer is wrong, he first checks the source, whether the new version went into the right project and whether the names differ. Then he asks a more specific question, such as using only version two. He checks event name and time together, because matching only a number or a weekday can mislead.",
+    "Word and PowerPoint outputs are checked against the source files, not by layout. In the demo a short notice comes first, then the slides. A comparison table checks three things: both files say Thursday, the owner is still pending and the budget is not marked approved. The author notes that a slide title still saying Friday will mislead people even if the layout is neat, so the date is fixed first. He opens each file and reads it after it is generated. If the date changes again, he updates the source file first and asks Copilot to revise both the notice and the slides, because fixing only one leaves them inconsistent. He also mentions that, per Microsoft's description, generated documents can be found in the project output and saved in OneDrive. File permissions should be checked before sending to colleagues.",
+    "Existing chats can be moved into a project, but only the useful rounds should go in. Keep chats with decisions, reasons for changes or unresolved questions. Early casual drafts do not help find the latest date. For one person following a task over time, he uses Projects. For colleagues who share materials and edit files together, Microsoft offers Workspaces. He says to decide first who needs to see the content, and that available features depend on what the organization enables.",
+    "At handoff he leaves three things: the current version, reusable rules and the next step with an owner. The current version has a readable name and date, opens directly and shows which arrangements are confirmed. A rule might say the notice date must follow the latest preparation sheet and an unconfirmed owner stays pending. The next step might be who confirms the owner and when to recheck the budget, without rushing to fill blanks. He suggests trying a small weekly task with little material, such as a weekly training notice. Put the current version and rules in today and start a new chat next week. When judging the result, look at how long it takes to open the file, whether you searched old chats again and how long the final check took, not only how fast it writes."
+   ],
+   "topics": [
+    "Microsoft Copilot",
+    "AI workflow",
+    "Office productivity"
+   ]
+  },
+  {
+   "id": "yt-WwpT-APNhLM",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "Claude Ship｜測試都通過，AI 的 PR 誰能放行？",
+   "url": "https://www.youtube.com/watch?v=WwpT-APNhLM",
+   "published": "2026-11-24T23:39:38+00:00",
+   "basis": "transcript",
+   "brief_zh": "AI 改代码越快,越要事先写明哪一步必须等人:测试全绿不等于能用同一条规则放行,例行文案可走常规流程,失败的检查要暂停,权限变更要人工确认。",
+   "background_zh": "频道作者大雷从一个问题切入:让 AI 改帮助页错字和改账号权限,测试都是绿的,能不能按同一个按钮通过。视频借 Gemini 4 Helium 的传闻、智谱 GLM-5.4 的演示和 Claude Ship 的审查流程,讨论怎么给团队定审批规则。",
+   "conclusion_zh": "作者建议把自己现有的三条改动分成例行、失败、要人确认三类,并检查下一位同事能否只看记录就明白建议的理由,说不清就先补记录和规则。传闻先记着,不用来写预算;生成的东西至少做一次修改和交接验证;批准则写下一条清楚的人工确认条件,可从帮助文档开始试。他最想留下的一句是:AI 改得越快,越要说清哪一步必须等人。",
+   "brief_en": "The faster AI can change code, the more clearly a team must state in advance which step waits for a person. Green tests alone do not justify one approval rule for every PR.",
+   "background_en": "The host, 大雷, starts from a question: a typo fix on a help page and a change to account permissions both pass tests, so should one button approve both? He uses the Gemini 4 Helium rumors, a GLM-5.4 demo and the Claude Ship review flow to discuss how a team can set an approval rule.",
+   "conclusion_en": "The host suggests sorting a team's current three changes into routine, failed and needs-human-confirmation, then checking whether the next colleague can understand the reason for each suggestion from the record alone. If not, the record and rules come first. He would keep rumors noted but out of the budget, test any generated work with one edit and handoff, and write one clear human-confirmation condition for approval, starting with a help document. The line he most wants to leave is that the faster AI changes things, the more clearly a team must say which step waits for a person.",
+   "points_zh": [
+    "Gemini 4 Helium 目前只是传闻,不适合拿来做预算。起因是谷歌团队成员发的预告和网页里的 Helium 字样,社区开始猜型号和价格。作者核对时,谷歌公开模型目录里没有查到它,所以只记在观察清单里。做下月成本估算时,他会先用手上能调用的型号。同一个型号换个入口,能不能接进工作也可能变。比如 GLM-5.4 目前说明写的是 Coding Plan 可用,独立的通用模型接口还在等开放。试代码效果和接进每天运行的脚本,两笔时间要分开算。",
+    "评估 AI 生成的东西,要看交出来的是录屏还是能继续改的工程。GLM-5.4 的小游戏演示里,作者会提第二轮需求:收集目标从 12 个改成 8 个,同时保留其他关卡。视频动效的例子里,他想看能不能把一段镜头提前两秒,而颜色、旁白和切点不变。验收表建议记两列:第一版花多久,第二轮改完又花多久,只看第一列容易高估省下的时间。需求可以压成三句话:改哪里、哪些不要动、怎么知道改好了。",
+    "Claude Ship 管代码写完之后的三步:审查、跟进修复、批准。审查意见回到 PR 上,要能点回具体改动。第二步是 PR Steward,它按范围修正失败的检查或待办,修复和验证要分开记录,才知道失败的那条有没有重新跑。第三步是 Claude Approvals,按团队写下的条件,例行改动可自动批准。能否合并仍由仓库分支规则和必要检查决定,两个动作最好写开,免得看到绿色标记就以为已进主线。",
+    "试用时先开观察模式,挑一类变更让 AI 只给建议,由人照原流程决定,再单独记下人和工具意见不一致的地方。目前 Claude Ship 是测试版,Anthropic 把组织自动化放在 GitHub Team 和 Enterprise 场景,要先看账号有没有对应入口。先选可逆、范围小的改动试一轮。观察模式只改变团队使用建议的方式,评审仍可能产生用量,所以试点要记两件事:花了多少时间,建议里有多少条同事真用得上。",
+    "用一个虚构练习,三个变更按同一顺序判断:先看必要检查,再看影响到谁。帮助页文案测试绿、范围清楚,建议走例行通过,团队抽样回看。导出页面有一条必要测试失败,要先暂停,不能因为上一张成功就一起放过;重跑通过后再评估,记录里仍保留第一次失败。角色权限测试全绿,但会让某角色看到新内容,要留明确的人工确认条件,因为测试回答检查是否通过,负责人回答权限变更合不合适。"
+   ],
+   "points_en": [
+    "Gemini 4 Helium is only a rumor for now and is not a basis for a budget. A teaser from a Google team member and the word Helium on a web page started community guesses about the model and its price. When the host checked, Google's public model catalog did not list it, so he only keeps it on a watch list. For next month's cost estimate he would use models he can already call. The same model can also change in availability by entry point. For example, the current GLM-5.4 documentation says Coding Plan is available, while a standalone general model API is still waiting to open. Time spent trying code quality and time spent wiring a model into a daily script should be counted separately.",
+    "When judging AI output, check whether the result is a screen recording or a project that can still be edited. In the GLM-5.4 game demo, the host would ask for a second round: reduce the collection target from 12 to 8 and keep the other levels. For the video-animation example, he would want to move one shot forward by two seconds while color, narration and cut points stay the same. His acceptance table has two columns: time to a usable first version and time to finish the second round. He says looking only at the first column overstates the time saved. A request can be reduced to three sentences: what to change, what not to touch and how to know it is done.",
+    "Claude Ship covers three steps after the code is written: review, follow-up fixes and approval. Review comments return to the PR and should point back to the specific change. The second step is PR Steward, which fixes failed checks or open comments within a set scope. Fixes and verification should be recorded separately, so it is clear whether the failed check was rerun. The third step is Claude Approvals, which can auto-approve routine changes under conditions the team writes down. Merging still depends on the repository's branch rules and required checks. The host suggests keeping the two actions separate so a green mark is not mistaken for a merge into the main line.",
+    "For a first trial, the host would start in observation mode. He would pick one change type and have the AI only give advice while people decide as before. He would then record the cases where people and the tool disagree. Claude Ship is currently in beta, and Anthropic places organization automation in GitHub Team and Enterprise settings, so a team should first check whether its account has access. He suggests starting with small, reversible changes. Observation mode changes only how the team uses the advice, and reviews can still use quota. The pilot should therefore record time spent and how many suggestions colleagues found useful.",
+    "The host walks through a fictional exercise with three changes judged in the same order: required checks first, then who is affected. The help-page text change has green tests and a clear scope, so the suggestion is routine approval with sampled review by the team. The export page has one failing required test, so it pauses and is not passed along because the previous change succeeded. After the check is rerun and passes, it is reassessed, and the record still shows the first failure. The role permission change has all tests passing but lets one role see new content, so it needs an explicit human confirmation rule. Tests answer whether the checks passed, and the owner answers whether the permission change is appropriate."
+   ],
+   "topics": [
+    "Claude Ship",
+    "AI code review",
+    "GLM-5.4"
+   ]
+  },
+  {
+   "id": "yt-aAbtjH0-oQQ",
+   "kind": "video",
+   "source": "NVIDIA AI Podcast",
+   "source_url": "https://www.youtube.com/playlist?list=PLZHnYvH1qtOZ3tS6azbUnzVcGa1uTCEKe",
+   "title": "Why Transparency Matters for AI Security",
+   "url": "https://www.youtube.com/watch?v=aAbtjH0-oQQ",
+   "published": "2026-11-24T11:00:17+00:00",
+   "basis": "transcript",
+   "brief_zh": "Red Hat CTO Chris Wright 认为,AI agent 的安全是可以靠迭代的工程方法解决的问题,开源和透明正是它的基础,而且做好治理反而能让企业跑得更快。",
+   "background_zh": "嘉宾 Chris Wright 是 Red Hat 的 CTO,从 90 年代起参与 Linux,见证了 Linux 从爱好者项目走进企业和敏感环境。这期节目录于 GTC Berlin,主持人问他:AI agent 行为带有概率性、难以预测,该怎么谈它的安全。",
+   "conclusion_zh": "Wright 认为发现和修复漏洞的压力会让互联网整体更安全。他期待能放心地把任务交给被限定在授权范围内的 agent,并说现在已有相关组件,还需要做成开箱即用,让人把时间花在真正有热情的事情上。",
+   "brief_en": "Red Hat CTO Chris Wright argues that securing AI agents is an engineering problem that can be solved by iteration, that open source and transparency are its foundation, and that good governance lets companies move faster.",
+   "background_en": "Chris Wright is CTO of Red Hat and has worked with Linux since the 1990s. He watched it move from a hobbyist project into enterprise and sensitive environments. In this interview at GTC Berlin, the host asks how to think about security for AI agents, given that they behave probabilistically and can be hard to predict.",
+   "conclusion_en": "Wright says the pain of finding and fixing vulnerabilities will make the internet safer. He looks forward to delegating tasks to agents that are confined to the permissions given. He says the building blocks already exist and need to be made turnkey, so people can spend their time on work that energizes them.",
+   "points_zh": [
+    "AI agent 的安全可以沿用应用安全的老思路,核心是纵深防御。他说人本身也是概率性的、会犯错,所以类比仍然成立。过去那种外硬内软的防火墙模式已被证明不安全,云和微服务出现后安全策略必须改变。对 agent 来说,做法是把它放进开源的 OpenShell 沙箱运行时并强制执行严格策略,再加上运行在 BlueField 上的 Sentry 做带外监控。",
+    "这是一个工程问题,不必因为模型不透明就放弃。他把 prompt injection 和 context poisoning 类比成早期的 cross-site scripting 和 buffer overflow:现在处在安全发现的早期阶段,还会不断发现新类型的漏洞,但可以靠迭代来应对。他还提到,早期互联网也出现过原本不联网的系统一联网就暴露新问题的情况。",
+    "要成为事实标准,需要尽可能广的社区协作。他说 Red Hat 一贯这样做,并称在 GTC Berlin 上有 109 个生态伙伴采用了 OpenShell 作为安全沙箱。不同伙伴有不同需求和视角,这样才能覆盖攻击者什么手段都会用的现实。他还提到 OpenClaw 因走红而引发大量社区活动,OpenClaw enterprise 就是针对安全需求,让 agent 从爱好者的玩具走向企业。",
+    "治理做在前面能让团队更快。安全人员常被当成只会说“不”的人,安全技术容易被关掉。但他听到多位客户反复说,成功的起点是治理,“治理让我们走得更快”。他认为安全前置是 agent 普及的前提。",
+    "透明让安全更强,包括面对能找漏洞的 AI。他引用“眼睛多了,bug 就浅”的说法,并说如果有人不公开算法就让你信任,CSO 都不会接受。模型用公开互联网内容训练,所以特别擅长读开源代码、找漏洞,他称这对安全扫描是份大礼。短期内每天发现数百个漏洞,让 Red Hat 工程师不堪重负,但他认为这是暂时的。闭源属于靠隐蔽求安全,审查的人更少,他认为不会更安全。他还引用一个数字:96% 被审计的代码库含有开源代码。"
+   ],
+   "points_en": [
+    "Agent security can reuse the old ideas from application security, mainly defense in depth. Wright says humans are also probabilistic and make mistakes, so the analogy holds. The old firewall model, hard outside and soft inside, proved insecure, and cloud and microservices forced a change. For agents, he describes running them in OpenShell, an open source sandbox runtime that enforces strong policies, with out-of-band monitoring by Sentry running on BlueField.",
+    "This is an engineering problem, and opaque models are no reason to give up. He compares prompt injection and context poisoning to early cross-site scripting and buffer overflows. The field is at an early stage of discovery and new classes of vulnerabilities will keep appearing, but iteration can handle them. He also notes that early internet systems met new security issues once they were connected.",
+    "Becoming a de facto standard needs the broadest possible community. He says Red Hat always works this way and that 109 ecosystem partners at GTC Berlin have adopted OpenShell as their secure sandbox. Partners bring different requirements, which helps cover attackers who will use any tool. He also says OpenClaw went viral and drew heavy community activity, and OpenClaw enterprise aims to meet security requirements so agents can move from hobbyist toys to businesses.",
+    "Governance done up front helps teams move faster. Security staff are often seen as the people who say no, and security tools get switched off. But several customers told him their success started with governance, and he repeats the line \"governance is what made us go faster.\" He says security as a forethought is what will make agents pervasive.",
+    "Transparency strengthens security, including against AI that finds vulnerabilities. He cites the open source saying that many eyes make all bugs shallow and says a CSO would not trust a cryptographic algorithm that is kept secret. Models are trained on public internet content, which includes open source, so they are good at reading it and finding flaws. He calls this a great gift as a security scanner. In the short term, hundreds of vulnerabilities found each day overwhelm engineers at Red Hat, but he sees that as temporary. He considers closed source to be security through obscurity, with fewer reviewers and so likely less secure. He also cites a figure that 96% of audited code bases contain open source."
+   ],
+   "topics": [
+    "AI Security",
+    "Open Source",
+    "AI Agents"
+   ]
+  },
+  {
+   "id": "yt-LBOj6iqut4I",
+   "kind": "video",
+   "source": "凱文大叔AI程式設計教室",
+   "source_url": "https://www.youtube.com/@pg-kt",
+   "title": "從 ChatGPT 爆紅到 2026：短短四年，AI 怎麼一步步徹底改變世界？（動畫科普＋一句聽懂原理）",
+   "url": "https://www.youtube.com/watch?v=LBOj6iqut4I",
+   "published": "2026-11-24T11:00:08+00:00",
+   "basis": "transcript",
+   "brief_zh": "这支动画科普视频把2022年底到2026年的AI发展概括成四个台阶：流畅聊天、画图写歌拍片、学会慢思考，以及能自己动手做事的AI代理。",
+   "background_zh": "视频作者凯文大叔回顾ChatGPT在2022年11月30日上线后的四年，用生活化的比喻解释每个阶段背后的原理，不讲公式。",
+   "conclusion_zh": "作者把四年总结为四个台阶：第一年学会说话，第二年画图写歌拍片，第三年学会深思，第四年装上手脚办事。他认为现在拉开差距的，是谁先学会把AI当团队来指挥，并说这支视频的配音和字幕也是他和AI协作做的。",
+   "brief_en": "This animated explainer sums up AI from late 2022 to 2026 as four steps: fluent chat, image, music and video generation, slow thinking, and agents that do tasks themselves.",
+   "background_en": "The creator, Kevin Uncle, looks back at the four years since ChatGPT launched on 30 November 2022. He explains the idea behind each stage with everyday analogies and no formulas.",
+   "conclusion_en": "The author sums up the four years as four steps: talking in year one, making images, music and video in year two, deep thinking in year three and acting with hands and feet in year four. He says the gap now depends on who first learns to direct AI as a team. He adds that the voiceover and subtitles of this video were made with AI.",
+   "points_zh": [
+    "第一阶段（2022–2023）是AI学会流畅聊天。ChatGPT五天破百万用户，两个月月活过1亿，到2026年周活跃据称超过12亿。GPT-4在2023年3月登场，模拟律师考试进入前10%，还能把手绘网站草图变成能运行的网页。原理来自2017年的transformer论文：以前的电脑一个字一个字读，读后面忘前面，现在整句一起看，靠上下文判断词义，像读完整个网络的文字接龙高手。",
+    "第二阶段（2023–2024）是画图、写歌、拍片。图像生成已经逼真到难辨真假，Suno能在几十秒内生成有人声和编曲的歌，声音克隆和自动对口型也成熟了。2024年OpenAI展示Sora，把AI视频拉到电影预告的水准，随后可灵、Veo和Runway接棒。这类生成背后是扩散模型：从一片雪花噪点开始，AI像雕塑家一样按描述削掉多余噪点，雕出新画面。2024年5月的GPT-4o做到近乎零延迟的实时语音对话，看、听、说在同一个模型里完成。Gemini能一次读完整本书和长片。",
+    "第三阶段（2024–2025）是诺贝尔奖、慢思考和DeepSeek。2024年诺贝尔物理学奖和化学奖都颁给了与AI相关的突破，AlphaFold解开了生物学50年的难题。聊天AI遇到复杂数学、逻辑和难写的程序仍会胡说，OpenAI的o1改为先安静思考几秒，先打草稿、自己检查、走错就退回重算，想得越久越准。2025年初DeepSeek发布开源推理模型R1，解题能力追上欧美顶级模型，训练和使用成本很低。视频把它的做法比作大医院分科：问什么问题，只唤醒对应的专家小组，又快又省。此后各家降价，并推出能自己查几十个网站、几分钟交出报告的深度研究功能。",
+    "第四阶段（2025–2026）是AI开始自己动手。以前AI只给建议，现在的AI代理直接交出成品。例子有Anthropic的Computer Use让AI看屏幕点鼠标，以及Claude Code、OpenAI的Operator和Codex。它们做完会自己截图检查，发现问题就回头重修。各家通用的接口像USB-C，一个界面就能操作浏览器、文件和剪辑软件。一个人跟AI改几轮，几天就能做出游戏或APP。2026年各家继续推进：OpenAI走向GPT6家族，Anthropic到Claude 5，Google推出Gemini 3；视频生成从Veo 3发展到Omni，自带人声，还能边聊边改片。作者还提到可以同时派出多个AI分工，也提到AI正被装进人形机器人。"
+   ],
+   "points_en": [
+    "The first step (2022–2023) was fluent chat. ChatGPT passed one million users in five days and 100 million monthly users in two months. The video says weekly users passed 1.2 billion in 2026. GPT-4 arrived in March 2023, placed in the top 10% on a simulated bar exam and turned a hand-drawn website sketch into a working page. The idea comes from the 2017 transformer paper. Older systems read one word at a time and forgot earlier words. The transformer reads a whole sentence together and uses context to settle meaning, like a word-chain expert who has read the whole web.",
+    "The second step (2023–2024) was images, music and video. Image generators became hard to tell from photos. Suno produced songs with vocals and arrangement in tens of seconds, and voice cloning and automatic lip sync matured. OpenAI showed Sora in 2024, which brought AI video to the level of a movie trailer. Kling, Veo and Runway followed. These tools use diffusion models. They start from snow-like noise and remove the excess according to the prompt, like a sculptor, until a new picture appears. In May 2024 GPT-4o offered near-zero-latency voice chat, with seeing, hearing and speaking handled in one model. Gemini could read a whole book or a long video at once.",
+    "The third step (2024–2025) brought Nobel prizes, slow thinking and DeepSeek. The 2024 Nobel Prizes in Physics and Chemistry both went to AI-related work, and AlphaFold solved a 50-year problem in biology. Chat AI still made things up on hard math, logic and code. OpenAI's o1 changed this by thinking for a few seconds first: it drafts, checks itself and backs up when it takes a wrong turn, so longer thought gives better answers. In early 2025 DeepSeek released the open-source reasoning model R1. It matched top Western models at low training and usage cost. The video compares its design to hospital departments, where only the relevant expert group wakes up for each question. Other firms then cut prices and added deep research, which browses dozens of sites and writes a report in minutes.",
+    "The fourth step (2025–2026) is AI that acts. Earlier AI only gave advice, while agents now deliver finished work. Examples include Anthropic's Computer Use, which lets AI see the screen and click, plus Claude Code and OpenAI's Operator and Codex. They screenshot their own output and redo what is wrong. Universal connectors work like USB-C and let one interface drive browsers, files and editing software. One person can now build a game or app in a few days over several rounds with AI. In 2026 the video cites GPT-6 family models from OpenAI, Claude 5 from Anthropic and Gemini 3 from Google. Video generation has moved from Veo 3 to Omni, with native voice and editing during a chat. The author also mentions several AIs working in parallel and AI entering humanoid robots."
+   ],
+   "topics": [
+    "AI history",
+    "ChatGPT",
+    "AI agents"
+   ]
+  },
+  {
+   "id": "yt-N9_VFpznnCs",
+   "kind": "video",
+   "source": "TLDR News EU",
+   "source_url": "https://www.youtube.com/@TLDRnewsEU",
+   "title": "Why Le Pen Could Still be Banned From Running",
+   "url": "https://www.youtube.com/watch?v=N9_VFpznnCs",
+   "published": "2026-11-24T10:41:55+00:00",
+   "basis": "transcript",
+   "brief_zh": "勒庞对贪腐案提起上诉，反而可能比败诉更危险：上诉若成功，原本已恢复的参选资格可能再次受到威胁；输掉上诉她仍可参选。",
+   "background_zh": "2026年7月，巴黎上诉法院维持勒庞挪用欧洲议会助理经费的有罪判决，但把禁止担任公职的有效期缩减为15个月，而这15个月已经算作服完，她因此可以参加2027年总统选举。她仍向最高法院（Cour de cassation）提出上诉，这让她的参选前景出现了新的不确定性。",
+   "conclusion_zh": "视频认为勒庞输掉上诉可能反而对她更好：她要接受终审有罪判决，可能还要戴脚镣，但仍能参选；赢了上诉，却可能让7月判决恢复的参选资格重新受到威胁。",
+   "brief_en": "Marine Le Pen's appeal to the Court of Cassation may be riskier for her than losing it. A win could put her eligibility for 2027 back in doubt, while a loss would still leave her free to run.",
+   "background_en": "In July 2026 a Paris appeal court upheld Le Pen's conviction for embezzling European Parliament funds. It cut her ban from public office to an effective 15 months, which counted as already served, so she became eligible for the 2027 presidential election. She still appealed to France's highest court, and this has created new uncertainty about her candidacy.",
+   "conclusion_en": "The video concludes that Le Pen might be better off losing her appeal. She would face a final conviction and possibly an ankle tag but could still run. Winning could threaten the eligibility that the July 2026 judgment restored.",
+   "points_zh": [
+    "如果最高法院驳回上诉，对勒庞最简单，也可能最有利。7月的判决会成为终审，有罪判决和刑期都会生效，但15个月的禁令已经服完，她仍可参选。她可能需要在竞选期间佩戴电子脚镣，具体安排由执行机关决定。上诉本身会暂缓佩戴脚镣的命令，直到法院作出裁决。",
+    "如果最高法院支持上诉并撤销7月的判决，会带来两个风险。一是案件被发回另一个上诉法院，而检方对2025年3月的原判提出过上诉，却没有对7月判决上诉，所以新法院有可能判出比15个月更长的禁令。按法国刑事诉讼法，只有被告上诉时，上诉法院一般不能加重刑罚，但检方也上诉时这一保护不再同样适用。二是案件可能回到7月判决之前的状态，2025年3月判处的五年禁令（当时就立即生效）是否重新可执行，目前在法国有法律争论。如果可执行，她参加2027年选举的资格会再次受到威胁。",
+    "时间也对她不利。最高法院确认勒庞的律师提出了宪法性质疑，定于12月16日审理。如果其中有任何一项被转交宪法委员会，裁决最多可能需要三个月，最高法院的终审可能因此拖到临近选举。第一轮投票定在2027年4月18日，收集500个推荐签名的截止日期是3月12日，宪法委员会须在3月26日前公布候选人名单。若届时案件仍未了结，宪法委员会就得自行判断她是否有资格，这很可能引发争议。",
+    "巴尔德拉（Bardella）不一定能顺利顶替她。每位总统候选人需要500个民选官员的推荐，推荐属于个人，一位官员只能推荐一人，提交后不能撤回再转给别人。如果党内把大部分推荐签名都用在勒庞身上，而巴尔德拉没有自己凑够500个，勒庞在截止日之后被取消资格时，他无法继承这些签名，也就无法替代她。"
+   ],
+   "points_en": [
+    "If the Court of Cassation rejects the appeal, this is the simplest outcome and possibly the best for Le Pen. The July judgment becomes final and the conviction and sentence stand, but the 15-month ban has already been served, so she can still run. She might have to wear an electronic tag during the campaign, with the arrangements left to the enforcing authorities. The appeal suspends the tag order until the court rules.",
+    "If the court upholds the appeal and annuls the July judgment, there are two risks. First, the case would go to another appeal court. The prosecution appealed the March 2025 judgment but not the July 2026 one, so that court could impose a ban longer than 15 months. Under French criminal procedure an appeal court generally cannot raise a sentence when only the defendant appeals, but this protection does not apply in the same way when the prosecution has also appealed. Second, the case could revert to its position before July. French lawyers are now debating whether the five-year ban from March 2025, which took effect immediately, would become enforceable again while the new court reviews the case. If it did, her eligibility for 2027 would be threatened again.",
+    "Timing also works against her. The Court of Cassation confirmed that her lawyers have raised constitutional challenges, due to be examined on 16 December. If any is referred to the Constitutional Council, that body could take up to three months to rule. The first round is on 18 April 2027, the deadline for 500 endorsements is 12 March and the official candidate list is due by 26 March. If the case is still open then, the Constitutional Council would have to decide whether she is eligible, which would probably be controversial.",
+    "Jordan Bardella could not simply replace her. Each candidate needs 500 endorsements from elected officials. They are personal to the candidate, an official can endorse only one person and they cannot be withdrawn and reassigned once submitted. If the party puts most of its endorsements behind Le Pen and Bardella has not collected 500 himself, he cannot inherit hers if she is disqualified after the deadline."
+   ],
+   "topics": [
+    "France",
+    "Marine Le Pen",
+    "Elections"
+   ]
+  },
+  {
+   "id": "yt-HyHT_0Dt4Gc",
+   "kind": "video",
+   "source": "Stefan Mischook",
+   "source_url": "https://www.youtube.com/@StefanMischook",
+   "title": "Is AI Superintelligence Arriving?",
+   "url": "https://www.youtube.com/watch?v=HyHT_0Dt4Gc",
+   "published": "2026-11-24T10:31:43+00:00",
+   "basis": "transcript",
+   "brief_zh": "Stefan Mischook 认为“AI 超级智能即将到来”的说法被夸大了：现有 AI 只是强大的联想工具，会犯低级错误，不会取代开发者，反而会创造新机会。",
+   "background_zh": "Stefan Mischook（YouTube 频道 Uncle Stef，做了三十多年软件开发和创业）在一场约一小时的直播里回应社交媒体上的 AI 恐慌。起因是 Meta 超级智能实验室等相关言论在 X 上引发的恐慌，他先讲自己的理由，再回答观众提问。",
+   "conclusion_zh": "他的结论是，不必被 AI 末日叙事吓住，恐惧会让人做出糟糕的决定；应该动手使用 AI、学习基础和适应变化，这是难得的机会。他也承认自己可能判断有误，观点基于自己的从业经验和使用体验，没有任何实验室内部信息。",
+   "brief_en": "Stefan Mischook argues that the claim that AI superintelligence is arriving is overblown: current AI is a powerful association tool that makes basic mistakes, and it will create new opportunities rather than replace developers.",
+   "background_en": "Stefan Mischook (Uncle Stef on YouTube, with more than 30 years in software development and business) gave a live stream of about an hour in response to AI panic on social media. It was prompted by statements around Meta's superintelligence lab that spread on X. He first gives his reasons and then answers viewer questions.",
+   "conclusion_en": "He concludes that people should not be frightened by AI doom stories, because fear leads to poor decisions. They should use AI, learn the fundamentals and adapt, since he sees this as a great opportunity. He admits he could be wrong, and says his view rests on his own experience and use of AI, not on any inside knowledge of the labs.",
+   "points_zh": [
+    "他认为 AI 离超级智能很远，因为它常犯简单错误，只擅长联想。他举例：向 AI 询问自己相机的设置，它经常答错；用 GPT、Grok 和 Claude 做约会时的实时翻译，GPT 最好，他估计约 75% 的效率，整体仍很慢，一小时只聊了约 20 分钟的内容。他的看法是，AI 是“联想引擎”，缺乏逻辑能力，遇到训练里没有的东西就会失败。他提到苹果去年的一项研究，称 AI 在全新的基准上表现差了约 90%（这是他口述的转述）。",
+    "他怀疑末日论者的动机，并指出过去的预言常常落空。他猜测一部分人是 AI 公司，借恐慌推高投资兴趣，同时承认自己没有内部信息。他还提到，AI 公司两年前的承诺没有兑现，而 AI 的进步速度也远不足以支持一两年内出现超级智能。他举了自动驾驶会消灭卡车司机工作、2006 至 2007 年“石油峰值”预言油价永远高于 200 美元等例子。他还推测，大公司担心开源模型（他说大约落后前沿模型六个月）威胁其数据中心投资。",
+    "他认为 AI 会淘汰一些岗位，但开发者不会消失，总体会创造更多机会。他说软件开发不只是写代码，写代码只是其中一小部分，复杂度正转向调度模型、工作流和 agent。他类比网络出现时报纸、CD-ROM、Blockbuster 的岗位消失，但新岗位更多；他自己已经做出了一些没有 AI 就无法解决的业务方案。他还认为 AI 对小团队和个人是“平权器”，削弱了大公司的规模优势，政府等官僚体系的积压效率问题也可以靠 AI 处理。",
+    "他认为算力和硬件成本会下降，所以不急于购买硬件。依据是他在蒙特利尔拜访的一家 AI 初创公司：其专用小模型据称能达到前沿模型的水平，成本只有后者的 1/11000（来自对方口述，他没有核实）。他还说前沿模型也在降价，例如 Anthropic 新模型降价约 20%。他设想的做法是用一个“指挥”模型调度几十个单一任务的小模型，他本人也尽量少买硬件。",
+    "给想入行或转型的人，他的建议是：学一两门编程语言（Python 和 JavaScript）以建立概念理解，但不必精通；多动手做项目，不要陷在教程里；认证作用有限，作品集和社交媒体更重要；学会使用和组合 agent，并把 AI 当作新的技术栈来学。创业方面，他建议先保留至少一年的现金，不要辞掉原工作，尽快把产品推向市场。"
+   ],
+   "points_en": [
+    "He thinks AI is far from superintelligence because it makes simple mistakes and works mainly by association. His examples: AI often gets questions about his camera settings wrong, and when he tested GPT, Grok and Claude for real-time translation on a date, GPT was best at roughly 75% efficiency, yet the conversation was still very slow (about 20 minutes of content in an hour). He describes AI as an association engine with no logic, which fails on material outside its training. He cites an Apple study from last year in which, by his account, AI performed about 90% worse on new benchmarks.",
+    "He doubts the motives of the doomers and notes that past predictions often failed. He guesses that some are AI companies stirring up fear to attract investment, while admitting he has no inside information. He also says AI companies' promises from two years ago did not come true, and that the pace of progress is far from enough for superintelligence within a year or two. His examples are the prediction that self-driving would wipe out trucking jobs and the 2006 to 2007 'peak oil' claim that oil would never fall below $200 a barrel. He also speculates that big companies fear open-source models, which he says are about six months behind frontier models, because of their data center spending.",
+    "He says AI will make some jobs obsolete but will not end developers, and that it will create more opportunity overall. In his view software development is more than typing code, and complexity is moving to orchestrating models, workflows and agents. He compares it to the web, which removed jobs in newspapers, CD-ROMs and Blockbuster but created many more. He says he has already built business solutions that were not possible without AI. He also calls AI an equalizer that weakens the scale advantage of large companies, and says it can help clear backlogs in government bureaucracy.",
+    "He thinks compute and hardware costs will fall, so he avoids buying hardware. His basis is a Montreal AI start-up he visited, whose specialized small models, by their own claim, match frontier models at 1/11,000 of the cost (he did not verify this). He adds that frontier models are also getting cheaper, for example a new Anthropic model about 20% cheaper. He imagines a conductor model coordinating dozens of single-task small models.",
+    "His advice for people entering or switching into the field is to learn one or two programming languages (Python and JavaScript) for conceptual understanding without mastering them, to build projects rather than stay in tutorials, to rely on a portfolio and social media more than certificates, and to learn to use and combine agents and treat AI as a new stack. For starting a business, he advises keeping at least a year of cash, not quitting the day job at once, and getting the product to market quickly."
+   ],
+   "topics": [
+    "AI superintelligence",
+    "Developer careers",
+    "AI skepticism"
+   ]
+  },
+  {
+   "id": "yt-5VId1hm6vFc",
+   "kind": "video",
+   "source": "Best Partners TV",
+   "source_url": "https://www.youtube.com/@bestpartners",
+   "title": "【分享】付鹏：为什么每次市场崩盘，大多数人都跑不掉？",
+   "url": "https://www.youtube.com/watch?v=5VId1hm6vFc",
+   "published": "2026-11-24T04:27:48+00:00",
+   "basis": "transcript",
+   "brief_zh": "付鹏认为，市场崩盘时大多数人跑不掉，是因为群体认知总是滞后且顺势，没人愿意提前离场。要躲开，就得站在长期逻辑线上，看产业周期和市场价格给出的信号。",
+   "background_zh": "付鹏曾在对冲基金做投资，用自己的钱做决策，所以强调不能带偏见。这次访谈里，他从2015年股灾的亲身经历讲起，谈到散户心理、年轻一代的投资偏好，以及AI行情该怎么看。",
+   "conclusion_zh": "他的结论是：要先找到长期主线和其中的核心变量，再看自己是否观察到了，而不是跟着“贴标签”的观点走。投资人需要克服群体的认知偏差，关注年轻一代，同时按产业周期和价格信号来判断，不要等基本面公布。",
+   "brief_en": "Fu Peng argues that most people cannot escape a crash because group cognition lags and follows the trend, and nobody wants to leave early. He says investors should follow long-term logic, industry cycles and price signals.",
+   "background_en": "Fu Peng worked at a hedge fund and invested his own money, so he says he cannot afford bias. In this interview he starts from his own experience in the 2015 stock crash, then talks about retail psychology, what young people invest in, and how to view the AI rally.",
+   "conclusion_en": "His position is that investors should first find the long-term main line and its core factors, then check whether they have actually observed them, and not follow slogans. They need to correct the group's cognitive bias, pay attention to the younger generation, and judge by industry cycles and price signals without waiting for the fundamentals to be published.",
+   "points_zh": [
+    "2015年股灾前，他的团队提前约一个月撤出，依据是实地摸排。监管部门查场外配资时，他们去杭州、宁波等地调研，查了伞形信托、民间配资、期货等渠道，发现杠杆远比监管以为的高，他估计可能是十倍量级。杠杆一旦开始被抽走，没人能接盘，而当时散户喊的是“6000点不是夢”“1万點鋼起步”这类口号，理性已经丧失。他在北京发了条微博说要撤，之后在香港待了两年。他说国内投资人都顺势而为，没人提前撤，要亏一起亏，所以大家都跑不掉。",
+    "散户的认知有系统性偏差：行情起来时看不到，快到头才看到。他认为“大妈接盘”的说法本质是在说群体认知偏差，不纠正就做不了投资。他还提到团队编过一个“小红书指数”，用爬虫统计小红书上漂亮女生账号关注的资产，结论是这些资产适合当反向指标。他建议少看短视频，因为短视频太短，讲不完整逻辑，只有极端观点才有流量，看多了会失去中立的分析判断能力，变成随大流。",
+    "他主张理解年轻一代，因为投资品和共识会随代际变化。他研究过泡泡玛特、手办、卡牌等，认为这类东西情绪价值高、带博彩性质、容易上瘾。他自己去年在300多的价位买过，近来女儿说不玩了，说明这代人喜欢就喜欢、不喜欢就立刻“分手”，不像老一代念旧。他认为核心是这一代人，而不只是IP，还说这类爆款断舍离很快，会带来风险。他提醒投资人不要把自己当成只认白酒和消费的“老登”。",
+    "他认为AI不是独立的技术革命，而是信息技术革命的第三环。他说150年来只有两次真正的革命，即工业革命和信息技术革命。信息技术革命分三环：1940到1950年代解决运算，1980年代解决互联，现在是让机器自己推理的智能化。现在用的仍是GPU、内存、服务器等计算硬件，资本开支来自互联网大厂在互联网阶段积累的自由现金流。他估计这一整套到2035年前后基本完成。具身智能、机器人更可能是下一阶段，至少三五年之后。机器人公司现在快速上市，他认为不是市场经济的正常反应，有特殊因素，类似让机器人上春晚，是为了快速形成社会共识。",
+    "A股的AI公司，他分成两类看。一类是卖硬件的，海外每年数千亿的资本开支最终转化为硬件订单，订单增长没有问题。另一类是大模型，他认为本质是国家安全层面的比拼，很难赚到钱：上游硬件要花钱买，下游B端和C端也不能指望。关于美股，他说过去几年真正确定的只有一个方向，字幕在这里不清楚，无法确认具体指什么。",
+    "AI产业链的行情有阶段规律：成长期投资人最爱，之后会转入成熟期。2022年ChatGPT出来后（字幕写作“D”，按上下文推断），大家敢于开始砸钱，第一阶段（上半场）卖硬件的最受益，但供给没跟上，价格很贵。第二阶段价格下降，毛利率到拐点，估值下降，公司变成“老登股”，但行业投资还会继续。他举了苹果产业链的例子：研究员拆手机，一路炒到螺丝是谁造的，就是行情见顶。炒到液冷、机柜这类环节时，同样说明没什么可拆了，接近尾声。英伟达的成长期是2022年到2024年7月，市值从约5000亿涨到约3万亿，翻了六倍。",
+    "他在美股交易了20多年，经验是价格会领先基本面变化，平均提前约8个月。所以专业投资人要学会解读市场对信息的反应，不能只盯财报。他说2024年6月在新加坡讲的就是这个思路。"
+   ],
+   "points_en": [
+    "His team left the market about a month before the 2015 crash, based on field checks. When regulators began investigating off-exchange margin financing, the team visited Hangzhou, Ningbo and other places and looked at umbrella trusts, informal lending and futures. They found leverage far above what regulators assumed, possibly around ten times. Once leverage is pulled, nobody can take over the market, and retail investors were shouting slogans like \"6000 points is no dream\", so reason was gone. He posted on Weibo that he was leaving and then stayed in Hong Kong for two years. He says domestic investors follow the trend and nobody exits early, so they all lose together.",
+    "He says retail cognition has a systematic bias: investors do not see a rally as it starts and see it only near the top. He reads the saying about \"aunties buying\" as a comment on group bias, and says that without correcting it one cannot invest. His team also built a \"Xiaohongshu index\" by crawling the assets followed by accounts of attractive young women, and its result worked as a contrarian indicator. He advises watching fewer short videos. Short videos cannot present a full logical frame, and only extreme views get traffic, so heavy viewing erodes the ability to analyze neutrally and pushes people to follow the crowd.",
+    "He argues that investors should try to understand the younger generation, because investment goods and consensus change from one generation to the next. He studied Pop Mart, figurines and trading cards, and says they offer strong emotional value, carry a gambling element and are addictive. He bought in last year at a price a little above 300. His daughter has since said she no longer plays, which he takes to show that this generation drops things the moment they stop liking them, unlike older people who are nostalgic. He says the core is the generation, not the IP, and that such hits fade fast, which brings risk. He warns investors not to act like old men who only know liquor and consumer stocks.",
+    "He says AI is not a separate technology revolution but the third part of the information technology revolution. In his view the past 150 years had only two real revolutions, the industrial revolution and the information technology revolution. The information revolution has three parts: computing in the 1940s and 1950s, interconnection from the 1980s, and now intelligence, where machines reason on their own. Today's AI still runs on computing hardware such as GPUs, memory and servers, and the capital spending comes from free cash flow that internet giants built up in the internet era. He estimates this whole stage will largely finish around 2035. He thinks embodied intelligence and robots belong to the next stage, at least three to five years away. He does not see the fast listing of robot companies as a normal market reaction and says special factors are involved, similar to robots appearing on the Spring Gala to build social consensus quickly.",
+    "He splits A-share AI companies into two groups. The first sells hardware: overseas capital spending of hundreds of billions each year turns into hardware orders, so order growth is not in doubt. The second builds large models, which he sees as a national security contest and a hard place to earn money, since the upstream hardware must be bought and the downstream B-end and C-end offer little. On US stocks he says only one direction has been certain in recent years, but the subtitles are unclear here, so what he named cannot be confirmed.",
+    "He says AI-chain stocks follow a phase pattern, with a growth stage followed by a mature stage. After ChatGPT appeared in 2022 (the subtitle shows only \"D\", so this is inferred from context), companies began spending heavily. In the first phase hardware sellers benefit most and prices are high because supply lags. In the second phase prices fall, gross margins turn down, valuations drop and the companies become \"old stocks\" (老登股), although industry investment continues. He gave the Apple supply chain as an example: when analysts tore down phones and speculation reached the screws, the rally was ending. He says the same applies once speculation reaches parts like liquid cooling and racks. He puts Nvidia's growth stage at 2022 to July 2024, when its market value rose from about 500 billion to about 3 trillion dollars, roughly six times.",
+    "He says he has traded US stocks for over 20 years and that prices lead fundamentals by about 8 months on average. Professional investors should therefore read how the market reacts to information and not rely only on earnings reports. He says this was his topic in a talk in Singapore in June 2024."
+   ],
+   "topics": [
+    "China stock market",
+    "AI investing",
+    "Investor behavior"
+   ]
+  }
+ ],
+ "generated_at": "2026-11-25T05:09:13.642009+00:00"
+}
