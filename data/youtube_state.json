@@ -1,6 +1,18 @@
 {
- "last_run": "2026-11-25T13:30:44.693450+00:00",
- "waiting": {},
+ "last_run": "2026-11-25T16:03:46.841979+00:00",
+ "waiting": {
+  "N_JW3Cq2Zqc": {
+   "video_id": "N_JW3Cq2Zqc",
+   "title": "Microsoft Teams 逐段口譯｜全場都能聽，跨語會議怎麼接話？",
+   "url": "https://www.youtube.com/watch?v=N_JW3Cq2Zqc",
+   "published": "2026-11-25T14:02:43+00:00",
+   "description": "Microsoft Teams Interpreter 加入雙語逐段口譯。先聽微軟演示的英語發言和日語譯音，再用自製專案會議情境練一次。時間、時區、負責人和回覆截止怎麼當場確認？散會之後，把什麼交給下一位？\n\n口譯接住這一句，會議得接住下一步。\n\n同聲口譯是個人聽，逐段口譯是發言完成後由全場聽。逐段口譯的開啟資格和 Copilot Credits 計費方式請以你的租戶和官方指南為準。\n\n00:00 英語說完，日語接棒\n00:36 誰聽見翻譯？\n01:51 把時間和人講清楚\n04:43 會前先過這幾關\n06:31 散會後誰接下一步？\n08:40 用一場小會試起\n\n和大雷一起練\n訂閱大雷早上好 https://www.youtube.com/@dalei2025\n免費 AI 實戰信 https://dailycosmos.net/newsletter\n加入大雷早上好頻道會員 https://www.youtube.com/channel/UCk9tu0mFtXj_rOEfIncxuJQ/join\n加入大雷早上好知識星球，一起學習、實踐、慢慢進步 https://t.zsxq.com/GVPAI?utm_source=youtube&utm_medium=video_description&utm_campaign=dalei_ai_learning&utm_content=N_JW3Cq2Zqc\n大雷的 AI 方案庫 https://aiagentclub.notion.site/\n作品、筆記與資源 https://github.com/paul010/dalei-youtube\n請大雷喝杯咖啡 https://buymeacoffee.com/dalei\n\n來源與操作文件\nMicrosoft Teams 英日逐段口譯原片 https://www.youtube.com/watch?v=2SJrRBetYuY\nMicrosoft 官方使用說明 https://support.microsoft.com/en-us/teams/copilot/interpreter-in-microsoft-teams-meetings-and-calls\nMicrosoft Learn 管理設定 https://learn.microsoft.com/en-us/microsoftteams/interpreter-agent-teams\nCopilot Credits 官方用量指南 https://www.microsoft.com/licensing/guidance/CopilotCreditsGuide\nMicrosoft LinkedIn 英德同聲口譯 https://www.linkedin.com/posts/microsoft_meet-the-interpreter-agent-in-microsoft-teams-activity-7432439248110182400-cQd4\nTom Warren 在 X 分享的 Ignite 同聲口譯片段 https://x.com/tomwarren/status/1858875328384454873\n\n延伸觀看\nCopilot Ignite｜Web IQ × Agent 365 https://youtu.be/dcLIlJ9y_qk\n\nElektronomia - Sky High [NCS Release]\nMusic provided by NoCopyrightSounds.\nWatch: https://youtu.be/TW9d8vYrVFQ\nFree Download / Stream: https://ncs.io/skyhigh\n\nEnglish summary\nHear Microsoft's English-to-Japanese consecutive interpreting demo, compare it with personal simultaneous listening, and practice confirming the time, owner and next action in a fictional bilingual meeting.\n\n#MicrosoftTeams #TeamsInterpreter #雙語會議",
+   "channel": "大雷早上好",
+   "channel_url": "https://www.youtube.com/@dalei2025",
+   "short": false,
+   "tries": 0
+  }
+ },
  "done": {
   "PlnT4uQQZlg": "2026-11-24",
   "jP9yjEDlc4k": "2026-11-24",
