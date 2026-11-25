@@ -71,10 +71,8 @@ jobs:
         working-directory: scripts
         run: python youtube.py save
 
-      - name: Build site
-        working-directory: scripts
-        run: python build.py
-
+      # Save first, build after: the pull brings in what the other run (blog or YouTube) pushed
+      # meanwhile, so the site built next holds both
       - name: Save data
         run: |
           git config user.name "feed-bot"
@@ -83,6 +81,10 @@ jobs:
           git diff --cached --quiet || git commit -m "youtube $(TZ=Europe/Amsterdam date +%F)"
           # the blog run may have pushed meanwhile; it writes other files, so this rebases cleanly
           git pull --rebase && git push
+
+      - name: Build site
+        working-directory: scripts
+        run: python build.py
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

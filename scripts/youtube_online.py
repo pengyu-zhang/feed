@@ -10,9 +10,9 @@ prompts/video.md, the same way as the blogs.
     python youtube.py save        # adds them to data/videos/<date>.json
 
 The transcript is used in memory only: never written to a file, never printed (the logs of a
-public repository are public). A video whose transcript could not be fetched this time (the
-free tier often answers 503 "high demand") counts as one failed try and stays on the waiting
-list for the next run, at most youtube.max_tries runs (config.yml), then it is dropped.
+public repository are public). A video Gemini refuses (403) counts as one failed try;
+after youtube.max_tries runs (config.yml) it is dropped. A video it could not do because the
+free tier was busy (503 "high demand") just waits for the next run, up to max_catchup_hours.
 
 Needs GEMINI_API_KEY (AI Studio key) and CLAUDE_CODE_OAUTH_TOKEN.
 """
@@ -34,6 +34,7 @@ GEMINI_MODELS = ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]
 ROUNDS = 3            # tries per video over all models
 WAIT = 45             # seconds between rounds after a 503
 TIME_BUDGET = 35 * 60  # stop starting new videos after this, the rest waits for the next run
+MAX_CHARS = 150_000   # a transcript longer than this is cut (a one-hour talk is about 60k characters)
 
 ASK_TRANSCRIPT = ("Write out everything that is said in this video, in order, in the language it is "
                   "spoken in, as plain text. Keep every name, number and example. No timestamps, no "
@@ -97,11 +98,14 @@ def main():
         if text is None:
             failed += 1
             print(f"  {v['video_id']} {v['channel']}: no transcript this time ({err})")
-            # counts as one try; youtube.py save drops the video after youtube.max_tries runs
-            out.write_text(json.dumps({"no_transcript": True}), encoding="utf-8")
+            # a refusal (403 and the like) counts as one try; youtube.py save drops the video after
+            # youtube.max_tries runs. "Busy" (503, 429) does not count: GitHub's late scheduled runs
+            # land in the US daytime, when the free tier is often busy, and must not use up the tries.
+            if not any(c in (err or "") for c in ("503", "UNAVAILABLE", "429")):
+                out.write_text(json.dumps({"no_transcript": True}), encoding="utf-8")
             continue
         prompt = (template.replace("$TITLE", v["title"]).replace("$CHANNEL", v["channel"])
-                  .replace("$DESCRIPTION", v.get("description") or "(none)").replace("$TRANSCRIPT", text))
+                  .replace("$DESCRIPTION", v.get("description") or "(none)").replace("$TRANSCRIPT", text[:MAX_CHARS]))
         try:
             reply = ask_claude(prompt, model)
         except Exception as e:  # noqa: BLE001
