@@ -1,0 +1,826 @@
+{
+ "date": "2026-11-25",
+ "items": [
+  {
+   "id": "ff80ebd62932",
+   "kind": "blog",
+   "source": "lcamtuf.substack.com",
+   "source_url": "https://blog.coredump.cx",
+   "title": "How did pinwheel calculators work?",
+   "url": "https://blog.coredump.cx/p/how-did-pinwheel-calculators-work",
+   "published": "2026-11-25T01:44:11+00:00",
+   "basis": "full",
+   "brief_zh": "针轮式（pinwheel）机械计算器靠一叠可调节伸出针数的输入圆盘来加减，再用弹簧进位针和凸轮配合完成逐位进位，乘除则靠移动累加器滑架、重复摇柄实现。",
+   "background_zh": "作者是机械计算器爱好者，特别喜欢1920至1960年代盛行、后来消失的机械四则计算器。他用自己收藏的一台 Vaucanson 计算器演示，并拆解其内部原理。",
+   "conclusion_zh": "作者没有给出评价性的结论，只是讲清了机制，并附上一段更完整的老 YouTube 拆解视频和自己2023年写的计算器史前史文章。他在文末顺带提到，这就是 Intel CPU 里一个寄存器叫“accumulator”的由来。",
+   "brief_en": "A pinwheel calculator adds and subtracts with a stack of input disks whose extended pin count can be set, handles carry with spring-loaded carry pins and cams, and does multiplication and division by shifting the accumulator carriage and repeating crank turns.",
+   "background_en": "The author is a calculator enthusiast who especially likes the mechanical four-function calculators that were popular from the 1920s to the 1960s and then vanished. He uses a Vaucanson calculator from his own collection to demonstrate it and then explains the mechanism inside.",
+   "conclusion_en": "The author gives no evaluative conclusion and only explains the mechanism. He points to an older YouTube walkthrough for the full detail and to his 2023 article on the prehistory of calculators. He adds that this is why a register in Intel CPUs is called the \"accumulator\".",
+   "points_zh": [
+    "加减法靠摇动曲柄完成：先把第一个数放进输入寄存器，顺时针摇一圈加到累加器，再输入第二个数再摇一圈。减法则逆时针摇。作者演示的例子是 1234 + 4321。",
+    "乘除法是重复加减，再配合移位。算 79 × 123 时，先摇三圈加入 79 × 3，把累加器滑架右移一位后摇两圈，相当于加 79 × 20，再移一位摇一圈，加 79 × 100。左下角的计数器此时显示“123”。做除法时，先把被除数装进累加器，再依次减去除数的十的幂倍数，商留在计数器，余数留在累加器。",
+    "核心部件是一叠输入圆盘，每位数字一个。每个圆盘有一个固定在键轴上的中心部分、九根能在槽里径向滑动的针，以及一个可自由转动的数字设定环。每根针的凸起卡在设定环的轨道里，转动输入杆就能改变伸出的针数。摇动曲柄时，伸出的针带动中间齿轮，让累加器对应位上的数字前进。",
+    "进位靠弹簧进位针实现。除最右一位外，每个圆盘都有一根弹簧进位针，平时不在中间齿轮的路径上。当累加器某位从9转到0时，凸轮把楔形的进位感应杆推到进位针前，把针推进下一位中间齿轮的路径，使下一位加1。进位感应杆会在鼓轮转满一圈前缩回，进位针随即弹回。各进位针错开布置，不会同时啮合，所以像 9999 + 1 这样的情况，进位可以逐位顺畅传递下去。",
+    "此外还有一些方便和保证可靠的机构，包括防止错序输入的联锁、每个寄存器的复位杆，以及溢出或下溢时响的机械铃。作者认为这些机构没那么有意思，没有细讲。"
+   ],
+   "points_en": [
+    "Addition and subtraction work by turning the crank. The first operand goes into the input register and a clockwise turn adds it to the accumulator. Then the second operand is entered and the crank is turned again. A counterclockwise turn subtracts. The author's example is 1234 + 4321.",
+    "Multiplication and division are repeated addition and subtraction combined with shifting. To compute 79 × 123, he cranks three times to add 79 × 3. He shifts the carriage one digit and cranks twice, which adds 79 × 20. He shifts again and cranks once, which adds 79 × 100. The crank counter then reads 123. For division, he loads the dividend into the accumulator and subtracts power-of-ten multiples of the divisor. The quotient ends up in the counter and the remainder in the accumulator.",
+    "The core part is a stack of input disks, one per digit. Each disk has a center section fixed to a keyed shaft, nine pins that slide radially in grooves, and a freely turning digit-setting ring. Each pin has a protrusion that rides in the ring's track, so turning the input lever changes how many pins stick out. When the crank turns, the extended pins mesh with an intermediate gear and advance the matching digit of the accumulator.",
+    "Carry uses a spring-loaded carry pin. Every disk except the rightmost has one, and it normally sits out of the path of the intermediate gear. When an accumulator digit rolls over from 9 to 0, a cam pushes a wedge-shaped carry-sensing lever against the pin. The pin moves into the path of the next digit's intermediate gear and adds 1 there. The lever retracts before the drum finishes a full turn and the pin springs back. The carry pins are staggered so they do not all engage at once. This lets carry ripple through all digits, for example in 9999 + 1.",
+    "Each machine also has extra features for convenience and reliability. These include interlocks against out-of-sequence input, reset levers for each register and a mechanical bell for overflow or underflow. The author finds these less interesting and does not describe them in detail."
+   ],
+   "topics": [
+    "mechanical calculators",
+    "history of computing"
+   ]
+  },
+  {
+   "id": "1287fbaba097",
+   "kind": "blog",
+   "source": "lucumr.pocoo.org",
+   "source_url": "https://lucumr.pocoo.org",
+   "title": "Abolish Lock Poisoning",
+   "url": "https://lucumr.pocoo.org/2026/11/25/poisoning/",
+   "published": "2026-11-25T00:00:00+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为 Rust 的 mutex 中毒（lock poisoning）应该彻底取消或只作为例外，因为他从没见过正确处理中毒的代码，而它带来的问题却很多。",
+   "background_zh": "作者是 Rust 开发者 Armin Ronacher（lucumr）。Rust 标准库团队正在讨论在下个 edition 把不中毒的锁设为默认，不少人出来为中毒机制辩护，他因此写文章陈述自己的主张。",
+   "conclusion_zh": "作者希望 Rust 团队稳定 std::sync::nonpoison，并让 std::sync::Mutex 默认指向它；需要中毒的人可以用单独的 Poison<T> 包装类型，给任何类型（包括 RefCell 或 tokio 线程）选用。他认为最糟的方案是保留中毒但让 lock() 直接 panic，因为这只解决持有 guard 的问题，却把慢性故障变成唯一选择。他推荐读 In defense of lock poisoning 作为反方最好的论述，但仍认为证据都指向另一边，并提到 Oxide 出品的大部分软件在 panic 时本来就是 abort。",
+   "brief_en": "The author argues that Rust's mutex poisoning should be removed or made the exception, because he has never seen code that handles a poisoned lock correctly and has seen many problems it causes.",
+   "background_en": "The author is Armin Ronacher (lucumr), a Rust developer. The Rust libs team is discussing making non-poisoning locks the default in the next edition, and many people have defended poisoning. He writes this post to give his own case.",
+   "conclusion_en": "The author hopes the Rust team stabilizes std::sync::nonpoison and makes std::sync::Mutex resolve to it by default. People who want poisoning could use a separate Poison<T> wrapper for any type, including RefCell or tokio threads. He thinks the worst outcome is to keep poisoning but make lock() panic instead of returning a Result, since that fixes only the held-guard problem and makes the slow outage the only option. He names In defense of lock poisoning as the best argument for the other side and still believes the evidence points the other way. He adds that most of what Oxide ships aborts on panic, which he also considers reasonable.",
+   "points_zh": [
+    "中毒机制在实践中几乎没人正确使用。持锁时 panic 后，合理的做法只有两种：关掉进程，或忽略标志继续运行。用 panic = \"abort\" 就是前者，不会出现中毒。在 unwinding 模式下，常见的 lock().unwrap() 两者都不是，它让之后每次加锁都 panic。Josh Triplett 说标准库历史上从未见过有人尝试从中毒中恢复。",
+    "中毒会导致“慢性故障”。原始 panic 只发生一次，之后每次 lock().unwrap() 都会 panic，而线程池、请求处理器、tokio 任务和 FFI 边界会让进程在 panic 后继续存活，于是进程活着却没法用。测试套件里也一样：一个测试失败会毒化共享的 static，之后的测试全部报 PoisonError，cargo、deno、polars 和 rustc 都出现过。文中还提到有服务把 PoisonError 在崩溃统计里排到第5，后来换用 parking_lot。",
+    "PoisonError 持有 guard，容易造成死锁。要忽略中毒，必须从错误对象里取出 guard，所以只要错误还活着，锁就一直被持有。在返回 Box<dyn Error> 的函数里写 m.lock()? 就可能这样。if let 和 match 分支里也出现过：fallback 里再次加锁，而条件里的 PoisonError 仍占着 guard。作者列了 cc-switch、PC-AI 和 ox-embed-server 的实例。",
+    "恢复手段本身也不好用。用 into_inner() 恢复后标志仍然在，之后每次访问都会再走一遍恢复路径。clear_poison 直到 Rust 1.77 才出现，距中毒功能加入有九年。作者举了几个例子：goose-in-a-pond 在一次 panic 后每次转写都重建解码器状态，librefang 每次访问都记录同样的警告，某个池每次归还都丢弃模型。",
+    "标准库和生态自己也在绕开中毒。标准 I/O 早在2015年3月（1.0 前两个月）就忽略中毒，panic 输出捕获、backtrace 锁和 WASI 环境锁也一样，还有一个把标准库内部 mutex 改成 nonpoison 的 PR。Tokio 的锁不中毒，Carl Lerche 说他宁愿假装锁中毒不存在。Wasmtime、crossbeam-channel、tracing-subscriber 都忽略中毒，rust-analyzer 改用了 parking_lot，parking_lot 维护者称中毒是一个损害可用性和可靠性的“anti-feature”。作者还引用 Eliza Weisman 的例子：为了在 drop 时摘除等待者必须用 into_inner，否则链表会留下悬空指针，也就是中毒反而妨碍了内存安全。",
+    "中毒的设计前后不一致。如果理由是代码临时破坏不变量后 panic、别人看到坏状态，那 RefCell 也有同样问题，但没人要求它中毒。tokio 会捕获任务 panic，配合 LocalSet 时 panic 变成 JoinError，下一次 borrow() 就能读到空指针。作者也不认为多线程代码里的 panic 被捕获得比这更多。标准库里 LazyLock 永久中毒，OnceLock 从不中毒，Mutex 中毒但可恢复。此外中毒只跟踪 panic，用 ? 从临界区中途提前返回也会留下同样的坏不变量，却不会中毒。"
+   ],
+   "points_en": [
+    "Almost nobody uses poisoning correctly in practice. After a panic with a lock held, there are two reasonable reactions: shut the process down or ignore the flag and carry on. With panic = \"abort\" the first happens and poisoning never comes up. With unwinding, the common lock().unwrap() does neither, and every later lock call panics. Josh Triplett says the standard library has never seen a report of anyone trying to recover from poison.",
+    "Poisoning causes a slow outage. The original panic happens once, but every later lock().unwrap() panics too. Thread pools, request handlers, tokio tasks and FFI boundaries keep the process alive after a panic, so it stays up but becomes useless. Test suites show the same pattern: one failing test poisons a shared static and later tests fail with PoisonError. This happened in cargo, deno, polars and rustc. The post also mentions a service where PoisonError ranked fifth in its crash stats and which then moved to parking_lot.",
+    "PoisonError holds the guard, which creates deadlock hazards. To ignore poison, code must take the guard out of the error object, so the lock stays held as long as the error lives. A plain m.lock()? in a function that returns Box<dyn Error> can cause this. The same happens in if let and match arms, where a fallback locks the mutex again while the PoisonError from the condition still owns the guard. The author lists cc-switch, PC-AI and ox-embed-server as examples.",
+    "Recovery is also awkward. After recovery with into_inner(), the flag stays set and each later access takes the recovery path again. clear_poison arrived only in Rust 1.77, nine years after the feature landed. The author gives examples: goose-in-a-pond rebuilt its decoder state on every transcription after one panic, librefang logged the same warning on every access and a pool threw its model away on every return.",
+    "The standard library and the ecosystem already work around poisoning. Standard I/O has ignored it since March 2015, two months before 1.0. Panic output capture, the backtrace lock and the WASI environment lock do the same, and an open PR moves std's internal mutexes to nonpoison. Tokio's locks do not poison, and Carl Lerche said he would rather pretend lock poisoning is not a thing. Wasmtime, crossbeam-channel and tracing-subscriber ignore it, and rust-analyzer switched to parking_lot. The parking_lot maintainer called poisoning an anti-feature that hurts usability and reliability. The author also cites Eliza Weisman's case, where poisoning stood in the way of memory safety: into_inner was needed during drop to unlink a waiter, or the list would keep a dangling pointer.",
+    "Poisoning is applied inconsistently. If the case is that code breaks an invariant, panics and someone sees the broken state, the same applies to RefCell, yet nobody asks it to poison. Tokio catches task panics, so with a LocalSet the panic returns as a JoinError and the next borrow() can read a null pointer. The author doubts that panics are caught more often in multi-threaded code than in this kind of code. In the standard library, LazyLock poisons for good, OnceLock never poisons and Mutex poisons but allows recovery. Poisoning also tracks only panics, so an early return with ? from the middle of a critical section leaves the same broken invariant without poisoning."
+   ],
+   "topics": [
+    "Rust",
+    "concurrency",
+    "language design"
+   ]
+  },
+  {
+   "id": "b1f628edb536",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Engadget Scoop Claims iPhone 18e Will Have a Camera Plateau",
+   "url": "https://www.engadget.com/2325828/new-leaks-reveal-the-iphone-18e-will-have-a-redesigned-camera-plateau/",
+   "published": "2026-11-24T23:41:23+00:00",
+   "basis": "short",
+   "brief_zh": "据 Engadget 看到的 CAD 图，苹果可能在 iPhone 18e 上改用一个近似方形的摄像头凸起，而不再是 iPhone 17e 那样几乎平齐的镜头。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "CAD images seen by Engadget suggest that Apple may give the iPhone 18e a nearly square camera bump, unlike the almost flush lens of the iPhone 17e.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "Engadget 的 Filipe Espósito 报道，iPhone 17e 没有摄像头凸起，镜头只有一小块突出，麦克风和 LED 闪光灯也嵌在背面玻璃的切口里。CAD 渲染图显示，iPhone 18e 的凸起约为 28 mm × 35 mm，近似方形，容纳单个后置摄像头、LED 闪光灯和后置麦克风，与 M5 iPad Pro 的摄像头模块有些相似。Daring Fireball 的 John Gruber 评论说，只有镜头突出是 16e 和 17e 最好的特点之一，但所有 iPhone 机型最终都会有凸起。"
+   ],
+   "points_en": [
+    "Filipe Espósito of Engadget reports that the iPhone 17e has no camera bump. Only the lens protrudes slightly, and the microphone and LED flash sit in cutouts in the rear glass. The CAD renders show an almost square bump of about 28 mm by 35 mm on the iPhone 18e. It holds the single rear camera, the LED flash and the rear microphone, and looks somewhat like the camera module on the M5 iPad Pro. John Gruber of Daring Fireball comments that the lens-only protrusion is one of the best things about the 16e and 17e, but that the bump comes for all iPhone models eventually."
+   ],
+   "topics": [
+    "Apple",
+    "iPhone"
+   ]
+  },
+  {
+   "id": "ae2e8e2caf29",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Trump Made Up to $15M on Nvidia Stock After Huang’s Return",
+   "url": "https://www.theguardian.com/technology/2026/nov/24/donald-trump-nvidia-stock-jensen-huang-stock-market",
+   "published": "2026-11-24T23:07:02+00:00",
+   "basis": "short",
+   "brief_zh": "据 The Guardian 引述的披露文件，特朗普持有的英伟达股票在黄仁勋意外回任 CEO 后升值，他最多赚了约1500万美元；Gruber 认为这件事是腐败。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "According to The Guardian, citing disclosure filings, Trump's Nvidia shares gained value after Jensen Huang's surprise return as CEO, and he made up to about $15 million. Gruber calls this corrupt.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "The Guardian 报道，特朗普向政府道德办公室（Office of Government Ethics）提交的财务披露显示，他截至9月30日（最新可得数据）可能持有多达37万股英伟达股票。黄仁勋意外回任 CEO 后，英伟达周一股价上涨31.5%，市值增加约9500亿美元，特朗普据此最多赚了1500万美元，该消息最先由 Financial Times 报道。Daring Fireball 的 John Gruber 评论说，这整件事即使特朗普不持有任何上市公司股票也很荒唐，是国家安全闹剧，也是对“国家资本主义”的公开拥抱；而特朗普持有英伟达股票，使其明显属于腐败。他还说，腐败是本月选举中选民最关心的议题，共和党在选举中大败，黄仁勋复职受部分投资者和 AI 热潮阵营欢迎，但整个事件在广大选民中极不受欢迎。"
+   ],
+   "points_en": [
+    "The Guardian reports that Trump's financial disclosures to the Office of Government Ethics show he may have owned as many as 370,000 Nvidia shares as of 30 September, the latest available data. After Jensen Huang's surprise return as CEO, Nvidia's shares rose 31.5% on Monday and added about $950 billion in value. Trump made up to $15 million on his holdings. The Financial Times reported the news first. John Gruber of Daring Fireball comments that the whole affair would be absurd even if Trump owned no public stock. He calls it a national security farce and an embrace of state capitalism, and says that Trump's Nvidia holding makes the corruption plain. He adds that corruption was the top issue on voters' minds in this month's election, in which the Republican Party lost heavily. He says Huang's reinstatement was popular with some investors and with the AI-mania wing of the tech industry, but is very unpopular with the electorate as a whole."
+   ],
+   "topics": [
+    "Nvidia",
+    "politics"
+   ]
+  },
+  {
+   "id": "8caf92805426",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "Three LLM inflection points in twelve months",
+   "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
+   "published": "2026-11-24T23:02:07+00:00",
+   "basis": "full",
+   "brief_zh": "Simon Willison 认为过去十二个月里，LLM 和编程智能体的能力出现了三个转折点：Opus 4.5、Fable 级模型，以及 Opus 5.5 学会做“好玩”的游戏。他说软件开发已经变得面目全非，他不会再手写大部分代码了。",
+   "background_zh": "Simon 前几周在 AI Engineer Code Summit 做了主题演讲，核心就是这三个转折点。今天（2026 年 11 月 24 日）正好是 Claude Opus 4.5 发布一周年，他借此把这条主线展开写成文章。",
+   "conclusion_zh": "Simon 认为软件开发在一年内已经变得面目全非，他不认为自己还会回到手写大部分代码的方式。至于 Fable 5.2 是新的转折点还是一次渐进改进，他还没有定论。",
+   "brief_en": "Simon Willison argues that LLMs and coding agents passed three inflection points in twelve months: Opus 4.5, Fable class models, and Opus 5.5 learning to make games that are fun. He says software development has changed beyond recognition and he will not return to typing most code by hand.",
+   "background_en": "Simon gave a keynote at the AI Engineer Code Summit a couple of weeks ago, built around these three inflection points. Today, November 24th 2026, is the first anniversary of Claude Opus 4.5, so he expands the theme in this post.",
+   "conclusion_en": "Simon says software development has changed beyond recognition in a year and he does not expect to type most of his code by hand again. He has not decided whether Fable 5.2 is a new inflection point or an incremental gain.",
+   "points_zh": [
+    "第一个转折点是 Opus 4.5（2025 年 11 月），它让编程智能体第一次默认就能给出正确结果。Claude Code 当时已推出 9 个月，但 Simon 一直没把它当主力，因为经常要纠正，算不上明显的加速。Opus 4.5 之后，他日常遇到的大多数编程问题都能一次做对，比自己动手快。同月 OpenAI 发布的 GPT-5.1 系列（含 GPT-5.1-Codex 和 Codex-Max）也让 Codex 变得稳定好用。12 月大家都在折腾这些新工具，到 1 月就开始用于正式工作。",
+    "第二个转折点是 Fable 级模型。4 月 Anthropic 公布 Claude Mythos，称其因网络安全能力太强而不能发布；6 月发布的 Claude Fable 5 是削弱后的版本，能解决大多数问题，但会拦截安全相关用途。它上线三天就因美国政府的出口管制被禁，7 月 1 日才恢复。Simon 说这类模型主动性很强：他让它修 Safari 的显示问题，它自己搭了 pyobjc-framework-Quartz 截图机制和带 CORS 的本地日志服务器。另一个例子是“神秘蜂鸣声”：他给 Opus 5.5 和 Fable 5.2 五个 WebAudio 麦克风，它们把蜂鸣声源定位到约 40 厘米的范围内。他把 Fable 5、5.1、5.2 和 Opus 5.5（他称为“便宜版 Fable”）归为这一级，GPT-6 Astra 也算，Gemini 4 Neon 可能也算，并把它们当作对前沿模型的基本预期。",
+    "第三个转折点是 Opus 5.5（2026 年 9 月 22 日）似乎理解了什么是“好玩”。8 月时 Fable 5 做的浣熊盗窃游戏画面像样但很难玩，GPT-5.6 Sol Ultra 做得更好，但 90 秒后就无聊了。Simon 当时还以为设计好玩的游戏是人类独有的事。后来他对 Opus 5.5 说“这游戏还不够好玩，让它好玩得多”，它花 12 小时试玩、加功能、调平衡，他的红色警戒式 RTS 一夜之间从无聊变得很好玩。之后他又用“认真想想怎样做到既好玩又好看”这类提示做了几个小游戏，都能让他投入很久。他还提到，在这之后参加的两场会议上，有人给他看了确实像样的游戏作品。",
+    "过去约四个月里，前沿模型还突然变得很会做 3D 建模。接上 Blender 或让它们写 Three.js，几乎任何东西都能做出像样的模型。他最早在 Claude Fable 5 上注意到，到 Opus 5.5、GPT-5.6 Sol、GPT-6 Astra 和 Gemini 4 系列时明显加强。他说 3D 空间感对视觉 LLM 用于机器人很重要，但不清楚 3D 建模能力是各实验室专攻机器人的副产品，还是反过来。",
+    "Fable 5.2 是不是第四个转折点，他还没想好。他用这个模型效率极高，觉得它的品味和自己几乎一致，几年来拖着没做的难题现在一个个解决，三周内 Datasette 1.0a42 到 1.0a44 和 LLM 0.37 到 0.38 的一连串发布就是例子。如果它算转折点，关键特征是：只要能想象并说清楚一个软件，Fable 就能做出来。这是他自己几周来的体验。"
+   ],
+   "points_en": [
+    "The first inflection point was Opus 4.5 in November 2025, the first model where Claude Code's default result was generally right. Claude Code was already 9 months old, but Simon had not made it a daily driver because he had to correct it too often. After Opus 4.5, it got most of his daily coding problems right and was faster than working alone. OpenAI's GPT-5.1 models, including GPT-5.1-Codex and Codex-Max, had a similar effect on Codex. Many people tinkered with the tools in December and used them for real work by January.",
+    "The second inflection point was Fable class models. In April Anthropic announced Claude Mythos and held it back because of its cybersecurity abilities. In June Claude Fable 5 arrived as a reduced Mythos that blocks security work. The US government placed it under export controls after three days, and it returned on July 1st. Simon says these models are relentlessly proactive. When he asked for help with a Safari display glitch, it built its own pyobjc-framework-Quartz screenshot tool and a CORS-enabled localhost logging server. In another test, Opus 5.5 and then Fable 5.2 used five WebAudio microphones to locate a mysterious beep to within about 40cm. He counts Fable 5, 5.1, 5.2 and Opus 5.5 (his \"cheap Fable\") in this class, along with GPT-6 Astra and possibly Gemini 4 Neon. He now sees them as the baseline for a frontier model.",
+    "The third inflection point was Opus 5.5 (September 22nd, 2026) appearing to understand fun. In August, Fable 5 built a raccoon heist game that looked good but played badly, and GPT-5.6 Sol Ultra's version grew dull after 90 seconds. Simon had assumed that designing a fun game was a uniquely human skill. He then told Opus 5.5 to make his RTS game much more fun. It playtested and rebalanced for 12 hours, and the game went from boring to deeply entertaining. Similar prompts on other small projects kept him engaged for long periods. He also says that two conferences since then showed him game projects that felt like proper games.",
+    "Frontier models also became good at 3D modeling over the past four months. With Blender or Three.js, they produce credible models of almost anything. Simon first noticed this with Claude Fable 5, and it grew stronger with Opus 5.5, GPT-5.6 Sol, GPT-6 Astra and Gemini 4. He notes that 3D spatial awareness matters for robotics with vision LLMs. He does not know whether 3D modeling is a side effect of lab work on robotics or the reverse.",
+    "Simon has not decided whether Fable 5.2 is a fourth inflection point or an incremental step. He is getting a great deal done with it and says its taste almost matches his own. He has cleared problems he put off for years, and the recent Datasette 1.0a42 to 1.0a44 and LLM 0.37 to 0.38 releases are his examples. If it is an inflection point, the key feature is that Fable can build software that he can imagine and describe clearly. He bases this on his own experience over a few weeks."
+   ],
+   "topics": [
+    "coding-agents",
+    "LLMs",
+    "Claude"
+   ]
+  },
+  {
+   "id": "40205c39fa42",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Nvidia and Trump’s State Capitalism",
+   "url": "https://www.wsj.com/opinion/nvidia-jensen-huang-donald-trump-130e644c",
+   "published": "2026-11-24T22:15:54+00:00",
+   "basis": "short",
+   "brief_zh": "John Gruber 完全认同《华尔街日报》社论版的看法：特朗普对英伟达的干预，会让法治和国家安全付出沉重代价。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "John Gruber fully agrees with the Wall Street Journal editorial board that Trump's intervention over Nvidia will cost the rule of law and national security dearly.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "Gruber 引用《华尔街日报》社论版的话：特朗普的干预等于在表明出口管制只是名义上的，国家安全要服从他的政治意愿。社论举了 2025 年的例子：国会两党多数通过了基于国家安全的 TikTok 禁令，他却拒绝执行。社论还说，特朗普之所以欣赏习近平，是因为习能对私营企业发号施令，并在需要时无视法律。Gruber 说他很少同意该社论版，但这一次“每个字都附议”。引文没有说明具体干预了什么。"
+   ],
+   "points_en": [
+    "Gruber quotes the editorial board, which says the intervention signals that export controls are notional and that national security is subordinate to Trump's political wishes. The editorial recalls that in 2025 Trump refused to follow a law, passed by bipartisan majorities in Congress, that banned TikTok on national-security grounds. It also says Trump admires Xi Jinping because Xi can give orders to private companies and ignore the law. Gruber says he seldom agrees with the board but co-signs every word here. The quoted text does not say what the intervention was."
+   ],
+   "topics": [
+    "Nvidia",
+    "export controls",
+    "politics"
+   ]
+  },
+  {
+   "id": "76fffd3da3fc",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Patriotism, Trump-Style",
+   "url": "https://nypost.com/2026/11/23/us-news/trump-suggests-jensen-huang-could-have-moved-to-china-if-not-reinstated-as-nvidia-ceo-sex-sells-fellas/",
+   "published": "2026-11-24T22:06:56+00:00",
+   "basis": "short",
+   "brief_zh": "John Gruber 认为，特朗普一边称黄仁勋是“伟大的爱国者和国宝”，一边说他受了委屈就有理由去中国帮对手搞 AI，这种世界观很扭曲。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "John Gruber says it is perverse that Trump calls Jensen Huang a \"Great Patriot and National Treasure\" and also says Huang could justifiably move to China to help its AI industry if he were treated badly.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "据《纽约邮报》报道，特朗普在 CNBC 长达 50 分钟的电话采访中说，如果黄仁勋没有在这家美国公司恢复职位，中国可能会邀请他去执掌华为，因为他“有一点中国血统”，尽管他出生在台湾。特朗普还说，如果黄仁勋“被不公平对待、足够生气”，他或许会去。特朗普此前在 Truth Social 上也称黄仁勋是“伟大的爱国者和国宝”。Gruber 指出，这两种说法同时出现，说明特朗普的世界观很扭曲：一边说他是爱国者，一边认为他受了委屈就可以去帮美国在 AI 竞赛中的头号地缘对手。"
+   ],
+   "points_en": [
+    "The New York Post reports that Trump told CNBC in a 50-minute phone interview that China could have asked Huang to head Huawei if Huang had not been reinstated at the US firm. Trump said Huang has \"a little blood\" from China although he was born in Taiwan. He added that if Huang were angry enough or treated badly, he might do it. Earlier on Truth Social, Trump called Huang a \"Great Patriot and National Treasure\". Gruber says holding both views at once shows how perverse Trump's worldview is. In his reading, Trump calls Huang a patriot and also accepts that Huang could help the US's main geopolitical rival in the AI arms race."
+   ],
+   "topics": [
+    "Nvidia",
+    "politics",
+    "China"
+   ]
+  },
+  {
+   "id": "943d9ed1df75",
+   "kind": "blog",
+   "source": "dwarkesh.com",
+   "source_url": "https://dwarkesh.com",
+   "title": "Responding to objections to recursive self-improvement",
+   "url": "https://www.dwarkesh.com/p/rsiobjections",
+   "published": "2026-11-24T21:45:30+00:00",
+   "basis": "full",
+   "brief_zh": "Dwarkesh Patel 回应对“递归自我改进”的质疑，坚持认为 AI 研究有大量可验证的代理指标，能让窄领域的进步外溢成通用能力，因此超级智能会在 2030 年前出现。",
+   "background_zh": "Dwarkesh 是播客主持人，最近发表了一篇文章和一个视频，论证递归自我改进会让超级智能在 2030 年前到来，引来不少反对意见。这期是他和总经理 Max Farrens 逐条回应读者评论和 corsaren 的推文串。文字稿在中途被截断。",
+   "conclusion_zh": "Dwarkesh 的立场没变：他仍认为递归自我改进会在 2030 年前带来超级智能，中位估计是 2029 年左右，并承认这依赖类比和泛化假设，不是严格证明。文字稿在回应 corsaren 的最后一条时被截断，后面的内容未能看到。",
+   "brief_en": "Dwarkesh Patel answers objections to his recursive self-improvement argument and holds that AI research has many verifiable proxies, so narrow progress there should spill into general ability and bring superintelligence by 2030.",
+   "background_en": "Dwarkesh is a podcast host. He recently published an essay and a video arguing that recursive self-improvement leads to superintelligence by 2030, and many people objected. In this episode he and his general manager Max Farrens go through reader comments and a thread by corsaren. The transcript is cut off partway.",
+   "conclusion_en": "Dwarkesh keeps his position that recursive self-improvement leads to superintelligence by 2030, with a median around 2029. He admits that the case rests on analogies and an assumption of generalization rather than proof. The transcript ends partway through his reply to corsaren's last objection.",
+   "points_zh": [
+    "他认为 AI 研究和数学一样有很多可验证的代理指标，所以对 AI 研究的窄进步会带来通用提升。他承认现在的 AI 在几乎所有事上还不如人，比如 GPT-6 能解千禧年大奖难题，却当不了他的视频剪辑。但他设想，能做 ML 研究的 AI 会把 GPT-3 到 GPT-6 那样的进步压缩到一年内，于是在 GPT-7 或 GPT-8 级别系统出现一年内，AI 就会像人一样通用，并很快全面超过人。",
+    "针对“指标要先定义好、数据要靠人搭环境”的质疑，他说预训练里留出语料上的 loss 本身就是可验证的指标，还有不依赖具体范式的指标，比如掌握没见过的电子游戏有多快，或只见过 1700 年前语料的 AI 能多快推出广义相对论。他还说，学习算法本身是通用的：Transformer 原本为击败翻译任务而设计，后来在预测 token 和生成图像上也很强，推理模型最初用于解中学数学题，现在适用于很多领域。",
+    "在数据上，他引用自己和普林斯顿学生 Jerry Han 做的研究：比较 2019 到 2026 年的数据语料和架构，数据比架构更能解释预训练的进步。而数据的改进主要来自更好的过滤方法和合成数据方法，这是不懂法律或量子力学的 ML 研究员自己在电脑上做实验就能完成的，不需要请各领域专家。这项研究花了几万到约十万美元的 GPU，它只针对公开的预训练数据集。",
+    "他承认要做到人类顶尖研究员的水平，AI 必须能泛化，因为 AI 研究并非全都可验证。他的理由是：数学里没有靠训练解其他千禧年难题去解这一道，而是从较简单的问题泛化而来；编程智能体也没有专门训练过他要做的那个 Blood on the Clocktower 环境，却能完成。他还说，模型越强，学得越快：GPT-2 几乎没法微调成律师智能体，GPT-6 像个差劲的实习律师，GPT-8 可能只需很少数据就能上岗，所以 ML 研究的快速进步会让系统能从越来越少、越来越不规整的数据中学习。",
+    "关于时间线，他澄清自己并不认为 2027 年会有超级智能。他的文章副标题是 2030 年前，完全自动化最顶尖 AI 研究员的中位数年份是 2028，超级智能约在 2029。他认为明年出现的概率约 25%。他同意 corsaren 说他文中约一半例子是缺乏严谨性的直觉类比，但说因为从没造过超级智能，无法用形式化证明，只能靠类比，再逐个辩论类比是否成立。",
+    "对于“样本效率和持续学习是 AI 的千禧年难题”，他说不是说 AI 能解千禧年难题所以样本效率明天就能解决。他的论据是：AI 已解决数百个数学开放问题，Erdős 整理的 1000 个开放问题里已有超过 10% 被 AI 解决，而具备前沿数学能力的 AI 出现还不到一年左右。他还指出 Transformer 是把注意力、layer norm、残差连接、Adam 和位置编码等早已存在的部件组合起来的结果，ML 研究历来如此。此外，AI 在上下文窗口内已有接近人类的样本效率，只是只能保留数小时到数天，他认为这说明只需把现有功能延长。他也承认这两个问题可能不同于过去的进展。",
+    "对于“如果迁移像人类进化那样发生，应该早在 AI 解千禧年难题前就更好”这一质疑，他说不认为现在的 AI 比人类相对于进化环境更“尖刺”：人类也不擅长心算十位数加法，却极擅长读脸色。他的迁移论点是，进化让我们擅长读面部线索和在部落中立足，这些能力又迁移到了从未被训练过的事情上，如造半导体。这段回答在文字稿中被截断，后文未见。"
+   ],
+   "points_en": [
+    "He argues that AI research, like math, has many verifiable proxies, so narrow progress in it should lift general ability. He grants that today's AIs are worse than humans at almost everything. GPT-6 can solve Millennium Prize problems, for example, but cannot be his video editor. He imagines that AIs good at ML research could compress the progress from GPT-3 to GPT-6 into a single year. Within a year of a GPT-7 or GPT-8 level system, he expects AI to be as generally capable as humans and on track to pass them.",
+    "Critics say a metric must first be defined and that data and environments do the hard work. He replies that held-out loss in pre-training is itself a verifiable metric. He also names paradigm-agnostic tests, such as how fast an AI masters a new video game or how fast an AI trained on text up to 1700 finds general relativity. He adds that learning algorithms are general. The transformer was built to beat translation and then worked well for next-token prediction and image generation. Reasoning models began with high school math and now help in many domains.",
+    "On data, he cites a study he ran with Jerry Han, a Princeton student. It compared data corpora and architectures from 2019 to 2026 and found that data explains more of the progress in pre-training than architecture does. The data gains came mainly from better filtering and better synthetic data. ML researchers can do this work on their own computers without expertise in law or quantum mechanics. The study cost on the order of tens of thousands to perhaps $100,000 in GPUs and covers public pre-training datasets.",
+    "He accepts that AIs need to generalize to match top human researchers, because not all AI research is verifiable. He gives two reasons to expect it. Math was not advanced by training on the same Millennium Prize problem, and coding agents handle projects they were not trained on, such as his Blood on the Clocktower environment. He also says stronger models learn better. GPT-2 could hardly be fine-tuned into a lawyer agent, GPT-6 is like a poor intern lawyer, and GPT-8 may need very little data. So fast ML progress should yield systems that learn from less structured data.",
+    "On timing, he says he does not expect superintelligence in 2027. His median year for fully automating the best AI researchers is 2028, with superintelligence around 2029. He puts about 25% on next year. He agrees with corsaren that about half of his examples are intuition pumps without much rigor. He says this is unavoidable, since superintelligence has never been built and no formal proof exists, so the analogies must be debated one by one.",
+    "On sample efficiency and continual learning, he says he is not claiming that solving Millennium Prize problems means these will be solved tomorrow. He points to AI solving hundreds of open math problems, including more than 10% of the roughly 1,000 that Erdős compiled, in about a year or less of frontier math ability. He notes that the transformer combined older pieces such as attention, layer norm, residual connections, Adam and positional encodings, which is how ML research has usually worked. He also says AIs already show near-human sample efficiency within a context window and keep it only for hours to days. He takes this as a base that can be extended. He admits these problems might be unlike past ML progress.",
+    "To the objection that transfer should have appeared earlier if AI followed human evolution, he replies that current AIs are not spikier than humans are relative to evolution. Humans are poor at adding 10-digit numbers in their heads but very good at reading faces. He argues that evolution trained us for face reading and tribal standing, and that these skills transferred to things we were never trained for, such as building semiconductors. The transcript is cut off during this answer."
+   ],
+   "topics": [
+    "recursive self-improvement",
+    "AGI timelines",
+    "AI research"
+   ]
+  },
+  {
+   "id": "9010e1656f7f",
+   "kind": "blog",
+   "source": "oldvcr.blogspot.com",
+   "source_url": "https://oldvcr.blogspot.com",
+   "title": "Blogger broke the lightbox",
+   "url": "https://oldvcr.blogspot.com/2026/11/blogger-broke-lightbox.html",
+   "published": "2026-11-24T21:27:04+00:00",
+   "basis": "short",
+   "brief_zh": "Blogger 的图片灯箱功能目前全面失效，作者判断是 Blogger 一次没测好的发布造成的，并给出了两个临时绕过办法。",
+   "background_zh": "作者的博客以大量图片为主，有读者反馈点击图片后灯箱打不开。作者自己排查了一遍，想弄清是不是自己的主题改动造成的。",
+   "conclusion_zh": "作者没有办法自己修复，只能等 Blogger 处理，并建议读者先用上面两个办法看大图。最后他顺带说了一句感恩节快乐，语气有些无奈。",
+   "brief_en": "The Blogger image lightbox is broken everywhere, in the author's view because of a poorly tested deploy, and he offers two workarounds.",
+   "background_en": "The author runs a photo-heavy blog, and readers told him that images no longer open in the lightbox. He checked whether his own theme changes caused it.",
+   "conclusion_en": "The author cannot fix this himself and suggests the two workarounds until Blogger repairs it. He ends with a wry wish for a happy Thanksgiving.",
+   "points_zh": [
+    "问题不在作者的设置，而是 Blogger 本身。作者只对基础主题做了少量修改，但用当前的官方主题新建一篇测试文章，在 Edge、Firefox、Safari 和 Chrome 上灯箱都不能用。他还看了其他几个博客，情况类似，所以他认为这是全局问题。",
+    "作者在压缩过的 JS 里找到了疑似出错的位置：有几处类似 var Zp={}.getUniqueId(\"photofactoryservice\"); 的代码，也就是在一个空对象上调用 getUniqueId。他没有看到能提供这个函数的原型。他据此推测这是一次没有充分测试的发布。这只是他的推断，不是 Blogger 的说明。",
+    "在修好之前，读者有两个办法：右键点图片，在新标签页打开看大图；或者在网址后面加 ?m=1 切换到手机版视图，这个视图完全不用灯箱。"
+   ],
+   "points_en": [
+    "The fault is not in the author's setup. He uses a lightly modified basic theme, but a test post with a current theme also failed on Edge, Firefox, Safari and Chrome. Other blogs he looked at showed the same problem, so he thinks it is global.",
+    "He found a likely cause in the minified JS. A few lines look like var Zp={}.getUniqueId(\"photofactoryservice\");, which calls a function on an empty object. He sees no prototype that would supply it. He guesses this came from a deploy that was not tested enough. This is his own inference, not a statement from Blogger.",
+    "Readers have two workarounds for now. They can right click an image and open it in a new tab to see the larger version. They can also add ?m=1 to the URL to use the mobile view, which does not use the lightbox."
+   ],
+   "topics": [
+    "Blogger",
+    "web bugs"
+   ]
+  },
+  {
+   "id": "1b94191e80f1",
+   "kind": "blog",
+   "source": "joanwestenberg.com",
+   "source_url": "https://joanwestenberg.com",
+   "title": "Assume Entropy",
+   "url": "https://www.joanwestenberg.com/p/assume-entropy",
+   "published": "2026-11-24T20:59:16+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为一切事物默认都会衰败，所以应该先假定熵增，把维护当作正经工作，为它留出时间和精力，而不是等出了问题再惊讶。",
+   "background_zh": "这是一篇个人随笔，作者想解释为什么身体、关系、生意和技能总会不知不觉地变差，以及他为什么发现“假定熵增”能让生活少一些意外。文章在结尾处被截断。",
+   "conclusion_zh": "作者的立场是接受衰败是规则的一部分，把维护写进系统和日程，这样很多事就不再是对个人的指责：房子乱是因为有人住，身体差是因为没去健身。原文在讲这一段时被截断，后面的内容无法得知。",
+   "brief_en": "The author argues that everything decays by default, so one should assume entropy, treat maintenance as real work and budget for it in advance.",
+   "background_en": "This is a personal essay. The author explains why health, relationships, businesses and skills slip without notice, and why assuming entropy has made his life less surprising. The text is cut off near the end.",
+   "conclusion_en": "The author's position is to accept decay as part of the deal and build maintenance into systems and schedules. He says this removes the sense of personal blame, for example a messy house because people live in it or poor fitness because of missed gym visits. The text is cut off mid-sentence in this passage, so the rest is not known.",
+   "points_zh": [
+    "核心主张是衰败是默认状态，任何你在乎的东西，只要不持续投入精力就会退化。作者举了很多例子：30 岁后不练力量就会掉肌肉，减掉的体重会悄悄回来，朋友不联系就淡了，网站会失效，文档一个月后同事就忘了，技能和观点也会过时。他的做法是假定这些都会发生，提前预留时间和资源，真的退步时不要惊讶。",
+    "人们低估了维护的成本。我们喜欢开始，不喜欢持续；开始时的成本小而清楚，维持的成本却被拆成很多小额支出，分散在几个月和几年里。作者认为维护才是“真正的工作”，创造新东西反而是例外，接受这一点就不会总为发票、回邮件和洗碗烦躁。",
+    "买入和承担之前要先问清楚维持它要付出什么。养狗、买第二辆车、开新的副业，都会带来长期的花费和精力。作者说，不拥有就不用维护，这是最便宜的维护办法，成功的人精力多，是因为要照看的东西少。",
+    "靠意志力和动力不可靠，要靠系统。作者主张用清单、日程、默认设置和自动化，并举飞行员和外科医生用清单的例子。他建议分成每周的业务清单、每月的生活清单和每年的长期清单。同时系统本身也要维护：每周删掉不会做的待办，每三个月清理清单，每年检查系统是否还适合当下的生活。",
+    "做业务和创作要在公开场合对抗熵增。作者说算法偏爱稳定更新，所以保持出现比偶尔做出杰作更重要。客户会流失，销售会断档，所以要假定一个流失率并持续开发客户；产品定位会模糊，价格被通胀侵蚀，所以要定期问客户需求、重新审视定位、至少每年涨一次价，并不断向团队重申目标。",
+    "友情和伴侣关系也要主动经营。作者说关系很少因为争吵结束，多半是因为沟通中断。他建议把给朋友打电话写进日历，设提醒，把约会当重要会议安排。对于“这样太不浪漫”的看法，他的回应是，我们最看重的人，正是那些我们不断重新选择的人。",
+    "技能和信念要区别对待。技能需要持续练习，但量不用大：每天练 20 分钟的音乐人，比每月练一次三小时的人保持得更好，所以要找出能保住技能的最小练习量。信念则不会淡忘，而是会固化。作者建议读与自己意见相左的文章，请朋友指出错误，拿一个持有十年的观点从头推理一遍。他说多数时候结论不变，偶尔会变。"
+   ],
+   "points_en": [
+    "His main claim is that decay is the default. Anything you care about declines unless you keep putting effort into it. He gives many examples: muscle loss after 30, weight that creeps back, friendships that fade, websites that rot, documents that colleagues forget, and skills and opinions that go stale. His approach is to expect this, set aside time and resources, and not act surprised when ground is lost.",
+    "People underestimate the cost of maintenance. We like beginnings and not the long upkeep. The cost of adding something is small and clear, while the cost of keeping it is split into many small payments over months and years. He says maintenance is the real work and creating new things is the exception. Accepting this makes daily chores less irritating.",
+    "Before taking on something new, ask what it costs to keep. A dog, a second car or a side project each brings a long tail of expense and effort. He says that what you do not own, you do not have to maintain, and that this is the cheapest maintenance trick. In his view, successful people have more energy because they carry less.",
+    "Willpower and motivation are unreliable, so he relies on systems. These include checklists, schedules, defaults and automation, and he points to pilots and surgeons who use checklists. He suggests a weekly business checklist, a monthly life checklist and a yearly long-game checklist. The systems need upkeep too: prune the to-do list weekly, review the checklists every three months and check the whole system yearly.",
+    "In business and creative work, entropy acts in public. He says algorithms reward consistency, so showing up regularly matters more than producing a masterpiece each time. Clients will churn and sales will dry up, so he advises assuming a churn rate and selling continuously. He also advises asking customers what they need, revisiting the offer and positioning, raising prices at least once a year and repeating goals to the team.",
+    "Friendships and partnerships need active care. He says they rarely end in fights and usually end through lack of contact. He suggests putting calls in the calendar, setting reminders and scheduling date nights. To people who call this unromantic, he replies that the people we value most are those we keep choosing again and again.",
+    "Skills and beliefs decay in different ways. Skills fade without practice, but a small amount is enough, and he says twenty minutes a day beats three hours once a month. Beliefs do not fade. They harden into whatever they were when we stopped testing them. He suggests reading people who disagree, asking friends to point out errors and re-deriving a ten-year-old opinion from scratch. He says that most of the time the conclusion stays the same and sometimes it does not."
+   ],
+   "topics": [
+    "maintenance",
+    "habits",
+    "productivity"
+   ]
+  },
+  {
+   "id": "59cbcc184ccb",
+   "kind": "blog",
+   "source": "xania.org",
+   "source_url": "https://xania.org",
+   "title": "Advent of Microarchitecture 2026",
+   "url": "http://xania.org/202611/advent-of-what?utm_source=feed&utm_medium=rss",
+   "published": "2026-11-24T20:00:00+00:00",
+   "basis": "short",
+   "brief_zh": "作者没时间再做完整的 Advent of Compiler Optimisations，改为推出一个低成本、直接对着镜头讲的 Advent of Microarchitecture 2026 系列。",
+   "background_zh": "作者在雇主 HRT 工作，今年去了很多会议、聚会和大学，被问得最多的问题是今年还会不会做 Advent of Compiler Optimisations。他之前一直回答没有，因为做不过来。",
+   "conclusion_zh": "作者的决定是用低成本的方式保住这个年度系列，并希望观众即使质量不如从前也能喜欢。",
+   "brief_en": "The author cannot make a full Advent of Compiler Optimisations this year, so he is starting a low-effort Advent of Microarchitecture 2026 recorded straight to camera.",
+   "background_en": "The author works at HRT and has visited many conferences, meetups and universities this year. People asked him most often whether an Advent of Compiler Optimisations would return. He had been saying no because he lacked the time.",
+   "conclusion_en": "The author chooses a low-cost format so that the yearly series can continue. He hopes viewers will enjoy it anyway.",
+   "points_zh": [
+    "之前的系列太耗时间。每集视频要做研究、写稿、录制、剪辑和处理 YouTube 的其他事务，作者说每集大约 10 小时，而他同时有工作、Compiler Explorer 和其他项目，所以今年不能照旧做。",
+    "新系列是低投入的做法。他直接对着镜头录制，几乎不准备，边讲边发挥，后期只做轻度剪辑和修正，其中借助了一点 LLM，并尽量把制作成品的流程自动化。",
+    "介绍视频已经发布，有对应的播放列表。作者说之后每天早上会发一集，订阅频道可以不错过。他提醒大家不要期待太高，因为这套内容投入很少。"
+   ],
+   "points_en": [
+    "The earlier series took too long. He says each episode needed research, writing, recording, editing and other YouTube work, about 10 hours in all. With his job, Compiler Explorer and other projects, he cannot repeat that this year.",
+    "The new series is cheap to make. He records directly to camera with little or no preparation and ad-libs. The editing is light, he uses a little help from an LLM, and he automates as much of the upload process as he can.",
+    "The introduction video is already up, with a playlist. He says a new episode will come out each morning and that subscribing to the channel avoids missing them. He asks viewers not to expect too much, since the effort is very low."
+   ],
+   "topics": [
+    "microarchitecture",
+    "YouTube series"
+   ]
+  },
+  {
+   "id": "e2514b3100fc",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "‘The Economy Is a Hostage Situation’",
+   "url": "https://www.theatlantic.com/technology/2026/11/ai-hostage-economy-nvidia-huang/689552/?gift=aQyUJR7AIw1mJWdQ6Ed6yMQrokNaYAmgr0aVusAzQCY&",
+   "published": "2026-11-24T19:16:24+00:00",
+   "basis": "full",
+   "brief_zh": "Charlie Warzel 在《大西洋月刊》中认为，英伟达董事会让黄仁勋复职的理由站不住脚，这反映出诚信和国家安全在科技与政治圈里被无视。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "In The Atlantic, Charlie Warzel argues that the reasons given for Nvidia's board reinstating Jensen Huang do not hold up, and that integrity and national security are being ignored.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "Warzel 写道，支持者认为黄仁勋是 AI 热潮的核心，没有他英伟达就撑不住，AI 泡沫会破裂。他说，这些人又称美国在 AI 竞赛中的领先取决于黄仁勋能随心所欲，包括让英伟达可能绕过美国出口管制向中国供货，以及与一名被指控的中国情报人员有私情。Warzel 称这种逻辑说不通，认为一次婚外情本身不一定要被解雇，但主张诚信不重要则是另一回事，并指出特朗普对董事会复职一事起了决定性作用，这与特朗普主义一脉相承。他在 11 月 9 日曾写过黄仁勋“大到不能倒”，复职前的 11 天里他一度以为自己错了。以上是 Warzel 的观点，摘录在此处被截断。"
+   ],
+   "points_en": [
+    "Warzel writes that supporters see Huang as the center of the AI boom, so that without him Nvidia falters and the AI bubble pops. He says they also argued that American AI leadership depends on Huang being free to do as he pleases. This includes leeway for Nvidia to possibly skirt U.S. export controls to reach China and a relationship with an alleged Chinese intelligence asset. Warzel calls this logic nonsensical. He says a romantic indiscretion need not be grounds for firing, but arguing that integrity does not matter is a different thing. He adds that Donald Trump is singularly responsible for the board's decision and that the episode fits Trumpism. He had written on November 9 that Huang was too big to fail, and during the 11 days of Huang's absence he thought he might be wrong. These are Warzel's views, and the excerpt is cut off."
+   ],
+   "topics": [
+    "Nvidia",
+    "AI industry",
+    "politics"
+   ]
+  },
+  {
+   "id": "e38c6600ff22",
+   "kind": "blog",
+   "source": "wheresyoured.at",
+   "source_url": "https://wheresyoured.at",
+   "title": "Defective Accelerationism",
+   "url": "https://www.wheresyoured.at/defective-accelerationism/",
+   "published": "2026-11-24T18:08:05+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为，黄仁勋在特朗普施压下复任 NVIDIA CEO，只是拖延了 AI 行业迟早要面对的流动性危机，并没有解决任何根本问题。",
+   "background_zh": "NVIDIA 董事会在特朗普的推动下让黄仁勋复任 CEO，此前他因婚外情、芯片走私和对下属的辱骂式管理被曝光，并一度被撤换。作者 Ed Zitron 是长期唱衰 AI 泡沫的评论者，他借这件事写下自己的看法。文章在结尾处被截断。",
+   "conclusion_zh": "作者的结论是，不必把黄仁勋复任当成“恢复正常”，因为 AI 行业缺乏自我维持的现金流，只靠风投和 NVIDIA 持续输血，复任只会让业界更敢冒险、更快烧钱，崩溃只是被推迟。原文在此处被截断，后面的内容无法得知。",
+   "brief_en": "The author argues that Jensen Huang's return as NVIDIA CEO under pressure from Trump only delays a liquidity crisis in the AI industry and fixes none of its underlying problems.",
+   "background_en": "NVIDIA's board reinstated Huang after Trump's campaign, following reports of his affairs, a chip smuggling affair and abusive treatment of staff. The author, Ed Zitron, has long argued that AI is a bubble, and he responds to the event here. The text is cut off near the end.",
+   "conclusion_en": "The author says readers should not treat the return as a \"return to normal\". He argues that the AI industry lacks cash flow to sustain itself without venture capital and NVIDIA, and that the return will make firms take more risk and burn more money before the collapse. The text is cut off here, so the rest of his argument is unknown.",
+   "points_zh": [
+    "作者认为复任没有改变 AI 行业的基本面，只是延缓了风险爆发。他列出的现状是：投资回报不明，超过 2000 亿美元的 NVIDIA GPU 还堆在仓库里，CoreWeave 有债务问题，利率偏高，土地和电力不足，token 支出几个月来没有增长，token 价格因竞争在下跌。他还说，AI 初创公司是 Anthropic 和 OpenAI 约 80% 的收入来源，而这些初创公司都在亏损。",
+    "黄仁勋对市场的价值，在作者看来是“资产负债表即服务”式的循环融资。他引用 WSJ，称 NVIDIA 自 2023 年起在 293 笔交易中向 AI 行业投入超过 1000 亿美元，又引用 FT，称背书和供应商融资合计接近 7000 亿美元。作者举的例子有为 CoreWeave 的租约兜底、投资 Perplexity，以及 TD Cowen 所说的对 Oracle 的供应商融资。他还提到 Oracle 在周五收盘后立刻声明资金充足，并提到了“vendor financing”，但这笔融资的规模和条款至今不明。他认为 NVIDIA 的资产负债表已接近承受极限，WSJ 也报道过它背负大量采购承诺。",
+    "作者认为 Anthropic 和 OpenAI 的资金状况都很紧。Anthropic 上市价 83 美元，短暂冲高约 30% 后回落到 86 至 87 美元，市值约 1.17 万亿美元；它还促使承销商 Morgan Stanley 提前行使“绿鞋”期权，多拿了 122 亿美元，却失去了 1.47 亿股的托底缓冲。作者预计，上市约六个月后约 90 亿股可流通，届时会被集中抛售。OpenAI 方面，Bloomberg 报道其以 1.25 万亿美元估值融资 110 亿美元，并特别注明款项已到账；作者指出它第三季度营收 100 亿美元，运营亏损 109 亿美元，所以这笔钱连半个季度的开支都不够。他认为 OpenAI 几个月内就需要新资金，路径不清楚。",
+    "作者认为 NVIDIA 的需求其实在减少。黄仁勋的丑闻促使美国堵上了中国公司从马来西亚等地远程租用 NVIDIA GPU 的漏洞：中国 AI 实验室 Moonshot 取消了 1.5 亿美元订单，东南亚 neocloud 公司 Aaolani 的价值减半，Jefferies 估计这些规则可能让 NVIDIA 在 FY2028 损失 440 亿至 620 亿美元收入。作者还引用 Bloomberg，称 ING 出售 5 亿美元数据中心贷款时需求“冷淡”。他的判断是，NVIDIA 的客户越来越难付款，客户的客户也越来越难租用。",
+    "作者对复任一事本身做了强烈的道德和政治批评。他说特朗普对 WSJ 承认，是股价下跌才让他决定出面；NYT 报道 Alice Huang 及其丈夫与中国情报机构保持联系，黄仁勋还向董事会承认有更多婚外情；NYT 也披露他对下属说过威胁性的辱骂话。作者认为，为复任叫好的人（他点名了 Jim Cramer、Cantor Fitzgerald、Sam Altman 等）等于说只要公司够值钱，违法和虐待就可以不付代价。他还认为这件事给了民主党一个攻击特朗普的把柄。"
+   ],
+   "points_en": [
+    "The author says the return changes nothing fundamental and only postpones the risk. He lists more than $200 billion of NVIDIA GPUs sitting in warehouses, no clear return on investment, CoreWeave's debt problems, high interest rates and a shortage of land and power. He also says token spend has been flat for months and token prices are falling. In his account, AI startups supply about 80% of Anthropic's and OpenAI's revenue, and those startups are unprofitable.",
+    "The author describes Huang's value to the market as a \"balance sheet as a service\" model of circular financing. He cites the WSJ for more than $100 billion invested across 293 deals since 2023, and the FT for a little under $700 billion in backstops and vendor financing. His examples are the CoreWeave lease backstops, the investment in Perplexity and vendor financing for Oracle reported by TD Cowen. He notes that Oracle stated it was fully funded just after Friday's close and mentioned vendor financing, whose size and terms are still unknown. He believes NVIDIA's balance sheet is nearing its limit, and he notes that the WSJ reported on a large volume of purchase commitments.",
+    "The author sees funding strain at both Anthropic and OpenAI. Anthropic listed at $83, rose about 30%, then fell to $86 to $87 with a market cap near $1.17 trillion. Morgan Stanley exercised the greenshoe option early to raise another $12.2 billion, which removed a 147 million share buffer. The author expects about 9 billion shares to become tradable around six months after the listing and to be sold heavily. For OpenAI, Bloomberg reported $11 billion raised at a $1.25 trillion valuation and noted the money had been wired. The author points to a Q3 operating loss of $10.9 billion on $10 billion of revenue and says $11 billion would not cover half a quarter's costs.",
+    "The author says demand for NVIDIA GPUs is falling. The Huang affair led to the closing of a loophole that let Chinese firms rent NVIDIA GPUs remotely from places such as Malaysia. Moonshot cancelled a $150 million order and the Southeast Asian neocloud Aaolani lost half its value. Jefferies estimates the new rules could cost NVIDIA $44 billion to $62 billion of FY2028 revenue. The author also cites Bloomberg on weak demand for $500 million of ING data center loans. He concludes that NVIDIA's customers struggle to pay and their customers struggle to rent.",
+    "The author criticizes the reinstatement in strong moral and political terms. He says Trump told the WSJ that falling stock prices made the time right to act. He cites the NYT on contact between Alice Huang, her husband and Chinese intelligence, and on Huang's threatening language toward staff. He cites the WSJ on Huang disclosing further affairs to the board. In the author's view, people who welcome the return, including Jim Cramer, Cantor Fitzgerald and Sam Altman, are saying that a valuable executive should face no consequences. He also says the move gives Democrats an easy line of attack against Trump."
+   ],
+   "topics": [
+    "AI bubble",
+    "NVIDIA",
+    "AI financing"
+   ]
+  },
+  {
+   "id": "4062c8b68531",
+   "kind": "blog",
+   "source": "experimental-history.com",
+   "source_url": "https://experimental-history.com",
+   "title": "Everything I know about writing",
+   "url": "https://www.experimental-history.com/p/everything-i-know-about-writing",
+   "published": "2026-11-24T17:18:25+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为写作就像把一个形状别扭的想法塞进别人脑子里，过程很折腾，但折腾分“好”与“坏”两种：不停尝试并大量失败的是好的，原地空转的是坏的。",
+   "background_zh": "这是 Experimental History 的一篇题为“Everything I know about writing”的文章，原文在开头不久处被截断，这里只能覆盖已有的部分。作者从一项让蚂蚁和人类比赛搬运物体的研究讲起，引出对写作的看法。",
+   "conclusion_zh": "作者在已有的文字里没有给出明确建议，只是说写作难免让人发狂，关键是让自己处在不断试错的“好的折腾”里，而不是空转。后面的内容被截断，无法得知。",
+   "brief_en": "The author says writing is like maneuvering an awkwardly shaped idea into another person's head, and that its frustration comes in two kinds: constant trial and failure is good, while idle spinning is bad.",
+   "background_en": "This is the start of an Experimental History post titled \"Everything I know about writing\". The text is cut off early, so only the opening is covered. The author begins with a study in which ants and humans compete at moving an object, and uses it to discuss writing.",
+   "conclusion_en": "The visible text gives no explicit advice. It suggests that the maddening part of writing is unavoidable and that the aim is to be in the \"good nuts\" kind of struggle. The rest of the post is cut off.",
+   "points_zh": [
+    "作者用蚂蚁和人类的实验来比喻写作。研究者让蚂蚁和人分别以个人和小组的形式，把一个尺寸别扭的物体搬过一系列障碍；人类被禁止交流，还要戴墨镜和面具，物体则涂了猫粮和金枪鱼让蚂蚁觉得是食物。作者说自己读了论文好几遍，仍不明白为什么这样设计，但觉得视频里的情形正是写作：把一个大小别扭的想法塞进别人脑子里，卡在错误的位置，退回来重新调整，还会纳闷看起来这么简单的事为什么这么难。",
+    "作者区分了“坏的折腾”和“好的折腾”。坏的折腾是反复想同一件事，或者什么也没想，只是敲桌子、每 17 秒查一次邮箱，既痛苦又没有产出。好的折腾是每分钟尝试很多种写法，几乎都失败，直到某一种对了；这同样痛苦，但最后会得到你愿意拿给别人看的东西。作者拿它和修眉毛打比方，说两者很像。"
+   ],
+   "points_en": [
+    "The author uses the ant and human experiment as a comparison for writing. Researchers had ants and humans move an awkwardly sized object through obstacles, alone and in groups. The humans could not communicate and wore sunglasses and masks, and the object was rubbed with cat food and tuna to attract the ants. The author says he has read the paper several times and still does not know why it was designed this way. He finds the videos matching writing: the idea gets stuck in the wrong spot, you back up to reorient it and you wonder why something that looks easy is so hard.",
+    "The author separates \"bad nuts\" from \"good nuts\". Bad nuts means thinking the same thing again and again, or nothing at all, while drumming your fingers and checking email every 17 seconds. It is painful and pointless. Good nuts means trying a million things a minute while almost all of them fail, until one works. It is also painful, but it ends in something you want to show other people. The author compares it to getting a unibrow waxed."
+   ],
+   "topics": [
+    "writing",
+    "creativity"
+   ]
+  },
+  {
+   "id": "c808d58c8ec4",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "GPT 6.2 Astra Solves a Historical Mystery",
+   "url": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/",
+   "published": "2026-11-24T16:53:59+00:00",
+   "basis": "full",
+   "brief_zh": "历史学教授 Mark Humphries 报告说，GPT-6.2 Astra 在很少提示的情况下，用 22 分钟认出了耶鲁 Beinecke 图书馆一本 1808 年匿名速写本的作者，他预计历史学界会出现信心危机，但程度比数学界轻。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "History professor Mark Humphries reports that GPT-6.2 Astra identified the creator of an anonymous 1808 sketchbook at Yale's Beinecke Library in 22 minutes with minimal prompting, and he expects a milder crisis of confidence among historians than in mathematics.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "Simon Willison 转引了 Mark Humphries 的案例：GPT-6.2 Astra 只靠公开的一手和二手资料，自主找出了速写本的作者，还发现了一份冷门的纸质档案，预测它能印证假设，检查后果然如此。它找到一条日记记录，说明 vicomte de Chabot 的来访比速写本里提到的某条河边日期早五天，并提出 Chabot 的旅行日志（只能向 Cleveland State University 申请）可以证实速写本出自他手。Humphries 说这份新材料本身也是重大发现，加拿大史和皮毛贸易史学者会感兴趣。他还预计，参照数学界的经验，明年春夏历史学界会面对“能做人类史学家做不到的事”的智能体系统而产生信心危机，但对历史学的冲击会比数学轻，因为解难题是数学的全部，而历史学家不断根据变化的现在重新解读过去，写出的书文更接近哲学和文学，所以“人性”是历史写作的一个必要条件。这是 Humphries 一个案例的叙述，Willison 在这里只做了转引。"
+   ],
+   "points_en": [
+    "Simon Willison quotes Mark Humphries' case study. GPT-6.2 Astra used only public primary and secondary sources to find the sketchbook's creator on its own. It found a little known paper archive, predicted that it would support the hypothesis and was proved right when the source was examined. It found a diary entry about a visit by the vicomte de Chabot five days before a date the sketchbook mentions at a nearby river. It suggested that Chabot's travel journal, available only by order from Cleveland State University, could confirm his authorship. Humphries says the new source is a major find for Canadian and fur trade historians. He expects that, as in mathematics, historians will face a crisis of confidence around next spring or summer over agentic systems that can do what human historians cannot. He expects it to be less profound than in math, because solving hard problems was the whole game in math, while historians keep reinterpreting the past and write works closer to philosophy and literature, so humanity is a requirement for historical writing. This is one case as told by Humphries, and Willison only quotes it."
+   ],
+   "topics": [
+    "AI",
+    "history",
+    "LLMs"
+   ]
+  },
+  {
+   "id": "1ec25aa1d767",
+   "kind": "blog",
+   "source": "johndcook.com",
+   "source_url": "https://johndcook.com",
+   "title": "Taking a password joke seriously",
+   "url": "https://www.johndcook.com/blog/2026/11/24/password-joke/",
+   "published": "2026-11-24T15:16:48+00:00",
+   "basis": "full",
+   "brief_zh": "按一条玩笑式的密码规则（阿拉伯文、中文、泰文、韩文、克林贡文、Wingdings 和 emoji 各一个字符）生成密码，大约有 76.5 比特熵，和 13 位大小写字母加数字的密码差不多，但直接使用这些 Unicode 字符会有问题。",
+   "background_zh": "2016 年 3 月 3 日，Finley Creative 向 Jeff Atwood 发了一条玩笑，说密码必须包含上述七类字符各一个，原帖现已不见。John D. Cook 认真算了一下这样的密码有多安全。",
+   "conclusion_zh": "Cook 的结论是，这条玩笑规则生成的密码在强度上并不差，但要实际使用，需要先转成 ASCII 之类的可输入形式，不宜直接用 Unicode 字符。",
+   "brief_en": "A password built under a joke rule, with one character each from Arabic, Chinese, Thai, Korean, Klingon, Wingdings and emoji, has about 76.5 bits of entropy, similar to 13 mixed-case alphanumeric characters, but the Unicode characters are hard to use directly.",
+   "background_en": "On March 3, 2016, Finley Creative joked to Jeff Atwood that a password must contain one character from each of those seven sets. The original post has gone. John D. Cook takes the joke seriously and works out how secure such a password would be.",
+   "conclusion_en": "Cook concludes that a password from the joke rule would have reasonable strength, but it should be converted to a typeable form such as ASCII characters and not used directly as Unicode.",
+   "points_zh": [
+    "按各类字符数相乘，可能的组合是 153 × 20992 × 57 × 11172 × 38 × 196 × 1409，约 2.146 × 10^19 种。这个数取决于对每个词的理解：例如上面的算法把阿拉伯文和泰文按字母数计算，而克林贡文按 26 个字母、10 个数字和 3 个标点计算。如果允许这七个字符以任意顺序出现，可能性再乘以 7! = 5040，相当于 76.5 比特熵。",
+    "这样的密码很难直接使用。Cook 提出可以先按规则生成，再用 Base 58 之类的编码转换成能在标准键盘上输入的字符。如果直接用这七个 Unicode 字符，会因为字符编码方式不同而出问题；另外，要求包含“符号”的网站通常只允许很有限的符号。"
+   ],
+   "points_en": [
+    "Multiplying the character counts, 153 × 20992 × 57 × 11172 × 38 × 196 × 1409, gives about 2.146 × 10^19 possibilities. The number depends on how each category is read. For example, the calculation counts Arabic and Thai letters, but counts Klingon as 26 letters, 10 digits and 3 punctuation marks. If the seven characters may appear in any order, the count is multiplied by 7! = 5040, which gives 76.5 bits of entropy.",
+    "Such a password is hard to use as it is. Cook suggests generating it by the rule and then converting it with something like Base 58 encoding into characters typed on a standard keyboard. Using the seven Unicode characters directly invites trouble because of different possible encodings. Also, sites that require a symbol often allow only a restricted set of symbols."
+   ],
+   "topics": [
+    "passwords",
+    "security",
+    "Unicode"
+   ]
+  },
+  {
+   "id": "0040682f8eea",
+   "kind": "blog",
+   "source": "devblogs.microsoft.com/oldnewthing",
+   "source_url": "https://devblogs.microsoft.com/oldnewthing",
+   "title": "What happens to entries in the CoreApplication Properties when the source apartment shuts down?",
+   "url": "https://devblogs.microsoft.com/oldnewthing/20261124-00/?p=112889/",
+   "published": "2026-11-24T15:00:00+00:00",
+   "basis": "full",
+   "brief_zh": "CoreApplication.Properties 里的条目不会因为添加它们的 apartment 关闭而消失，只有整个进程里最后一个 apartment 关闭、COM 整体关闭时才会失效。",
+   "background_zh": "评论者 Luca Bacci 提到，Windows.ApplicationModel.Core.CoreApplication 这个 COM 静态存储在未打包的 Win32 程序里也能访问，而且条目似乎和添加它的 apartment 生命周期绑定。作者先回答这两个问题，再在下一篇文章里研究 Luca 观察到的现象。",
+   "conclusion_zh": "作者的结论是：条目不随来源 apartment 消失，只随 COM 的整体关闭而消失。至于 Luca 观察到的现象，作者留到下一篇再查。",
+   "brief_en": "Entries in CoreApplication.Properties do not disappear when the apartment that added them shuts down. They expire only when the last apartment closes and COM shuts down for the whole process.",
+   "background_en": "Commenter Luca Bacci noted that the COM static store for Windows.ApplicationModel.Core.CoreApplication was reachable from an unpackaged Win32 application. He also said entries seemed tied to the lifetime of the apartment that added them. The author answers both points and promises to look at Luca's observation next time.",
+   "conclusion_en": "The author concludes that entries do not expire with the apartment that added them. They expire only when COM shuts down for the process. He leaves Luca's observation for the next post.",
+   "points_zh": [
+    "COM 静态存储对所有应用可用。文档写明这个 API 只支持 UWP 应用，但其中的 Properties 属性例外，始终可用。",
+    "apartment 关闭后，它添加的条目仍然保留。作者给了一段 C++/WinRT 示例：主线程初始化单线程 apartment，再起一个线程，同样初始化后向 Properties 插入键 \"meow\"、值 1，然后反初始化该线程的 apartment；主线程等它结束后查询 \"meow\"，仍能取到 1。",
+    "条目的失效时间是最后一个 apartment 关闭、COM 在整个进程内关闭的时候，而不是添加它的 apartment 关闭的时候。"
+   ],
+   "points_en": [
+    "The COM static store is available to all applications. The documentation says the API is supported in UWP apps only, but the Properties property is an exception and is always available.",
+    "Entries stay after the source apartment shuts down. The author's C++/WinRT demo initializes a single-threaded apartment on the main thread. A second thread initializes its own apartment, inserts the key \"meow\" with the value 1 into Properties and then uninitializes its apartment. After that thread is joined, the main thread looks up \"meow\" and gets 1.",
+    "Entries expire when the last apartment shuts down, because COM then shuts down for the entire process."
+   ],
+   "topics": [
+    "Windows",
+    "COM",
+    "WinRT"
+   ]
+  },
+  {
+   "id": "0e8b7c898551",
+   "kind": "blog",
+   "source": "johndcook.com",
+   "source_url": "https://johndcook.com",
+   "title": "Memorable 12-digit primes",
+   "url": "https://www.johndcook.com/blog/2026/11/24/memorable-12-digit-primes/",
+   "published": "2026-11-24T14:13:51+00:00",
+   "basis": "full",
+   "brief_zh": "想记住一个 12 位素数，可以用现成的好记数字 999999999989，或者随机找一个再用 Major 记忆法编码，而且自己编的荒诞画面比通顺的句子更管用。",
+   "background_zh": "有个老笑话说，用某个程序前得输入一个 12 位素数。作者以前写过用 Python 生成 12 位素数的方法，这次想的是：如果经常要输，怎么把它背下来。",
+   "conclusion_zh": "作者的立场是：Major 记忆法经过练习确实有效，但从写下来的助记词看不出这一点；实用上应该先有数字再编画面，并用 pegs 避免歧义。",
+   "brief_en": "To remember a 12-digit prime, one can use an easy one such as 999999999989 or encode a random one with the Major system. The author says self-made, nonsensical images work better than fluent sentences.",
+   "background_en": "An old joke says a program may ask you to enter a 12-digit prime. The author wrote earlier about generating one in Python. This time he asks how to memorize one if you do this often.",
+   "conclusion_en": "The author says the Major system works with practice, although the written mnemonics do not make that obvious. In practice the number comes first, and pegs help to avoid ambiguity.",
+   "points_zh": [
+    "最省事的办法是记 999999999989。作者用 sympy 的 isprime 验证它是素数。",
+    "想用 Major 记忆法的话，先随机生成素数再编码。作者生成了 298412857819，编成“knob o’ fire, tin foil, cave tuba”。这类词组写出来很荒唐，但自己编的最有效，别人编的很难套用。",
+    "反过来先造通顺的句子、再找能解码成素数的句子也行。作者让 Grok 生成，得到“A young man sits near the lake”，解码为 273201024157，经 isprime 验证是素数。",
+    "通顺句子看起来好记，但实际使用中并不占优。作者说，某本记忆术的书先给出普通句子和对应数字，再问你想背哪个，这有误导性，因为作者是先想好助记句、再算出数字的。实际情况是数字在先，为它编助记内容，结果多半是荒诞的词串。记句子是记词序列，“sits near the lake”和“sitting near a lake”是同一幅画面，却是不同的词，解码出不同的数字；词序列短期可能好记，生动的画面保留得更久。",
+    "“knob o’ fire”也有脆弱之处，“o’”容易变成“of”，作者选它只是因为写出来比其他备选好看。实践中常用 pegs，也就是固定的数字编码，来消除歧义。比如 484 对应 rover，340 对应 Morse code，这样想起“Mars rover”时就不会纠结该解码成 340（Mars）还是 484（rover）。"
+   ],
+   "points_en": [
+    "The easiest option is to memorize 999999999989. The author checks with sympy's isprime that it is prime.",
+    "To use the Major system, generate a random prime and then encode it. The author's example is 298412857819, which he encodes as \"knob o' fire, tin foil, cave tuba.\" Such phrases look ridiculous in writing, but they work best when you make them yourself, since it is hard to reuse someone else's mnemonics.",
+    "One can also work the other way and look for a memorable phrase that decodes to a prime. The author asked Grok, which gave \"A young man sits near the lake\", decoding to 273201024157. isprime confirms it is prime.",
+    "Fluent sentences look easier but are not better in practice. The author says a memory book he read began with an ordinary sentence and its number and asked which you would rather memorize. He calls this misleading, because the author had made the mnemonic first and then calculated the number. In practice the number comes first and the mnemonic is built for it, so it is usually nonsensical. A sentence is a sequence of words, not images. \"Sits near the lake\" and \"sitting near a lake\" give the same image but different words and different numbers. Words may be easier in the short term, but vivid images stay longer.",
+    "\"Knob o' fire\" is also fragile, since \"o'\" could become \"of\". The author chose it only because it looked better in writing than other options. People who use the Major system often use pegs, which are fixed encodings, to remove ambiguity. For example, if 484 is \"rover\" and 340 is \"Morse code\", then \"Mars rover\" cannot be confused with 340 (Mars)."
+   ],
+   "topics": [
+    "Memory",
+    "Prime numbers",
+    "Python"
+   ]
+  },
+  {
+   "id": "5e9018158443",
+   "kind": "blog",
+   "source": "anildash.com",
+   "source_url": "https://anildash.com",
+   "title": "How to install an app on your Commodore 64",
+   "url": "https://anildash.com/2026/10/08/install-an-app-commodore-64/",
+   "published": "2026-11-24T14:13:05+00:00",
+   "basis": "full",
+   "brief_zh": "作者用一份 1986 年在 Commodore 64 上“安装程序”的流程作对比，说明那时装一个游戏要花约 8 小时，还要先跑去商场买杂志。",
+   "background_zh": "这篇文章用第二人称写成，把读者放回 1986 年，一步步演示怎么在 Commodore 64 上装一个“app”。当时人们还叫它“程序”，主要靠杂志上刊登的代码。",
+   "conclusion_zh": "作者最后半开玩笑地提议，把“程序”这个词留给人手敲出来的软件，用“app”指机器生成的那种。",
+   "brief_en": "Using a step-by-step guide to installing a program on a Commodore 64 in 1986, the author shows that it took about 8 hours, plus a trip to the mall to buy a magazine.",
+   "background_en": "The post is written in the second person and puts the reader in 1986. It walks through installing an \"app\" on a Commodore 64, which people then called a program and which came mostly from code printed in magazines.",
+   "conclusion_en": "The author ends with a half-joking motion to use \"programs\" for software that humans type in and to keep \"apps\" for software that machines generate.",
+   "points_zh": [
+    "获取程序的渠道很少，信息也很少。当月只有 COMPUTE!’s Gazette 和 RUN 两本杂志可选，要骑车去有电脑杂志的商场书店，店员分不清各种杂志，也没有评分或评测，只能看封面。Gazette 售价 3 美元，约合 2026 年的 9 美元。一个月通常只有两三个程序。",
+    "装一个游戏要手抄代码。作者以 Survivor 为例：先读第 36 页的介绍，再抄第 106 到 108 页的 BASIC 加载程序和 345 行十六进制代码，错一个字符游戏就跑不起来。要输入这些代码得有 MLX 工具（约 100 行），而 MLX 又依赖 Automatic Proofreader（31 行 BASIC，没有给它用的校对工具）。作者估计两个工具约 2 小时，Survivor 约 6 小时，总共约 8 小时，存到磁带还要 10 到 20 分钟。",
+    "以后可以用 300 baud 调制解调器下载现成程序，但也有代价。拨本地 BBS 或 Quantum Link，若只有长途号码就要按分钟付费；传输要几十分钟到几小时，占着家里唯一的电话线，家里有人拿起听筒就会断线重来。",
+    "文中还讲了个性化设置：用 POKE 53281,1 把背景设成白色，用 POKE 53280,4 把边框设成紫色，共有 16 种颜色可选，但这些设置不会保存，关机或运行程序就丢了。"
+   ],
+   "points_en": [
+    "Sources were few and information was scarce. That month only COMPUTE!'s Gazette and RUN were options. You had to bike to the mall with a bookstore that stocked computer magazines. The clerk could not tell the magazines apart, and there were no ratings or reviews, only the cover. Gazette cost three dollars, about nine dollars in 2026 money. Two or three programs a month was typical.",
+    "Installing a game meant typing in code by hand. The author uses Survivor as the example. You read the article on page 36, then type in a BASIC loader and 345 rows of hexadecimal code on pages 106 to 108. One error stops the game from running. Typing this needs the MLX utility, which is about 100 lines. MLX in turn needs the Automatic Proofreader, which is 31 lines of BASIC with no proofreader of its own. The author estimates about 2 hours for the two tools and about 6 hours for Survivor, so about 8 hours in total. Saving to cassette takes another 10 to 20 minutes.",
+    "Later you might download programs with a 300 baud modem, but this has costs. A BBS may be long distance, which is billed by the minute, and Quantum Link is another option. Transfers take tens of minutes to hours and tie up the household's only phone line. If anyone picks up a handset, the connection drops and you start again.",
+    "The author also describes customization. POKE 53281,1 sets a white background and POKE 53280,4 sets a purple border, with 16 colors to choose from. These settings are not saved and are lost when you turn off the computer or run a program."
+   ],
+   "topics": [
+    "Retrocomputing",
+    "Commodore 64",
+    "History"
+   ]
+  },
+  {
+   "id": "04c88397df3e",
+   "kind": "blog",
+   "source": "anildash.com",
+   "source_url": "https://anildash.com",
+   "title": "NYC’s venture capitalists need to love themselves",
+   "url": "https://anildash.com/2026/11/03/nyc-venture-capitalists-love-themselves/",
+   "published": "2026-11-24T14:13:05+00:00",
+   "basis": "full",
+   "brief_zh": "Anil Dash 认为，纽约的风险投资人不该再向仇视这座城市的硅谷大佬讨好，而应该公开支持本地的创业者和社区。",
+   "background_zh": "作者是纽约科技圈的长期参与者，也是连续创业者。他看到不少纽约投资人在迎合硅谷的大投资人，所以写了这篇呼吁。",
+   "conclusion_zh": "作者呼吁纽约投资人公开选边，支持本地创业者，并以问句收尾：你知道自己是谁吗，你愿意加入我们吗？",
+   "brief_en": "Anil Dash argues that New York venture capitalists should stop seeking approval from Silicon Valley figures who dislike the city, and should back local founders and the community openly.",
+   "background_en": "The author has long taken part in New York's tech community and is a repeat founder. He saw many New York investors seeking favor with big Silicon Valley investors, and he wrote this appeal in response.",
+   "conclusion_en": "The author calls on New York investors to take a public side and support local founders. He ends with questions: do you know who you are, and will you join us?",
+   "points_zh": [
+    "作者认为纽约不需要讨好硅谷大佬。他说，纽约政客曾给西海岸大公司几十亿美元的优惠，即使这些优惠被社区挡下，公司照样按承诺在纽约招人。他引用本地科技社区的数据，称过去 5 年湾区科技岗位减少，而纽约增长了 23%。他还说，其中一些人在优惠没了之后就开始抹黑纽约。",
+    "作者批评部分纽约投资人对硅谷大投资人的态度。他说这些人只做同样几家大机构的“feeder fund”，并且在相关问题上沉默，他列举了硅谷投资人中的厌女、反犹、反穆斯林和种族歧视言论，还提到最有影响力的风投公司聘用了一名曾勒死一名手无寸铁黑人男子的合伙人。他说，不少投资人私下认同他，却不公开表态。作者的措辞很激烈，这些是他本人的指控。",
+    "作者认为从商业上看，这种做法也站不住。他指出，晚期基金几乎被少数几家机构控制，只靠比谁更会迎合 Andreessen 无法形成差异；退出渠道也被少数把关者控制；年轻从业者只知道那几个常见的大名字，不知道纽约本地投资人，也不信任他们。",
+    "作者给出的做法很具体：拒绝配合。他建议投资人对 LP 说，不走 a16z 的路有很大的 alpha，可以称之为“Anti-authoritarian Dynamism”；公开表明纽约存在，不是硅谷的卫星；站到邻居和社区一边，并称 Zohran Mamdani 是投资人的“best friend”。他还借用 Knicks 和 Liberty 球员为例，说可以友善，但要争胜、不受欺负。"
+   ],
+   "points_en": [
+    "New York does not need to court Silicon Valley tycoons. The author says city lawmakers offered billions in handouts to West Coast firms. Even when the community stopped them, the companies hired as many people in New York as promised. He cites the local tech community's data that the Bay Area lost tech jobs over five years while New York grew by 23%. He adds that some of these people began to run down the city once the handouts ended.",
+    "He criticizes some New York investors for their stance toward large Silicon Valley investors. He says they act as feeder funds for the same few big firms and stay silent in public. He lists misogyny, antisemitism, Islamophobia and racism among Silicon Valley investors, and says the most powerful venture firm hired a partner who strangled an unarmed Black man. He says many investors object in private but not in public. The language is strong, and these are his own accusations.",
+    "He says the approach also fails on business grounds. A few firms control most late-stage funds, so competing at pleasing Andreessen gives no edge. Exits are controlled by a small number of gatekeepers. Early-career people know only the usual big names and are skeptical of New York investors.",
+    "His proposal is to refuse to play along. He suggests telling LPs there is large alpha in going the way a16z is not, and calling it \"Anti-authoritarian Dynamism\". Investors should say publicly that New York exists and is not a satellite of Silicon Valley. They should side with their neighbors and community, and he calls Zohran Mamdani their best friend. He uses the Knicks and the Liberty as examples: players can be nice but they play to win and do not take abuse."
+   ],
+   "topics": [
+    "Venture capital",
+    "New York City",
+    "Tech industry"
+   ]
+  },
+  {
+   "id": "0e2846f2675b",
+   "kind": "blog",
+   "source": "shkspr.mobi",
+   "source_url": "https://shkspr.mobi",
+   "title": "Virgin Media Hub 5 API",
+   "url": "https://shkspr.mobi/blog/2026/11/virgin-media-hub-5-api/",
+   "published": "2026-11-24T12:34:52+00:00",
+   "basis": "full",
+   "brief_zh": "Virgin Media Hub 5(即 Sagemcom F3896LG)在本地网络内开放了一批无需密码的 REST 接口,能读到调制解调器状态、信道和日志,登录后还能读出明文密码、改 LED、重启等。",
+   "background_zh": "作者见过这些接口散见于网上,但从未集中整理过,于是在调制解调器模式下逐个测试,把有用的汇总成一份清单。他没有在 Hub 5x 上试过。",
+   "conclusion_zh": "作者说这就是他在调制解调器模式下能找到的全部接口,路由器模式下可能还有更多,欢迎读者在评论里补充新发现。",
+   "brief_en": "The Virgin Media Hub 5 (a Sagemcom F3896LG) exposes many REST endpoints to the local network without a password. They reveal modem state, channels and logs, and after login they can return the plain-text password, change the LED and reboot the device.",
+   "background_en": "The author had seen these APIs documented in scattered places but never together. He tested them in modem mode and collected the useful ones in one list. He did not try them on the Hub 5x.",
+   "conclusion_en": "The author says this is all he found in modem mode. He expects more APIs in router mode and asks readers to leave a comment if they find anything else.",
+   "points_zh": [
+    "不需要登录的接口能读到大量设备信息。本地网络里任何设备都可以请求,但要带 User-Agent,可能还要忽略自签名证书。例如 /rest/v1/cablemodem/state 返回 DOCSIS 版本、MAC、序列号、运行时间和状态;serviceflows 显示标称速率(示例中下行约 12.3 亿、上行约 1.1 亿);eventlog 是事件日志;downstream 和 upstream 列出各信道的频率、功率、调制方式、信噪比和纠错数。",
+    "还有一些系统类的无需登录接口。system/info 之外的 localization 给出型号名,modemmode 显示是否处于调制解调器模式,firstinstall 显示是否完成初次安装,mta/lines 是两路 VoIP 电话口(示例中均未启用),user/login 显示密码连续错误次数和锁定时间。语言文件 /resources/languages/uk.json 能取到界面文本,作者顺带吐槽其中有很多 IPv6 字符串,但 Virgin 仍没有支持现代网络栈。",
+    "登录需向 /rest/v1/user/login POST 密码,返回 token,之后所有请求带 Bearer token。登录后 system/ui/defaults 会直接返回当前密码的明文;system/info 给出软件和硬件版本(示例为 LG-RDK_11.6.2-2410.1、1.2);network/ledlight 可读取 LED 亮度和自动模式,用 PUT 修改。",
+    "登录后还能执行几个操作:对 system/restore 发 DELETE 会生成包含全部设置的 .bin 文件;对 user/3/token/<token> 发 DELETE 用来注销;对 system/reboot 发 POST 会重启设备,返回 accepted: true。"
+   ],
+   "points_en": [
+    "Many endpoints work without login and return a lot of device data. Any device on the local network can call them, but the request needs a User-Agent and may need to ignore the self-signed certificate. For example, /rest/v1/cablemodem/state gives the DOCSIS version, MAC, serial number, uptime and status. serviceflows shows the nominal speed (about 1.23 billion down and 110 million up in the sample). eventlog is the event log. downstream and upstream list each channel's frequency, power, modulation, SNR and error counts.",
+    "Other system endpoints also need no login. localization gives the model name, modemmode shows whether the hub is in modem mode, and firstinstall shows whether setup is complete. mta/lines covers two VoIP phone ports (both disabled in the sample), and user/login shows the count of failed passwords and the lockout time. The file /resources/languages/uk.json gives the UI text. The author notes that it holds many IPv6 strings, yet Virgin still shows no sign of supporting a modern network stack.",
+    "Login is a POST of the password to /rest/v1/user/login. It returns a token, which is sent as a Bearer token on later requests. After login, system/ui/defaults returns the current password in plain text. system/info gives the software and hardware versions (LG-RDK_11.6.2-2410.1 and 1.2 in the sample). network/ledlight reads the LED brightness and auto mode, and a PUT changes them.",
+    "Logged-in users can also run several actions. A DELETE to system/restore generates a .bin file with all settings. A DELETE to user/3/token/<token> logs out. A POST to system/reboot restarts the device and returns accepted: true."
+   ],
+   "topics": [
+    "networking",
+    "security",
+    "hardware"
+   ]
+  },
+  {
+   "id": "cd41182dd873",
+   "kind": "blog",
+   "source": "pluralistic.net",
+   "source_url": "https://pluralistic.net",
+   "title": "Pluralistic: Free lunches (24 Nov 2026)",
+   "url": "https://pluralistic.net/2026/11/24/move-fast-break-kings/",
+   "published": "2026-11-24T12:15:29+00:00",
+   "basis": "full",
+   "brief_zh": "Doctorow 认为,按经济学家自己的“自由市场”逻辑,大科技公司长期的高利润恰恰说明市场被扭曲了,美国以外的国家现在应该废除当年被迫接受的保护科技巨头的法律,去抢这些利润。",
+   "background_zh": "作者是 Cory Doctorow,这是他的日更博客 Pluralistic。他从“经济学家看到地上的 20 美元却说那一定是假的”这个老笑话切入,批评新古典经济学把市场看作信息充分、自动出清的机器。",
+   "conclusion_zh": "作者的立场是,其他国家应该废除美国强加的“扭曲市场”的法律,包括保密和竞业条款,以及阻止逆向工程、抓取和切换服务的知识产权法。他说,真正信奉市场的经济学家应当支持这样做;硅谷当年说要颠覆低效行业,如今别人对他们这样做不算盗版,“只是生意”。",
+   "brief_en": "Doctorow argues that, by economists' own free-market logic, Big Tech's lasting high margins show a distorted market. He says countries outside the US should now repeal the laws they were pushed to adopt to protect those firms, and take the margins for themselves.",
+   "background_en": "The author is Cory Doctorow, writing in his daily blog Pluralistic. He starts from the old joke about economists who see a $20 bill on the sidewalk and say it must be fake. He uses it to criticise the neoclassical view of markets as self-clearing machines with full information.",
+   "conclusion_en": "The author's position is that other countries should repeal the \"market-distorting\" laws the US imposed. These include secrecy and non-compete terms and the IP laws that block reverse-engineering, scraping and switching services. He says economists who believe in markets should support this. Silicon Valley once urged people to disrupt lazy industries, so doing the same to it is not piracy. He ends with \"It's just business.\"",
+   "points_zh": [
+    "新古典经济学只对某些“扭曲”敏感。按他们的逻辑,长期高利润和高市场份额说明有东西在阻止竞争。但企业俘获监管者、用保密协议和竞业禁止限制员工、用强制仲裁条款让人无法起诉,这些都没被当作扭曲。作者举例:Walmart 与 Pepsi 的秘密协议、Big Tech 组成卡特尔(如 Jedi Blue)、以及多年宽松的并购审查。",
+    "大科技的利润来自垄断和国家背书的锁定。作者给出的数字:Amazon 平台抽走每笔销售的 51% 到 60%,最大利润来源是每年约 800 亿美元的搜索位置收费;Apple 对每笔支付收 30% 佣金,每年约 1000 亿美元,而处理成本不到 1%;Meta 和 Google 在广告系统里同时代表买卖双方。Uber 靠知识产权法阻止他人做比价或工会工具,压低司机收入、抬高乘客价格。",
+    "经济学家用来否定“工资停滞”的统计有水分。这些数据把 Medicare 和 Medicaid 的支出算进美国人的“消费”,而这些医疗服务比加拿大、德国、英国等国贵 200% 到 300%。作者举例:Buffalo 的穷人做医保透析,价格是 Toronto 的三倍,却被算成多消费了几百美元。作者据此认为,这是用垄断高价证明大家很富。",
+    "美国已经没有能力再逼其他国家维持这些法律。过去 25 年美国贸易代表办公室用“免关税进入美国市场”的胡萝卜和关税威胁的大棒,迫使贸易伙伴立法保护美国科技公司。现在美国消费者被房贷、房租、医疗和学生债掏空(作者引用的数字:美国工人退休储蓄中位数为 955 美元),而特朗普对全世界加征关税,让关税威胁失去了威慑力。"
+   ],
+   "points_en": [
+    "Neoclassical economists object only to certain kinds of distortion. By their own logic, persistent high margins and market share mean something blocks competition. Yet regulatory capture, non-disclosure and non-compete terms for workers, and forced arbitration clauses are not counted as distortions. The author cites a secret Walmart and Pepsi deal, Big Tech cartels such as Jedi Blue, and years of lax merger enforcement.",
+    "He says Big Tech's profits come from monopoly and state-backed lock-in. He gives these figures: Amazon takes 51% to 60% of each sale on its platform, and its largest profit source is about $80b a year from search-placement fees. Apple takes a 30% commission on payments, about $100b a year, against processing costs under 1%. Meta and Google represent both buyers and sellers in the ad market. Uber uses IP law to block apps that would help drivers and riders, and pays drivers less while charging riders more.",
+    "He says the statistics economists use to deny wage stagnation are misleading. The figures count Medicare and Medicaid spending as American \"consumption\", although these services cost 200% to 300% more than in Canada, Germany or the UK. His example is a poor person in Buffalo on Medicaid dialysis at three times the Toronto price, counted as if they had spent hundreds of dollars on treats. He argues that this uses monopoly prices to claim people are rich.",
+    "He says the US can no longer force other countries to keep these laws. For 25 years the US Trade Representative used tariff-free access to the American market as a carrot and tariffs as a stick to get partners to protect US tech firms. Now American consumers are drained by mortgages, rent, health care and student debt (he cites a median retirement saving of $955). He adds that Trump's tariffs on every country destroyed the deterrent value of tariffs."
+   ],
+   "topics": [
+    "antitrust",
+    "economics",
+    "Big Tech"
+   ]
+  },
+  {
+   "id": "f67e04191443",
+   "kind": "blog",
+   "source": "dfarq.homeip.net",
+   "source_url": "https://dfarq.homeip.net",
+   "title": "Why AOL bought Netscape",
+   "url": "https://dfarq.homeip.net/why-aol-bought-netscape/?utm_source=rss&utm_medium=rss&utm_campaign=why-aol-bought-netscape",
+   "published": "2026-11-24T12:00:15+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为 AOL 1998 年花 42 亿美元买下 Netscape 是一笔亏本买卖,主要赌的是与 Sun 的合作,而这个赌注没有成功。",
+   "background_zh": "1998 年 11 月 24 日,America Online 以 42 亿美元收购了网络浏览器厂商 Netscape。作者想弄清楚 AOL 当时为什么要买。",
+   "conclusion_zh": "作者的结论是这笔交易对 AOL 来说很糟,只是后来被 Time Warner 合并这个更大的败笔盖过了,所以很少有人再提。他提到 Firefox 如今是少数派浏览器,但也是唯一不在很大程度上受 Google 或 Apple 控制的浏览器。",
+   "brief_en": "The author argues that AOL's $4.2 billion purchase of Netscape in 1998 was a poor deal. He says it rested mainly on a partnership with Sun, and that bet did not pay off.",
+   "background_en": "On November 24, 1998, America Online bought the browser maker Netscape for $4.2 billion. The author tries to work out why AOL did it.",
+   "conclusion_en": "The author concludes that the deal was bad for AOL and is now overshadowed by the Time Warner merger, one of the worst mergers of all time. He notes that Firefox is a minority browser today, but the only one not largely controlled by Google or Apple.",
+   "points_zh": [
+    "这桩交易本来就不太合理。AOL 是网络服务商,却因为向 Microsoft 做出让步,在安装光盘里附带 Internet Explorer。Microsoft 有自己的竞品 MSN,并把它从一开始就捆绑在 Windows 95 里。AOL 想让自己也被放进后续版本的 Windows 95,条件就是继续使用并推广 IE。",
+    "作者认为关键可能是 Sun Microsystems。Netscape 有浏览器和 Web 服务器两条产品线,AOL 对服务器软件不感兴趣,而 Sun 感兴趣,于是 AOL 与 Sun 合伙买下后者。当时 Sun 被看作可能打破 Microsoft 垄断的力量,计划基于 Java 做便宜、低功耗的家用电脑。AOL 希望这些电脑运行 AOL,Sun 把 AOL 纳入计划,AOL 则向 Sun 采购软件和设备。",
+    "这个赌注落空了。1998 年底 Emachines 推出 399 美元的电脑,网络服务商可以补贴购机款来拓展市场,这些电脑运行的是 Windows。Java 比 Windows 更高效、更稳定、更安全的设想也没有实现,Sun 的 Java 轻量电脑从未真正出现。",
+    "AOL 最后基本没有拿到 42 亿美元的价值。他们希望延缓 Netscape 的份额下滑,并借助捆绑 AOL Instant Messenger 对抗 Yahoo 和 Microsoft 的即时通讯软件,但没有成功。AOL 最终把代码开源,由此产生了 Mozilla Foundation 和 Firefox。"
+   ],
+   "points_en": [
+    "The match never made full sense. AOL was an ISP, but it shipped Internet Explorer on its CDs as a concession to Microsoft. Microsoft had a rival service, MSN, bundled with Windows 95 from the start. AOL got into later builds of Windows 95 on the condition that it kept using and promoting IE.",
+    "The author thinks the key may have been Sun Microsystems. Netscape made a browser and a web server. AOL had no interest in server software, but Sun did, so AOL partnered with Sun to buy that part. Sun then looked like a possible challenger to Microsoft, with a plan for cheap, low-power home computers based on Java. AOL wanted those machines to run AOL. Sun would include AOL in its plans and AOL would buy software and equipment from Sun.",
+    "The bet failed. In late 1998 Emachines launched $399 computers, and ISPs could subsidise them to grow the market. Those computers ran Windows. The idea that Java would be faster, more stable and more secure than Windows did not work out, and the Sun Java appliance never appeared.",
+    "AOL got little of the $4.2 billion in value. It hoped to slow Netscape's loss of market share and to bundle AOL Instant Messenger against Yahoo and Microsoft, but this did not succeed. AOL finally open-sourced the code, which led to the Mozilla Foundation and Firefox."
+   ],
+   "topics": [
+    "tech history",
+    "AOL",
+    "browsers"
+   ]
+  },
+  {
+   "id": "0c3113a41419",
+   "kind": "blog",
+   "source": "herman.bearblog.dev",
+   "source_url": "https://herman.bearblog.dev",
+   "title": "Comments and emails",
+   "url": "https://herman.bearblog.dev/comments-and-emails/",
+   "published": "2026-11-24T07:16:00+00:00",
+   "basis": "full",
+   "brief_zh": "Herman 说 Bear 故意不内置评论、留言簿和联系表单,只提供一个带邮箱地址的链接,因为邮件比表单更能过滤垃圾和匿名骚扰。",
+   "background_zh": "经常有人问 Bear 为什么没有这些功能。本周一位 Bear 博主通过嵌入的第三方联系表单收到一条恶意信息,发件人用假名,还冒用了另一位博主的公开邮箱,于是作者把这个设计理由写了出来。",
+   "conclusion_zh": "作者的立场是继续用邮件链接代替表单。想让读者联系自己的博主,可以按文档设置邮件回复链接和基于邮件的留言簿;如果觉得他说得不对,也可以发邮件告诉他。",
+   "brief_en": "Herman says Bear leaves out built-in comments, guestbooks and contact forms on purpose. It offers a link with an email address instead, because email filters spam and anonymous abuse better than forms do.",
+   "background_en": "People often ask why Bear lacks these features. This week a Bear blogger received a nasty message through an embedded third-party contact form. The sender used a fake name and the public email address of another blogger. The author wrote down his reasons for the design.",
+   "conclusion_en": "The author keeps his position that an email link is better than a form. Bloggers who want readers to reach them can set up a reply-by-email link and an email-based guestbook as the docs explain. If readers think he is wrong, he invites them to get in touch.",
+   "points_zh": [
+    "评论框和联系表单会接收任何人的任何内容。垃圾机器人很快就会找上门,博主得去审核队列,而且这类表单通常要姓名和邮箱却不验证。上述那条恶意信息就是这样发出来的,属于匿名纸条,无处回复、无从拉黑,发送者也没有社交上的约束。",
+    "用邮件链接可以借用邮件服务商的垃圾过滤。邮件一般得来自一个能回复也能拉黑的真实账号;表单要做同样的验证,得靠确认链接,而多数表单不做。担心被爬取邮箱的话,可以用专门的别名或单独的地址。",
+    "邮件仍可能收到来自一次性账号的恶意信息,但发件人得先注册账号或别名,这点麻烦足以劝退一部分人。作者推测网上多数恶意是一时冲动,这点阻力能让冲动过去。想表达喜欢的读者本来就有邮箱,也愿意让博主看到。"
+   ],
+   "points_en": [
+    "Comment boxes and contact forms accept anything from anyone. Spam bots find them quickly, the blogger has to moderate a queue, and most forms ask for a name and email without checking either. The nasty message this week came this way. It was an anonymous note with nobody to reply to or block, and the sender had no social incentive to behave.",
+    "An email link uses the spam filtering that the email provider already does. A message generally has to come from a real account that the blogger can reply to or block. A form would need confirmation links to do the same checks, and most do not. A blogger worried about scrapers can use a dedicated alias or a separate address.",
+    "Nasty emails from throwaway accounts are still possible, but the sender must first set up an account or alias. The author thinks this friction is enough to discourage some people. He suspects most online nastiness is impulsive, and the friction lets the impulse pass. A reader who wants to say they liked a post already has an email address and is happy to share it."
+   ],
+   "topics": [
+    "Bear blog",
+    "email",
+    "spam"
+   ]
+  },
+  {
+   "id": "dea2f8e3c06e",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "datasette-charts 0.2a0",
+   "url": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
+   "published": "2026-11-24T04:24:29+00:00",
+   "basis": "short",
+   "brief_zh": "Simon Willison 发布了 datasette-charts 0.2a0，这个绘图插件现在接入了 Datasette Agent，用户可以在聊天里让它生成图表。",
+   "background_zh": "datasette-charts 是 Simon Willison 前一天刚推出的 Datasette 绘图插件。这次更新在它的基础上加了与 Datasette Agent 的集成。",
+   "conclusion_zh": "",
+   "brief_en": "Simon Willison released datasette-charts 0.2a0, and the charting plugin now integrates with Datasette Agent, so users can ask the chat to create a chart.",
+   "background_en": "datasette-charts is a charting plugin for Datasette that the author introduced the day before. This release adds integration with Datasette Agent.",
+   "conclusion_en": "",
+   "points_zh": [
+    "插件和 Datasette Agent 打通后，用户在聊天里提出画图的要求，Agent 就会生成图表。它用的是插件原有的图表建议和图表生成工具，没有另起一套。",
+    "作者在 agent.datasette.io 上录了演示视频，并附上了视频中聊天记录的 Markdown 导出。该站点支持用 GitHub 登录，读者可以自己试用这个插件。"
+   ],
+   "points_en": [
+    "With the integration, a user asks for a chart in the chat and the agent creates it. It uses the plugin's existing chart suggestion and generation tools.",
+    "The author recorded a demo video on agent.datasette.io and also provides a Markdown export of the chat from the video. The site allows sign-in with GitHub, so readers can try the plugin themselves."
+   ],
+   "topics": [
+    "Datasette",
+    "LLM agents",
+    "data visualization"
+   ]
+  },
+  {
+   "id": "80ee2a6733f1",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "datasette-agent 0.7a1",
+   "url": "https://simonwillison.net/2026/Nov/24/datasette-agent/",
+   "published": "2026-11-24T03:45:57+00:00",
+   "basis": "short",
+   "brief_zh": "Simon Willison 发布了 datasette-agent 0.7a1，改进了聊天侧边栏 iframe 对 URL 片段哈希（fragment hash）的导航支持。",
+   "background_zh": "Datasette Agent 的聊天会话本来就能打开 iframe 侧边栏，并在里面跳转到不同页面。作者做这次改动，是为了修复 datasette-charts 0.2a0 里的一些 bug。",
+   "conclusion_zh": "",
+   "brief_en": "Simon Willison released datasette-agent 0.7a1, which improves how the chat side-panel iframe handles navigation by URL fragment hashes.",
+   "background_en": "Datasette Agent chat sessions could already open an iframe side panel and navigate to different pages in it. The author made this change to fix some bugs in datasette-charts 0.2a0.",
+   "conclusion_en": "",
+   "points_zh": [
+    "这个版本改进了按片段哈希进行的导航。其他 Datasette 插件会在用户操作导致状态变化时更新片段哈希，这样 Agent 就能与它们更深入地集成。",
+    "作者说这只是一个小改进，是为了修复 datasette-charts 0.2a0 的 bug 才做的。他称后者是更令人兴奋的发布。"
+   ],
+   "points_en": [
+    "This version improves navigation by fragment hashes. Other Datasette plugins update the fragment hash when user actions change their state, so the agent can integrate with them more deeply.",
+    "The author calls it a small improvement, made to fix bugs in datasette-charts 0.2a0. He describes that release as the much more exciting one."
+   ],
+   "topics": [
+    "Datasette",
+    "LLM agents",
+    "web development"
+   ]
+  }
+ ],
+ "picks": {
+  "important": [],
+  "liked": []
+ },
+ "generated_at": "2026-11-25T05:01:00.345102+00:00"
+}
