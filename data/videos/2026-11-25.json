@@ -2,6 +2,107 @@
  "date": "2026-11-25",
  "items": [
   {
+   "id": "yt-xjOFWtxnQTo",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "Claude Opus 5.6？動畫能播，還能只改一處嗎？｜The Tea Ride × The Last Page",
+   "url": "https://www.youtube.com/watch?v=xjOFWtxnQTo",
+   "published": "2026-11-25T10:22:03+00:00",
+   "basis": "transcript",
+   "brief_zh": "作者认为，一个动画作品的“能播”只是第一关，真正的交接要看别人能否只改一处（例如灯色）并从头重跑验证；同时“Opus 5.6”目前只是作者口径，公开模型目录里查不到。",
+   "background_zh": "频道主大雷看到 The Tea Ride 和 The Last Page 两部据称由 Claude Opus 5.6 生成的动画作品，想弄清两件事：5.6 这个说法有没有官方依据，以及这类作品交给别人后能不能继续修改。他先查官方文档和原作者的展示与仓库，再用自己做的虚构“雨窗”小场景做了一次演练。",
+   "conclusion_zh": "大雷的结论是：能播只是第一关，只改一处并且还能从头跑通才算交接。看到类似 5.6 的消息，他会做两份记录：一份留作者作品和文件，当周就能研究；另一份留官方入口和自己的任务，等能访问时按原条件复验，用来决定要不要换工具。两个结论不必混在一起。",
+   "brief_en": "The author argues that an animation that plays is only the first test. A real handoff means someone else can change one thing, such as a light colour, and rerun from the start. He also says \"Opus 5.6\" is so far only the creators' wording and does not appear in the public model catalog.",
+   "background_en": "The host, Dalei, saw two animations, The Tea Ride and The Last Page, said to be made with Claude Opus 5.6. He wanted to know whether the 5.6 claim has an official basis and whether such works can be edited after handoff. He checked the official docs and the creator's posts and repositories, then ran an exercise on a fictional rain-window scene of his own.",
+   "conclusion_en": "Dalei concludes that playing is only the first test, and that a work counts as handed over when one change can be made and it still runs from the start. When he sees news such as the 5.6 claim, he keeps two records. One holds the creators' work and files, which can be studied that week. The other holds the official entry point and his own tasks, to be rechecked under the same conditions once access exists, and it informs whether to switch tools. He does not mix the two conclusions.",
+   "points_zh": [
+    "“Opus 5.6”这个型号没有官方入口支撑，应当按待核处理。大雷查了 Claude 公开模型目录，看到的是 Opus 5.5，没有可调用的 5.6 条目；模型停用文档写明 Opus 4.5 计划在 2027 年 1 月 22 日从官方接口退役，建议换到 5.5。同一作者的说法也不一致：Danny Boy 的帖子写 Opus 5.6，对应仓库的署名却是另一个版本。所以他的做法是先用当前能选到的版本跑任务，给新版本留一个位置，日后能访问时再按原条件复验。",
+    "判断一个作品能不能交接，先看有没有别人能打开的入口，再看改动路径。The Tea Ride 把播放器放进网页文件，另外单独留了乐谱、时间轴和播放器代码，所以别人既能看，也能定位到要改的文件。The Last Page 被仓库定义为非官方概念短片，留有提示词、镜头合同和各镜头代码，但需要按说明准备渲染和合成依赖才能重新出片。大雷的区分是：只给同事看就给浏览地址；下周还要加一段，就同时留启动方式、构建条件和一份跑成功的结果。",
+    "“只改一处”要靠先留底稿和同位置对照来验证。以自制雨窗场景为例，他先记录开头、中间镜头移动和结尾停点三个位置，需求写得很具体：只把阅读灯从暖黄改成蓝绿，镜头路线、时长和窗外雨线保留。如果需求写成“更有氛围”，模型可能连窗和桌面一起改。验证时把暖色版和青色版并排，从同一位置出发、到同一位置停；他故意留了一次做错的版本（在 12 秒与 13 秒之间速度不对），把速度调回后再从第一帧重跑。这只是他自己的小示例，不是对模型的系统测试。",
+    "别人接手后跑不起来，要用交接的那条路径从头重开来验。大雷的做法是关掉项目，按交给同事的路径进入，从第一个画面重播，不依赖自己电脑上的残留状态：打开是空的说明入口没通；画面有但节奏不对，再查版本、资源或启动参数是否缺一项。交接要留三样：能打开的预览、一份说明怎么运行的文件、对照用的原版和改版，并写清这次只动了哪一项。模型名称和经验教训要分开记，验证步骤也要写成别人能照着重跑的形式，例如“确认灯是青色、拖到中间雨还在、拖到结尾镜头停在原处”。"
+   ],
+   "points_en": [
+    "The \"Opus 5.6\" label has no official entry behind it and should be treated as unverified. Dalei checked the public Claude model catalog and found Opus 5.5 but no callable 5.6 entry. The deprecation page says Opus 4.5 is scheduled to retire from the official API on 22 January 2027, with 5.5 as the recommended replacement. The same creator's wording also differs between sources: the Danny Boy post says Opus 5.6, while the repository credits say something else. His approach is to run tasks on the version he can select now, leave a slot for the new one and recheck under the same conditions once it is available.",
+    "To judge whether a work can be handed over, he first asks whether others have an entry point to open it, then asks where the change would go. The Tea Ride puts its player in a web file and keeps the score, the timeline and the player code separately, so a colleague can both watch it and find the file to edit. The repository describes The Last Page as an unofficial concept short. It includes the prompts, shot contracts and per-shot code, but a user must prepare rendering and compositing dependencies to produce the video again. Dalei's rule: for viewing only, give a browser link. If another segment will be added next week, also leave the startup method, the build conditions and one successful result.",
+    "\"Change only one thing\" has to be verified with a saved baseline and a same-position comparison. In his rain-window scene he first recorded three points: the start, the camera path in the middle and the stopping point. His request was specific: change the reading lamp from warm yellow to blue-green and keep the camera path, the duration and the rain. A vaguer request such as \"more atmosphere\" could also change the window and the desk. He compared the warm and teal versions side by side, from the same start to the same stop. He kept one deliberate mistake, where the speed was off between seconds 12 and 13, then restored the speed and reran from the first frame. This is his own small example, not a systematic test of the model.",
+    "When someone else cannot run the work, he reopens it through the handoff path to find out why. He closes the project, enters by the route given to the colleague and replays from the first frame without relying on leftover state on his own computer. If it opens empty, the entry point failed. If the picture appears but the timing is wrong, he checks for a missing version, asset or startup parameter. A handoff should include a preview that opens, a file explaining how to run it, and the original and edited versions with a note on the one thing that changed. Model names and lessons learned should be recorded separately. The checks should be written so the next person can repeat them, for example: confirm the lamp is teal, confirm the rain continues at the midpoint, and confirm the camera stops where it did before."
+   ],
+   "topics": [
+    "Claude Opus",
+    "AI animation",
+    "Handoff workflow"
+   ]
+  },
+  {
+   "id": "yt-hwWlEuI359w",
+   "kind": "video",
+   "source": "Two Minute Papers",
+   "source_url": "https://www.youtube.com/@TwoMinutePapers",
+   "title": "Claude AI Solved It… But Nobody Understands How.",
+   "url": "https://www.youtube.com/watch?v=hwWlEuI359w",
+   "published": "2026-11-25T09:54:23+00:00",
+   "basis": "transcript",
+   "brief_zh": "视频称,Claude AI 与一位 Anthropic 和 Stanford 的研究员给出了黎曼猜想的证明,约 1700 万行代码,已在 Lean 中通过多个独立系统验证,但据作者所知没有人完全读懂整个论证。",
+   "background_zh": "黎曼猜想是关于素数分布的猜想,160 多年无人解决。Terence Tao 曾说需要超越当前 AI 的东西,大概 2050 年前后才可能有解,而视频称仅 35 天后就出现了这个证明。作者 Károly Zsolnai-Fehér 自称只是学生,没法完全理解,只讲自己的直觉。",
+   "conclusion_zh": "作者认为这是历史性时刻,证明里确实有东西可学。他希望以后类似成果来自开放权重模型和公开协作,而不是闭源模型。",
+   "brief_en": "The video says Claude AI and a researcher at Anthropic and Stanford produced a proof of the Riemann hypothesis. It is about 17 million lines of code and has passed several independent checkers in Lean, but to the author's knowledge no human has fully understood it.",
+   "background_en": "The Riemann hypothesis concerns the distribution of prime numbers and had gone unsolved for over 160 years. Terence Tao had said something beyond current AI was needed and that a solution might come around 2050. The video says the proof arrived just 35 days later. The author, Károly Zsolnai-Fehér, calls himself a student who cannot fully follow the proof and offers only his own intuition.",
+   "conclusion_en": "The author calls this history in the making and says there is plenty to learn from the proof. He hopes future results like this come from open weight models and public collaboration, not closed models.",
+   "points_zh": [
+    "证明已经形式化并通过验证,但没人真正读懂。证明用 Lean 写成,Lean 是可以被机器检查的数学语言;检查已经完成,多个独立验证系统都认为证明正确。整个论证约 1700 万行代码,据作者所知没有人完整理解。",
+    "压缩证明的工作正在进行,整体进展有限。一些 AI 系统在用自动研究循环把证明压得更简洁、更好懂。个别片段缩短了 90% 以上,但整体几乎没变。作者补充说,后来又发现一个项目已经对整个证明做出了有意义的压缩。",
+    "作者认为证明本身教给我们什么,比结论为真更重要。只知道猜想为真并不改变太多,很多人本来就默认它为真继续做研究。如果证明只是一团乱麻,就不清楚能学到什么。",
+    "作者按自己的理解解释了核心思路。要估计不超过 X 的素数个数,现有方法给出的上下界在 X 很大时相差达到约 X 本身的位数那么多,太松。要收紧上界,需要让每个素数在公式里出现很多次,像把一百张纸叠起来称重再除以一百。但直接叠加会让误差一起爆炸。一种叫 lift 的技术能在叠加时控制误差。lift 本身是 50 多年前发明的,新证明的一大突破是确定要用多少次,作者说是 X 的平方根次,并把它们串联起来,这部分他认为是新的。作者强调这只是学生的直觉,可能有错。",
+    "后续动向:有人已在让多个 AI agent 尝试另一个百万美元千禧年难题 P 等于 NP,过程公开可看。作者说真正的解可能还需要更多人为引导,但谁也说不准。"
+   ],
+   "points_en": [
+    "The proof has been formalized and verified, but nobody really understands it. It was written in Lean, a mathematical language that a machine can check. The check has finished and multiple independent verification systems agreed it is correct. The argument is about 17 million lines of code, and to the author's knowledge no one has understood all of it.",
+    "Work to compress the proof is under way, with limited progress on the whole. AI systems are running auto research loops to make the proof shorter and easier to follow. Some pieces shrank by over 90%, but the whole proof barely moved. The author adds that he later found another project that has achieved meaningful compression on the whole proof.",
+    "The author argues that what the proof teaches matters more than the fact that the hypothesis is true. Knowing it is true changes little, since many researchers already assumed it and continued their work. If the proof is a tangle, it is unclear what anyone would learn from it.",
+    "The author explains the core idea as he understands it. To count primes up to X, current methods give a floor and a ceiling. For very large X they differ by about as many digits as X itself, which is too loose. To tighten the ceiling, every prime must appear many times in the formula, like weighing a stack of 100 sheets of paper and dividing by 100. Simple stacking makes the error explode. A technique called the lift keeps the error under control while the stack grows. The lift was invented over 50 years ago. The author says the new step is deciding how many lifts to use, about the square root of X, and chaining them together. He stresses this is a student's intuition and could be wrong.",
+    "Others are already trying to have AI agents solve another million dollar problem, P equals NP, and the attempts can be watched in public. The author says a real solution might need more direction, but nobody knows."
+   ],
+   "topics": [
+    "Riemann hypothesis",
+    "AI for mathematics",
+    "Lean"
+   ]
+  },
+  {
+   "id": "yt-HNqJsASt9Eg",
+   "kind": "video",
+   "source": "程序员老王",
+   "source_url": "https://www.youtube.com/@programmer-wang",
+   "title": "老黄辞职11天",
+   "url": "https://www.youtube.com/watch?v=HNqJsASt9Eg",
+   "published": "2026-11-25T06:06:33+00:00",
+   "basis": "transcript",
+   "brief_zh": "视频是一首讽刺美股AI股的歌:博主说一个叫老黄的人辞职去玩GTA6,11天里股价先暴跌、后暴涨,散户追涨杀跌,账户亏损,自己也因此只爱绿色。",
+   "background_zh": "这是程序员老王频道的一段歌曲式视频,没有描述文字。歌词围绕美股AI板块的大幅波动展开,自述的是一个散户的亏损经历。字幕为自动生成,错字很多,部分内容无法确定。",
+   "conclusion_zh": "歌的结尾是自嘲式的放弃:红盘太累,美股太折腾,他说不如也去玩GTA6、请年假。",
+   "brief_en": "The video is a satirical song about US AI stocks. It says a man called 老黄 took leave to play GTA6, prices fell and then soared within 11 days, and the retail singer lost money by chasing the swings.",
+   "background_en": "This is a song-style video from the channel 程序员老王, with no description. The lyrics describe big swings in US AI stocks and a retail investor's losses. The subtitles are auto-generated and contain many errors, so some details are uncertain.",
+   "conclusion_en": "The song ends with a self-mocking surrender. Red markets are tiring and US stocks are too much, so the singer says he might as well take leave and play GTA6 too.",
+   "points_zh": [
+    "歌词的主线是“老黄”请年假去通关GTA6,他离开的11天里行情大起大落。歌里说11月12日老板(会所)一句话之后,连着几个交易日市值暴跌;他11天后回来,股价狂飙,别人的账户翻倍,热搜上一片欢呼。",
+    "唱歌的散户一直踏错节奏。歌词说他一买入就遇到下跌,一追高就遇到瀑布式下跌,想跟着AI躺赢赚双倍,结果天天被套,字幕里还提到亏掉一年的外卖钱,以及大概30个点的亏损(字幕模糊,数字不一定准)。",
+    "歌词把AI股的走势形容成片场和大戏:算力、新片、小作文轮番上阵,今天喊着暴涨,明天就缩水,上午说泡沫要破裂,下午又涨回来,剧本随便改,苦的是散户。",
+    "自嘲的段落说,他原来最爱红色,买了美股AI后才发现满屏红色是亏损,所以以后只爱绿色(歌词里的红绿含义与他的账户体验相关,字幕不够清晰)。他白天做PPT、晚上9点半熬夜等科技股财报,而别人去打GTA6反而轻松赚钱。"
+   ],
+   "points_en": [
+    "The main story is that 老黄 takes annual leave to finish GTA6 and the market swings hard during his 11 days away. The lyrics say that after a remark on November 12, market value fell for several trading days. After he returns, prices surge, other people's accounts double and the trending topics fill with cheers.",
+    "The singer keeps mistiming his trades. The lyrics say he buys and the price falls, and he chases a high and meets a sharp drop. He hoped to double his money with AI but got stuck in losing positions. The subtitles mention a loss of about 30 points and a year's worth of food delivery money, but the numbers are unclear.",
+    "The lyrics describe AI stocks as a staged drama. Computing power, new products and rumor posts take turns. Prices are called to rise one day and shrink the next, a bubble is said to burst in the morning and recover in the afternoon, and the script changes at will. The lyrics say small investors suffer.",
+    "In the self-mocking part, the singer says he used to love red, but after buying US AI stocks he sees the red screen as losses, so he will love only green now. He makes slides by day and stays up at 9:30 pm for tech earnings, while others play GTA6 and seem to earn easily. The subtitles are unclear in places."
+   ],
+   "topics": [
+    "US stocks",
+    "AI stocks",
+    "Satire"
+   ]
+  },
+  {
    "id": "yt-2FQpO2BuGJ8",
    "kind": "video",
    "source": "大雷早上好",
@@ -280,5 +381,5 @@
    ]
   }
  ],
- "generated_at": "2026-11-25T05:09:13.642009+00:00"
+ "generated_at": "2026-11-25T10:33:44.791514+00:00"
 }
