@@ -1,0 +1,480 @@
+{
+ "date": "2026-11-26",
+ "items": [
+  {
+   "id": "3dfe24bdf47a",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Electrek Speculates on Trump’s Claim He ‘Protected’ Elon Musk After a ‘Very Tough Incident’ During His First Term",
+   "url": "https://electrek.co/2026/11/24/trump-protected-elon-musk-first-term-tough-incident/",
+   "published": "2026-11-26T00:16:54+00:00",
+   "basis": "short",
+   "brief_zh": "Electrek 的 Fred Lambert 推测，特朗普说自己“保护”过马斯克，指的是 2018 年马斯克因“私有化特斯拉”推文被 SEC 起诉、却在两天内和解的那件事，Gruber 转引时表示认同这个猜测。",
+   "background_zh": "特朗普称自己在第一任期内帮马斯克度过了一次“非常艰难的事件”，并说过“没有我就没有 Elon”之类的话。Electrek 想弄清他指的是哪件事，Daring Fireball 转引了这段分析。",
+   "conclusion_zh": "Lambert 的判断是，特朗普所指很可能就是 2018 年 SEC 对马斯克的诉讼与快速和解。这只是他的推测，文中没有特朗普本人的确认。",
+   "brief_en": "Electrek's Fred Lambert guesses that Trump's claim to have \"protected\" Musk refers to the 2018 SEC fraud suit over the Tesla take-private tweet, which ended in a settlement two days later. Gruber quotes the piece without disagreeing.",
+   "background_en": "Trump said he protected Musk during a very tough incident in his first term and that Musk would not be around without him. Electrek tried to work out which event he meant, and Daring Fireball quotes that analysis.",
+   "conclusion_en": "Lambert concludes that Trump most likely meant the 2018 SEC suit against Musk and its fast settlement. This is his own guess, and the text contains no confirmation from Trump.",
+   "points_zh": [
+    "Lambert 认为最吻合的是 2018 年的 SEC 诉讼。2018 年 8 月 7 日，马斯克发推称正在考虑以每股 420 美元将特斯拉私有化，并说“资金已落实”。实际上沙特公共投资基金只表达过兴趣，没有谈定任何交易或价格，三周内这个计划就作废了。",
+    "这起诉讼对马斯克的威胁很大。SEC 在 2018 年 9 月 27 日以证券欺诈起诉马斯克，不只要求罚款，还请求法院禁止他在任何上市公司担任高管或董事。Lambert 说，这意味着特斯拉将不再有马斯克，比他列出的其他事件都更符合“没有我就没有 Elon”这句话。",
+    "案子很快就了结了。两天后 SEC 宣布和解：马斯克继续当 CEO，三年内不任董事长，他和特斯拉各付 2000 万美元，共 4000 万美元。特斯拉增设两名独立董事，并同意让律师预先审核马斯克涉及重大事项的推文，但 SEC 从未完全执行这一条。马斯克既不承认也不否认指控。",
+    "当时的 SEC 主席是特朗普任命的 Jay Clayton。Lambert 据此押注特朗普说的就是这件事，并称这和特朗普的许多腐败行为一样，是公开发生的。"
+   ],
+   "points_en": [
+    "Lambert thinks the 2018 SEC lawsuit fits best. On August 7, 2018, Musk tweeted that he was considering taking Tesla private at $420 with funding secured. In fact Saudi Arabia's Public Investment Fund had only shown interest, with no deal or price agreed, and the plan died within three weeks.",
+    "The suit threatened Musk with a lot. The SEC sued him for securities fraud on September 27, 2018. It asked the court not only for a fine but also to bar him from being an officer or director of any public company. Lambert says this would have meant no Musk at Tesla, which matches \"you wouldn't have Elon if it wasn't for me\" better than anything else he lists.",
+    "The case ended quickly. Two days later the SEC announced a settlement. Musk stayed CEO and gave up the chairman title for three years. He and Tesla each paid $20 million, $40 million in total. Tesla added two independent directors and agreed to have a lawyer pre-approve Musk's material tweets, but the SEC never fully enforced that term. Musk neither admitted nor denied the charges.",
+    "The SEC was then run by Jay Clayton, a Trump appointee. Lambert bets this is what Trump meant, and he says that, like most of Trump's corrupt acts, it happened in the open."
+   ],
+   "topics": [
+    "Elon Musk",
+    "SEC",
+    "Tesla"
+   ]
+  },
+  {
+   "id": "2c33c3cedb65",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "Quoting Scott Aaronson",
+   "url": "https://simonwillison.net/2026/Nov/25/scott-aaronson/",
+   "published": "2026-11-25T23:26:32+00:00",
+   "basis": "short",
+   "brief_zh": "Scott Aaronson 认为，我们将得到的不是零散的复杂性问题解答，而是一整片过去只能隔着雾气瞥见的新数学真理“大陆”。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "Scott Aaronson says we will get not isolated answers to complexity questions but a whole new continent of mathematical truth that we had only glimpsed through fog.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "Aaronson 用列文虎克把显微镜对准池塘水、伽利略把望远镜对准星空来作比，说我们对复杂性理论宇宙乃至其后整个数学真理宇宙的“分辨率”已经大幅提高。引文没有说明是什么促成了这一点。"
+   ],
+   "points_en": [
+    "Aaronson compares the moment to van Leeuwenhoek aiming a microscope at pondwater and Galileo aiming a telescope at the stars. He says our resolution on the complexity-theoretic universe, and the wider universe of mathematical truth beyond it, has greatly improved. The quote does not say what caused this."
+   ],
+   "topics": [
+    "Complexity Theory",
+    "Mathematics"
+   ]
+  },
+  {
+   "id": "2da10ebf7215",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "1Password’s Backend Systems Were Compromised, Revealing Only Customer Account Metadata",
+   "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+   "published": "2026-11-25T22:52:37+00:00",
+   "basis": "short",
+   "brief_zh": "1Password 称其后端系统被入侵，攻击者只复制了部分客户的账户信息（登录用的姓名和邮箱），保险库数据和密钥未受影响；Gruber 认为这是教科书式的应对，也体现了端到端加密的价值。",
+   "background_zh": "1Password 发布公告，披露一次后端系统遭入侵的事件。Gruber 转引公告并加了评论，还提到 Todoist 前一天也被黑。",
+   "conclusion_zh": "1Password 的结论是用户不必改动任何设置，只需警惕钓鱼邮件。Gruber 认为这次事件说明端到端加密是必要的。",
+   "brief_en": "1Password says an attacker copied limited account information, meaning names and sign-in emails, from some customers' accounts. Vault data and keys were not affected. Gruber calls the response perfect and says it shows why end-to-end encryption matters.",
+   "background_en": "1Password published a notice about a compromise of some backend systems. Gruber quotes the notice and adds his own comment, and he also mentions that Todoist was hacked the day before.",
+   "conclusion_en": "1Password's position is that users need not change anything and should only be careful about phishing emails. Gruber concludes that the incident shows end-to-end encryption is essential.",
+   "points_zh": [
+    "公告说明了泄露范围。攻击者进入了部分后端系统，从一部分客户那里复制了有限的账户信息，包括客户用来登录 1Password 的姓名和邮箱。保险库、其中的条目以及保护它们的密钥都没有受到影响，1Password 本身也无法获取用户的密码或 secret key。",
+    "1Password 已采取处置措施。公司做了隔离，把受影响的服务恢复为干净版本，并触发了内部凭证轮换。用户无需更新账户上的任何设置，各应用和服务运行正常。",
+    "1Password 提醒用户提防钓鱼。可能出现自称来自 1Password 的意外邮件，比如用户并未发起的邀请或账户恢复请求。",
+    "Gruber 的评价是，1Password 处理得“完美”。他的理由是，客户存放的敏感数据没有只有客户才持有的 secret key 就无法访问，这正是端到端加密的意义。他还提到，Todoist 前一天被黑，一小部分用户的敏感数据被泄露。"
+   ],
+   "points_en": [
+    "The notice sets out what was exposed. The attacker got into some backend systems and copied a limited amount of account information from a subset of customers, including the names and email addresses used to sign in. Vaults, the items in them and the keys that protect them were not affected. 1Password says it has no access to users' passwords or secret keys.",
+    "1Password took response steps. It contained the incident, restored clean versions of the affected service and triggered a rotation of internal credentials. Users do not need to change anything in their accounts, and the apps and services work normally.",
+    "1Password warns users about phishing. Unexpected emails that appear to come from 1Password, such as invitations or account recovery requests the user did not start, may be attempts to deceive.",
+    "Gruber says 1Password handled the incident perfectly. His reasoning is that the sensitive data customers store cannot be accessed without the secret keys that only customers hold, and he says this is why end-to-end encryption is essential. He also notes that Todoist was hacked the day before and that sensitive data was exposed for a small segment of its users."
+   ],
+   "topics": [
+    "Security",
+    "1Password",
+    "Encryption"
+   ]
+  },
+  {
+   "id": "fd9d6acc316c",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "‘Trump Wanted Jensen Huang Back. Now, the President Is Alone in Washington’",
+   "url": "https://www.cnbc.com/2026/11/24/trump-jensen-huang-nvidia.html",
+   "published": "2026-11-25T22:31:10+00:00",
+   "basis": "full",
+   "brief_zh": "Gruber 转引 CNBC 和 TPM 的报道称，特朗普让黄仁勋复职后，连共和党盟友也没人为此辩护，一些人还表示将继续调查。",
+   "background_zh": "按转引的报道，黄仁勋被重新任命，特朗普对此很高兴，但国会山上的共和党人对此反应强烈。他们担心黄仁勋与一名疑似中国情报人员的关系可能危及美国国家安全。Gruber 摘录了 CNBC 和 TPM 的 Josh Marshall 的说法，所给文本在此处结束。",
+   "conclusion_zh": "Gruber 引用的报道最终落在同一个判断上：特朗普在黄仁勋一事上孤立无援，共和党内对他的反对在增加。这些说法都出自所引的 CNBC 和 Marshall，Gruber 在所给文本中没有再添加自己的论述。",
+   "brief_en": "Gruber quotes CNBC and TPM to say that after Trump brought Jensen Huang back, even his Republican allies in Congress are not defending the move, and some say they will continue to investigate Huang.",
+   "background_en": "In the quoted reports, Trump is pleased with Huang's reinstatement, but Republicans on Capitol Hill reacted strongly. They fear that Huang's relationship with a possible Chinese intelligence asset may have put U.S. national security at risk. Gruber excerpts CNBC and Josh Marshall of TPM, and the text given ends there.",
+   "conclusion_en": "The quoted reports end on one view: Trump stands alone on Huang, and opposition among Republicans is growing. These claims come from the quoted CNBC piece and Marshall, and Gruber adds no further argument of his own in the text given.",
+   "points_zh": [
+    "CNBC 报道，特朗普的喜悦与盟友的反应形成反差。即使是他最坚定的国会盟友也对黄仁勋复职表示不满，并表示会继续调查。参议员 Kevin Cramer 在 CNBC 上说，风险仍在：中国间谍可能掌握供应链中某位关键人物的信息，这个风险不值得冒，甚至可能得给黄仁勋“配个保姆”。",
+    "Gruber 强调的是没有人为此辩护。在他看来，值得注意的不只是一些国会共和党人批评特朗普此举，不管是针对英伟达与中国的国家安全问题，还是针对放弃共和党过去奉行的自由放任资本主义原则，更在于似乎没有任何人为之辩护。他还提到 The Washington Sun（原 NOTUS）周一的报道，其中有多名共和党人表示了某种程度的反对。",
+    "TPM 的 Josh Marshall 认为特朗普正在失去权力。他说，硅谷人士这一天来为黄仁勋回归欢呼，并教训民主党，但这与民主党无关。他认为特朗普的这一举动极不得人心，科技寡头也是美国现今最不受欢迎的有权势且未入狱的人群。他还称特朗普正在迅速失去权力，连共和党内也是如此，多名参议员公开抨击特朗普在筹码走私和间谍调查中袒护黄仁勋的做法，他们正在抱团，因为自身权力在衰退、处境越来越孤立。"
+   ],
+   "points_en": [
+    "CNBC reports a gap between Trump's reaction and that of his allies. Even his staunchest allies in Congress recoiled at the reinstatement and said they will continue their investigations. Sen. Kevin Cramer said on CNBC that the risk remains: a Chinese spy could know something about a key person in the supply chain, and that risk is not worth taking. He said they might even have to put a babysitter on Huang.",
+    "Gruber stresses that nobody is defending the move. In his view, the notable point is not only that some congressional Republicans denounce it, whether over Nvidia and China or over the break from the older Republican principle of laissez-faire capitalism, but that none seem to defend it. He cites a Monday report from The Washington Sun (formerly NOTUS) that quotes many Republicans expressing some degree of opposition.",
+    "Josh Marshall of TPM argues that Trump is losing power. He says Silicon Valley figures spent the day celebrating Huang's return and lecturing Democrats, but the matter has nothing to do with Democrats. He calls Trump's move wildly unpopular and says tech oligarchs are among the least popular powerful people in the country who are not in prison. He adds that Trump is rapidly losing power, even among Republicans, and that several Senate Republicans publicly attacked his effort to shield Huang in the chip-smuggling and spy investigation. In Marshall's words, they are clustering together as their power ebbs and their isolation grows."
+   ],
+   "topics": [
+    "Nvidia",
+    "US Politics",
+    "China"
+   ]
+  },
+  {
+   "id": "4bba67edbe4e",
+   "kind": "blog",
+   "source": "jeffgeerling.com",
+   "source_url": "https://jeffgeerling.com",
+   "title": "Ansible Fails waiting for privilege escalation on Ubuntu 26",
+   "url": "https://www.jeffgeerling.com/blog/2026/ansible-fails-become-ubuntu2604/",
+   "published": "2026-11-25T21:43:00+00:00",
+   "basis": "short",
+   "brief_zh": "Ubuntu 26.04 自带的 Rust 版 sudo-rs 与传统 sudo 有不兼容之处，导致开启 sudo 密码时 Ansible 会报提权超时失败。",
+   "background_zh": "作者今年陆续把服务器从 Ubuntu 22 和 24 升级到 26，发现只要 sudo 需要密码，Ansible 自动化就会出错。",
+   "conclusion_zh": "文中没有给出解决办法，只指出问题很可能出在 sudo-rs 与传统 sudo 的不兼容上。",
+   "brief_en": "The Rust-based sudo-rs shipped with Ubuntu 26.04 appears to be incompatible with traditional sudo, so Ansible fails with a privilege escalation timeout when sudo requires a password.",
+   "background_en": "The author has been moving servers from Ubuntu 22 and 24 to 26 this year. They noticed that Ansible automation fails whenever sudo is password protected.",
+   "conclusion_en": "The post offers no fix. It only points to sudo-rs incompatibility with traditional sudo as the likely cause.",
+   "points_zh": [
+    "症状：用 `ansible-playbook main.yml -K` 并输入 BECOME 密码后，在 Gathering Facts 阶段失败，报错为等待提权提示符超时（12 秒）。",
+    "作者的推测：Ubuntu 在用 Rust 重写系统工具，26.04 附带的是 sudo-rs，它与作者用了 20 多年的传统 sudo 存在不兼容。文中用的是“Apparently”，说明这是推断，没有给出已验证的具体原因或解决办法。"
+   ],
+   "points_en": [
+    "The symptom: running `ansible-playbook main.yml -K` and entering the BECOME password fails at the Gathering Facts task. The error is a 12-second timeout waiting for the privilege escalation prompt.",
+    "The author's explanation: Ubuntu has been rewriting system utilities in Rust, and the sudo-rs version in 26.04 has some incompatibilities with the sudo the author has used for over 20 years. The author words this with \"apparently\", so it is a likely cause and not a confirmed one. The post gives no fix."
+   ],
+   "topics": [
+    "Ubuntu",
+    "Ansible",
+    "sudo-rs"
+   ]
+  },
+  {
+   "id": "e257e736c9a1",
+   "kind": "blog",
+   "source": "blog.jim-nielsen.com",
+   "source_url": "https://blog.jim-nielsen.com",
+   "title": "Have You Tried Using Your Agent?",
+   "url": "https://blog.jim-nielsen.com/2026/have-you-tried-your-agent/",
+   "published": "2026-11-25T19:00:00+00:00",
+   "basis": "full",
+   "brief_zh": "Jim Nielsen 担心软件行业正在把“让机器能用”当成“让人能用”，把本该由产品解决的问题推给用户自己的 AI agent。",
+   "background_zh": "2025 年他写过关于“AX”（agent 体验）的想法，担心 AX 会压过一切成为软件开发的首要目标。他并不反对 AX，只是希望优先级里人的体验排第一。这篇是他回看现状的followup。",
+   "conclusion_zh": "作者没有给出具体方案，他表达的立场是：担心大家把时间精力花在为机器做东西上，而不是彼此为对方做东西。",
+   "brief_en": "Jim Nielsen worries that software makers are treating \"works for machines\" as \"works for people\" and pushing users toward their own AI agents to solve problems the product should solve.",
+   "background_en": "In 2025 he wrote about \"AX\" (agent experience). He feared it would become the top priority for people building software. He is not against AX, but he would prefer that human experience comes first. This post checks where things stand now.",
+   "conclusion_en": "The author offers no specific plan. His position is concern that people are spending their time and attention making things for machines instead of for each other.",
+   "points_zh": [
+    "现状：作者觉得我们做出的东西对机器越来越好用，对人却越来越难用。他担心技术人员的普遍态度变成“人应该用自己的 agent 来访问我们的东西”，而不是“让它对人更易用”。",
+    "“可访问”的含义在滑移：“是否可访问”有时被理解成“AI agent 能不能访问”。既然 agent 是替人办事，让机器能访问就被算作让人能访问。作者设想的发布对话是：“能给 AI 用吗？”“能，但人自己没法真正用。”“那先发，以后再修。”",
+    "客服场景：他担心以后用户反馈“你们的东西对我不好用”，机构的默认回复会是“你试过用你的 AI agent 吗？”。",
+    "类比：现在的世界已经在边缘化没有智能手机的人。作者的父母没有智能手机，坐飞机、用超市优惠券、验证身份都很吃力。他问，10 到 20 年后，同样的事会不会在没有 AI agent 的人身上重演，“你下载我们的 app 了吗？”会变成“你试过用你的 agent 对接我们的吗？”。"
+   ],
+   "points_en": [
+    "The current state: the author feels we are building things that are increasingly accessible to robots and less accessible to people. He fears the collective attitude is becoming \"humans should use their agents to access our thing\" instead of \"we should make this more accessible to people\".",
+    "The meaning of \"accessible\" is shifting. \"Is it accessible?\" can come to mean \"Can an AI agent access it?\". Since the agent works on the person's behalf, making something accessible to a machine is counted as making it accessible to a human. He imagines a ship meeting: \"Does it work for the AI?\" \"Yes, but you can't really use it yourself.\" \"Ship it, we can fix that later.\"",
+    "Customer support: he fears that when people say a service is not working for them, the default reply will be \"Did you try using your AI agent?\".",
+    "An analogy: we already sideline people without smartphones. His parents have no smartphone and struggle with flying, grocery coupons and identity verification. He asks whether the same will happen in 10 to 20 years for people without AI agents. \"Have you tried downloading our app?\" would become \"Have you tried using your agent with ours?\"."
+   ],
+   "topics": [
+    "AI agents",
+    "accessibility",
+    "software design"
+   ]
+  },
+  {
+   "id": "cd16924426fb",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "datasette-charts 0.3a0",
+   "url": "https://simonwillison.net/2026/Nov/25/datasette-charts/",
+   "published": "2026-11-25T18:16:50+00:00",
+   "basis": "short",
+   "brief_zh": "datasette-charts 0.3a0 新增了图表注释功能，可以在图表上加线条、阴影区域和标签。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "datasette-charts 0.3a0 adds chart annotations: lines, shaded areas and labels can now be placed on a chart.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "新版本 datasette-charts 0.3a0 支持先渲染图表，再用线条、阴影区域、标签或三者组合来做注释；在 Datasette Lite 里可以用图表构建界面调整注释；如果同时安装 Datasette Agent，agent 也能生成带注释的图表，作者在 agent.datasette.io 演示站上用“对比 Simon 关于 LLM 和 Datasette 的标签内容，并加注释”这个提示做了示例。"
+   ],
+   "points_en": [
+    "The new release 0.3a0 lets users render a chart and then annotate it with lines, shaded areas, labels or a combination. In Datasette Lite the annotations can be adjusted in the chart builder UI. With Datasette Agent installed, the agent can build annotated charts too. The author shows an example from the agent.datasette.io demo, using a prompt that compares his tagged content about LLMs with his tagged content about Datasette."
+   ],
+   "topics": [
+    "Datasette",
+    "data visualization"
+   ]
+  },
+  {
+   "id": "483b66299c3f",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "‘The Life of a Composer’",
+   "url": "https://composer.pablostanley.com/#1",
+   "published": "2026-11-25T17:04:06+00:00",
+   "basis": "full",
+   "brief_zh": "John Gruber 认为 Pablo Stanley 的互动文章《The Life of a Composer》前半段有趣，之后变成过度纠结细节，反映出现代 UI 设计缺乏对平台 HIG 的谦逊。",
+   "background_zh": "Marcin Wichary 推荐了设计师 Pablo Stanley 做的互动作品，讲一个看似简单的“composer”（行业里对高级输入框之类控件的说法）背后要考虑多少设计细节。Gruber 转载并给出自己的看法。",
+   "conclusion_zh": "Gruber 的立场是：设计师应当遵循平台 HIG，做出清楚好用的界面，而不是在细节上无休止地琢磨。",
+   "brief_en": "John Gruber says Pablo Stanley's interactive essay \"The Life of a Composer\" is fun at first but becomes endless fretting over detail, which he takes as a sign of missing humility toward platform HIGs in modern UI design.",
+   "background_en": "Marcin Wichary recommended an interactive piece by designer Pablo Stanley. It explores how many design details go into a seemingly simple \"composer\", the industry term for a more sophisticated input field. Gruber links it and gives his own view.",
+   "conclusion_en": "Gruber's position is that designers should follow the platform HIG and build clear, usable interfaces instead of ruminating endlessly over details.",
+   "points_zh": [
+    "Wichary 的评价：这是一个很有趣、做工精良的体验，声音和音乐值得一听，这种谈界面细节的方式本身也能带来启发。作品也有 Stanley 配音的完整视频版，但 Wichary 更喜欢互动版。",
+    "Gruber 的体验：一开始很喜欢，读到大约四分之一时觉得太长，后来发现连一半都没到。它起初确实展示了设计师要考虑的细节之多，但之后就成了“没完没了的神经质”。他最后跳过了约一半，并说自己几乎从不链接他跳读过的内容。",
+    "Gruber 的观点：这说明平台需要 HIG，HIG 要详尽、周到、质量高，设计师也该遵循平台的 HIG。他认为遵从标准参考需要谦逊，而现代 UI 设计普遍缺这一点，Stanley 这篇互动文章尤其如此。",
+    "对“composer”一词的质疑：Gruber 认为那就是个文本框，加几个按钮，好看、功能一目了然、别分散注意力，做出来就行。他说，把它叫“composer”的人可能身处一个抽象、自我沉迷的设计圈子，纠结树皮的纹理而看不见森林；他认为真正的设计师应专注于帮助用户顺利走过森林。"
+   ],
+   "points_en": [
+    "Wichary's view: the piece is enjoyable and well crafted, the sound and music are worth hearing, and the way it talks about interface details could be inspiring. A video version with Stanley narrating also exists, but Wichary preferred the interactive one.",
+    "Gruber's experience: he enjoyed it at first. At about a quarter of the way through he found it too long, then learned he was not yet halfway. It does show how many details a designer may need to consider, but after a while it becomes \"interminable neuroticism\". He skipped about half and says he almost never links to anything he skipped through.",
+    "Gruber's argument: this is why platforms need a HIG, why the HIG should be thorough, thoughtful and good, and why designers should follow it. He says deferring to a standard reference takes humility, and that modern UI design in general, and Stanley's essay in particular, lacks it.",
+    "On the word \"composer\": Gruber says it is a text box that needs some buttons, should look good, and should be obvious and not distracting. In his view, people who call it a \"composer\" may work in a part of the industry so abstract and navel-gazing that it loses the forest for the bark. He says real designers help users get through the forest."
+   ],
+   "topics": [
+    "UI design",
+    "Apple HIG",
+    "design critique"
+   ]
+  },
+  {
+   "id": "2e9f7988cd9a",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "20 Percent He Has Other Problems, Which This Margin Is Too Narrow to Contain",
+   "url": "https://www.wsj.com/politics/policy/trump-says-he-protects-brilliant-ceos-like-elon-musk-and-jensen-huang-b977cfda?st=7ctVgP",
+   "published": "2026-11-25T16:22:27+00:00",
+   "basis": "short",
+   "brief_zh": "Gruber 转述《华尔街日报》的报道：特朗普在 CNBC 采访中说自己在第一任期“保护”过马斯克，称他“八成是超级天才，两成有别的问题”，但没说明保护的具体内容；Gruber 自己认为这多半只是特朗普惯常的说话方式，并不一定藏着什么丑闻。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "Gruber relays a Wall Street Journal report that Trump said on CNBC he \"protected\" Musk in his first term and called him 80% super genius and 20% having other problems, without saying what the protection was. Gruber thinks this is probably just Trump being Trump rather than a hidden scandal.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "《华尔街日报》的 Damian Paletta 报道，特朗普在周一的 CNBC 采访中说，他在第一任期“保护”了马斯克，还说“没有我就没有今天的马斯克”，并提到一次“很艰难的事件”，但没有展开。他还说“我们必须保护我们的聪明人，因为这样的人不够多”。Gruber 本人认为，这是特朗普随口说出的话，未必有隐藏的马斯克丑闻，但对一个主要政治盟友说这种话仍然出人意料。"
+   ],
+   "points_en": [
+    "The Wall Street Journal's Damian Paletta reports that Trump said in a Monday CNBC interview that he protected Musk in his first term. Trump also said there would be no Musk without him and mentioned \"a tough incident\", but he gave no detail. He added that \"we have to protect our brilliant people because we don't have enough.\" Gruber says there is probably no secret Musk scandal here, but he finds it a striking thing to say about a major political ally."
+   ],
+   "topics": [
+    "politics",
+    "Trump",
+    "Elon Musk"
+   ]
+  },
+  {
+   "id": "a77cf9386d75",
+   "kind": "blog",
+   "source": "johndcook.com",
+   "source_url": "https://johndcook.com",
+   "title": "Covering a body with eight smaller copies of itself",
+   "url": "https://www.johndcook.com/blog/2026/11/25/hadwiger-covering/",
+   "published": "2026-11-25T14:51:58+00:00",
+   "basis": "full",
+   "brief_zh": "Dror Aiger、Sariel Har-Peled 和 Goran Žužić 在 arXiv 上发布了 Hadwiger 覆盖猜想（三维情形）的证明，摘要称证明由 Gemini 4 Carbon 之上的实验框架发现，并已用 Lean 4 形式化验证。",
+   "background_zh": "Hadwiger 覆盖猜想问的是：三维空间中任意内部非空的凸体 K，最少要用多少个缩小的自身拷贝才能盖住它。作者 John D. Cook 看到这篇论文昨天上了 arXiv，就写了这篇短文。",
+   "conclusion_zh": "Cook 没有下进一步的结论，只是指出这是他所见的第一例由 Google 模型协助证明的重要定理。",
+   "brief_en": "Dror Aiger, Sariel Har-Peled and Goran Žužić posted a proof of Hadwiger's covering conjecture on arXiv. Their abstract says the proof was found with an experimental harness on top of Gemini 4 Carbon and verified in Lean 4.",
+   "background_en": "Hadwiger's covering conjecture asks how many smaller copies of a convex body in three dimensions are needed to cover it. John D. Cook wrote this short post after the paper appeared on arXiv the day before.",
+   "conclusion_en": "Cook draws no further conclusion. He only notes that this is the first such announcement involving a Google model that he has seen.",
+   "points_zh": [
+    "猜想的内容是：任何内部非空的三维凸体 K 都能被 8 个自身的缩小拷贝覆盖，即存在缩放系数 0 < λ < 1 和平移向量 vi 使之成立。立方体需要 8 个小立方体，所以下界至少是 8，问题在于某些奇怪的形状会不会需要更多。球可以只用 4 个小球盖住，立方体可以用位于各角的 8 个半边长的小立方体盖住。",
+    "论文作者是 Dror Aiger、Sariel Har-Peled 和 Goran Žužić，摘要说证明是用 Gemini 4 Carbon 之上的实验框架发现的，并经 Lean 4 形式化验证。Cook 说他听到过对 Google 新 Carbon 模型的好评，并说这是他注意到的第一个有 Google 模型参与证明重要定理的公告。"
+   ],
+   "points_en": [
+    "The conjecture says that any three-dimensional convex body K with non-empty interior can be covered by eight smaller copies of itself. That means there is a scaling constant 0 < λ < 1 and shift vectors vi that make this work. A cube needs eight small cubes, so the minimum is at least 8, and the open question was whether an odd shape could need more. A ball can be covered by only four smaller balls.",
+    "The authors are Dror Aiger, Sariel Har-Peled and Goran Žužić. Their abstract says an experimental harness on top of Gemini 4 Carbon found the proof and that Lean 4 verified it. Cook says he has heard good things about Google's new Carbon model. He adds that this is the first announcement he has noticed of a major theorem proved with help from a Google model."
+   ],
+   "topics": [
+    "mathematics",
+    "AI for math",
+    "Lean"
+   ]
+  },
+  {
+   "id": "4cd1b62cb820",
+   "kind": "blog",
+   "source": "johndcook.com",
+   "source_url": "https://johndcook.com",
+   "title": "Polynomials and Planets",
+   "url": "https://www.johndcook.com/blog/2026/11/25/polynomials-and-planets/",
+   "published": "2026-11-25T13:44:21+00:00",
+   "basis": "full",
+   "brief_zh": "勒让德多项式最初是勒让德在计算引力时发现的，所以更准确的说法是引力计算催生了这些多项式，而不是它们碰巧出现在引力计算里。",
+   "background_zh": "作者前几天写过引力在扁球形行星表面如何变化的文章。这篇接着谈扁球体引力势公式里出现的勒让德多项式，以及他自己最初的理解为什么在历史上是颠倒的。",
+   "conclusion_zh": "作者的看法是，应当说勒让德研究引力时得到的多项式后来在别处找到了用途，而不是说引力计算是勒让德多项式的又一个应用场合。",
+   "brief_en": "Legendre discovered his polynomials while doing gravitational calculations, so it is more accurate to say that gravity gave rise to the polynomials than to say they happen to appear in gravity.",
+   "background_en": "The author wrote a few days earlier about how gravity varies over the surface of an oblate planet. This post looks at the Legendre polynomial in the potential formula and at why the author's first reading of it was historically backward.",
+   "conclusion_en": "The author says it is more historically accurate to describe the polynomials from Legendre's work on gravity as having found uses elsewhere than to describe gravity as another application of Legendre polynomials.",
+   "points_zh": [
+    "扁球体的引力势随极角 θ 变化，正比于 1 − J2 P2(cos θ)，其中 P2 是二阶勒让德多项式。公式里还有形如 J2n P2n(cos θ) 的更高阶项，但系数为 J2 的那一项最重要，这就是所谓的 J2 效应。地球略扁，赤道略鼓，这种扁率对卫星轨道有明显影响。Hal Clement 的小说《Mission of Gravity》里的虚构行星 Mesklin 因自转极快而极扁，赤道和两极的表观重力相差两个数量级。",
+    "作者先学勒让德多项式，后学引力计算，所以起初觉得引力计算只是勒让德多项式出现的又一个地方。历史上正相反：勒让德是在研究引力时发现这些多项式的。它们后来出现在电磁学、声学和量子力学中，通常是因为同一个原因，即计算涉及径向对称。",
+    "勒让德多项式也会用在与径向对称无关的地方。例如最常见的高斯求积就是基于勒让德多项式。"
+   ],
+   "points_en": [
+    "The gravitational potential of an oblate spheroid, as a function of the polar angle θ, is proportional to 1 − J2 P2(cos θ). Here P2 is the second Legendre polynomial. Higher terms of the form J2n P2n(cos θ) exist, but the term with J2 is the most significant, hence the J2 effect. Earth is slightly oblate and this has a significant effect on satellite orbits. In Hal Clement's novel Mission of Gravity, the fictional planet Mesklin spins fast and is very oblate. Its apparent gravity varies by two orders of magnitude between equator and poles.",
+    "The author learned Legendre polynomials before gravity calculations, so he first saw gravity as one more place where they appear. Historically it was the other way around, because Legendre found them in his gravitational calculations. They later appeared in E&M, acoustics and quantum mechanics, often for the same reason, which is that the calculations involve radial symmetry.",
+    "Legendre polynomials also appear where radial symmetry plays no role. For example, the most common form of Gaussian quadrature is based on them."
+   ],
+   "topics": [
+    "mathematics",
+    "physics",
+    "Legendre polynomials"
+   ]
+  },
+  {
+   "id": "090c2677fd3a",
+   "kind": "blog",
+   "source": "pluralistic.net",
+   "source_url": "https://pluralistic.net",
+   "title": "Pluralistic: New York vs auto-enshittification (25 Nov 2026)",
+   "url": "https://pluralistic.net/2026/11/25/empire-state-strikes-back/",
+   "published": "2026-11-25T13:42:12+00:00",
+   "basis": "full",
+   "brief_zh": "Cory Doctorow 认为，纽约州新的汽车软件收费法案只是对“汽车劣质化”的部分修补，罚款太低、例外条款太宽，真正的解决办法是国会废除 DMCA 第 1201 条。",
+   "background_zh": "纽约州通过法案（S.9348A/A.10411A），自 2027 年 2 月 27 日起，禁止公司对车上已安装硬件所运行的软件功能收取订阅费或额外费用。Doctorow 分析了这部法律为什么能存在、它做了什么，以及它的缺陷。",
+   "conclusion_zh": "Doctorow 肯定 Repair Coalition 找到了让各州抵御反规避法部分危害的办法，也很欣赏这个办法被用到其他“劣质化”问题上。但他说这些本来都不应该需要，真正的解决办法是国会废除 DMCA 1201。",
+   "brief_en": "Cory Doctorow argues that New York's new law on car software fees only partly fixes auto-enshittification, because its penalty is tiny and its carve-outs are wide. He says the real fix is for Congress to repeal Section 1201 of the DMCA.",
+   "background_en": "New York passed a bill (S.9348A/A.10411A) that, from February 27, 2027, bars charging subscriptions or extra fees for software features that run on hardware already in a car. Doctorow explains why such a law can exist, what it does and where it falls short.",
+   "conclusion_en": "Doctorow praises the Repair Coalition for finding a way for states to limit some effects of anticircumvention law, and he likes that the tactic now serves other fights against enshittification. He says none of it should be needed, and that Congress should repeal Section 1201 of the DMCA.",
+   "points_zh": [
+    "问题的根源是联邦法律 DMCA 1201 的反规避条款。它规定，即使没有侵犯版权，破解软件也可能面临 5 年刑期和 50 万美元罚款。Doctorow 举例说，宝马对自动切换远光灯功能收订阅费（他说宝马确实这样做），如果没有这条法律，第三方会很快提供一键解锁。有了它，车企可以随意设计各种收费花样，并用刑责保护。它还被用来阻止车主防止被监控，也让贷款方能不经通知和申诉就让车辆无法启动。",
+    "州法为什么能管这件事：版权属于联邦事务，州不能改动。但 Right to Repair 运动想出一个办法，州可以管理在本州出售的商品，因此直接禁止销售那些靠反规避条款来牟利或监控用户的商品。这个思路始于 2022 年科罗拉多的电动轮椅维修法，后来被俄勒冈的电子产品维修法采用，再被华盛顿州照搬。纽约也通过过类似的法律，但被州长 Hochul 删弱，现在 A8405 要把被删的条款补回，即将送到她桌上。",
+    "新法的执行力很弱：违规的经销商、车企或贷款方每次违规只罚 250 美元。经销商若向车主多收 1000 美元，被发现后只赔 250 美元；只要每三个懂得维权的车主对应一个被宰的，经销商仍然有赚，而且车主可能还要去小额法庭才能拿回钱。",
+    "例外条款开了大口子。导航更新、信息娱乐、卫星广播、车内 wi-fi、telematics、道路救援、依赖软件的驾驶辅助或自动化功能，以及“依赖蜂窝或其他数据网络才能持续运行”的车联网服务都不在范围内。Doctorow 认为车企只要把功能改成每天联网检查更新，就可以主张它属于最后一类。法院也许最终会判定“持续运行”不是这个意思，但这要等州检察长或集体诉讼律师提出，可能拖很多年，而车企还能用强制仲裁条款挡住集体诉讼。“驾驶自动化功能”和“telematics”这类措辞也很含糊。他也提到一个他觉得有意思的模糊点：新泽西车主在纽约境内被 Tesla 收取电池容量订阅费时，是否算违法。",
+    "这部法律管不到的事还有很多：车辆监控并把数据告诉保险公司、厂商倒闭后车辆变砖，以及 Tesla 篡改里程表来夸大续航。Doctorow 还推测，如果法案起草得更有力，Hochul 可能会像对待 2022 年电子产品维修法那样把它删弱。"
+   ],
+   "points_en": [
+    "The root problem is the anticircumvention rule in the federal DMCA 1201. It carries up to 5 years in prison and a $500k fine for reverse engineering, even when no copyright is infringed. Doctorow's example is BMW charging a subscription for the feature that dips high-beams automatically, which he says BMW does. Without the law, third parties would quickly sell a one-click unlock. With it, manufacturers can invent fee schemes and rely on criminal penalties to protect them. He also says it is used to stop drivers from blocking surveillance of their driving and to let lenders immobilize cars without notice or appeal.",
+    "States can act despite this because copyright is federal and states cannot change it. The Right to Repair movement found a workaround: states can regulate goods sold within their borders, so they can ban the sale of goods that use anticircumvention to rip off or spy on residents. The approach began with Colorado's 2022 powered wheelchair repair law, then appeared in Oregon's electronics repair law and was copied in Washington. New York passed a similar law, but Governor Hochul gutted it. A8405 would restore the removed provisions and will soon reach her desk.",
+    "The penalty is weak. A dealer, manufacturer or lender that breaks the new law faces a $250 fine per violation. A dealer who charges $1,000 for a software upgrade pays only $250 if caught. A dealer who cheats one driver for every three who know their rights and enforce them still comes out ahead, and a driver may need small claims court to get a refund.",
+    "The carve-outs are broad. They cover navigation updates, infotainment, satellite radio, in-vehicle wi-fi, telematics, roadside assistance, driver assistance or automation features, and services that rely on cellular or other data networks for continued operation. Doctorow says a manufacturer could redesign a feature to check for updates daily and then claim it falls under the last category. A judge might reject that, but only after the state attorney general or a class action lawyer forces the question, which could take years. Manufacturers can also block class actions with binding arbitration waivers. Terms such as \"driver automation features\" and \"telematics\" are vague. He does like one ambiguity: whether Tesla breaks the law if it bills a New Jersey owner for a battery subscription while the car is in New York.",
+    "The law leaves much untouched. It does not stop cars from spying on drivers and reporting to insurers. It does not help if a manufacturer goes bust and bricks a car. It does not help if Tesla alters odometers to misstate range. Doctorow also speculates that a stronger bill might have been gutted by Hochul, as she did to the 2022 electronics repair bill."
+   ],
+   "topics": [
+    "right to repair",
+    "DMCA",
+    "enshittification"
+   ]
+  },
+  {
+   "id": "ea4ebb35e226",
+   "kind": "blog",
+   "source": "shkspr.mobi",
+   "source_url": "https://shkspr.mobi",
+   "title": "Book Review: Slow Gods by Claire North ★★★★⯪",
+   "url": "https://shkspr.mobi/blog/2026/11/book-review-slow-gods-by-claire-north/",
+   "published": "2026-11-25T12:34:34+00:00",
+   "basis": "full",
+   "brief_zh": "作者给《Slow Gods》（Claire North）打了4.5星，认为这是一部厚重的太空歌剧，借用了老派科幻的语言却不显俗套，读起来既有趣又让人不安。",
+   "background_zh": "这是作者对Claire North的科幻小说《Slow Gods》写的书评。",
+   "conclusion_zh": "作者的评价是：这是一本有趣又让人发怵的好书。",
+   "brief_en": "The author gives Claire North's Slow Gods 4.5 stars and calls it a large space opera that uses pulp sci-fi language without becoming pulpy.",
+   "background_en": "This is the author's review of Claire North's science fiction novel Slow Gods.",
+   "conclusion_en": "The author calls it a fun and fearsome read.",
+   "points_zh": [
+    "这本书把传统科幻套路重新做了一遍，不流于通俗小说。作者读过不少科幻，认出了其中一些常见桥段，并觉得带有Murderbot里自闭症式崩溃的影子，也像Of Monsters and Mainframes里的活体飞船。",
+    "全书在不同类型之间切换自如：太空外交、战斗、爱情、星系政治，最后还会读出鬼故事的味道。结构是章回式的，有不少很好的悬念结尾，各种文化足够异域，情节也足够可信。",
+    "作者很欣赏书里大段的世界观描写。科幻界常说没人在意世界观细节，但Claire North并不理会这条“规矩”，用好几章细讲这个宇宙的运作，读起来像一本架空世界的科普历史书。",
+    "书里有一章专门写各种各样的代词，作者觉得可能带点讽刺，但也很好地展示了语言和文化如何演变。书中还简短而不留情面地提到了俄罗斯入侵乌克兰，以及一些国家的软弱回应。"
+   ],
+   "points_en": [
+    "The book reworks familiar sci-fi tropes without turning pulpy. The author has read a lot of sci-fi and sees echoes of Murderbot's autistic meltdowns and the living ships of Of Monsters and Mainframes.",
+    "The novel moves easily between genres: space diplomacy, battle, love, galactic politics and finally a ghost story. It is episodic with several good cliff-hangers. The cultures feel otherworldly and the plot feels plausible.",
+    "The author praises the long world-building passages. A common rule says nobody cares about world building, but North ignores it and spends several chapters on the details of the universe. At times it reads like a pop-science history book for an alternate reality.",
+    "One chapter covers the many pronouns in the book. The author thinks it may be a little satirical, but also a good look at how languages and cultures evolve. The book also deals briefly and sharply with Russia's war against Ukraine and the weak response of some nations."
+   ],
+   "topics": [
+    "book review",
+    "science fiction"
+   ]
+  },
+  {
+   "id": "f4d6a4f57c91",
+   "kind": "blog",
+   "source": "dfarq.homeip.net",
+   "source_url": "https://dfarq.homeip.net",
+   "title": "How the Tandy 2000 doomed Tandy computers",
+   "url": "https://dfarq.homeip.net/how-the-tandy-2000-doomed-tandy-computers/?utm_source=rss&utm_medium=rss&utm_campaign=how-the-tandy-2000-doomed-tandy-computers",
+   "published": "2026-11-25T12:00:25+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为，Tandy 2000在商业上的失败，加上它押注Microsoft Windows却落空，使Tandy此后一直求稳，最终拖垮了Tandy的整条电脑产品线。",
+   "background_zh": "作者David Farquhar是写复古电脑的博主，这篇文章是他Tandy和Radio Shack系列的一部分。他想解释为什么性能比Tandy 1000高出一倍的Tandy 2000没有成功，以及这对Tandy后来的影响。",
+   "conclusion_zh": "作者的结论是：Tandy 2000的想法并非全错，问题出在时机和执行上，而1983年的这次挫折让Tandy之后一直求稳，错过了Windows 3.x时代，最终放弃电脑业务。",
+   "brief_en": "The author argues that the Tandy 2000's commercial failure, and its reliance on a Windows that arrived too late, made Tandy play it safe afterwards and doomed its computer line.",
+   "background_en": "David Farquhar writes about retro computers, and this post belongs to his series on Tandy and Radio Shack. He asks why the Tandy 2000, about twice as good as the Tandy 1000, did not succeed, and what that meant for Tandy later.",
+   "conclusion_en": "The author concludes that the Tandy 2000 idea was not wrong in itself, but its timing and execution were. He holds that the 1983 setback made Tandy cautious, so it missed the Windows 3.x era and left the computer business.",
+   "points_zh": [
+    "Tandy 2000的兼容性不足，是它失败的首要原因。它用Intel 80186 CPU，速度约为IBM PC的两倍，但这颗CPU集成的部件地址和IBM的设计不一致，绕过BIOS或DOS直接访问硬件的软件就会出错。它还运行Tandy专用版的MS-DOS。Tandy安排了主流应用的专用版本，到1984年前后生产力软件基本都有，但买家仍会担心买不到想要的软件。作者认为这件事不能全怪Tandy或Intel，因为Intel设计186时IBM PC还没定型。",
+    "硬件上也不兼容，这进一步削弱了它。Tandy没有采用ISA扩展槽，而是用自家的96针总线，扩展卡价格也不如主机有竞争力，第三方厂商观望，不愿为它做产品。作者认为至少加几个8位ISA插槽会更稳妥。关于软盘驱动器，作者指出它并非不兼容360K的PC软盘，只是起初无法格式化，Tandy在1984年用软件更新修复了这点。",
+    "评测反应不一，Windows的承诺又没能兑现。评论者喜欢它的性能和价格，但不满兼容性和软件更新的延迟。Byte在1984年12月发表了较公允的评测，InfoWorld在1984年8月20日那期则称它是价格不划算的糟糕技术。1984年Bill Gates为它代言，广告中称它的图形能力和186 CPU让Windows表现出色，但Windows 1.0直到1985年11月20日才发布，那时带EGA的80286 PC已经上市，运行Windows更好，也兼容现成的IBM PC软件。Tandy不断降价清库存，最后剩下的机器被拿去在门店里当终端使用。",
+    "作者认为这次失败让Tandy之后一直保守。Tandy 1000后来成了美国几年内销量最高的电脑，超过了Commodore 64，但Tandy此后总以Tandy 1000的各种版本为主，即使设计已经老化。1990年Windows 3.0发布时，别家都在卖便宜的386SX加VGA电脑，Tandy还在推三款Tandy 1000，386SX只是附带。1991年仍主推Tandy 1000做家用，386机型当作商务机卖。1992年Windows 3.1推出后，Tandy拿出Tandy Sensation，但那时Tandy的电脑业务已在亏损，不久就停产。作者说这是他自己的看法：Tandy错过Windows 3.x，是因为1983到1984年被Windows 1.0坑过。",
+    "一点迟来的平反是HP 200LX。这款十年后推出的掌上电脑可以看作缩小版的Tandy 2000，内置了足够有用的软件，不需要100%兼容，卖得很成功。作者认为这说明Tandy 2000的想法本身不算错，只是时机不对，执行也可以更好。"
+   ],
+   "points_en": [
+    "Limited compatibility was the first problem. The Tandy 2000 used the Intel 80186, about twice as fast as an IBM PC, but the chip's built-in components sat at different addresses from IBM's. Software that bypassed BIOS or DOS routines failed. The machine also ran a Tandy-specific MS-DOS. Tandy arranged special versions of popular applications, and by about 1984 most productivity titles had one, but buyers could still worry about missing software. The author says this was not fully Tandy's or Intel's fault, since the IBM PC was not final when Intel designed the 186.",
+    "Hardware was incompatible too. Tandy used its own 96-pin bus instead of ISA slots, and its expansion options were not priced as aggressively as the machine. Third parties waited and did not build products for it. The author thinks a few 8-bit ISA slots would have been wise. On the disk drives, he says they could read and write 360K PC floppies and at first just could not format them. Tandy fixed this with a software update in 1984.",
+    "Reviews were mixed and the Windows promise did not pay off. Reviewers liked the speed and price but disliked the compatibility and late software updates. Byte's December 1984 review was fair, while InfoWorld in August 1984 called it bad technology at a bad price. Bill Gates appeared in a 1984 ad for it, but Windows 1.0 shipped only on November 20, 1985. By then 80286 PCs with EGA ran Windows better and also ran off-the-shelf IBM PC software. Tandy cut prices to move stock, and unsold machines ended up as terminals in its stores.",
+    "The author argues the failure made Tandy cautious. The Tandy 1000 became the best-selling computer in the US for a few years, ahead of the Commodore 64, but Tandy kept leading with it as the design aged. In 1990 other makers sold affordable 386SX PCs with VGA for Windows 3.0, while Tandy still pushed three Tandy 1000 models. In 1991 it still pushed the 1000 for home use and sold its 386 machines as business PCs. The Tandy Sensation arrived with Windows 3.1 in 1992, but Tandy was already losing money on computers and stopped making them soon after. The author states this as his own view: Windows 1.0 burned Tandy in 1983 and 1984, so it missed Windows 3.x.",
+    "The HP 200LX gave some vindication. This palmtop came a decade later and can be described as a shrunken Tandy 2000. It had enough built-in software that it did not need full compatibility, and it sold well. The author says it showed the Tandy 2000 was not an entirely bad idea, only badly timed and executed."
+   ],
+   "topics": [
+    "retro computing",
+    "Tandy",
+    "Windows"
+   ]
+  },
+  {
+   "id": "8de977e2f9d8",
+   "kind": "blog",
+   "source": "nesbitt.io",
+   "source_url": "https://nesbitt.io",
+   "title": "This Week in Source Control: 25 November 2026",
+   "url": "https://nesbitt.io/2026/11/25/this-week-in-source-control.html",
+   "published": "2026-11-25T10:00:00+00:00",
+   "basis": "full",
+   "brief_zh": "这期版本控制周报汇总了2026年11月下旬的动态：Enroute和Android的ABFS在大规模Git上有新设计，多个Git工具和托管平台发布更新，另有Forgejo安全修复、Optimizely供应链攻击、onnxruntime仓库消失和Codeberg域名被暂停等事件。",
+   "background_zh": "作者Andrew Nesbitt每周从版本控制客户端和代码托管平台的发布源、Lobsters的vcs标签、Hacker News和Mastodon上整理版本控制与代码托管方面的消息。这是2026年11月25日这一期。",
+   "conclusion_zh": "这是一期新闻汇总，没有统一的结论。文末作者请读者把下周的链接发到他的Mastodon账号。",
+   "brief_en": "This weekly roundup covers late November 2026 in source control: new designs for large-scale Git in Enroute and Android's ABFS, updates to Git tools and forges, and incidents such as Forgejo security fixes, the Optimizely attack, the vanished onnxruntime repository and the Codeberg domain suspension.",
+   "background_en": "Andrew Nesbitt gathers version control and forge news each week from release feeds, the Lobsters vcs tag, Hacker News and Mastodon. This is the issue for 25 November 2026.",
+   "conclusion_en": "This is a news roundup with no single conclusion. The author ends by asking readers to send links for next week to his Mastodon account.",
+   "points_zh": [
+    "大规模Git的两项新工作。Enroute 0.4.0是一个把对象数据放在S3、每个仓库用一份复制日志记录refs和layers的Git服务器。原先的Multi-Raft让每个仓库各自有Raft组，在10万个仓库、2048个并发写入者的情况下，心跳延迟引发上千次选举，第99百分位push时间达到83秒。新设计借用Vertical Paxos的故障切换：只有一个根日志运行Raft，并为每个仓库的日志指定sequencer，选举只在根日志里发生，根日志leader还把每个仓库的三个副本放在不同可用区。协议用Stateright和Jepsen检验，在30万个仓库下测得最高每秒2.4万次push。Android团队开源了ABFS：Android 17开源版有1084个Git仓库、162万个文件，原先repo sync约36分钟、完整构建约80分钟。ABFS用内核文件系统CASFS取代检出，按首次读取拉取文件内容，并用Ninja-go记录每个构建步骤读取过的文件来复用缓存。检出现在不到8秒，完整构建略多于2分钟，Bazel集成还只是概念验证。",
+    "Git客户端和命令行工具更新。delta 0.21.1新增基于gitu分支的TUI，可浏览diff、show和log，直接在diff中暂存，还能在log里重排和fixup提交，0.21.2支持打开vim等终端编辑器。GitButler 0.23.5上架Flathub，修了栈中多个分支合并后推送剩余部分的问题，以及加载落后上游很多的大项目时占用数GB内存的问题，CLI新增but worktree recycle。gt 2.0.0是Gitea命令行客户端，参数与gh对齐，失败的Actions日志从约4.68万token降到约1.16万，命令使用没有read:user范围的GITEA_TOKEN也可以运行。GitHub Desktop 3.7.0支持同一主机上登录多个账号。gh v2.105.0新增gh event listen，通过Event Streams订阅pull request并逐行输出JSON，需要预览权限。",
+    "托管平台更新。GitLab 19.6让Rapid Diffs正式可用，服务器渲染并流式发送，首个文件的出现时间从约4.5秒降到1.5秒，细粒度个人访问令牌可通过GraphQL读取更多内容，GitLab MCP server的每个操作都会生成审计事件。GitHub Enterprise Server 3.23候选版新增八小时过期的OAuth应用令牌，新应用默认启用，并让从Azure DevOps持续迁移在带数据驻留的GitHub Enterprise Cloud上正式可用。GitHub的pull request概览预览也有若干改动，比如可合并但可选检查失败的PR现在显示为可合并。",
+    "安全修复与事件。Forgejo 17.0.2和15.0.12是安全版本，修复了SSH公钥用LIKE匹配而可能被冒充登录、/tree-list和/find向没有代码读权限的用户列出文件、以及/activities/feeds和/heatmap返回超出令牌限制的数据。11月16日，Optimizely Web被用来向178个组织的访客发送恶意JavaScript，攻击者修改了各个snippet中客户自写的Project JavaScript字段，载荷会替换加密货币钱包地址、窃取支付卡信息、cookie和截图，Report URI列出的受影响站点包括gitlab.com。Python Security Response Team在私有测试中试用了安全公告权限，更多成员得以参与分诊。",
+    "仓库与域名的意外事件。microsoft/onnxruntime仓库在11月17日消失，事先没有公告，CI开始失败，写作时仍返回404，PyPI包仍可用，但从GitHub取源码或发布文件的构建失败。Codeberg发布了11月18日域名被暂停的事后说明：NameSilo因两起滥用投诉把codeberg.org置于客户保留状态，没有联系Codeberg。其中一起是Codeberg有异议的2022年举报，另一起是11月16日创建的账号中的恶意软件，只报告给了注册商。Codeberg已删除两个仓库，正在评估其他注册商，改用备用的codeberg.eu会影响双因素认证和所有现有Git远程地址，所以正在与Forgejo合作做多域名支持。",
+    "Jujutsu相关的新内容。Bryan O'Sullivan发布jj-musubi，在每次jj快照工作副本时跨机器同步仓库，一台机器做hub，其余通过SSH交换历史，各机器的workspace带机器名前缀，同步不触碰工作副本里的文件，同步协议的关键性质用Lean证明，并用测试对照Rust代码和Lean模型。Ethan Lowman写了面向Git用户的Jujutsu Primer，Ben C介绍用空的jj change记录待办事项，并用git.private-commits设置排除它们不被推送。"
+   ],
+   "points_en": [
+    "Two pieces of work on large-scale Git. Enroute 0.4.0 is a Git server that stores object data in S3 and keeps one replicated log of refs and layers per repository. Under Multi-Raft, at 2,048 concurrent writers across 100,000 repositories, late heartbeats set off thousands of elections and the 99th percentile push time reached 83 seconds. The new design uses failover from Vertical Paxos: one root log runs Raft and assigns a sequencer to each repository's log, so elections happen only there, and the root leader places each repository's three replicas in distinct zones. It is checked with Stateright and Jepsen, and the team measured up to 24,000 pushes per second at 300,000 repositories. The Android team open-sourced ABFS. Android 17 has 1,084 Git repositories and 1.62 million files, and a repo sync took about 36 minutes and a full build about 80. ABFS replaces the checkout with the kernel filesystem CASFS, which fetches file contents on first read, and Ninja-go reuses cached results by tracking which files each step read. Checkouts now take under 8 seconds and full builds just over 2 minutes. The Bazel integration is a proof of concept.",
+    "Git client and command-line tools were updated. delta 0.21.1 adds a TUI based on a fork of gitu. It can browse diffs, show and log, stage from diffs, and reorder and fixup commits. Version 0.21.2 opens terminal editors such as vim. GitButler 0.23.5 is on Flathub, fixes pushing the rest of a stack after several branches merged and fixes high memory use on a large project far behind upstream, and adds but worktree recycle. gt 2.0.0, the Gitea command-line client, matches gh's flags. Logs of a failed Actions run dropped from about 46,800 tokens to about 11,600, and commands now work with a GITEA_TOKEN lacking the read:user scope. GitHub Desktop 3.7.0 supports several signed-in accounts on one host. gh v2.105.0 adds gh event listen, which subscribes to a pull request through Event Streams and prints each event as JSON. It needs access to the preview.",
+    "Forges also shipped updates. GitLab 19.6 makes Rapid Diffs generally available. Diffs are rendered on the server and streamed, which cuts the time to the first file from about 4.5 seconds to 1.5. Fine-grained personal access tokens can read more through GraphQL, and every action through the GitLab MCP server creates an audit event. The GitHub Enterprise Server 3.23 release candidate adds OAuth app tokens that expire after eight hours, the default for new apps. Live Migrations from Azure DevOps is generally available for GitHub Enterprise Cloud with data residency. In the pull request Overview preview, a mergeable pull request with failed optional checks now shows as mergeable.",
+    "Several security fixes and incidents were reported. Forgejo 17.0.2 and 15.0.12 fix an SSH key lookup that used LIKE and could let someone authenticate as another user, file listings in /tree-list and /find shown to users without code read access, and /activities/feeds and /heatmap data returned beyond token limits. On 16 November malicious JavaScript was served through Optimizely Web to visitors of 178 organisations. The attacker edited the customer-written Project JavaScript field in each snippet. The payload swapped cryptocurrency wallet addresses, skimmed payment cards and stole cookies and screenshots. Report URI lists gitlab.com among the affected sites. The Python Security Response Team tried the new security advisory permissions in a private beta, and more members now take part in triage.",
+    "Two incidents involved a repository and a domain. The microsoft/onnxruntime repository disappeared on 17 November without announcement. CI pipelines failed, and it still returned 404 at the time of writing. The PyPI packages stayed available, but builds that fetched source or release files from GitHub failed. Codeberg posted a post-mortem of the 18 November suspension of codeberg.org. NameSilo put the domain on client hold over two abuse cases without contacting Codeberg. One was a 2022 report that Codeberg disputes. The other was malware in an account created on 16 November, reported only to the registrar. Codeberg removed both repositories and is evaluating other registrars. A switch to codeberg.eu would affect two-factor authentication and every Git remote, so it is working with Forgejo on multi-domain support.",
+    "The issue also covers new Jujutsu material. Bryan O'Sullivan announced jj-musubi, which syncs a Jujutsu repository across machines each time jj snapshots the working copy. One machine runs a hub and the others sync over SSH. Each machine's workspaces carry its name as a prefix, and syncs do not touch working copy files. Key properties of the protocol are proved in Lean, and tests compare the Rust code with the Lean model. Ethan Lowman wrote Jujutsu Primer for Git users. Ben C describes keeping a to-do list as empty jj changes and excluding them from pushes with the git.private-commits setting."
+   ],
+   "topics": [
+    "version control",
+    "Git",
+    "forges"
+   ]
+  }
+ ],
+ "picks": {
+  "important": [],
+  "liked": []
+ },
+ "generated_at": "2026-11-26T05:17:20.148391+00:00"
+}
