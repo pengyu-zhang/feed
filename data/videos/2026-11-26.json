@@ -2,6 +2,80 @@
  "date": "2026-11-26",
  "items": [
   {
+   "id": "yt-FkWTfE9dnTg",
+   "kind": "video",
+   "source": "程序员老王",
+   "source_url": "https://www.youtube.com/@programmer-wang",
+   "title": "gpu-unlock 让显卡性能翻倍！",
+   "url": "https://www.youtube.com/watch?v=FkWTfE9dnTg",
+   "published": "2026-11-26T09:00:20+00:00",
+   "basis": "transcript",
+   "brief_zh": "GPU-unlock 利用英伟达安全核心（Falcon）旧版固件里的缓冲区溢出漏洞，把 20 到 40 系游戏卡被锁成半速的 FP32 累加改回全速，但实测跑 AI 一般只快 15% 到 35%，4090 上约 20%。",
+   "background_zh": "RTX 4090 和专业卡 RTX 6000 Ada 用的都是 AD102 核心，Tensor Core 数量接近，但 4090 跑 AI 只有约一半算力。2026 年 10 月开源项目 GPU-unlock 出现，解开了这个限制，视频讲它的原理和效果。",
+   "conclusion_zh": "作者认为这件事有点滑稽：芯片被做快，又被英伟达限慢，最后黑客又改回去，换来的只有约 20% 的提速，算不上划算。到了 50 系，限制更严、接口藏得更深，他本人不打算再凑这个热闹，但觉得破解锁的过程本身就让人感到纯粹的快乐。",
+   "brief_en": "GPU-unlock uses a buffer overflow in old Nvidia security-core (Falcon) firmware to restore full-speed FP32 accumulation on RTX 20 to 40 series cards. Real AI workloads speed up by only 15% to 35%, and about 20% on the 4090.",
+   "background_en": "The RTX 4090 and the professional RTX 6000 Ada use the same AD102 die with similar Tensor Core counts, yet the 4090 delivers only about half the AI compute. In October 2026 an open-source project called GPU-unlock removed this limit, and the video explains how it works and what it achieves.",
+   "conclusion_en": "The author finds the episode a little funny: the chip was made faster, Nvidia slowed it down, and hackers sped it up again, for a gain of about 20% that is not a good trade. With the 50 series the locks are tighter and the interfaces more hidden. The author does not plan to join in, but says the click of opening a lock is a pure pleasure.",
+   "points_zh": [
+    "英伟达限制的是 Tensor Core 做 FP32 累加的速度。AI 计算通常用 FP16 做乘法、FP32 做累加，因为累加项多，FP16 最大只能表示 65504，容易溢出。4090 切到 FP32 累加时会降低指令发送速度，Tensor Core 干一拍歇一拍，速度减半。游戏渲染主要用 CUDA Core，基本不受影响。",
+    "限制由一个寄存器控制，但它被锁在 GPU 内部最高的 Level 3 权限下。GPU 有 Level 0 到 Level 3 四级权限，CPU 上的程序只有 Level 0，写这个寄存器会被忽略。能拿到 Level 3 的只有 Falcon 安全核心，它运行的程序由驱动在加载时传入，并且会验证数字签名，所以直接发假程序会导致黑屏。",
+    "突破口是 Falcon 固件的一个漏洞。2026 年 6 月有研究人员发现，固件的某个接口在把 CPU 传来的参数拷进 128 字节的栈缓冲区时不检查长度。超长参数会覆盖返回地址，让安全核心执行任意代码，包括把寄存器改回全速。视频只讲了最基本的原理，具体利用没有展开。",
+    "GPU-unlock 的做法是先用旧版固件触发漏洞，再复位显卡，让新驱动正常加载。它打包了有漏洞的旧版安全固件，在正式驱动加载前传给安全核心，改好寄存器。然后通过 PCIe 发软复位指令，让 GPU 和安全核心状态归零，避免和新驱动冲突。这个软复位不会重置该寄存器，新版固件初始化时也没有去改它，所以全速状态保留下来。原版运行在 Linux 上，社区后来做了靠 U 盘引导的 Windows 工具。",
+    "实际提速远不到一倍。白皮书里 4090 的 FP32 累加算力理论上翻倍，但跑 Stable Diffusion 出图或模型微调，4090 一般只快 15% 到 35%，视频中提到约 20%。原因有两个：一是 4090 有 450 瓦功耗上限，速度翻倍后容易撞功耗墙降频，核心少、耗电低的 30 系能快 25% 到 55%；二是大模型还有大量时间花在显存和计算核心之间搬数据，瓶颈在显存带宽，算力翻倍解决不了。",
+    "目前支持 20、30、40 系，50 系用不了。50 系同样有 FP32 累加减半的限制，但首发固件没有这个漏洞，硬件也和旧固件不兼容。老卡上，英伟达可以改新驱动的引导固件，让安全核心初始化时把寄存器改回半速，但用户退回旧驱动就能恢复，治标不治本。治本的办法是用一次性物理熔丝（OTP）记录固件版本，装过新驱动后旧固件就加载不了。作者认为这种做法对显卡这种单独部件容易引发争议，但没有展开讨论。"
+   ],
+   "points_en": [
+    "Nvidia limits the speed of FP32 accumulation on the Tensor Cores. AI math usually multiplies in FP16 and accumulates in FP32, because FP16 tops out at 65504 and long sums can overflow it. On the 4090, FP32 accumulation lowers the instruction issue rate, so the Tensor Core works one cycle and idles one, which halves the speed. Games mostly render on CUDA Cores, so they are barely affected.",
+    "A register controls the limit, but it sits behind the highest privilege level, Level 3. The GPU has four levels from 0 to 3. Programs on the CPU run at Level 0, so writes to the register are ignored. Only the Falcon security core has Level 3. Its program is sent in by the driver at load time and its digital signature is checked, so a fake program causes a black screen.",
+    "The way in is a bug in the Falcon firmware. In June 2026 researchers found that one interface copies CPU-supplied parameters into a 128-byte stack buffer without checking the length. An oversized input overwrites the return address and lets the security core run arbitrary code, including code that sets the register back to full speed. The video explains only the basic principle and does not cover the actual exploit.",
+    "GPU-unlock triggers the bug with old firmware, then resets the card so the new driver can load. It bundles the vulnerable old security firmware and sends it to the security core before the real driver loads, which changes the register. It then sends a soft reset over PCIe to clear the state of the GPU and security core, avoiding a conflict with the new driver. The soft reset does not clear the register, and the new firmware does not touch it at init, so full speed remains. The original tool runs on Linux, and the community later built a Windows tool that boots from a USB stick.",
+    "The real speedup is far below double. The whitepaper figure for FP32 accumulation on the 4090 doubles in theory, but on Stable Diffusion image generation and fine-tuning the 4090 gains 15% to 35%, and the video cites about 20%. There are two reasons. The 450 W power limit makes the card throttle once speed doubles, while 30 series cards, with fewer cores and lower draw, gain 25% to 55%. Also, large models spend much time moving data between memory and the cores, where memory bandwidth is the bottleneck and more compute does not help.",
+    "The tool supports the 20, 30 and 40 series but not the 50 series. The 50 series has the same halved FP32 accumulation, but its launch firmware lacks the bug and the hardware is incompatible with old firmware. On older cards, Nvidia could change the boot firmware in new drivers so the security core sets the register back to half speed. Users could still roll back to an old driver, so this only partly helps. A lasting fix is a one-time programmable fuse (OTP) that records the firmware version, so old firmware cannot load once a new driver has been installed. The author says this would be controversial for a GPU, which is a separate component, but does not discuss it further."
+   ],
+   "topics": [
+    "GPU",
+    "Nvidia",
+    "Security"
+   ]
+  },
+  {
+   "id": "yt-LF18wIJzgdc",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "OpenBot 週報敢自動寄？工單先交草稿，寄出前誰點頭",
+   "url": "https://www.youtube.com/watch?v=LF18wIJzgdc",
+   "published": "2026-11-26T07:13:42+00:00",
+   "basis": "transcript",
+   "brief_zh": "让 OpenBot 每周自动交周报，可以先让它只交草稿，把发出前的检查、停下的条件和放行的决定留给人，试点跑过三轮再考虑接真实邮箱。",
+   "background_zh": "频道主大雷先看了 CopilotKit 的 OpenBot 官方演示，再用一份虚构工单在本地走了一遍每周周报流程。他想回答的问题是：每周重复的统计和进度邮件交给 agent 后，要有什么样的草稿，才敢让它下周接着做。演练没有连接邮箱，也没有启用定时外发。",
+   "conclusion_zh": "他的试点方案是三轮：第一轮数据齐全，核对数字和草稿；第二轮故意缺一天，看它会不会停；第三轮换一周重跑，看它有没有把旧文件当新结果。三轮都通过，再讨论接真实邮箱和正式审批。他的结论是，这类工作台的价值是把同一件活变成每周可检查的结果，先交可打开的草稿，什么时候发、从哪个账号发、是否继续，由人单独决定。",
+   "brief_en": "The host argues that a weekly report agent such as OpenBot should first deliver only a draft, with checks, stop conditions and the send decision left to a person. He suggests a three-round pilot before connecting a real mailbox.",
+   "background_en": "The host, Dalei, first looked at CopilotKit's official OpenBot demos. He then ran a weekly report exercise locally on fictional support tickets. His question was what kind of draft would make him willing to let an agent repeat the task next week. The exercise had no connected mailbox and no scheduled delivery.",
+   "conclusion_en": "He proposes a three-round pilot. Round one uses complete data and checks the numbers and the draft. Round two removes one day on purpose to see whether the agent stops. Round three reruns on a different week to see whether it reuses an old file as new. If all three pass, a real mailbox and formal approval can be discussed. His position is that such a workbench is useful for turning one task into a weekly result that can be checked. It should first deliver a draft that can be opened, and a person decides separately when to send, from which account, and whether to continue.",
+   "points_zh": [
+    "审批时要先看清具体动作和内容，而不是只看到“批准”按钮。保存本地草稿还能改，外发邮件后收件人就会照着行动，所以要先把收件人、正文和附件一起展开看。如果审批之后换了附件，或收件人从内部同事变成外部地址，之前的同意就不够用了，要重新给人看一遍。暂停时也要留下原因，比如日期不完整、附件版本不对或找错收件人，因为这三种情况的处理方法完全不同。",
+    "先把范围收窄，再让 agent 交草稿。演练里固定了输入位置和日期范围（11月16到22日），草稿里写明这两个日期。数字给出核对关系：本周12笔，已关闭8笔，待处理4笔，8加4必须等于12，并且能回到原始工单查证。“待处理四笔”只能写成还有四笔，不能写成今天一定清掉。没确认的完成日期宁可写成“待确认”，因为他之前做 Ollama 周报时，模型就自己补过承诺。",
+    "要故意测试缺数据的情况，让它停下而不是硬交。演练里把星期五的数据拿掉，找不到当天的覆盖记录，他希望 agent 停在草稿前并说明缺的是哪一天，而不是少算一笔还报全部完成。补上数据后重跑，并留两条记录：一条说明为什么停，一条说明补完后的结果，下次再停就能从记录里找到接上的步骤。还要看草稿里的起止时间是否对得上这次运行，免得把上周的旧文件当成新结果。",
+    "定时运行要先想清楚谁来让服务一直开着。OpenBot 的 Routines 可以设置重复任务、暂停、临时运行和查看历史；官方文档说，例行任务由运行中的服务触发，本地运行时电脑关机，服务也就停了。他的做法是先让它每周提醒自己看草稿，而不是每周发邮件。运行记录要能分清是哪一周、手动还是定时跑的，因为重复一份草稿好处理，两封冲突的周报外发就要花人力去解释。",
+    "工具权限和“教会它”的功能要自己再核对一遍。他会先保持“读工单、写草稿”的权限，外发、分享和删除另行放行；按官方说明，工具和动作可以按配置设为放行、要求审批或拒绝。官方演示里让 agent 学出可复用的技能，个人版默认自动批准，想自己审就要先关掉，再用另一份测试数据跑，看它学到的是“找到最新一周”，还是只记住当天点过的位置。如果接入团队已有的 agent，要在界面上重新核对每个连接的账号和动作，别只凭产品名就放心。",
+    "本地模型或云端模型都用同一套验收，但数据流向不同。OpenBot 的应用模板是开源的，个人使用有免费的本地版本，也能接 Ollama 这类本地模型，但调用外部模型或工具时，所需数据仍会交给对应服务。无论哪种模型，验收动作一样：到原始工单里核对草稿里的每句话。"
+   ],
+   "points_en": [
+    "Approval should show the actual action and content, not just an approve button. A saved local draft can still be edited, but a sent email makes recipients act on it. So he opens the recipient, body and attachment together before deciding. If the attachment changes or the recipient goes from an internal colleague to an external address, the earlier approval no longer counts and the person must review again. A pause should also record a reason, such as an incomplete date range, a wrong attachment version or a wrong recipient, because each needs a different fix.",
+    "The scope is narrowed before the agent produces a draft. The exercise fixed the input location and the date range (16 to 22 November) and wrote both dates into the draft. The numbers have a simple check: 12 tickets this week, 8 closed and 4 pending, and 8 plus 4 must equal 12. Each number can be traced back to the source tickets. \"Four pending\" may only be written as four remaining, not as a promise to clear them today. An unconfirmed completion date is better written as \"to be confirmed\", because in his earlier Ollama weekly report the model added a promise by itself.",
+    "The agent should be tested on missing data so that it stops instead of pushing on. In the exercise he removed Friday's data, so the coverage record for that day was missing. He wants the agent to stop before the draft and name the missing day, not report everything as complete with one ticket missing. After the data is restored, the run is repeated and two records are kept: one on why it stopped and one on the result after the fix. The start and end times in the draft should also match the current run, so that last week's file is not passed off as a new result.",
+    "Scheduled runs need someone to keep the service running. OpenBot Routines can set repeating tasks, pause them, run them on demand and show past runs. The official documentation says routines are triggered by a running service, so a local machine that is shut down stops them. He would first let it remind him weekly to review the draft, rather than send an email weekly. The run log should show which week and whether a run was manual or scheduled. A duplicated draft is easy to handle, but two conflicting reports sent out would cost people time.",
+    "Tool permissions and the teach-a-bot feature need their own checks. He would keep read-tickets and write-draft permissions, and handle sending, sharing and deleting separately. According to the official description, tools and actions can be set to allow, require approval or deny. In the official demo the agent learns a reusable skill, and the personal edition auto-approves by default, so that setting must be turned off for manual review. He would then run it on other test data to see whether it learned to find the latest week or only memorised the places clicked that day. If a team's existing agent is connected, the accounts and actions of each connection should be checked again in the interface, not assumed from the product name.",
+    "The acceptance check is the same for local and cloud models, but data flow differs. The OpenBot app template is open source, and the personal edition has a free local version that can use local models such as Ollama. Calling external models or tools still sends the needed data to those services. With either kind of model, he checks each sentence of the draft against the original tickets."
+   ],
+   "topics": [
+    "AI Agents",
+    "OpenBot",
+    "Human-in-the-loop"
+   ]
+  },
+  {
    "id": "yt-M9KtHQCH1nM",
    "kind": "video",
    "source": "大雷早上好",
@@ -142,5 +216,5 @@
    ]
   }
  ],
- "generated_at": "2026-11-26T05:27:41.409273+00:00"
+ "generated_at": "2026-11-26T10:07:03.981993+00:00"
 }
