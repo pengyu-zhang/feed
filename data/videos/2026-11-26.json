@@ -1,0 +1,146 @@
+{
+ "date": "2026-11-26",
+ "items": [
+  {
+   "id": "yt-M9KtHQCH1nM",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "Microsoft Teams 智慧來電代接 × 逐段口譯｜電話接了，下一步誰負責？",
+   "url": "https://www.youtube.com/watch?v=M9KtHQCH1nM",
+   "published": "2026-11-26T02:47:48+00:00",
+   "basis": "transcript",
+   "brief_zh": "作者认为，Teams 的来电代接和逐段口译只解决“接起来”和“听得懂”，改时间、时区、谁负责这些事仍要有人确认并记在同一条行动纪录里。",
+   "background_zh": "作者看了微软的两支官方示范：一支是 Teams 智慧来电代接，另一支是英语接日语的逐段口译。他把两项功能放进同一个假设情境，也就是开会时有电话打进来、需要改约试用时间，来讨论接下来谁负责。字幕只有开头一句 AI 助手的问候，以下内容主要依据视频说明与章节标题。",
+   "conclusion_zh": "作者的立场是，两项功能各自能用，但要让事情真正办完，还得靠回读确认和同一条行动纪录来明确谁接手。正式使用前，先用两通电话和一场小会测试。",
+   "brief_en": "The author argues that Teams call delegation and segment-by-segment interpretation only handle answering and understanding. People still have to confirm the new time, the time zone and the owner, and record them in one action log.",
+   "background_en": "The author watched two official Microsoft demos. One shows Teams intelligent call delegation. The other shows segment-by-segment interpretation from English to Japanese. He places both in one hypothetical case, where a call comes in during a meeting and a trial time must be rescheduled, and asks who acts next. The transcript holds only the opening greeting of the AI assistant, so this summary relies on the video description and chapter titles.",
+   "conclusion_en": "The author holds that each feature works on its own, but a read-back and a shared action log are what show who takes over. He advises testing with two calls and a small meeting before going live.",
+   "points_zh": [
+    "来电代接是让 AI 助手先问清来意，再判断要不要尝试转接。转接不通时，它会提供留言或预约回访。作者说，这个功能目前是公开预览，能不能用取决于租户、授权和管理员设定。后续预约要开启后才会通过 Microsoft Bookings 安排。",
+    "逐段口译是一方说完一段，译文接着播出，示范里是英语说完、日语接上。作者说，它由符合资格的组织者在适用的双语会议里开启，全场都听得到，按 Copilot Credits 另外计费。视频还对比了逐段口译和同声口译，并介绍了同声口译的音轨设定。",
+    "作者把两项功能放进同一个假设情境，指出接电话和听会议之后还差一步交接。要改试用时间，两边都要回读一次确认。星期几、哪个时区、由谁负责，要记在同一条行动纪录里。他的说法是：来电有人接，会议有人听，最后还得有人接手。",
+    "上线前的测试方法是用两通电话和一场小会来试，视频第 6 分 32 秒起讲这部分。说明里没有列出具体测试步骤。"
+   ],
+   "points_en": [
+    "Call delegation lets an AI assistant ask who is calling and decide whether to try a transfer. If the transfer fails, it offers a message or a follow-up booking. The author says the feature is in public preview and depends on the tenant, the license and admin settings. Follow-up bookings go through Microsoft Bookings only after the option is turned on.",
+    "Segment-by-segment interpretation plays a translation after each speaker finishes a turn. The demo goes from English to Japanese. The author says an eligible organizer turns it on in a suitable bilingual meeting, everyone in the meeting hears it, and it is billed separately in Copilot Credits. The video also compares it with simultaneous interpretation and covers the audio track setup for that mode.",
+    "The author puts both features in one hypothetical case and says a handover step is still missing. When the trial time changes, both sides read it back once. The weekday, the time zone and the person responsible go into one action log. In his words, someone answers the call, someone hears the meeting, and someone still has to take over.",
+    "For testing before launch, he suggests two phone calls and one small meeting. This part starts at 6:32. The description does not list the test steps."
+   ],
+   "topics": [
+    "Microsoft Teams",
+    "Call delegation",
+    "Interpreter"
+   ]
+  },
+  {
+   "id": "yt-Jatwf_XOncE",
+   "kind": "video",
+   "source": "Fireship",
+   "source_url": "https://www.youtube.com/@Fireship",
+   "title": "17 million lines of AI slop just cracked a 167-year-old math problem...",
+   "url": "https://www.youtube.com/watch?v=Jatwf_XOncE",
+   "published": "2026-11-25T17:19:51+00:00",
+   "basis": "transcript",
+   "brief_zh": "Levent Alpoge 与 Claude 对话 41 天，产出 1700 万行 Lean 代码，声称证明了黎曼猜想；这份证明含有明显的垃圾代码，没有人能读懂，目前还不能算被数学界接受。",
+   "background_zh": "黎曼猜想是 1859 年提出的数学难题，克雷研究所为它悬赏一百万美元。Terence Tao 上个月还预测要到 2050 年前后才可能靠人类加 AI 解决。视频是 Fireship 对这起事件的点评与梳理。",
+   "conclusion_zh": "视频的结论是，这件事暂时对大多数人没有实际影响，它改变的主要是人们对这类难题何时能被攻克的时间预期。这个证明能否成立，还要等有人真正读懂并验证它。",
+   "brief_en": "Levent Alpoge spent 41 days talking with Claude and produced 17 million lines of Lean that claim to prove the Riemann Hypothesis. The code contains obvious junk, nobody understands it, and it is not yet accepted.",
+   "background_en": "The Riemann Hypothesis dates from 1859, and the Clay Institute offers a one million dollar prize for a proof. Last month Terence Tao predicted it would take humans and AI until around 2050. This video is Fireship's account of the new claim.",
+   "conclusion_en": "The video concludes that this changes little for most people for now. It mainly changes expectations about how soon such problems may fall. Whether the proof holds depends on someone actually understanding and checking it.",
+   "points_zh": [
+    "Alpoge 在上周五公布了结果，但他自己也承认没有掌握证明所依赖的数学。他从 10 月初开始做这件事，只发了一份四页的 PDF，说 Claude 完成了大部分工作。PDF 里有脚注，说明他对 Claude 贡献的描述来自 AI 的摘要，可能并不通顺。证明本身是一个 1700 万行的 Lean 文件。Lean 是一种数学不正确就无法编译的语言。Lean 社区当晚在自己的机器上编译，结果通过。他就是之前证伪 Jacobian 猜想、又与 OpenAI 就 Navier-Stokes 起争执的那个人。",
+    "代码里发现了问题。有一个叫 any geometry 的函数本应检查几何条件，实际上不管输入什么都返回 true，被调用了 118 次。数学家 Jenny Neilson 发现后发文宣布整个证明无效。后来其他人查明几乎没有内容依赖这个函数，很可能只是遗留的垃圾代码。Alpoge 随后确认 Lean 代码里确实有很多垃圾，他写得很随意。他还澄清，公告里说证明达到 25 万页是玩笑。",
+    "没有人真正理解这个证明是怎么回事，包括发布者本人。目前没有论文，也没有人能读的版本。想知道黎曼猜想为什么成立的数学家，只能去读那 1700 万行被作者称为垃圾的 Lean 代码。",
+    "同一时间还有别的相关事件。美国数学会会长发帖，提到 Alessandro Massolo 手写 12 年、共 940 页的另一份证明。他的老导师审了几个月，还想再看一年，但还是提前发出。8 小时后就有人把它喂给 Claude，报告了问题。Anthropic 周一也发了一篇论文，声称证明了有 47 年历史的 VP vs VNP 猜想。Claude 是唯一作者，写了论文和 7.3 万行 Lean 代码。Anthropic 自己承认还没有人类数学家检查过。",
+    "对普通人来说目前影响不大。即使黎曼猜想成立，也不会有东西失效，加密也没问题，因为大家本来就假定它为真。变化在于时间表：Tao 预计还要约 24 年，而这件事用了 41 天。Alpoge 也还拿不到奖金，因为克雷要求先正式发表论文，再等两年。"
+   ],
+   "points_en": [
+    "Alpoge announced the result last Friday, and he admits he has not mastered the math the proof relies on. He began in early October and published a four-page PDF saying Claude did most of the work. A footnote says his description of Claude's contributions comes from an AI summary and may not make sense. The proof itself is a 17 million line Lean file, and Lean is a language that will not compile unless the math is correct. The Lean community compiled it on their own hardware that night and it passed. He is the same person who disproved the Jacobian conjecture and argued with OpenAI over Navier-Stokes, according to earlier videos.",
+    "Problems were found in the code. A function called any geometry was meant to check a geometric condition but returned true for any input, and it was used 118 times. The mathematician Jenny Neilson found it and published a paper declaring the whole proof invalid. Others then found that almost nothing depended on the function and that it was probably leftover junk. Alpoge confirmed that the Lean is full of garbage and that he was careless in it. He also clarified that a line about the proof reaching 250,000 pages was a joke.",
+    "Nobody understands how the proof works, including the person who posted it. There is no paper and no human-readable version. A mathematician who wants to know why the hypothesis is true can only read 17 million lines of Lean that the author calls garbage.",
+    "Related events happened at the same time. The president of the American Mathematical Society posted about a second proof by Alessandro Massolo, who spent 12 years writing 940 pages by hand. His old advisor had reviewed it for months and wanted another year, but it was released early. Within 8 hours people had fed it to Claude and reported problems. On Monday Anthropic also posted a paper claiming to prove the 47-year-old VP vs VNP conjecture. Claude is the only author and wrote the paper and 73,000 lines of Lean. Anthropic admits no human mathematician has checked it yet.",
+    "For most people the effect is small for now. Nothing breaks if the hypothesis is true, and encryption is fine because everyone already assumed it was true. What changed is the timeline: Tao expected about 24 more years, and this took 41 days. Alpoge also cannot collect the prize yet, because Clay requires a published paper and then a two-year wait."
+   ],
+   "topics": [
+    "AI for math",
+    "Riemann Hypothesis",
+    "Lean"
+   ]
+  },
+  {
+   "id": "yt-TYo20zW3MCo",
+   "kind": "video",
+   "source": "硅谷101",
+   "source_url": "https://www.youtube.com/@TheValley101",
+   "title": "黄仁勋的“光”：详解AI算力背后的光通信产业链、英伟达赌注与技术博弈",
+   "url": "https://www.youtube.com/watch?v=TYo20zW3MCo",
+   "published": "2026-11-25T16:00:38+00:00",
+   "basis": "transcript",
+   "brief_zh": "GPU算力增长让互联成为AI系统的瓶颈，光通信因此成为关键；英伟达大力推动CPO，但可插拔光模块仍在进化，多种路线短期内会并存，CPO何时大规模落地、订单最终由谁来做仍有很大不确定性。",
+   "background_zh": "黄仁勋11月12日辞职、11天后回归，期间AI产业链股价大幅波动，英伟达过去一年投入数十亿美元的光通信行业也受到冲击。硅谷101采访了光学工程师Cathy和一位匿名的光通信从业者，拆解光通信的技术、产业链和商业博弈。",
+   "conclusion_zh": "视频认为，光通信的方向没有错，但CPO何时普及、可插拔能走多远、巨额投资能赚回多少，都要看接下来几年的订单、良率和云厂商资本开支，不会因黄仁勋回归而自动有答案。视频以2000年互联网泡沫作比：当年很多公司判断对了终局，却没撑到兑现，问题出在时间；受访者预计两三年内多种技术仍会并存。",
+   "brief_en": "GPU growth has made interconnect the bottleneck of AI systems, which makes optical communication central. Nvidia is pushing CPO hard, but pluggable modules are also evolving, so several routes will coexist for now. When CPO scales up and who gets the orders remain very uncertain.",
+   "background_en": "Jensen Huang resigned on November 12 and returned 11 days later. AI supply chain stocks swung sharply, and the optical communication sector, where Nvidia invested billions of dollars over the past year, was hit as well. Silicon Valley 101 interviewed Cathy, an optical engineer, and an anonymous optical communication professional to explain the technology, supply chain and business contest.",
+   "conclusion_en": "The video holds that the direction of optical communication is not in doubt. When CPO becomes common, how far pluggables can go and how much the huge investments will return depend on orders, yields and cloud capital spending in the coming years, and Huang's return does not settle them. It compares the situation with the 2000 internet bubble, when many companies were right about the end state but did not survive until it arrived, so the problem was timing. A guest expects several technologies to coexist for the next two to three years.",
+   "points_zh": [
+    "GPU越强，互联越容易成为瓶颈，所以需要光。视频给出的数据是：从A100到B200，单卡算力约涨7倍，NVLink带宽只从600GB/s涨到1.8TB/s，涨了3倍；训练集群也从几百上千张卡扩大到上万甚至几万张。训练和推理都要多GPU协同，业内把这个问题叫“通信墙”。铜缆有三个物理极限：距离（200G通道下只有两米左右）、带宽（Serdes电路越来越难提速）和功耗。光按三层逐步取代铜：Scale up（机柜内）、Scale out（集群网络）和Scale across（数据中心之间），其中Scale up带宽最大、增长最快。据Light Counting统计，全球光模块销售额2024年为154亿美元，2025年增长74%，达268亿美元。",
+    "光模块产业链很长，价值最高的环节多在海外上游，没有哪家公司能从头到尾垄断。链条是：磷化铟衬底，外延，激光器芯片，硅光芯片设计与代工，DSP，光电封装，光模块组装。2025年全球光模块前十名中中国厂商占七席，前两名都是中国公司，但DSP主要来自美国，激光器来自美日，外延片来自英国，硅光代工来自以色列。EML（把发光和调制做在同一颗磷化铟芯片上）良率难，全球能稳定量产高端产品的公司屈指可数，新产线要一两年才能出货，订单排到两三年后。硅光路线用成熟的CMOS工艺在硅片上做调制器和波导，外接磷化铟光源，量大后成本可以摊薄。硅光让话语权从组装厂商转向博通、Marvell等芯片设计公司和台积电、格芯、Tower等代工厂。两条路线各有地盘，谁也淘汰不了谁，因为硅光仍要买磷化铟光源。受访者还提到，做精密封装的天孚通信毛利率常年约五成，高于营收大得多的光模块厂商。",
+    "英伟达推CPO，是因为可插拔光模块离芯片太远。电信号从交换芯片跑到面板模块，在200G单通道下损耗最高约22分贝，需要耗电的DSP来补救；英伟达称1.6T可插拔模块功耗已达几十瓦，百万级连接的网络要吃掉几十兆瓦。CPO把光引擎封装到交换芯片旁边，铜走线从十几厘米缩到毫米级，英伟达方案可省掉DSP，光互联功耗降约七成。它有Scale out（交换机，英伟达与博通竞争）和Scale up两个战场，英伟达路线图计划在2028年的Feynman时代引入NVLink CPO。CPO的代价是维修困难。",
+    "中间路线并存，是各方在功耗、密度、成本和可维护性之间权衡的结果，也对应不同厂商的利益。LPO去掉DSP但仍可插拔，对信号质量要求更高；XPO（Arista等推动）把可插拔做得更密；英伟达与思科10月公布的USFP通道更多更快，面板带宽密度目标是现在的四倍；NPO把光引擎放在芯片旁但仍可更换。英伟达想把交换芯片和光引擎垂直整合，云厂商不想被单一供应商卡脖子。受访者认为，只为省功耗不会选CPO，带宽实在做不上去时CPO才有空间，光模块不会被淘汰，仍是主流。",
+    "CPO把激光器推到台前，产能成为新瓶颈。激光器怕热，所以CPO把光源拆成外部CW光源，用光纤送进光引擎，EML订单已排到2027到2028年，现在又要新增CW产线。英伟达今年向Lumentum和Coherent各投20亿美元，并向Marvell投了20亿美元。Coherent已把磷化铟产线从3英寸升到6英寸，单颗芯片成本降六成以上，良率反超3英寸线；Lumentum在北卡罗来纳买下一座6英寸厂，要到2028年年中才能爬产，目前出货量比客户需求少三成以上。11月2日Marvell宣布计划以1150亿美元估值收购Lumentum，公布当天两家股价双双下跌，交易仍有不确定性。",
+    "资本市场的下跌来自三层担忧：需求、时间和政策。第一，美国中期选举让数据中心建设的税收优惠、水电费、噪音和环保等问题重新谈判，项目可能推迟。第二，SemiAnalysis在6月9日的报告《Power down lights off》认为CPO方向不变但时间表算早了，光对准容差只有约1微米，部分场景要等到2028甚至2029年；摩根士丹利测算CPO对传统光模块需求的影响2027年从3%升到约11%，中金认为可插拔、NPO和CPO会长期共存，大规模切换在2027到2028年。第三，路透社11月17日报道，针对中国新型号光模块的进口限制方案仍在推进；全球约每三只光模块有两只来自中国厂商，且中国厂商已在泰国等地布局海外制造，视频认为政策更可能改变订单由谁、在哪里做，而不是需求总量。"
+   ],
+   "points_en": [
+    "Stronger GPUs make interconnect a bottleneck, and this is why optics is needed. From A100 to B200, per-GPU compute rose about 7 times, while NVLink bandwidth rose only 3 times, from 600 GB/s to 1.8 TB/s. Training clusters also grew from hundreds or thousands of cards to tens of thousands. Both training and inference need many GPUs to work together, and the industry calls this the communication wall. Copper has three physical limits: distance (about two meters at 200G per lane), bandwidth (SerDes circuits are hard to speed up) and power. Optics replaces copper in three layers: scale up (within racks), scale out (cluster networks) and scale across (between data centers). Scale up has the largest bandwidth and the fastest growth. According to LightCounting, global optical module sales were $15.4 billion in 2024 and rose 74% to $26.8 billion in 2025.",
+    "The optical module supply chain is long. The most valuable parts sit mostly with overseas upstream suppliers, and no single company covers the whole chain. The steps are indium phosphide substrates, epitaxy, laser chips, silicon photonics design and foundry, DSP, optoelectronic packaging and module assembly. Chinese vendors hold seven of the top ten places in 2025 and the top two, but DSPs come mainly from the US, lasers from the US and Japan, epitaxial wafers from the UK and silicon photonics foundry work from Israel. EML puts light emission and modulation on one indium phosphide chip. Yield is hard, only a handful of companies can mass-produce high-end parts, a new line takes one to two years to ship, and orders are booked two to three years ahead. The silicon photonics route builds modulators and waveguides on silicon with mature CMOS processes and attaches an external indium phosphide light source, so cost falls with volume. It shifts power from assemblers to chip designers such as Broadcom and Marvell and to foundries such as TSMC, GlobalFoundries and Tower. Neither route can eliminate the other, because silicon photonics still buys its light source from indium phosphide makers. The guests also noted that the precision packaging firm Tianfu Communication has had gross margins of about 50%, higher than module makers with much larger revenue.",
+    "Nvidia pushes CPO because pluggable modules sit too far from the chip. At 200G per lane, the electrical signal can lose up to about 22 dB between the switch chip and the front-panel module, and a power-hungry DSP is needed to recover it. Nvidia says a 1.6T pluggable module already uses tens of watts, and a network with millions of links would consume tens of megawatts. CPO packages the optical engine next to the switch chip, shortening the copper trace from over ten centimeters to millimeters. In Nvidia's design the DSP can be removed and optical interconnect power falls by about 70%. CPO has two arenas: scale out (switches, where Nvidia and Broadcom compete) and scale up. Nvidia's roadmap introduces NVLink CPO in the Feynman generation in 2028. The cost of CPO is that repair is difficult.",
+    "Intermediate routes coexist because each balances power, density, cost and serviceability, and each reflects different company interests. LPO removes the DSP but stays pluggable, which demands better signal quality. XPO, pushed by Arista and others, makes pluggables denser. USFP, announced by Nvidia and Cisco in October, has more and faster lanes and targets four times today's panel bandwidth density. NPO puts a replaceable optical engine next to the chip. Nvidia wants to integrate the switch chip and optical engine vertically, while cloud vendors do not want to depend on one supplier. A guest said power savings alone would not justify CPO, that CPO has room when bandwidth cannot otherwise be delivered, and that optical modules will not be eliminated and will remain mainstream.",
+    "CPO brings lasers to the front, and capacity becomes a new bottleneck. Lasers fear heat, so CPO separates the light source as an external CW source and sends light to the optical engine through fiber. EML orders are already booked into 2027 and 2028, and CW lines must now be added. Nvidia invested $2 billion each in Lumentum and Coherent this year, and also $2 billion in Marvell. Coherent moved its indium phosphide line from 3 to 6 inches, cutting chip cost by more than 60%, and its 6-inch yield exceeds the 3-inch line. Lumentum bought a 6-inch fab in North Carolina that will not ramp until mid-2028, and its shipments are currently more than 30% below customer demand. On November 2, Marvell said it plans to buy Lumentum at a $115 billion valuation. Both stocks fell on the announcement day, and the deal remains uncertain.",
+    "The market decline reflects three concerns: demand, timing and policy. First, the US midterm elections reopened questions on data center tax breaks, utility bills, noise and the environment, which could delay projects. Second, SemiAnalysis said on June 9 in a report titled Power down lights off that the CPO direction is unchanged but the timetable was set too early. Optical alignment tolerance is about 1 micron, and some uses may wait until 2028 or 2029. Morgan Stanley estimates CPO's effect on traditional module demand will rise from 3% to about 11% in 2027. CICC expects pluggable, NPO and CPO to coexist for a long time, with large-scale switching in 2027 to 2028. Third, Reuters reported on November 17 that a plan to restrict imports of new Chinese optical module models is still moving forward. About two of every three modules sold globally come from Chinese vendors, who are already building overseas capacity in places such as Thailand. The video says policy is more likely to change who builds the orders and where than to change total demand."
+   ],
+   "topics": [
+    "Optical Communication",
+    "CPO",
+    "AI Infrastructure"
+   ]
+  },
+  {
+   "id": "yt-N_JW3Cq2Zqc",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "Microsoft Teams 逐段口譯｜全場都能聽，跨語會議怎麼接話？",
+   "url": "https://www.youtube.com/watch?v=N_JW3Cq2Zqc",
+   "published": "2026-11-25T14:02:43+00:00",
+   "basis": "transcript",
+   "brief_zh": "Teams 的逐段口译能让全场听到译音,但它只解决“听懂”,开跨语会议真正要靠当场确认时间、时区和负责人,并把结果写进两边都认的会后记录。",
+   "background_zh": "微软给 Teams Interpreter 加入了双语逐段口译:发言人说完后,由译音放给全场听。频道主“大雷早上好”看了微软的英语转日语演示,并用自己编的项目会议场景(不是实际在 Teams 里跑出的结果)讲怎么用这个功能。",
+   "conclusion_zh": "作者的看法是,开双语会议,能翻译只是第一步,真正卡时间的是大家听完后知道轮到谁回答、下一步由谁负责。他建议先拿一件小事试一场会,把人、时间和回复写进一份两边都能看的记录。",
+   "brief_en": "Teams consecutive interpreting lets everyone in the meeting hear the translation, but it only solves comprehension. In the author's view, a cross-language meeting also needs time, time zone and owner confirmed on the spot, and the result written into a record that both sides accept.",
+   "background_en": "Microsoft added bilingual consecutive interpreting to Teams Interpreter: after a speaker finishes, the translated audio plays for the whole meeting. The channel host, Dalei, watched Microsoft's English-to-Japanese demo and then used a fictional project-meeting scenario of his own to show how to use the feature. The scenario is not a result run in Teams.",
+   "conclusion_en": "His view is that being able to translate is only the first step in a bilingual meeting. What costs time is whether people know who answers next and who owns the next step. He suggests trying one small matter first and writing the people, time and reply into one record that both sides can read.",
+   "points_zh": [
+    "逐段口译和同声口译用在不同场合。同声口译是个人在自己耳机里听,适合一人讲、多人听的培训。逐段口译是发言完成后译音放给全场,适合要和客户谈具体交付、双方都得回答的项目会。字幕是看的,看到屏幕上有译文不等于全场都听到了译音,测试时要直接问对面耳机里听到了什么。",
+    "时间、时区和负责人要在会上当场说清楚、当场确认。例子是“试点改到周四下午2点,北京的小梅周三前确认”:一句话里有周四和周三两个日期,下午两点在两地日历上可能是两个格子,小梅的名字也得有人认领。做法是先把时间说完整,让对面用自己的话复述(“北京时间周四两点对吗?”),再单独问小梅周三前能否确认,她答应后才写进记录。如果对方说小梅那天另有安排,就先把状态标成待确认,并说清对方只是复述还是已经同意。",
+    "会前要先过几关。按微软文档,开启逐段口译需要有符合条件的主持人在桌面端打开,手机参会者可以收听,所以要提前开一场测试会:点“更多操作”,找口译助手,选逐段口译,告诉两边等翻译播完再接,各说一句看实际听到什么。目前逐段口译按使用量计费,是否可用和怎么计费以租户和官方指南为准,实际消耗让管理员看账单或使用数据。适用范围先缩小到十来人轮流发言的双语项目讨论。经常有人抢话、三四种语言同时来回,或要对重要条款马上表态的会,他会另找方式。",
+    "会后记录和翻译质量是两条线。微软说明,会议录制只收原始发言音轨,口译音频不进录制;会后原始逐字稿显示的是发言时说的语言。所以不能只说回头看录像,要用一份记录确认哪件事定了、谁负责、什么时候交。记录分两类:已答应的写负责人和时间,还在等回复的保留待确认并写明谁去问。即使每个词都翻对了,把提议写成决议,下一个接手的人照样会出问题。",
+    "试用时只验三件事:主持人能不能开起来,对面接话接不接得上,散会后有没有人接得住。找三个人试,一个主持人,一个说中文,一个说另一种语言,再找一位用手机的同事听一轮。三人各记自己的部分(主持人记开启时间,两边各记听到的一句译文),最后对照行动记录,看同一件事有没有写成两个版本。遇到缩写或专有名词翻不准,就换成短句,并把原写法贴到聊天框。试完留一张小记录,换人、设备或语言组合时用同一句再跑。"
+   ],
+   "points_en": [
+    "Consecutive and simultaneous interpreting suit different meetings. Simultaneous interpreting plays in one person's own ears and fits a training session where one person speaks and many listen. Consecutive interpreting plays for the whole meeting after the speaker finishes, and fits a project meeting with a client where both sides must answer about a specific deliverable. Captions are for reading, so a translation on screen does not prove that everyone heard the audio. In a test, he asks the other side what they heard in their headphones.",
+    "Time, time zone and owner should be stated clearly and confirmed in the meeting. His example is: the pilot moves to Thursday 2 pm, and Xiaomei in Beijing confirms by Wednesday. One sentence holds two dates, Thursday and Wednesday. The same 2 pm may fall in different slots on two calendars, and Xiaomei's name needs someone to claim it. He states the full time first and asks the other side to repeat it in their own words (for example, \"Thursday 2 pm Beijing time, correct?\"). Then he asks Xiaomei separately whether she can confirm by Wednesday, and records it only after she agrees. If the other side says Xiaomei has another commitment that day, the host marks the item as pending. The host also makes clear whether the other side only repeated the point or has agreed.",
+    "Some checks come before the meeting. According to Microsoft's documentation, an eligible host must turn on consecutive interpreting on the desktop app, and mobile participants can listen. He therefore runs a test meeting: open More actions, find the interpreter agent, choose consecutive interpreting, tell both sides to wait until the translation ends, and have each side say one sentence to see what they actually hear. Consecutive interpreting is currently billed by usage. Eligibility and billing depend on the tenant and the official guide, and the administrator should check the bill or usage data for actual consumption. He limits the first use to a bilingual project discussion with about ten people taking turns. For meetings with frequent interruptions, three or four languages at once, or immediate positions on important clauses, he would plan a different method.",
+    "The after-meeting record is a separate matter from translation quality. Microsoft states that the recording keeps only the original speech track and does not include the interpreted audio. The original transcript afterward shows the language each person spoke. So he does not rely on watching the recording. One record should confirm what was decided, who is responsible and the due date. He splits the record into two states: agreed items with an owner and a time, and items awaiting a reply, which stay as pending with the name of who will ask. Even if every word is translated correctly, a record that writes a proposal as a decision causes trouble for the next person.",
+    "A trial should check only three things: whether the host can turn the feature on, whether the other side can follow the turn-taking, and whether someone picks up the next step after the meeting. He suggests three people: a host, a Chinese speaker and a speaker of the other language. A colleague on a phone can listen for one round. The host notes when they turned it on, each side notes one sentence of translation they heard, and all three compare these with the action record to see whether one item was written in two versions. If an abbreviation or term is translated wrongly, he switches to a short sentence and pastes the original wording in the chat. He then keeps a small trial record and reruns the same sentence when the people, device or language pair changes."
+   ],
+   "topics": [
+    "Microsoft Teams",
+    "Meeting interpretation",
+    "Workflow"
+   ]
+  }
+ ],
+ "generated_at": "2026-11-26T05:27:41.409273+00:00"
+}
