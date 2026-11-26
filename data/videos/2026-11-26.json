@@ -2,6 +2,80 @@
  "date": "2026-11-26",
  "items": [
   {
+   "id": "yt-aUmH8iMIA-I",
+   "kind": "video",
+   "source": "Best Partners TV",
+   "source_url": "https://www.youtube.com/@bestpartners",
+   "title": "对话纳德拉​：代码变便宜之后的软件工程 | 微软 | Satya Nadella | AI编程 | Claude Code | GitHub Copilot | 软件工程 | 决策引擎",
+   "url": "https://www.youtube.com/watch?v=aUmH8iMIA-I",
+   "published": "2026-11-26T12:00:10+00:00",
+   "basis": "transcript",
+   "brief_zh": "纳德拉认为，代码生成变便宜之后，软件工程真正难的部分是验证，工程师的核心工作转向写规格和做验证，企业则必须掌握自己的AI基础设施、上下文和模型系统。",
+   "background_zh": "纳德拉是微软CEO，早年做过软件工程师，2014年接任微软第三任CEO。这期节目里主持人是The Pragmatic Engineer的Gergely Orosz，他曾在微软工作过，提问很尖锐，包括微软为何没有及时应对Claude Code、自愿离职方案是不是裁员的前奏。（说明：转录文本对主持人和节目名拼写有误，这里按描述中的 The Pragmatic Engineer 处理，主持人姓名按常见拼写给出，原字幕并不清晰。）",
+   "conclusion_zh": "纳德拉的立场是：代码便宜之后，规格和验证是软件工程的新核心；做AI产品要随模型变化随时重构，不能恋旧；企业要自己掌握AI基础设施与上下文，并把权限与智能分离。后半段的论述因转录缺失，只能依据视频描述。",
+   "brief_en": "Nadella argues that once code generation is cheap, verification becomes the hard part of software engineering. He says engineers' core work shifts to specifications and verification, and that firms must control their own AI infrastructure, context and model systems.",
+   "background_en": "Satya Nadella is the CEO of Microsoft and a former software engineer. He became its third CEO in 2014. The host is Gergely Orosz of The Pragmatic Engineer, a former Microsoft employee, who asked sharp questions about why Microsoft was caught off guard by Claude Code and whether voluntary departure offers precede layoffs. (The transcript garbles the host's and show's names. They are taken from the description and common spelling.)",
+   "conclusion_en": "Nadella's position is that once code is cheap, specifications and verification are the core of software engineering. He says AI products must be rebuilt as models change, and companies must own their AI infrastructure and context and keep permissions separate from intelligence. The later parts of his argument rest on the video description because the transcript is missing.",
+   "points_zh": [
+    "纳德拉的核心判断是：代码生成已经便宜，难点变成验证。他提出“软件工厂”的说法：代码从输入变成输出，工程师的主要工作变成写规格和做验证。",
+    "微软这十几年的转向是有意为之。2014年他上任后推动开源：把server搬到Linux上、向Linux贡献代码、开源TypeScript、收购GitHub，内部把版本管理换成git。他说微软此前对Linux的贡献已经相当可观，只是外界不知道，他想让公司内外都明白微软认真对待开源。他还说，若真算一算各家公司从开源拿了多少、回馈了多少，微软应排在前列，而有些受益最多的公司贡献很少。VS Code不但开源还免费，团队刻意与社区一起公开开发，产品团队每天看社区反馈来决定做什么，他认为这种文化转变比开源本身意义更大。",
+    "关于被Claude Code打了个措手不及，纳德拉没有回避。微软很早就进入AI编程，GitHub Copilot出现时整整一年没有真正的对手，后来又有基于VS Code分叉的Cursor推动了智能体模式。主持人说Claude Code出现后，短短六个月就改变了很多人的工作方式，他第一次觉得微软没有立刻响应。纳德拉承认Anthropic做得很漂亮，让命令行界面成为真正的产品形态，能完整接任务、把代码从输入变成输出。他的原则是：基于模型做产品，模型能力非线性跃升时产品形态必须跟着变，围绕当前模型打造一切，同时准备好随时重做，所以“不要爱上自己已经做出来的东西”。他还说自己反而又开始回到IDE，因为有了决策引擎模型，IDE更像嵌在软件里的智能函数，预计多种产品形态会并存。",
+    "他把“决策引擎”称为一种新的原语，类比Excel里的公式，也类比存储过程：把智能作为原语嵌入代码。例子是Xbox团队管理社区反馈的系统，反馈进来后要做一连串判断，他不想每次让大模型重新生成代码，只想让它做决定，所以把决策引擎嵌进去，可以直接调用，省token。他提到喜欢Diego的一个想法（转录中的名字，拼写不确定），即让决策引擎像数据库一样平常；他自己是伴随关键型数据库长大的工程师，数据库是他最喜欢的开发工具。",
+    "对企业的警告：不掌握自己的AI基础设施、上下文和模型系统，等于战略自杀。权限与智能必须分离，智能体要按内部威胁来管理。（这部分是据视频描述整理，转录中相关段落缺失或乱码，细节无法核实。）",
+    "关于自愿离职方案和初级招聘放缓，据视频描述，他的解释是先建好新工厂再进人。（转录中这一段缺失，具体说法无法核实。）",
+    "最后落到本地模型与混合智能：据视频描述，他认为边缘设备就是Token工厂。（转录后半段为大量重复乱码，细节无法核实。）"
+   ],
+   "points_en": [
+    "Nadella's central claim is that code generation is now cheap, so verification is hard. He describes a software factory in which code moves from input to output, and the engineer's main work becomes writing specifications and verifying results.",
+    "He says Microsoft's shift on open source was deliberate. After 2014 it moved server products to Linux, contributed code to Linux, open-sourced TypeScript, acquired GitHub and replaced its internal version control with git. He says Microsoft's Linux contributions were already large before he became CEO, and that he wanted people inside and outside the company to see it took open source seriously. He also says that if one counted what each company takes from open source and gives back, Microsoft would rank near the top, while some of the biggest beneficiaries contribute very little. VS Code was both open source and free, and its team developed it in public with the community, with product teams reading community feedback daily. He considers that cultural change more important than open source itself.",
+    "Nadella does not avoid the question of Claude Code. He says Microsoft entered AI coding early, and GitHub Copilot had no real competitor for a full year. Cursor, a fork of VS Code, then brought in agent mode. The host says that within about six months Claude Code changed how many people work, and that it was the first time he felt Microsoft did not respond at once. Nadella concedes that Anthropic did this well and made the command-line interface a real product form that takes a whole task and turns code from input into output. His rule is that when model capability jumps in a non-linear way, the product form must change with it. Build everything around the current model, be ready to rebuild for the next one, and do not fall in love with what you have made. He adds that he has gone back to using the IDE, because with decision-engine models it works more like an intelligent function inside software, and he expects several product forms to coexist.",
+    "He calls the decision engine a new primitive, comparing it to the formula in Excel and to the stored procedure. It embeds intelligence in code as a primitive. His example is an Xbox team system that handles community feedback: each item needs a chain of judgments, and he wants the model to make the decision, not regenerate code each time. With the decision engine embedded, it can be called directly, which saves tokens. He likes a colleague's idea (named Diego in the transcript, spelling uncertain) that decision engines should become as ordinary as databases. He grew up as an engineer on mission-critical databases, and says the database is his favourite developer tool.",
+    "He warns enterprises that failing to control their own AI infrastructure, context and model systems amounts to strategic suicide. Permissions must be separated from intelligence, and agents should be managed as insider threats. (This point comes from the video description. The matching transcript passage is missing or garbled, so details cannot be checked.)",
+    "On voluntary departure offers and slower junior hiring, the description says he explains that Microsoft builds the new factory first and hires afterwards. (This part of the transcript is missing, so his exact words cannot be checked.)",
+    "The talk ends on local models and hybrid intelligence. According to the description, he says edge devices are token factories. (The latter part of the transcript is repeated garbled text, so details cannot be checked.)"
+   ],
+   "topics": [
+    "AI coding",
+    "Software engineering",
+    "Microsoft"
+   ]
+  },
+  {
+   "id": "yt-nLSehDZd304",
+   "kind": "video",
+   "source": "TLDR News EU",
+   "source_url": "https://www.youtube.com/@TLDRnewsEU",
+   "title": "Why European Negotiations With Russia Look Futile",
+   "url": "https://www.youtube.com/watch?v=nLSehDZd304",
+   "published": "2026-11-26T11:15:19+00:00",
+   "basis": "transcript",
+   "brief_zh": "欧洲已同意以E5加北约、欧盟代表的身份加入美国斡旋的四方和谈，但视频认为，俄欧立场差距过大、欧洲内部不统一、俄罗斯仍在升级对抗，所以达成和平协议的可能性很低。",
+   "background_zh": "上周四在柏林举行的“意愿联盟”峰会上，欧洲同意正式参与结束乌克兰战争的谈判。此前欧洲一直不直接参与俄乌谈判，只通过军事、经济和外交手段支持乌克兰，斡旋主要由美国负责。",
+   "conclusion_zh": "视频认为欧洲面临两难：要么站在一旁，把斡旋交给似乎乐于接受俄方说法的美国；要么参加谈判，冒着被可能无意履约的俄罗斯拖着走的风险。战争已近五年，欧洲离结束战争似乎仍然很远。",
+   "brief_en": "Europe has agreed to join US-mediated four-way peace talks with Russia and Ukraine. The video argues that a deal looks unlikely because the sides are far apart, Europe is divided and Russia keeps escalating.",
+   "background_en": "At a Coalition of the Willing summit in Berlin last Thursday, Europe agreed to take part officially in talks to end the war in Ukraine. Until now Europe has stayed out of the negotiations. It has backed Ukraine with military aid, economic pressure and diplomacy, while the US has done most of the mediating.",
+   "conclusion_en": "The video says Europe faces a dilemma. It can stay on the sidelines and leave mediation to the US, which seems willing to accept Russia's version of events. Or it can join the talks and risk being strung along by a Russian government that may not intend to honour a deal. After nearly five years of war, Europe seems no closer to ending it.",
+   "points_zh": [
+    "欧洲此前一直置身谈判之外，现在才转向直接参与。2022年2月全面入侵后，欧洲认为和平条款应由交战双方决定。2025年4月美国的第一份方案提出冻结前线、不让乌克兰加入北约、解除对俄制裁，但几小时内俄罗斯就大规模导弹袭击基辅。2025年11月泄露的28点计划由美国特使Steve Wittcoff与俄方起草，内容包括把整个顿巴斯划给俄罗斯、限制乌克兰军队规模、100天内重新选举、恢复欧俄经济外交关系，在欧洲引起强烈反对。英法德随后提出反建议，包括俄、乌、北约之间的互不侵犯协议，以及协议签署后乌克兰尽快举行选举，但进展不大。之后特朗普转向中东，今年2月对伊朗开战，俄乌谈判中断7个月。9月Wittcoff和Jared Kushner赴莫斯科，随后美国在阿布扎比斡旋了2月以来的首次俄乌会谈，欧洲才决定参与未来的四方谈判。",
+    "第一个理由是俄欧立场差距太大。据德国《图片报》报道，俄方提出要求芬兰退出北约，芬兰国防部长称其“绝对离谱”，俄方还要求禁止北约在波罗的海国家驻军。据《纽约时报》报道，一份流传的外交文件显示俄方的非官方要求还包括禁止北约扩张、北约退出东欧、南高加索和中亚的军事活动、英法放弃与其他欧洲国家的核共享安排、停止一切对乌克兰的西方军援。欧盟外交与安全政策高级代表Kaja Kallas称这些要求“荒谬”。视频认为这说明普京的立场与以往几轮谈判相比基本没变，普京邀请欧洲领导人去莫斯科“界定立场”，也可能是宣传活动或羞辱仪式，有分析人士警告欧洲别走进陷阱。",
+    "第二个理由是不清楚欧洲能从谈判中得到什么。2025年全年普京多次拒绝无条件停火，也拒绝欧洲对美国方案的修改。他这次邀请欧洲去莫斯科，也明确说只是初步会面。视频指出，去莫斯科当面陈述立场是一个好处，但看不出这如何缩小双方分歧。",
+    "第三个理由是欧洲内部不统一。泽连斯基本月呼吁欧洲只派一名代表，以便用一个声音说话，但实际上是五个国家加北约和欧盟代表出席，所谓四方谈判更像十方圆桌。各国关注点也不同：法国和英国会反对俄方限制它们的核合作，波兰最关心俄方对波罗的海和北约在东欧活动的立场。",
+    "第四个理由是俄罗斯仍在对欧洲升级对抗。爱沙尼亚在塔林附近一处无人机设施遭遇未遂破坏袭击后，宣布12月1日起关闭对俄陆地边境，拉脱维亚总理随后也提出同样要求。过去一周有两枚俄罗斯导弹和数架无人机击中波兰。欧洲的航空公司和学校不断收到炸弹威胁，被怀疑来自亲克里姆林宫的黑客组织。视频认为，只要俄罗斯继续升级，就没有理由认为普京准备好了和平。"
+   ],
+   "points_en": [
+    "Europe has stayed out of the talks until now and has only just moved to take part directly. After the full-scale invasion in February 2022, Europe saw peace terms as a matter for the two warring sides. The first Trump administration plan, in April 2025, proposed freezing the front lines, blocking Ukraine from NATO and lifting sanctions on Russia. Within hours Russia launched a large missile attack on Kyiv. A 28-point plan leaked in November 2025. It was drafted by US envoy Steve Wittcoff and the Russians, and it provoked an uproar in Europe. It included ceding all of Donbas to Russia, limiting Ukraine's army, new elections within 100 days and restoring European economic and diplomatic ties with Russia. The UK, France and Germany answered with a counter-proposal that included a non-aggression agreement among Russia, Ukraine and NATO and early elections in Ukraine. It did not get far. Trump then turned to the Middle East and launched a war against Iran in February, and the talks paused for seven months. In September Wittcoff and Jared Kushner went to Moscow. The US then mediated the first Russia-Ukraine talks since February, in Abu Dhabi, and Europe decided to join future four-way talks.",
+    "The first reason is that the positions of Russia and Europe are too far apart. Bild reported that Russia demanded Finland leave NATO, which the Finnish defence minister called absolutely outrageous. Russia also reportedly wants a ban on NATO bases in the Baltic states. A New York Times report, based on a circulating diplomatic paper, listed further Russian demands. They are a ban on NATO expansion, an end to NATO military activity in Eastern Europe, the South Caucasus and Central Asia, France and the UK dropping their nuclear sharing arrangements with other European countries, and an end to all Western military aid to Ukraine. EU foreign affairs chief Kaja Kallas called the demands absurd. The video says this suggests Putin has not changed his position. His invitation to Moscow may be a propaganda event or a humiliation ritual, and some analysts warn Europe against walking into a trap.",
+    "The second reason is that it is unclear what Europe would gain. Through 2025 Putin repeatedly rejected unconditional ceasefires and European changes to US-drafted proposals. His invitation to Moscow was described as only a preliminary meeting. The video says European leaders could state their views face to face, but it is unclear what else this would achieve or how it would narrow the gap.",
+    "The third reason is disagreement within Europe. Zelensky asked Europe to name a single representative so that it would speak with one voice. This did not happen. Five countries plus NATO and EU representatives will attend, so the four-way talks are closer to a ten-way round table. The countries also have different priorities. France and the UK would oppose Russian limits on their nuclear cooperation, while Poland would focus on Russia's position on the Baltics and NATO activity in Eastern Europe.",
+    "The fourth reason is Russia's continued aggression towards Europe. Estonia said it would close its land border with Russia from 1 December after an attempted sabotage attack on a drone facility near Tallinn, and Latvia's prime minister soon called for the same. Two Russian missiles and several drones hit Poland within the past week. European airlines and schools keep facing bomb threats suspected to come from pro-Kremlin hacking groups. The video says that while Russia keeps escalating, there is little reason to think Putin is ready for peace."
+   ],
+   "topics": [
+    "Ukraine war",
+    "European security",
+    "Peace negotiations"
+   ]
+  },
+  {
    "id": "yt-FkWTfE9dnTg",
    "kind": "video",
    "source": "程序员老王",
@@ -216,5 +290,5 @@
    ]
   }
  ],
- "generated_at": "2026-11-26T10:07:03.981993+00:00"
+ "generated_at": "2026-11-26T13:15:15.604123+00:00"
 }
