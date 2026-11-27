@@ -1,0 +1,322 @@
+{
+ "date": "2026-11-27",
+ "items": [
+  {
+   "id": "8bdf529bb0e9",
+   "kind": "blog",
+   "source": "seangoedecke.com",
+   "source_url": "https://seangoedecke.com",
+   "title": "Who gets to decide if something is written by AI?",
+   "url": "https://seangoedecke.com/who-gets-to-decide-if-something-is-written-by-ai/",
+   "published": "2026-11-27T00:00:00+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为,判断一段文字是不是 AI 写的,不该交给社区凭感觉裁决,而应该用 Pangram 这类检测工具;反对检测工具的人,根子在于对\"谁掌握这项权力\"的不信任。",
+   "background_zh": "最近天天有人争论某篇文字是不是 AI 写的,比如一篇获奖小说被指是 AI 生成,一位作者的稿子被 Pangram 标出后丢了合同。作者想弄清楚:为什么很多反 AI 的人反而讨厌 AI 检测工具。",
+   "conclusion_zh": "作者的立场是:如果想把 AI 挡在人类的艺术和文化领域之外,就该用手头最强的工具,哪怕它们本身也是 AI。如果不信任科技公司互相监督,就应该推动开源方案,或游说政府自建 AI 检测平台。他认为把这个问题留给社区,只会让世界上多出更多 AI 写的故事、文章和诗歌。",
+   "brief_en": "The author argues that Pangram-style detection tools, not community judgement, should decide whether text is AI-written, and that opposition to such tools comes from distrust over who holds the power to decide.",
+   "background_en": "Arguments about whether something was written by AI come up daily. Examples include a prize-winning story, an author who lost a contract after Pangram flagged her manuscript, and a disputed tweet. The author asks why many anti-AI people dislike detection tools.",
+   "conclusion_en": "The author holds that anyone who wants to keep AI out of human art and culture should use the most powerful tools available, even if those are AI tools. If you distrust tech companies to police each other, he says to push for open-source solutions or for governments to build their own detection platforms. He concludes that leaving the question to the community produces a world with more AI-written stories, articles and poetry.",
+   "points_zh": [
+    "反对检测工具的真正原因是权力,而不是工具准不准。作者的看法是,\"谁来决定某物是不是 AI 写的\"这个问题,实质是谁来掌握把关文学奖、给学生及格或不及格、把人排除出公共讨论的权力。作者说自己的博客核心观点就是\"一切都与权力有关,这没什么不对\",所以对 Pangram 的怀疑者相当理解。",
+    "作者替怀疑者给出了两条他认为合理的理由。第一,如果你担心的是 AI 让科技行业获得空前的社会权力,那么由另一家科技公司(Pangram)来当裁判,并不能让你放心。第二,过去几十年的趋势是用可量化的工具流程取代琐碎的社区流程,比如打车、订酒店、挂号都靠 App,低层工作被软件半机器人化;不少反 AI 的人认为这种转变是场灾难,所以\"用另一个 AI 工具来解决 AI 问题\"在他们听来像个坏笑话。",
+    "作者支持 Pangram,是因为他看到的唯一替代方案是社区自己监督,而他认为这很糟。他的理由是:不用 AI 的人不擅长判断文字是否出自 AI。他在 Twitter 上常见两种错误:有明显 AI 痕迹的文字,被读 AI 内容不够多的人漏掉;有明显人类特征的推文,仅仅因为又长又礼貌就被判成 AI。他认为把这种判断交给反 AI 的人,错的次数会多于对的次数。",
+    "作者在脚注里补充了几点。他认为 Pangram 可靠(\"显然是\"),理由是 Pangram 及其第三方测试在同一数据集上既报告误报也报告漏报,且训练数据种类很多;他说 Pangram 不用用户数据训练,已发表的作品早被抓取过;他认为 Pangram 不是生成式 AI;他也认为普通调查在这里没用,因为熟练的 AI 写作也会有草稿和同期与朋友的对话,而且没有可行的密码学认证路径,C2PA 也不适合这个任务。"
+   ],
+   "points_en": [
+    "The author says the real source of opposition is power, not tool accuracy. He argues that \"who gets to decide if something is written by AI\" is a question about who holds the power to gatekeep prizes, pass or fail students and exclude people from public discourse. He says his blog's central thesis is that everything is about power and that this is fine, so he is sympathetic to Pangram skeptics.",
+    "He gives two reasons he finds rational for the skeptics. First, if you fear AI gives the tech sector unprecedented social power, another tech company acting as the referee will not reassure you. Second, recent decades have shifted from messy community processes to legible tool-based ones, such as booking taxis, hotels and doctors in apps and software directing low-level jobs. Some anti-AI people think this shift was a disaster, so fixing AI with another AI tool sounds like a sick joke to them.",
+    "He supports Pangram because he sees the only alternative as communities policing themselves, which he thinks is terrible. His reason is that people who do not use AI are poor at judging AI text. On Twitter he sees obvious AI text pass because the judges have not read enough of it, and human-written tweets labelled as AI only because they are long and polite. He says that delegating the judgement to AI haters means they will be wrong more often than right.",
+    "In the footnotes he adds several views. He thinks Pangram is reliable, since it and its third-party tests report both false positives and false negatives on the same dataset and it trained on varied content. He says Pangram does not train on user data and that published works were already scraped. He says Pangram is not generative AI. He also says ordinary investigation is useless here, because skilled AI writing can come with drafts and contemporaneous conversations, there is no plausible cryptographic path to attestation and C2PA is not the right tool."
+   ],
+   "topics": [
+    "AI detection",
+    "Pangram",
+    "AI writing"
+   ]
+  },
+  {
+   "id": "a22ec3ce36e4",
+   "kind": "blog",
+   "source": "joanwestenberg.com",
+   "source_url": "https://joanwestenberg.com",
+   "title": "The World Will Eat AI",
+   "url": "https://www.joanwestenberg.com/p/the-world-will-eat-ai",
+   "published": "2026-11-26T19:47:26+00:00",
+   "basis": "short",
+   "brief_zh": "这篇文章只有开头一句:2011 年 8 月 Marc Andreessen 在《华尔街日报》发表了《Why Software Is Eating the World》。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "Only the opening line of this post is available: in August 2011 Marc Andreessen wrote \"Why Software Is Eating the World\" for the Wall Street Journal.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "文本被截断,只能看到作者提到 Marc Andreessen 在 2011 年 8 月为《华尔街日报》写了《Why Software Is Eating the World》一文,其观点的后半句没有显示,文章标题为《The World Will Eat AI》,正文的论点无从得知。"
+   ],
+   "points_en": [
+    "The text is cut off. It only shows that the author recalls Marc Andreessen's August 2011 Wall Street Journal piece \"Why Software Is Eating the World\", and the description of its idea ends mid-sentence. The post is titled \"The World Will Eat AI\", but its argument is not available."
+   ],
+   "topics": [
+    "AI",
+    "Software"
+   ]
+  },
+  {
+   "id": "39af3ee4df62",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "★ Obvious Affordances Are Due for a Comeback",
+   "url": "https://daringfireball.net/2026/11/obvious_affordances_are_due_for_a_comeback",
+   "published": "2026-11-26T15:11:46+00:00",
+   "basis": "full",
+   "brief_zh": "Gruber 认为,能点击的界面元素就该看起来能点击;Apple Notes 里不显示标签、也看不出可点击的时间戳,就是把界面简化过头的例子。",
+   "background_zh": "Marcin Wichary 在自己的博客 Unsung 上写了 Apple Notes 的一个细节:每条笔记有创建和修改两个日期,但编辑页面只显示一个。Gruber 读后补充了自己的看法。",
+   "conclusion_zh": "Gruber 的立场是:不需要发明新设计,只要重新采用已知的做法,让可点击的东西看起来可点击。具体到 Notes,他希望时间戳始终带\"Edited:\"或\"Created:\"标签,在两个状态间切换,同时所有功能都应在菜单、右键菜单或命令面板等地方有可发现的入口。",
+   "brief_en": "Gruber argues that clickable interface elements should look clickable, and that the unlabeled, clickable-looking-inert timestamp in Apple Notes shows a design that has been made too simple.",
+   "background_en": "Marcin Wichary wrote on his blog Unsung about a detail in Apple Notes: each note has a created date and a modified date, but the editing view shows only one. Gruber adds his own view after reading it.",
+   "conclusion_en": "Gruber holds that no new design needs to be invented, only a return to what is already known: clickable things should look clickable. For Notes, he wants the timestamp always labeled \"Edited:\" or \"Created:\" and toggling between the two. He also says every action should have a discoverable entry point, such as a menu, a context menu or a command palette.",
+   "points_zh": [
+    "Notes 里有一个藏得很深的功能:点击笔记顶部的时间戳,可以在创建日期和修改日期(Notes 称为\"edited\")之间切换。Gruber 说他以前翻遍右键菜单和主菜单都没找到,是 Wichary 多年后偶然点到才发现的。笔记列表可以按任一日期排序,而且按文件夹记住排序设置(每台设备各自记),所以软件本身是支持这两个日期的,只是编辑页面里没有入口提示。",
+    "根本问题是时间戳能点但看起来不能点。Gruber 的原则是:能点的东西应该看起来能点,不能点的东西应该看起来不能点。样式可以是凸起按钮、凹陷槽、淡淡的按钮底纹,甚至像车站翻牌显示屏那样的动画,最差也可以加下划线。他认为这是 Apple 过度极简的界面语言的毛病,而整个行业在盲目跟随。他引用\"凡事应尽量简单,但不能过于简单\"这句常被归于爱因斯坦的话,说可点击元素看不出可点击,就是简化过头。",
+    "这个设计还有一个状态问题:初始状态只显示日期,没有标签;点击后变成\"Created:\",再点变成\"Edited:\",之后一直在这两个带标签的状态间切换。结果是没法回到最初的无标签状态,只能关掉笔记再打开。Gruber 说这不是 bug,而是有意的设计决定,并推测是 Apple 里偏好极简的人嫌一开始就显示\"Edited:\"太乱。他希望始终显示标签,这样点两下就回到原状,标签本身也能轻轻暗示可以点击。",
+    "Gruber 认为一个条目有两个时间戳时,标明哪个是哪个不算杂乱,而是清晰。他说好看不应以牺牲对\"怎么用\"的理解为代价,并说如果设计者对\"既好看又能暗示可点击\"这个挑战不感兴趣,那是平面设计师,不是 UI 设计师。他还引用了 Dan Wineman 在 2013 年 iOS 7 发布后写的关于 affordance 的文章,其中说 affordance 让人在看到物体时就能在脑中模拟操作它的感觉,没有它,界面只是玻璃下的图片。"
+   ],
+   "points_en": [
+    "Notes has a hidden feature: clicking the timestamp at the top of a note toggles between the created date and the modified date, which Notes calls \"edited\". Gruber says he searched the context menus and the main menu and found nothing, and Wichary found it only by clicking by accident years later. The note list can sort by either date and remembers the setting per folder on each device, so the software supports both dates, but the editing view gives no hint of the toggle.",
+    "The core problem is that the timestamp is clickable but does not look clickable. Gruber's rule is that clickable things should look clickable and inert things should look inert. It could be a raised button, a recessed well, a faint button shape or a split-flap animation, and an underline would at least be something. He says this reflects Apple's too-minimal UI language, which the rest of the industry follows. He cites the rule often attributed to Einstein, \"as simple as possible, but not simpler\", and says an element that does not look clickable has been made too simple.",
+    "The design also has a state problem. The first view shows a date with no label, one click shows \"Created:\", the next shows \"Edited:\", and it then keeps toggling between those two labeled states. The unlabeled state cannot be restored except by closing and reopening the note. Gruber says this is a deliberate decision, not a bug, and guesses that minimalists at Apple found an \"Edited:\" label from the start to be clutter. He wants the label always shown, so two clicks return to the start and the label hints at clickability.",
+    "Gruber says that when an item has two timestamps, labeling them is clarity, not clutter. He says a good look should not come at the expense of understanding how something works, and that a designer who is not excited by the challenge of making it look good and suggest clickability is a graphic designer, not a UI designer. He quotes Dan Wineman's 2013 post, written days after iOS 7 was unveiled. It says affordances let people simulate manipulating a thing in their minds when they see it, and that without them the interface is just pictures under glass."
+   ],
+   "topics": [
+    "UI design",
+    "Apple Notes",
+    "affordances"
+   ]
+  },
+  {
+   "id": "316e60a88e0f",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "Quoting Jack Despain Zhou",
+   "url": "https://simonwillison.net/2026/Nov/26/jack-despain-zhou/",
+   "published": "2026-11-26T15:09:31+00:00",
+   "basis": "short",
+   "brief_zh": "Jack Despain Zhou 说,AI 带来的已有影响之一是个性被抹平:他在视频、会议演讲和邮件里到处能看到、听到 Claude 的影子。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "Jack Despain Zhou says one existing effect of AI is a great de-individualization: he hears and sees Claude in videos, conference talks and emails.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "他说自己打开 YouTube 视频会听到 Claude,坐在会议报告里也听到 Claude,邮箱里那些带着看似正经的头衔和机构背景、想把文章挂在自己和他名誉之下的投稿,他看到的同样是 Claude。这段话引自他的文章《Spitting in the Face of Glaude》。"
+   ],
+   "points_en": [
+    "He says he hears Claude when he opens a YouTube video and when he sits in a conference presentation. In his inbox he sees Claude in pitches and articles from people with serious-looking credentials and institutions who want to publish work tied to their reputations and his. The quote is from his piece \"Spitting in the Face of Glaude\"."
+   ],
+   "topics": [
+    "AI writing",
+    "de-individualization"
+   ]
+  },
+  {
+   "id": "5cafd88022c5",
+   "kind": "blog",
+   "source": "devblogs.microsoft.com/oldnewthing",
+   "source_url": "https://devblogs.microsoft.com/oldnewthing",
+   "title": "What happens when you put a non-agile object in the CoreApplication Properties?",
+   "url": "https://devblogs.microsoft.com/oldnewthing/20261126-00/?p=112899/",
+   "published": "2026-11-26T15:00:00+00:00",
+   "basis": "full",
+   "brief_zh": "CoreApplication.Properties 里的非 agile 对象和 agile 对象其实遵循同一条规则：只要还有能访问它的 apartment，对象就活着。非 agile 对象在宿主 apartment 关闭时失效，条目会留在集合里，但读取时会抛异常。",
+   "background_zh": "上一篇文章发现，Properties 里的非 agile 对象和 agile 对象表现似乎不同。这篇解释为什么这只是表面现象，并用代码验证对象失效后会发生什么。",
+   "conclusion_zh": "非 agile 对象的“提前失效”符合同一条生命周期规则，不是特例。下一篇会回到最初的问题：怎样做一个技术上 agile、但因原对象拒绝 marshal 而无法在原 apartment 之外使用的假 agile 包装。",
+   "brief_en": "Non-agile and agile objects in CoreApplication.Properties follow the same rule: an object lives while some apartment can still access it. A non-agile object expires when its host apartment shuts down. Its entry stays in the collection, but reading it throws an exception.",
+   "background_en": "The previous post noticed that non-agile objects in Properties seem to behave differently from agile ones. This post explains why that difference is only apparent and tests what happens after an object expires.",
+   "conclusion_en": "The early expiry of non-agile objects follows the same lifetime rule and is not a special case. The next post returns to the original problem: a fake agile wrapper that is technically agile but not useful outside its home apartment, because the original object refuses to be marshaled.",
+   "points_zh": [
+    "两类对象的行为一致，差别只在“能访问它的 apartment”不同。非 agile 对象只能在创建它的 apartment 里使用，所以宿主 apartment 关闭时它就失效。agile 对象可以在任何 apartment 使用，所以要等所有 apartment 都关闭才失效。",
+    "这个行为来自 RoGetAgileReference，而不是 Properties 本身。Properties 用 RoGetAgileReference 包装所有对象，对本来就是 agile 的对象，这层包装什么也不做。不管传什么 flag，RoGetAgileReference 内部的各种机制都会在 apartment 关闭时释放对非 agile 对象的引用。",
+    "对象失效后，Properties 里的条目仍然存在，但已被“毒化”。作者的示例让副线程把非 agile 对象放进 Properties，然后关闭该线程的单线程 apartment。析构函数在 uninit_apartment 时被调用，这是 Global Interface Table 在 apartment 关闭时放弃了引用。之后 HasKey() 仍返回 true，Lookup 却抛异常，只能把这个条目删除。",
+    "Properties 不知道里面的 agile 引用已指向被销毁的对象，它只是持有引用，等有人来取。作者在脚注里说，抛出的错误是 E_INVALIDARG，原因是 Global Interface Table 的条目已失效，这是抽象泄漏。他认为如果开发者想到这点，可以把它转换成更合适的错误，比如 RPC_E_SERVER_DIED。"
+   ],
+   "points_en": [
+    "The two kinds of object behave the same way. They differ only in which apartments can access them. A non-agile object can be used only in the apartment that created it, so it expires when that apartment shuts down. An agile object can be used from any apartment, so it expires when all apartments have shut down.",
+    "The behavior comes from RoGetAgileReference, not from Properties itself. Properties wraps every object with RoGetAgileReference, and the wrapper around an already agile object does nothing. Whatever flags are passed, the internal mechanisms release the reference to a non-agile object when its apartment shuts down.",
+    "After the object expires, its entry stays in Properties but is poisoned. In the author's test, a secondary thread inserts a non-agile object and then shuts down its single-threaded apartment. The destructor runs at uninit_apartment, because the Global Interface Table drops its reference. After that, HasKey() still returns true, but Lookup throws an exception. The only thing left to do is remove the entry.",
+    "Properties does not know that the agile reference points to a destroyed object. It simply holds the reference until someone asks for it. A footnote says the error returned is E_INVALIDARG, because the Global Interface Table entry is no longer valid. The author calls this a leaky abstraction and says the error could have been mapped to something like RPC_E_SERVER_DIED."
+   ],
+   "topics": [
+    "Windows Runtime",
+    "COM apartments",
+    "C++/WinRT"
+   ]
+  },
+  {
+   "id": "2bc6ac828588",
+   "kind": "blog",
+   "source": "johndcook.com",
+   "source_url": "https://johndcook.com",
+   "title": "Las Vegas, Monte Carlo, and Integer Factorization",
+   "url": "https://www.johndcook.com/blog/2026/11/26/las-vegas-monte-carlo/",
+   "published": "2026-11-26T13:14:07+00:00",
+   "basis": "full",
+   "brief_zh": "一篇新论文给出了一个无条件的 Las Vegas 整数分解算法，复杂度为 LN[1/3, O(1)]，常数 c 小于 105，比 GNFS 慢，但证明不依赖任何未证明的假设。",
+   "background_zh": "GitHub 上出现了一篇题为 Unconditional Integer Factorization in Time LN[1/3, O(1)] 的新论文。作者借此先说明 Monte Carlo 与 Las Vegas 算法的区别，再解释“无条件”的含义。",
+   "conclusion_zh": "新算法的运行时间不如 GNFS，但它的运行时间证明不依赖未证明假设，并且把此前最好的无条件结果 LN[1/2, 1] 推进到了 LN[1/3, O(1)]。",
+   "brief_en": "A new paper gives an unconditional Las Vegas algorithm for integer factorization that runs in time LN[1/3, O(1)], with c below 105. It is slower than GNFS, but its runtime proof relies on no unproven assumptions.",
+   "background_en": "A paper titled Unconditional Integer Factorization in Time LN[1/3, O(1)] has appeared on GitHub. The author first explains the difference between Monte Carlo and Las Vegas algorithms, then explains what \"unconditional\" means.",
+   "conclusion_en": "The new algorithm is slower than GNFS, but its runtime proof needs no unproven assumptions. It also improves the best earlier unconditional result, LN[1/2, 1], to LN[1/3, O(1)].",
+   "points_zh": [
+    "Monte Carlo 算法运行时间固定、错误率可变，Las Vegas 算法运行时间可变、错误率固定为零。Ulam 在 1946 年提出 Monte Carlo 方法的想法，Metropolis 次年命名。Babai 在 1979 年把 Las Vegas 算法这个名字作为对 Monte Carlo 的双关。新算法属于 Las Vegas：总是返回正确的分解，但耗时是随机的。",
+    "“无条件”指对新算法的分析不依赖任何未证明的假设。过去许多定理是条件性的，因为它们假设了广义黎曼猜想（GRH）。最快的整数分解算法虽不依赖 GRH，却依赖其他被广泛相信但未证明的猜想。",
+    "LN[α, c] 表示 exp(c (log N)^α (log log N)^(1−α))。目前最常用的最快方法 GNFS 的运行时间是 LN[1/3, (64/9)^(1/3) + o(1)]，约为 LN[1/3, 1.923]。新算法的 α 与 GNFS 相同，c 小于 105，这是最坏情况期望时间的上界。在此之前最好的无条件算法是 LN[1/2, 1]。",
+    "文末脚注说，Las Vegas 算法以概率 1 停机。实践中它们会终止，但严格说它们是偏函数，即在终止时给出正确结果的函数。"
+   ],
+   "points_en": [
+    "Monte Carlo algorithms have a fixed runtime and a variable error rate. Las Vegas algorithms have a variable runtime and a fixed error rate of zero. Ulam had the idea of Monte Carlo methods in 1946 and Metropolis named them the next year. Babai coined \"Las Vegas algorithm\" in 1979 as a pun on Monte Carlo. The new algorithm is a Las Vegas algorithm: it always returns a correct factorization, but its running time is random.",
+    "\"Unconditional\" means the analysis does not depend on any unproven assumption. Many older theorems were conditional because they assumed the Generalized Riemann Hypothesis. The fastest factorization algorithms do not depend on GRH, but they depend on other conjectures that are widely believed and unproven.",
+    "LN[α, c] stands for exp(c (log N)^α (log log N)^(1−α)). The GNFS, the fastest commonly used method, runs in LN[1/3, (64/9)^(1/3) + o(1)], about LN[1/3, 1.923]. The new algorithm has the same α, and its c is below 105, a bound on the worst-case expected time. The best unconditional algorithm before this result was LN[1/2, 1].",
+    "A footnote says that Las Vegas algorithms halt with probability 1. In practice they terminate, but strictly they are partial functions, which give a correct result when they terminate."
+   ],
+   "topics": [
+    "Integer factorization",
+    "Randomized algorithms",
+    "Number theory"
+   ]
+  },
+  {
+   "id": "d05326ade2c3",
+   "kind": "blog",
+   "source": "shkspr.mobi",
+   "source_url": "https://shkspr.mobi",
+   "title": "OGP Image Format Support on Major Sites and Apps",
+   "url": "https://shkspr.mobi/blog/2026/11/ogp-image-format-support-on-major-sites-and-apps/",
+   "published": "2026-11-26T12:34:04+00:00",
+   "basis": "full",
+   "brief_zh": "作者手工测试了主流网站和应用的 Open Graph 链接预览，发现各家支持的图片格式很不一致：PNG、WEBP、JPEG 基本通用，AVIF 只有部分支持，JPEG-XL 只有 Lemmy 和 Discourse 支持。",
+   "background_zh": "作者此前就抱怨过 Facebook 几乎放弃了 OGP 的标准化工作，各站点对图片的要求互相冲突。因为没有现成的对照信息，他自己做了一个测试工具 OGP Format Tester，来查各站点是否支持 AVIF 和 JPEG-XL 等现代格式。",
+   "conclusion_zh": "作者的结论是 JPEG-XL 对多数站点来说仍是遥远的愿望，并希望有一天各站点能真正互通。他提供了七种格式的测试链接，欢迎读者自己测试，或在评论里补充其他站点的结果。",
+   "brief_en": "The author tested Open Graph link previews on major sites and apps by hand. Support for image formats varies a lot: PNG, WEBP and JPEG work almost everywhere, AVIF works on some sites, and JPEG-XL works only on Lemmy and Discourse.",
+   "background_en": "The author has complained before that Facebook has all but abandoned OGP standardisation, so sites have conflicting image requirements. No comparison existed, so he built a tool, OGP Format Tester, to check whether sites support modern formats such as AVIF and JPEG-XL.",
+   "conclusion_en": "The author says JPEG-XL is still a distant dream for most sites. He hopes that one day sites will be interoperable. He gives test URLs for all seven formats and invites readers to run the tests or leave results for other sites in a comment.",
+   "points_zh": [
+    "测试方法很简单：做一个带完整 OGP 元数据的页面，为每种格式各准备一个 URL，把链接粘贴到每个站点里。出现预览图记为通过，没有则记为不通过。测试的七种格式是 AVIF、GIF、JPEG、JXL、PNG、SVG 和 WEBP，作者说这是主流浏览器里支持得最好的几种。",
+    "结果上，PNG 和 WEBP 在表中所有站点都能显示。除 Discord 外，GIF 和 JPEG 也都能显示。Discord 的 GIF 和 JPEG 都没显示，作者在多个频道试过也不成功，不知道原因，猜测 Discord 希望用户直接发 GIF。",
+    "新格式支持参差不齐。表中 AVIF 在 Threads、Discord、Lemmy、Teams、Discourse 和另一个名称在表里丢失的站点上能显示，在 Mastodon、BlueSky、Signal、Telegram、Slack 上不能。JXL 只有 Lemmy 和 Discourse 支持。SVG 只有 Lemmy 和那个名称丢失的站点支持。",
+    "动图 GIF 只有 Slack、Threads、Lemmy、Teams 和 Discourse 能播放，其他站点只显示第一帧。作者还指出 Lemmy 不代理 OGP 图片，而是直接链接回源站，他不确定这样是否安全或合理。Meta 旗下的 Facebook、WhatsApp 和 Threads 的支持情况也各不相同，他不明白原因。"
+   ],
+   "points_en": [
+    "The method is simple. He made a page with full OGP metadata, prepared one URL for each format and pasted each link into each site. A preview image counted as a pass and no image as a fail. The seven formats are AVIF, GIF, JPEG, JXL, PNG, SVG and WEBP, which he says are the best supported in major browsers.",
+    "PNG and WEBP showed on every site in the table. GIF and JPEG showed everywhere except Discord. On Discord, GIF and JPEG did not show, even after he tried several channels. He does not know why, and he suspects Discord wants users to post GIFs directly.",
+    "Support for newer formats is uneven. In the table, AVIF shows on Threads, Discord, Lemmy, Teams, Discourse and one more site whose name is missing from the text. It does not show on Mastodon, BlueSky, Signal, Telegram or Slack. JXL works only on Lemmy and Discourse. SVG works only on Lemmy and the site whose name is missing.",
+    "Animated GIFs played only on Slack, Threads, Lemmy, Teams and Discourse. The other sites showed the first frame. He also notes that Lemmy does not proxy OGP images and links back to the origin, and he is unsure how secure or sensible that is. Facebook, WhatsApp and Threads, all owned by Meta, differ slightly in support, and he does not know why."
+   ],
+   "topics": [
+    "Open Graph Protocol",
+    "Image formats",
+    "Web interoperability"
+   ]
+  },
+  {
+   "id": "39e578c471ef",
+   "kind": "blog",
+   "source": "pluralistic.net",
+   "source_url": "https://pluralistic.net",
+   "title": "Pluralistic: Charles Koch is a cult leader (26 Nov 2026)",
+   "url": "https://pluralistic.net/2026/11/26/science-of-liberty/",
+   "published": "2026-11-26T12:31:19+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为 Charles Koch 并不像他自称的那样理性长远，而是把自己的信念当成“科学”，并用它在公司里推行一套类似邪教的管理教义，同时用巨额资金资助气候变化否认。",
+   "background_zh": "这篇文章在 Henry Snow 发表于 Jacobin 的文章之后写成，那篇文章剖析了 Koch 的管理哲学“Market Process Analysis”。作者借此讨论 Koch 的长期主义自我形象与他的实际行为。",
+   "conclusion_zh": "作者的结论是，Koch 不是他自称的理性主义者。他无法区分自己的信念与科学，而这种自我欺骗，加上巨大的权力，使他成了对人类的生存威胁，也成了一个残酷的邪教领袖。作者同时说，别人也会自欺，但大多数人知道这一点，也受益于被他人指出。",
+   "brief_en": "The author argues that Charles Koch is not the patient, rational long-term thinker he claims to be. He treats his own beliefs as science, uses them to run a cult-like management doctrine at his firms, and funds climate denial with large sums.",
+   "background_en": "The post follows an article by Henry Snow in Jacobin that analyses Koch's management philosophy, Market Process Analysis. The author uses it to compare Koch's long-termist self-image with his actual conduct.",
+   "conclusion_en": "The author concludes that Koch is not the rationalist he claims to be. He cannot tell his beliefs from science, and with his great power this makes him a threat to humanity and a brutal cult leader. The author adds that others also deceive themselves, but most people know it and are better off when others point it out.",
+   "points_zh": [
+    "Koch 的长期主义只在对他有利时才成立。他接手父亲的化石燃料帝国后，做了回报期很长的效率投资，十年后 Koch Industries 的利润增长了 1000%。作者承认这一点：长期规划确实比华尔街式的短期主义赚得多，Frontier 为了短期股价放弃光纤投资最终破产就是反例。但 Koch 同时是最重要的气候变化否认者之一，资助各种荒诞的伪科学。作者称，承认气候科学就得关掉他的煤电厂，也等于否定市场自我调节的正统信条。",
+    "“理性靠耐心”这类说法的证据并不牢靠。作者以棉花糖实验为例：当年没吃棉花糖的孩子后来更成功，但吃掉的孩子大多来自贫困和边缘化家庭，长期被大人许诺落空，所以拿眼前的好处是合理的。作者认为，这个实验说明的是富人把优势传给后代，而不是自控导致成功。",
+    "Koch 的 Market Process Analysis 由四条未经证明、于己有利的信条组成（按 Snow 的归纳）。一是方法论个人主义，认为“社会不存在”，这让人只能以个人身份反抗，不能靠工会等集体力量。二是心理利己主义，认为人只为自利行事，让人不敢为同伴做出牺牲。三是市场原教旨，认为社会层面的计划必然失败，市场才是最好的信息处理器。四是“一切都是、也应该是市场”，只能靠设计激励和机制来改善世界。作者说，这些信条把偏好包装成事实，是“科学管理”传统的延续，目的是让老板分化、打击并控制工人。",
+    "作者把 Market Process Analysis 比作邪教教义。Koch 的员工每周要花数小时学习它，匿名调查里他们称之为“洗脑”，把职场比作《一九八四》，说经理“就是神”。员工想用其中的原则（如“尊重”）要求上级时发现，这套教义只约束下属，不约束老板。作者还把它与 Scientology 类比：两者都宣称发现了免除迷信的“科学”，Market Process Analysis 并不比 Scientology 更“科学”。",
+    "作者还说了 Koch 的家庭背景：他被信奉纳粹的父母托付给同样亲纳粹的保姆，成年后与兄弟们合谋把公开同性恋身份的哥哥 Frederick 逐出家庭。作者强调，他并不是说 Koch 的缺点比别人更难解释，而是说 Koch 不肯承认自己可能是错的。"
+   ],
+   "points_en": [
+    "Koch is a long-termist only when it suits him. After he inherited his father's fossil fuel business, he made long-payback efficiency investments, and a decade later Koch Industries' profits had risen by 1,000%. The author grants that long-term planning beat short-termism there, and he cites Frontier, which dropped fiber investment for short-term gains and went bankrupt. But Koch is also one of the most important funders of climate denial, including junk science. The author says that accepting climate science would mean closing his coal plants and giving up the market orthodoxy that justifies his power.",
+    "The evidence that patience proves rationality is weak. The author takes the marshmallow test as an example. The children who ate the marshmallow were mostly poor and marginalized, and adults had often broken promises to them, so taking the treat now was reasonable. The author says the study shows that rich people pass on privilege, not that self-control causes success.",
+    "In Snow's account, Market Process Analysis rests on four unproven and self-serving beliefs. The first is methodological individualism, the claim that society does not exist, which leaves people resisting only as individuals and not through unions or other collective power. The second is psychological egoism, which holds that people act only from self-interest and so discourages sacrifice for others. The third is market fundamentalism, which holds that plans cannot work at the level of society and only markets can steer it. The fourth is that everything is and should be a market, so the only way to improve things is to design incentives and mechanisms. The author says these beliefs present preferences as facts, in the tradition of scientific management, which bosses use to atomize and control workers.",
+    "The author compares Market Process Analysis to a cult doctrine. Koch's employees must study it for hours each week. In anonymous polls they call it brainwashing, compare their workplaces to Nineteen Eighty-Four and say managers are like gods. Workers who cite its principles, such as respect, to improve their treatment find that the doctrine binds them but not their bosses. The author adds that, like Scientology, it claims to be a science that sweeps away superstition, and he says it is no less scientific than Scientology.",
+    "The author also describes Koch's background. His parents, who sympathized with the Nazis, left him with a nanny of the same sympathies, and as an adult he and his brothers shut out their eldest brother Frederick for being openly gay. The author stresses that he is not saying Koch's flaws are harder to explain than anyone else's. His point is that Koch cannot admit he might be wrong."
+   ],
+   "topics": [
+    "Charles Koch",
+    "Climate denial",
+    "Market ideology"
+   ]
+  },
+  {
+   "id": "9a5f91905dab",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "sqlite3_rsync: Database Remote-Copy Tool For SQLite",
+   "url": "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/",
+   "published": "2026-11-26T06:08:25+00:00",
+   "basis": "full",
+   "brief_zh": "sqlite3_rsync 可以通过 SSH 把 SQLite 数据库的快照直接复制到另一台机器，不需要先在本地生成一份完整副本，磁盘空间不够时也能用。",
+   "background_zh": "这个工具在 2024 年 10 月随 SQLite 3.47.0 作为实验功能加入，2025 年 5 月在 3.50.0 中得到增强。作者直到最近才意识到它最有吸引力的一点。",
+   "conclusion_zh": "作者没有给出明确建议，只是指出这个工具在磁盘空间紧张时最有用。他还补充说，自己其实在 2024 年 10 月该工具刚发布时就写过这个用法，后来忘了。",
+   "brief_en": "sqlite3_rsync can copy a snapshot of a SQLite database over SSH to another machine without first creating a full local copy, so it works even when disk space is short.",
+   "background_en": "The tool was added as experimental in SQLite 3.47.0 in October 2024 and improved in SQLite 3.50.0 in May 2025. The author only recently noticed what he finds its most attractive feature.",
+   "conclusion_en": "The author gives no explicit advice. He points out that the tool is most useful when disk space is tight. He adds that he had already written about this use in October 2024, when the tool was first released.",
+   "points_zh": [
+    "常规的快照方法需要额外的磁盘空间，而 sqlite3_rsync 不需要。备份 API 和 VACUUM INTO 都要先生成一份完整的数据库副本，所以小型实例上如果数据库已经占了一半以上磁盘，就没法用这两种方法。sqlite3_rsync 能通过 SSH 把快照直接传到另一台机器，不用先在本地做完整副本。",
+    "它也可以同步已有的副本，不必把整个数据库重新传一遍。原理和普通 rsync 类似：副本端把页或页组的加密哈希发给源端，源端只回传内容不同的页；如果多页哈希对不上，就请求更细粒度的哈希。",
+    "额外的网络开销有限。如果两端差异极大，因为要交换哈希，总流量可能超过整个数据库的大小，但超出的部分最多只有几个百分点。"
+   ],
+   "points_en": [
+    "The usual snapshot methods need extra disk space, and sqlite3_rsync does not. The backup API and VACUUM INTO both create a full copy of the database first. On a small instance where the database already uses more than half the disk, neither method works. sqlite3_rsync sends the snapshot over SSH to another machine without a full local copy.",
+    "It can also update an existing copy without sending the whole database again. It works like regular rsync. The replica sends cryptographic hashes of pages or groups of pages to the origin. The origin sends back only the pages that differ, or asks for finer-grained hashes when a multi-page hash does not match.",
+    "The extra network cost is small. If the two sides are very different, the hash exchange can push total traffic above the size of the database, but the excess is a few percent at most."
+   ],
+   "topics": [
+    "SQLite",
+    "databases",
+    "backup"
+   ]
+  },
+  {
+   "id": "7822140280bf",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "The New York Times warns photographers not to update Photoshop over AI features",
+   "url": "https://simonwillison.net/2026/Nov/26/hn-50651685/",
+   "published": "2026-11-26T05:08:46+00:00",
+   "basis": "short",
+   "brief_zh": "纽约时报的摄影记者按新闻摄影的标准工作，只做裁剪和影调平衡，不对照片做其他修改。",
+   "background_zh": "纽约时报警告摄影师不要因为 AI 功能而更新 Photoshop，作者在 Hacker News 上就此发表了评论，这篇是他评论的转载。他今年早些时候在家中被纽约时报的摄影师拍过照，那次是为一篇关于 Moltbook 的报道。",
+   "conclusion_zh": "作者的看法是，报纸摄影属于新闻摄影，纽约时报对此很认真。以上都来自他自己的一次拍摄经历。",
+   "brief_en": "The author says New York Times photographers work to photojournalism standards: they apply only cropping and tone balancing, and make no other edits to a photo.",
+   "background_en": "The New York Times warned photographers not to update Photoshop because of its AI features, and the author left a comment on Hacker News about it. This post repeats that comment. Earlier this year a NYT photographer took his picture at home for a story about Moltbook.",
+   "conclusion_en": "The author's view is that newspaper photography is photojournalism and that the NYT takes it seriously. This rests on his own experience of one shoot.",
+   "points_zh": [
+    "摄影师明确拒绝修图。作者问如果衬衫上有污渍能否处理掉，摄影师说绝对不行：他们按照片拍摄时的样子呈现，只做裁剪和影调平衡，不做其他编辑。作者说那次衬衫上其实没有污渍。",
+    "摄影师把功夫花在拍摄现场。他花了不少时间寻找最好的自然光。报道顶部那张照片拍的是作者的笔记本电脑，地点在花园里，为了避开屏幕上的反光，他们找了好几个位置。照片里还能看到屏幕很脏。"
+   ],
+   "points_en": [
+    "The photographer refused to retouch the photo. The author asked whether a stain on his shirt could be fixed, and the photographer said absolutely not. They present photographs as they were taken, with cropping and balancing applied and no other edits. The author adds that he had no visible stain.",
+    "The photographer put the effort into the shoot itself. He spent a good deal of time looking for the best natural light. The photo at the top of the article shows the author's laptop in his garden, and they searched for a spot without too much glare on the screen. The dirty screen is still visible in the photo."
+   ],
+   "topics": [
+    "photojournalism",
+    "New York Times",
+    "Photoshop"
+   ]
+  }
+ ],
+ "picks": {
+  "important": [],
+  "liked": []
+ },
+ "generated_at": "2026-11-27T05:17:26.793863+00:00"
+}

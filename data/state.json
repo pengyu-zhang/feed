@@ -101,7 +101,17 @@
   "https://pluralistic.net/2026/11/25/empire-state-strikes-back/": "2026-11-26",
   "https://shkspr.mobi/blog/2026/11/book-review-slow-gods-by-claire-north/": "2026-11-26",
   "https://dfarq.homeip.net/how-the-tandy-2000-doomed-tandy-computers/?utm_source=rss&utm_medium=rss&utm_campaign=how-the-tandy-2000-doomed-tandy-computers": "2026-11-26",
-  "https://nesbitt.io/2026/11/25/this-week-in-source-control.html": "2026-11-26"
+  "https://nesbitt.io/2026/11/25/this-week-in-source-control.html": "2026-11-26",
+  "https://seangoedecke.com/who-gets-to-decide-if-something-is-written-by-ai/": "2026-11-27",
+  "https://www.joanwestenberg.com/p/the-world-will-eat-ai": "2026-11-27",
+  "https://daringfireball.net/2026/11/obvious_affordances_are_due_for_a_comeback": "2026-11-27",
+  "https://simonwillison.net/2026/Nov/26/jack-despain-zhou/": "2026-11-27",
+  "https://devblogs.microsoft.com/oldnewthing/20261126-00/?p=112899/": "2026-11-27",
+  "https://www.johndcook.com/blog/2026/11/26/las-vegas-monte-carlo/": "2026-11-27",
+  "https://shkspr.mobi/blog/2026/11/ogp-image-format-support-on-major-sites-and-apps/": "2026-11-27",
+  "https://pluralistic.net/2026/11/26/science-of-liberty/": "2026-11-27",
+  "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/": "2026-11-27",
+  "https://simonwillison.net/2026/Nov/26/hn-50651685/": "2026-11-27"
  },
  "seen_undated": [
   "http://www.paulgraham.com/13sentences.html",
@@ -457,5 +467,5 @@
   "xania.org",
   "xeiaso.net"
  ],
- "last_run": "2026-11-26T05:14:20.390514+00:00"
+ "last_run": "2026-11-27T05:14:37.392424+00:00"
 }
