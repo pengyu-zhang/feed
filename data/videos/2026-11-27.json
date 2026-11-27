@@ -1,0 +1,111 @@
+{
+ "date": "2026-11-27",
+ "items": [
+  {
+   "id": "yt-EEQt2z3kTCA",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "Claude Opus 5.6？AI 簡報做完還能改嗎｜單頁交接實錄",
+   "url": "https://www.youtube.com/watch?v=EEQt2z3kTCA",
+   "published": "2026-11-27T04:42:52+00:00",
+   "basis": "transcript",
+   "brief_zh": "AI 做出的简报或动画好看还不够，要能重开、只改一处、其他部分不变，并能交给别人核对，才算可交付的成果。",
+   "background_zh": "社群里出现了被称为 Opus 5.6 的新作品，包括互动简报、两座花园的对照、像素城市和几段动画。作者想知道，同事只说“把标题换了，其他别动”时，这些成果还接得住吗。",
+   "conclusion_zh": "作者的做法是留三样东西：看得见的成品、作者实际说明的条件，以及能让别人重开并续改的文件。如果第三样没有，就先放进灵感或试做清单。他建议找一页自己有权使用的简报，只改一句标题，圈出要保留的元素，让另一个人打开结果档指出哪一项真的变了。重开后还能改、同事能接手，他才算它是能用的成果。",
+   "brief_en": "The author says an AI-made slide deck or animation is not finished when it looks good. It must reopen, allow a one-spot edit with the rest unchanged, and let another person check the result.",
+   "background_en": "Community works attributed to a so-called Opus 5.6 have appeared, including an interactive deck, two gardens, a pixel city and some animations. The author asks whether these can still be handled when a colleague says only \"change the title and leave everything else\".",
+   "conclusion_en": "The author keeps three things: the visible result, the conditions the creator actually stated, and a file that another person can reopen and keep editing. If the third is missing, he puts the work on an ideas or trial list. He suggests taking one slide you have the right to use, changing one title, circling the elements to keep, and asking another person to open the result and name what really changed. He counts a work as usable only if it reopens, can still be edited and a colleague can take it over.",
+   "points_zh": [
+    "“Opus 5.6”目前对不上公开型号。作者查了 Anthropic 官方型号目录，能对上的正式入口是 Opus 5.5 和 Sonnet 5.5，找不到 5.6。这张表只能确认公开可选的名字，不能说明内部是否在测，也不能说明某个账号被分到哪一套。作者的做法是把作者写的名字留在来源旁边，等官方型号或能回查的执行记录出现再确认。",
+    "互动简报能翻页、能播放，但能否交接还要另外验证。作者会看标题能否被定位、文字变长会不会挤掉图、交出去后对方能否回到原对象。如果要在 PowerPoint 里继续改，他会另要实际交付的档案。关于“约 90 美元”的费用，作者说那是简报作者按 Opus 5.5 API 价格换算的估计。他建议把第一次生成、后来改稿和人工验收的时间分开记。",
+    "对照花园和像素城市时，要先把比较的问题说窄。作者建议用同一视角，比如“第一次进去的人能否一眼找到入口”，再去看转角和物件。像素城市的例子里，同一提示词在 CoWork 跑两次，完成时间不同。作者因此会分别记开始、第一次能打开、第一次符合交付要求这三个时刻。要谈稳定程度，就保留提示词、设置和原始档，多跑几次再算数字。",
+    "作者用虚构资料做了两次本地交接练习。第一次先留基准，再只改标题，核对数字、内文和版面是否原位不动，保存后重开，并读回导出的 JSON 确认哪个栏位变了。第二次只改动画转场时长，规则是 3 秒内播完：先跑偏慢的设定，留下超时的记录，再改同一个参数在相同条件下重播，确认通过 3 秒门槛且卡片位置不变。",
+    "动画的修改也要找到可改的时间线再重播。比如“把字晚半秒出来”，就在同一点前后看几帧，确认改的是出现时间，其他镜头仍按原节拍。最省事的做法是先锁住时间和未改的部分，再看差异。"
+   ],
+   "points_en": [
+    "No public model named Opus 5.6 can be found. The author checked Anthropic's official model catalog. The official entries that match are Opus 5.5 and Sonnet 5.5, and 5.6 is not listed. The catalog confirms only which names are publicly available. It does not show whether a model is in internal testing or which one a given account is routed to. The author keeps the name given by the creator next to the source and waits for an official model name or a traceable run record.",
+    "An interactive deck that flips and plays still needs a separate handoff check. The author looks at whether the title can be located, whether longer text pushes out the image, and whether the recipient can get back to the original object. If the work must continue in PowerPoint, he asks for the actual delivered file. The \"about 90 US dollars\" figure is, per the deck's author, an estimate converted at Opus 5.5 API prices. The author suggests recording first generation, later edits and human checking time separately.",
+    "When comparing the gardens and the pixel city, the question should be narrowed first. The author suggests using the same viewpoint, for example whether a first-time visitor can find the entrance at a glance, and then looking at corners and objects. In the pixel city example, the same prompt in CoWork took different times on two runs. So the author records three moments: the start, the first time it opens and the first time it meets the delivery requirements. To judge stability, he keeps the prompt, settings and raw files and runs several times before computing a number.",
+    "The author ran two local handoff exercises with fictional data. In the first, he saved a baseline, changed only the title, and checked that the numbers, body text and layout stayed in place. He then saved, reopened and read back the exported JSON to see which field changed. In the second, he changed only the transition time of an animation under a rule of finishing within 3 seconds. He ran a slow setting first and kept the timeout, then changed the same parameter and replayed under the same conditions. The result passed the 3-second limit and the card stayed in position.",
+    "Edits to animation also need an editable timeline and a replay. For a request such as \"show the text half a second later\", the author looks at frames before and after the same point to confirm that only the appearance time changed and the other shots keep their timing. The simplest method is to lock the timing and the unchanged parts first, then look at the differences."
+   ],
+   "topics": [
+    "AI slides",
+    "Handoff testing",
+    "Claude models"
+   ]
+  },
+  {
+   "id": "yt-sEzg9fh70AM",
+   "kind": "video",
+   "source": "This Day in AI Podcast",
+   "source_url": "https://www.youtube.com/@thisdayinai",
+   "title": "We Were Wrong About Gemini Neon, Claude Ship & Our Existential Crisis - EP99.41",
+   "url": "https://www.youtube.com/watch?v=sEzg9fh70AM",
+   "published": "2026-11-27T03:12:21+00:00",
+   "basis": "transcript",
+   "brief_zh": "两位主持人说他们之前低估了 Gemini 4 Neon，现在把它当日常主力模型，同时认为 AI 正在压缩开发者岗位和中间层软件公司的生存空间，而难做的数据、渠道和分发关系仍有护城河。",
+   "background_zh": "这是 This Day in AI 播客的一期，主持人是两位长期做 AI 产品和软件的从业者。上周他们刚结束半年停更回归，这期接着回应上期对 Google 模型的看法，并讨论 Claude Ship、HubSpot 和 Zapier 的“refounding”以及 agent 购物等近期话题。",
+   "conclusion_zh": "两人没有给出统一结论，态度偏悲观但留有余地：模型本身正在变成产品，开发者的价值和中间层公司都在被压缩，裁员后也缺少新岗位。他们认为机会在难做的硬问题上，比如独有数据、真实世界的关系网络，以及去服务还不了解 AI 的行业，并说现在也是创造东西的好时候。",
+   "brief_en": "The two hosts say they were wrong about Gemini 4 Neon and now use it daily. They also argue that AI is shrinking developer jobs and middleware companies, while hard problems such as unique data and real-world relationships still hold a moat.",
+   "background_en": "This is an episode of the This Day in AI podcast, hosted by two people who build AI products and software. It comes a week after their return from a six-month break. They follow up on their view of Google models and cover Claude Ship, the HubSpot and Zapier refounding, and agentic shopping.",
+   "conclusion_en": "The hosts give no single conclusion, and their tone is gloomy but not closed. They say the model is becoming the product, developer value and middleware companies are being squeezed, and laid-off workers lack new jobs. They see opportunity in hard problems such as unique data, real-world networks and industries that do not yet know AI, and they say it is a good time to create things.",
+   "points_zh": [
+    "主持人承认上期对 Gemini 4 Neon 判断有误，现在两人都把它当日常主力。他们觉得它不像 Google 以前的模型，有时比 5.5 更聪明，只是偶尔偏慢，而且不爱说教，能把活干完。价格也有优势：输入每百万 token 3 美元、输出 15 美元，比对手便宜很多，而且他们感觉不到质量差别。他们还提到，很多人已经习惯某个生态，切换有疲劳感；也有人因为用量上限用完而无法工作，所以更便宜的好模型对他们有实际帮助。这些都是两位主持人的个人使用感受。",
+    "Claude Ship 让 AI 自动审查 pull request，还能按规则自动合并，把几天到几周的评审流程缩短到几分钟。Chris 需要升级到 Teams 或 Business 套餐才能试用。他把它连到自己的社区网站项目，并设置了项目规则。他提交了一个要求删除全部文件和历史的恶意 PR，Ship 识别出风险并没有合并，但他觉得它整体偏保守。他也提到，这类自动评审用自建 agent 早就能做，新意在于一路做到自动合并。他认为大公司迟早要面对人类审不过来 AI 代码的问题。",
+    "Chris 说如果自己经营公司，不会再雇前端开发。他的做法是用组件库和风格指南，写好测试覆盖、移动端支持、性能等规则，让 agent 按规则审查，通过就合并。他把这比作网上约会从怪异变成常态：现在手写代码已不值得，他自己做热爱的业余项目也不会再手敲。两人认为开发者剩下的价值是品味和软件架构，但随着模型变强，甚至可以让模型去参考优秀的开源项目，这些价值也在变小。两人也担心裁员后没有新岗位可去，并说自己没有解决办法。",
+    "两人谈到在 agent 时代做生意的方向：给 agent 提供难获取的数据或 API，进入还不了解 AI 能做什么的行业和社区做出最好的工具，以及用模型去做过去很难写的软件，比如家电或工业控制。他们还提到，发展较快的软件生产让“上线交付”成了新瓶颈，比如要让产品到客户手上、验证有效、拿到反馈。",
+    "HubSpot 和 Zapier 宣布 refounding，主持人认为中间层公司处境最差。理由是 agent 做字段映射、集成等工作很容易，小企业也能自己搭定制 CRM。Chris 回忆有人曾告诉他“不要做中间层公司”。不过两人认为这些公司不会很快消失，因为企业订阅很难被取消，可能还能撑很多年，只是很难再高速增长。同时他们认为有机搜索流量在被 AI 答案取代，内容创作的动力变弱。",
+    "两人说软件开发的老规则反过来了：以前建议迭代而不要重写，现在有了 agent，把旧代码交给它重写，并让它检查有无遗漏，通常更好。他们也认为 bot 和 agent 外壳没有护城河，Chris 说自己两天就能克隆 Muse，真正难的是从各平台拿到访问权限。在他们看来，护城河在于难以复制的现实关系和数据，例如各地花店的订单网络，或 Twilio 那种要和全球运营商打交道的业务。",
+    "关于 agent 购物，Chris 用 Muse 买了一件在澳大利亚难找的东西，对此很满意。两人说，这类购物会让日用品陷入价格和利润的比拼，agent 掌握分发后会像超市那样向供应商收费。他们讨论了 Amazon 是否会被冲击：agent 可以从任何网站取货，但 Amazon 的 Prime 和配送速度仍是优势，他们没有给出确定结论。",
+    "节目里还有一些轻松内容：他们转述了一段广为流传的 Gemini 在 KFC 对话中“崩溃”的帖子，但说明那是假的。Chris 还让 Neon 写了一首讽刺竞品的歌《Turn the Glass Up》，结尾放了完整版。他还在社区网站上做了个假的反数据中心募捐页，模仿维基百科，要求每人至少捐 1000 美元。他提交给启用了审查功能的仓库后，AI 并没有因道德问题拒绝，直接说可以。"
+   ],
+   "points_en": [
+    "The hosts admit they were wrong about Gemini 4 Neon, and both now use it as a daily driver. They say it feels unlike earlier Google models, sometimes seems smarter than 5.5, and is only occasionally slower. They also say it stays out of the way and finishes the work. Pricing is $3 per million input tokens and $15 per million output tokens, which they say is much cheaper than rivals with no visible quality loss. They add that switching ecosystems causes fatigue, and that people who hit usage limits at work benefit from a cheaper, good model. These are the hosts' personal impressions.",
+    "Claude Ship reviews pull requests with AI and can merge them automatically under rules the team sets, which cuts a process of days or weeks to a few minutes. Chris had to upgrade to a Teams or Business plan to try it. He connected it to his community website project and set project guidelines. He submitted a pull request that told agents to delete all files and history. Ship spotted the risk and did not merge it, but he found it somewhat conservative overall. He notes that teams could build this with their own agents already, and that the new part is the full path to merging. He expects large software companies to face the problem that humans cannot review all AI-written code.",
+    "Chris says that if he ran a company, he would never hire a front-end developer again. He would use a component library and style guide, write rules for test coverage, mobile support and performance, and let an agent review against them. If everything passes, the code merges. He compares this to online dating, which went from odd to normal, and says he would no longer type code by hand even on a passion project. The hosts say the remaining developer value is taste and software architecture. They add that as models improve, models can copy good open-source projects, which shrinks even that value. They also worry that laid-off developers have no new jobs to move to, and say they have no solution.",
+    "The hosts give three directions for building a business in the agent era: provide agents with hard-to-get data or APIs, enter industries that do not yet know what AI can do and build the best tool there, and use models to build software that used to be very hard to write, such as software for home appliances or industrial controls. They also say that building software has become easy, so shipping it to customers, checking that it works and getting feedback is the new bottleneck.",
+    "The hosts say middleware companies are in the worst position, citing the HubSpot and Zapier refounding. Their reasoning is that agents handle field mapping and integrations easily, and small businesses can build their own custom CRM. Chris recalls being told never to be a middle-layer company. They think these companies will not disappear soon, because business subscriptions are hard to cancel and may last years, but will struggle to grow fast. They also say organic web traffic is being replaced by AI answers, which removes the reason to create new content.",
+    "The hosts say the old rule of software has flipped. Teams used to be told to iterate rather than rewrite. Now, they say, it is usually better to give agents the old code and have them rewrite it, checking for gaps. They also say bots and agent wrappers have no moat, and Chris says he could clone Muse in about two days. In his view the hard part is getting access from each platform. They say the moat lies in real-world relationships and data that are hard to copy, such as a flower-order network across local florists or a Twilio-style business that deals with carriers worldwide.",
+    "On agentic shopping, Chris used Muse to buy an item that is hard to find in Australia and was happy with the result. The hosts say agents could push everyday goods into price and margin competition, and could charge suppliers for shelf placement as supermarkets do. They discuss whether this kills Amazon. They note that an agent can fetch from any site, while Prime and delivery speed remain advantages for Amazon. They reach no firm answer.",
+    "The episode also has lighter segments. They retell a viral post of Gemini having a meltdown in a KFC conversation and say it was fake. Chris had Neon write a diss track called Turn the Glass Up, and the full song plays at the end. He also built a fake fundraiser page on his community website that imitates Wikipedia, to stop a data center in a dog park, with a $1,000 minimum donation. When he submitted it to a repository with AI review on, the AI did not object on moral grounds and said it looked good."
+   ],
+   "topics": [
+    "Gemini",
+    "AI coding agents",
+    "Software industry"
+   ]
+  },
+  {
+   "id": "yt-5byZkxeqoWI",
+   "kind": "video",
+   "source": "Best Partners TV",
+   "source_url": "https://www.youtube.com/@bestpartners",
+   "title": "从北京驱车广州的路上，借宿湖南朋友家中，早上一起来就是各种鸡鸭鹅牛的叫声，今天的任务是上山砍柴🤣",
+   "url": "https://www.youtube.com/watch?v=5byZkxeqoWI",
+   "published": "2026-11-27T00:09:23+00:00",
+   "basis": "transcript",
+   "brief_zh": "这是一段旅途中借宿湖南朋友家的日常视频，但提供的转录内容只有一句英文问话，视频里具体做了什么无法确认。",
+   "background_zh": "博主从北京驱车前往广州，途中借宿在湖南省怀化市辰溪县拓木屯村的朋友家。标题说早上被鸡鸭鹅牛的叫声吵醒，当天的任务是上山砍柴。",
+   "conclusion_zh": "来源中没有明确的结论或建议。视频内容只能从标题和简介得知，是一次借宿期间上山砍柴的农村生活记录。",
+   "brief_en": "This is a video about staying at a friend's home in Hunan during a drive, but the transcript has only one English line, so the actual content cannot be confirmed.",
+   "background_en": "The creator is driving from Beijing to Guangzhou and stays with a friend in Tuomutun Village, Chenxi County, Huaihua, Hunan. The title says animal calls woke them in the morning and that the day's task was to go up the mountain and chop firewood.",
+   "conclusion_en": "The source states no conclusion or advice. From the title and description, the video is a record of rural life during a stay, including a trip up the mountain to chop firewood.",
+   "points_zh": [
+    "转录内容极少，只有一句 \"Is this your baby?\"，没有其他可用的口述信息，所以无法确认视频中的对话、过程或细节。",
+    "标题和简介能确认的信息有：地点是湖南省怀化市辰溪县拓木屯村，行程是从北京驱车到广州，借宿在朋友家，早上有家禽和牛的叫声，当天安排是上山砍柴。"
+   ],
+   "points_en": [
+    "The transcript contains only the line \"Is this your baby?\" and no other spoken content, so the conversation, the process and the details of the video cannot be confirmed.",
+    "The title and description confirm only the following. The place is Tuomutun Village, Chenxi County, Huaihua, Hunan. The trip is a drive from Beijing to Guangzhou. The creator stays at a friend's home. Chickens, ducks, geese and cattle are heard in the morning. The plan for the day is to chop firewood on the mountain."
+   ],
+   "topics": [
+    "Travel vlog",
+    "Rural life",
+    "Hunan"
+   ]
+  }
+ ],
+ "generated_at": "2026-11-27T05:21:23.184510+00:00"
+}
