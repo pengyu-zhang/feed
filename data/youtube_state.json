@@ -1,6 +1,18 @@
 {
- "last_run": "2026-11-27T13:08:20.360727+00:00",
- "waiting": {},
+ "last_run": "2026-11-27T15:35:13.134738+00:00",
+ "waiting": {
+  "JZcIzxi3zwk": {
+   "video_id": "JZcIzxi3zwk",
+   "title": "「Github一周热点140期」视频模型的deepseek时刻，是吹的吗？",
+   "url": "https://www.youtube.com/watch?v=JZcIzxi3zwk",
+   "published": "2026-11-27T15:06:44+00:00",
+   "description": "1、项目名称：MAGI-2 Preview - 超高性价比的新视频生成模型\nGitHub 链接：https://github.com/SandAI-org/MAGI-2-preview\n\n2、项目名称：Claude-BugHunter - 安全研究的Claude Code技能包\nGitHub 链接：https://github.com/elementalsouls/Claude-BugHunter\n\n3、项目名称：ffmpeg-skill - 本地 Agent 剪视频的技能\nGitHub 链接：https://github.com/kajisho5/ffmpeg-skill\n\n4、项目名称：Ghost Downloader 3 - 多平台资源下载器\nGitHub 链接：https://github.com/XiaoYouChR/Ghost-Downloader-3\n\n5、项目名称：PaperOrchestra - 多 Agent 论文写作框架\nGitHub 链接：https://github.com/google-research/paper-orchestra",
+   "channel": "IT咖啡馆",
+   "channel_url": "https://www.youtube.com/@it-coffee",
+   "short": false,
+   "tries": 1
+  }
+ },
  "done": {
   "PlnT4uQQZlg": "2026-11-24",
   "jP9yjEDlc4k": "2026-11-24",
