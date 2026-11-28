@@ -2,6 +2,41 @@
  "date": "2026-11-28",
  "items": [
   {
+   "id": "yt-OwCxhAQPhYA",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "Inkling 2 Mini × Qwen 3.8 27B｜手機能交檔嗎？",
+   "url": "https://www.youtube.com/watch?v=OwCxhAQPhYA",
+   "published": "2026-11-28T06:10:31+00:00",
+   "basis": "transcript",
+   "brief_zh": "作者认为，评估 Inkling 2 Mini 和 Qwen 3.8 27B 该不该换，要先分开问“能不能在我设备上跑”和“这件事做得好不好”，最终看交出去的成果别人能否重开并验过，而不是看榜单或屏幕上的结果。",
+   "background_zh": "Inkling 2 Mini 已有人在 iPhone 公测版上跑起来，作者想回答手上的 Qwen 3.8 27B 要不要换。他用公开的模型卡、第三方测试和开发者演示做对照，再用一个虚构的三笔账 CSV 示范交付验收。",
+   "conclusion_zh": "作者的结论是，先搬一个最小、出事能退回的环节，跑通几次、别人拿档案也没错栏之后，再谈长期切换。他认为能在手机上跑值得关注，但能把文件带走再打开、别人也验得过，才愿意拿它做事。",
+   "brief_en": "The author argues that choosing between Inkling 2 Mini and Qwen 3.8 27B means asking separately whether a model runs on your device and whether it does the task well, and that the deciding test is whether another person can reopen and verify the delivered file.",
+   "background_en": "Inkling 2 Mini has been run on an iPhone in a public beta, and the author asks whether he should replace Qwen 3.8 27B. He uses the public model card, third-party tests and developer demos, then shows a handoff check with a fictional three-line CSV.",
+   "conclusion_en": "The author would first move one small step that can be rolled back if it fails. Only after several successful runs, and after someone else's file also passes without column errors, would he discuss a long-term switch. He finds running on a phone worth watching, but he would use a model for real work only when its files can be taken away, reopened and verified by others.",
+   "points_zh": [
+    "Inkling 2 Mini 的结构是总参数 264 亿，中间一段会循环走三遍。模型卡写每个 token 约 34 亿活跃参数，算上循环重用，每个 token 约有 54 亿次权重调用。作者的看法是，放不放得下、每步做多少工作、最后等多久要分开看。他提到的实作用的是可调循环次数的研究版本，只能说明同一模型内部怎么取舍，不能直接回答该不该换 Qwen。",
+    "公开的对照数据各有各的环境，不能直接当作选型依据。官方对照表里两个模型各有领先的题目，某个第三方综合指数上两者都是 20.1。Plotly 的资料分析基准中，云端运行 Inkling 答对 43 题中的 36 题，Qwen 3.8 27B 是 38 题，作者提醒一两题的差距可能只是重跑的波动。本机测试用 64GB 的 M4 Pro Mac Mini，中位数约 6 分半、答对 33 题，云端每题中位数 69 秒。这次测试有单题 60 分钟上限，有五题因倒点备份失败，所以这些数字不能当作同机快慢的保证。作者据此会在验收表里加一条：超时就记下做到哪一步，交给下一个人。",
+    "手机端的结果来自 Draw Things 开发者自己的公测，作者先看它做到了什么。开发者用约 14G 的量化权重，并在 iPhone 上用约 2.3G 的权重串流缓冲区，这个 2.3G 不是整机资源。这次测试的上下文是 64K，模型卡上的 100 万是另一个层级的规格。演示里有从菜谱问题切到做网页小游戏，并在浏览器检查画面。同一篇公告还有填 PDF 的例子，团队说没有现成技能，用几个工具花了约三小时，自己也觉得不理想。作者看重的是能把部分工具接起来，也看得见哪一段慢；适不适合，要看工具能否做你需要的那一步。",
+    "作者用三笔虚构账目做交付验收，要点是总额对不代表内容对。候选 A 总额 150，与来源一致，但“转接头”和“标签纸”两笔金额对调；候选 B 逐笔对得上。检查结果应写明错在哪两个编号、哪两个金额不一致，不要只给一个红灯。通过的结果导出 CSV，保留栏位名称和来源版本，再换个工作区重新载入，看读回的三笔是否仍逐笔匹配。他还建议让同事只拿到档案和规则，不给聊天记录；如果 5 分钟内找不到从哪开始，就是交付漏了一步。规则只需写清要交什么、什么情况退回。",
+    "作者建议保留一个会重演的错款例子，换版本或改输出格式时一起重跑，让团队知道这个检查曾抓住过什么。决定是否换模型时，先看工作是否真的要离线；桌面上已有稳定流程的，就保留旧流程，拿两三件小工作并排测。记录只留四栏：输入是哪份、模型版本、用了什么工具、通过了哪些检查；想看速度再加实际耗时，每次只改一个变量。"
+   ],
+   "points_en": [
+    "Inkling 2 Mini has 26.4 billion total parameters, and a middle section of the model runs three times. The model card gives about 3.4 billion active parameters per token, and about 5.4 billion weight activations per token once the repeated loop is counted. The author says fit, work per step and waiting time should be judged separately. The hands-on demo he mentions used a research version with an adjustable loop count. It shows how to trade off within one model, but it does not settle whether to replace Qwen.",
+    "The public comparisons come from different setups, so they do not settle the choice. On the official table each model leads on some tasks, and one third-party composite index lists both at 20.1. In the Plotly data analysis benchmark, Inkling in the cloud answered 36 of 43 correctly and Qwen 3.8 27B answered 38. The authors note that a gap of one or two questions may be rerun noise. A local run on a 64GB M4 Pro Mac Mini had a median of about 6.5 minutes and 33 correct. The cloud run had a median of 69 seconds per question. That run had a 60-minute cap per question, and five questions failed in a backup step, so the numbers do not show relative speed on one machine. The author would add a rule to his acceptance sheet: on timeout, record how far the work got and hand it over.",
+    "The phone result comes from the Draw Things developers' own beta, and the author first looks at what it achieved. They used about 14 GB of quantized weights and about 2.3 GB of weight streaming buffer on the iPhone. The 2.3 GB figure is not the whole phone's resource use. The test context was 64K, while the model card's 1 million is a different tier. The demo moved from a recipe question to building a web mini-game and checking the page in a browser. The same announcement includes a PDF-filling example. The team said no ready-made skill existed, the tools took about three hours, and they were not satisfied with the result. The author values that the tools connect on the phone and that the slow parts are visible. Whether it suits your work depends on whether the tools can do the step you need.",
+    "The author runs a handoff check on three fictional entries and shows that a correct total does not mean correct contents. Candidate A totals 150, matching the source, but the amounts for the adapter and the label paper are swapped. Candidate B matches line by line. A check result should name the two IDs and the two mismatched amounts, not just show a failing flag. The passing file is exported as CSV with column names and source version kept, then reloaded in a different workspace to confirm that the three rows still match. He also suggests giving a colleague only the file and the rules, with no chat history. If the colleague cannot find where to start within 5 minutes, the handoff missed a step. The rules need only say what to deliver and when to send it back.",
+    "The author suggests keeping one failing example with a wrong entry and rerunning it whenever the version or output format changes, so the team knows what the check once caught. To decide on a switch, first ask whether the work really needs to run offline. If a stable desktop workflow exists, keep it and test two or three small jobs side by side. Record four fields only: which input, which model version, which tools and which checks passed. Add actual time if speed matters, and change one variable at a time."
+   ],
+   "topics": [
+    "Inkling 2 Mini",
+    "Qwen",
+    "On-device AI"
+   ]
+  },
+  {
    "id": "yt-eoxAE1mQHGA",
    "kind": "video",
    "source": "大雷早上好",
@@ -181,5 +216,5 @@
    ]
   }
  ],
- "generated_at": "2026-11-28T05:23:50.876468+00:00"
+ "generated_at": "2026-11-28T09:28:57.502848+00:00"
 }
