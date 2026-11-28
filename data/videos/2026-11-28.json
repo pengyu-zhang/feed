@@ -2,6 +2,109 @@
  "date": "2026-11-28",
  "items": [
   {
+   "id": "yt-V-MnUCNlVlk",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "MAGI-2 × Kling 4.0｜AI 影像奇觀 01：貼地追車，鏡頭闖進異世界（原聲）",
+   "url": "https://www.youtube.com/watch?v=V-MnUCNlVlk",
+   "published": "2026-11-28T13:31:26+00:00",
+   "basis": "transcript",
+   "brief_zh": "这期是无旁白的 AI 视频剪辑合集,把 MAGI-2、Kling 4.0、LTX 2.5、Runway Gen-2、Veo 3 等工具生成的片段(雨夜追车、雪城、穿梭镜头等)配上原声剪在一起,供观看各模型的画面表现。",
+   "background_zh": "频道主「大雷早上好」想把有意思的 AI 动态影像剪成一期,用各演示片段自带的声音来带节奏。描述里说明全片没有旁白,保留来源音效和配乐,各片段的制作方式不同。",
+   "conclusion_zh": "这期没有明确结论或建议,就是一组 AI 影像片段的剪辑,画面与原声由各来源片段自带。",
+   "brief_en": "This is a narration-free montage of AI-generated video clips from MAGI-2, Kling 4.0, LTX 2.5, Runway Gen-2, Veo 3 and others, cut together with each clip's original sound.",
+   "background_en": "The channel owner cut interesting AI motion clips into one episode and used the original audio of each demo to set the rhythm. The description says there is no narration, and that source sound effects and music are kept. The clips were made in different ways.",
+   "conclusion_en": "The video gives no explicit conclusion or advice. It is a cut of AI video clips, and the images and audio come from the source clips.",
+   "points_zh": [
+    "视频本身是素材合集,没有讲解或论证。描述里的章节是:开场高光、贴地追车、镜头拉开(世界有多大)、画风变化时动作能否接得上。描述说看点在引擎、屋脊和窗上的水气如何随镜头变化。",
+    "片段来源在描述里列得很清楚:MAGI-2 的 Blender 摩托对照和雪城,Kling 4.0 的 REDLINE(导演 Stephane Benini,声音 un.studios),LTX 2.5 官方样片,Runway Gen-2 的 EXECUTE 开场建筑节选,Veo 3 的室内转镜示例,以及 Seven Eves 的 Ink in Motion。",
+    "Seven Eves 段落不是视频模型生成的,描述称它是 Claude Code 辅助制作的程序动画。另外,描述提示片中含写实的 AI 生成场景。",
+    "字幕文字稿里的内容与描述中的画面主题不一致:它是几段原声,包括 3D 游戏的宣传语、一段讲记忆宫殿(method of loci)的演讲,以及一段买礼物的对话(预算约五六十美元,对方爱读书和花,建议买书加花瓶配花束)。这些应是各演示片段自带的声音,文字稿没有提到追车或雪城。"
+   ],
+   "points_en": [
+    "The video is a collection of clips, not an explanation or an argument. The description lists these chapters: opening highlights, a low-angle car chase, camera pull-backs that show how large the world is, and whether motion holds up when the visual style changes. It says to watch how engines, rooftops and water vapour on windows change with the camera.",
+    "The description names the sources. They are MAGI-2 (a Blender motorcycle comparison and a snow city), Kling 4.0 (REDLINE, directed by Stephane Benini, sound by un.studios), the LTX 2.5 official sample, the opening architecture excerpt of EXECUTE (Runway Gen-2), a Veo 3 interior camera-move example, and Ink in Motion by Seven Eves.",
+    "The Seven Eves segment is not from a video model. The description says it is procedural animation made with help from Claude Code. It also warns that the video contains realistic AI-generated scenes.",
+    "The transcript does not match the visual themes in the description. It holds several pieces of original audio: promotional lines for 3D gaming, a talk on the memory palace (method of loci), and a dialogue about buying a gift. In the dialogue the budget is about fifty to sixty dollars, the recipient likes books and flowers, and a book with a vase and bouquet is suggested. These appear to be the sound of the demo clips. The transcript does not mention car chases or snow cities."
+   ],
+   "topics": [
+    "AI video generation",
+    "MAGI-2",
+    "Kling"
+   ]
+  },
+  {
+   "id": "yt-GuZi1kKkHUQ",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "MAGI-2 × Seedance 2.5｜下一個鏡頭接得上嗎？原聲樣片集",
+   "url": "https://www.youtube.com/watch?v=GuZi1kKkHUQ",
+   "published": "2026-11-28T13:01:33+00:00",
+   "basis": "transcript",
+   "brief_zh": "这是一支没有旁白的样片集锦，挑选了 MAGI-2 和 Seedance 2.5 的公开样片，用来对比角色延续、镜头走位、简模参考和同一月洞案例的细节差异。",
+   "background_zh": "频道想回答一个问题：AI 生成的影片里，角色换了场景，观众还认得出是同一个人吗？视频没有解说，只用短字卡标注，并保留样片的原声（雨夜、舞台、电车）。月洞素材本身没有音轨，所以配了轻音乐。",
+   "conclusion_zh": "视频没有给出明确结论，只是把样片并排放出来，让观众自己看角色延续、镜头和细节。它同时提醒，这些样片来源和制作条件各不相同。",
+   "brief_en": "This is a no-narration compilation of public MAGI-2 and Seedance 2.5 samples. It compares character continuity, camera movement, rough-model references and detail differences in one MAGI-2 case.",
+   "background_en": "The video asks whether viewers can still recognize a character in AI-generated video after the scene changes. It has no commentary. Short text cards guide the viewer, and the samples keep their original audio (rainy night, stage and tram). The moon-cave footage has no audio track, so light background music is used.",
+   "conclusion_en": "The video gives no explicit conclusion. It places the samples next to each other so the viewer can judge character continuity, camera work and detail. It also notes that the samples come from different sources and conditions.",
+   "points_zh": [
+    "视频按五个部分展开：先看五个高光镜头，再看换景后角色能否保持一致，接着是画风变化时镜头如何继续运动，然后是先搭参考再生成，最后是细节并排对比。以上结构来自视频的章节说明。",
+    "前三部分看的是角色延续和镜头走位。换景、换画风之后，角色和镜头调度能否接得上，是这几段要观察的重点。字幕里没有给出具体指标或数字。",
+    "“先搭参考，再生成”这一段用了 @HexxRL 发布的电车简模，先做简单的三维参考，再据此生成画面。",
+    "最后的细节对比用的是同一个 MAGI-2 案例，左右并排的是强化学习前后的两个版本。",
+    "视频特别说明，各段样片来自不同来源，制作条件也不同，所以彼此不能直接当作公平对比。样片来源是 Sand AI 的 MAGI-2、字节 Seed 的 Seedance 2.5、XinYu 的 MAGI-2 样片，以及 @HexxRL 的电车简模。"
+   ],
+   "points_en": [
+    "The video has five parts: five highlight shots, scene changes and whether the character holds, a change of art style while the camera keeps moving, building a reference before generating, and side-by-side detail comparison. This structure comes from the chapter list in the description.",
+    "The first three parts look at character continuity and camera movement. They show whether the character and the camera work still connect after a change of scene or style. The description gives no metrics or numbers.",
+    "The reference section uses a tram rough model posted by @HexxRL. A simple 3D reference is built first, and the video is generated from it.",
+    "The last part shows one MAGI-2 case side by side, before and after reinforcement learning.",
+    "The video states that the samples come from different sources and were made under different conditions. The sources are MAGI-2 from Sand AI, Seedance 2.5 from ByteDance Seed, MAGI-2 samples from XinYu and the tram rough model from @HexxRL."
+   ],
+   "topics": [
+    "video generation",
+    "MAGI-2",
+    "Seedance 2.5"
+   ]
+  },
+  {
+   "id": "yt-O4CcUAahifU",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "Claude Sonnet Next？Codex × Antigravity｜同一件事重跑一次",
+   "url": "https://www.youtube.com/watch?v=O4CcUAahifU",
+   "published": "2026-11-28T12:34:21+00:00",
+   "basis": "transcript",
+   "brief_zh": "作者认为,面对新模型演示、Codex 数据量削减和可点开的工具界面,不该只看亮眼成果或数字,而应先弄清改动发生在哪一层,再拿同一件工作重跑一遍来决定是否值得换。",
+   "background_zh": "频道主大雷在看三条最近的 AI 消息:有人公开的驾驶游戏演示(称用了 Claude Sonnet Next)、Codex 工程师量到的下行数据减少,以及 Google Antigravity 对 MCP Apps 的支持。他想说明这三件事分别改变工作的哪一步。",
+   "conclusion_zh": "作者的结论是:选工具时不要只看哪一部分做得更好,先写好什么叫通过,再把同一件工作跑第二次,最后的文件能重新打开、同事接手也看得懂,才值得换。看到亮眼数字时,多记三项:谁量的、量的是哪一部分、结果能否重开。",
+   "brief_en": "The author argues that a flashy demo or a headline number should not decide a tool choice. He first asks which layer changed, then reruns the same task to decide whether a switch is worth it.",
+   "background_en": "The channel host, Dalei, looks at three recent AI items: a driving-game demo said to use \"Claude Sonnet Next\", a Codex engineer's measurement of reduced downlink data, and Google Antigravity's support for MCP Apps. He wants to show which step of work each one changes.",
+   "conclusion_en": "The author concludes that a tool choice should not rest on which part looks better. He would first define what counts as passing, then run the same task a second time. A change is worth keeping if the final file reopens and a colleague can follow it. When he sees an impressive number, he records who measured it, what was measured and whether the result can be reopened.",
+   "points_zh": [
+    "一段演示只能证明有一个成型的结果,不能证明模型名称、可用范围、提示轮数或换任务后能否做成。作者说,「Claude Sonnet Next」是游戏作者的说法,正式名称和可用范围要等官方资料。他对照 Anthropic 公开型号页,目前能确认的是 Sonnet 5.5 和 Fable 5.2。另一位作者的魔法游戏演示则归功于 Fable 5.2。若要在两个模型间选一个,他会给同样的起始资料、工具和时间,看最后哪个文件能重新打开,并保留失败的那几次;如果原本能导出的东西消失了,再好看也先退回。",
+    "Codex 这条改动省的是 Responses 接口回到客户端的数据,不等于省时间或省 token。一位工程师量了自己的几段对话,称下行数据少了八成以上,压缩后的一个例子从 7.48MB 降到 930KB;作者强调这只是同一案例的数据量,不能拿来估自己的每个工单。做法是让客户端请服务器不再回传客户端已有的工具目录。如果时间主要花在跑测试,整个任务仍要等测试结束。网络传输的字节数和模型账单的 token 用量是两本不同的账。",
+    "作者用一张合成的出货工单做了本机演示,说明「省传输」和「结果对不对」要分开验。第二轮请求要求整理成短草稿:把前一轮完整装进请求是 859 字节,改为只送会话标识和新要求是 119 字节,少了 740 字节。这个演示的方向和 Codex 的下行数据不同,只是自制例子。省下来之后,服务器得把前情找回来,所以要检查两份还原的输入是否相同,并逐项核对三点截止时间和待确认的项号。他建议用三栏记录:原设定、改动项、哪个检查通过。",
+    "Google Antigravity 对 MCP Apps 的支持让工具结果可以在对话里显示为可操作的视图,核对证据更快。以部署预览为例,可以直接看到状态和画面,还能移到侧栏;官方文件也列了全页工作区和特定文件检视器。作者提醒,预览是读取结果,按下发布则会改变外部状态,要把两类动作分开,先确认影响的环境和版本,再让该确认的人做下一步。审改动时,可先从卡片核对文件、状态和意见,真要放行再读原始差异和测试结果。",
+    "对于 OpenCode 放出的原生桌面应用 Rune(早期试用),作者建议用同一个项目比较启动、切换工作区和看结果所需的步数。不要同时换桌面客户端、模型和工具,否则分不清是哪一项起了作用。先留一条退路,确认常用环节走得通,再当作日常工具。"
+   ],
+   "points_en": [
+    "A demo shows that one finished result exists. It does not show the model's name, its availability, the number of prompts used, or whether the model can handle another task. The author says \"Claude Sonnet Next\" is the game author's wording and the official name and availability still need official confirmation. He checked Anthropic's public model page, where he can confirm Sonnet 5.5 and Fable 5.2. A second author's magic game demo is credited to Fable 5.2. To choose between two models, he would give both the same starting material, tools and time, then see whose final file reopens. He would also keep the failed runs. If something that used to export disappears, he would roll back even if the new version looks better.",
+    "The Codex change saves data sent from the Responses interface back to the client. It does not by itself save time or tokens. One engineer measured a few of his own conversations and reported downlink data down by more than 80 percent. One compressed example went from 7.48MB to 930KB. The author stresses that this is one case and cannot be used to estimate every ticket. The client asks the server not to send back the tool catalog it already holds. If most of the time goes to running tests, the task still waits for the tests. Network bytes and model token billing are two separate records.",
+    "The author ran a local demo with a synthetic shipping ticket to separate transfer size from result correctness. For a second request asking for a short draft, sending the full earlier turn took 859 bytes. Sending only a session identifier and the new request took 119 bytes, which is 740 fewer. The demo is self-made and measures a different direction from the Codex report. Once data is saved, the server must recover the earlier context, so he checks that both restored inputs are the same. He also checks the three o'clock deadline and the unconfirmed item number against the draft. He suggests a three-column record: original setting, what changed and which check passed.",
+    "Antigravity's MCP Apps support lets a tool result appear in the conversation as an interactive view, which shortens the step of checking evidence. In the deployment preview example, the status and page show in the chat and can move to a side panel. The official documentation also lists a full-page workspace and a file-specific viewer. The author warns that a preview reads a result, while pressing publish changes external state. He would separate the two actions, check the environment and version affected, then let the right person take the next step. For a code review, he would check files, status and comments on a card first, and read the raw diff and test results only when approving.",
+    "OpenCode has released Rune, an early native desktop app. The author would compare steps to launch, switch workspace and view results on the same project. He would not change the desktop client, model and tools all at once, since he could not tell which one helped. He would keep a way back and confirm that the usual steps work before using it daily."
+   ],
+   "topics": [
+    "AI tools",
+    "Codex",
+    "MCP Apps"
+   ]
+  },
+  {
    "id": "yt-eAXQ47J8_mU",
    "kind": "video",
    "source": "Latent Space",
@@ -255,5 +358,5 @@
    ]
   }
  ],
- "generated_at": "2026-11-28T12:24:14.067698+00:00"
+ "generated_at": "2026-11-28T14:32:41.279320+00:00"
 }
