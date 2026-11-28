@@ -2,6 +2,45 @@
  "date": "2026-11-28",
  "items": [
   {
+   "id": "yt-eAXQ47J8_mU",
+   "kind": "video",
+   "source": "Latent Space",
+   "source_url": "https://www.youtube.com/@LatentSpaceTV",
+   "title": "Looped Transformers: More Computation, Same Weights | Paper Club",
+   "url": "https://www.youtube.com/watch?v=eAXQ47J8_mU",
+   "published": "2026-11-28T11:08:15+00:00",
+   "basis": "transcript",
+   "brief_zh": "Looped transformer 是把中间几层用同一组权重重复跑几遍，不增加参数就加深计算；Thinking Machines 的 Inkling 2 Mini 和 GLM-5.4 是首批前沿水平的实例，但循环是否普遍更优仍无定论。",
+   "background_zh": "这是 Latent Space Paper Club 的一期，由 Ben Weissmann 主讲，Vibhu Sapra 等人参与讨论。起因是本周同时出现了 Inkling 2 Mini 和 GLM-5.4 两个循环架构模型，此前 Astra 被传是循环模型时，还引发了对思维链监控失效的担忧。",
+   "conclusion_zh": "Ben 认为 OpenAI、Thinking Machines 和 Z.ai 都在用循环，一年后可能人人都用，但他不确定这是一股潮流还是真有明确的好处，因为 KV cache 和推理成本都没讨论。他也说闭源实验室可能已经在循环。KV cache、推理成本和 Goodfire 的分析，他们打算下周再讨论。",
+   "brief_en": "A looped transformer reruns its middle layers with the same weights several times to add computational depth without adding parameters. Inkling 2 Mini from Thinking Machines and GLM-5.4 are the first frontier-level examples, but the group could not say whether looping is better in general.",
+   "background_en": "This is a Latent Space Paper Club session led by Ben Weissmann, with Vibhu Sapra and others joining the discussion. It came up because two looped models, Inkling 2 Mini and GLM-5.4, appeared in the same week. Earlier rumors that Astra was a looped model had raised fears that chain-of-thought monitoring would stop working.",
+   "conclusion_en": "Ben notes that OpenAI, Thinking Machines and Z.ai all use looping, so everyone may loop within a year. He is not sure whether this is a trend or a real advantage, since the session did not cover KV cache or inference cost. He adds that closed labs may already loop. The group plans to cover KV cache, inference and Goodfire's analysis in a later session.",
+   "points_zh": [
+    "循环 transformer 的做法，是把中间若干层用同一组权重重复运行，等价于做了权重绑定的很深的 transformer。普通 transformer 每个 block 只跑一次。循环是沿模型深度方向重复，不是像 RNN 那样沿 token 方向传状态。Inkling 2 Mini 共 24 层，分 4 个 block，每个 6 层：第一个 block（prelude）和最后一个（coda）各跑一次，中间两个 block 循环跑 3 次。该模型总参数 26B，激活 3.4B，因为部分参数被重复使用，每个 token 实际用到 5.4B 的权重激活。他们的实验显示循环中间层比循环最后几层更好。",
+    "Inkling 2 Mini 的两个关键设计是 attention residuals 和学习的门控。前者借自 Kimi，每一层不再只读上一层输出，而是用 query 从之前多个层的输出里挑选并混合。后者控制上一轮循环的信息进入下一轮的量：门控在训练初期关闭，此时模型等同于不循环，之后逐渐打开，使循环能稳定地引入训练。Ben 据此判断该模型是从头训练的。Goodfire 对跨层、跨循环信息流的分析他只简单提到，认为值得另开一期。",
+    "Thinking Machines 称循环版本训练算力效率高约 50%：不循环版本需要 1.5 倍训练量才能达到同样的 held-out loss。Ben 和其他参与者都指出这个比较不严格：对比的是 3B 激活与 5B 激活的模型，而且这个实验用的是剪枝前的专家更多的版本，与最终发布的模型不完全一致。另有人提到，后训练循环模型约 9 天，不循环模型约要 13 到 15 天。",
+    "专家剪枝是另一项独立的改动。预训练开始时有 384 个专家、每次激活 8 个，中途砍掉三分之二，变成 128 个专家、激活 8 个，再用来自内部其他模型的蒸馏把丢失的知识补回来。讨论者认为，该模型已发布，说明团队认为这比一开始就用 128 个专家更好，但外界并不清楚内部细节，也不清楚剪枝和循环之间是否有关系。",
+    "循环次数可变，是这次发布里很有信息量的部分。发布版固定循环 3 次，但研究版允许改变次数。他们画出了强制 1 到 5 次循环的测试时扩展曲线，3 次是训练时的设置。思维链样例显示：只循环 1 次时，模型更多靠写草稿，出现更多错误和回溯；循环 5 次时能直接给出正确推理。两种设置都不在训练分布内，而且参数量不同，所以比较并不完全公平。两种设置下思维链看起来都像正常英文，长度也合理。另有参与者说，把模型强行改成 1 次循环后，原生 draft 模型的投机解码接受率明显下降。",
+    "大家讨论了为什么现在的模型只循环 2 到 3 次。可能的原因包括：推理时每个请求循环数不同，批处理和 vLLM 这类系统会变复杂；循环会增加延迟，用思维链有时更高效；工程支持还很新。关于从头训练还是改造预训练模型，证据不一致：Nanbeige（讨论中拼写不确定）发现从头训练更好，模型约 3B；GLM 则发现把大模型改成循环更好，模型约 700B，两者规模差别很大。有人还提到 Nanbeige 4.2 是循环的，4.3 又改回了非循环，原因不明，有人推测是两个模型线并行、小模型试验成本更低。",
+    "安全方面的担忧来自 Astra 的传闻：循环会增加隐藏的串行深度，让模型在输出前做更多看不见的计算，削弱思维链监控。Ben 说，Jacob 曾发推说 Astra 的串行深度与 GPT-4 相差不超过 2 倍。Ben 称自己对这种担忧没有强烈立场，认为担忧并非不对，但目前只循环 2 到 3 次，离想象中的高循环数还远。Inkling 2 Mini 的文章里也说，这个规模的模型较难控制自己的思维链，但这不算是对任何一方的强力更新。"
+   ],
+   "points_en": [
+    "A looped transformer runs a group of middle layers several times with the same weights. This is equivalent to a very deep transformer with tied weights. A normal transformer runs each block once. The loop goes along the depth of the model, not along the token sequence as in an RNN. Inkling 2 Mini has 24 layers in 4 blocks of 6. The first block (prelude) and the last block (coda) run once, and the two middle blocks run 3 times. The model has 26B total parameters and 3.4B active. Because some weights are reused, each token uses 5.4B weight activations. The authors report that looping the middle layers works better than looping the last layers.",
+    "Inkling 2 Mini has two key design choices: attention residuals and a learned gate. Attention residuals come from Kimi. A layer does not read only the previous layer's output. It uses a query to pick and mix outputs from many earlier layers. The gate controls how much information from the previous loop reaches the next loop. It starts closed, so the model behaves like a non-looping model, and it opens over training. This allows looping to be introduced stably. From this, Ben infers that the model was trained from scratch. He only touches on Goodfire's analysis of information flow across layers and loops, and suggests a separate session for it.",
+    "Thinking Machines reports that the looped version is about 50% more compute efficient in training. A non-looping model needs 1.5 times the training to reach the same held-out loss. Ben and others note that the comparison is not clean. It compares 3B active with 5B active, and it uses an earlier version with more experts, not the released model. One participant also mentioned about 9 days of post-training for the looped model against 13 to 15 days for a non-looped one.",
+    "Expert pruning is a separate change. Pre-training began with 384 experts and 8 active. Part way through, two thirds of the experts were removed, leaving 128 experts with 8 active. The model was then healed by distillation from another internal model. The group reasons that releasing it implies the team found this better than starting with 128 experts. They say the internal details are unknown, as is any link between pruning and looping.",
+    "The number of loops can vary in the research release. The released model loops exactly 3 times, which is the only setting it was trained for. The research model allows other counts. Test-time scaling plots cover 1 to 5 loops. Chain-of-thought samples show that with 1 loop the model makes more mistakes and backtracks more, as if it relied on a scratch pad. With 5 loops it reasons correctly in a more direct way. Both settings are outside the training distribution and use different numbers of parameters, so the comparison is not fully fair. In both cases the chain of thought reads as normal English of reasonable length. One participant added that forcing 1 loop sharply lowers the acceptance rate of the native draft model in speculative decoding.",
+    "The group discussed why production models loop only 2 or 3 times. Possible reasons are that different requests would need different loop counts, which complicates batching in systems like vLLM, that looping adds latency and chain of thought can sometimes be more efficient, and that the engineering support is new. Evidence on training from scratch versus converting a pretrained model is mixed. Nanbeige (spelling uncertain in the transcript) found from scratch better at about 3B. GLM found converting a large model better at about 700B. Someone also noted that Nanbeige 4.2 looped but 4.3 went back to non-looping, for unknown reasons. Another participant guessed that two model lines ran in parallel and small models are cheaper to test.",
+    "The safety concern comes from the Astra rumors. Looping adds hidden serial depth, so a model could do more unseen computation before output, which would weaken chain-of-thought monitoring. Ben says Jacob tweeted that Astra's serial depth is within a factor of two of GPT-4. Ben says he has no strong opinion. He says the fears are not wrong, but current models loop only 2 or 3 times, far from the imagined high loop counts. The Inkling 2 Mini post says models at this scale are not good at controlling their chain of thought, which Ben does not treat as a strong update either way."
+   ],
+   "topics": [
+    "Looped Transformers",
+    "Model Architecture",
+    "Chain-of-Thought Monitoring"
+   ]
+  },
+  {
    "id": "yt-OwCxhAQPhYA",
    "kind": "video",
    "source": "大雷早上好",
@@ -216,5 +255,5 @@
    ]
   }
  ],
- "generated_at": "2026-11-28T09:28:57.502848+00:00"
+ "generated_at": "2026-11-28T12:24:14.067698+00:00"
 }
