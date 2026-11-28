@@ -111,7 +111,26 @@
   "https://shkspr.mobi/blog/2026/11/ogp-image-format-support-on-major-sites-and-apps/": "2026-11-27",
   "https://pluralistic.net/2026/11/26/science-of-liberty/": "2026-11-27",
   "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/": "2026-11-27",
-  "https://simonwillison.net/2026/Nov/26/hn-50651685/": "2026-11-27"
+  "https://simonwillison.net/2026/Nov/26/hn-50651685/": "2026-11-27",
+  "https://simonwillison.net/2026/Nov/27/datasette-charts/": "2026-11-28",
+  "https://www.ft.com/content/af599e07-d44c-4068-ab84-6ee3c85551d4?syn-25a6b1a6=1": "2026-11-28",
+  "https://www.bloomberg.com/news/articles/2026-11-27/nvidia-blackwell-chips-turn-up-at-china-site-tied-to-alice-huang?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5NTc4ODgyMywiZXhwIjoxNzk2MzkzNjIzLCJhcnRpY2xlSWQiOiJUUDFVMFJUOU5KTFMwMCIsImJjb25uZWN0SWQiOiI3QTcxRTEyQjY2RTM0RkI3ODlCQTA5NEZBQzVGMkE0OSJ9.tcyYBUyKr7A_4Qyf4S69z95uT1ZiyuOyOOZi73bhQ7Q&leadSource=article-gifting": "2026-11-28",
+  "https://www.joanwestenberg.com/p/how-to-become-a-centaur": "2026-11-28",
+  "https://aresluna.org/ui-style-guides": "2026-11-28",
+  "https://minimaxir.com/2026/11/opus-fable/": "2026-11-28",
+  "https://www.dwarkesh.com/p/daniel-kokotajlo-ege-erdil": "2026-11-28",
+  "https://blog.miguelgrinberg.com/post/protect-your-web-forms-against-spam-bots": "2026-11-28",
+  "https://www.filfre.net/2026/11/this-week-on-the-analog-antiquarian/": "2026-11-28",
+  "https://www.construction-physics.com/p/the-invention-algorithm": "2026-11-28",
+  "https://www.johndcook.com/blog/2026/11/27/triangles-without-pentagons/": "2026-11-28",
+  "https://devblogs.microsoft.com/oldnewthing/20261127-00/?p=112901/": "2026-11-28",
+  "https://pluralistic.net/2026/11/27/taylor-made/": "2026-11-28",
+  "https://www.johndcook.com/blog/2026/11/27/counterexample-to-proof-by-example/": "2026-11-28",
+  "https://shkspr.mobi/blog/2026/11/gadget-review-wifi-carbon-monoxide-alarm-jkd-625w/": "2026-11-28",
+  "https://dfarq.homeip.net/babbages-remembered/?utm_source=rss&utm_medium=rss&utm_campaign=babbages-remembered": "2026-11-28",
+  "https://berthub.eu/articles/posts/fieldlab-is-van-de-it/": "2026-11-28",
+  "https://www.jeffgeerling.com/blog/2026/remote-control-usb-hub/": "2026-11-28",
+  "https://dfarq.homeip.net/microsoft-trademark-registered-november-1976/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-trademark-registered-november-1976": "2026-11-28"
  },
  "seen_undated": [
   "http://www.paulgraham.com/13sentences.html",
@@ -413,10 +432,12 @@
   "experimental-history.com",
   "fabiensanglard.net",
   "filfre.net",
+  "garymarcus.substack.com",
   "geoffreylitt.com",
   "geohot.github.io",
   "gilesthomas.com",
   "grantslatton.com",
+  "gwern.net",
   "herman.bearblog.dev",
   "hey.paris",
   "hugotunius.se",
@@ -467,5 +488,5 @@
   "xania.org",
   "xeiaso.net"
  ],
- "last_run": "2026-11-27T05:14:37.392424+00:00"
+ "last_run": "2026-11-28T05:14:17.880479+00:00"
 }

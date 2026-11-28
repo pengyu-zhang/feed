@@ -1,0 +1,613 @@
+{
+ "date": "2026-11-28",
+ "items": [
+  {
+   "id": "c91c032e5231",
+   "kind": "blog",
+   "source": "simonwillison.net",
+   "source_url": "https://simonwillison.net",
+   "title": "datasette-charts 0.4a0",
+   "url": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+   "published": "2026-11-27T23:57:17+00:00",
+   "basis": "short",
+   "brief_zh": "Simon Willison 发布了 datasette-charts 0.4a0，根据让 Claude Opus 5.5 试用插件钩子时发现的各种不顺手之处做了修改，并为插件上线了文档网站。",
+   "background_zh": "datasette-charts 是新插件，自带一个插件钩子，允许其他插件定义新的图表类型，但作者此前还没有真正用过这个钩子。",
+   "conclusion_zh": "",
+   "brief_en": "Simon Willison released datasette-charts 0.4a0, which fixes friction points found when Claude Opus 5.5 tried the plugin hook, and added a website for the plugin.",
+   "background_en": "datasette-charts is a new plugin with its own plugin hook that lets other plugins define new chart types. The author had not yet used the hook for anything.",
+   "conclusion_en": "",
+   "points_zh": [
+    "这次发布的主要改动来自一次试用。作者让 Claude Opus 5.5 写了一个实验性插件，专门来试这个钩子，结果它指出了设计里的一些别扭之处，0.4a0 就是针对这些问题的修改。作者说，这样会让开发新的图表插件方便不少。",
+    "插件有了自己的网站 charts.datasette.io。网站里有一份面向插件作者的教程，还有一个展示所有核心图表和标注的图库，每个例子都链接到 Datasette Lite 上可交互的演示。"
+   ],
+   "points_en": [
+    "Most of the release comes from one trial. The author had Claude Opus 5.5 build an experimental plugin to test the hook, and it surfaced several friction points in the design. This release addresses them, which the author says should make writing chart plugins much more ergonomic.",
+    "The plugin now has a website at charts.datasette.io. It includes a tutorial for plugin authors and a gallery of all the core charts and annotations, each linking to an interactive demo on Datasette Lite."
+   ],
+   "topics": [
+    "datasette",
+    "data visualization",
+    "plugins"
+   ]
+  },
+  {
+   "id": "6afb007d7740",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "OpenAI Countersues Apple for Stealing Trade Secrets",
+   "url": "https://www.ft.com/content/af599e07-d44c-4068-ab84-6ee3c85551d4?syn-25a6b1a6=1",
+   "published": "2026-11-27T23:50:13+00:00",
+   "basis": "short",
+   "brief_zh": "据英国《金融时报》报道，OpenAI 对苹果提起反诉，指控苹果对员工设下陷阱，苹果则称这是转移视线。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "The Financial Times reports that OpenAI has countersued Apple, saying Apple set a trap for its employees. Apple calls the counterclaims a distraction.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "OpenAI 在反诉状中称，苹果给员工设了个圈套：年轻人以为是去库比蒂诺工作，结果进了“加州旅馆”，想走随时可以走，却永远离不开。苹果回应说，OpenAI 的反诉是明显想转移对苹果起诉实质内容的注意力，并称 OpenAI 已被下令停止使用苹果的机密信息。作者 John Gruber 补了一句：今年发生的事太多，这桩还处在最早期的官司已经像旧闻了。"
+   ],
+   "points_en": [
+    "OpenAI's complaint says young hires thought they would work in Cupertino but joined a \"Hotel California\", where they could check out any time but never leave. Apple replies that the counterclaims are a transparent attempt to distract from its own lawsuit, and says OpenAI has already been ordered to stop using Apple's confidential information. The blogger, John Gruber, adds that so much has happened this year that the suit, still at its earliest stage, already feels like old news."
+   ],
+   "topics": [
+    "OpenAI",
+    "Apple",
+    "litigation"
+   ]
+  },
+  {
+   "id": "8f2242cdb3ab",
+   "kind": "blog",
+   "source": "daringfireball.net",
+   "source_url": "https://daringfireball.net",
+   "title": "Serial Numbers in Chinese Filings Reveal That Nvidia’s Restricted Blackwell Chips Were Installed at a Shanghai Datacenter Linked to Alice Huang and Megaspeed",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-27/nvidia-blackwell-chips-turn-up-at-china-site-tied-to-alice-huang?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5NTc4ODgyMywiZXhwIjoxNzk2MzkzNjIzLCJhcnRpY2xlSWQiOiJUUDFVMFJUOU5KTFMwMCIsImJjb25uZWN0SWQiOiI3QTcxRTEyQjY2RTM0RkI3ODlCQTA5NEZBQzVGMkE0OSJ9.tcyYBUyKr7A_4Qyf4S69z95uT1ZiyuOyOOZi73bhQ7Q&leadSource=article-gifting",
+   "published": "2026-11-27T23:41:26+00:00",
+   "basis": "full",
+   "brief_zh": "据彭博社报道，中国公司提交的文件中的序列号显示，英伟达受限的 Blackwell 芯片已被装进上海一个与 Alice Huang 和 Megaspeed 有关联的数据中心。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "Bloomberg reports that serial numbers in filings by Chinese firms show Nvidia's restricted Blackwell chips were installed at a Shanghai data center linked to Alice Huang and Megaspeed.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "彭博社查阅了两家中国公司的贷款文件。上海烁耀（Shanghai Shuoyao）在 11 月提交给中国监管部门的文件中，列出了一台 GB300 NVL72 机架的序列号，并以这批设备为抵押，向上海创新银行（Shanghai Innovation Bank）借了 9600 万元人民币（约 1400 万美元）。另一家公司上海科展（Shanghai Kezhan）由一家东京母公司控制，2025 年底从一家由上海市政府机构全资持有的融资租赁公司借了 9000 万元，文件里描述该数据中心有一台 GB200 服务器，同样用的是 Blackwell 芯片。",
+    "报道称，这是首次有文件显示 Blackwell 处理器进入了与 Alice Huang 和 Megaspeed 有关联的中国数据中心。这类芯片直到最近都是英伟达最强的数据中心产品，没有美国许可一直不能向中国出货。作者 John Gruber 讽刺说，英伟达董事会本该等自己的“独立调查”结束后再做决定。"
+   ],
+   "points_en": [
+    "Bloomberg reviewed loan filings from two Chinese firms. Shanghai Shuoyao listed the serial number of a GB300 NVL72 rack in documents submitted to Chinese regulators in November, and used the hardware as collateral for a 96 million yuan ($14 million) loan from Shanghai Innovation Bank. Shanghai Kezhan, controlled by a Tokyo-based parent, described a GB200 server at the site when it got a 90 million yuan loan in late 2025 from a finance-leasing firm wholly owned by a Shanghai government agency. Both systems use Blackwell chips.",
+    "The report says this is the first evidence that Blackwell processors reached a Chinese data center tied to Alice Huang and Megaspeed. Until recently these were Nvidia's most powerful data center products, and shipping them to China has always required a US license. The blogger, John Gruber, remarks that the Nvidia board should have waited for its own independent investigation to finish before making hasty decisions."
+   ],
+   "topics": [
+    "Nvidia",
+    "export controls",
+    "AI chips"
+   ]
+  },
+  {
+   "id": "552ce76dd0e6",
+   "kind": "blog",
+   "source": "joanwestenberg.com",
+   "source_url": "https://joanwestenberg.com",
+   "title": "How to Become a Centaur",
+   "url": "https://www.joanwestenberg.com/p/how-to-become-a-centaur",
+   "published": "2026-11-27T22:07:24+00:00",
+   "basis": "full",
+   "brief_zh": "Joan Westenberg 认为，未来会出现靠 AI agent 干大部分活的“半人马公司”：一两个人，卖的是成果而不是软件，靠判断力和口碑赚钱。",
+   "background_zh": "Kasparov 输给 Deep Blue 后开始下“半人马国际象棋”，即人和电脑搭档。作者拿这个例子类比，讨论服务型公司如何用 AI agent 摆脱“增收就得加人”的增长困境。",
+   "conclusion_zh": "作者的结论是，现在就可以从一项服务、一个客户开始：拆解步骤，用 agent 替代体力环节，按交付物定价，自己保留最后的审核。他认为几个月内就能搭起一个原本需要十人团队的 AI 代理机构，并比同行早积累与 AI 协作的经验。他以国际象棋的业余选手收尾：他们赢不是因为棋艺最好，而是比别人更早练成了与引擎协作的流程。",
+   "brief_en": "Joan Westenberg argues that small \"Centaur\" firms of one or two people, using AI agents for most of the work, will sell results instead of software and earn their money from judgment and reputation.",
+   "background_en": "After Kasparov lost to Deep Blue, he took up Centaur Chess, in which a human plays with a computer. The author uses this as a model for how service businesses can use AI agents to escape the trap of needing more staff to earn more revenue.",
+   "conclusion_en": "The author's advice is to begin now with one service and one customer: break it into steps, replace the labor steps with agents, charge per deliverable and keep the final review. He says that within months this can produce an agency doing work that needed a team of ten a year earlier, with a head start in working with AI agents. He ends with the amateur chess players, who won not because they played best but because they built the best process for working with engines before anyone else.",
+   "points_zh": [
+    "半人马模式的核心，是让 agent 做体力活，人留下判断。作者举例：在自由式国际象棋赛上，新罕布什尔的业余选手用三台普通电脑，靠更好的人机协作流程打败了硬件更强的特级大师。放到公司里，研究、起草、格式化、整理数据、汇总、跟进等占去大部分工时的事交给 agent；搞清客户真正要什么、在多份草稿里做选择并说明理由、发现可能惹官司的说法或错误数字、与客户沟通、署名并负责，这些留给人。后者耗时不多，却是客户付费的大部分价值，过去因为混在成百上千小时的工作里很难单独拿出来卖。",
+    "作者预测，创始人会把软件留在自己手里，卖它产出的结果，而不是卖软件使用权。他的论证是：传统服务公司增收就得加人，成本和收入同步增长，做到二十人左右老板就被招聘、薪资、绩效管理占满；SaaS 公司摆脱了这个困境，但客户买了软件后往往还要再雇人才能得到结果。现在 agent 能做研究、写报告、对账、整理客户电话等工作，企业付的是 token 而不是工资，多接五个客户不用多招五个人，成本不变、收入上涨，等于用软件公司的利润率卖服务。他还预测会出现一两个人、收入超过十亿美元的“半人马公司”。这些是作者的预测，文中没有给出数据。",
+    "哪些服务适合，取决于三点：成品足够具体、客户能评估；制作流程可以讲清楚；客户现在愿意为耗时多的工作付溢价。作者列的例子有：记账员月末结账从 8 个客户扩到 40 个，研究员把竞品分析从三周缩到三天，编辑一夜出片，招聘人员给出带点评的候选人排序，律师以固定价格做合同初审（每页由律师把关）。不适合的有两类：客户买的是你的在场，比如现场辅导和工作坊，因为时间无法放大；工作说不清楚的服务，比如没有明确终点的“战略”“咨询”，这类要先改造成有明确交付物的产品。",
+    "作者给出了一套从本月开始的做法。选一项自己已做得很好、有明确终点的服务；把从首次接触客户到交付的每一步写下来，通常是 20 到 40 步；把每一步标为“体力”或“判断”，并且要诚实，别把最终的语气把关交给 AI；按耗时从多到少，给每个体力步骤建一个 agent，用写得很细的提示词加上自己过往作品的范例，反复调到只需轻度修改；先拿自己或友好的客户试跑整个流程；按交付物而不是按小时收费，这样省下的时间才归自己；最后一定留一步自己审核，作者说跳过这一步就等于变成了软件公司；先加客户再加人，只有在判断环节成为瓶颈时才招人，并且要找判断力强的人，而不是产出快的人。",
+    "当大家都能用同样的技术，千篇一律的产出价值会趋近于零，客户愿意付钱买的是判断力、过往记录和责任担当。过去客户可以用团队规模判断服务公司的能力，现在两个人就能达到五十人的产能，客户会转而看写作质量、其他客户的口碑和他们尊重的人的评价。所以作者建议半人马们公开发表对自己领域的看法、经许可展示作品、经营个人品牌；他认为没有面孔的半人马只能在价格上与所有用 LLM 的人竞争，有口碑的才能按真实价值收费。",
+    "作者认为大多数人不会照做，原因是心理上的。做手艺的人以动手为荣，用 AI 起草会觉得是偷工减料，或是承认自己多年磨练的本事并不特别；作者的回应是，判断和品味现在能用在五十个项目而不是五个上，就像导演或报纸编辑。做管理的人靠团队规模获得地位，也怕别人觉得两个人的公司野心小；作者的回应是，更好的指标是人均收入，以及客户是否回头。他还说，半人马需要放弃一部分控制：交付的东西大部分由 AI 生成，大多数问题能在客户之前发现，但不是全部，一开始也不会完全看懂自己搭的系统。"
+   ],
+   "points_en": [
+    "The Centaur model gives the labor to agents and keeps the judgment for the human. The author cites freestyle chess, where amateurs from New Hampshire beat grandmasters with better hardware by using three ordinary computers well. In a business, agents take research, drafting, formatting, data wrangling, summarising and follow-ups, which fill most of the hours. The human keeps working out what the customer really needs, choosing between drafts and explaining why, spotting risky claims and wrong figures, talking to the customer, and taking responsibility. These tasks take little time but carry most of the value customers pay for. In the past they were hard to sell alone, because they were mixed in with hundreds of hours of other work.",
+    "The author predicts that founders will keep their software in-house and sell its output instead of licensing it. His argument is as follows. Traditional service firms must add staff to add revenue, so costs grow with revenue, and around twenty employees the owner is consumed by hiring, payroll and reviews. Software firms escaped this, but their customers often still pay salaries to get the results the software was meant to deliver. Now agents can do research, reports, reconciliation and call analysis, and firms pay in tokens instead of salaries. They can add five customers without five hires, so costs stay flat and revenue rises, which gives software margins on services. He also predicts Centaur companies of one or two people with revenue above $1 billion. These are his predictions, and the post gives no data.",
+    "Suitable services meet three conditions: the end product is tangible enough for the customer to evaluate, the process can be written down, and customers already pay a premium for the time it takes. His examples are a bookkeeper closing month-end accounts for 40 customers instead of 8, a competitor analysis in three days instead of three weeks, overnight video editing, ranked candidate lists with comments, and fixed-price first-pass contract review with every page checked by a lawyer. Two kinds of service suit the model poorly. One is work where the customer buys the author's physical presence, such as live coaching or workshops, because time cannot be scaled. The other is work that cannot be described clearly, such as open-ended strategy or consulting, which should first be turned into a service with a definite deliverable.",
+    "The author gives steps to start this month. Choose one service you already provide well, with a definite endpoint. Write down every step from first contact to delivery, usually 20 to 40 steps. Label each step as labor or judgment, honestly, and do not give final judgment on things like tone to an agent. For each labor step, starting with the most time-consuming, build an agent with a detailed prompt and examples of your past work, and iterate until it needs only light editing. Test the whole process on your own work or a friendly customer. Charge per deliverable instead of per hour, so you keep the value of the time saved. Always keep a final review step yourself, because skipping it turns you into a software business. Add customers before employees, hire only when judgment becomes the bottleneck, and then hire for judgment rather than output.",
+    "The author says that when everyone has the same technology, plain work made with it approaches zero value, and customers will pay for judgment, track record and accountability. Customers used to judge a service firm by its team size, but two Centaurs can now match the capacity of fifty account managers, so customers will look at the quality of the writing, the firm's reputation with other customers and what respected people say about it. He therefore advises Centaurs to publish their views, share examples of their work with permission, and build a personal brand. In his view, faceless Centaurs will compete on price, while those with reputations can charge what their work is worth.",
+    "The author expects most people not to follow this, for human reasons. Makers take pride in doing the work and may feel that using AI for a first draft is cutting corners or admits their skill was not special. He answers that their judgment and taste can now cover fifty projects instead of five, like a film director or an editor. Managers draw status from team size and may fear a two-person company looks unambitious. He answers that the better measure is revenue per team member and whether customers return. He adds that Centaurs must give up some control: they will ship work mostly made by AI, catch most but not all problems before customers do, and run systems they do not fully understand at first."
+   ],
+   "topics": [
+    "AI agents",
+    "business models",
+    "future of work"
+   ]
+  },
+  {
+   "id": "136b27316001",
+   "kind": "blog",
+   "source": "aresluna.org",
+   "source_url": "https://aresluna.org",
+   "title": "UI style guides",
+   "url": "https://aresluna.org/ui-style-guides",
+   "published": "2026-11-27T22:07:21+00:00",
+   "basis": "full",
+   "brief_zh": "Marcin Wichary 把从 1980 年代初至今 86 份公司的 UI 风格指南（界面规范）收集到一页，方便查阅和下载。",
+   "background_zh": "这些指南的 PDF 以前散落在网上，Wichary 想把它们集中到一处。",
+   "conclusion_zh": "Wichary 欢迎读者反馈想法，也欢迎补充列表里缺少的风格指南。",
+   "brief_en": "Marcin Wichary has collected 86 UI style guides from companies, dating from the early 1980s to today, on one page for browsing and download.",
+   "background_en": "The PDFs of these guides were scattered around the web, and Wichary wanted them in one place.",
+   "conclusion_en": "Wichary invites readers to send their thoughts and to suggest any style guides missing from the list.",
+   "points_zh": [
+    "这个合集按平台和年代分组，并标出了其中最重要的几份。涵盖的平台很广：早期桌面系统（Amiga、Macintosh、NeXTSTEP、Windows、OPEN LOOK、CDE、CUA），Linux 桌面（GNOME、KDE），移动和掌上设备（iOS、Android、Palm OS、webOS、BlackBerry、Nokia、Windows Phone、Newton、PenPoint），以及 Kinect、Surface、Google VR/AR、Samsung 等。每组附有一段简短的平台介绍，每个平台下列出一到十来份指南，例如 Nokia 有十份，Windows 有九份。",
+    "收集过程有不少人工处理。有些指南很难找到，他自己扫描了几份；还为一些小型网站做了独立镜像，并做了轻度整理，比如把图片像素化处理得更好、把外链图片改为内嵌、修复 YouTube 嵌入。DECwindows XUI 的指南是从一种专有电子书格式中逆向提取出来的，BeOS 的“初步且不完整”的指南是从 BeOS R4.5 光盘里取出来的。",
+    "全部指南可以打包下载，压缩包里还有几份页面上没列出的零散指南。Wichary 还列出了 Chris Silverman、Geof Crowl、Matt Sephton、Matthias Rauterberg 和 Přemysl Eric Janouch 的收藏，说明这些收藏贡献了素材，各有不同的角度和界面。"
+   ],
+   "points_en": [
+    "The collection is grouped by platform and era, and the most important guides are highlighted. The platforms are varied: early desktop systems (Amiga, Macintosh, NeXTSTEP, Windows, OPEN LOOK, CDE, CUA), Linux desktops (GNOME, KDE), mobile and handheld devices (iOS, Android, Palm OS, webOS, BlackBerry, Nokia, Windows Phone, Newton, PenPoint), and also Kinect, Surface, Google VR/AR and Samsung. Each group has a short note on the platform and lists from one to about ten guides. Nokia has ten and Windows has nine.",
+    "Building the collection took manual work. Some guides were hard to find, and he scanned a few himself. He made standalone mirrors of several minisites and lightly cleaned them up, for example by pixellating images better, inlining images and fixing YouTube embeds. The DECwindows XUI guide was reverse engineered from a proprietary e-book format. The BeOS guidelines, which he calls preliminary and incomplete, were extracted from the BeOS R4.5 CD.",
+    "All the guides can be downloaded in one archive, which also holds a few miscellaneous guides not shown on the page. Wichary also lists collections by Chris Silverman, Geof Crowl, Matt Sephton, Matthias Rauterberg and Přemysl Eric Janouch. He says they contributed material and each offers a different take and interface."
+   ],
+   "topics": [
+    "UI design",
+    "style guides",
+    "software history"
+   ]
+  },
+  {
+   "id": "305bbf3807b7",
+   "kind": "blog",
+   "source": "minimaxir.com",
+   "source_url": "https://minimaxir.com",
+   "title": "Opus 5.5 and Fable 5.2 made my overoptimized Rust code even more overoptimized",
+   "url": "https://minimaxir.com/2026/11/opus-fable/",
+   "published": "2026-11-27T20:10:00+00:00",
+   "basis": "full",
+   "brief_zh": "Max Woolf 称，换用 Opus 5.5 和 Fable 5.2 后，他早已用 GPT 优化过的 Rust 项目平均又快了约 4 倍、内存也大幅下降，多数项目已接近硬件极限。",
+   "background_zh": "Woolf 几个月前写过用 agent 迭代优化 Rust 代码的文章，当时主要用 OpenAI 的 GPT 模型。文章发表后第二天 Anthropic 发布了 Opus 5.5，他试用后发现效果明显更好，于是重做了整套流程。",
+   "conclusion_zh": "按 Opus 5.5 的判断，他大部分 Rust 项目已经触到理论硬件极限，新模型很可能不会再让代码明显更快，所以他不该再拖延发布。他接下来打算学习 Rust 的编译器优化是怎么工作的，认为那里可能还有更大的提速空间。",
+   "brief_en": "Max Woolf says Opus 5.5 and Fable 5.2 made his already optimized Rust projects about 4x faster on average, with much lower memory use, and that most are now near hardware limits.",
+   "background_en": "A few months ago Woolf wrote about using agents to optimize Rust code, mostly with OpenAI's GPT models. Anthropic released Opus 5.5 the day after that post. He tried it, found it clearly better, and rebuilt his pipeline around it.",
+   "conclusion_en": "By Opus 5.5's account, most of his Rust projects now sit at theoretical hardware limits. He expects new models to make the code no faster, so he has little reason to delay releases. He plans to learn how Rust compiler optimization works, since he thinks larger speedups may remain there.",
+   "points_zh": [
+    "新模型在已被 GPT 6.1 Astra 优化过的项目上又带来明显提速。Opus 5.5 单轮就在多个项目上取得 1.2 到 1.5 倍加速。Fable 5.2（high effort，研究子 agent 换成 Opus 5.5）在不少项目上达到 1.5 到 2.0 倍，他说从基准测试看不出原因，但乐见其成。多轮叠加后，平均累计约 4 倍；词云生成器从约 1 毫秒降到 374 微秒，统计建模库和数据可视化库也有类似提升。这些数字都来自他自己的项目。",
+    "Opus 5.5 的工作方式和 GPT 不同。它很爱先用 samply 做性能剖析，每次改动后再剖析一遍，也更愿意先做实验再改代码。代价是代码量更多：遇到 PNG 处理在热路径上时，它会从头写一个自己的 PNG 模块，而不是用 png crate，速度达标且无回退，他勉强接受，但让它删掉 20% 代码的维护轮次效果有限。另外 Claude Code 把 criterion 的基准输出写进临时文件，跑完才返回结果，他看不到中间进度。他最终用 Claude 桌面应用作为主要工具，因为它能列出后台任务和用量。",
+    "他加了两个新的专项轮次。一是降低峰值内存：只用一句简单提示，就让所有项目的峰值内存明显下降，手段是流式处理和更合理地指定 Vec 大小，但速度很少随之提升。二是反汇编轮次：要求所有代码改动必须先由反汇编二进制发现并论证。他对效果感到意外，Opus 5.5 能让 Rust 改动经 LLVM 产出更少的指令且无回退。他担心可能过拟合到自己的 M3 MacBook Pro（ARM），但改动看起来与架构关系不大，而且模型没有写需要 unsafe 的自定义 CPU 指令。",
+    "Opus 5.5 在需要视觉质量的项目上也有帮助。他的 Rust UMAP 实现原本比 umap-learn 快 4 到 15 倍，但 MNIST 上的聚类不够分明；让 Opus 5.5 针对已知良好的实现改进后，速度优势降到约 4 倍，聚类质量与之相当。光栅转矢量（SVG）项目此前因色块和锯齿而被他搁置；Opus 5.5 会放大图像、找出锯齿、做对比网格和图像差异再修复，现在在速度、保真度和 SVG 体积上都明显超过 vtracer 和 img2svg。示例中的鹈鹕图经他另做的压缩工具处理后，从 25KB 降到 14KB。这个项目还需要更多真实场景测试才会发布。",
+    "他用 Fable 5.2 做了一个比 ripgrep 更快的 grep 替代品 byteseek，并提前开源为研究预览。Fable 5.2 在内存中的合成基准上找到大幅提速；他又在命令行下用合成数据和真实数据（Linux 源码树、OpenSubtitles）做了对等比较。byteseek 还增加了更友好的输出、类似 jq 的 JSON/YAML/TOML 搜索、模糊和谓词匹配，其 Python 绑定在他的测试中快过 pyahocorasick 和 orjson。",
+    "他的新流程依次是：Opus 5.5 常规提速轮、Opus 5.5 降内存轮、Opus 5.5 反汇编轮、Fable 5.2 轮，以及有余量时再加一轮 Fable 5.2 反汇编（Fable 只能占用 Claude Code 每周额度的一半）。每一轮之后，如果出现明显的速度或内存提升，就说明还没收敛，再用“做个突破”之类的提示追加一轮。因为 Claude Code 会在空闲时发出排队消息，他把这句提示放在环境之外的 Markdown 文件里，让模型完成任务后再去读。"
+   ],
+   "points_en": [
+    "The new models gave clear speedups on projects that GPT 6.1 Astra had already optimized. In a single pass, Opus 5.5 gave 1.2x to 1.5x speedups on several projects. Fable 5.2 (on high effort, with the research subagents moved to Opus 5.5) gave 1.5x to 2.0x on many projects. He says the benchmarks do not explain this, but he is glad of it. Across passes, the average cumulative speedup is about 4x. His word cloud generator went from about 1 millisecond to 374 microseconds, and his statistical modeling and data visualization libraries improved similarly. All figures come from his own projects.",
+    "Opus 5.5 works differently from the GPT models. It profiles eagerly with samply, reprofiles after each change, and runs more experiments before editing code. The cost is more code. Where PNG handling was on the hot path, it wrote its own PNG module from scratch instead of using the png crate. The module met the speed target without regressions, and he accepts it reluctantly. Maintenance passes that ask it to cut 20% of the code had limited success. Claude Code also pipes criterion output to a temporary file and returns results only after the run ends, so he cannot see progress. He ended up using the Claude desktop app as his main harness, because it lists background tasks and usage.",
+    "He added two new dedicated passes. The first reduces peak memory. A simple prompt cut peak memory clearly on every project, through streaming and better Vec sizing, but it rarely improved speed. The second is a disassembly pass, in which every code change must first be found and justified by disassembling the binary. The results surprised him: Opus 5.5 can change Rust code so that LLVM emits fewer instructions without regressions. He worries the gains may overfit his M3 MacBook Pro (ARM), but the diffs look largely architecture agnostic, and the model avoided custom CPU instructions that would need unsafe.",
+    "Opus 5.5 also helped with projects where visual quality matters. His Rust UMAP implementation was 4x to 15x faster than umap-learn, but its clusters on MNIST were not distinct. After Opus 5.5 iterated against known good implementations, the speedup fell to about 4x and cluster quality became comparable. He had shelved his raster-to-SVG project because of color blotches and jagged staircases. Opus 5.5 zooms into the image, finds the staircases, builds comparison grids and image diffs, and fixes the algorithms. The project now beats vtracer and img2svg on speed, fidelity and SVG size. A pelican example went from 25KB to 14KB after a separate compression tool he also built. The project still needs more real-world tests before release.",
+    "He built byteseek, a grep replacement that is faster than ripgrep, and open-sourced it early as a research preview. Fable 5.2 found large speedups on in-memory synthetic benchmarks. He then ran CLI comparisons on synthetic and real data (the Linux source tree and OpenSubtitles). byteseek also adds friendlier output, jq-like search over JSON, YAML and TOML, fuzzy and predicate matching, and Python bindings that beat pyahocorasick and orjson in his tests.",
+    "His new pipeline runs in this order: an Opus 5.5 speed pass, an Opus 5.5 memory pass, an Opus 5.5 disassembly pass, a Fable 5.2 pass and, if quota allows, a Fable 5.2 disassembly pass. Fable can use only half of the weekly Claude Code quota. After each pass, a large speed or memory gain suggests the work has not converged, so he adds a pass with a prompt asking for a breakthrough. Claude Code sends queued messages when idle, so he keeps that prompt in a Markdown file outside the environment and tells the model to read it only after finishing its task."
+   ],
+   "topics": [
+    "Rust",
+    "agentic coding",
+    "performance optimization"
+   ]
+  },
+  {
+   "id": "ee98a806290f",
+   "kind": "blog",
+   "source": "dwarkesh.com",
+   "source_url": "https://dwarkesh.com",
+   "title": "AI researchers debate what we should do next – Daniel Kokotajlo and Ege Erdil",
+   "url": "https://www.dwarkesh.com/p/daniel-kokotajlo-ege-erdil",
+   "published": "2026-11-27T18:01:14+00:00",
+   "basis": "full",
+   "brief_zh": "Ege Erdil 和 Daniel Kokotajlo 对 2029 年前出现全面超越人类专家的 AI 的概率判断不同（约 20% 对超过 50%），但都认为局面严重到需要认真制定计划，并且不应对中国采取对抗姿态。",
+   "background_zh": "这是 Dwarkesh Patel 主持的播客。Ege Erdil 是 Google DeepMind 的研究员；Daniel Kokotajlo 是 AI Futures Project 的作者之一，该项目发布了 AI 2027 和 AI 2040。Dwarkesh 原以为这会是一场辩论，结果两人的共识比预期多。提供的文字在讨论中国问题的中途被截断，下面只涵盖已有部分。",
+   "conclusion_zh": "两人都认为，无论概率是 20% 还是 50% 以上，局面都严重到整个社会需要认真面对世界可能被怎样改变，并拿出一个真正说得通的计划。在是否要放慢上他们仍有分歧：Daniel 倾向尽早放缓，Ege 认为现在暂停为时过早，要等到更多人认识到风险。他们在一点上一致：如果需要全球条约，就不该继续对中国采取对抗姿态。",
+   "brief_en": "Ege Erdil and Daniel Kokotajlo differ on the odds of AIs beating every human expert before 2029 (about 20% versus over 50%). Both say the situation is serious enough to need a real plan, and that the US should stop antagonizing China.",
+   "background_en": "This is a podcast hosted by Dwarkesh Patel. Ege Erdil is a researcher at Google DeepMind. Daniel Kokotajlo is one of the authors at the AI Futures Project, which published AI 2027 and AI 2040. Dwarkesh expected a debate, but the two agreed more than he thought. The text provided is cut off partway through the discussion of China, so this summary covers only what is there.",
+   "conclusion_en": "Both say that, whether the probability is 20% or over 50%, the situation is serious enough that society must grapple with how the world may change and needs a plan that makes sense. They still differ on slowing down: Daniel favors slowing early, while Ege thinks a pause now is too early and wants more people to understand the risks first. They agree on one point: if a global treaty is needed, the US should stop antagonizing China.",
+   "points_zh": [
+    "分歧的核心是“纯软件奇点”有多大可能发生。Ege 指的是：在算力和非合成数据大致固定的情况下，更强的 AI 用这些资源做 AI 研究的效率大幅提高，形成反馈循环，在短时间内取得相当于十年的进步。他认为证据不足以高度相信这一点，三年内的可能性约 10% 到 20%，整场对话中他给出的是约 20%。Daniel 认为在 2027 年全自动化 AI 研究的可能性略高于一半，之后进展很可能大幅加速，数据效率低等局限会很快消失，得到能压倒顶尖专家的 AI，他认为这等同于超级智能。他还澄清，自己并不认为几年内人类大概率会死光，他的说法是：如果不大幅放慢 AI 公司，几年内很可能失控，由未对齐的 AI 主导。",
+    "两人都认为这个分歧在性质上没有看起来那么大。Ege 说，即使没有 RSI，他对“一切被自动化”的中位估计也是 15 到 20 年后，所以五年内仍有约 20% 的可能。他的观点是，一件事即使只有 20% 的可能而后果很糟，也该采取行动，所以数字上差得多，性质上差得不多。",
+    "Ege 认为现在暂停为时过早。他不信任在没有看到真实世界中显著代价之前、仅凭理论论证就去干预的做法，并认为常被引用的 Hugging Face 事件造成的损失比一次空难小得多。他还指出，机器学习过去十年没有大的理论突破，进步都是一点点叠加，所以他不认为对齐会靠一次理论突破解决。他也认为，现在暂停不会让公众真正理解风险：公众对 AI 和数据中心的反感出于眼前的原因，暂停即使发生，也会由并不认同这套世界观的人推动。他希望在能力明显到人人都看得见之后再放慢，并担心社会若不基于正确事实讨论，最终会由随机事件而非理性决策决定结果。",
+    "Daniel 主张争取多一年时间有两点好处。一是对齐和理解 AI 的研究在进步，多一年就多削减一部分坏结果的概率。二是社会和政府的“觉醒”，他认为这可能最重要。他提到过去一年里有多位参议员和众议员公开说 AI 可能杀死所有人，并认为觉醒更多取决于时间的推移，而不仅是能力的提升，即使暂停，只要继续部署现有能力，几年内觉醒还会增长。他提出的折中方案是不完全暂停，而是把 AI 研发算力限制在公司总算力的 5% 到 10%，使进展速度降到原来的二分之一到三分之一。AI Futures Project 刚发布了一个放缓方案，预计让智能爆炸从 2027 年推迟约一年。",
+    "关于中国，Ege 说美国目前对中国的对抗姿态“短视而危险”，严重破坏了国际协调的可能，他们必须停止，他也批评了 Anthropic 对中国的态度。Daniel 表示同意，并认同长期来看要有好的未来就需要与中国等国家达成条约或协议。Daniel 还指出，按 10% 的方案，美国公司的 AI 研发算力仍与中国公司相当，而且中国的很多进展来自美国，所以未必需要协议。Ege 回应说，这只是暂时优势，因为中国在 EUV 等设备上落后，但以中国的增长速度，五年内大概追不上；如果认为需要十五年，他就更悲观。Dwarkesh 补充说，如果 AI 强到能去研究“镜像生命”之类，可能需要全球条约。",
+    "主持人在开头的介绍里还提到另外两部分内容，但提供的文字没有覆盖：一是未来的 AI 数量和认知能力会压倒人类，它们会如何对待我们，以及当前 AI 大体友善这一点有多大意义；二是对 2027 年的预测。按介绍，Daniel 预计明年出现超级智能；Ege 对全面自动化的中位估计是 2040 年，但预计明年 AI 能通关 Steam 上的任何游戏，并能以大致人类的速度控制机器人完成叠衣服之类的简单任务。"
+   ],
+   "points_en": [
+    "The main disagreement is how likely a software-only singularity is. Ege describes it as follows: with compute and non-synthetic data roughly fixed, better AIs use those resources far more efficiently for AI research. This creates a feedback loop that delivers something like ten years of progress in a short time. He thinks the evidence does not justify high confidence. He puts it at 10-20% over three years, and about 20% over the conversation. Daniel thinks full automation of AI research in 2027 is slightly more likely than not. He expects progress to speed up a lot after that and limits such as data inefficiency to fade quickly. The result would be AIs that dominate top experts, which he counts as superintelligence. He also clarifies that he does not think we will probably all be dead in a couple of years. His claim is that, unless AI companies are slowed substantially, we will probably lose control within a couple of years and misaligned AIs will run things.",
+    "Both say the gap matters less in kind than in number. Ege says that even without recursive self-improvement his median for everything being automated is 15-20 years away, so he still gives about 20% to it happening within five years. His view is that an outcome that is 20% likely and very bad still calls for action.",
+    "Ege thinks it is too early to pause. He distrusts acting on theoretical arguments before the real world has shown a significant cost, and he says the often-cited Hugging Face incident cost much less than a plane crash. He also notes that machine learning has had no large theoretical breakthroughs in ten years. Progress has been incremental, so he does not expect alignment to arrive through one breakthrough. He thinks a pause now would not make the public understand the stakes. Public dislike of AI and data centers has short-term causes, and any pause would be backed by factions that do not share the worldview. He wants slowing to come once the capabilities are obvious to everyone. He fears that without a conversation based on correct facts, random events will decide the outcome.",
+    "Daniel argues that an extra year helps in two ways. Alignment and interpretability research is making progress, so each year removes some probability of bad outcomes. Society and government also wake up, which he thinks may matter most. He notes that several senators and congresspeople have said in the past year that AI could kill us all. He thinks awareness depends more on elapsed time than on capability gains, so it would keep growing for some years even under a pause that continues deploying current systems. His compromise is not a full pause but limiting AI R&D to 5-10% of a company's compute, which would cut the pace of progress by a factor of two or three. The AI Futures Project has just published a pacing scheme that it says would delay the intelligence explosion from 2027 by about a year.",
+    "On China, Ege says the US stance is very myopic and dangerous, that it badly damages the chance of coordination and that the US must stop. He also criticizes Anthropic's stance toward China. Daniel agrees, and accepts that a good future probably needs a treaty or deal with China and others. Daniel adds that under his 10% plan, US companies would still have about as much AI R&D compute as Chinese ones, and that much Chinese progress comes from the US, so a deal might not be needed for that level of pacing. Ege replies that this US lead is temporary, because China lacks EUV machines, but that China probably cannot catch up in five years. If 15 years are needed, he is more pessimistic. Dwarkesh adds that very powerful AI might require a global treaty, for example on research into mirror life.",
+    "The host's introduction mentions two more parts that the provided text does not reach. One is how future AIs that outnumber and outthink humans would treat us, and how much it matters that current AIs seem nice. The other is predictions for 2027. According to the introduction, Daniel expects superintelligence next year. Ege's median for full automation is 2040, but he expects that next year AIs will beat any Steam video game and control robots to do simple tasks such as folding laundry at roughly human speed."
+   ],
+   "topics": [
+    "AI timelines",
+    "AI safety",
+    "AI policy"
+   ]
+  },
+  {
+   "id": "d2841c633290",
+   "kind": "blog",
+   "source": "miguelgrinberg.com",
+   "source_url": "https://miguelgrinberg.com",
+   "title": "Protect Your Web Forms Against Spam Bots",
+   "url": "https://blog.miguelgrinberg.com/post/protect-your-web-forms-against-spam-bots",
+   "published": "2026-11-27T17:48:35+00:00",
+   "basis": "short",
+   "brief_zh": "Miguel Grinberg 做了一个基于“工作量证明”的方案，把自己博客评论表单的垃圾信息从每天 30 到 40 条降到每月 2 到 3 条。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "Miguel Grinberg built a proof-of-work solution that cut spam on his blog's comment form from 30-40 messages per day to about 2-3 per month.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "他博客每篇文章底部的评论表单一直被垃圾机器人滥用。几年前加的 CAPTCHA 起初有点用，现在垃圾信息发送者已能绕过它，收件箱快失控了。新方案基于工作量证明，不依赖第三方服务，用户也不用解谜题，甚至不会察觉被验证。他用 Python 和 Flask 实现（博客本身用的就是这套），并说理解原理后可以移植到其他语言或框架。提供的文字只有文章的开头，具体实现没有包含在内。"
+   ],
+   "points_en": [
+    "The comment form at the bottom of every article on his blog is under constant abuse by spam bots. A CAPTCHA he added a few years ago helped at first, but spammers have now bypassed it and his comments inbox is getting out of control. His new solution is based on proof of work and does not rely on third-party services. Users do not solve puzzles and need not know they are being verified. He implemented it in Python and Flask, which the blog runs on, and says it can be ported to other languages or frameworks once the idea is understood. The text provided contains only the opening of the article, not the implementation."
+   ],
+   "topics": [
+    "spam prevention",
+    "web security",
+    "Flask"
+   ]
+  },
+  {
+   "id": "56eff6f1077b",
+   "kind": "blog",
+   "source": "filfre.net",
+   "source_url": "https://filfre.net",
+   "title": "This Week on The Analog Antiquarian",
+   "url": "https://www.filfre.net/2026/11/this-week-on-the-analog-antiquarian/",
+   "published": "2026-11-27T17:46:58+00:00",
+   "basis": "short",
+   "brief_zh": "Jimmy Maher 在 The Analog Antiquarian 上发了一篇题为《The Rhythm of Life》的新文章，这里只有指向它的链接和站点说明。",
+   "background_zh": "",
+   "conclusion_zh": "",
+   "brief_en": "Jimmy Maher posted a new article titled \"The Rhythm of Life\" on The Analog Antiquarian. The post here contains only a pointer and site boilerplate.",
+   "background_en": "",
+   "conclusion_en": "",
+   "points_zh": [
+    "这篇帖子只有标题《The Rhythm of Life》、发布日期 2026 年 11 月 27 日，以及站点的赞助和导航链接，没有文章正文，所以看不出内容。"
+   ],
+   "points_en": [
+    "The post gives only the title \"The Rhythm of Life\", the date of November 27, 2026, and the site's support and navigation links. It has no article text, so its content cannot be described."
+   ],
+   "topics": [
+    "Link post"
+   ]
+  },
+  {
+   "id": "ec4e1a4be053",
+   "kind": "blog",
+   "source": "construction-physics.com",
+   "source_url": "https://construction-physics.com",
+   "title": "The Invention Algorithm",
+   "url": "https://www.construction-physics.com/p/the-invention-algorithm",
+   "published": "2026-11-27T15:58:24+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为，发明者几乎总是先形成一个“技术概念”，也就是对部件和现象如何组合的基本设想，这一步把原本无法穷尽的搜索变成了可以处理的搜索。",
+   "background_zh": "作者此前把发明过程看作在巨大的可能性空间里搜索，并用随机生成的模型做过探索。这篇文章问的是：真实的发明者用的是什么搜索方法。作者承认无法还原确切的算法，只能从大量发明案例中归纳初步结论。文章在结尾处被截断。",
+   "conclusion_zh": "文章在结尾处被截断。能看到的部分里，作者的立场是：技术概念是发明搜索中的关键一步，它由发明者的知识和想象力产生，并把搜索空间缩小到可处理的范围；最后一段刚开始把概念比作技术空间中值得搜索的区域，后文没有给出。",
+   "brief_en": "The author argues that inventors almost always first form a \"technological concept\", a basic idea of how parts and phenomena combine, and that this step turns an intractable search into a manageable one.",
+   "background_en": "The author has described invention as a search through a huge space of possibilities and has explored it with models that generate technologies at random. This essay asks what search method real inventors use. The author says the exact algorithm cannot be recovered, so he draws tentative conclusions from many invention case studies. The text is cut off near the end.",
+   "conclusion_en": "The text is cut off near the end. In the part available, the author holds that the technological concept is a key step in the inventive search, that it comes from the inventor's knowledge and imagination, and that it reduces the search space to a manageable size. The final paragraph has only begun to describe a concept as a promising region of technology space.",
+   "points_zh": [
+    "发明史里的第一个里程碑几乎总是形成技术概念。这个想法在不同人那里有不同叫法：专利法称“inventive concept”，Edison 和 Brian Arthur 称“base principle”，Altshuller 称“solution concept”，Vincenti 称“operational principle”。作者举了 Townes 的 maser（在公园长椅上推演出来）、Carlson 的 Xerox（翻科学文献拼出来）、Lauterbur 的 MRI（吃汉堡时想到用不均匀磁场给信号标记空间坐标），并提到 Whittle、Mullis 和 Watt 也是同样的情形。",
+    "概念有几种来源。一是从目标倒推，一块块拼起来（Townes、Carlson）；二是突然闪现（Tesla 的交流感应电机）；三是类比（Greenfield 的血栓滤器借自油井滤网，而油井滤网又借自防止从汽车里抽油的装置）；四是新发现的现象或材料直接带来的明显用途（Perkin 的紫色染料、Marconi 与电磁波、X 射线与医学成像）；五是概念已经“在空气中”，发明者直接继承，比如白炽灯和飞行器。",
+    "概念对细节的限定程度不同，但几乎从不完全确定，后面仍要靠实验搜索。晶体管起初只是“用某种固态现象做放大器”，花了数年才找到具体现象；摆钟的概念则限定得很紧；Edison 的灯先用铂丝加温度调节器，后来才改成碳丝加高真空灯泡。即便如此，概念仍大幅缩小了搜索范围，Whittle 造喷气发动机时压缩机的原理就沿用了已有的设计。",
+    "作者用之前的 PTOP 模型（受 Arthur 启发的技术模型）做了量化演示：10 种物体、10 种尺寸、必须选对 5 个物体，共有 10 亿种组合，一次性随机猜平均要 10 亿次，逐步随机猜也要约 1300 次。如果有一个概念，告诉你最终现象的物体类型和尺寸、前几个物体的类型，以及物体 1 和 2 尺寸相等，期望的试验次数就大幅下降。作者说这个模型过于简单，但换成更大的模型会得到同样的结果。概念承载了关于世界的知识，把搜索从“不可能”变成“可处理”，但不一定填满所有空白，比如 Lauterbur 需要“信念的跳跃”，Bell 当时也不知道怎么产生变化的电流。",
+    "概念来自发明者已有的知识，知识像一块“调色板”。Edison 反复使用熟悉的机构（kinetoscope 沿用留声机的旋转圆筒）；造第一台激光器的各个团队都用同一个高层概念，却因各自擅长的材料不同而分别做玻璃、气体和红宝石激光器。1931 年的《Industrial Creativity》调查了 710 位发明者，“knowledge and memory”是被提到第三多的成功特征。知识还有模块化结构，人可以把压缩机、电机、谐振腔这类由许多元素组成的整体当作一个单位来操作。",
+    "强大的心理可视化能力可能有助于想出有希望的概念。Wright 兄弟和 Morse 被描述为有出色的心理视觉，Sperry、Evans、Thomson 都说过动手前先在脑中想象出完整的发明；Thomson 认为想象力对发明者最重要。同一本书里，“imagination”是第二常被提到的特征，仅次于“perseverance”。借助可视化和绘图，发明者可以不造实物就“测试”概念，例如 Wright 兄弟预见到齿轮和轴的操控方案性能差，没造出来就放弃了，改用机翼扭转。"
+   ],
+   "points_en": [
+    "In invention case studies, the first milestone is almost always the creation of a technological concept. The idea has many names: \"inventive concept\" in patent law, \"base principle\" for Edison and Brian Arthur, \"solution concept\" for Altshuller and \"operational principle\" for Vincenti. The author gives Townes and the maser (worked out on a park bench), Carlson and the Xerox machine (assembled from the scientific literature) and Lauterbur and MRI (conceived over a hamburger, using inhomogeneous magnetic fields to label signals by position). He says Whittle, Mullis and Watt followed the same pattern.",
+    "Concepts come from several sources. Some are built backward from a goal (Townes, Carlson). Some appear suddenly (Tesla's AC induction motor). Some come from analogy (the Greenfield blood clot filter was adapted from an oil-well filter, which was adapted from an anti-siphon filter for cars). Some are the obvious use of a new phenomenon or material (Perkin's purple dye, Marconi and electromagnetic waves, X-rays for medical imaging). Some are already \"in the air\" and the inventor inherits them, as with the incandescent lamp and the flying machine.",
+    "Concepts fix the design to different degrees, but almost never completely, so empirical search still follows. The transistor began as little more than the idea of a solid-state amplifier, and the specific phenomena took years to find. The pendulum clock concept was much tighter. Edison's lamp started with a platinum filament and a temperature regulator and later moved to a carbon filament in a high vacuum. Even so, a concept narrows the search a great deal. Whittle's compressors worked on the same principle as existing ones.",
+    "The author illustrates the narrowing with the PTOP model, a technology model inspired by Arthur's work. The simple version has 10 object types, 10 sizes and five objects to choose, which gives 1 billion options. Random guessing of the whole technology needs about 1 billion tries, and guessing one step at a time needs about 1,300. A hypothetical concept that fixes the final phenomenon, the types of the first and third objects and the equal size of objects 1 and 2 cuts the expected trials sharply. The author notes that the model is very simple but says a larger one would give the same result. A concept encodes knowledge of the world and makes search tractable, though it may leave gaps. Lauterbur needed a \"leap of faith\", and Bell did not know how to produce the varying current his telephone concept required.",
+    "Concepts depend on the inventor's knowledge, which works like a palette. Edison reused familiar mechanisms, such as the rotating cylinder from his phonograph in the first kinetoscope. In the race to build the first laser, every team used the same high-level concept, but American Optical built a glass laser, Bell Labs a gas laser and Maiman a ruby laser, each based on its own expertise. In the 1931 book \"Industrial Creativity\", which surveyed 710 inventors, \"knowledge and memory\" was the third most frequent trait. Knowledge is also modular, so inventors can handle whole units such as compressors, motors and resonant cavities.",
+    "Strong mental visualization may help produce promising concepts. The Wright Brothers and Morse are described as having exceptional visualization, and Sperry, Evans and Thomson said they pictured a working invention before building it. Thomson called imagination the inventor's chief faculty. In \"Industrial Creativity\", \"imagination\" was the second most frequent trait, behind \"perseverance\". With visualization and drawings, an inventor can test a concept without building it. The Wright Brothers foresaw poor performance from a gear-and-shaft control system and dropped it for wing-warping without building it."
+   ],
+   "topics": [
+    "Invention",
+    "Technological progress",
+    "Search models"
+   ]
+  },
+  {
+   "id": "388beb0e1f4d",
+   "kind": "blog",
+   "source": "johndcook.com",
+   "source_url": "https://johndcook.com",
+   "title": "How many triangles can a graph with no pentagons have?",
+   "url": "https://www.johndcook.com/blog/2026/11/27/triangles-without-pentagons/",
+   "published": "2026-11-27T15:27:19+00:00",
+   "basis": "short",
+   "brief_zh": "John D. Cook 介绍了一篇新论文的结果：n 个节点、不含五边形（5 圈）的图，三角形数量的上界约为 O(n^{3/2})。",
+   "background_zh": "问题是：一个有 n 个节点但没有长度为 5 的圈的图，最多能包含多少个三角形。这是图的抽象性质，与它在平面上怎么画无关。作者说这篇论文是两天前发布的。",
+   "conclusion_zh": "作者没有另外下结论，只是说明禁止五边形会把三角形数量的量级从 O(n³) 降到 O(n^{3/2})。",
+   "brief_en": "John D. Cook reports a new paper's result: a graph with n nodes and no pentagons (5-cycles) has a number of triangles bounded by about O(n^{3/2}).",
+   "background_en": "The question is how many triangles a graph with n nodes can contain if it has no cycle of length 5. This is an abstract property of the graph and does not depend on how it is drawn in the plane. The author says the paper was posted two days earlier.",
+   "conclusion_en": "The author draws no further conclusion. He states that forbidding pentagons lowers the order of the maximum triangle count from O(n³) to O(n^{3/2}).",
+   "points_zh": [
+    "论文证明了三角形个数的上界。原文里的具体公式没有出现在文本中，只提到其中含有一个随 n 增大趋于零的 o(1) 项。",
+    "作者的通俗解释是：没有五边形的限制相当于对最大三角形数开了平方根。n 个节点的图最多有 n(n−1)(n−2)/6 个三角形，即 O(n³)，禁止五边形后降到 O(n^{3/2})。"
+   ],
+   "points_en": [
+    "The paper proves an upper bound on the number of triangles. The exact formula does not appear in the text provided. The post says only that it contains an o(1) term that goes to zero as n grows.",
+    "The author's rough reading is that the no-pentagon condition takes the square root of the maximum triangle count. A graph with n nodes can have at most n(n − 1)(n − 2)/6 triangles, which is O(n³), and forbidding pentagons reduces this to O(n^{3/2})."
+   ],
+   "topics": [
+    "Graph theory",
+    "Extremal combinatorics"
+   ]
+  },
+  {
+   "id": "8915061cef58",
+   "kind": "blog",
+   "source": "devblogs.microsoft.com/oldnewthing",
+   "source_url": "https://devblogs.microsoft.com/oldnewthing",
+   "title": "Could we use the CoreApplication Properties to manage the lifetime of an object that refuses to be marshaled?",
+   "url": "https://devblogs.microsoft.com/oldnewthing/20261127-00/?p=112901/",
+   "published": "2026-11-27T15:00:00+00:00",
+   "basis": "full",
+   "brief_zh": "用 CoreApplication.Properties 来管理一个拒绝被 marshal 的对象的生命周期是可行的，但它没有带来任何好处，直接保存那个可 marshal 的包装对象就够了。",
+   "background_zh": "这是 Raymond Chen 系列文章的一篇。前文讨论了 CoreApplication.Properties 看上去会在源 apartment 关闭时释放对象，实际上只是假象。这一篇回到最初的问题：对一个拒绝被 marshal 的对象，怎样造出一个假的 agile reference。",
+   "conclusion_zh": "直接记住可 marshal 的包装对象即可，不必借助 CoreApplication.Properties。",
+   "brief_en": "Using CoreApplication.Properties to manage the lifetime of an object that refuses to be marshaled would work, but it adds nothing. Keeping the marshalable wrapper directly is enough.",
+   "background_en": "This post belongs to a series by Raymond Chen. Earlier posts showed that CoreApplication.Properties only seems to free objects when their source apartment shuts down, and that this is a mirage. This post returns to the original problem: how to create a fake agile reference to an object that refuses to be marshaled.",
+   "conclusion_en": "",
+   "points_zh": [
+    "实现了 INoMarshal 的对象无法用 RoGetAgileReference 创建 agile reference。CoreApplication.Properties 内部正是用 RoGetAgileReference 保存非 agile 对象，所以把这种对象存进去会失败，返回 CO_E_NOT_SUPPORTED。",
+    "原来的办法是把不可 marshal 的对象放进一个可 marshal 的包装对象，再用这个包装对象访问原对象。如果要用 CoreApplication.Properties，可以用新生成的 key 把包装对象存进去，只记住 key，调用 delegate 时按 key 取出包装对象，销毁时再删除这一项。",
+    "这样做要多记一个 key，还要多做存取和删除，而原办法本来就要记住包装对象，只是换成了记住 key。作者认为这是不必要的复杂度，CoreApplication.Properties 没有增加任何价值。"
+   ],
+   "points_en": [
+    "An object that implements INoMarshal cannot get an agile reference from RoGetAgileReference. CoreApplication.Properties uses RoGetAgileReference to store non-agile objects, so storing such an object there fails with CO_E_NOT_SUPPORTED.",
+    "The earlier solution puts the non-marshalable object inside a marshalable wrapper and uses the wrapper to reach the original object. To use CoreApplication.Properties, the code could store the wrapper under a newly generated key and remember only the key. It would look up the wrapper by key when invoking the delegate and delete the entry on destruction.",
+    "This approach still requires remembering something, either the wrapper or its key, and adds storing, looking up and deleting steps. The author calls this unnecessary complexity and says CoreApplication.Properties adds no value."
+   ],
+   "topics": [
+    "Windows Runtime",
+    "COM",
+    "C++"
+   ]
+  },
+  {
+   "id": "6483fe4952c4",
+   "kind": "blog",
+   "source": "pluralistic.net",
+   "source_url": "https://pluralistic.net",
+   "title": "Pluralistic: Taylorism and AI's shared sales-pitch (27 Nov 2026)",
+   "url": "https://pluralistic.net/2026/11/27/taylor-made/",
+   "published": "2026-11-27T13:38:29+00:00",
+   "basis": "full",
+   "brief_zh": "Doctorow 认为，老板迷恋 AI 和一百多年前迷恋泰勒的“科学管理”是同一个原因：这类推销卖的是对员工失控的不安的安抚，而不是利润或效率。",
+   "background_zh": "很多员工甚至管理者都不明白，平时对盈亏和商业论证很较真的老板，为什么坚持要求大家什么事都用 AI，哪怕成本更高、质量更差。作者用泰勒主义的历史来解释这件事。",
+   "conclusion_zh": "作者的结论是：只要押注美国老板的不安全感，就不会亏钱，所以这套推销会一直有效。但用 AI 取代员工不会奏效，AI 只有在员工拥有发言权和否决权时才可能带来真实收益。",
+   "brief_en": "Doctorow argues that bosses fall for AI for the same reason their predecessors fell for Taylor's \"Scientific Management\": the pitch sells relief from anxiety about workers, not profit or efficiency.",
+   "background_en": "Many workers and even managers are puzzled that bosses who are strict about profit and loss now insist on AI for everything, even when it adds cost and lowers quality. The author uses the history of Taylorism to explain this.",
+   "conclusion_en": "The author concludes that betting on the insecurity of American bosses never loses money, so the pitch will keep selling. Replacing workers with AI will not work, and AI brings real gains only when workers have a say and a veto.",
+   "points_zh": [
+    "泰勒的“科学管理”本身是骗局，却卖给了当时最有钱的人。泰勒收高额咨询费，派穿白大褂、拿秒表的年轻人去工厂记录每个工人每个动作的用时，再定下动作规范和时间上限。他们从不和工人交流，把工人当机器零件。作者说这些建议站不住脚：定额不可能达到，动作设计让人早早疲劳、受伤多，所到之处士气下滑、劳资冲突增加，企业状况变差。",
+    "老板上当的原因在于心理，而不在于业务。企业靠流水线、机械化运输和远程通信做到前所未有的规模，工人多到无法逐个监督。老板因此受制于最底层的员工，对方可以偷懒、组织工会或破坏生产线，老板却无可奈何。作者认为追求财富和权力说到底是追求不受阻挠的特权，所以泰勒承诺让工人变成机器零件，正好打中老板的痛处。泰勒本人是真信还是玩世不恭，作者说无关紧要。",
+    "泰勒留下了一套向缺乏安全感的老板推销劣质产品的模板，后来的公司一直在用。作者举例说，疫情居家办公期间卖员工监控软件的公司，既在做泰勒主义式的计时、监视和打分，也在做另一层意思上的泰勒主义，即向害怕员工力量和独立性的老板收钱。",
+    "AI 的推销用的是同一套模板。作者认为，现在的老板多是擅长财务操作和股东关系的金融工程师，自己不会做具体的事，想出的点子常被熟练员工指出行不通、违法或愚蠢。AI 推销员给他们的图景是一支机械劳动力，可以裁掉九成员工，剩下的人怕丢工作而不敢顶嘴。作者说这行不通，用聊天机器人替代员工，和让泰勒的编舞师来管员工一样适得其反。",
+    "AI 和自动化只有在员工说了算时才可能带来收益。作者说，AI 可以帮到员工，前提是员工自己决定怎么把它放进工作，而且不因此加快工作节奏，否则人来不及发现机器的错误。AI 的统计方法产生的错误是“统计上尽可能接近正确、但仍然错误”的那种。作者类比人体工学：把人体工学原则用进工作场所能提高生产率、减少伤害，条件同样是员工有发言权和否决权。但推销的重点不在盈利或效率，而在缓解“当老板却管不住人”的心理创伤。"
+   ],
+   "points_en": [
+    "Taylor's \"Scientific Management\" was a con, yet it sold to the richest men of its day. Taylor charged large consulting fees and sent young men with lab coats and stopwatches to time each worker's motions and set rules and time limits. They never talked to the workers and treated them as machine parts. The author says the advice was bad: quotas were impossible, the motions caused early fatigue and many injuries, and morale fell, unrest rose and the businesses did worse.",
+    "The owners fell for it because of psychology, not business logic. Assembly lines, mechanized transport and long-distance communication let firms grow to a huge size, with too many workers to watch one by one. That left the owners exposed to the lowest workers, who could slack off, organize a union or sabotage the line with no way to stop them. The author says the pursuit of wealth is a pursuit of impunity, so a promise to turn workers into machine parts hit a sore point. Whether Taylor himself believed it, the author says, does not matter.",
+    "Taylor left a template for selling poor products to insecure bosses, and later firms have used it. The author gives the bossware companies of the pandemic work-from-home period as an example. They timed, watched and scored workers, which is Taylorism in the first sense. They also took money from bosses who feared their workers' power and independence, which is Taylorism in a second sense.",
+    "The AI pitch uses the same template. The author says modern bosses are mostly financial engineers who cannot do hands-on work, and skilled workers often tell them their ideas are impossible, illegal or stupid. The AI salesman offers a mechanical workforce and the chance to fire 90% of staff, so that the rest are too afraid to talk back. The author says this will not work, and that replacing workers with chatbots is as counterproductive as putting Taylor's choreographers in charge of them.",
+    "AI and automation can raise productivity only when workers have control. The author says AI can help if workers decide how it fits into their jobs and the pace of work does not rise, so that people can still catch the machine's mistakes. AI outputs are errors that are as close to correct as statistics allow while still being wrong. The author compares this to ergonomics, which also improves output and cuts injury only when workers have a say and a veto. But the pitch is not about profit or efficiency. It is about easing the psychological trauma of being a boss who cannot boss people around."
+   ],
+   "topics": [
+    "AI and labor",
+    "Taylorism",
+    "Workplace surveillance"
+   ]
+  },
+  {
+   "id": "35f9e9c707e1",
+   "kind": "blog",
+   "source": "johndcook.com",
+   "source_url": "https://johndcook.com",
+   "title": "Counterexamples to proof by example",
+   "url": "https://www.johndcook.com/blog/2026/11/27/counterexample-to-proof-by-example/",
+   "published": "2026-11-27T13:03:22+00:00",
+   "basis": "full",
+   "brief_zh": "John D. Cook 列出几个“前面很多项都成立、后面却失败”的经典例子，再补上一个新例子：gcd(n^17+9, (n+1)^17+9)=1 对小于一个 52 位数的所有 n 都成立。",
+   "background_zh": "作者早上在 X 上看到 @sphere_homotopy 发的一个例子，想起这类“举例不能当证明”的反例，就先回顾了三个常见的，再讲这个新发现的。",
+   "conclusion_zh": "作者没有另下结论，文章以新例子和同类例子收尾：这类规律可以在很大的范围内成立，之后才出现反例。",
+   "brief_en": "John D. Cook lists classic cases where a pattern holds for many values and then fails, and adds a new one: gcd(n^17+9, (n+1)^17+9) = 1 for every n below a 52-digit number.",
+   "background_en": "The author saw an example from @sphere_homotopy on X this morning. It made him think of counterexamples to proof by example, so he first reviews three standard ones and then covers the new one.",
+   "conclusion_en": "The author draws no further conclusion. The post ends with the new example and its relatives, which show that a pattern can hold over a very large range before a counterexample appears.",
+   "points_zh": [
+    "三个常见例子说明了规律为什么靠不住。Euler 发现 n²−n+41 在 n=1 到 40 时都是素数，n=41 时就不是。类似地，n²−79n+1601 在 n=1 到 79 时都是素数，n=80 时失败。Borwein 积分 B(n) 在 n=1 到 6 时都等于 π/2，n=7 时不等于，不过差得很小。",
+    "Mercer 的圆问题可能是网上最常见的例子。在圆周上取 n 个点两两连线，最多能把圆分成 f(n) 个区域，前五项是 1、2、4、8、16，容易让人猜 f(6)=32，实际是 31。",
+    "新例子的反例大得没法靠试出来。对较小的 n，gcd(n^17+9, (n+1)^17+9) 都等于 1，这里的“较小”是指 n 小于 8424432925592889329288197322308900672459420460792433 这个 52 位数。作者说没人是从 n=1、2、3 一路试到这个数的，背后有理论解释（原文给了链接）。",
+    "同一套理论还能造出更多例子。作者给出 gcd(n^19+3, (n+1)^19+3)=1，看起来对所有 n 都成立，但已确认成立的范围是 n 小于 25211925041。"
+   ],
+   "points_en": [
+    "Three standard examples show that such patterns can fail. Euler found that n² − n + 41 is prime for n = 1 to 40 but not for n = 41. Likewise n² − 79n + 1601 is prime for n = 1 to 79 and fails at n = 80. The Borwein integral B(n) equals π/2 for n = 1 to 6 but not for n = 7, although it nearly does.",
+    "Mercer's circle problem may be the example seen most often online. Draw lines between n points on a circle, and f(n) is the maximum number of regions. The first five values are 1, 2, 4, 8 and 16, so f(6) = 32 looks likely, but f(6) is 31.",
+    "The new example has a counterexample far too large to find by trial. The gcd of n^17 + 9 and (n+1)^17 + 9 is 1 for all n below the 52-digit number 8424432925592889329288197322308900672459420460792433. The author notes nobody found this by trying n = 1, 2, 3 and so on. A theory explains it, and the post links to it.",
+    "The same theory can produce more examples. The author gives gcd(n^19 + 3, (n+1)^19 + 3) = 1, which appears to hold for all n. It is confirmed for n below 25211925041."
+   ],
+   "topics": [
+    "Number theory",
+    "Counterexamples"
+   ]
+  },
+  {
+   "id": "5d35f267b664",
+   "kind": "blog",
+   "source": "shkspr.mobi",
+   "source_url": "https://shkspr.mobi",
+   "title": "Gadget Review: WiFi Carbon Monoxide Alarm (JKD-625W) ★★★★⯪",
+   "url": "https://shkspr.mobi/blog/2026/11/gadget-review-wifi-carbon-monoxide-alarm-jkd-625w/",
+   "published": "2026-11-27T12:34:56+00:00",
+   "basis": "full",
+   "brief_zh": "作者给这款约 15 英镑的 WiFi 一氧化碳报警器（JKD-625W）打了四星半：它小巧、简单，能通过 Tuya 自动接入 HomeAssistant，对这个价格来说不错。",
+   "background_zh": "作者被旧的一氧化碳报警器电量耗尽的提示音在凌晨 5 点吵醒，于是要换新的。他在 Smart Home Shop UK 找到了这款兼容 HomeAssistant 的产品。",
+   "conclusion_zh": "作者认为花 15 英镑买它是值得的：体积小、不显眼，HomeAssistant 集成很方便。他希望 3 年后电量不足时，不要又在半夜被吵醒。",
+   "brief_en": "The author gives this roughly £15 WiFi carbon monoxide alarm (JKD-625W) 4.5 stars: it is small and simple and joins HomeAssistant through Tuya, which is decent for the price.",
+   "background_en": "The author was woken at 5AM by the dying beeps of his old CO alarm and needed a new one. He found this model at Smart Home Shop UK, which lists items compatible with HomeAssistant.",
+   "conclusion_en": "The author considers it decent for £15: a small, discreet unit with a handy HomeAssistant integration. He hopes the battery will not run low in the middle of the night in 3 years.",
+   "points_zh": [
+    "硬件和价格合理。这款是 OEM 厂商 Symank 做的，价格约 15 英镑，和本地 ScrewFix 的非智能款差不多。包装里有底板、螺丝、膨胀塞、简单说明书，还附 3 节 AA 电池。作者喜欢没有复杂界面的设备，认为它装在墙上看不到，LED 够低调，能显示通电就行。按测试键会发出足够响的蜂鸣。",
+    "联网靠 Tuya，没有自己的 App。长按测试键约 15 秒即可配网，只支持 2.4GHz WiFi，作者认为这没问题，因为数据量小、低频穿透更好，适合装在阁楼。作者建议把这类物联网设备放在单独的 vLAN 上。Tuya 的安卓 App 够用，能看到基础信息，还能设自动化，比如检测到 CO 时打开全屋灯光。加入 Tuya 账号几秒后，它就自动出现在 HomeAssistant 里。",
+    "低功耗设计带来一些限制。设备只有 3 节 AA，不会持续连 WiFi，只是偶尔连一次告知 App 它还在，报警时才连上发推送。电池预计用约 3 年，而设备额定寿命是 10 年，所以十年内要换几次电池或充电。",
+    "作者没能验证它的检测能力。他没有专业测试设备，只能相信厂商的说法，但他说这和任何便宜的报警器没有区别。他也要等真出现紧急情况，才知道它是否真的会上报。"
+   ],
+   "points_en": [
+    "The hardware and price are reasonable. The unit is made by the OEM Symank and costs about £15, similar to a non-smart one at the local ScrewFix. The box has a backing plate, screws, rawl plugs, a basic manual and three AA batteries. The author prefers devices with no interface, since this one sits out of view on a wall. The LEDs are subtle enough to show that power is on, and the test button gives a loud beep.",
+    "Connectivity runs through Tuya, with no app of its own. Holding the test button for about 15 seconds starts pairing. The unit supports only 2.4GHz WiFi, which the author finds fine because it sends little data and the lower frequency reaches further, for example into a loft. He suggests putting such devices on a separate vLAN. The Tuya Android app is adequate, shows basic information and allows automations, such as turning on all the lights when CO is detected. A few seconds after he added it to Tuya, it appeared in HomeAssistant on its own.",
+    "The low-power design has limits. With only three AA batteries, the alarm does not stay connected to WiFi. It connects now and then to tell the app it still exists, and it connects to send a push notification when the alarm sounds. The battery should last about 3 years, but the device is rated for 10 years, so a few battery changes or recharges will be needed.",
+    "The author could not verify the detection itself. He has no professional test equipment and relies on the manufacturer's claims, which he says is true of any cheap alarm. He will also have to wait for a real emergency to see whether it reports anything."
+   ],
+   "topics": [
+    "Smart home",
+    "HomeAssistant",
+    "Gadget review"
+   ]
+  },
+  {
+   "id": "1478998cf1b4",
+   "kind": "blog",
+   "source": "dfarq.homeip.net",
+   "source_url": "https://dfarq.homeip.net",
+   "title": "Babbage’s remembered",
+   "url": "https://dfarq.homeip.net/babbages-remembered/?utm_source=rss&utm_medium=rss&utm_campaign=babbages-remembered",
+   "published": "2026-11-27T12:00:23+00:00",
+   "basis": "full",
+   "brief_zh": "David Farquhar 回顾了软件零售商 Babbage’s 从 1983 年在达拉斯开店，到 1990 年代中期破产被收购、最终并入 Gamestop 的经过，并讲了自己在那里买软件的记忆。",
+   "background_zh": "Babbage’s 在 1996 年 11 月 27 日被 Barnes & Noble 董事长 Leonard Riggio 收购，作者借这个日子回顾这家商场连锁店。作者自己 1980 年代末起常去光顾。",
+   "conclusion_zh": "作者说 1980 到 90 年代的商场商店里，Babbage’s 是他很怀念的一家。他也说自己是吃过亏才明白，你很少知道哪一次去某家店是最后一次。",
+   "brief_en": "David Farquhar recounts how the software retailer Babbage's opened in Dallas in 1983, went bankrupt in the mid-1990s and was eventually folded into Gamestop, and he adds his own memories of shopping there.",
+   "background_en": "Barnes & Noble chairman Leonard Riggio bought Babbage's on November 27, 1996, and the author uses the date to look back at the mall chain. He shopped there himself from the late 1980s.",
+   "conclusion_en": "The author says Babbage's ranks high among the 1980s and 90s mall stores he misses. He also says he learned the hard way that you rarely know when a visit to a store is the last one.",
+   "points_zh": [
+    "Babbage’s 的做法是开小型专卖店，价格有竞争力，商品常更新，店内按平台和软件类别分区，店员不拿提成，也不说技术术语。联合创始人 James McCurry 认为专卖店适合卖软件，他和哈佛商学院同学 Gary Kusin 在 1982 年底辞职，找投资人。Ross Perot 提供 300 万美元信贷额度，换取三分之一股权，并建议他们先只开一家店，把业务摸透。店名取自计算机先驱 Charles Babbage。",
+    "公司 1980 年代扩张很快。第一家店 1983 年 5 月 30 日开在达拉斯的 NorthPark Center，两个月后才需要第一名员工，到当年感恩节前后已有 5 家店。1986 年有 23 家店，首次盈亏平衡。1987 年有 58 家，销售额 2900 万美元，利润 116 万美元。1988 年 7 月以每股 13 美元上市，之后扩到 108 家，销售额 5800 万美元，利润 270 万美元。",
+    "1990 年代它走向衰落并被并购。盈利和增长在 1980 年代末到 1990 年代初时好时坏，1994 年 8 月与对手 Software Etc. 合并，到 1996 年合并后的公司破产，Riggio 买下它，导致 200 家店关闭。1999 年试办 30 家叫 Gamestop 的店，Barnes & Noble 同年稍后收购公司，2000 年 5 月又收购 Funco，Funcoland、Software Etc. 和 Babbage’s 在 2000 年 6 月统一为 Gamestop，2002 年 2 月上市。作者还提到，VA Linux 的后继公司在 2015 年并入 Gamestop。",
+    "作者个人的购物记忆。他约 1987 年起在圣路易斯地区光顾，主要是 South County Center 和 Crestwood Plaza 的店。他喜欢这里支持的平台比对手 Egghead Software 多，库存更新比 Dolgin’s 和 Target 等大店更勤，价格一般持平或低于 Target。他当时有一台 Commodore 128，钱大多花在 Accolade、Electronic Arts、Epyx、Thunder Mountain 的低价旧作上，理由是能被重新发行成低价版的游戏通常质量不错。他记得在那买过 Amiga 软件，但查到的 1989 年畅销榜没有 Amiga，所以他怀疑是在 Software Etc. 买的。他 1994 年才有第一台 PC，所以没在这里买过 PC 软件。",
+    "作者最后一次去原 Babbage’s 的店是在 2019 年。那家店已改成 Gamestop，货架从白色变成炭灰色，也只卖游戏机相关商品。他拍了照，后来再去商场时这家 Gamestop 已不在，附近由 Funcoland 改成的那家也在 2020 年代关了。"
+   ],
+   "points_en": [
+    "Babbage's ran small specialty stores. It offered competitive prices, a constantly updated product mix, sections for each platform and software category, and noncommissioned staff who avoided technical jargon. Cofounder James McCurry thought specialty stores suited software. He and his Harvard Business School classmate Gary Kusin quit their jobs at the end of 1982 to look for investors. Ross Perot offered a $3 million line of credit for one-third of the company and advised them to start with a single store. The name honors computer pioneer Charles Babbage.",
+    "Growth in the 1980s was fast. The first store opened at NorthPark Center in Dallas on May 30, 1983, and it needed its first employee two months later. There were five Dallas stores by Thanksgiving 1983. The chain had 23 stores in 1986 and broke even for the first time. In 1987 it had 58 stores and a $1.16 million profit on $29 million in sales. It went public in July 1988 at $13 a share and grew to 108 stores, with $58 million in sales and a $2.7 million profit.",
+    "The 1990s brought decline and mergers. Earnings and growth were uneven, and the company merged with Software Etc. in August 1994. The combined firm was bankrupt by 1996, and Riggio's purchase led to 200 store closures. In 1999 it tried 30 stores called Gamestop, and Barnes & Noble bought the company later that year. It acquired Funco in May 2000, and Funcoland, Software Etc. and Babbage's became Gamestop in June 2000. Gamestop went public in February 2002. The author adds that VA Linux's successor company merged with Gamestop in 2015.",
+    "The author recalls shopping there from around 1987 in the St. Louis area, mostly at South County Center and Crestwood Plaza. He liked that it carried more platforms than rival Egghead Software and refreshed stock more often than larger stores such as Dolgin's and Target. Prices usually matched or beat Target. He owned a Commodore 128 and spent most of his money on budget titles from Accolade, Electronic Arts, Epyx and Thunder Mountain, because a game that was reissued as a budget title was usually good. He thought he bought Amiga software there, but a 1989 bestseller list shows none, so he suspects Software Etc. He bought his first PC in 1994 and never bought PC software at Babbage's.",
+    "The author's last visit to the former Babbage's was in 2019. By then the store was a Gamestop with charcoal gray shelves instead of white, and it sold only console items. He took a photo. On his next visit to the mall that Gamestop was gone, and a nearby Gamestop converted from a Funcoland also closed in the 2020s."
+   ],
+   "topics": [
+    "Retro computing",
+    "Retail history",
+    "Video games"
+   ]
+  },
+  {
+   "id": "47e802012044",
+   "kind": "blog",
+   "source": "berthub.eu",
+   "source_url": "https://berthub.eu",
+   "title": "Het succesvolle Fieldlab van de Nederlandse Digitale Dienst deze week",
+   "url": "https://berthub.eu/articles/posts/fieldlab-is-van-de-it/",
+   "published": "2026-11-27T11:35:00+00:00",
+   "basis": "full",
+   "brief_zh": "作者认为,荷兰数字服务局(Nederlandse Digitale Dienst)的 Fieldlab 展示了自主可控的政府云确实可行,让他对摆脱对美国云的依赖有了一点希望。",
+   "background_zh": "作者 Bert Hubert 此前写过荷兰政府“不太懂 IT”,并批评了招聘邮件系统的糟糕状况。如今荷兰政府几乎完全依赖美国云,他在这篇文章里记录了自己参加 Fieldlab 活动后的观感。",
+   "conclusion_zh": "作者认为 Fieldlab 证明了一个稳固的政府云基础已经建立,能让政府重新“掌控”自己的数字系统。他承认还有很多工作,但对此抱有希望,并祝所有人成功。",
+   "brief_en": "The author argues that the Fieldlab of the Nederlandse Digitale Dienst showed that a sovereign government cloud works in practice, which gives him some hope of reducing the Dutch government's dependence on American clouds.",
+   "background_en": "The author, Bert Hubert, had earlier written that the Dutch government is not good at IT and criticised the state of its vacancy mailer. The government now depends almost entirely on American clouds, and he reports here on what he saw at the Fieldlab.",
+   "conclusion_en": "The author concludes that the Fieldlab showed a solid base for a government cloud, which can bring the government back in control of its own digital systems. He accepts that much work remains, but he is hopeful and wishes everyone success.",
+   "points_zh": [
+    "Fieldlab 展示了一套可用的自主技术栈。11月23日至25日,来自27个团队的107名参与者用三天时间,基于新设计的政府云(又称 Fundament)开发应用。作者看到不同机构之间能顺畅交换数据、共同更新档案,还有一个自主的办公环境(所有演示都用它进行)、一套类似 Intune 的终端管理系统,以及不被美国监看的视频通话。",
+    "高层到场并表态,是积极的信号。国务秘书 Willemijn Aerdts 出席了开幕和闭幕。闭幕时,数字化政策总司长 Gerdine Keijzer-Baldé 表示,所展示的技术是自主的,她所在的司已请自己的 IT 部门 DICTU 试用,内容包括带独立邮箱、视频会议、文档协作和演示的完整办公环境。经济事务与气候部的一个部门也明确表示想试用。作者对比了上周另一场活动:重要人物都因太忙缺席,这会让下面的人觉得数字自主不重要。",
+    "接下来的难点是说服政府其他部门也在这套基础上构建。作者说,政府里有大量人员几十年来一直在建设对美国的依赖,已经习惯并依赖大科技公司的生态,要让数万名熟悉现有技术的人转过来并不容易。",
+    "还有大量工作要做,资金也是问题。作者提到管理、扩容和支持都还有待完成。过去长期没有钱,但他在现场听到有人说会找到预算(下议院也在推动)。他还说,尽管联合执政协议里有漂亮的话,目前荷兰的数字依赖仍在加深。"
+   ],
+   "points_en": [
+    "The Fieldlab showed a working sovereign technology stack. From 23 to 25 November, 107 participants from 27 teams spent three days building applications on the newly designed government cloud, also called Fundament. The author saw different agencies exchange data and update shared files with ease. He also saw an autonomous workplace that ran all the presentations, a system for managing a fleet of workplaces (comparable to Intune) and video calls that the US could not watch.",
+    "Senior officials attended and backed the work, which the author sees as a good signal. State Secretary Willemijn Aerdts opened the event and joined the closing. At the close, Gerdine Keijzer-Baldé, director-general for digitalisation policy, said the demonstrated technology is autonomous. She said her directorate has asked its own IT unit, DICTU, to run a trial. The trial covers a full workplace with its own email, video conferencing, document collaboration and presentations. A department of the Ministry of Economic Affairs and Climate has also said it wants to try it. The author contrasts this with another government event the week before, where important people were too busy to attend, which he says tells staff that digital autonomy does not matter.",
+    "The next hard task is to persuade the rest of the government to build on this base. The author says the government is full of people who spent decades building the American dependencies. They are used to the big-tech ecosystem and attached to it. Bringing tens of thousands of people who are skilled in existing technology along will not be easy.",
+    "Much work remains, and funding is still a question. The author lists management, scaling up and support as open items. Money has been lacking for a long time, but he heard at the event that a budget will now be found, and the Tweede Kamer also argues for it. He adds that despite the fine words in the coalition agreement, Dutch digital dependencies are still growing."
+   ],
+   "topics": [
+    "digital sovereignty",
+    "government cloud",
+    "Netherlands"
+   ]
+  },
+  {
+   "id": "1c083d1cddf7",
+   "kind": "blog",
+   "source": "jeffgeerling.com",
+   "source_url": "https://jeffgeerling.com",
+   "title": "Remotely unplugging a USB device on my Mac, without touching it",
+   "url": "https://www.jeffgeerling.com/blog/2026/remote-control-usb-hub/",
+   "published": "2026-11-27T05:18:00+00:00",
+   "basis": "full",
+   "brief_zh": "作者用 uhubctl 这个工具,在没有物理接触的情况下,远程给 Mac Studio 的 USB-C 端口断电再上电,相当于拔插了设备。",
+   "background_zh": "作者在远程通过 WireGuard VPN 调试一台带自定义固件的 USB-C 设备,用 MIDI SysEx 消息刷固件时,偶尔会让设备停在刷到一半的状态,需要物理拔插才能恢复。他当时不在 Mac Studio 旁边,于是想找办法远程切断并恢复端口供电。",
+   "conclusion_zh": "这个工具解决了他的问题。由于 Mac Studio 不在支持列表里,他提交了一个 PR 把 M4 Max Mac Studio 加进去。",
+   "brief_en": "The author used the tool uhubctl to power-cycle a USB-C port on his Mac Studio remotely, which did the same job as unplugging and replugging a device by hand.",
+   "background_en": "The author was debugging a USB-C device with custom firmware over a WireGuard VPN. Flashing firmware with MIDI SysEx messages can leave the device half-flashed, and then it needs a physical replug. He was not near the Mac Studio, so he looked for a way to cut and restore power to the port remotely.",
+   "conclusion_en": "The tool solved his problem. The Mac Studio was not in the support list, so he filed a PR to add the M4 Max Mac Studio.",
+   "points_zh": [
+    "uhubctl 可以按端口控制 USB 集线器的供电。作者通过 Claude 查资料找到它,它支持 Linux 和 macOS,但项目的支持列表里 Mac 只明确写了 M4 Mac mini(仅前面两个口)和 MacBook Air(2010 年末款)。",
+    "作者在自己的 M4 Max Mac Studio 上试了一下,可以用。他用 brew 安装后运行 uhubctl 列出端口,发现最左边的前置 USB-C 口可以控制,然后执行 sudo uhubctl -l 8-1 -p 1 -a cycle -d 5,断电 5 秒后再上电。设备重新连接,他完成了固件更新。USB 2 和 USB 3 两个对应端口需要同时切换,工具会一并处理。",
+    "适用范围有限制。据作者的测试,Thunderbolt 口不能用,但 Studio 上其他普通 USB-C 和 USB-A 口都可以。他还提到该工具似乎在大多数 Raspberry Pi 型号上可用,但由于其特殊的 USB 结构,只能一次切换全部四个口。"
+   ],
+   "points_en": [
+    "uhubctl controls power on individual ports of a USB hub. The author found it by researching with Claude. It works on Linux and macOS, but its support list names only the M4 Mac mini (two front ports only) and the MacBook Air (Late 2010) for Mac.",
+    "It worked on the author's M4 Max Mac Studio. He installed it with brew and listed the ports with uhubctl. He found that the leftmost front USB-C port was controllable. He then ran sudo uhubctl -l 8-1 -p 1 -a cycle -d 5, which cut power for 5 seconds and restored it. The device reconnected and he finished the firmware update. The matching USB 2 and USB 3 ports must be toggled together, and the tool handled both.",
+    "The range of ports is limited. In the author's test, Thunderbolt ports do not work, but the other regular USB-C and USB-A ports on the Studio did. He also notes that the tool reportedly works on most Raspberry Pi models, but their unusual USB layout means all four ports can only be switched at once."
+   ],
+   "topics": [
+    "USB",
+    "macOS",
+    "debugging"
+   ]
+  },
+  {
+   "id": "72e6cf43f857",
+   "kind": "blog",
+   "source": "dfarq.homeip.net",
+   "source_url": "https://dfarq.homeip.net",
+   "title": "Microsoft trademark registered November 1976",
+   "url": "https://dfarq.homeip.net/microsoft-trademark-registered-november-1976/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-trademark-registered-november-1976",
+   "published": "2026-11-26T12:00:41+00:00",
+   "basis": "full",
+   "brief_zh": "1976年11月26日 Microsoft 注册商标,公司名从 Micro-Soft 定为不带连字符的 Microsoft 一个词,标志也随之改变。",
+   "background_zh": "文章是对 Microsoft 历史上一个日期的回顾。当时公司成立约一年半,总部还在新墨西哥州的阿尔伯克基,1979年才搬到西雅图地区。",
+   "conclusion_zh": "",
+   "brief_en": "On 26 November 1976 Microsoft registered its name as a trademark, which fixed it as the one word Microsoft instead of Micro-Soft, and its logo changed as well.",
+   "background_en": "The post looks back at one date in Microsoft's history. The company was about a year and a half old and still based in Albuquerque, New Mexico. It moved to the Seattle area in 1979.",
+   "conclusion_en": "",
+   "points_zh": [
+    "商标注册确定了公司名的写法。此前名字不统一,比如比尔·盖茨1976年2月3日的《致爱好者的公开信》署名是“Micro-Soft”。注册后定为一个词、无连字符。这个名字最初是 Paul Allen 的主意,取自 software 和 microcomputer,指的是 Altair 这类小型计算机,区别于当时更常见的大型机和小型机。Microsoft 到1979年才卖硬件,但在那之前就在为小型计算机写软件。",
+    "标志的演变。最初的标志是 Micro 和 Soft 上下叠放,字体是 Aki Lines,像唱片的纹路。1976年之后同一字体连成一个词,作者觉得更像迪斯科的标志。1979年的标志用了 New Zelek 字体,带有电流感,作者觉得像重金属乐队的标志。1982年改用更商务的 ITC Avant Garde 无衬线字体,1987年换成现在熟悉的向前倾斜的 Helvetica Black Italic 标志。"
+   ],
+   "points_en": [
+    "The trademark registration fixed how the name is written. Before that it was not consistent. For example, Bill Gates signed his Open Letter to Hobbyists of 3 February 1976 as \"Micro-Soft\". After registration the name became one word with no hyphen. Paul Allen came up with the original name. It combines software and microcomputer, and it referred to small computers like the Altair, as opposed to the mainframes and minicomputers that were more common then. Microsoft did not sell hardware until 1979, but it wrote software for small computers before that.",
+    "The logo changed several times. The first logo stacked Micro above Soft in the Aki Lines typeface, which evoked the grooves of a record. After 1976 the same font was joined into a single word, which the author thinks looked like a disco logo. The 1979 logo used the New Zelek font and evoked electricity. The author thinks it looked like a thrash metal band. In 1982 the company moved to the plainer ITC Avant Garde sans serif font. In 1987 it launched the familiar forward-swept logo in Helvetica Black Italic."
+   ],
+   "topics": [
+    "Microsoft",
+    "tech history",
+    "branding"
+   ]
+  }
+ ],
+ "picks": {
+  "important": [],
+  "liked": []
+ },
+ "generated_at": "2026-11-28T05:18:39.219773+00:00"
+}

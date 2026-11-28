@@ -1,107 +1,108 @@
 {
  "Lil'Log": {
   "feed": "https://lilianweng.github.io/index.xml",
-  "ok": "2026-11-27T05:14:37.464688+00:00",
+  "ok": "2026-11-28T05:14:17.929143+00:00",
   "last_post": "2026-07-04T00:00:00+00:00"
  },
  "simonwillison.net": {
   "feed": "https://simonwillison.net/atom/everything/",
-  "ok": "2026-11-27T05:14:37.532141+00:00",
-  "last_post": "2026-11-26T15:09:31+00:00"
+  "ok": "2026-11-28T05:14:17.991426+00:00",
+  "last_post": "2026-11-27T23:57:17+00:00"
  },
  "jeffgeerling.com": {
   "feed": "https://www.jeffgeerling.com/blog.xml",
-  "ok": "2026-11-27T05:14:37.545422+00:00",
-  "last_post": "2026-11-17T15:00:00+00:00"
+  "ok": "2026-11-28T05:14:17.941998+00:00",
+  "last_post": "2026-11-27T05:18:00+00:00"
  },
  "seangoedecke.com": {
   "feed": "https://www.seangoedecke.com/rss.xml",
-  "ok": "2026-11-27T05:14:37.863985+00:00",
-  "last_post": "2026-11-27T00:00:00+00:00"
+  "ok": "2026-11-28T05:14:18.176967+00:00",
+  "last_post": "2026-11-14T00:00:00+00:00"
  },
  "krebsonsecurity.com": {
   "feed": "https://krebsonsecurity.com/feed/",
-  "ok": "2026-11-27T05:14:37.691346+00:00",
+  "ok": "2026-11-28T05:14:18.053045+00:00",
   "last_post": "2026-11-18T02:52:04+00:00"
  },
  "daringfireball.net": {
   "feed": "https://daringfireball.net/feeds/main",
-  "ok": "2026-11-27T05:14:37.640430+00:00",
-  "last_post": "2026-11-26T15:11:46+00:00"
+  "ok": "2026-11-28T05:14:18.277129+00:00",
+  "last_post": "2026-11-27T23:50:13+00:00"
  },
  "ericmigi.com": {
   "feed": "https://ericmigi.com/rss.xml",
-  "ok": "2026-11-27T05:14:37.637518+00:00",
+  "ok": "2026-11-28T05:14:18.091104+00:00",
   "last_post": "2026-09-30T00:00:00+00:00"
  },
  "antirez.com": {
   "feed": "https://antirez.com/rss",
-  "ok": "2026-11-27T05:14:40.283560+00:00",
+  "ok": "2026-11-28T05:14:20.250695+00:00",
   "last_post": "2026-07-28T09:00:11+00:00"
  },
  "idiallo.com": {
   "feed": "https://idiallo.com/feed.rss",
-  "ok": "2026-11-27T05:14:37.823596+00:00",
+  "ok": "2026-11-28T05:14:17.998962+00:00",
   "last_post": "2026-11-19T07:27:09+00:00"
  },
  "maurycyz.com": {
   "feed": "https://maurycyz.com/index.xml",
-  "ok": "2026-11-27T05:14:38.428274+00:00",
+  "ok": "2026-11-28T05:14:18.524105+00:00",
   "last_post": "2026-11-08T00:00:00+00:00"
  },
  "pluralistic.net": {
   "feed": "https://pluralistic.net/feed/",
-  "ok": "2026-11-27T05:14:40.724232+00:00",
-  "last_post": "2026-11-26T12:31:19+00:00"
+  "ok": "2026-11-28T05:14:20.299943+00:00",
+  "last_post": "2026-11-27T13:38:29+00:00"
  },
  "shkspr.mobi": {
   "feed": "https://shkspr.mobi/blog/feed/",
-  "ok": "2026-11-27T05:14:38.551111+00:00",
-  "last_post": "2026-11-26T12:34:04+00:00"
+  "ok": "2026-11-28T05:14:18.665651+00:00",
+  "last_post": "2026-11-27T12:34:56+00:00"
  },
  "lcamtuf.substack.com": {
   "feed": "https://blog.coredump.cx/feed",
-  "ok": "2026-11-27T05:14:38.542171+00:00",
+  "ok": "2026-11-28T05:14:18.372573+00:00",
   "last_post": "2026-11-14T08:36:24+00:00"
  },
  "mitchellh.com": {
   "feed": "https://mitchellh.com/feed.xml",
-  "ok": "2026-11-27T05:14:37.709184+00:00",
+  "ok": "2026-11-28T05:14:18.140355+00:00",
   "last_post": "2026-11-06T00:00:00+00:00"
  },
  "dynomight.net": {
   "feed": "https://dynomight.net/feed.xml",
-  "ok": "2026-11-27T05:14:38.162596+00:00",
+  "ok": "2026-11-28T05:14:18.630779+00:00",
   "last_post": "2026-11-26T00:00:00+00:00"
  },
  "utcc.utoronto.ca/~cks": {
   "feed": "https://utcc.utoronto.ca/~cks/space/blog/?atom",
-  "ok": "2026-11-27T05:14:38.365634+00:00",
+  "ok": "2026-11-28T05:14:18.518667+00:00",
   "last_post": "2026-02-15T03:54:10+00:00"
  },
  "xeiaso.net": {
   "feed": "https://xeiaso.net/blog.rss",
-  "ok": "2026-11-27T05:14:38.112418+00:00",
+  "ok": "2026-11-28T05:14:18.338592+00:00",
   "last_post": "2026-11-18T00:00:00+00:00"
  },
  "devblogs.microsoft.com/oldnewthing": {
   "feed": "https://devblogs.microsoft.com/oldnewthing/feed/",
-  "ok": "2026-11-27T05:14:38.016410+00:00",
-  "last_post": "2026-11-26T15:00:00+00:00"
+  "ok": "2026-11-28T05:14:18.316069+00:00",
+  "last_post": "2026-11-27T15:00:00+00:00"
  },
  "righto.com": {
   "feed": "https://www.righto.com/feeds/posts/default",
-  "ok": "2026-11-27T05:14:39.190609+00:00",
+  "ok": "2026-11-28T05:14:20.176691+00:00",
   "last_post": "2026-11-08T16:12:25+00:00"
  },
  "lucumr.pocoo.org": {
   "feed": "https://lucumr.pocoo.org/feed.atom",
-  "ok": "2026-11-27T05:14:38.404290+00:00",
+  "ok": "2026-11-28T05:14:18.895262+00:00",
   "last_post": "2026-11-09T00:00:00+00:00"
  },
  "garymarcus.substack.com": {
   "feed": "https://garymarcus.substack.com/feed",
-  "error": "403 Client Error: Forbidden for url: https://garymarcus.substack.com/feed"
+  "ok": "2026-11-28T05:14:18.736461+00:00",
+  "last_post": "2026-11-24T16:06:27+00:00"
  },
  "rachelbythebay.com": {
   "feed": "https://rachelbythebay.com/w/atom.xml",
@@ -109,220 +110,220 @@
  },
  "overreacted.io": {
   "feed": "https://overreacted.io/rss.xml",
-  "ok": "2026-11-27T05:14:38.455617+00:00",
+  "ok": "2026-11-28T05:14:18.677427+00:00",
   "last_post": "2026-09-18T00:00:00+00:00"
  },
  "timsh.org": {
   "feed": "https://timsh.org/rss/",
-  "ok": "2026-11-27T05:14:40.532499+00:00",
+  "ok": "2026-11-28T05:14:20.402390+00:00",
   "last_post": "2026-06-16T13:34:35+00:00"
  },
  "johndcook.com": {
   "feed": "https://www.johndcook.com/blog/feed/",
-  "ok": "2026-11-27T05:14:38.691494+00:00",
-  "last_post": "2026-11-26T13:14:07+00:00"
+  "ok": "2026-11-28T05:14:18.987701+00:00",
+  "last_post": "2026-11-27T15:27:19+00:00"
  },
  "gilesthomas.com": {
   "feed": "https://www.gilesthomas.com/feed/rss.xml",
-  "ok": "2026-11-27T05:14:40.731303+00:00",
+  "ok": "2026-11-28T05:14:20.238062+00:00",
   "last_post": "2026-11-10T23:00:00+00:00"
  },
  "matklad.github.io": {
   "feed": "https://matklad.github.io/feed.xml",
-  "ok": "2026-11-27T05:14:38.620755+00:00",
+  "ok": "2026-11-28T05:14:19.004989+00:00",
   "last_post": "2026-10-29T00:00:00+00:00"
  },
  "derekthompson.org": {
   "feed": "https://www.theatlantic.com/feed/author/derek-thompson/",
-  "ok": "2026-11-27T05:14:39.197910+00:00",
+  "ok": "2026-11-28T05:14:19.975266+00:00",
   "last_post": "2026-10-01T11:00:00+00:00"
  },
  "evanhahn.com": {
   "feed": "https://evanhahn.com/feed.xml",
-  "ok": "2026-11-27T05:14:38.704492+00:00",
+  "ok": "2026-11-28T05:14:19.018863+00:00",
   "last_post": "2026-11-06T17:00:00+00:00"
  },
  "terriblesoftware.org": {
   "feed": "https://terriblesoftware.org/feed/",
-  "ok": "2026-11-27T05:14:38.955071+00:00",
+  "ok": "2026-11-28T05:14:19.458386+00:00",
   "last_post": "2026-11-11T18:23:50+00:00"
  },
  "rakhim.exotext.com": {
   "feed": "https://rakhim.exotext.com/rss.xml",
-  "ok": "2026-11-27T05:14:39.489200+00:00",
+  "ok": "2026-11-28T05:14:20.452221+00:00",
   "last_post": "2026-11-18T00:00:00+00:00"
  },
  "joanwestenberg.com": {
   "feed": "https://www.joanwestenberg.com/feed",
-  "ok": "2026-11-27T05:14:39.238968+00:00",
-  "last_post": "2026-11-26T19:47:26+00:00"
+  "ok": "2026-11-28T05:14:20.447284+00:00",
+  "last_post": "2026-11-27T22:07:24+00:00"
  },
  "xania.org": {
   "feed": "https://xania.org/feed",
-  "ok": "2026-11-27T05:14:39.544920+00:00",
+  "ok": "2026-11-28T05:14:20.648212+00:00",
   "last_post": "2026-08-30T19:40:00+00:00"
  },
  "micahflee.com": {
   "feed": "https://micahflee.com/rss/",
-  "ok": "2026-11-27T05:14:40.020773+00:00",
+  "ok": "2026-11-28T05:14:20.553295+00:00",
   "last_post": "2026-11-16T16:35:27+00:00"
  },
  "nesbitt.io": {
   "feed": "https://nesbitt.io/feed.xml",
-  "ok": "2026-11-27T05:14:40.313729+00:00",
+  "ok": "2026-11-28T05:14:20.709904+00:00",
   "last_post": "2026-11-18T10:00:00+00:00"
  },
  "construction-physics.com": {
   "feed": "https://www.construction-physics.com/feed",
-  "ok": "2026-11-27T05:14:41.126674+00:00",
-  "last_post": "2026-11-14T16:09:38+00:00"
+  "ok": "2026-11-28T05:14:21.035792+00:00",
+  "last_post": "2026-11-27T15:58:24+00:00"
  },
  "tedium.co": {
   "feed": "https://feed.tedium.co/",
-  "ok": "2026-11-27T05:14:41.409997+00:00",
+  "ok": "2026-11-28T05:14:21.089123+00:00",
   "last_post": "2026-11-09T02:50:32+00:00"
  },
  "susam.net": {
   "feed": "https://susam.net/feed.xml",
-  "ok": "2026-11-27T05:14:40.622396+00:00",
+  "ok": "2026-11-28T05:14:20.849069+00:00",
   "last_post": "2026-11-23T00:00:00+00:00"
  },
  "entropicthoughts.com": {
   "feed": "https://entropicthoughts.com/feed.xml",
-  "ok": "2026-11-27T05:14:41.050345+00:00",
+  "ok": "2026-11-28T05:14:21.001555+00:00",
   "last_post": "2026-11-23T23:00:00+00:00"
  },
  "buttondown.com/hillelwayne": {
   "feed": "https://buttondown.com/hillelwayne/rss",
-  "ok": "2026-11-27T05:14:40.913170+00:00",
+  "ok": "2026-11-28T05:14:20.787279+00:00",
   "last_post": "2026-11-03T18:06:44+00:00"
  },
  "dwarkesh.com": {
   "feed": "https://www.dwarkesh.com/feed",
-  "ok": "2026-11-27T05:14:41.903081+00:00",
-  "last_post": "2026-11-16T17:46:28+00:00"
+  "ok": "2026-11-28T05:14:21.608107+00:00",
+  "last_post": "2026-11-27T18:01:14+00:00"
  },
  "borretti.me": {
   "feed": "https://borretti.me/feed.xml",
-  "ok": "2026-11-27T05:14:40.878347+00:00",
+  "ok": "2026-11-28T05:14:20.895838+00:00",
   "last_post": "2026-11-20T13:00:00+00:00"
  },
  "wheresyoured.at": {
   "feed": "https://www.wheresyoured.at/rss/",
-  "ok": "2026-11-27T05:14:41.459998+00:00",
+  "ok": "2026-11-28T05:14:21.350891+00:00",
   "last_post": "2026-11-17T15:43:58+00:00"
  },
  "jayd.ml": {
   "feed": "https://jayd.ml/feed.xml",
-  "ok": "2026-11-27T05:14:41.136503+00:00",
+  "ok": "2026-11-28T05:14:21.111648+00:00",
   "last_post": "2026-11-14T08:55:00+00:00"
  },
  "minimaxir.com": {
   "feed": "https://minimaxir.com/index.xml",
-  "ok": "2026-11-27T05:14:41.361914+00:00",
-  "last_post": "2026-10-25T21:00:00+00:00"
+  "ok": "2026-11-28T05:14:21.235407+00:00",
+  "last_post": "2026-11-27T20:10:00+00:00"
  },
  "geohot.github.io": {
   "feed": "https://geohot.github.io/blog/feed.xml",
-  "ok": "2026-11-27T05:14:41.152905+00:00",
+  "ok": "2026-11-28T05:14:21.083100+00:00",
   "last_post": "2026-11-17T16:00:00+00:00"
  },
  "paulgraham.com": {
   "feed": "http://www.aaronsw.com/2002/feeds/pgessays.rss",
-  "ok": "2026-11-27T05:14:41.516489+00:00"
+  "ok": "2026-11-28T05:14:21.339280+00:00"
  },
  "filfre.net": {
   "feed": "https://www.filfre.net/feed/",
-  "ok": "2026-11-27T05:14:42.555595+00:00",
-  "last_post": "2026-11-13T17:07:18+00:00"
+  "ok": "2026-11-28T05:14:21.874877+00:00",
+  "last_post": "2026-11-27T17:46:58+00:00"
  },
  "blog.jim-nielsen.com": {
   "feed": "https://blog.jim-nielsen.com/feed.xml",
-  "ok": "2026-11-27T05:14:41.486304+00:00",
+  "ok": "2026-11-28T05:14:21.292448+00:00",
   "last_post": "2026-11-18T19:00:00+00:00"
  },
  "dfarq.homeip.net": {
-  "ok": "2026-11-26T05:14:24.748147+00:00",
-  "last_post": "2026-11-25T12:00:25+00:00",
   "feed": "https://dfarq.homeip.net/feed/",
-  "error": "HTTPSConnectionPool(host='dfarq.homeip.net', port=443): Max retries exceeded with url: /feed/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='dfarq.homeip.net', port=443) at 0x7d7f2451aa80>, 'Co"
+  "ok": "2026-11-28T05:14:21.330104+00:00",
+  "last_post": "2026-11-27T12:00:23+00:00"
  },
  "jyn.dev": {
   "feed": "https://jyn.dev/atom.xml",
-  "ok": "2026-11-27T05:14:43.341667+00:00",
+  "ok": "2026-11-28T05:14:22.900201+00:00",
   "last_post": "2026-11-21T00:00:00+00:00"
  },
  "geoffreylitt.com": {
   "feed": "https://www.geoffreylitt.com/feed.xml",
-  "ok": "2026-11-27T05:14:41.863534+00:00",
+  "ok": "2026-11-28T05:14:21.619591+00:00",
   "last_post": "2026-07-02T10:00:00+00:00"
  },
  "downtowndougbrown.com": {
   "feed": "https://www.downtowndougbrown.com/feed/",
-  "ok": "2026-11-27T05:14:42.363132+00:00",
+  "ok": "2026-11-28T05:14:21.954293+00:00",
   "last_post": "2026-10-03T05:50:45+00:00"
  },
  "brutecat.com": {
   "feed": "https://brutecat.com/rss.xml",
-  "ok": "2026-11-27T05:14:42.163117+00:00",
+  "ok": "2026-11-28T05:14:21.920124+00:00",
   "last_post": "2026-06-11T00:00:00+00:00"
  },
  "eli.thegreenplace.net": {
   "feed": "https://eli.thegreenplace.net/feeds/all.atom.xml",
-  "ok": "2026-11-27T05:14:41.872527+00:00",
+  "ok": "2026-11-28T05:14:21.762938+00:00",
   "last_post": "2026-11-11T03:25:00+00:00"
  },
  "abortretry.fail": {
   "feed": "https://www.abortretry.fail/feed",
-  "ok": "2026-11-27T05:14:44.919025+00:00",
+  "ok": "2026-11-28T05:14:23.263114+00:00",
   "last_post": "2026-10-04T22:09:15+00:00"
  },
  "fabiensanglard.net": {
   "feed": "https://fabiensanglard.net/rss.xml",
-  "ok": "2026-11-27T05:14:42.527054+00:00",
+  "ok": "2026-11-28T05:14:22.007480+00:00",
   "last_post": "2026-08-21T00:00:00+00:00"
  },
  "oldvcr.blogspot.com": {
   "feed": "https://oldvcr.blogspot.com/feeds/posts/default",
-  "ok": "2026-11-27T05:14:44.101570+00:00",
+  "ok": "2026-11-28T05:14:23.655077+00:00",
   "last_post": "2026-11-10T06:23:17+00:00"
  },
  "bogdanthegeek.github.io": {
   "feed": "https://bogdanthegeek.github.io/blog/index.xml",
-  "ok": "2026-11-27T05:14:42.009022+00:00",
+  "ok": "2026-11-28T05:14:22.036517+00:00",
   "last_post": "2025-10-19T14:07:31+00:00"
  },
  "hugotunius.se": {
   "feed": "https://hugotunius.se/feed.xml",
-  "ok": "2026-11-27T05:14:42.774883+00:00",
+  "ok": "2026-11-28T05:14:22.441825+00:00",
   "last_post": "2026-11-14T00:00:00+00:00"
  },
  "gwern.net": {
   "feed": "https://gwern.substack.com/feed",
-  "error": "403 Client Error: Forbidden for url: https://gwern.substack.com/feed"
+  "ok": "2026-11-28T05:14:22.880893+00:00",
+  "last_post": "2021-06-11T14:16:22+00:00"
  },
  "berthub.eu": {
   "feed": "https://berthub.eu/articles/index.xml",
-  "ok": "2026-11-27T05:14:44.078201+00:00",
-  "last_post": "2026-11-10T19:10:00+00:00"
+  "ok": "2026-11-28T05:14:23.966067+00:00",
+  "last_post": "2026-11-27T11:35:00+00:00"
  },
  "chadnauseam.com": {
   "feed": "https://chadnauseam.com/rss.xml",
-  "ok": "2026-11-27T05:14:42.783465+00:00"
+  "ok": "2026-11-28T05:14:23.273024+00:00"
  },
  "simone.org": {
   "feed": "https://simone.org/rss/",
-  "ok": "2026-11-27T05:14:43.171297+00:00",
+  "ok": "2026-11-28T05:14:23.268030+00:00",
   "last_post": "2026-10-21T16:14:51+00:00"
  },
  "it-notes.dragas.net": {
   "feed": "https://it-notes.dragas.net/feed/",
-  "ok": "2026-11-27T05:14:43.445843+00:00",
+  "ok": "2026-11-28T05:14:23.761420+00:00",
   "last_post": "2026-11-17T08:30:00+00:00"
  },
  "beej.us": {
   "feed": "https://beej.us/blog/rss.xml",
-  "ok": "2026-11-27T05:14:42.960823+00:00",
+  "ok": "2026-11-28T05:14:23.625174+00:00",
   "last_post": "2026-07-21T00:00:00+00:00"
  },
  "hey.paris": {
@@ -333,122 +334,122 @@
  },
  "danielwirtz.com": {
   "feed": "https://danielwirtz.com/rss.xml",
-  "ok": "2026-11-27T05:14:43.205076+00:00",
+  "ok": "2026-11-28T05:14:23.629193+00:00",
   "last_post": "2025-11-21T08:11:00+00:00"
  },
  "matduggan.com": {
   "feed": "https://matduggan.com/rss/",
-  "ok": "2026-11-27T05:14:44.509273+00:00",
+  "ok": "2026-11-28T05:14:24.404210+00:00",
   "last_post": "2026-11-13T14:16:16+00:00"
  },
  "refactoringenglish.com": {
   "feed": "https://refactoringenglish.com/index.xml",
-  "ok": "2026-11-27T05:14:44.054381+00:00",
+  "ok": "2026-11-28T05:14:23.860590+00:00",
   "last_post": "2026-10-07T00:00:00+00:00"
  },
  "worksonmymachine.substack.com": {
   "feed": "https://worksonmymachine.ai/feed",
-  "ok": "2026-11-27T05:14:43.859015+00:00",
+  "ok": "2026-11-28T05:14:23.985182+00:00",
   "last_post": "2026-05-24T16:12:49+00:00"
  },
  "philiplaine.com": {
   "feed": "https://philiplaine.com/index.xml",
-  "ok": "2026-11-27T05:14:43.439190+00:00",
+  "ok": "2026-11-28T05:14:23.760290+00:00",
   "last_post": "2025-04-21T00:00:00+00:00"
  },
  "steveblank.com": {
   "feed": "https://steveblank.com/feed/",
-  "ok": "2026-11-27T05:14:44.477679+00:00",
+  "ok": "2026-11-28T05:14:24.259141+00:00",
   "last_post": "2026-11-15T22:15:04+00:00"
  },
  "bernsteinbear.com": {
   "feed": "https://bernsteinbear.com/feed.xml",
-  "ok": "2026-11-27T05:14:44.364382+00:00",
+  "ok": "2026-11-28T05:14:24.118268+00:00",
   "last_post": "2026-11-21T00:00:00+00:00"
  },
  "danieldelaney.net": {
   "feed": "https://danieldelaney.net/feed",
-  "ok": "2026-11-27T05:14:44.011405+00:00",
+  "ok": "2026-11-28T05:14:24.101041+00:00",
   "last_post": "2025-10-30T00:00:00+00:00"
  },
  "troyhunt.com": {
   "feed": "https://www.troyhunt.com/rss/",
-  "ok": "2026-11-27T05:14:44.124856+00:00",
+  "ok": "2026-11-28T05:14:24.137122+00:00",
   "last_post": "2026-11-16T07:09:38+00:00"
  },
  "herman.bearblog.dev": {
   "feed": "https://herman.bearblog.dev/feed/",
-  "ok": "2026-11-27T05:14:44.283342+00:00",
+  "ok": "2026-11-28T05:14:24.275558+00:00",
   "last_post": "2026-10-27T13:05:00+00:00"
  },
  "tomrenner.com": {
   "feed": "https://tomrenner.com/index.xml",
-  "ok": "2026-11-27T05:14:44.661492+00:00",
+  "ok": "2026-11-28T05:14:24.327663+00:00",
   "last_post": "2026-06-15T00:00:00+00:00"
  },
  "blog.pixelmelt.dev": {
   "feed": "https://blog.pixelmelt.dev/rss/",
-  "ok": "2026-11-27T05:14:44.984181+00:00",
+  "ok": "2026-11-28T05:14:24.654659+00:00",
   "last_post": "2026-08-15T02:50:29+00:00"
  },
  "martinalderson.com": {
   "feed": "https://martinalderson.com/feed.xml",
-  "ok": "2026-11-27T05:14:45.206140+00:00",
-  "last_post": "2026-11-25T00:00:00+00:00"
+  "ok": "2026-11-28T05:14:24.662120+00:00",
+  "last_post": "2026-11-27T00:00:00+00:00"
  },
  "danielchasehooper.com": {
   "feed": "https://danielchasehooper.com/feed.xml",
-  "ok": "2026-11-27T05:14:44.486556+00:00",
+  "ok": "2026-11-28T05:14:24.342638+00:00",
   "last_post": "2026-01-07T00:00:00+00:00"
  },
  "chiark.greenend.org.uk/~sgtatham": {
   "feed": "https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/feed.xml",
-  "ok": "2026-11-27T05:14:44.999551+00:00",
+  "ok": "2026-11-28T05:14:31.492111+00:00",
   "last_post": "2026-09-09T00:00:00+00:00"
  },
  "grantslatton.com": {
   "feed": "https://grantslatton.com/rss.xml",
-  "ok": "2026-11-27T05:14:45.760249+00:00",
+  "ok": "2026-11-28T05:14:25.189060+00:00",
   "last_post": "2026-05-25T20:01:38+00:00"
  },
  "experimental-history.com": {
   "feed": "https://www.experimental-history.com/feed",
-  "ok": "2026-11-27T05:14:45.745463+00:00",
+  "ok": "2026-11-28T05:14:24.869252+00:00",
   "last_post": "2026-11-10T17:21:43+00:00"
  },
  "anildash.com": {
   "feed": "https://www.anildash.com/feed.xml",
-  "ok": "2026-11-27T05:14:44.989420+00:00",
+  "ok": "2026-11-28T05:14:24.440981+00:00",
   "last_post": "2026-11-18T00:00:00+00:00"
  },
  "aresluna.org": {
   "feed": "https://aresluna.org/main.rss",
-  "ok": "2026-11-27T05:14:44.792828+00:00",
-  "last_post": "2026-09-18T17:40:02+00:00"
+  "ok": "2026-11-28T05:14:24.852846+00:00",
+  "last_post": "2026-11-27T22:07:21+00:00"
  },
  "michael.stapelberg.ch": {
   "feed": "https://michael.stapelberg.ch/feed.xml",
-  "ok": "2026-11-27T05:14:46.968088+00:00",
+  "ok": "2026-11-28T05:14:25.996895+00:00",
   "last_post": "2026-09-06T07:00:00+00:00"
  },
  "miguelgrinberg.com": {
   "feed": "https://blog.miguelgrinberg.com/feed",
-  "ok": "2026-11-27T05:14:45.764754+00:00",
-  "last_post": "2026-10-27T16:00:42+00:00"
+  "ok": "2026-11-28T05:14:24.974778+00:00",
+  "last_post": "2026-11-27T17:48:35+00:00"
  },
  "keygen.sh": {
   "feed": "https://keygen.sh/blog/feed.xml",
-  "ok": "2026-11-27T05:14:45.335500+00:00",
+  "ok": "2026-11-28T05:14:24.838235+00:00",
   "last_post": "2026-07-22T05:00:00+00:00"
  },
  "mjg59.dreamwidth.org": {
   "feed": "https://www.codon.org.uk/~mjg59/blog/index.xml",
-  "ok": "2026-11-27T05:14:45.583015+00:00",
+  "ok": "2026-11-28T05:14:25.582810+00:00",
   "last_post": "2026-10-30T18:03:47+00:00"
  },
  "computer.rip": {
   "feed": "https://computer.rip/rss.xml",
-  "ok": "2026-11-27T05:14:45.921763+00:00",
+  "ok": "2026-11-28T05:14:25.351014+00:00",
   "last_post": "2026-11-22T00:00:00+00:00"
  },
  "tedunangst.com": {
