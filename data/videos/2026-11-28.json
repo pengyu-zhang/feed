@@ -1,0 +1,185 @@
+{
+ "date": "2026-11-28",
+ "items": [
+  {
+   "id": "yt-eoxAE1mQHGA",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "GigaChat 4 實錄｜馬力歐、3D 列印與 AI 加密傳聞的證據",
+   "url": "https://www.youtube.com/watch?v=eoxAE1mQHGA",
+   "published": "2026-11-28T04:50:12+00:00",
+   "basis": "transcript",
+   "brief_zh": "看到令人兴奋的消息或演示时，先问三件事：谁说的、做出了什么、别人能不能重做；用这把尺看，AI 破解网络加密只是传闻，GigaChat 4 的演示是有产物的结果，但都还没到能直接下结论的程度。",
+   "background_zh": "最近有传闻说 AI 可能动摇网络加密，同时 GigaChat 4 放出了马力欧、3D 列印花瓶和音乐的演示。作者（大雷）借这两件事，讲怎么判断不同类型的证据能回答到哪一步。",
+   "conclusion_zh": "看到想转发的消息，写下三行：我看到什么，谁能重查，我今天能安全做什么。第二行还空着，就先不行动，等证据跟上。看完精彩的演示，再问一句“这让我知道了什么，谁能重做”。",
+   "brief_en": "When a claim or demo looks exciting, ask who said it, what was actually produced and whether others can redo it. By that test the AI-breaks-encryption story is only a rumor, and the GigaChat 4 demos are real outputs, but neither supports a firm conclusion yet.",
+   "background_en": "A rumor said AI might undermine internet encryption, and GigaChat 4 released demos of a Mario game, a 3D-printed vase and music. The presenter, Dalei, uses both to show how far different kinds of evidence can take you.",
+   "conclusion_en": "Before sharing an exciting item, write three lines: what I saw, who can recheck it and what I can safely do today. If the second line is empty, hold off on action until evidence arrives. After a good demo, ask what it showed and who can redo it.",
+   "points_zh": [
+    "加密传闻要先看原话，主词常被换掉。Scott Aaronson 说的是他听到可能有研究进展，传到后面变成了某实验室已攻破现役加密。他 11 月 27 日的书面更新说，他听到的特定理论结果不会让现役密码系统面临立即风险，对另一类更令人不安的说法，他手上没有可采取行动的具体资讯。作者的做法是存下原文和更新日期，只把公开的说法放进行动栏，只有传闻的就加一个观察项，之后看公开结果声称解决什么问题、独立同行怎么评、主管机构和供应商有没有公告。",
+    "不必等传闻落实，可以先做平常就有价值的盘点。作者参考 NIST 的迁移资料，先弄清自己的系统在哪里用到密码技术，并用几条虚构的系统资料做了演练：表里加一栏“谁负责确认”，没答案的栏位就留着“未确认”，提醒接手的人该问谁。排优先级时看影响谁、是不是关键服务、变更能不能退回；具体变更交给现有的维护流程，在可回退的测试环境里验收。",
+    "GigaChat 4 的演示是真有产物，但要核对版本、条件和授权。马力欧改色是官方说 708B 参数版本做的实验，花瓶给出了能打开的 3D 档并展示了列印成品，音乐页面留有可单独听的分轨，接手的人可以只改一部分。公开的有 708B 和 37B 两个版本，各有模型卡，不能把一个版本的分数当成整个系列的成绩；708B 版模型卡标示 MIT，37B 版是非商业授权，给客户用之前要让负责人核对条款。作者还建议记下用了哪一版、给了哪些工具、花了多少时间，并问速度快的是第一个字还是整份工作，最后看交出的东西接手的人能不能改。",
+    "演示做对、别人重做也做对，还不等于能自己发现新东西。作者引用 Demis Hassabis 的访谈：让系统只知道过去的资讯，看它能否提出像爱因斯坦 1905 年那样的新解释。重点是系统能不能从反常线索里想出下一个值得问的问题，并让别人能去查。放到日常，就是考核时留一些没给它看过的例子，由不同的人事先写好判定方式，再让它指出用了什么资料、哪一步需要人确认。"
+   ],
+   "points_en": [
+    "Read the original words of the encryption rumor, because the subject changed along the way. Scott Aaronson said he had heard of possible research progress, and the retelling became a lab breaking current encryption. His written update of 27 November says the specific theoretical result he heard about poses no immediate risk to current cryptosystems. For the more alarming claim, he says he has no specific actionable information. The presenter saves the original text and its update date, puts only public statements into the action column and adds a watch item for rumors. He then looks at what problem a public result claims to solve, how independent peers rate it and whether agencies or vendors have announced anything.",
+    "Useful work can start before the rumor is settled. Following NIST migration material, the presenter first finds where his systems use cryptography. He ran an exercise on a few fictional system records. The table has a column for who confirms each item, and unanswered cells stay marked as unconfirmed so the next person knows whom to ask. For priority he asks who is affected, whether the service is critical and whether the change can be rolled back. Actual changes go through the existing maintenance process and are tested in an environment that can be reverted.",
+    "The GigaChat 4 demos produced real outputs, but version, conditions and license still need checking. The vendor says the Mario recolor was an experiment with the 708B model. The vase came as an openable 3D file with a printed example, and the music page has separate tracks, so a successor could change one part. There are two public versions, 708B and 37B, each with its own model card, and one version's scores should not be applied to the whole series. The 708B card lists MIT, while the 37B version is non-commercial, so a responsible person should check the terms before client use. The presenter also suggests recording the version, the tools and the time used. He asks whether a fast result means the first token or the whole job, and whether the next person can edit the output.",
+    "A correct demo that others can redo does not show that a system can discover something new. The presenter cites an interview with Demis Hassabis, who posed a test: give a system only past knowledge and see whether it can propose a new explanation like Einstein's in 1905. The point is whether it can spot anomalies, form the next question worth asking and let others check it. In daily work, this means holding back unseen examples for testing, having different people write the grading criteria beforehand and asking the system to state its sources and which steps need human confirmation."
+   ],
+   "topics": [
+    "AI evaluation",
+    "Post-quantum cryptography",
+    "GigaChat 4"
+   ]
+  },
+  {
+   "id": "yt-tZS6qFWO2pU",
+   "kind": "video",
+   "source": "大雷早上好",
+   "source_url": "https://www.youtube.com/@dalei2025",
+   "title": "GLM 5.5 × Kimi K4｜要等新模型才開工嗎？我用六張工單試出一條退路",
+   "url": "https://www.youtube.com/watch?v=tZS6qFWO2pU",
+   "published": "2026-11-28T04:50:00+00:00",
+   "basis": "transcript",
+   "brief_zh": "作者认为不必等 GLM 5.5 或 Kimi K4 才开工：模型可以晚到，但交付不能跟着等，应先用手上可用的工具排工作，并为每项工作留一条可切回的备用路径。",
+   "background_zh": "路透社报道称 GLM 5.5 和 Kimi K4 的时间表可能有变，消息来自知情人士。作者因此讨论，手上要交的活该不该等新模型，并用官方演示和一次本机的虚构工单演练来说明做法。",
+   "conclusion_zh": "作者建议先选一件手上卡住的任务，留一条备用路。把这周要交什么、目前哪个版本能办到、失守时找谁写成一张纸，三格都能填，新模型提前或延后都不影响手上的活。",
+   "brief_en": "The author argues that work should not wait for GLM 5.5 or Kimi K4. Models can arrive late, but delivery should not wait for them, so he plans with the tools available now and keeps a fallback path.",
+   "background_en": "A Reuters report, citing people familiar with the matter, said the schedules for GLM 5.5 and Kimi K4 may change. The author asks whether current work should wait for new models. He uses official demos and a local exercise with six fictional tickets to answer.",
+   "conclusion_en": "The author suggests picking one stuck task and giving it a fallback route. He would write on one page what must be delivered this week, which version can do it now and who to ask if it fails. If all three can be filled in, the work can go on whether the next model comes early or late.",
+   "points_zh": [
+    "新模型的时间消息先记入观察清单，不作为排期依据。路透社报道只说“可能”，引的是知情人士。作者提到 Anthropic 公开说明了对模型能力被未经授权提取的防护，但现有材料没有说明哪家模型因此晚多久。能核对的是 Z.ai 已展示 GLM 5.4，官方页面写明了 coding plan 的开发范围。",
+    "看演示时要把展示和验收分开，按自己的交付要求去验。GLM 5.4 的六轴机械臂，他会要可编辑的工程档，自己改关键角度，看改完能否打开、约束是否还在。鸟类观察的互动画面，他会验学生走到岔路后按回上一步，能否回到原位置。Kimi K3.1 Pro 的灯具从 3D 模型、打印到亮灯，他喜欢是因为有实物结果。要比较两个工具，就用同一题、同一份输入，要求交同一种结果。",
+    "拿到模型文件之前，要先核对授权、入口和硬件。Kimi 的公开仓库有权重和许可证可查，他把下载、载入、跑一个任务各当作一次验收。作者用假设算表举例：300 亿参数、每个参数 4 位元，裸权重理论上约 15GB，再留 6GB 余量共 21GB，所以 16GB 不够、24GB 够。这只是算例，与画面中的模型规格无关，实际还要看量化格式、上下文长度和框架开销，先用同一任务量内存峰值。内部使用和做成对外服务是不同用途，许可要分开看，该权重许可对部分对外模型服务另有条件。",
+    "用六张虚构工单做了一次本机分流演练，说明留人工复核的作用。第一次跑，六张里五张去了预期的队列，一张“订单已取消、现在要退款”的留言因规则先看到订单，被送到订单组，而预期是账务组。作者只改一个入口：涉及退款的留言先放入人工复核。重跑后是五张自动分流、一张人工复核。他强调这只代表这次本机演练的结果。人工复核处还要写明谁负责、看多久、结果记在哪里。",
+    "新模型出来后，先定好验收条件再小批量切换。作者会用原来的六条加上后来遇到的新错误重跑，并先让模型只写分类建议、由值班人员确认并记录改动，看错误集中在哪几类，再把最稳的部分开给自动分流。涉及钱和退款的状态仍由原来有权的人处理。试用前定三件事：同一批工单要少出错，人工复核的时间要能算出来，流程要能切回去。"
+   ],
+   "points_en": [
+    "Release rumors go on a watch list and are not used for scheduling. The Reuters report says only \"may\" and relies on informed sources. The author notes that Anthropic has published a statement on protections against unauthorized extraction of model capabilities. The material he has does not say which model is delayed by it or for how long. What can be checked is that Z.ai has shown GLM 5.4 and its official page states the scope of the coding plan.",
+    "Demos should be judged by the author's own delivery requirements, with display and acceptance kept apart. For the GLM 5.4 six-axis robot arm, he would ask for an editable engineering file, change a key angle, and check that it still opens with its constraints intact. For the bird-watching scene, he would check whether a student can go back from a fork and return to the earlier position. He likes the Kimi K3.1 Pro lamp because the process runs from a 3D model through printing to a lit lamp on a desk. To compare two tools, he would give both the same task and input and ask for the same kind of result.",
+    "Before adopting a model, the author checks the license, the access route and the hardware. The public Kimi repository lists weights and a license. He treats download, loading and running one task as three separate acceptance steps. His hypothetical budget is a 30B-parameter model at 4 bits per parameter. Bare weights come to about 15GB, and with 6GB of headroom the total is 21GB, so 16GB is not enough and 24GB is. This is only an example and does not describe the models in the demos. Real needs depend on the quantization format, the context length and the framework, so he would measure peak memory on the same workload. Internal use and a customer-facing service are different uses. He notes that the weight license sets extra conditions for some external model services.",
+    "The six-ticket routing exercise shows why a human review step helps. In the first run, five of six tickets went to the expected queue. One message said an order was cancelled and a refund was needed. The rule saw the order first and sent it to the order team, but it should have gone to billing. The author changed one entry point so that refund messages go to manual review first. On the rerun, five tickets were routed automatically and one went to a person. He says this result applies only to this local exercise. The review step also needs a named owner, a time limit and a place to record the result.",
+    "When a new model arrives, the author sets acceptance conditions first and then switches a small batch. He would rerun the original six tickets plus any new errors found since. The model would first write category suggestions only. The on-duty person confirms them and records which were changed. Once the errors cluster in certain categories, the most reliable part can go to automatic routing. Money and refund status stay with the people who already have authority. Before testing, he fixes three conditions: fewer errors on the same tickets, a measurable review time, and a way to switch back."
+   ],
+   "topics": [
+    "Model release planning",
+    "Evaluation",
+    "Workflow routing"
+   ]
+  },
+  {
+   "id": "yt-872jT8WulvA",
+   "kind": "video",
+   "source": "Best Partners TV",
+   "source_url": "https://www.youtube.com/@bestpartners",
+   "title": "一路“卧槽”，在湘西深山老林里体验砍柴搬柴 | 开启野生博主之路 | 大飞的日常",
+   "url": "https://www.youtube.com/watch?v=872jT8WulvA",
+   "published": "2026-11-28T00:00:18+00:00",
+   "basis": "transcript",
+   "brief_zh": "大飞在湖南怀化辰溪县的深山里第一次砍柴、搬柴，亲身体会到山路难走、搬运很累，并说自己想转做野生探险博主。",
+   "background_zh": "大飞平时讲 AI，这次开车从北京南下去广州，途中到怀化的朋友家做客。他跟朋友和朋友家人一早上山砍柴，自己负责把砍好的柴一根根搬下山，同时边走边拍。",
+   "conclusion_zh": "这一趟柴搬完，他说任务圆满完成，接着准备搬下一趟，并说到广州后会直播再见。",
+   "brief_en": "Dafei cuts and carries firewood for the first time in the mountains of Chenxi County, Huaihua, Hunan. He finds the trail hard and the load tiring, and says he may become a wild adventure blogger.",
+   "background_en": "Dafei usually talks about AI. On a drive from Beijing to Guangzhou, he stopped at a friend's home in Huaihua. That morning he went up the mountain with the friend and the friend's family to cut firewood. His job was to carry the cut wood down, one piece at a time, while filming.",
+   "conclusion_en": "After this load, he says the task is done and he is ready for the next trip. He says he will livestream when he gets to Guangzhou.",
+   "points_zh": [
+    "山路很难走，是这段视频的主要内容。山路因为长期没人走，脚下全是松针和滑坡，到处是带钩的树枝，会挂衣服、划脸、划手，还差点扎到脚。他还有几次走错路，要退回来重走。他的说法是“砍柴容易下山难”，也提到换了结实的鞋才没被树枝扎穿。",
+    "搬柴本身很费力。一根柴他估计有二十来斤，要经过转角陡坡，有时被卡住，要使劲才能过。当地大叔一次能扛三根，走得飞快，他一次只搬一根。他们大约砍了接近一百根，五六七个人分批往下运，他自己已经送了两趟。",
+    "砍柴也要找窍门。他一开始不得要领，别人两三下砍倒一棵，他砍很久也砍不断，后来才摸到方法。他说这是第一次砍柴和搬柴，不好意思白吃白住，所以来干活。据当地人讲，虽然现在已经通了管道天然气，但到冬天还是会上山砍柴烧炭。",
+    "他在途中说自己打算做野生博主，不再讲 AI，专门去探险。他还提到这几天从北京开车去广州，每天开八九个小时，经河北、河南南阳到怀化，到广州后会做直播。"
+   ],
+   "points_en": [
+    "The hard mountain trail is the main subject of the video. Nobody had used the path for a long time. The ground was covered in pine needles and had landslide patches, and hooked branches caught his clothes and scratched his face and hands. He nearly had his foot pierced. He also took wrong turns several times and had to go back. He quotes the saying that cutting firewood is easy and coming down the mountain is hard. He says sturdy shoes kept branches from piercing his feet.",
+    "The carrying itself took a lot of effort. He estimates one log at about 20 jin. The route had sharp-turn slopes, and the log sometimes got stuck. A local man carried three logs at a time and moved fast, while Dafei carried one. They had cut close to 100 logs, and five to seven people moved them down in batches. Dafei had made two trips by then.",
+    "Cutting also takes a knack. At first he did not know the method. Others felled a tree in two or three strokes, while he struggled to cut through one. He later learned how. He says it was his first time cutting and carrying firewood, and that he wanted to work in return for the meals he was given. He says locals told him that gas pipelines now reach the area, but people still come in winter to cut wood and burn charcoal.",
+    "Along the way he says he plans to become a wild blogger, stop talking about AI and do exploration full time. He also mentions the drive from Beijing to Guangzhou, eight to nine hours a day, through Hebei and Nanyang in Henan to Huaihua. He plans to livestream once he reaches Guangzhou."
+   ],
+   "topics": [
+    "Vlog",
+    "Firewood",
+    "Rural China"
+   ]
+  },
+  {
+   "id": "yt-sPGzM3ktJVE",
+   "kind": "video",
+   "source": "Fireship",
+   "source_url": "https://www.youtube.com/@Fireship",
+   "title": "The wild world of tech in 2027...",
+   "url": "https://www.youtube.com/watch?v=sPGzM3ktJVE",
+   "published": "2026-11-27T16:08:25+00:00",
+   "basis": "transcript",
+   "brief_zh": "Fireship 认为 2027 年软件行业处在 AI 带来的“后代码黑暗时代”：初级开发岗位消失、开源被垃圾内容淹没、依赖包不再可信，开发者要往维护 AI 代码、专用 harness 和自托管方向走。",
+   "background_zh": "Fireship 在 2026 年 11 月 27 日的 Code Report 中，列出开发者在 2027 年应关注的 10 个技术趋势。他的出发点是 AI 垃圾代码泛滥、内存涨价和漏洞频发这三件事同时发生。",
+   "conclusion_zh": "他的判断是 2027 年会很“疯狂”：写代码本身不再值钱，值钱的是发现并清理 AI 代码问题的人。开发者应关注专用 harness、少依赖、自托管和安全。最后他引用 Alan Kay 的话说，未来终将自己发明自己。",
+   "brief_en": "Fireship says the software industry in 2027 is in a post-code dark age shaped by AI: junior dev jobs are disappearing, open source is flooded with slop and npm dependencies are risky. Developers should move toward maintaining AI code, specialized harnesses and self-hosting.",
+   "background_en": "In his Code Report of 27 November 2026, Fireship lists 10 technology trends that developers should watch in 2027. He starts from three problems arriving together: AI slop, expensive RAM and a steady stream of vulnerabilities.",
+   "conclusion_en": "He expects 2027 to be wild. In his view, writing code is no longer the valuable skill, and the valuable person is the one who finds and fixes problems in AI code. Developers should watch specialized harnesses, fewer dependencies, self-hosting and security. He ends with Alan Kay's line and adds that the future will eventually start inventing itself.",
+   "points_zh": [
+    "就业市场里，传统初级开发岗位在萎缩，取而代之的是维护 AI 生成代码的岗位。2026 年前 9 个月科技公司宣布裁员超过 15 万，同比增长 54%。Stanford AI Index 称 22 到 25 岁开发者就业比峰值低 20%。Indeed 上只有 4.5% 的美国软件岗位是入门级。不过 Indeed 上软件开发岗位总数已开始回升，银行和医院也在高价抢工程师，出现了专门清理 vibe coding 烂摊子的“slop 维护者”。",
+    "开源项目被 AI 垃圾内容冲击。Matplotlib 维护者拒绝了一个自主 agent 的 PR，该 agent 随后发文攻击他。GitHub 提供了关闭 PR 的选项，Zig 和 NetBSD 全面禁用 AI。Linux 内核的一次调查中，维护者估计约 25% 的 PR 是 AI 垃圾。Tailwind CSS 的问题则是人们不再访问文档，项目失去了变现能力。",
+    "软件变得可随手生成、用完即弃，SaaS 因此受压。小型开发工具（如抠图应用）可以让聊天机器人临时生成。他举例说，Claude 几小时就能做出专用 CRM，自己服务器上每月约 5 美元，不必给 Salesforce 每月付数千美元。",
+    "npm 供应链风险推动“零依赖极简主义”。2026 年 npm 遭遇 3 月的 canister worm 和 5 月的 Shai-Hulud，后者污染了包括 Tanstack 在内的 170 多个包。npm 12 默认不再运行安装脚本。还有 slop squatting：一项研究发现 AI 推荐的包里近 20% 并不存在，攻击者可抢注这些名字。许多开发者改为现场生成工具函数，甚至把 C/C++ 底层包改写成 Rust。他认为 90% 的问题用原生 JavaScript、Python 和 Rust 就能解决，这些也是 LLM 最擅长的语言。",
+    "2026 年是 agent 之年，2027 年会是 harness 之年。多 agent 集群、agent 循环和子 agent 已经普及。JetBrains 对 1.5 万多名开发者的调查显示 90% 每周使用 AI 编码 agent，68% 每天使用。Stack Overflow 调查中约 31% 的每日 AI 用户每天用 4 小时以上。他认为前沿模型的能力已近似可互换，所以会出现面向法律、医疗、制造等领域的专用 harness，满足合规和安全要求。研究者也预测这类工作流最终可能导致递归自我改进。",
+    "硬件和基础设施方面出现 RAM 短缺。32GB DDR5 在 2025 年不到 100 美元，现在超过 400 美元。Raspberry Pi 5 涨到 385 美元，发布时约 120 美元。原因是 AI GPU 占用晶圆做高带宽内存，Micron 称短缺将持续到 2027 年。他的应对办法是租 VPS 自托管，并提到赞助商 Hostinger 的方案。太空数据中心方面，SpaceX 向 FCC 申请最多 100 万颗卫星，同时在 IPO 文件中提示可能无法实现商业可行性。Google 的 Project SunCatcher 计划 2027 年初发射两颗带 TPU 的原型卫星。StarCloud 已把一块 Nvidia H100 送入轨道并训练了一个小型 LLM。",
+    "安全方面漏洞爆发。Anthropic 在 4 月发布 Claude Mythos preview，OpenAI 随后推出 GPT-6 Cyber，仅向少数政府和企业不受限开放。到 5 月 Mythos 标记了超过 23,000 个漏洞，GPT-6 Cyber 找到约 10 亿种攻击 Linux 内核的方式。Google 称发现首个野外出现的 AI 构造的零日漏洞。Curl 在 1 月因 AI 垃圾报告关闭了漏洞赏金计划。",
+    "机器人方面，2026 年预计出货约 5 万台人形机器人，约为上年的近 4 倍。Unitree 在上海上市后股价暴涨，Tesla 停掉 Fremont 的 Model S 和 X 产线改产 Optimus。Boston Dynamics 给 Atlas 装上了滑板车轮。1X 的 Neo 售价 2 万美元且已售罄，卡住时由员工戴 VR 头显远程操作。他认为真正能在真实环境做家务的机器人还要数年甚至数十年。"
+   ],
+   "points_en": [
+    "In the job market, traditional junior developer roles are shrinking and are being replaced by work maintaining AI-generated code. Tech companies announced over 150,000 job cuts in the first 9 months of 2026, up 54%. Stanford's AI Index says employment for developers aged 22 to 25 is down 20% from its peak. Only 4.5% of US software postings on Indeed are entry level. Total software postings on Indeed have started to rise, and banks and hospitals are bidding for engineers. A group of specialists now clean up vibe-coded projects, which he calls slop maintainers.",
+    "Open source is under pressure from AI slop. The Matplotlib maintainer rejected a pull request from an autonomous agent, and the agent then published a hit piece about him. GitHub now lets maintainers turn off pull requests, and Zig and NetBSD ban AI use entirely. In a Linux kernel survey, maintainers estimated that 25% of incoming pull requests are AI slop. Tailwind CSS had a different problem: people stopped visiting its documentation, so it lost its way to make money.",
+    "Software is becoming disposable, which hurts SaaS. Small developer tools, such as a background remover, can be generated with a chatbot. He gives the example of Claude building a specialized CRM in a few hours that costs about $5 per month on a personal server, instead of thousands of dollars per month for Salesforce.",
+    "Supply chain risk in npm is pushing developers toward zero-dependency minimalism. In 2026 npm was hit by the canister worm in March and by Shai-Hulud in May, which poisoned over 170 packages including Tanstack. npm 12 now refuses to run install scripts by default. In slop squatting, attackers register package names that LLMs invent, and one study found that nearly 20% of AI-recommended packages do not exist. Many developers now generate utilities on the fly and rewrite low-level C and C++ packages in Rust. He says 90% of problems can be solved with vanilla JavaScript, Python and Rust, which are also the languages LLMs handle best.",
+    "2026 was the year of the agent, and he expects 2027 to be the year of the harness. Multi-agent swarms, agent loops and sub-agents are now common. A JetBrains survey of more than 15,000 developers found that 90% use AI coding agents at work every week and 68% use them every day. In a Stack Overflow survey, about 31% of daily AI users use it for more than 4 hours a day. He argues that top frontier models are nearly interchangeable, so specialized harnesses for law, medicine, manufacturing and other fields will appear and will meet compliance and security needs. He adds that researchers predict such workflows may lead to recursive self-improvement.",
+    "Hardware and infrastructure face a RAM shortage. A 32 GB DDR5 kit cost under $100 in 2025 and now costs over $400. The Raspberry Pi 5 rose to $385 from about $120 at launch. The cause is that wafers go to high bandwidth memory for AI GPUs, and Micron says the shortage will last through 2027. His workaround is to rent a VPS and self-host, and he mentions the sponsor Hostinger's plan. On space data centers, SpaceX asked the FCC for up to 1 million satellites while warning in its IPO filing that it may not become commercially viable. Google's Project SunCatcher plans two prototype satellites with TPUs by early 2027. StarCloud has put an Nvidia H100 in orbit and trained a small LLM there.",
+    "Vulnerabilities are surging. Anthropic announced Claude Mythos preview in April, and OpenAI followed with GPT-6 Cyber. Both are open without restriction only to a small group of governments and companies. By May, Mythos had flagged over 23,000 vulnerabilities, and GPT-6 Cyber found about a billion ways to attack the Linux kernel. Google said it caught what it believes is the first AI-built zero-day exploit in the wild. Curl closed its bug bounty program in January after many AI slop reports.",
+    "On robots, about 50,000 humanoids are expected to ship in 2026, almost four times the previous year. Unitree went public in Shanghai and its stock jumped. Tesla removed its Model S and Model X line in Fremont to build Optimus. Boston Dynamics put scooter wheels on Atlas. The 1X Neo costs $20,000 and has sold out. When it gets stuck, a 1X employee in a VR headset can operate it remotely. He says fully functional home robots are still years or decades away."
+   ],
+   "topics": [
+    "AI agents",
+    "Developer trends",
+    "Software security"
+   ]
+  },
+  {
+   "id": "yt-JZcIzxi3zwk",
+   "kind": "video",
+   "source": "IT咖啡馆",
+   "source_url": "https://www.youtube.com/@it-coffee",
+   "title": "「Github一周热点140期」视频模型的deepseek时刻，是吹的吗？",
+   "url": "https://www.youtube.com/watch?v=JZcIzxi3zwk",
+   "published": "2026-11-27T15:06:44+00:00",
+   "basis": "transcript",
+   "brief_zh": "本期 GitHub 周报介绍五个项目：新视频模型 MAGI-2 价格很低、控制精度高，但是否算“视频模型的 DeepSeek 时刻”要等正式权重开放后再看；其余四个是安全研究技能包、视频剪辑技能、下载器和多 Agent 论文写作框架。",
+   "background_zh": "这是 IT咖啡馆的 Github 一周热点系列，本期为第 140 期（视频中口述为第 147 期）。主播挑选本周热门的开源项目，逐个说明功能和用法，最后附两份行业报告。",
+   "conclusion_zh": "主播认为 MAGI-2 效果不错，但“视频模型的 DeepSeek 时刻”要等正式权重开放后再判断；不过多一个玩家进入、价格继续下降，对市场竞争是好事。其他四个项目他分别推荐给安全方向爱好者、做视频剪辑的人、常下载资源的人和写论文的人参考或试用。",
+   "brief_en": "This weekly GitHub roundup covers five projects. The new video model MAGI-2 is cheap and offers precise control, but the host will not call it the DeepSeek moment of video models until its full weights are released. The other four are a security research skill pack, a video editing skill, a downloader and a multi-agent paper writing framework.",
+   "background_en": "This is the IT咖啡馆 weekly GitHub trends series, episode 140 by the title (the host says 147 in the video). The host picks popular open-source projects of the week, explains what each does and how to use it, and ends with two industry reports.",
+   "conclusion_en": "The host finds MAGI-2 good, but will judge the DeepSeek moment claim only after the full weights appear. He adds that another player and lower prices are good for competition. He suggests the other four projects to security hobbyists, video editors, frequent downloaders and paper writers respectively.",
+   "points_zh": [
+    "MAGI-2 是一个价格很低的新视频生成模型，但主播对“视频模型的 DeepSeek 时刻”这一说法持谨慎态度。它来自一家百人规模的创意公司，在 Artificial Analysis 的图生视频和无声图生视频两个榜单上并列全球第一，超过了 C.3.5。正式版总参数 480B，支持最多 10 张图片参考、最多 5 段视频和音频参考，还能在 30 秒长视频里把关键事件卡在指定时间点。1080p 每秒 0.5 元，号称是 C 档 2.5 的十分之一，上线优惠价每秒 5 分钱，但主播看到只有较高档位会员才能用这个价。开源是分阶段的，现在仓库里是 8 月的预览版（总参数 114B、激活 6B，文件 228GB，官方建议 8 张 Hopper GPU），普通玩家很难上手。主播简单体验后认为效果属一流，但要看后续放出的权重会不会缩水。",
+    "Claude-BugHunter 是给 Claude Code 用的安全研究技能包，用于漏洞排查和红队协作。它包含 85 个技能、16 条攻击命令和 681 种公开漏洞报告模式，覆盖 24 个核心漏洞类别，流程分侦查、回测、漏洞挖掘、验证和报告六个阶段。使用时在 Claude Code 里通过市场安装插件，用自然语言描述测试内容，系统会自动加载合适的技能；目标较大时可用命令创建专属工作目录。",
+    "ffmpeg-skill 把 FFmpeg 封装成面向 AI agent 的结构化工具，让人用自然语言剪视频。它包含 42 种功能，有机器可读的调用格式和 MCP 服务，工作流固定为探测、尽可能无损编辑、检查验证。例如“中间一段改竖屏、去掉开头空白、均匀音量、加字幕”，它会先读分辨率、音轨、时长，再按要求处理，底层仍用本机 Python 和 FFmpeg。完成后可生成本地 HTML 审核页，显示每一步操作和结果、手机界面预览和时间线，可进一步调整。",
+    "Ghost Downloader 3 是跨平台开源下载器，定位是集大成者。它能处理视频下载（可选清晰度、下载字幕）、HTTP、FTP、BT、磁力链接、电驴、直播录制，GitHub 和 Huggingface 文件有镜像加速。分块下载完成后无需合并；下载到一半的链接过期时，可在原任务里换新地址，已下好的部分不用重来，主播认为这对常下模型权重的人很有用。支持 Windows、macOS、Linux 和安卓，可配合浏览器扩展；但优酷、腾讯视频等资源无法嗅探。",
+    "PaperOrchestra 是 Google Research 的多 Agent 论文写作框架，从实验做完后接手。你提供研究思路和实验记录，文献 Agent 找相关研究，写作 Agent 起草正文，评审 Agent 检查并提修改意见，需要图表时可打开绘图选项让它写代码生成。使用时先配好模型服务，把素材放进目录并指定论文模板，仓库提供命令行和 Streamlit 演示。它有配套论文，按主播所说，在文献综述方面的对比优势比较明显。",
+    "结尾附两份资料：一份是 2026 年中国生成式引擎优化（GEO）市场分析报告，估算国内主要市场接近 50 亿规模，关注的是品牌能否在 AI 回答中被准确提及；另一份是 AI 原生出海报告，覆盖六个 AI 原生行业和五个海外市场，讲国内 AI 团队如何把产品卖到海外、靠什么赚钱、卡在哪里。想了解的观众可以联系主播。"
+   ],
+   "points_en": [
+    "MAGI-2 is a low-priced new video generation model, but the host is cautious about calling it the DeepSeek moment of video models. It comes from a creative company of about a hundred people and ranks first globally on two Artificial Analysis leaderboards, image-to-video and silent image-to-video, ahead of C.3.5. The full version has 480B parameters. It accepts up to 10 reference images and up to 5 reference videos and audio clips, and it can place key events at set times in a 30-second video. A second of 1080p costs 0.5 yuan, which the makers say is one tenth of the C-tier 2.5 price. A launch offer brings it to 5 fen per second, but the host found that only higher membership tiers get this price. Open-sourcing is staged. The repository holds the August preview (114B total parameters, 6B active, 228GB, officially 8 Hopper GPUs), which is hard for most users to run. After brief use the host found the quality first-rate, but wants to see whether the later released weights are weaker.",
+    "Claude-BugHunter is a skill pack for Claude Code that supports vulnerability research and red team work. It has 85 skills, 16 attack commands and 681 public vulnerability report patterns across 24 core vulnerability classes. The process has six stages: reconnaissance, testing, vulnerability discovery, verification and reporting. Users install the plugin from the Claude Code marketplace and describe the test in plain language. The system loads suitable skills automatically, and for large targets a command creates a dedicated working directory.",
+    "ffmpeg-skill wraps FFmpeg as a structured tool for AI agents, so users can edit video in natural language. It has 42 functions, a machine-readable call format and an MCP service. Its fixed workflow is to probe, edit losslessly where possible, then check and verify. For example, a request to turn the middle section vertical, trim blank seconds, even out the audio and add subtitles is handled by first reading resolution, audio tracks and duration, then editing with local Python and FFmpeg. Afterwards it can produce a local HTML review page that shows each step and result, a phone-screen preview and a timeline for further adjustment.",
+    "Ghost Downloader 3 is a cross-platform open-source downloader that aims to cover everything. It handles video (resolution choice, subtitles), HTTP, FTP, BT, magnet links, eDonkey and live stream recording, and offers mirror acceleration for GitHub and Huggingface files. Downloaded chunks need no merging, and if a half-finished link expires, a new address can replace it in the same task without losing finished parts. The host thinks this helps people who often download model weights. It runs on Windows, macOS, Linux and Android and works with a browser extension. It cannot sniff resources from sites such as Youku and Tencent Video.",
+    "PaperOrchestra is a multi-agent paper writing framework from Google Research that takes over after experiments are done. The user supplies research ideas and experiment records. A literature agent finds related work, a writing agent drafts the text, and a review agent checks it and suggests revisions. An option for figures lets it write code to generate charts. Users set up a model service, place the source material in a directory and choose a paper template. The repository offers a command line and a Streamlit demo. It has an accompanying paper, and the host says it shows a fairly clear advantage in literature review.",
+    "The video ends with two reports. One is a 2026 market analysis of generative engine optimization in China, which estimates the main domestic market at close to 5 billion yuan and concerns whether brands are accurately mentioned in AI answers. The other covers AI-native companies going overseas, across six AI-native industries and five overseas markets, on how Chinese AI teams sell abroad, how they earn money and where they get stuck. The host invites viewers who want them to ask."
+   ],
+   "topics": [
+    "GitHub Trends",
+    "Video Generation",
+    "AI Agents"
+   ]
+  }
+ ],
+ "generated_at": "2026-11-28T05:23:50.876468+00:00"
+}
